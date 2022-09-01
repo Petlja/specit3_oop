@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Енкапсулација</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'specit3_oop';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'specit3_oop';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_uvod>
+                    <h5>Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
+                <a href=../01_uvod/uvod_01b_klase_i_objekti.html><div class="studioLecture" id=activity-uvod_01b_klase_i_objekti><i class="fas fa-file-alt activity-icon"></i>Најосновније о класама и објектима</div></a>
+                <a href=../01_uvod/uvod_01bq_klase_i_objekti_kviz.html><div class="studioLecture" id=activity-uvod_01bq_klase_i_objekti_kviz><i class="far fa-question-circle activity-icon"></i>Класе и објекти - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_izolovane_klase>
+                    <h5>Концепти ООП и изоловане класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_izolovane_klase/klase_02a_enkapsulacija.html><div class="studioLecture" id=activity-klase_02a_enkapsulacija><i class="fas fa-file-alt activity-icon"></i>Енкапсулација</div></a>
+                <a href=../02_izolovane_klase/klase_02aq_enkapsulacija_kviz.html><div class="studioLecture" id=activity-klase_02aq_enkapsulacija_kviz><i class="far fa-question-circle activity-icon"></i>Енкапсулација - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02b_staticki_metodi.html><div class="studioLecture" id=activity-klase_02b_staticki_metodi><i class="fas fa-file-alt activity-icon"></i>Методи објекта и методи класе</div></a>
+                <a href=../02_izolovane_klase/klase_02bq_staticki_metodi_kviz.html><div class="studioLecture" id=activity-klase_02bq_staticki_metodi_kviz><i class="far fa-question-circle activity-icon"></i>Методи објекта и методи класе - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02c_statpolim_operatori.html><div class="studioLecture" id=activity-klase_02c_statpolim_operatori><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори</div></a>
+                <a href=../02_izolovane_klase/klase_02cq_statpolim_operatori_kviz.html><div class="studioLecture" id=activity-klase_02cq_statpolim_operatori_kviz><i class="far fa-question-circle activity-icon"></i>Статички полиморфизам, оператори - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02d_apstrakcija.html><div class="studioLecture" id=activity-klase_02d_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција</div></a>
+                <a href=../02_izolovane_klase/klase_02dq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02dq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02e_modularnost.html><div class="studioLecture" id=activity-klase_02e_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност</div></a>
+                <a href=../02_izolovane_klase/klase_02eq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02eq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02f_zadaci.html><div class="studioLecture" id=activity-klase_02f_zadaci><i class="fas fa-file-alt activity-icon"></i>Изоловане класе - задаци за вежбу</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_nasledjivanje>
+                    <h5>Концепти ООП и наслеђивање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_nasledjivanje/nasledjivanje_03a_izvedena_klasa.html><div class="studioLecture" id=activity-nasledjivanje_03a_izvedena_klasa><i class="fas fa-file-alt activity-icon"></i>Појам наслеђивања</div></a>
+                <a href=../03_nasledjivanje/nasledjivanje_03b_dinamicki_polimorfizam.html><div class="studioLecture" id=activity-nasledjivanje_03b_dinamicki_polimorfizam><i class="fas fa-file-alt activity-icon"></i>Динамички полиморфизам</div></a>
+                <a href=../03_nasledjivanje/nasledjivanje_03c_interfejsi.html><div class="studioLecture" id=activity-nasledjivanje_03c_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
+                <a href=../03_nasledjivanje/nasledjivanje_03d_zadaci.html><div class="studioLecture" id=activity-nasledjivanje_03d_zadaci><i class="fas fa-file-alt activity-icon"></i>Наслеђивање - задаци за вежбу</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Енкапсулација<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>У овој лекцији:</p>
+<ul class="simple">
+<li><p>Зашто подаци треба да буду приватни</p></li>
+<li><p>Шта је конструктор и како може да се напише</p></li>
+</ul>
+<p>У уводном делу су поменути проблеми који могу да настану због употребе глобалних променљивих и њихове потпуне изложености свима који раде на пројекту. Такође је поменуто да је један начин превазилажења, или бар ублажавања овог проблема увођење класа и проглашавање неких поља класе за приватне податке класе. Тиме се ограничава доступност ових података само на методе класе, тј. подаци се енкапсулирају у класу.</p>
+<p>Примером који следи бавићемо се у неколико наврата. За почетак, пример нам даје мотивацију за увођење енкапсулације, а касније ћемо да га искористимо за илустровање још неких концепата, као и за упознавање неких особина језика које нам омогућавају да те концепте спроведемо.</p>
+<div class="section" id="id2">
+<h2>Пример - разломци<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Нека је потребно обезбедити поређења и основне рачунске операције над рационалним бројевима, у којима се подаци и резултати задају у облику разломка. Логична идеја је да напишемо класу <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, чији објекти ће да представљају рационалне бројеве. Желимо да имамо на располагању и методе <code class="docutils literal notranslate"><span class="pre">Equals</span></code> и <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code>, који постоје у многим класама стандардне библиотеке. Уобичајено понашање ових метода је следеће:</p>
+<ul class="simple">
+<li><p>метод <code class="docutils literal notranslate"><span class="pre">a.Equals(b)</span></code> враћа логичку вредност, и то <code class="docutils literal notranslate"><span class="pre">true</span></code> ако су <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code> једнаки, а <code class="docutils literal notranslate"><span class="pre">false</span></code> у супротном</p></li>
+<li><p>метод <code class="docutils literal notranslate"><span class="pre">a.CompareTo(b)</span></code> враћа целобројну вредност, и то негативну ако је <code class="docutils literal notranslate"><span class="pre">a</span></code> мањи од <code class="docutils literal notranslate"><span class="pre">b</span></code>, нула ако су једнаки, а позитивну ако је <code class="docutils literal notranslate"><span class="pre">a</span></code> већи од <code class="docutils literal notranslate"><span class="pre">b</span></code></p></li>
+</ul>
+<p>па овакво понашање очекујемо и када су <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code> објекти класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>.</p>
+<p>Знамо да су разломци <span class="math notranslate nohighlight">\(r_1 = {p_1 \over q_1}\)</span> и <span class="math notranslate nohighlight">\(r_2 = {p_2 \over q_2}\)</span> једнаки ако имају једнаке бројиоце (<span class="math notranslate nohighlight">\(p_1 = p_2\)</span>) и једнаке имениоце (<span class="math notranslate nohighlight">\(q_1 = q_2\)</span>). Међутим, ови разломци могу да буду једнаки и када <span class="math notranslate nohighlight">\(p_1 \neq q_1, p_2 \neq q_2\)</span>. На пример, <span class="math notranslate nohighlight">\({1 \over 2} = {3 \over 6}\)</span> мада <span class="math notranslate nohighlight">\(1 \neq 3, 2 \neq 6\)</span>. Такође, <span class="math notranslate nohighlight">\({-1 \over 2} = {1 \over -2}\)</span> мада <span class="math notranslate nohighlight">\(-1 \neq 1, 2 \neq -2\)</span>.</p>
+<p>Провера једнакости би била једноставнија када бисмо могли да наметнемо додатне услове на облик у коме се памти разломак. На пример, када бисмо за сваки разломак <span class="math notranslate nohighlight">\(p \over q\)</span> били сигурни да је нескратив и да важи <span class="math notranslate nohighlight">\(q &gt; 0\)</span>, за проверу једнакости би било довоољно да проверимо <span class="math notranslate nohighlight">\(p_1 = p_2\)</span> и <span class="math notranslate nohighlight">\(q_1 = q_2\)</span>. Осим тога, било би једноставније да се напише и метод <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code> (избегли бисмо поређење разломака са негативним имениоцима), метод за приказ вредности разломка (минус се не пише испред имениоца), а вероватно и неки други методи.</p>
+<p>Сада се поставља питање како да обезбедимо да увек важе услови које желимо да додатно наметнемо (да је разломак нескратив и да је именилац позитиван). Свакако треба спречити корисника класе да директно задаје или мења вредност бројиоца и имениоца било ког разломка. То значи да бројилац и именилац треба да буду приватна поља класе.</p>
+<p>Ово јесте добар почетак, али он отвара нека нова питања. Ако напишемо</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Razlomak</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// razlomak je oblika a/b gde je b &gt; 0</span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+</pre></div>
+</div>
+<p>добићемо већ поменуте синтаксне грешке које се односе на последњу линију кода</p>
+<div class="topic">
+<p class="topic-title"></p>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">Error</span>&#160;&#160; <span class="pre">CS0122</span>&#160; <span class="pre">'Program.Razlomak.a'</span> <span class="pre">is</span> <span class="pre">inaccessible</span> <span class="pre">due</span> <span class="pre">to</span> <span class="pre">its</span> <span class="pre">protection</span> <span class="pre">level</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">Error</span>&#160;&#160; <span class="pre">CS0122</span>&#160; <span class="pre">'Program.Razlomak.b'</span> <span class="pre">is</span> <span class="pre">inaccessible</span> <span class="pre">due</span> <span class="pre">to</span> <span class="pre">its</span> <span class="pre">protection</span> <span class="pre">level</span></code></div>
+</div>
+</div>
+<p>Ове грешке нас упозоравају да не можемо да доделимо почетну вредност разломку на овај начин, јер су поља <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code> недоступна. Да бисмо могли да задајемо почетне вредности разломцима, потребан нам је <strong>конструктор</strong> објеката класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, коме ћемо као параметре да проследимо вредности бројиоца и имениоца.</p>
+<p>Конструктор је специјалан метод класе, који увек има исто име као и сама класа, а који као резултат враћа нови објекат те класе. Ако класа у својој дефиницији нема написан конструктор, компајлер јој аутоматски додељује такозвани подразумевани конструктор без параметара. Захваљујући томе, и пре него што научимо шта је конструктор (и пре него што напишемо неки), можемо да пишемо</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Ово је позив подразумеваног конструктора класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, који је јаван ако постоји (а постоји ако нисмо написали свој, експлицитан конструктор). Подразумевани конструктор увек враћа објекат у коме су сва поља иницијализована на подразумеване вредности (0 за бројеве и карактере, <code class="docutils literal notranslate"><span class="pre">false</span></code> за логичке вредности, празан стринг са стрингове, <code class="docutils literal notranslate"><span class="pre">null</span></code> за референциране типове).</p>
+<p>У случају да су поља <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code> јавна (<code class="docutils literal notranslate"><span class="pre">public</span></code>), можемо да им доделимо вредности након позивања подразумеваног конструктора</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">();</span><span class="w"></span>
+<span class="n">r</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"></span>
+<span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">3</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>што је функционално равноправно са раније коришћеним записом</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Експлицитан конструктор<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>У нашем случају, пошто смо одлучили да поља <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code>  буду приватна, од подразумеваног конструктора нема много користи јер немамо начина да накнадно променимо вредности
+<code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code>. Зато нам је овде потребан експлицитан конструктор:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Razlomak</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// razlomak je oblika a/b gde je b &gt; 0</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Razlomak</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Exception</span><span class="p">(</span><span class="s">&quot;Imenilac razlomka je 0&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">-</span><span class="n">p</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">q</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">-</span><span class="n">q</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">q</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">Skrati</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//...</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Пошто намеравамо да користимо написани конструктор ван класе, он је означен као јаван (<code class="docutils literal notranslate"><span class="pre">public</span></code>). Приметимо да се при писању конструктора не наводи тип враћене вредности, јер се подразумева да је исти као и назив метода, односно класе.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="nf">Razlomak</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Конструктор који смо написали прихвата два целобројна параметра, који представљају вредности бројиоца и имениоца новог разломка. Међутим, те вредности нисмо само уписали у одговарајућа поља, него смо наметнули потребне услове, а да при томе нисмо изменили вредност разломка као целине. Конкретније, у конструктору и бројоцу и имениоцу мењамо знак у случају да је задати именилац негативан, а затим скраћујемо разломак у случају да није већ скраћен. На тај начин као аутори класе имамо пуну контролу над вредностима бројиоца и имениоца, а корисник класе не може да приступи пољима класе и поремети услове које смо им наметнули.</p>
+<p>Пошто сваки цео број <span class="math notranslate nohighlight">\(n\)</span> може да се посматра као разломак <span class="math notranslate nohighlight">\(n \over 1\)</span>, можемо да напишемо и конструктор који има само један целобројни параметрар. Тај параметар представља бројилац будућег разломка, чији именилац је 1. У овом случају потребни услови већ важе (разломак је нескратив, а именилац је позитиван), па је конструктор сасвим једноставан:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="nf">Razlomak</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Методи <code class="docutils literal notranslate"><span class="pre">Equals</span></code> и <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code> сада могу да се напишу знатно једноставније него у случају када не би важили наметнути услови. Следећи пример можете да копирате у своје радно окружење и испробате:</p>
+
+<div data-childcomponent="poredjenje_razlomaka" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=poredjenje_razlomaka data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+
+public class Razlomak
+{
+    // razlomak je oblika a / b 
+    private int a, b; // nametnut uslov: a i b  su uzajamno prosti, b &gt; 0
+
+    public Razlomak(int p, int q)
+    {
+        if (q == 0)
+        {
+            throw new Exception(&quot;Imenilac razlomka je 0&quot;);
+        }
+
+        if (q &lt; 0)
+        {
+            p = -p;
+            q = -q;
+        }
+
+        a = p;
+        b = q;
+        Skrati(ref a, ref b);
+    }
+
+    public Razlomak(int n)
+    {
+        a = n; b = 1;
+    }
+
+    private static int NZD(int a, int b)
+    {
+        // nametnut preduslov: a &gt;= 0 i b &gt;= 0
+        while (b &gt; 0) { int r = a % b; a = b; b = r; }
+        return a;
+    }
+
+    private static void Skrati(ref int x, ref int y)
+    {
+        // preduslov: x i y nisu oba nule
+        int d = NZD(Math.Abs(x), Math.Abs(y));
+        x /= d;
+        y /= d;
+    }
+
+    public bool Equals(Razlomak r)
+    {
+        return a == r.a &amp;&amp; b == r.b;
+    }
+
+    public int CompareTo(Razlomak r)
+    {
+        return a * r.b - r.a * b;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Razlomak r1 = new Razlomak(2, 3);
+        Razlomak r2 = new Razlomak(4, 6);
+        Razlomak r3 = new Razlomak(4, 3);
+        Razlomak r4 = new Razlomak(1);
+
+        if (r1.Equals(r2))
+            Console.WriteLine(&quot;Razlomci r1 i r2 su jednaki.&quot;);
+        else
+            Console.WriteLine(&quot;Razlomci r1 i r2 nisu jednaki.&quot;);
+
+        if (r2.CompareTo(r3) &lt; 0)
+            Console.WriteLine(&quot;Razlomak r2 je manji od r3.&quot;);
+        else
+            Console.WriteLine(&quot;Razlomak r2 nije manji od r3.&quot;);
+
+        if (r3.CompareTo(r4) &lt; 0)
+            Console.WriteLine(&quot;Razlomak r3 je manji od r4.&quot;);
+        else
+            Console.WriteLine(&quot;Razlomak r3 nije manji od r4.&quot;);
+    }
+}
+
+"   >
+
+
+</textarea>
+</div>
+<p>У оваквом случају кажемо да су бројилац и именилац енкапсулирани (стављени у капсулу) и могу да се користе само унутар те капсуле, тј. класе. Као што семо већ рекли, корисник класе нема начина да приступи приватним деловима класе, па ни да им мења вредности, мада би њему то можда и било згодно у неким ситуацијама.</p>
+<p>У делу класе који је до сада написан, корисник може једино да формира објекте класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> и да их пореди. У наставку ћемо ову класу да дорадимо до пуне функционалности, која подразумева удобно учитавање и исписивање разломака и рачунање са разломцима</p>
+<div class="topic">
+<p class="topic-title"></p>
+<p>Увођење и одржавање интерних услова које треба да испуњавају сви објекти дате класе је један од важних разлога због којих нам је енкапсулација потребна. У случају класе разломак, то је кључни разлог за енкапсулирање интерних података.</p>
+<p>Да бисмо и у наставку рада могли да се ослонимо на важење наметнутих услова унутар класе, водићемо рачуна да сви методи које будемо додали у класу <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> одржавају наметнуте услове у постојећим објектима, као и да их успостављају при стварању нових објеката.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,169 @@
+courseId: kurs-oop-treci-spec-IT
+description:
+  externalLinks: []
+  longDescription: '<div class="document">
+
+    <p>Овај курс је намењен ученицима специјализованих ИТ одељена 3. разреда за предмет
+    Програмирање и програмски језици.</p>
+
+    <p>Поред рада у школи, курс може да се пролази и самостално.</p>
+
+    </div>
+
+    '
+  requirements:
+  - Инсталирано окружење *Visual Studio* (довољно је инсталирати издање *Community
+    edition* које је бесплатно) или неко друго окружење за развој програма у језику
+    C# (на пример *Mono develop*).
+  shortDescription: Програмирање
+  toc:
+  - Зашто се програмски језици мењају
+  - Основни појмови ООП (објектно оријентисаног прогрмирања)
+  - Концепти ООП и изоловане класе (енкапсулација, статички полиморфизам, апстракција,
+    модуларност)
+  - Концепти ООП и наслеђивање (динамички полиморфизам, виртуелне функције, апстрактне
+    класе, интерфејси)
+  willLearn:
+  - шта је објектно оријентисано програмирање (ООП) и зашто је настало, тј. које проблеме
+    развоја софтвера је решило
+  - шта су основни концепти ООП и како се остварују
+  - који су основни принципи развоја софтвера, зашто их се придржавати и како ООП
+    у томе помаже
+lang: sr-Cyrl
+lessons:
+- activities:
+  - description: ''
+    file: uvod_01a_promene.html
+    guid: d8ff4bd3-c73e-454b-ab72-d5ed0432b0de
+    src: uvod_01a_promene.rst
+    title: Зашто се мења начин програмирања
+    type: reading
+  - description: ''
+    file: uvod_01aq_paradigme_kviz.html
+    guid: 8c249332-fba2-4c25-95e9-f10a9b35618d
+    src: uvod_01aq_paradigme_kviz.rst
+    title: Парадигме у програмирању - квиз
+    type: quiz
+  - description: ''
+    file: uvod_01b_klase_i_objekti.html
+    guid: af78c1f1-73ac-468c-b7c5-f69f894b76b2
+    src: uvod_01b_klase_i_objekti.rst
+    title: Најосновније о класама и објектима
+    type: reading
+  - description: ''
+    file: uvod_01bq_klase_i_objekti_kviz.html
+    guid: 1574e5c9-bc26-4e54-bebd-c45bc36d06a3
+    src: uvod_01bq_klase_i_objekti_kviz.rst
+    title: Класе и објекти - квиз
+    type: quiz
+  archived-activities: []
+  description: ''
+  folder: 01_uvod
+  guid: 3e6f2785-6d64-491a-952f-621eb939f466
+  normalized_title: Увод
+  title: Увод
+- activities:
+  - description: ''
+    file: klase_02a_enkapsulacija.html
+    guid: 3c79a46e-1629-41eb-aa30-2890879e374b
+    src: klase_02a_enkapsulacija.rst
+    title: Енкапсулација
+    type: reading
+  - description: ''
+    file: klase_02aq_enkapsulacija_kviz.html
+    guid: 357f6a1f-8fe0-432d-b5cc-9252cad6700b
+    src: klase_02aq_enkapsulacija_kviz.rst
+    title: Енкапсулација - квиз
+    type: quiz
+  - description: ''
+    file: klase_02b_staticki_metodi.html
+    guid: cff3cc2a-af35-4502-b70e-29c74b92b768
+    src: klase_02b_staticki_metodi.rst
+    title: Методи објекта и методи класе
+    type: reading
+  - description: ''
+    file: klase_02bq_staticki_metodi_kviz.html
+    guid: fb26de8d-e28c-422c-9cdb-08e81c7eb59f
+    src: klase_02bq_staticki_metodi_kviz.rst
+    title: Методи објекта и методи класе - квиз
+    type: quiz
+  - description: ''
+    file: klase_02c_statpolim_operatori.html
+    guid: 87078689-392c-4718-b438-eb252f84ec56
+    src: klase_02c_statpolim_operatori.rst
+    title: Статички полиморфизам, оператори
+    type: reading
+  - description: ''
+    file: klase_02cq_statpolim_operatori_kviz.html
+    guid: 2178d8e5-fba5-4c77-af1c-eb54e33edfc3
+    src: klase_02cq_statpolim_operatori_kviz.rst
+    title: Статички полиморфизам, оператори - квиз
+    type: quiz
+  - description: ''
+    file: klase_02d_apstrakcija.html
+    guid: 1d69f87f-ab1f-4205-9803-16224d86f86b
+    src: klase_02d_apstrakcija.rst
+    title: Апстракција
+    type: reading
+  - description: ''
+    file: klase_02dq_apstrakcija_kviz.html
+    guid: 98820380-51f8-47b4-9477-6eae3757fa32
+    src: klase_02dq_apstrakcija_kviz.rst
+    title: Апстракција - квиз
+    type: quiz
+  - description: ''
+    file: klase_02e_modularnost.html
+    guid: b2525d57-0bdb-4ea0-9390-e4b207165f12
+    src: klase_02e_modularnost.rst
+    title: Модуларност
+    type: reading
+  - description: ''
+    file: klase_02eq_modularnost_kviz.html
+    guid: 6ec7d8a6-2572-4119-8dd5-a1aa2d3355a6
+    src: klase_02eq_modularnost_kviz.rst
+    title: Модуларност - квиз
+    type: quiz
+  - description: ''
+    file: klase_02f_zadaci.html
+    guid: 5960fa50-4520-43d8-b779-b53ce461ef51
+    src: klase_02f_zadaci.rst
+    title: Изоловане класе - задаци за вежбу
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 02_izolovane_klase
+  guid: 57217667-7d37-49c2-b632-d62eada1308b
+  normalized_title: Концепти ООП и изоловане класе
+  title: Концепти ООП и изоловане класе
+- activities:
+  - description: ''
+    file: nasledjivanje_03a_izvedena_klasa.html
+    guid: 077964c6-0292-48d8-90eb-2e5d375bbc95
+    src: nasledjivanje_03a_izvedena_klasa.rst
+    title: Појам наслеђивања
+    type: reading
+  - description: ''
+    file: nasledjivanje_03b_dinamicki_polimorfizam.html
+    guid: c1b2c5c1-0fbb-4e47-999f-e602053ca15d
+    src: nasledjivanje_03b_dinamicki_polimorfizam.rst
+    title: Динамички полиморфизам
+    type: reading
+  - description: ''
+    file: nasledjivanje_03c_interfejsi.html
+    guid: 8297a28b-090a-4164-af4b-a09fe2a05bad
+    src: nasledjivanje_03c_interfejsi.rst
+    title: Интерфејси
+    type: reading
+  - description: ''
+    file: nasledjivanje_03d_zadaci.html
+    guid: b8fcb37f-992b-412f-90bc-5410e47f124c
+    src: nasledjivanje_03d_zadaci.rst
+    title: Наслеђивање - задаци за вежбу
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 03_nasledjivanje
+  guid: f3785baf-8dd2-4f02-ae1e-38cab3fb9660
+  normalized_title: Концепти ООП и наслеђивање
+  title: Концепти ООП и наслеђивање
+title: Програмирање за трећи разред специјализованих ИТ одељења

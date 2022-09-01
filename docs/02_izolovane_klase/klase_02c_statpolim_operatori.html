@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Статички полиморфизам, оператори</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'specit3_oop';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'specit3_oop';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_uvod>
+                    <h5>Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
+                <a href=../01_uvod/uvod_01b_klase_i_objekti.html><div class="studioLecture" id=activity-uvod_01b_klase_i_objekti><i class="fas fa-file-alt activity-icon"></i>Најосновније о класама и објектима</div></a>
+                <a href=../01_uvod/uvod_01bq_klase_i_objekti_kviz.html><div class="studioLecture" id=activity-uvod_01bq_klase_i_objekti_kviz><i class="far fa-question-circle activity-icon"></i>Класе и објекти - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_izolovane_klase>
+                    <h5>Концепти ООП и изоловане класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_izolovane_klase/klase_02a_enkapsulacija.html><div class="studioLecture" id=activity-klase_02a_enkapsulacija><i class="fas fa-file-alt activity-icon"></i>Енкапсулација</div></a>
+                <a href=../02_izolovane_klase/klase_02aq_enkapsulacija_kviz.html><div class="studioLecture" id=activity-klase_02aq_enkapsulacija_kviz><i class="far fa-question-circle activity-icon"></i>Енкапсулација - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02b_staticki_metodi.html><div class="studioLecture" id=activity-klase_02b_staticki_metodi><i class="fas fa-file-alt activity-icon"></i>Методи објекта и методи класе</div></a>
+                <a href=../02_izolovane_klase/klase_02bq_staticki_metodi_kviz.html><div class="studioLecture" id=activity-klase_02bq_staticki_metodi_kviz><i class="far fa-question-circle activity-icon"></i>Методи објекта и методи класе - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02c_statpolim_operatori.html><div class="studioLecture" id=activity-klase_02c_statpolim_operatori><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори</div></a>
+                <a href=../02_izolovane_klase/klase_02cq_statpolim_operatori_kviz.html><div class="studioLecture" id=activity-klase_02cq_statpolim_operatori_kviz><i class="far fa-question-circle activity-icon"></i>Статички полиморфизам, оператори - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02d_apstrakcija.html><div class="studioLecture" id=activity-klase_02d_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција</div></a>
+                <a href=../02_izolovane_klase/klase_02dq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02dq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02e_modularnost.html><div class="studioLecture" id=activity-klase_02e_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност</div></a>
+                <a href=../02_izolovane_klase/klase_02eq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02eq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02f_zadaci.html><div class="studioLecture" id=activity-klase_02f_zadaci><i class="fas fa-file-alt activity-icon"></i>Изоловане класе - задаци за вежбу</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_nasledjivanje>
+                    <h5>Концепти ООП и наслеђивање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_nasledjivanje/nasledjivanje_03a_izvedena_klasa.html><div class="studioLecture" id=activity-nasledjivanje_03a_izvedena_klasa><i class="fas fa-file-alt activity-icon"></i>Појам наслеђивања</div></a>
+                <a href=../03_nasledjivanje/nasledjivanje_03b_dinamicki_polimorfizam.html><div class="studioLecture" id=activity-nasledjivanje_03b_dinamicki_polimorfizam><i class="fas fa-file-alt activity-icon"></i>Динамички полиморфизам</div></a>
+                <a href=../03_nasledjivanje/nasledjivanje_03c_interfejsi.html><div class="studioLecture" id=activity-nasledjivanje_03c_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
+                <a href=../03_nasledjivanje/nasledjivanje_03d_zadaci.html><div class="studioLecture" id=activity-nasledjivanje_03d_zadaci><i class="fas fa-file-alt activity-icon"></i>Наслеђивање - задаци за вежбу</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Статички полиморфизам, оператори<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>У овој лекцији:</p>
+<ul class="simple">
+<li><p>Статички полиморфизам - дефинисање више истоимених метода или оператора у једној класи</p></li>
+<li><p>Како да дефинишемо значење израза облика <code class="docutils literal notranslate"><span class="pre">a+b</span></code> и сличних, за објекте наше класе</p></li>
+<li><p>Како да дозволимо компајлеру да сам (имплицитно) конвертује целе бројеве у разломке</p></li>
+<li><p>Како да обезбедимо удобно исписивање објеката наше класе</p></li>
+</ul>
+<div class="section" id="id2">
+<h2>Истоимени методи<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>У методу <code class="docutils literal notranslate"><span class="pre">Razlomak.Parse</span></code>, којим смо се бавили у лекцији о методима класе (статичким методима), појавиле су се ове наредбе:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">)),</span><span class="w"></span>
+<span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">1</span><span class="p">)));</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Као што знамо, метод <code class="docutils literal notranslate"><span class="pre">Substring</span></code> враћа подстринг стринга из којег је позван. Овај метод смо већ користили и навикли смо на то да можемо да га позивамо на два начина:</p>
+<ul class="simple">
+<li><p>када наведемо само један параметар, нпр <code class="docutils literal notranslate"><span class="pre">s.Substring(odakle)</span></code>, резултујући подстринг садржи знакове од наведене позиције до краја стринга <code class="docutils literal notranslate"><span class="pre">s</span></code>;</p></li>
+<li><p>када наведемо два параметра, нпр <code class="docutils literal notranslate"><span class="pre">s.Substring(odakle,</span> <span class="pre">koliko)</span></code>, резултујући подстринг садржи <code class="docutils literal notranslate"><span class="pre">koliko</span></code> знакова почев од наведене позиције <code class="docutils literal notranslate"><span class="pre">odakle</span></code>.</p></li>
+</ul>
+<p>Врло често се иза ових различитих начина позивања заправо налазе различити методи, тако да би тачније било да се каже да овде имамо два истоимена метода једне класе. Да бисмо могли да разликујемо такве методе, потребно је да се разликују њихове листе параметара, било по дужини, било по типу параметра на одређеној позицији. На пример, у случају метода <code class="docutils literal notranslate"><span class="pre">Substring</span></code>, један метод има два параметра а други један, па се на месту позива лако препознаје који од ова два метода је позван. Напоменимо да истоимени методи могу да се разликују и по типу враћене вредности, али да та разлика не може да буде једина, тј. мора да постоји и разлика у листи параметара (у противном компајлер не би могао да закључи који од метода се позива на датом месту).</p>
+<p>Особина језика да допушта истоимене методе у једној класи позната је под више назива, а један од њих је <strong>статички полиморфизам</strong>. Сама реч полиморфизам значи „појављивање у више облика”, па је тај део назива ове особине јасан. Нешто касније ћемо објаснити и зашто се овај тип полиморфизма назива статички.</p>
+<p>Многи програмски језици (а међу њима и <em>C#</em>) нам допуштају да и сами пишемо класе са истоименим методима. У следећем примеру ћемо видети како изгледа једна таква класа.</p>
+
+    <div class="course-box course-box-special">
+        <div class="course-content">
+            <h4 class="carbox-title">
+                <img class="corner-image float-right" src="../_static/img/question-mark.png" />
+            </h4>
+            <p>
+<p>Написати и тестирати класу, која омогућава брзо сабирање сегмената датог, непроменљивог низа. Обезбедити методе који сабирају</p>
+<ul class="simple">
+<li><p>све елементе низа</p></li>
+<li><p>елементе почев од задате позиције до краја низа</p></li>
+<li><p>задати број елемената почев од задате позиције</p></li>
+</ul>
+
+    </p></div></div>
+<p>Тражену класу ћемо да назовемо <code class="docutils literal notranslate"><span class="pre">Sabirac</span></code>. Да би сабирање сегмената датог низа било брзо, израчунаћемо збир сваког префикса полазног низа (укључујући и празан префикс). Након тога, збир било ког сегмента можемо брзо да израчунамо као разлику збирова два префикса.</p>
+<p>Израчунавање збирова префикса можемо да обавимо у конструктору класе. Потребна су нам још три јавна метода који израчунавају збирове према захтевима задатка. Пошто сва три метода сабирају елементе неког сегмента полазног низа, природно је да сва три метода назовемо <code class="docutils literal notranslate"><span class="pre">Saberi</span></code>.</p>
+<p>Програм који следи можете да прекопирате и испробате у свом радном окружењу.</p>
+
+<div data-childcomponent="sabirac" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=sabirac data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+
+class Sabirac
+{
+    private int[] zbirPre;
+
+    public Sabirac(int[] a)
+    {
+        if (a == null)
+            throw new Exception(&quot;Ne postoji niz nad kojim se formira sabirac&quot;);
+
+        int n = a.Length;
+        zbirPre = new int[n + 1];
+        zbirPre[0] = 0;
+        for (int i = 0; i &lt; n; i++)
+            zbirPre[i + 1] = zbirPre[i] + a[i];
+    }
+
+    public int Saberi(int start, int br)
+    {
+        return zbirPre[start + br] - zbirPre[start];
+    }
+
+    public int Saberi(int start)
+    {
+        return zbirPre[zbirPre.Length - 1] - zbirPre[start];
+    }
+
+    public int Saberi()
+    {
+        return zbirPre[zbirPre.Length - 1];
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] a = { 1, 3, -1, 4, 2 };
+        Sabirac sa = new Sabirac(a);
+        Console.WriteLine(sa.Saberi());
+        Console.WriteLine(sa.Saberi(2));
+        Console.WriteLine(sa.Saberi(1, 2));
+    }
+}"   >
+
+
+</textarea>
+</div>
+<p>Статички полиморфизам нам омогућава да не морамо да смишљамо и памтимо слична имена метода за сличне поступке над сличним подацима. Такође, корисници наше класе не морају да памте разлике у именима сличних метода, па чак ни да буду свесни да је уопште реч о различитим методима. Према томе, статички полиморфизам у суштини није ништа више него флексибилност програмског језика, која нам пружа одређену удобност при именовању метода једне класе.</p>
+</div>
+<div class="section" id="id3">
+<h2>Истоимени оператори<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Вратимо се нашој класи <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>. За пуну функционалност класе потребно је још да унутар класе подржимо рачунске операције са разломцима. Један начин да то урадимо је да напишемо методе <code class="docutils literal notranslate"><span class="pre">Saberi</span></code>, <code class="docutils literal notranslate"><span class="pre">Oduzmi</span></code>, <code class="docutils literal notranslate"><span class="pre">Pomnozi</span></code> и <code class="docutils literal notranslate"><span class="pre">Podeli</span></code>. Сваки од ових метода би могао да буде статички, са два параметра типа <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> и резултатом истог типа.</p>
+<p>Ипак, за прогамера који користи нашу класу би било удобније да може да рачуна са разломцима на исти начин као са целим и реалним бројевима. На пример:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Razlomak</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
+<span class="n">Razlomak</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
+<span class="n">Razlomak</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="p">*</span><span class="n">a</span><span class="p">+</span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// umesto: Razlomak c = Saberi(Pomnozi(2, a), b);</span>
+<span class="p">...</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Знамо да је, на пример, за оператор + већ подржан полиморфизам, јер помоћу опретора који се исто пише (<code class="docutils literal notranslate"><span class="pre">+</span></code>) можемо да сабирамо целе бројеве, реалне бројеве и стрингове. Према типу аргумената компајлер може да одреди о којем од неколико оператора сабирања је реч.</p>
+<p><strong>Дефинисање оператора</strong></p>
+<p>Језик <em>C#</em> подржава могућност да дефинишемо оператор сабирања и за објекте наше класе. Решење је веома једноставно, довољно је да напишемо метод који се зове <code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">+</span></code>:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">+(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">NZD</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nzs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Razlomak</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="n">d</span><span class="p">),</span><span class="w"> </span><span class="n">nzs</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Након овога, ако су <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> објекти класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, можемо да пишемо нпр.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>На сличан начин можемо да подржимо и остале рачунске операције:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">-(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Razlomak</span><span class="p">(-</span><span class="n">r</span><span class="p">.</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">-(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">NZD</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">nzs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Razlomak</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="n">d</span><span class="p">),</span><span class="w"> </span><span class="n">nzs</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">*(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ra</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">rb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">sa</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Skrati</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="n">ra</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">sb</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Skrati</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">rb</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Razlomak</span><span class="p">(</span><span class="n">ra</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="n">rb</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">sb</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">/(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ra</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">rb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">sa</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Skrati</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="n">ra</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">sa</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Skrati</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="n">rb</span><span class="p">,</span><span class="w"> </span><span class="k">ref</span><span class="w"> </span><span class="n">sb</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Razlomak</span><span class="p">(</span><span class="n">ra</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">sb</span><span class="p">,</span><span class="w"> </span><span class="n">rb</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">sa</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Приметимо да смо дефинисали два метода који се зову <code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">-</span></code>. Први од њих има само један параметар и он нам омогућава да пишемо нпр. <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">-b;</span></code>. Другим речима, метод <code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">-</span></code> са једним параметром одговара унарном минусу у изразима, тј. дефинише како се извршава унарни минус. Други метод са истим именом, који има два параметра, омогућава писање наредби попут <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">-</span> <span class="pre">b;</span></code>, тј. дефинише како се <code class="docutils literal notranslate"><span class="pre">-</span></code> извршава као бинарни оператор (оператор одузимања).</p>
+<p>Методи <code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">*</span></code> и <code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">/</span></code> функционишу на исти начин, тј. дефинишу како се извршавају оператори <code class="docutils literal notranslate"><span class="pre">*</span></code> и <code class="docutils literal notranslate"><span class="pre">/</span></code>. Ови оператори су могли да буду имплементирани и једноставније, али смо их написали на овај начин да бисмо смањили моућност да дође до прекорачења опсега целобројне променљиве.</p>
+<p>Да бисмо подржали и изразе попут <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">-</span> <span class="pre">3</span></code> или <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">a</span></code>, можемо да напишемо и методе</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">+(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">+(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">-(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">-(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">*(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">*(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">/(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">/(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>У свих осам ових метода смо помоћу конструктора са једним параметром од целог броја добили разломак, а затим искористили претходно дефинисан оператор коме су оба параметра разломци. Мада је и ово прихватљиво решење, проблем можемо да решимо и елегантније. Да бисмо дошли до тог елегантнијег решења, подсетимо се како функционише имплицитна конверзија типа.</p>
+<p>Цео број се имплицитно конвертује у реалан када се по синтакси на месту где је наведен цео, очекује реалан број. На пример, када желимо да израчунамо <span class="math notranslate nohighlight">\(\sqrt 2\)</span> не морамо да пишемо баш <code class="docutils literal notranslate"><span class="pre">Math.Sqrt(2.0)</span></code> (са реалним параметром). Лако моежемо да се уверимо да програм ради и са <code class="docutils literal notranslate"><span class="pre">Math.Sqrt(2)</span></code>, мада не постоји посебан метод <code class="docutils literal notranslate"><span class="pre">Math.Sqrt</span></code> са целобројним параметром. Када компајлер наиђе на позив метода (или оператора) са параметрима који не одговарају директно ни једној од истоимених верзија метода, он покушава дозвољеним имплицитним конверзијама да прилагоди типове праметара неком од постојећих метода са тим именом. Тако се целобројно 2 имплицитно конвертује у реално 2.0 и метод може да се позове.</p>
+<p><strong>Дефинисање имплицитне конверзије</strong></p>
+<p>У језику <em>C#</em> имамо могућност да дефинишемо имплицитну конверзију једног типа у други, коју ће компајлер да примени где је потребно да се тип прилагоди очекиваном, као што то ради са уграђеним основним типовима. Имплицитна конверзија целог броја у разломак може да се напише овако:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">implicit</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="nf">Razlomak</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Razlomak</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Овим методом смо дозволили компајлеру да имплицитно претвара целе бројеве у разломке када тиме може да избегне синтаксну грешку због неслагања типова. Захваљујући томе, претходних осам метода који дефинишу операције између целог броја и разломка постају непотребни. Додатно, у свакој будућој ситуацији где се у коду очекује разломак а наведен је цео број, компајлер ће моћи да разреши сутуацију помоћу имплицитне конверзије.</p>
+<p><strong>Подешавање приказа на екрану</strong></p>
+<p>Да би рад са разломцима био сасвим удобан, недостаје још само подршка да се вредност разломка прикаже на екрану. Тренутно, за разломак <code class="docutils literal notranslate"><span class="pre">r</span></code> би се наредбом</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">r</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>добио испис <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>. То је зато што се и овде примењује нека врста имплицитне конверзије. Наиме, метод <code class="docutils literal notranslate"><span class="pre">WriteLine</span></code> класе <code class="docutils literal notranslate"><span class="pre">Console</span></code> очекује стринг као параметар, па у оваквим сутуацијама компајлер покушава да наведени параметар имплицитно претвори у стринг. То се ради применом метода <code class="docutils literal notranslate"><span class="pre">ToString</span></code>, који је дефинисан за све објекте било ког типа. Пошто компајлер не може да зна како ми желимо да се приказује објекат класе коју смо сами писали (док му то не кажемо), он примењује подразумевани метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code>, који дати објекат замењује именом његове класе. То је разлог зашто смо у претходном случају добили испис <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>.</p>
+<p>Ово понашање можемо једноставно да променимо, тако што у нашој класи дефинишемо метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code> без параметара, који враћа стринг којим желимо да представимо објекат.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">ToString</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">ToString</span><span class="p">()</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Приметимо да у дефиницији овог метода треба да се наведе реч <code class="docutils literal notranslate"><span class="pre">override</span></code>, чиме наглашавамо да желимо да прегазимо постојећи метод који такође нема параметара (<em>override</em> на енглеском значи <em>прегази</em>). Редефинисање метода <code class="docutils literal notranslate"><span class="pre">ToString</span></code> је такође неки вид полиморфизма, али њиме ћемо се нешто детаљније бавити касније.</p>
+<p>Следи пример са <strong>комплетном класом</strong> <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, који омогућава учитавање разломака са тастатуре, приказ на екрану, поређење и рачунање са разломцима.  Пример можете да копирате и испробате у свом радном окружењу.</p>
+
+<div data-childcomponent="racunanje_sa_razlomcima" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=racunanje_sa_razlomcima data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+
+public class Razlomak
+{
+    // razlomak je oblika a / b 
+    private int a, b; // nametnut uslov: a i b  su uzajamno prosti, b &gt; 0
+
+    public Razlomak(int p, int q)
+    {
+        if (q == 0)
+        {
+            throw new Exception(&quot;Imenilac razlomka je 0&quot;);
+        }
+
+        if (q &lt; 0)
+        {
+            p = -p;
+            q = -q;
+        }
+
+        a = p;
+        b = q;
+        Skrati(ref a, ref b);
+    }
+
+    public Razlomak(int n)
+    {
+        a = n; b = 1;
+    }
+
+    private static int NZD(int a, int b)
+    {
+        // nametnut preduslov: a &gt;= 0 i b &gt;= 0
+        while (b &gt; 0) { int r = a % b; a = b; b = r; }
+        return a;
+    }
+
+    private static void Skrati(ref int x, ref int y)
+    {
+        // preduslov: x i y nisu oba nule
+        int d = NZD(Math.Abs(x), Math.Abs(y));
+        x /= d;
+        y /= d;
+    }
+
+    public bool Equals(Razlomak r)
+    {
+        return a == r.a &amp;&amp; b == r.b;
+    }
+
+    public int CompareTo(Razlomak r)
+    {
+        return a * r.b - r.a * b;
+    }
+    public static Razlomak Parse(string s)
+    {
+        if (String.IsNullOrEmpty(s))
+        {
+            throw new Exception(&quot;Nije dobar zapis razlomka&quot;);
+        }
+        int k = s.IndexOf(&apos;/&apos;);
+        if (k == -1) { return new Razlomak(int.Parse(s)); }
+        return new Razlomak(
+            int.Parse(s.Substring(0, k)),
+            int.Parse(s.Substring(k + 1)));
+    }
+
+    public static Razlomak operator +(Razlomak r, Razlomak s)
+    {
+        int d = NZD(r.b, s.b);
+        int nzs = (r.b / d) * s.b;
+        return new Razlomak(r.a * (s.b / d) + s.a * (r.b / d), nzs);
+    }
+
+    public static Razlomak operator -(Razlomak r)
+    {
+        return new Razlomak(-r.a, r.b);
+    }
+
+    public static Razlomak operator -(Razlomak r, Razlomak s)
+    {
+        int d = NZD(r.b, s.b);
+        int nzs = (r.b / d) * s.b;
+        return new Razlomak(r.a * (s.b / d) - s.a * (r.b / d), nzs);
+    }
+
+    public static Razlomak operator *(Razlomak r, Razlomak s)
+    {
+        int ra = r.a, rb = r.b, sa = s.a, sb = s.b;
+        Skrati(ref ra, ref sb);
+        Skrati(ref sa, ref rb);
+        return new Razlomak(ra * sa, rb * sb);
+    }
+
+    public static Razlomak operator /(Razlomak r, Razlomak s)
+    {
+        int ra = r.a, rb = r.b, sa = s.a, sb = s.b;
+        Skrati(ref ra, ref sa);
+        Skrati(ref rb, ref sb);
+        return new Razlomak(ra * sb, rb * sa);
+    }
+
+    public static implicit operator Razlomak(int n)
+    {
+        return new Razlomak(n);
+    }
+    public override string ToString()
+    {
+        if (a == 0) { return &quot;0&quot;; }
+        if (b == 1) { return a.ToString(); }
+        return a.ToString() + &quot;/&quot; + b.ToString();
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine(&quot;Program resava jednacinu oblika ax+b=cx+d&quot;);
+        Console.Write(&quot;Unesite razlomak a: &quot;);
+        Razlomak a = Razlomak.Parse(Console.ReadLine());
+        Console.Write(&quot;Unesite razlomak b: &quot;);
+        Razlomak b = Razlomak.Parse(Console.ReadLine());
+        Console.Write(&quot;Unesite razlomak c: &quot;);
+        Razlomak c = Razlomak.Parse(Console.ReadLine());
+        Console.Write(&quot;Unesite razlomak d: &quot;);
+        Razlomak d = Razlomak.Parse(Console.ReadLine());
+        // ax+b=cx+d --&gt; x=(d-b)/(a-c)
+        Console.WriteLine(&quot;Resenje je {0}&quot;, (d - b) / (a - c));
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+</div>
+</div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="klase_02bq_staticki_metodi_kviz.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>
