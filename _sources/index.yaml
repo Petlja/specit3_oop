@@ -1,0 +1,134 @@
+courseId: kurs-oop-treci-spec-IT
+lang: sr-Cyrl
+title: Програмирање за трећи разред специјализованих ИТ одељења
+description:
+  longDescription: |
+    Овај курс је намењен ученицима специјализованих ИТ одељена 3. разреда за предмет Програмирање и програмски језици.
+    
+    Поред рада у школи, курс може да се пролази и самостално.
+
+  shortDescription: Програмирање
+  willLearn: 
+    - шта је објектно оријентисано програмирање (ООП) и зашто је настало, тј. које проблеме развоја софтвера је решило
+    - шта су основни концепти ООП и како се остварују
+    - који су основни принципи развоја софтвера, зашто их се придржавати и како ООП у томе помаже
+  requirements:
+    - Инсталирано окружење *Visual Studio* (довољно је инсталирати издање *Community edition* које је бесплатно) или неко друго окружење за развој програма у језику C# (на пример *Mono develop*).
+  toc:
+    - Зашто се програмски језици мењају
+    - Основни појмови ООП (објектно оријентисаног прогрмирања)
+    - Концепти ООП и изоловане класе (енкапсулација, статички полиморфизам, апстракција, модуларност)
+    - Концепти ООП и наслеђивање (динамички полиморфизам, виртуелне функције, апстрактне класе, интерфејси)
+
+
+lessons:
+### СЕКЦИЈА УВОД
+  - title: Увод
+    guid: 3e6f2785-6d64-491a-952f-621eb939f466
+    folder: 01_uvod
+    activities:
+      - type: reading
+        title: Зашто се мења начин програмирања
+        file: uvod_01a_promene.rst
+        guid: d8ff4bd3-c73e-454b-ab72-d5ed0432b0de
+      - type: quiz
+        title: Парадигме у програмирању - квиз
+        file: uvod_01aq_paradigme_kviz.rst
+        guid: 8c249332-fba2-4c25-95e9-f10a9b35618d
+      - type: reading
+        title: Најосновније о класама и објектима
+        file: uvod_01b_klase_i_objekti.rst
+        guid: af78c1f1-73ac-468c-b7c5-f69f894b76b2
+      - type: quiz
+        title: Класе и објекти - квиз
+        file: uvod_01bq_klase_i_objekti_kviz.rst
+        guid: 1574e5c9-bc26-4e54-bebd-c45bc36d06a3
+
+### СЕКЦИЈА ИЗОЛОВАНЕ КЛАСЕ
+  - title: Концепти ООП и изоловане класе
+    guid: 57217667-7d37-49c2-b632-d62eada1308b
+    folder: 02_izolovane_klase
+    activities:
+      - type: reading
+        title: Енкапсулација
+        file: klase_02a_enkapsulacija.rst
+        guid: 3c79a46e-1629-41eb-aa30-2890879e374b
+      - type: quiz
+        title: Енкапсулација - квиз
+        file: klase_02aq_enkapsulacija_kviz.rst
+        guid: 357f6a1f-8fe0-432d-b5cc-9252cad6700b
+      - type: reading
+        title: Методи објекта и методи класе
+        file: klase_02b_staticki_metodi.rst
+        guid: cff3cc2a-af35-4502-b70e-29c74b92b768
+      - type: quiz
+        title: Методи објекта и методи класе - квиз
+        file: klase_02bq_staticki_metodi_kviz.rst
+        guid: fb26de8d-e28c-422c-9cdb-08e81c7eb59f
+      - type: reading
+        title: Статички полиморфизам, оператори
+        file: klase_02c_statpolim_operatori.rst
+        guid: 87078689-392c-4718-b438-eb252f84ec56
+      - type: quiz
+        title: Статички полиморфизам, оператори - квиз
+        file: klase_02cq_statpolim_operatori_kviz.rst
+        guid: 2178d8e5-fba5-4c77-af1c-eb54e33edfc3
+      - type: reading
+        title: Апстракција
+        file: klase_02d_apstrakcija.rst
+        guid: 1d69f87f-ab1f-4205-9803-16224d86f86b
+      - type: quiz
+        title: Апстракција - квиз
+        file: klase_02dq_apstrakcija_kviz.rst
+        guid: 98820380-51f8-47b4-9477-6eae3757fa32
+      - type: reading
+        title: Модуларност
+        file: klase_02e_modularnost.rst
+        guid: b2525d57-0bdb-4ea0-9390-e4b207165f12
+      - type: quiz
+        title: Модуларност - квиз
+        file: klase_02eq_modularnost_kviz.rst
+        guid: 6ec7d8a6-2572-4119-8dd5-a1aa2d3355a6
+      - type: reading
+        title: Изоловане класе - задаци за вежбу
+        file: klase_02f_zadaci.rst
+        guid: 5960fa50-4520-43d8-b779-b53ce461ef51
+
+### СЕКЦИЈА НАСЛЕЂИВАЊЕ
+  - title: Концепти ООП и наслеђивање
+    guid: f3785baf-8dd2-4f02-ae1e-38cab3fb9660
+    folder: 03_nasledjivanje
+    activities:
+      - type: reading
+        title: Појам наслеђивања
+        file: nasledjivanje_03a_izvedena_klasa.rst
+        guid: 077964c6-0292-48d8-90eb-2e5d375bbc95
+      - type: reading
+        title: Динамички полиморфизам
+        file: nasledjivanje_03b_dinamicki_polimorfizam.rst
+        guid: c1b2c5c1-0fbb-4e47-999f-e602053ca15d
+      - type: reading
+        title: Интерфејси
+        file: nasledjivanje_03c_interfejsi.rst
+        guid: 8297a28b-090a-4164-af4b-a09fe2a05bad
+      - type: reading
+        title: Наслеђивање - задаци за вежбу
+        file: nasledjivanje_03d_zadaci.rst
+        guid: b8fcb37f-992b-412f-90bc-5410e47f124c
+        
+# Шта је још у програму: (погледај поново)
+# - Механизам креирања и механизам обраде изузетка.
+# - Генеричке класе (темплејти)
+# - релације наслеђивања
+#   - генерализација (на горе у хијерархији) / специјализација (на доле), реализација (имплементација интерфеса)
+# - односи (током рада програма)
+#     http://poincare.matf.bg.ac.rs/~asimic/2017/is/UMLSeminarski/DijagramKlasa_NikolaDimitrijevic.pdf
+#   - асоцијација (једна класа зна за другу и користи је у својој имплементацији)
+#     асоцијација може да буде унидирекциона, биидирекциона и рефлексивна
+#   - агрегација (једна класа је део друге класе)
+#   - композиција (јак тип агрегације, једна класа постоји само као део друге, иначе нема смисла)
+#
+#
+#
+### СЕКЦИЈА ГЕНЕРИЧКЕ КЛАСЕ (ТЕМПЛЕЈТИ) ? - ово није ООП, а битно је
+
