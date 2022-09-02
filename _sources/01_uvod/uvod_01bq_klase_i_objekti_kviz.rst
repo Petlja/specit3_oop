@@ -47,21 +47,25 @@
 
 
 .. mchoice:: klase_i_objekti_q4
-    :answer_a: ``zapremina`` је поље класе ``Kutija``.
-    :answer_b: ``zapremina`` је метод класе ``Kutija``.
-    :answer_c: ``zapremina`` је својство класе ``Kutija``.
-    :answer_d: ``zapremina`` је поље или својство класе ``Kutija``.
+    :answer_a: Само поље класе.
+    :answer_b: Само метод класе.
+    :answer_c: Само својство класе.
+    :answer_d: Поље или својство класе.
     :correct: d
     :feedback_a: Не.
     :feedback_b: Не.
     :feedback_c: Не.
     :feedback_d: Тачно!
     
-    Нека је ``k1`` објекат класе ``Kutija``. Шта можемо да закључимо када у програму видимо запис 
+    Нека је ``k1`` објекат класе ``Kutija``. Када у програму видимо запис 
     
     .. code-block:: csharp
 
         Console.WriteLine(k1.zapremina);
+        
+    јасно је да ``zapremina`` представља неки део класе ``Kutija``.
+
+    Шта може да представља идентификатор ``zapremina`` у класи ``Kutija``?
 
 
 
