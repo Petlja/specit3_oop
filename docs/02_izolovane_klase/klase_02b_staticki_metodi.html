@@ -269,8 +269,8 @@
 <h1>Методи објекта и методи класе<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>У овој лекцији:</p>
 <ul class="simple">
-<li><p>По чему се разликују статички методи (тј. методи класе) од нестатичких (тј. метода објекта)</p></li>
-<li><p>Како да обезбедимо удобно учитавање објеката наше класе</p></li>
+<li><p>По чему се разликују статички методи (тј. методи класе) од нестатичких (тј. метода објекта),</p></li>
+<li><p>Како да обезбедимо удобно учитавање објеката наше класе.</p></li>
 </ul>
 <p>У претходном примеру смо започели прављење класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> и за сада смо омогућили да корисник формира разломке на основу вредности бројиоца и имениоца, као и да пореди те разломке.</p>
 <p>Логично је да претпоставимо да ће програмер који користи класу <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> желети да својим корисницима омогући да унесу вредност разломка са тастатуре. Он би то могао да уради на разне начине у неколико линија кода. Пошто вероватно не жели да понавља тих неколико линија за сваки разломак који треба да се унесе, могао би и да напише метод који учитава бројилац и именилац (са или без разломачке црте), а враћа учитани разломак. Међутим, ако је већ потребно да се напише метод за унос разломка са тастатуре, онда је боље да тај метод буде део класе. На тај начин би метод био написан само једном (у класи), уместо да га пише сваки програмер који користи класу <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>.</p>
@@ -319,11 +319,11 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Ово, наравно, није први пут да се срећемо са кључном речи <code class="docutils literal notranslate"><span class="pre">static</span></code>. Напротив, ову реч смо виђали вероватно у свим досадашњим програмима на језику <em>C#</em> (приметимо да је метод <code class="docutils literal notranslate"><span class="pre">Main</span></code> статички, тј. да његова дефиниција почиње са <code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">void</span> <span class="pre">Main</span></code>). Међутим, до сада смо реч <code class="docutils literal notranslate"><span class="pre">static</span></code> прихватали без дубљег разумевања (просто - тако се пише), а сада јасније разумемо разлику између статичких и нестатичких метода и знамо испред којих метода треба писати ову реч, а испред којих не.</p>
+<p>Ово, наравно, није први пут да се срећемо са кључном речи <code class="docutils literal notranslate"><span class="pre">static</span></code>. Напротив, ову реч смо виђали вероватно у свим досадашњим програмима на језику <em>C#</em> (приметимо да је метод <code class="docutils literal notranslate"><span class="pre">Main</span></code> статички, тј. да његова дефиниција почиње са <code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">void</span> <span class="pre">Main</span></code>). Међутим, до сада смо реч <code class="docutils literal notranslate"><span class="pre">static</span></code> прихватали без дубљег разумевања (просто – тако се пише), а сада јасније разумемо разлику између статичких и нестатичких метода и знамо испред којих метода треба писати ову реч, а испред којих не.</p>
 
-    <div class="note-wrapper infonote-type">
+    <div class="note-wrapper suggestionnote-type">
         <div class="note-icon-holder"> </div>
-        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
         <div class="course-content">
             <p>
 <p>Као што је речено, метод проглашавамо за статички када му није потребан „његов” објекат. Мада смо ово сад разјанили, сигурно ће се дешавати да реч <code class="docutils literal notranslate"><span class="pre">static</span></code> употребимо недоследно. На овом месту можемо да проверимо шта би се догодило када бисмо нпр. у статичком методу <code class="docutils literal notranslate"><span class="pre">Parse</span></code> ипак поменули поље <code class="docutils literal notranslate"><span class="pre">a</span></code>. Додајте на почетак метода <code class="docutils literal notranslate"><span class="pre">Parse</span></code> наредбу</p>
