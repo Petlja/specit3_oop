@@ -58,13 +58,21 @@ lessons:
         file: klase_02aq_enkapsulacija_kviz.rst
         guid: 357f6a1f-8fe0-432d-b5cc-9252cad6700b
       - type: reading
-        title: Методи објекта и методи класе
+        title: Енкапсулација - задаци
+        file: klase_02az_enkapsulacija_zadaci.rst
+        guid: c865e755-aad2-4b2b-850e-468f393b583b
+      - type: reading
+        title: Чланови објекта и чланови класе
         file: klase_02b_staticki_metodi.rst
         guid: cff3cc2a-af35-4502-b70e-29c74b92b768
       - type: quiz
-        title: Методи објекта и методи класе - квиз
+        title: Чланови објекта и чланови класе - квиз
         file: klase_02bq_staticki_metodi_kviz.rst
         guid: fb26de8d-e28c-422c-9cdb-08e81c7eb59f
+      - type: reading
+        title: Чланови објекта и чланови класе - задаци
+        file: klase_02bz_staticki_metodi_zadaci.rst
+        guid: 510822cb-a553-4d0e-9ec3-37b9df7ee428
       - type: reading
         title: Статички полиморфизам, оператори
         file: klase_02c_statpolim_operatori.rst
@@ -74,13 +82,21 @@ lessons:
         file: klase_02cq_statpolim_operatori_kviz.rst
         guid: 2178d8e5-fba5-4c77-af1c-eb54e33edfc3
       - type: reading
-        title: Апстракција
+        title: Статички полиморфизам, оператори - задаци
+        file: klase_02cz_statpolim_operatori_zadaci.rst
+        guid: c0dc8b61-c976-4574-90f3-e94a1e3c43b6
+      - type: reading
+        title: Апстракција, индексери
         file: klase_02d_apstrakcija.rst
         guid: 1d69f87f-ab1f-4205-9803-16224d86f86b
       - type: quiz
-        title: Апстракција - квиз
+        title: Апстракција, индексери - квиз
         file: klase_02dq_apstrakcija_kviz.rst
         guid: 98820380-51f8-47b4-9477-6eae3757fa32
+      - type: reading
+        title: Апстракција, индексери - задаци
+        file: klase_02dz_apstrakcija_zadaci.rst
+        guid: 0e087c48-dbc0-4301-b294-5092a7731965
       - type: reading
         title: Модуларност
         file: klase_02e_modularnost.rst
@@ -90,8 +106,8 @@ lessons:
         file: klase_02eq_modularnost_kviz.rst
         guid: 6ec7d8a6-2572-4119-8dd5-a1aa2d3355a6
       - type: reading
-        title: Изоловане класе - задаци за вежбу
-        file: klase_02f_zadaci.rst
+        title: Модуларност - задаци
+        file: klase_02ez_zadaci.rst
         guid: 5960fa50-4520-43d8-b779-b53ce461ef51
 
 ### СЕКЦИЈА НАСЛЕЂИВАЊЕ
