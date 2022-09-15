@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Чланови објекта и чланови класе - задаци</title>
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/runestonebase.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="../_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="../_static/codemirror.js"></script>
+    <script type="text/javascript" src="../_static/xml.js"></script>
+    <script type="text/javascript" src="../_static/css.js"></script>
+    <script type="text/javascript" src="../_static/python.js"></script>
+    <script type="text/javascript" src="../_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="../_static/javascript.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/activecode.js"></script>
+    <script type="text/javascript" src="../_static/clike.js"></script>
+    <script type="text/javascript" src="../_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="../_static/animationbase.js"></script>
+    <script type="text/javascript" src="../_static/mchoice.js"></script>
+    <script type="text/javascript" src="../_static/timedmc.js"></script>
+    <script type="text/javascript" src="../_static/timed.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/clickable.js"></script>
+    <script type="text/javascript" src="../_static/timedclickable.js"></script>
+    <script type="text/javascript" src="../_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="../_static/pytutor.js"></script>
+    <script type="text/javascript" src="../_static/codelens.js"></script>
+    <script type="text/javascript" src="../_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="../_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="../_static/datafile.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop.js"></script>
+    <script type="text/javascript" src="../_static/timeddnd.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/fitb.js"></script>
+    <script type="text/javascript" src="../_static/timedfitb.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/matrixeq.js"></script>
+    <script type="text/javascript" src="../_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="../_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="../_static/parsons.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/timedparsons.js"></script>
+    <script type="text/javascript" src="../_static/poll.js"></script>
+    <script type="text/javascript" src="../_static/reveal.js"></script>
+    <script type="text/javascript" src="../_static/shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="../_static/showEval.js"></script>
+    <script type="text/javascript" src="../_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="../_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="../_static/webglinteractive.js"></script>
+    <script type="text/javascript" src="../_static/FileSaver.min.js"></script>
+    <script type="text/javascript" src="../_static/Blob.js"></script>
+    <script type="text/javascript" src="../_static/karelCorner.js"></script>
+    <script type="text/javascript" src="../_static/karelRobot.js"></script>
+    <script type="text/javascript" src="../_static/karelWorld.js"></script>
+    <script type="text/javascript" src="../_static/karelChat.js"></script>
+    <script type="text/javascript" src="../_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="../_static/karelUI.js"></script>
+    <script type="text/javascript" src="../_static/karel.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/notes.js"></script>
+    <script type="text/javascript" src="../_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="../_static/gallery.js"></script>
+    <script type="text/javascript" src="../_static/associations.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/editor.js"></script>
+    <script type="text/javascript" src="../_static/jszip.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.en.js"></script>
+    <script type="text/javascript" src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="../_static/rangy-core.js"></script>
+    <script type="text/javascript" src="../_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="../_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="../_static/user-highlights.js"></script>
+    <script type="text/javascript" src="../_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="../_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../_static/course-errors.js"></script>
+    <script type="text/javascript" src="../_static/petlja.js"></script>
+    <script type="text/javascript" src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'specit3_oop';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'specit3_oop';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_uvod>
+                    <h5>Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
+                <a href=../01_uvod/uvod_01b_klase_i_objekti.html><div class="studioLecture" id=activity-uvod_01b_klase_i_objekti><i class="fas fa-file-alt activity-icon"></i>Најосновније о класама и објектима</div></a>
+                <a href=../01_uvod/uvod_01bq_klase_i_objekti_kviz.html><div class="studioLecture" id=activity-uvod_01bq_klase_i_objekti_kviz><i class="far fa-question-circle activity-icon"></i>Класе и објекти - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_izolovane_klase>
+                    <h5>Концепти ООП и изоловане класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_izolovane_klase/klase_02a_enkapsulacija.html><div class="studioLecture" id=activity-klase_02a_enkapsulacija><i class="fas fa-file-alt activity-icon"></i>Енкапсулација</div></a>
+                <a href=../02_izolovane_klase/klase_02aq_enkapsulacija_kviz.html><div class="studioLecture" id=activity-klase_02aq_enkapsulacija_kviz><i class="far fa-question-circle activity-icon"></i>Енкапсулација - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02az_enkapsulacija_zadaci.html><div class="studioLecture" id=activity-klase_02az_enkapsulacija_zadaci><i class="fas fa-file-alt activity-icon"></i>Енкапсулација - задаци</div></a>
+                <a href=../02_izolovane_klase/klase_02b_staticki_metodi.html><div class="studioLecture" id=activity-klase_02b_staticki_metodi><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе</div></a>
+                <a href=../02_izolovane_klase/klase_02bq_staticki_metodi_kviz.html><div class="studioLecture" id=activity-klase_02bq_staticki_metodi_kviz><i class="far fa-question-circle activity-icon"></i>Чланови објекта и чланови класе - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02bz_staticki_metodi_zadaci.html><div class="studioLecture" id=activity-klase_02bz_staticki_metodi_zadaci><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе - задаци</div></a>
+                <a href=../02_izolovane_klase/klase_02c_statpolim_operatori.html><div class="studioLecture" id=activity-klase_02c_statpolim_operatori><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори</div></a>
+                <a href=../02_izolovane_klase/klase_02cq_statpolim_operatori_kviz.html><div class="studioLecture" id=activity-klase_02cq_statpolim_operatori_kviz><i class="far fa-question-circle activity-icon"></i>Статички полиморфизам, оператори - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02cz_statpolim_operatori_zadaci.html><div class="studioLecture" id=activity-klase_02cz_statpolim_operatori_zadaci><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори - задаци</div></a>
+                <a href=../02_izolovane_klase/klase_02d_apstrakcija.html><div class="studioLecture" id=activity-klase_02d_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери</div></a>
+                <a href=../02_izolovane_klase/klase_02dq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02dq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција, индексери - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02dz_apstrakcija_zadaci.html><div class="studioLecture" id=activity-klase_02dz_apstrakcija_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери - задаци</div></a>
+                <a href=../02_izolovane_klase/klase_02e_modularnost.html><div class="studioLecture" id=activity-klase_02e_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност</div></a>
+                <a href=../02_izolovane_klase/klase_02eq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02eq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02ez_zadaci.html><div class="studioLecture" id=activity-klase_02ez_zadaci><i class="fas fa-file-alt activity-icon"></i>Модуларност - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_nasledjivanje>
+                    <h5>Концепти ООП и наслеђивање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_nasledjivanje/nasledjivanje_03a_izvedena_klasa.html><div class="studioLecture" id=activity-nasledjivanje_03a_izvedena_klasa><i class="fas fa-file-alt activity-icon"></i>Појам наслеђивања</div></a>
+                <a href=../03_nasledjivanje/nasledjivanje_03b_dinamicki_polimorfizam.html><div class="studioLecture" id=activity-nasledjivanje_03b_dinamicki_polimorfizam><i class="fas fa-file-alt activity-icon"></i>Динамички полиморфизам</div></a>
+                <a href=../03_nasledjivanje/nasledjivanje_03c_interfejsi.html><div class="studioLecture" id=activity-nasledjivanje_03c_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
+                <a href=../03_nasledjivanje/nasledjivanje_03d_zadaci.html><div class="studioLecture" id=activity-nasledjivanje_03d_zadaci><i class="fas fa-file-alt activity-icon"></i>Наслеђивање - задаци за вежбу</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <div class="section" id="id1">
+<h1>Чланови објекта и чланови класе - задаци<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>1. Робот</strong></p>
+<p>Написати класу <code class="docutils literal notranslate"><span class="pre">Robot</span></code> поштујући следећу спецификацију.</p>
+<p>Робот се креће по целобројној решетки у равни и описан је својим двема целобројном координатама
+и оријентацијом (окренут је навише, наниже, налево или надесно).</p>
+<p>Конструктор има три параметра. Прва два су целобројне координате полазног положаја, а трећи је
+карактер, и то један од <code class="docutils literal notranslate"><span class="pre">N</span></code>, <code class="docutils literal notranslate"><span class="pre">E</span></code>, <code class="docutils literal notranslate"><span class="pre">S</span></code>, <code class="docutils literal notranslate"><span class="pre">W</span></code>. Слово означава почетну оријентацију робота
+(<code class="docutils literal notranslate"><span class="pre">N</span></code> значи оријентацију навише, <code class="docutils literal notranslate"><span class="pre">E</span></code> надесно, <code class="docutils literal notranslate"><span class="pre">S</span></code> наниже, а <code class="docutils literal notranslate"><span class="pre">W</span></code> налево). Ако му се
+проследи другачији карактер, конструктор треба да баци одговарајући изузетак.</p>
+<p>Класа има следеће методе:</p>
+<ul class="simple">
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">Napred</span></code>, који имплементира померање робота за наведени број места у смеру
+у ком је окренут (ако се не наведе број места, подразумева се једно место),</p></li>
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">Nalevo</span></code>, који имплементира окретање робота налево за 90 степени,</p></li>
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">Nadesno</span></code>, који имплементира окретање робота надесно за 90 степени,</p></li>
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code>, који враћа текстуалну репрезентацију објекта у облику <code class="docutils literal notranslate"><span class="pre">Robot(X,</span> <span class="pre">Y,</span> <span class="pre">SMER)</span></code>,
+нпр. <code class="docutils literal notranslate"><span class="pre">Robot(7,</span> <span class="pre">4,</span> <span class="pre">E)</span></code></p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Напишите и кратак програм којим се демонстрира употреба класе (испробавају се све
+функционалности класе).</p>
+
+    <div data-component="reveal" id="robot_savet"   data-showtitle="Савет" data-hidetitle="Сакриј савет">
+    <p><strong>Савет:</strong> При имплементацији ове класе згодно је да се тренутна оријентација робота
+памти као једна од 4 могуће целобројне вредности (нпр. 0 за оријентацију навише, 1 за
+надесно, 2 за наниже и 3 за налево). У том случају, од помоћи могу да буду следећа
+статичка поља:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">const</span> <span class="pre">string</span> <span class="pre">ImeSmera</span> <span class="pre">=</span> <span class="pre">&quot;NESW&quot;;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">static</span> <span class="pre">int[]</span> <span class="pre">dx</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1</span> <span class="pre">};</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">static</span> <span class="pre">int[]</span> <span class="pre">dy</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">0</span> <span class="pre">};</span></code></p></li>
+</ul>
+<p>Поља су приватна, тако да корисник класе не може да их види и мења, а статичка су јер
+нам одговара да буду заједничка за све објекте (пошто никад не мењају вредност, нема
+потребе да сваки објекат заузима додатни простор за ова поља).</p>
+
+    </div>
+    
+    </div></div>
+
+    <div data-component="reveal" id="robot_predlog_resenja"   data-showtitle="Могуће решење за класу" data-hidetitle="Сакриј решење">
+    
+<div data-childcomponent="klasa_robot" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_robot data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+
+public class Robot
+{
+    private int x, y, smer;
+    private const string ImeSmera = &quot;NESW&quot;;
+    private static int[] dx = { 0, 1, 0, -1}; 
+    private static int[] dy = { 1, 0, -1, 0};
+    public Robot(int x0, int y0, char orijentacija)
+    {
+        x = x0;
+        y = y0;
+        switch (char.ToUpper(orijentacija))
+        {
+            case &apos;N&apos;: smer = 0; break;
+            case &apos;E&apos;: smer = 1; break;
+            case &apos;S&apos;: smer = 2; break;
+            case &apos;W&apos;: smer = 3; break;
+            default: throw new Exception(&quot;Nepostojeca orijentacija&quot;);
+        }
+    }
+    public void Napred(int n = 1)
+    {
+        x += n * dx[smer];
+        y += n * dy[smer];
+    }
+    public void Nalevo()
+    {
+        smer = (smer + 3) % 4;
+    }
+    public void Nadesno()
+    {
+        smer = (smer + 1) % 4;
+    }
+
+    public override string ToString()
+    {
+        return string.Format(&quot;Robot({0}, {1}, {2})&quot;, x, y, ImeSmera[smer]);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // proba
+        Robot r1 = new Robot(2, 3, &apos;N&apos;);
+        r1.Napred();
+        r1.Nadesno();
+        r1.Napred(5);
+        Console.WriteLine(r1);
+    }
+}
+
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>2. Карте</strong></p>
+<p>Написати класу <code class="docutils literal notranslate"><span class="pre">Karta</span></code> поштујући следећу спецификацију.</p>
+<p>Класа <code class="docutils literal notranslate"><span class="pre">Karta</span></code> представља карту за играње из стандардног шпила од 52 карте. Карта је описана
+бојом и нумеричком вредношћу. У класи се дефинише набројиви тип</p>
+<p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">enum</span> <span class="pre">Boja</span> <span class="pre">{</span> <span class="pre">Pik,</span> <span class="pre">Karo,</span> <span class="pre">Herc,</span> <span class="pre">Tref</span> <span class="pre">};</span></code></p>
+<p>који представља боју карте. Нумеричка вредност карте је број од 2 до 15 (11 се не појављује, ас
+вреди 15, краљ 14,дама 13, жандар 12, вредност осталих карата је број написан на њима).</p>
+<p>Конструктор има један параметар типа стринг. Стринг мора да има тачно два карактера. Први карактер
+представља нумеричку вредност карте и мора да буде један од <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">K</span></code>, <code class="docutils literal notranslate"><span class="pre">Q</span></code>, <code class="docutils literal notranslate"><span class="pre">J</span></code>, <code class="docutils literal notranslate"><span class="pre">D</span></code>,
+<code class="docutils literal notranslate"><span class="pre">9</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>, <code class="docutils literal notranslate"><span class="pre">7</span></code>, <code class="docutils literal notranslate"><span class="pre">6</span></code>, <code class="docutils literal notranslate"><span class="pre">5</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code> (карактер <code class="docutils literal notranslate"><span class="pre">D</span></code> представља десетку). Други
+карактер представља боју карте и мора да буде један од <code class="docutils literal notranslate"><span class="pre">P</span></code>, <cite>K`</cite>, <code class="docutils literal notranslate"><span class="pre">H</span></code>, <code class="docutils literal notranslate"><span class="pre">T</span></code>. У случају
+неодговарајуће вредности параметра, конструктор треба да баци изузетак.</p>
+<p>Класа има два својства само за читање, то су <code class="docutils literal notranslate"><span class="pre">BojaKarte</span></code> и <code class="docutils literal notranslate"><span class="pre">Broj</span></code>. Ова својства редом дају
+боју (као вредност набројивог типа) и нумеричку вредност карте (цео број).</p>
+<p>Класа има два јавна статичка поља:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Boja</span><span class="w"> </span><span class="n">BojaPrveKarte</span><span class="p">;</span><span class="w"></span>
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Boja</span><span class="w"> </span><span class="n">AdutskaBoja</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Ова поља су заједничка свим картама и мењају се „споља” током рада програма, као што се приликом
+играња партије карата мења адутска боја и боја прве бачене карте у штиху.</p>
+<p>Класа има метод <code class="docutils literal notranslate"><span class="pre">Vrednost</span></code>, који враћа целобројну вредност карте у текућем тренутку партије.
+Вредност карте зависи од адутске боје и боје прве карте у штиху. Ако боја карте није једнака ни
+адутској, ни боји прве карте, вредност карте једнака је њеној нумеричкој вредности. Ако је боја
+карте једнака адутској боји, њена вредност се увећава за 40, а ако је једнака боји прве карте,
+вредност се увећава за 20.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Напишите и кратак програм којим се демонстрира употреба класе (испробавају се све
+функционалности класе). На пример, програм може да формира низ карата које су бачене у једној
+руци (приликом одигравања једног штиха) и да израчуна редни број играча који носи штих.</p>
+
+    </div></div>
+
+    <div data-component="reveal" id="karte_predlog_resenja"   data-showtitle="Могуће решење за класу" data-hidetitle="Сакриј решење">
+    
+<div data-childcomponent="klasa_karte" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_karte data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+public class Karta
+{
+    public enum Boja { Pik, Karo, Herc, Tref };
+    public static Boja BojaPrveKarte;
+    public static Boja AdutskaBoja;
+
+    private Boja boja;
+    private int broj;
+
+    public Boja BojaKarte { get { return boja; } }
+    public int Broj { get { return Broj; } }
+
+    public Karta(string oznaka)
+    {
+        if (oznaka.Length != 2)
+            throw new Exception(&quot;Pogresna oznaka karte&quot;);
+
+        switch (oznaka[0])
+        {
+            case &apos;A&apos;: broj = 15; break;
+            case &apos;K&apos;: broj = 14; break;
+            case &apos;Q&apos;: broj = 13; break;
+            case &apos;J&apos;: broj = 12; break;
+            case &apos;D&apos;: broj = 10; break;
+            case &apos;9&apos;: broj = 9; break;
+            case &apos;8&apos;: broj = 8; break;
+            case &apos;7&apos;: broj = 7; break;
+            case &apos;6&apos;: broj = 6; break;
+            case &apos;5&apos;: broj = 5; break;
+            case &apos;4&apos;: broj = 4; break;
+            case &apos;3&apos;: broj = 3; break;
+            case &apos;2&apos;: broj = 2; break;
+            default: throw new Exception(&quot;Pogresna oznaka karte&quot;);
+        }
+        switch (oznaka[1])
+        {
+            case &apos;P&apos;: boja = Boja.Pik; break;
+            case &apos;K&apos;: boja = Boja.Karo; break;
+            case &apos;H&apos;: boja = Boja.Herc; break;
+            case &apos;T&apos;: boja = Boja.Tref; break;
+            default: throw new Exception(&quot;Pogresna oznaka karte&quot;);
+        }
+    }
+
+    public int Vrednost
+    {
+        get
+        {
+            if (boja == AdutskaBoja) return 40 + broj;
+            if (boja == BojaPrveKarte) return 20 + broj;
+            return broj;
+        }
+    }
+
+    public override string ToString()
+    {
+        string znak = &quot;&quot;;
+        switch (boja)
+        {
+            case Boja.Pik: znak = &quot;Pik&quot;; break;
+            case Boja.Karo: znak = &quot;Karo&quot;; break;
+            case Boja.Herc: znak = &quot;Herc&quot;; break;
+            case Boja.Tref: znak = &quot;Tref&quot;; break;
+        }
+        string ime = &quot;&quot;;
+        switch (broj)
+        {
+            case 15: ime = &quot;As&quot;; break;
+            case 14: ime = &quot;Kralj&quot;; break;
+            case 13: ime = &quot;Dama&quot;; break;
+            case 12: ime = &quot;Zandar&quot;; break;
+            default: ime = broj.ToString(); break;
+        }
+        return string.Format(&quot;{0} {1}&quot;, ime, znak);
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // proba
+        try
+        {
+            int brojKarata = 5;
+            Karta[] baceneKarte = new Karta[brojKarata];
+            baceneKarte[0] = new Karta(&quot;DT&quot;);
+            baceneKarte[1] = new Karta(&quot;AT&quot;);
+            baceneKarte[2] = new Karta(&quot;AP&quot;);
+            baceneKarte[3] = new Karta(&quot;4K&quot;);
+            baceneKarte[4] = new Karta(&quot;3K&quot;);
+
+            Karta.AdutskaBoja = Karta.Boja.Karo;
+            Karta.BojaPrveKarte = baceneKarte[0].BojaKarte;
+
+            int maxVr = baceneKarte[0].Vrednost;
+            int iMax = 0;
+            for (int i = 1; i &lt; brojKarata; i++)
+            {
+                if (baceneKarte[i].Vrednost &gt; maxVr)
+                {
+                    maxVr = baceneKarte[i].Vrednost;
+                    iMax = i;
+                }
+            }
+            Console.WriteLine(&quot;Nosi igrac sa indeksom {0}&quot;, iMax);
+            Console.WriteLine(&quot;to je karta {0}&quot;, baceneKarte[iMax]);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    </div>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="klase_02bq_staticki_metodi_kviz.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

@@ -76,17 +76,29 @@ lessons:
     title: Енкапсулација - квиз
     type: quiz
   - description: ''
+    file: klase_02az_enkapsulacija_zadaci.html
+    guid: c865e755-aad2-4b2b-850e-468f393b583b
+    src: klase_02az_enkapsulacija_zadaci.rst
+    title: Енкапсулација - задаци
+    type: reading
+  - description: ''
     file: klase_02b_staticki_metodi.html
     guid: cff3cc2a-af35-4502-b70e-29c74b92b768
     src: klase_02b_staticki_metodi.rst
-    title: Методи објекта и методи класе
+    title: Чланови објекта и чланови класе
     type: reading
   - description: ''
     file: klase_02bq_staticki_metodi_kviz.html
     guid: fb26de8d-e28c-422c-9cdb-08e81c7eb59f
     src: klase_02bq_staticki_metodi_kviz.rst
-    title: Методи објекта и методи класе - квиз
+    title: Чланови објекта и чланови класе - квиз
     type: quiz
+  - description: ''
+    file: klase_02bz_staticki_metodi_zadaci.html
+    guid: 510822cb-a553-4d0e-9ec3-37b9df7ee428
+    src: klase_02bz_staticki_metodi_zadaci.rst
+    title: Чланови објекта и чланови класе - задаци
+    type: reading
   - description: ''
     file: klase_02c_statpolim_operatori.html
     guid: 87078689-392c-4718-b438-eb252f84ec56
@@ -100,17 +112,29 @@ lessons:
     title: Статички полиморфизам, оператори - квиз
     type: quiz
   - description: ''
+    file: klase_02cz_statpolim_operatori_zadaci.html
+    guid: c0dc8b61-c976-4574-90f3-e94a1e3c43b6
+    src: klase_02cz_statpolim_operatori_zadaci.rst
+    title: Статички полиморфизам, оператори - задаци
+    type: reading
+  - description: ''
     file: klase_02d_apstrakcija.html
     guid: 1d69f87f-ab1f-4205-9803-16224d86f86b
     src: klase_02d_apstrakcija.rst
-    title: Апстракција
+    title: Апстракција, индексери
     type: reading
   - description: ''
     file: klase_02dq_apstrakcija_kviz.html
     guid: 98820380-51f8-47b4-9477-6eae3757fa32
     src: klase_02dq_apstrakcija_kviz.rst
-    title: Апстракција - квиз
+    title: Апстракција, индексери - квиз
     type: quiz
+  - description: ''
+    file: klase_02dz_apstrakcija_zadaci.html
+    guid: 0e087c48-dbc0-4301-b294-5092a7731965
+    src: klase_02dz_apstrakcija_zadaci.rst
+    title: Апстракција, индексери - задаци
+    type: reading
   - description: ''
     file: klase_02e_modularnost.html
     guid: b2525d57-0bdb-4ea0-9390-e4b207165f12
@@ -124,10 +148,10 @@ lessons:
     title: Модуларност - квиз
     type: quiz
   - description: ''
-    file: klase_02f_zadaci.html
+    file: klase_02ez_zadaci.html
     guid: 5960fa50-4520-43d8-b779-b53ce461ef51
-    src: klase_02f_zadaci.rst
-    title: Изоловане класе - задаци за вежбу
+    src: klase_02ez_zadaci.rst
+    title: Модуларност - задаци
     type: reading
   archived-activities: []
   description: ''
