@@ -304,7 +304,7 @@
 <li><p>Оператор који израчунава разлику два времена и враћага као цео број секунди.</p></li>
 <li><p>Оператор који израчунава збир времена и броја секунди и враћа нови објекат типа <code class="docutils literal notranslate"><span class="pre">Vreme</span></code>.</p></li>
 </ul>
-<p>Након имплементације ови оператора сабирања и одузимања, следећи кôд треба да се компајлира
+<p>Након имплементације ових оператора сабирања и одузимања, следећи кôд треба да се компајлира
 без грешака и извршава (програм треба да испише <code class="docutils literal notranslate"><span class="pre">3724</span></code>, а затим <code class="docutils literal notranslate"><span class="pre">02:17:11</span></code>).</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Vreme</span><span class="w"> </span><span class="n">t1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vreme</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">);</span><span class="w"></span>
 <span class="n">Vreme</span><span class="w"> </span><span class="n">t2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vreme</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">17</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">);</span><span class="w"></span>
@@ -316,7 +316,10 @@
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">t3</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Приметимо да запис <code class="docutils literal notranslate"><span class="pre">Vreme</span> <span class="pre">t3</span> <span class="pre">=</span> <span class="pre">dt</span> <span class="pre">+</span> <span class="pre">t1;</span></code> није синтаксно исправан (не може да се компајлира).
+<p>1. Искористите ово проширење класе за ново решење задатка
+<a class="reference external" href="https://petlja.org/biblioteka/r/Zbirka/cekanje">Чекање</a>, тако да се у решењу користи одузимање
+објеката класе <code class="docutils literal notranslate"><span class="pre">Vreme</span></code>.</p>
+<p>2. Приметимо да запис <code class="docutils literal notranslate"><span class="pre">Vreme</span> <span class="pre">t3</span> <span class="pre">=</span> <span class="pre">dt</span> <span class="pre">+</span> <span class="pre">t1;</span></code> није синтаксно исправан (не може да се компајлира).
 Објасните зашто се добија синтаксна грешка и шта би требало урадити да би овакав запис постао
 синтаксно исправан.</p>
 
@@ -327,14 +330,15 @@
         <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
 <p><strong>2. Комплексни бројеви</strong></p>
-<p>У именском простору <code class="docutils literal notranslate"><span class="pre">System.Numerics;</span></code> стандардне библиотеке, дефинисана је структура
-<code class="docutils literal notranslate"><span class="pre">Complex</span></code>, која имплементира комплексне бројеве. Ова структура има дефинисане
-оператроре за основне рачунске радње, као и метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code>, тако да је њена употреба
-природна и једноставна.</p>
-<p>Мада вам за практичну употребу препоручујемо да користите ову структуру кад год је могуће,
-у овом задатку треба (само ради вежбе) да напишете класу <code class="docutils literal notranslate"><span class="pre">KompleksanВрој</span></code> са што сличнијим
-особинама. Ова класа треба да омогући сабирање, одузимање, множење и дељење објеката класе,
-као и између објеката класе и реалних променљивих.</p>
+<p>У именском простору <code class="docutils literal notranslate"><span class="pre">System.Numerics;</span></code> стандардне библиотеке дефинисана је структура
+<code class="docutils literal notranslate"><span class="pre">Complex</span></code>, која имплементира комплексне бројеве. Ова структура има дефинисане бинарне
+оператроре <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, унарни минус, као и метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code>, тако да
+је њена употреба природна и једноставна.</p>
+<p>Написати класу <code class="docutils literal notranslate"><span class="pre">KompleksanВrој</span></code> са што сличнијим особинама. Ова класа треба да омогући
+четири основне рачунске радње над објектима класе, као и између објеката класе и реалних
+променљивих.</p>
+<p>Напомена: класа <code class="docutils literal notranslate"><span class="pre">KompleksanВrој</span></code> се тражи само ради увежбавања писања оператора. За практичну
+употребу препоручујемо да користите готову структуру кад год је могуће.</p>
 
     </div></div>
 
@@ -344,13 +348,12 @@
         <div class="course-content">
 <p><strong>3. Велики бројеви</strong></p>
 <p>У именском простору <code class="docutils literal notranslate"><span class="pre">System.Numerics;</span></code> стандардне библиотеке, дефинисана је структура
-<code class="docutils literal notranslate"><span class="pre">BigInteger</span></code>, која имплементира велике целе бројеве. Ова структура има дефинисане
-оператроре за основне рачунске радње, као и метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code>, тако да је њена употреба
-природна и једноставна.</p>
-<p>Мада вам за практичну употребу препоручујемо да користите ову структуру кад год је могуће,
-у овом задатку треба (само ради вежбе) да напишете класу <code class="docutils literal notranslate"><span class="pre">VelikiCeoВрој</span></code> са што сличнијим
-особинама. Ова класа треба да омогући сабирање, одузимање, множење и дељење објеката класе,
-као и између објеката класе и целобројних променљивих.</p>
+<code class="docutils literal notranslate"><span class="pre">BigInteger</span></code>, која имплементира велике целе бројеве. И ова структура се лако и природно
+користи захваљујући дефинисаним операторима и методу <code class="docutils literal notranslate"><span class="pre">ToString</span></code> (видети претходни задатак).</p>
+<p>Мада вам за практичну употребу и овде препоручујемо да користите готову структуру кад год је
+могуће, у овом задатку треба, вежбе ради, да напишете класу <code class="docutils literal notranslate"><span class="pre">VelikiCeoВрој</span></code> са што сличнијим
+особинама. Ова класа треба да омогући унарни минус, сабирање, одузимање, множење и дељење
+објеката класе, као и између објеката класе и целобројних променљивих.</p>
 
     </div></div>
 
