@@ -7,3 +7,8 @@ _build
 course
 course.json
 _tmp
+bin
+obj
+.user
+.suo
+.vs

@@ -26,6 +26,8 @@
     :showtitle: Могуће решење за класу
     :hidetitle: Сакриј решење
 
+    **Могуће решење за класу:**
+    
     .. activecode:: klasa_temperatura
         :passivecode: true
         :includesrc: src/zadaci/11_temperatura.cs
@@ -63,6 +65,8 @@
     :showtitle: Могуће решење за класу
     :hidetitle: Сакриј решење
 
+    **Могуће решење за класу:**
+    
     .. activecode:: klasa_vreme
         :passivecode: true
         :includesrc: src/zadaci/12_vreme.cs
@@ -155,6 +159,8 @@
     :showtitle: Могуће решење за класу
     :hidetitle: Сакриј решење
 
+    **Могуће решење за класу:**
+    
     .. activecode:: klasa_lift
         :passivecode: true
         :includesrc: src/zadaci/14_lift.cs

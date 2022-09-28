@@ -109,17 +109,32 @@
 
     |
     
-    Написати и кратак програм који демонстрира све функционалности класе. 
-        
-
-.. reveal:: linfun_predlog_resenja
-    :showtitle: Могуће решење за класу
-    :hidetitle: Сакриј решење
-
-    .. activecode:: klasa_linfun
+    Класа треба да буде написана тако да следећи кôд може да се изврши.
+    
+    .. activecode:: lin_fun_testcode
         :passivecode: true
-        :includesrc: src/zadaci/31_lin_fun.cs
+        :includesrc: src/zadaci/31_lin_fun/lin_fun_test.cs
+    
+    Извршавањем датог кôда треба да се добијe следећи резултат:
 
+    
+    .. code::
+    
+        f3(0) = 8, f4(0) = 13
+        f3(1) = 13, f4(1) = 19
+        f3(2) = 18, f4(2) = 25
+        f3(3) = 23, f4(3) = 31
+        
+       
+.. comment
 
+    Могуће решење
+    
+    .. reveal:: linfun_predlog_resenja
+        :showtitle: Могуће решење за класу
+        :hidetitle: Сакриј решење
 
+        .. activecode:: klasa_linfun
+            :passivecode: true
+            :includesrc: src/zadaci/31_lin_fun.cs
 

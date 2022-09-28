@@ -98,7 +98,7 @@ lessons:
         file: klase_02dz_apstrakcija_zadaci.rst
         guid: 0e087c48-dbc0-4301-b294-5092a7731965
       - type: reading
-        title: Модуларност
+        title: Модуларност, повезане класе
         file: klase_02e_modularnost.rst
         guid: b2525d57-0bdb-4ea0-9390-e4b207165f12
       - type: quiz
@@ -106,7 +106,7 @@ lessons:
         file: klase_02eq_modularnost_kviz.rst
         guid: 6ec7d8a6-2572-4119-8dd5-a1aa2d3355a6
       - type: reading
-        title: Модуларност - задаци
+        title: Повезане класе - задаци
         file: klase_02ez_zadaci.rst
         guid: 5960fa50-4520-43d8-b779-b53ce461ef51
 
