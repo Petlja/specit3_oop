@@ -239,9 +239,9 @@
                 <a href=../02_izolovane_klase/klase_02d_apstrakcija.html><div class="studioLecture" id=activity-klase_02d_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери</div></a>
                 <a href=../02_izolovane_klase/klase_02dq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02dq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција, индексери - квиз</div></a>
                 <a href=../02_izolovane_klase/klase_02dz_apstrakcija_zadaci.html><div class="studioLecture" id=activity-klase_02dz_apstrakcija_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери - задаци</div></a>
-                <a href=../02_izolovane_klase/klase_02e_modularnost.html><div class="studioLecture" id=activity-klase_02e_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност</div></a>
+                <a href=../02_izolovane_klase/klase_02e_modularnost.html><div class="studioLecture" id=activity-klase_02e_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност, повезане класе</div></a>
                 <a href=../02_izolovane_klase/klase_02eq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02eq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
-                <a href=../02_izolovane_klase/klase_02ez_zadaci.html><div class="studioLecture" id=activity-klase_02ez_zadaci><i class="fas fa-file-alt activity-icon"></i>Модуларност - задаци</div></a>
+                <a href=../02_izolovane_klase/klase_02ez_zadaci.html><div class="studioLecture" id=activity-klase_02ez_zadaci><i class="fas fa-file-alt activity-icon"></i>Повезане класе - задаци</div></a>
                 </div>
             </div>
                 
@@ -292,83 +292,18 @@
 у ком је окренут (ако се не наведе број места, подразумева се једно место),</p></li>
 <li><p>Метод <code class="docutils literal notranslate"><span class="pre">Nalevo</span></code>, који имплементира окретање робота налево за 90 степени,</p></li>
 <li><p>Метод <code class="docutils literal notranslate"><span class="pre">Nadesno</span></code>, који имплементира окретање робота надесно за 90 степени,</p></li>
-<li><p>Метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code>, који враћа текстуалну репрезентацију објекта у облику <code class="docutils literal notranslate"><span class="pre">Robot(X,</span> <span class="pre">Y,</span> <span class="pre">SMER)</span></code>,
-нпр. <code class="docutils literal notranslate"><span class="pre">Robot(7,</span> <span class="pre">4,</span> <span class="pre">E)</span></code></p></li>
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code>, који враћа текстуалну репрезентацију објекта у облику <code class="docutils literal notranslate"><span class="pre">Robot(X,</span> <span class="pre">Y,</span> <span class="pre">SMER)</span></code>
+(види пример излаза ниже).</p></li>
 </ul>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Напишите и кратак програм којим се демонстрира употреба класе (испробавају се све
-функционалности класе).</p>
+<p>Класу треба написати тако да може да се изврши следећи метод, који демонстрира употребу класе.</p>
 
-    <div data-component="reveal" id="robot_savet"   data-showtitle="Савет" data-hidetitle="Сакриј савет">
-    <p><strong>Савет:</strong> При имплементацији ове класе згодно је да се тренутна оријентација робота
-памти као једна од 4 могуће целобројне вредности (нпр. 0 за оријентацију навише, 1 за
-надесно, 2 за наниже и 3 за налево). У том случају, од помоћи могу да буду следећа
-статичка поља:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">const</span> <span class="pre">string</span> <span class="pre">ImeSmera</span> <span class="pre">=</span> <span class="pre">&quot;NESW&quot;;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">static</span> <span class="pre">int[]</span> <span class="pre">dx</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1</span> <span class="pre">};</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">static</span> <span class="pre">int[]</span> <span class="pre">dy</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">0</span> <span class="pre">};</span></code></p></li>
-</ul>
-<p>Поља су приватна, тако да корисник класе не може да их види и мења, а статичка су јер
-нам одговара да буду заједничка за све објекте (пошто никад не мењају вредност, нема
-потребе да сваки објекат заузима додатни простор за ова поља).</p>
+<div data-childcomponent="klasa_robot_test" class="course-box course-box-problem course-content">
 
-    </div>
-    
-    </div></div>
-
-    <div data-component="reveal" id="robot_predlog_resenja"   data-showtitle="Могуће решење за класу" data-hidetitle="Сакриј решење">
-    
-<div data-childcomponent="klasa_robot" class="course-box course-box-problem course-content">
-
-<textarea data-component="activecode" id=klasa_robot data-lang="python" 
+<textarea data-component="activecode" id=klasa_robot_test data-lang="python" 
       data-timelimit=25000  data-codelens="true"  
     data-audio=''   
              data-passivecode="true"  data-hidehistory=true
-    data-includesrc="using System;
-
-public class Robot
-{
-    private int x, y, smer;
-    private const string ImeSmera = &quot;NESW&quot;;
-    private static int[] dx = { 0, 1, 0, -1}; 
-    private static int[] dy = { 1, 0, -1, 0};
-    public Robot(int x0, int y0, char orijentacija)
-    {
-        x = x0;
-        y = y0;
-        switch (char.ToUpper(orijentacija))
-        {
-            case &apos;N&apos;: smer = 0; break;
-            case &apos;E&apos;: smer = 1; break;
-            case &apos;S&apos;: smer = 2; break;
-            case &apos;W&apos;: smer = 3; break;
-            default: throw new Exception(&quot;Nepostojeca orijentacija&quot;);
-        }
-    }
-    public void Napred(int n = 1)
-    {
-        x += n * dx[smer];
-        y += n * dy[smer];
-    }
-    public void Nalevo()
-    {
-        smer = (smer + 3) % 4;
-    }
-    public void Nadesno()
-    {
-        smer = (smer + 1) % 4;
-    }
-
-    public override string ToString()
-    {
-        return string.Format(&quot;Robot({0}, {1}, {2})&quot;, x, y, ImeSmera[smer]);
-    }
-}
-
-class Program
+    data-includesrc="class Program
 {
     static void Main(string[] args)
     {
@@ -380,12 +315,64 @@ class Program
         Console.WriteLine(r1);
     }
 }
-
 "   >
 
 
 </textarea>
 </div>
+<p>Извршавањем овог метода треба да се добије следећи излаз:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Robot</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">E</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    </div></div>
+
+    <div data-component="reveal" id="robot_savet"   data-showtitle="Упутство" data-hidetitle="Сакриј упутство">
+    <p><strong>Упутство:</strong></p>
+<p>Из описа класе <code class="docutils literal notranslate"><span class="pre">Robot</span></code> и примера демо-метода, може да се закључи како треба
+да изгледа јавни део класе <code class="docutils literal notranslate"><span class="pre">Robot</span></code>, тј. њен интерфејс.</p>
+
+    <div data-component="reveal" id="robot_class_interface_button"   data-showtitle="Интерфејс тражене класе" data-hidetitle="Сакриј интерфејс">
+    <p><strong>Интерфејс тражене класе</strong></p>
+<p>Ово је само интерфејс класе <code class="docutils literal notranslate"><span class="pre">Robot</span></code>. Недостају имплементације метода,
+као и приватни део класе.</p>
+
+<div data-childcomponent="робот_class_interface" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=робот_class_interface data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="public class Robot
+{
+    public Robot(int x0, int y0, char orijentacija) { }
+    public void Napred(int n = 1) { }
+    public void Nalevo() { }
+    public void Nadesno() { }
+    public override string ToString() { return &quot;&quot;; }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>При имплементацији ове класе згодно је да се тренутна оријентација робота
+памти као једна од 4 могуће целобројне вредности (нпр. 0 за оријентацију навише, 1 за
+надесно, 2 за наниже и 3 за налево). У том случају, од помоћи могу да буду следећа
+статичка поља:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">const</span> <span class="pre">string</span> <span class="pre">ImeSmera</span> <span class="pre">=</span> <span class="pre">&quot;NESW&quot;;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">static</span> <span class="pre">int[]</span> <span class="pre">dx</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1</span> <span class="pre">};</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">static</span> <span class="pre">int[]</span> <span class="pre">dy</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">0</span> <span class="pre">};</span></code></p></li>
+</ul>
+<p>Поља су приватна, тако да корисник класе не може да их види и мења, а статичка су јер
+нам одговара да буду заједничка за све објекте (пошто никад не мењају вредност, нема
+потребе да сваки објекат заузима додатни простор за ова поља).</p>
+<p>Наравно, могућа је и сасвим прихватљива и имплементација класе без ових поља. На пример,
+смер може да се памти као карактере, а у потребним методима да се користи нека од
+наредби гранања (<cite>if</cite>, <cite>switch</cite>) за разликовање смерова.</p>
 
     </div>
     
@@ -399,11 +386,11 @@ class Program
 бојом и нумеричком вредношћу. У класи се дефинише набројиви тип</p>
 <p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">enum</span> <span class="pre">Boja</span> <span class="pre">{</span> <span class="pre">Pik,</span> <span class="pre">Karo,</span> <span class="pre">Herc,</span> <span class="pre">Tref</span> <span class="pre">};</span></code></p>
 <p>који представља боју карте. Нумеричка вредност карте је број од 2 до 15 (11 се не појављује, ас
-вреди 15, краљ 14,дама 13, жандар 12, вредност осталих карата је број написан на њима).</p>
-<p>Конструктор има један параметар типа стринг. Стринг мора да има тачно два карактера. Први карактер
+вреди 15, краљ 14,дама 13, жандар 12, нумеричка вредност осталих карата је број написан на њима).</p>
+<p>Конструктор има један параметар типа <code class="docutils literal notranslate"><span class="pre">string</span></code>, који мора да има тачно два карактера. Први карактер
 представља нумеричку вредност карте и мора да буде један од <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">K</span></code>, <code class="docutils literal notranslate"><span class="pre">Q</span></code>, <code class="docutils literal notranslate"><span class="pre">J</span></code>, <code class="docutils literal notranslate"><span class="pre">D</span></code>,
 <code class="docutils literal notranslate"><span class="pre">9</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>, <code class="docutils literal notranslate"><span class="pre">7</span></code>, <code class="docutils literal notranslate"><span class="pre">6</span></code>, <code class="docutils literal notranslate"><span class="pre">5</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code> (карактер <code class="docutils literal notranslate"><span class="pre">D</span></code> представља десетку). Други
-карактер представља боју карте и мора да буде један од <code class="docutils literal notranslate"><span class="pre">P</span></code>, <cite>K`</cite>, <code class="docutils literal notranslate"><span class="pre">H</span></code>, <code class="docutils literal notranslate"><span class="pre">T</span></code>. У случају
+карактер представља боју карте и мора да буде један од <code class="docutils literal notranslate"><span class="pre">P</span></code>, <code class="docutils literal notranslate"><span class="pre">K</span></code>, <code class="docutils literal notranslate"><span class="pre">H</span></code>, <code class="docutils literal notranslate"><span class="pre">T</span></code>. У случају
 неодговарајуће вредности параметра, конструктор треба да баци изузетак.</p>
 <p>Класа има два својства само за читање, то су <code class="docutils literal notranslate"><span class="pre">BojaKarte</span></code> и <code class="docutils literal notranslate"><span class="pre">Broj</span></code>. Ова својства редом дају
 боју (као вредност набројивог типа) и нумеричку вредност карте (цео број).</p>
@@ -419,100 +406,15 @@ class Program
 адутској, ни боји прве карте, вредност карте једнака је њеној нумеричкој вредности. Ако је боја
 карте једнака адутској боји, њена вредност се увећава за 40, а ако је једнака боји прве карте,
 вредност се увећава за 20.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Напишите и кратак програм којим се демонстрира употреба класе (испробавају се све
-функционалности класе). На пример, програм може да формира низ карата које су бачене у једној
-руци (приликом одигравања једног штиха) и да израчуна редни број играча који носи штих.</p>
+<p>Класу треба написати тако да може да се изврши следећи метод, који демонстрира употребу класе.</p>
 
-    </div></div>
+<div data-childcomponent="klasa_karte_test1" class="course-box course-box-problem course-content">
 
-    <div data-component="reveal" id="karte_predlog_resenja"   data-showtitle="Могуће решење за класу" data-hidetitle="Сакриј решење">
-    
-<div data-childcomponent="klasa_karte" class="course-box course-box-problem course-content">
-
-<textarea data-component="activecode" id=klasa_karte data-lang="python" 
+<textarea data-component="activecode" id=klasa_karte_test1 data-lang="python" 
       data-timelimit=25000  data-codelens="true"  
     data-audio=''   
              data-passivecode="true"  data-hidehistory=true
     data-includesrc="using System;
-public class Karta
-{
-    public enum Boja { Pik, Karo, Herc, Tref };
-    public static Boja BojaPrveKarte;
-    public static Boja AdutskaBoja;
-
-    private Boja boja;
-    private int broj;
-
-    public Boja BojaKarte { get { return boja; } }
-    public int Broj { get { return Broj; } }
-
-    public Karta(string oznaka)
-    {
-        if (oznaka.Length != 2)
-            throw new Exception(&quot;Pogresna oznaka karte&quot;);
-
-        switch (oznaka[0])
-        {
-            case &apos;A&apos;: broj = 15; break;
-            case &apos;K&apos;: broj = 14; break;
-            case &apos;Q&apos;: broj = 13; break;
-            case &apos;J&apos;: broj = 12; break;
-            case &apos;D&apos;: broj = 10; break;
-            case &apos;9&apos;: broj = 9; break;
-            case &apos;8&apos;: broj = 8; break;
-            case &apos;7&apos;: broj = 7; break;
-            case &apos;6&apos;: broj = 6; break;
-            case &apos;5&apos;: broj = 5; break;
-            case &apos;4&apos;: broj = 4; break;
-            case &apos;3&apos;: broj = 3; break;
-            case &apos;2&apos;: broj = 2; break;
-            default: throw new Exception(&quot;Pogresna oznaka karte&quot;);
-        }
-        switch (oznaka[1])
-        {
-            case &apos;P&apos;: boja = Boja.Pik; break;
-            case &apos;K&apos;: boja = Boja.Karo; break;
-            case &apos;H&apos;: boja = Boja.Herc; break;
-            case &apos;T&apos;: boja = Boja.Tref; break;
-            default: throw new Exception(&quot;Pogresna oznaka karte&quot;);
-        }
-    }
-
-    public int Vrednost
-    {
-        get
-        {
-            if (boja == AdutskaBoja) return 40 + broj;
-            if (boja == BojaPrveKarte) return 20 + broj;
-            return broj;
-        }
-    }
-
-    public override string ToString()
-    {
-        string znak = &quot;&quot;;
-        switch (boja)
-        {
-            case Boja.Pik: znak = &quot;Pik&quot;; break;
-            case Boja.Karo: znak = &quot;Karo&quot;; break;
-            case Boja.Herc: znak = &quot;Herc&quot;; break;
-            case Boja.Tref: znak = &quot;Tref&quot;; break;
-        }
-        string ime = &quot;&quot;;
-        switch (broj)
-        {
-            case 15: ime = &quot;As&quot;; break;
-            case 14: ime = &quot;Kralj&quot;; break;
-            case 13: ime = &quot;Dama&quot;; break;
-            case 12: ime = &quot;Zandar&quot;; break;
-            default: ime = broj.ToString(); break;
-        }
-        return string.Format(&quot;{0} {1}&quot;, ime, znak);
-    }
-}
 
 class Program
 {
@@ -556,7 +458,54 @@ class Program
 
 </textarea>
 </div>
+<p>Извршавањем овог метода треба да се добије следећи излаз:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Nosi</span> <span class="n">igrac</span> <span class="n">sa</span> <span class="n">indeksom</span> <span class="mi">3</span>
+<span class="n">to</span> <span class="n">je</span> <span class="n">karta</span> <span class="mi">4</span> <span class="n">Karo</span>
+</pre></div>
+</div>
 
+    </div></div>
+
+    <div data-component="reveal" id="karte_savet"   data-showtitle="Упутство" data-hidetitle="Сакриј упутство">
+    <p><strong>Упутство:</strong></p>
+<p>Из описа класе <code class="docutils literal notranslate"><span class="pre">Karta</span></code> и примера демо-метода, може да се закључи како треба
+да изгледа јавни део класе <code class="docutils literal notranslate"><span class="pre">Karta</span></code>, тј. њен интерфејс.</p>
+
+    <div data-component="reveal" id="karta_class_interface_button"   data-showtitle="Интерфејс тражене класе" data-hidetitle="Сакриј интерфејс">
+    <p><strong>Интерфејс тражене класе</strong></p>
+<p>Ово је само интерфејс класе <code class="docutils literal notranslate"><span class="pre">karta</span></code>. Методи и својства нису имплементирани на смислен
+начин, већ само толико да задовоље синтаксу. Приватни део класе није наведен.</p>
+
+<div data-childcomponent="klasa_karte_interfejs" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_karte_interfejs data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections.Generic;
+
+public class Karta
+{
+    public enum Boja { Pik, Karo, Herc, Tref };
+    public static Boja BojaPrveKarte;
+    public static Boja AdutskaBoja;
+
+    public Boja BojaKarte { get { return Boja.Herc; } }
+    public int Broj { get { return 0; } }
+
+    public Karta(string oznaka) { }
+    public int Vrednost { get { return 0; } }
+    public override string ToString() { return &quot;&quot;; }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    
     </div>
     </div>
 

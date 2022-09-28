@@ -239,9 +239,9 @@
                 <a href=../02_izolovane_klase/klase_02d_apstrakcija.html><div class="studioLecture" id=activity-klase_02d_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери</div></a>
                 <a href=../02_izolovane_klase/klase_02dq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02dq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција, индексери - квиз</div></a>
                 <a href=../02_izolovane_klase/klase_02dz_apstrakcija_zadaci.html><div class="studioLecture" id=activity-klase_02dz_apstrakcija_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери - задаци</div></a>
-                <a href=../02_izolovane_klase/klase_02e_modularnost.html><div class="studioLecture" id=activity-klase_02e_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност</div></a>
+                <a href=../02_izolovane_klase/klase_02e_modularnost.html><div class="studioLecture" id=activity-klase_02e_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност, повезане класе</div></a>
                 <a href=../02_izolovane_klase/klase_02eq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02eq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
-                <a href=../02_izolovane_klase/klase_02ez_zadaci.html><div class="studioLecture" id=activity-klase_02ez_zadaci><i class="fas fa-file-alt activity-icon"></i>Модуларност - задаци</div></a>
+                <a href=../02_izolovane_klase/klase_02ez_zadaci.html><div class="studioLecture" id=activity-klase_02ez_zadaci><i class="fas fa-file-alt activity-icon"></i>Повезане класе - задаци</div></a>
                 </div>
             </div>
                 
@@ -372,47 +372,16 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Написати и кратак програм који демонстрира све функционалности класе.</p>
+<p>Класа треба да буде написана тако да следећи кôд може да се изврши.</p>
 
-    </div></div>
+<div data-childcomponent="lin_fun_testcode" class="course-box course-box-problem course-content">
 
-    <div data-component="reveal" id="linfun_predlog_resenja"   data-showtitle="Могуће решење за класу" data-hidetitle="Сакриј решење">
-    
-<div data-childcomponent="klasa_linfun" class="course-box course-box-problem course-content">
-
-<textarea data-component="activecode" id=klasa_linfun data-lang="python" 
+<textarea data-component="activecode" id=lin_fun_testcode data-lang="python" 
       data-timelimit=25000  data-codelens="true"  
     data-audio=''   
              data-passivecode="true"  data-hidehistory=true
     data-includesrc="using System;
 using System.Collections.Generic;
-
-public class LinFun
-{
-    private double k, n;
-    public LinFun(double k, double n)
-    {
-        this.k = k;
-        this.n = n;
-    }
-    public double Value(double x) 
-    {
-        return k*x+n;
-    }
-
-    public static LinFun operator +(LinFun a, LinFun b)
-    {
-        return new LinFun(a.k + b.k, a.n + b.n);
-    }
-
-    public static LinFun Compose(LinFun a, LinFun b)
-    {
-        // a(b(x)) = a.k * (b(x)) + a.n
-        //         = a.k * (b.k*x+b.n) + a.n 
-        //         = a.k*b.k*x + a.k*b.n + a.n 
-        return new LinFun(a.k * b.k, a.k * b.n + a.n);
-    }
-}
 
 class Program
 {
@@ -442,9 +411,16 @@ class Program
 
 </textarea>
 </div>
+<p>Извршавањем датог кôда треба да се добијe следећи резултат:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">f3</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span> <span class="n">f4</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="mi">13</span>
+<span class="n">f3</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="n">f4</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mi">19</span>
+<span class="n">f3</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> <span class="n">f4</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">f3</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="mi">23</span><span class="p">,</span> <span class="n">f4</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="mi">31</span>
+</pre></div>
+</div>
 
-    </div>
-    </div>
+    </div></div>
+</div>
 </div>
 
 

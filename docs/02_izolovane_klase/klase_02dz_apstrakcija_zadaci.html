@@ -239,9 +239,9 @@
                 <a href=../02_izolovane_klase/klase_02d_apstrakcija.html><div class="studioLecture" id=activity-klase_02d_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери</div></a>
                 <a href=../02_izolovane_klase/klase_02dq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02dq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција, индексери - квиз</div></a>
                 <a href=../02_izolovane_klase/klase_02dz_apstrakcija_zadaci.html><div class="studioLecture" id=activity-klase_02dz_apstrakcija_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери - задаци</div></a>
-                <a href=../02_izolovane_klase/klase_02e_modularnost.html><div class="studioLecture" id=activity-klase_02e_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност</div></a>
+                <a href=../02_izolovane_klase/klase_02e_modularnost.html><div class="studioLecture" id=activity-klase_02e_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност, повезане класе</div></a>
                 <a href=../02_izolovane_klase/klase_02eq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02eq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
-                <a href=../02_izolovane_klase/klase_02ez_zadaci.html><div class="studioLecture" id=activity-klase_02ez_zadaci><i class="fas fa-file-alt activity-icon"></i>Модуларност - задаци</div></a>
+                <a href=../02_izolovane_klase/klase_02ez_zadaci.html><div class="studioLecture" id=activity-klase_02ez_zadaci><i class="fas fa-file-alt activity-icon"></i>Повезане класе - задаци</div></a>
                 </div>
             </div>
                 
@@ -297,7 +297,8 @@
 <li><p>Метод <code class="docutils literal notranslate"><span class="pre">Rasti</span></code>, који имплементира продужавање змијице. Метод има један целобројни
 параметар, који може да се изостави (подразумевана вредност је један). Змијица не расте
 приликом позива овог метода, већ за по један чланак у следећих <code class="docutils literal notranslate"><span class="pre">n</span></code> померања, где је <code class="docutils literal notranslate"><span class="pre">n</span></code>
-параметар метода <code class="docutils literal notranslate"><span class="pre">Rasti</span></code>.</p></li>
+параметар метода <code class="docutils literal notranslate"><span class="pre">Rasti</span></code>. Због тога ће, након позива овог метода, реп змијице остати
+непомичан приликом наредних <code class="docutils literal notranslate"><span class="pre">n</span></code> померања.</p></li>
 <li><p>Метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code>, који враћа текстуалну репрезентацију змијице. На пример, змијица са
 главом на пољу <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">5)</span></code> и осталим чланцима на пољима <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">4)</span></code>, <code class="docutils literal notranslate"><span class="pre">(2,</span> <span class="pre">4)</span></code> редом,
 приказује се као <code class="docutils literal notranslate"><span class="pre">[(1,</span> <span class="pre">5)(1,</span> <span class="pre">4)(2,</span> <span class="pre">4)]</span></code>.</p></li>
@@ -305,234 +306,98 @@
 <p>Класа има и индексер (само за читање), који враћа резултат типа <code class="docutils literal notranslate"><span class="pre">Tuple&lt;int,</span> <span class="pre">int&gt;</span></code>. У овој
 торки, први елемент је <span class="math notranslate nohighlight">\(x\)</span>, а други <span class="math notranslate nohighlight">\(y\)</span> координата чланка који одговара наведеном
 индексу (0 одговара глави, 1 првом следећем чланку итд.).</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<p>Класу треба написати тако да може да се изврши следећи кôд.</p>
+
+<div data-childcomponent="klasa_zmijica_test" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_zmijica_test data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="class Program
+{
+    static void Main(string[] args)
+    {
+        // proba
+        try
+        {
+            Zmijica z = new Zmijica(3, 3);
+            Console.WriteLine(z);
+            z.Gore(); Console.WriteLine(z);
+            z.Levo(); Console.WriteLine(z);
+
+            z.Rasti(3);
+            z.Levo(); Console.WriteLine(z);
+            z.Gore(); Console.WriteLine(z);
+            z.Levo(); Console.WriteLine(z);
+            z.Gore(); Console.WriteLine(z);
+            z.Desno(); Console.WriteLine(z);
+
+            Console.WriteLine(&quot;Upotreba indeksera&quot;);
+            for (int i = 0; i &lt; z.Count; i++)
+            {
+                Console.WriteLine(&quot;Clanak {0}: x={1}, y={2}&quot;,
+                    i, z[i].Item1, z[i].Item2);
+            }
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+    }
+}
+"   >
+
+
+</textarea>
 </div>
-<p>Напишите и кратак програм којим се демонстрира употреба класе (испробавају се све
-функционалности класе). Касније ова класа може да се употреби у имплементацији игре
-у графичкој апликацији.</p>
+<p>Извршавањем кода треба да се добије следећи резултат:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
+<span class="p">[(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
+<span class="p">[(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
+<span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
+<span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
+<span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
+<span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
+<span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+<span class="n">Upotreba</span> <span class="n">indeksera</span>
+<span class="n">Clanak</span> <span class="mi">0</span><span class="p">:</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">6</span>
+<span class="n">Clanak</span> <span class="mi">1</span><span class="p">:</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">6</span>
+<span class="n">Clanak</span> <span class="mi">2</span><span class="p">:</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">5</span>
+<span class="n">Clanak</span> <span class="mi">3</span><span class="p">:</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">5</span>
+</pre></div>
+</div>
 
     </div></div>
 
-    <div data-component="reveal" id="zmijica_predlog_resenja1"   data-showtitle="Могуће (једноставније) решење за класу" data-hidetitle="Сакриј решење">
-    
-<div data-childcomponent="klasa_zmijica1" class="course-box course-box-problem course-content">
-
-<textarea data-component="activecode" id=klasa_zmijica1 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''   
-             data-passivecode="true"  data-hidehistory=true
-    data-includesrc="using System;
-using System.Collections.Generic;
-using System.Text;
-
-public class Zmijica
-{
-    private List&lt;Tuple&lt;int, int&gt;&gt; polja;
-    private int preostaliRast;
-
-    public int Count { get { return polja.Count; } }
-    public Zmijica(int x, int y)
-    {
-        polja = new List&lt;Tuple&lt;int, int&gt;&gt;();
-        polja.Add(new Tuple&lt;int, int&gt;(x, y));
-        preostaliRast = 0;
-    }
-
-    private void Pomak(int dx, int dy)
-    {
-        int gx = polja[0].Item1 + dx;
-        int gy = polja[0].Item2 + dy;
-
-        polja.Insert(0, new Tuple&lt;int, int&gt;(gx, gy));
-        if (preostaliRast &gt; 0)
-        {
-            preostaliRast--;
-        }
-        else
-        {
-            polja.RemoveAt(polja.Count - 1);
-        }
-    }
-    public void Gore() { Pomak(0, 1); }
-    public void Dole() { Pomak(0, -1); }
-    public void Levo() { Pomak(-1, 0); }
-    public void Desno() { Pomak(1, 0); }
-
-    public void Rasti(int n) { preostaliRast += n; }
-
-    public Tuple&lt;int, int&gt; this[int i]
-    {
-        get { return polja[i]; }
-    }
-
-    public override string ToString()
-    {
-        StringBuilder sb = new StringBuilder();
-        sb.Append(&quot;[&quot;);
-        int n = polja.Count;
-        for (int i = 0; i &lt; n; i++)
-        {
-            string clanak = string.Format(&quot;({0}, {1})&quot;, polja[i].Item1, polja[i].Item2);
-            sb.Append(clanak);
-        }
-        sb.Append(&quot;]&quot;);
-        return sb.ToString();
-    }
-}
-class Program
-{
-    static void Main(string[] args)
-    {
-        // proba
-        try
-        {
-            Zmijica z = new Zmijica(3, 3);
-            Console.WriteLine(z);
-            z.Gore(); Console.WriteLine(z);
-            z.Levo(); Console.WriteLine(z);
-
-            z.Rasti(3);
-            z.Levo(); Console.WriteLine(z);
-            z.Gore(); Console.WriteLine(z);
-            z.Levo(); Console.WriteLine(z);
-            z.Gore(); Console.WriteLine(z);
-            z.Desno(); Console.WriteLine(z);
-
-            Console.WriteLine(&quot;Upotreba indeksera&quot;);
-            for (int i = 0; i &lt; z.Count; i++)
-            {
-                Console.WriteLine(&quot;Clanak {0}: x={1}, y={2}&quot;,
-                    i, z[i].Item1, z[i].Item2);
-            }
-
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-        }
-    }
-}
-"   >
-
-
-</textarea>
+    <div data-component="reveal" id="zmijica_savet"   data-showtitle="Упутство" data-hidetitle="Сакриј упутство">
+    <p><strong>Упутство:</strong></p>
+<p>Померање змијице може једноставније да се реализује ако се уведе приватни метод <code class="docutils literal notranslate"><span class="pre">Pomak</span></code>, јер се
+онда јавни методи <code class="docutils literal notranslate"><span class="pre">Gore</span></code>, <code class="docutils literal notranslate"><span class="pre">Dole</span></code>, <code class="docutils literal notranslate"><span class="pre">Levo</span></code>, <code class="docutils literal notranslate"><span class="pre">Desno</span></code> своде на један позив метода <code class="docutils literal notranslate"><span class="pre">Pomak</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">private</span> <span class="n">void</span> <span class="n">Pomak</span><span class="p">(</span><span class="nb">int</span> <span class="n">dx</span><span class="p">,</span> <span class="nb">int</span> <span class="n">dy</span><span class="p">)</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+<span class="n">public</span> <span class="n">void</span> <span class="n">Gore</span><span class="p">()</span> <span class="p">{</span> <span class="n">Pomak</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span> <span class="p">}</span>
+<span class="n">public</span> <span class="n">void</span> <span class="n">Dole</span><span class="p">()</span> <span class="p">{</span> <span class="n">Pomak</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="p">}</span>
+<span class="n">public</span> <span class="n">void</span> <span class="n">Levo</span><span class="p">()</span> <span class="p">{</span> <span class="n">Pomak</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="p">}</span>
+<span class="n">public</span> <span class="n">void</span> <span class="n">Desno</span><span class="p">()</span> <span class="p">{</span> <span class="n">Pomak</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="p">}</span>
+</pre></div>
 </div>
-
-    </div>
-    
-    <div data-component="reveal" id="zmijica_predlog_resenja2"   data-showtitle="Могуће (ефикасније) решење за класу" data-hidetitle="Сакриј решење">
-    
-<div data-childcomponent="klasa_zmijica2" class="course-box course-box-problem course-content">
-
-<textarea data-component="activecode" id=klasa_zmijica2 data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''   
-             data-passivecode="true"  data-hidehistory=true
-    data-includesrc="using System;
-using System.Collections.Generic;
-using System.Text;
-
-public class Zmijica
-{
-    private List&lt;Tuple&lt;int, int&gt;&gt; polja;
-    private int indeksGlave;
-    private int preostaliRast;
-
-    public int Count { get { return polja.Count; } }
-    public Zmijica(int x, int y)
-    {
-        polja = new List&lt;Tuple&lt;int, int&gt;&gt;();
-        polja.Add(new Tuple&lt;int, int&gt;(x, y));
-        indeksGlave = 0;
-        preostaliRast = 0;
-    }
-
-    private void Pomak(int dx, int dy)
-    {
-        int gx = polja[indeksGlave].Item1 + dx;
-        int gy = polja[indeksGlave].Item2 + dy;
-
-        if (preostaliRast &gt; 0)
-        {
-            polja.Insert(indeksGlave, new Tuple&lt;int, int&gt;(gx, gy));
-            preostaliRast--;
-        }
-        else
-        {
-            int n = polja.Count;
-            int indeksRepa = (indeksGlave + n - 1) % n;
-
-            polja[indeksRepa] = new Tuple&lt;int, int&gt;(gx, gy);
-            indeksGlave = indeksRepa;
-        }
-    }
-    public void Gore() { Pomak(0, 1); }
-    public void Dole() { Pomak(0, -1); }
-    public void Levo() { Pomak(-1, 0); }
-    public void Desno() { Pomak(1, 0); }
-
-    public void Rasti(int n) { preostaliRast += n; }
-
-    public Tuple&lt;int, int&gt; this[int i]
-    {
-        get { return polja[(i + indeksGlave) % Count]; }
-    }
-
-    public override string ToString()
-    {
-        StringBuilder sb = new StringBuilder();
-        sb.Append(&quot;[&quot;);
-        int n = polja.Count;
-        int g = indeksGlave;
-        for (int i = 0; i &lt; n; i++)
-        {
-            string clanak = string.Format(&quot;({0}, {1})&quot;, polja[g].Item1, polja[g].Item2);
-            sb.Append(clanak);
-            g = (g + 1) % n;
-        }
-        sb.Append(&quot;]&quot;);
-        return sb.ToString();
-    }
-}
-class Program
-{
-    static void Main(string[] args)
-    {
-        // proba
-        try
-        {
-            Zmijica z = new Zmijica(3, 3);
-            Console.WriteLine(z);
-            z.Gore(); Console.WriteLine(z);
-            z.Levo(); Console.WriteLine(z);
-
-            z.Rasti(3);
-            z.Levo(); Console.WriteLine(z);
-            z.Gore(); Console.WriteLine(z);
-            z.Levo(); Console.WriteLine(z);
-            z.Gore(); Console.WriteLine(z);
-            z.Desno(); Console.WriteLine(z);
-
-            Console.WriteLine(&quot;Upotreba indeksera&quot;);
-            for (int i = 0; i &lt; z.Count; i++)
-            {
-                Console.WriteLine(&quot;Clanak {0}: x={1}, y={2}&quot;,
-                    i, z[i].Item1, z[i].Item2);
-            }
-
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-        }
-    }
-}
-"   >
-
-
-</textarea>
+<p>Сам метод <code class="docutils literal notranslate"><span class="pre">Pomak</span></code> може да се имплеменира на различите начине, а ми ћемо овде описати два. У оба
+случаја, чланци змијице се памте у листи парова целих бројева, где сваки елемент листе садржи
+<span class="math notranslate nohighlight">\(x\)</span> и <span class="math notranslate nohighlight">\(y\)</span> координату једног чланка.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Tuple</span><span class="o">&lt;</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="o">&gt;&gt;</span> <span class="n">polja</span><span class="p">;</span>
+</pre></div>
 </div>
+<p>У једноставнијој имплементацији чланци змије у сваком тренутку одговарају редом елементима
+листе. То значи да <code class="docutils literal notranslate"><span class="pre">polja[0]</span></code> представља главу, <code class="docutils literal notranslate"><span class="pre">polja[1]</span></code> следећи чланак итд. Овај
+приступ подразумева да се при померању змије убаци нови елемент на почетак листе, а да се
+избаци елемент са краја листе (уколико змијица не расте при том померању).</p>
+<p>У нешто сложенијој, али и ефикаснијој имплементацији, глава може да се нађе на било ком месту
+у листи, а на наредним местима се редом налазе следећи чланци (после последњег елемента листе,
+змијица се наставља нултим елементом, све до елемента који предтходи глави). Због тога се у
+овој имплементацији поред листе <code class="docutils literal notranslate"><span class="pre">polja</span></code> памти и индекс главе. Тиме је омогућено ефикасније
+ажурирање положаја змијице када она не расте при померању (довољно је на место репа уписати
+главу и ажурирати индекс главе).</p>
 
     </div>
     </div>

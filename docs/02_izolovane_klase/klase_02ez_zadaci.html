@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Модуларност - задаци</title>
+    <title>Повезане класе - задаци</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
     <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
@@ -239,9 +239,9 @@
                 <a href=../02_izolovane_klase/klase_02d_apstrakcija.html><div class="studioLecture" id=activity-klase_02d_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери</div></a>
                 <a href=../02_izolovane_klase/klase_02dq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02dq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција, индексери - квиз</div></a>
                 <a href=../02_izolovane_klase/klase_02dz_apstrakcija_zadaci.html><div class="studioLecture" id=activity-klase_02dz_apstrakcija_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери - задаци</div></a>
-                <a href=../02_izolovane_klase/klase_02e_modularnost.html><div class="studioLecture" id=activity-klase_02e_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност</div></a>
+                <a href=../02_izolovane_klase/klase_02e_modularnost.html><div class="studioLecture" id=activity-klase_02e_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност, повезане класе</div></a>
                 <a href=../02_izolovane_klase/klase_02eq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02eq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
-                <a href=../02_izolovane_klase/klase_02ez_zadaci.html><div class="studioLecture" id=activity-klase_02ez_zadaci><i class="fas fa-file-alt activity-icon"></i>Модуларност - задаци</div></a>
+                <a href=../02_izolovane_klase/klase_02ez_zadaci.html><div class="studioLecture" id=activity-klase_02ez_zadaci><i class="fas fa-file-alt activity-icon"></i>Повезане класе - задаци</div></a>
                 </div>
             </div>
                 
@@ -272,8 +272,354 @@
     <div id="main-content">
     
   <div class="section" id="id1">
-<h1>Модуларност - задаци<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>.</p>
+<h1>Повезане класе - задаци<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>1. Слика са слојевима<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>1. Слика са слојевима</strong></p>
+<p>Слика може да садржи 0 или више слојева, а сваки слој садржи 0 или више правоугаоника.
+Слој може да се извуче на врх или на дно слике, тј. да се постави изнад или испод осталих слојева.
+Слично томе, правоугаоник може да се извуче на врх или на дно слоја.</p>
+<p>Написати класе <code class="docutils literal notranslate"><span class="pre">Image</span></code>, <code class="docutils literal notranslate"><span class="pre">Layer</span></code>, <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code>, тако да следећи кôд може да се изврши.</p>
+
+<div data-childcomponent="layered_image_testcode" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=layered_image_testcode data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="public void Test()
+{
+    im = new Image();
+    int w = ClientSize.Width;
+    int h = ClientSize.Height;
+    int pauseDuration = 1000;
+    Layer l1 = new Layer(w, h, true, Color.Green);
+    Layer l2 = new Layer(w, h, false, Color.Purple);
+    im.AddLayer(l1);
+    im.AddLayer(l2);
+
+    Rectangle r11 = new Rectangle(10, 10, 160, 120, Color.Red, true);
+    Rectangle r12 = new Rectangle(20, 20, 160, 120, Color.Blue, true);
+    Rectangle r13 = new Rectangle(30, 30, 160, 120, Color.White, false);
+    l1.Add(r11); l1.Add(r12); l1.Add(r13);
+
+    Rectangle r21 = new Rectangle(60, 60, 40, 30, Color.Cyan, true);
+    Rectangle r22 = new Rectangle(70, 70, 40, 30, Color.Yellow, true);
+    l2.Add(r21); l2.Add(r22);
+    Refresh(); // a
+    Thread.Sleep(pauseDuration);
+
+    l1.Select(r12);
+    l1.BringToFront();
+    Refresh(); // b
+    Thread.Sleep(pauseDuration);
+
+    l1.SetToBack();
+    Refresh(); // c
+    Thread.Sleep(pauseDuration);
+
+    im.SelectLayer(0);
+    im.BringToFront();
+    Refresh(); // d
+    Thread.Sleep(pauseDuration);
+
+    im.SelectLayer(1);
+    im.SetToBack();
+    Refresh(); // e
+    Thread.Sleep(pauseDuration);
+
+    l2.SetBackground(true);
+    Refresh(); // f
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Подразумева се да се овај кôд извршава у овиру <em>Windows Forms</em> апликације.
+Извршавањем датог кôда треба да се добију редом ове слике:</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/layered_image.png"><img alt="../_images/layered_image.png" src="../_images/layered_image.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-text">Резултат извршавања функције за тестирање.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+
+    </div></div>
+<p>Упутство: анализом функције за тестирање може да се закључи како треба да изгледа јавни део класа
+<code class="docutils literal notranslate"><span class="pre">Image</span></code>, <code class="docutils literal notranslate"><span class="pre">Layer</span></code>, <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code>, тј. њихов интерфејс.</p>
+<p>Један такав интерфејс може да се добије кликом на дугме испод.</p>
+
+    <div data-component="reveal" id="layered_image_classes_interface_button"   data-showtitle="Интерфејс тражених класа" data-hidetitle="Сакриј интерфејс">
+    
+<div data-childcomponent="layered_image_classes_interface" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=layered_image_classes_interface data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="public class Rectangle
+{
+    public Rectangle(
+        float x0, float y0, // polozaj
+        float w0, float h0, // dimenzije
+        Color c, // boja
+        bool f // da li je ispunjen
+        ) { }
+    public void Draw(Graphics g) { } // iscrtava pravougaonik
+}
+
+public class Layer
+{
+    public Layer(
+        int w0, int h0, // velicina
+        bool opaque, // da li je pozadina neprovidna
+        Color c // boja pozadine
+        ) { }
+    public void Add(Rectangle r) { } // dodaje pravougaonik u ovaj sloj
+    public void SetBackground(bool opaque) { } // postavlja neprovidnost pozadine
+    public void SetBackground(bool opaque, Color c) { } // postavlja neprovidnost i boju pozadine
+    public bool Select(Rectangle r) { return true; } // selektuje pravougaonik (ako je u sloju)
+    public bool BringToFront() { return true; } // pomera pravougaonik na vrh
+    public bool SetToBack() { return true; } // pomera pravougaonik na dno
+    public void Draw(Graphics g) { } // iscrtava sloj
+}
+
+public class Image
+{
+    public void SelectLayer(int i) { } // bira aktivan sloj (na koji se odnose komande pomeranja sloja)
+    public void AddLayer(Layer l) { } // dodaje sloj
+    public void BringToFront() { }  // pomera sloj na vrh
+    public void SetToBack() { }     // pomera sloj na dno
+    public void Draw(Graphics g) { } // iscrtava sliku
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    </div>
+<div class="section" id="id3">
+<h2>2. Позориште<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>2. Позориште</strong></p>
+<p>Написати класе <code class="docutils literal notranslate"><span class="pre">Pozoriste</span></code>, <code class="docutils literal notranslate"><span class="pre">Predstava</span></code>, <code class="docutils literal notranslate"><span class="pre">Izvodjenje</span></code>, <code class="docutils literal notranslate"><span class="pre">Glumac</span></code>, које омогућавају
+једноставну симулацију рада позоришта, у складу са описом који следи.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Позориште има репертоар представа и листу глумаца (у овом моделу нема других запослених).</p>
+<p>Позориште може:</p>
+<ul class="simple">
+<li><p>да запосли глумца</p></li>
+<li><p>да отпусти глумца, ако овај нема активних представа</p></li>
+<li><p>да дода представу у реперторар</p></li>
+<li><p>да врати преглед актуелних представа (види пример за детаље)</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Представа има (поред осталог) назив и број потребних глумаца, које треба навести као
+параметре конструктора. Представа може:</p>
+<ul class="simple">
+<li><p>да да информацију да ли је активна</p></li>
+<li><p>да ангажује глумца</p></li>
+<li><p>да ослободи глумца, ако није активна</p></li>
+<li><p>да се активира, ако има довољно ангажованих глумаца</p></li>
+<li><p>да се деактивира</p></li>
+<li><p>да се закаже</p></li>
+<li><p>да се изведе</p></li>
+<li><p>да врати преглед заказаних извођења и броја преосталих карата (види пример за детаље)</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Извођење има датум, време, број купљених карата и број слободних места.</p>
+<p>Извођење може да прода захтевани број карата, ако их има на располагању.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Глумац има име и максималан број представа на којима може истовремено да игра.</p>
+<p>Глумац може:</p>
+<ul class="simple">
+<li><p>да одговори на питање да ли је слободан (да ли може да прихвати ангажовање на новој представи)</p></li>
+<li><p>да буде ангажован, ако је слободан</p></li>
+<li><p>да буде ослобођен ангажовања</p></li>
+<li><p>да евидентира извођење представе на којој је ангажован</p></li>
+<li><p>да врати текстуалну репрезентацију, која садржи име и број одиграних представа
+(види пример за детаље)</p></li>
+</ul>
+<p>Класе треба да буду написане тако да следећи кôд може да се изврши.</p>
+
+<div data-childcomponent="pozoriste_testcode" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pozoriste_testcode data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="class Program
+{
+    static void Main(string[] args)
+    {
+        Glumac g1 = new Glumac(&quot;Pera&quot;, 4);
+        Glumac g2 = new Glumac(&quot;Mika&quot;, 3);
+        Glumac g3 = new Glumac(&quot;Zika&quot;, 2);
+
+        Izvodjenje i1 = new Izvodjenje(new DateTime(2022, 12, 23, 19, 30, 0), 200);
+        i1.ProdajKarte(180);
+        Izvodjenje i2 = new Izvodjenje(new DateTime(2022, 12, 24, 19, 30, 0), 200);
+        i2.ProdajKarte(50);
+        i2.ProdajKarte(10);
+
+        Predstava p1 = new Predstava(&quot;Pr1&quot;, 3);
+        p1.AngazujGlumca(g1);
+        bool aktivirana = p1.Aktiviraj();
+        Console.WriteLine(&quot;Predstava &quot; + (aktivirana ? &quot;je aktivirana&quot; : &quot;nije aktivirana&quot;));
+        p1.AngazujGlumca(g2);
+        p1.AngazujGlumca(g3);
+        aktivirana = p1.Aktiviraj();
+        Console.WriteLine(&quot;Predstava &quot; + (aktivirana ? &quot;je aktivirana&quot; : &quot;nije aktivirana&quot;));
+        p1.Zakazi(i1);
+        bool izvedena = p1.Izvedi(i1);
+        Console.WriteLine(&quot;Predstava &quot; + (izvedena ? &quot;je izvedena&quot; : &quot;nije izvedena&quot;));
+        izvedena = p1.Izvedi(i1);
+        Console.WriteLine(&quot;Predstava &quot; + (izvedena ? &quot;je izvedena&quot; : &quot;nije izvedena&quot;));
+        Console.WriteLine(&quot;--------------&quot;);
+
+        Pozoriste jdp = new Pozoriste(&quot;JDP&quot;);
+        jdp.DodajPredstavu(p1);
+        Console.WriteLine(jdp.Pregled());
+        Console.WriteLine(&quot;--------------&quot;);
+
+        p1.Deaktiviraj();
+        Console.WriteLine(jdp.Pregled());
+        Console.WriteLine(&quot;--------------&quot;);
+
+        p1.Aktiviraj();
+        p1.Zakazi(i2);
+        //p1.Izvedi(i2);
+        Console.WriteLine(jdp.Pregled());
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Извршавањем датог кôда треба да се добијe следећи резултат:</p>
+
+<div data-childcomponent="pozoriste_output" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pozoriste_output data-lang="none" 
+      data-timelimit=25000    
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="Predstava nije aktivirana
+Predstava je aktivirana
+Predstava je izvedena
+Predstava nije izvedena
+--------------
+pozoriste JDP
+aktivne predstave:
+    predstava: Pr1
+    glumci:
+        ime: Pera, br. predstava: 1
+        ime: Mika, br. predstava: 1
+        ime: Zika, br. predstava: 1
+    Buduca izvodljenja
+    br. odrzanih izvodljenja: 1
+    br. gledalaca: 180
+
+--------------
+pozoriste JDP
+aktivne predstave:
+nema
+
+--------------
+pozoriste JDP
+aktivne predstave:
+    predstava: Pr1
+    glumci:
+        ime: Pera, br. predstava: 1
+        ime: Mika, br. predstava: 1
+        ime: Zika, br. predstava: 1
+    Buduca izvodljenja
+        datum i vreme: 12/24/2022 7:30:00 PM, br. mesta:140
+    br. odrzanih izvodljenja: 1
+    br. gledalaca: 180
+"   >
+
+
+</textarea>
+</div>
+
+    </div></div>
+<p>Упутство: анализом функције за тестирање може да се закључи како треба да изгледа јавни део класа
+<code class="docutils literal notranslate"><span class="pre">Pozoriste</span></code>, <code class="docutils literal notranslate"><span class="pre">Predstava</span></code>, <code class="docutils literal notranslate"><span class="pre">Izvodjenje</span></code>, <code class="docutils literal notranslate"><span class="pre">Glumac</span></code>, тј. њихов интерфејс.</p>
+<p>Један такав интерфејс може да се добије кликом на дугме испод.</p>
+
+    <div data-component="reveal" id="pozoriste_classes_interface_button"   data-showtitle="Интерфејс тражених класа" data-hidetitle="Сакриј интерфејс">
+    
+<div data-childcomponent="pozoriste_classes_interface" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=pozoriste_classes_interface data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="public class Pozoriste
+{
+    public Pozoriste(string n) { /*...*/ }
+    public void DodajPredstavu(Predstava p) { /*...*/ }
+    public bool ZaposliGlumca(Glumac g) { /*...*/ return true;  }
+    public bool OtpustiGlumca(Glumac g) { /*...*/ return true; }
+    public string Pregled() { /*...*/ return &quot;&quot;; }
+}
+public class Predstava
+{
+    public bool Aktivna { get { /*...*/ return true; } }
+    public Predstava(string n, int pbg) { /*...*/}
+    public bool Aktiviraj() { /*...*/ return true; }
+    public void Deaktiviraj() { /*...*/}
+    public void Zakazi(Izvodjenje izv) { /*...*/ }
+    public bool Izvedi(Izvodjenje izv) { /*...*/ return true; }
+    public bool AngazujGlumca(Glumac g) { /*...*/ return true; }
+    public bool OslobodiGlumca(Glumac g) { /*...*/ return true; }
+    public string Pregled(int uvlacenje) { /*...*/ return &quot;&quot;; }
+}
+public class Izvodjenje 
+{
+    public Izvodjenje(DateTime dt, int brUkM) { }
+    public bool ProdajKarte(int n) { /*...*/ return true; }
+    public DateTime VremeIzvodljenja { get {return DateTime.Now; } }
+    public int BrSlobodnihMesta { get { return 0; } }
+    public int BrojPosetilaca { get { return 0; } }
+}
+public class Glumac 
+{
+    public Glumac(string i, int maxBAP) { }
+    public bool Slobodan() { /*...*/ return true; }
+    public bool Zauzmi() { /*...*/ return true; }
+    public void Oslobodi() { /*...*/ }
+    public void Izvodljenje() { /*...*/ }
+    public override string ToString() { /*...*/ return &quot;&quot;; }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    </div>
 </div>
 
 
