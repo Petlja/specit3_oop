@@ -136,21 +136,33 @@ lessons:
     title: Апстракција, индексери - задаци
     type: reading
   - description: ''
-    file: klase_02e_modularnost.html
+    file: klase_02e_pojedinacne_primer.html
+    guid: 01264926-cd6a-4772-80e4-39d696d7b568
+    src: klase_02e_pojedinacne_primer.rst
+    title: Појединачне класе - решен пример
+    type: reading
+  - description: ''
+    file: klase_02ez_pojedinacne_zadaci.html
+    guid: ed279a1e-3d61-4901-8588-2890f94ca304
+    src: klase_02ez_pojedinacne_zadaci.rst
+    title: Појединачне класе - задаци
+    type: reading
+  - description: ''
+    file: klase_02f_modularnost.html
     guid: b2525d57-0bdb-4ea0-9390-e4b207165f12
-    src: klase_02e_modularnost.rst
+    src: klase_02f_modularnost.rst
     title: Модуларност, повезане класе
     type: reading
   - description: ''
-    file: klase_02eq_modularnost_kviz.html
+    file: klase_02fq_modularnost_kviz.html
     guid: 6ec7d8a6-2572-4119-8dd5-a1aa2d3355a6
-    src: klase_02eq_modularnost_kviz.rst
+    src: klase_02fq_modularnost_kviz.rst
     title: Модуларност - квиз
     type: quiz
   - description: ''
-    file: klase_02ez_zadaci.html
+    file: klase_02fz_zadaci.html
     guid: 5960fa50-4520-43d8-b779-b53ce461ef51
-    src: klase_02ez_zadaci.rst
+    src: klase_02fz_zadaci.rst
     title: Повезане класе - задаци
     type: reading
   archived-activities: []

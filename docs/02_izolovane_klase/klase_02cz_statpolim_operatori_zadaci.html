@@ -239,9 +239,11 @@
                 <a href=../02_izolovane_klase/klase_02d_apstrakcija.html><div class="studioLecture" id=activity-klase_02d_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери</div></a>
                 <a href=../02_izolovane_klase/klase_02dq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02dq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција, индексери - квиз</div></a>
                 <a href=../02_izolovane_klase/klase_02dz_apstrakcija_zadaci.html><div class="studioLecture" id=activity-klase_02dz_apstrakcija_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери - задаци</div></a>
-                <a href=../02_izolovane_klase/klase_02e_modularnost.html><div class="studioLecture" id=activity-klase_02e_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност, повезане класе</div></a>
-                <a href=../02_izolovane_klase/klase_02eq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02eq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
-                <a href=../02_izolovane_klase/klase_02ez_zadaci.html><div class="studioLecture" id=activity-klase_02ez_zadaci><i class="fas fa-file-alt activity-icon"></i>Повезане класе - задаци</div></a>
+                <a href=../02_izolovane_klase/klase_02e_pojedinacne_primer.html><div class="studioLecture" id=activity-klase_02e_pojedinacne_primer><i class="fas fa-file-alt activity-icon"></i>Појединачне класе - решен пример</div></a>
+                <a href=../02_izolovane_klase/klase_02ez_pojedinacne_zadaci.html><div class="studioLecture" id=activity-klase_02ez_pojedinacne_zadaci><i class="fas fa-file-alt activity-icon"></i>Појединачне класе - задаци</div></a>
+                <a href=../02_izolovane_klase/klase_02f_modularnost.html><div class="studioLecture" id=activity-klase_02f_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност, повезане класе</div></a>
+                <a href=../02_izolovane_klase/klase_02fq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02fq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02fz_zadaci.html><div class="studioLecture" id=activity-klase_02fz_zadaci><i class="fas fa-file-alt activity-icon"></i>Повезане класе - задаци</div></a>
                 </div>
             </div>
                 
@@ -285,9 +287,85 @@
 позивају на различите начине. Покушајте да се сетите неколико примера.</p></li>
 <li><p>Да ли знате неке примере два или више истоимених метода у некој другој класи из стандардне
 библиотеке?</p></li>
-<li><p>Наведите неколико примера класе која има више конструктора. Пошто су конструктори једне
+<li><p>Наведите примере класе која има више конструктора. Пошто су конструктори једне
 класе увек истоимени, ово је такође вид статичког полиморфизма.</p></li>
 </ul>
+
+    </div></div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>1. Извлачење бројева</strong></p>
+<p>Написати класу <code class="docutils literal notranslate"><span class="pre">Bubanj</span></code> према опису који следи. Класа треба да симулира
+случајан избор једног или више бројева из неког скупа, као у играма на срећу.</p>
+<p>Класа има следеће јавне методе и својства:</p>
+<ul class="simple">
+<li><p>Конструктор класе, који прихвата један позитиван цео број <code class="docutils literal notranslate"><span class="pre">n</span></code>. Овај број
+представља величину скупа, односно број куглица које се на почетку налазе у
+бубњу. Куглице су означене бројевима од 1 до <code class="docutils literal notranslate"><span class="pre">n</span></code>. На пример, објекат генерисан
+помоћу <code class="docutils literal notranslate"><span class="pre">Bubanj(5)</span></code> може касније да врати бројеве од 1 до 5.</p></li>
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">Prazan</span></code> без аргумената, који враћа логичку вредност. Метод <code class="docutils literal notranslate"><span class="pre">Prazan</span></code>
+враћа вреднсот <code class="docutils literal notranslate"><span class="pre">true</span></code> ако је из симулираног бубња већ извучено свих <code class="docutils literal notranslate"><span class="pre">n</span></code>
+куглица, тј. ако је до тренутка позива тог метода враћено укупно <code class="docutils literal notranslate"><span class="pre">n</span></code> бројева
+у позивима метода <code class="docutils literal notranslate"><span class="pre">Izvuci</span></code> (видети ниже).</p></li>
+<li><p>Целобројно својство <code class="docutils literal notranslate"><span class="pre">BrojKuglica</span></code>, само за читање. Вредност овог својства
+представља број куглица које се још увек налазе у симулираном бубњу.</p></li>
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">Izvuci</span></code> без аргумената, који враћа један од бројева који до тада нису
+враћени као резултат неког од метода <code class="docutils literal notranslate"><span class="pre">Izvuci</span></code>, тј. један од оних бројева који
+су и даље у бубњу.</p></li>
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">Izvuci</span></code> са једним целобројним аргументом <code class="docutils literal notranslate"><span class="pre">k</span></code>, који враћа низ од <code class="docutils literal notranslate"><span class="pre">k</span></code>
+бројева који до тада нису враћени као резултат неког од метода <code class="docutils literal notranslate"><span class="pre">Izvuci</span></code>, тј.
+низ од неких <code class="docutils literal notranslate"><span class="pre">k</span></code> бројева који нису били извучени до тада.</p></li>
+</ul>
+<p>Бројеви које враћају методи <code class="docutils literal notranslate"><span class="pre">Izvuci</span></code> се бирају на случајан начин, тако да сви
+бројеви који су још у игри имају једнаке шансе да буду извучени (у складу са
+квалитетом генератора случајних бројева). Ако при позиву неког од метода <code class="docutils literal notranslate"><span class="pre">Izvuci</span></code>
+нема довољно куглица у бубњу, метод треба да баци изузетак.</p>
+<p>Класа треба да буде написана тако да следећи кôд може да се изврши.</p>
+
+<div data-childcomponent="bubanj_testcode" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=bubanj_testcode data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="class Program
+{
+    static void Main(string[] args)
+    {
+        Bubanj b = new Bubanj(5);
+        Console.WriteLine(&quot;Izvucen je broj {0}&quot;, b.Izvuci());
+        Console.WriteLine(b.Prazan());
+        Console.WriteLine(&quot;Broj preostalih kuglica: {0}&quot;, b.BrojKuglica);
+        var serija = b.Izvuci(3);
+        Console.Write(&quot;Izvuceni su brojevi&quot;);
+        foreach (int br in serija)
+            Console.Write(&quot; {0}&quot;, br);
+        Console.WriteLine();
+        Console.WriteLine(&quot;Izvucen je broj {0}&quot;, b.Izvuci());
+        Console.WriteLine(b.Prazan());
+        Console.WriteLine(&quot;Broj preostalih kuglica: {0}&quot;, b.BrojKuglica);
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Извршавањем датог кôда треба да се добијe резултат попут овог (извучени бројеви
+зависе од генератора случајних бројева, битно је само да се појаве сви бројеви
+од 1 до 5, сваки по једном):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Izvucen</span> <span class="n">je</span> <span class="n">broj</span> <span class="mi">1</span>
+<span class="kc">False</span>
+<span class="n">Broj</span> <span class="n">preostalih</span> <span class="n">kuglica</span><span class="p">:</span> <span class="mi">4</span>
+<span class="n">Izvuceni</span> <span class="n">su</span> <span class="n">brojevi</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">4</span>
+<span class="n">Izvucen</span> <span class="n">je</span> <span class="n">broj</span> <span class="mi">2</span>
+<span class="kc">True</span>
+<span class="n">Broj</span> <span class="n">preostalih</span> <span class="n">kuglica</span><span class="p">:</span> <span class="mi">0</span>
+</pre></div>
+</div>
 
     </div></div>
 </div>
@@ -298,7 +376,7 @@
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-<p><strong>1. Време и оператори</strong></p>
+<p><strong>2. Време и оператори</strong></p>
 <p>Проширити класу <code class="docutils literal notranslate"><span class="pre">Vreme</span></code> са странице <a class="reference external" href="klase_02az_enkapsulacija_zadaci.html">Енкапсулација - задаци</a> следећим операторима.</p>
 <ul class="simple">
 <li><p>Оператор који израчунава разлику два времена и враћага као цео број секунди.</p></li>
@@ -329,7 +407,7 @@
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-<p><strong>2. Комплексни бројеви</strong></p>
+<p><strong>3. Комплексни бројеви</strong></p>
 <p>У именском простору <code class="docutils literal notranslate"><span class="pre">System.Numerics;</span></code> стандардне библиотеке дефинисана је структура
 <code class="docutils literal notranslate"><span class="pre">Complex</span></code>, која имплементира комплексне бројеве. Ова структура има дефинисане бинарне
 оператроре <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, унарни минус, као и метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code>, тако да
@@ -346,7 +424,7 @@
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-<p><strong>3. Велики бројеви</strong></p>
+<p><strong>4. Велики бројеви</strong></p>
 <p>У именском простору <code class="docutils literal notranslate"><span class="pre">System.Numerics;</span></code> стандардне библиотеке, дефинисана је структура
 <code class="docutils literal notranslate"><span class="pre">BigInteger</span></code>, која имплементира велике целе бројеве. И ова структура се лако и природно
 користи захваљујући дефинисаним операторима и методу <code class="docutils literal notranslate"><span class="pre">ToString</span></code> (видети претходни задатак).</p>
@@ -361,7 +439,7 @@
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-<p><strong>4. Линеарне функције</strong></p>
+<p><strong>5. Линеарне функције</strong></p>
 <p>Написати класу <code class="docutils literal notranslate"><span class="pre">LinFun</span></code>, која представља линерану функцију.</p>
 <p>Класа треба да има јавни метод <code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">Value(double</span> <span class="pre">x)</span></code>, који враћа вредност функције за
 дато <code class="docutils literal notranslate"><span class="pre">x</span></code>. Поред тога, класа треба да омогући сабирање и одузимање линеарних функција, као и

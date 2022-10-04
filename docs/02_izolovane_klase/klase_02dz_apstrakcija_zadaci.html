@@ -239,9 +239,11 @@
                 <a href=../02_izolovane_klase/klase_02d_apstrakcija.html><div class="studioLecture" id=activity-klase_02d_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери</div></a>
                 <a href=../02_izolovane_klase/klase_02dq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02dq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција, индексери - квиз</div></a>
                 <a href=../02_izolovane_klase/klase_02dz_apstrakcija_zadaci.html><div class="studioLecture" id=activity-klase_02dz_apstrakcija_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери - задаци</div></a>
-                <a href=../02_izolovane_klase/klase_02e_modularnost.html><div class="studioLecture" id=activity-klase_02e_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност, повезане класе</div></a>
-                <a href=../02_izolovane_klase/klase_02eq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02eq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
-                <a href=../02_izolovane_klase/klase_02ez_zadaci.html><div class="studioLecture" id=activity-klase_02ez_zadaci><i class="fas fa-file-alt activity-icon"></i>Повезане класе - задаци</div></a>
+                <a href=../02_izolovane_klase/klase_02e_pojedinacne_primer.html><div class="studioLecture" id=activity-klase_02e_pojedinacne_primer><i class="fas fa-file-alt activity-icon"></i>Појединачне класе - решен пример</div></a>
+                <a href=../02_izolovane_klase/klase_02ez_pojedinacne_zadaci.html><div class="studioLecture" id=activity-klase_02ez_pojedinacne_zadaci><i class="fas fa-file-alt activity-icon"></i>Појединачне класе - задаци</div></a>
+                <a href=../02_izolovane_klase/klase_02f_modularnost.html><div class="studioLecture" id=activity-klase_02f_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност, повезане класе</div></a>
+                <a href=../02_izolovane_klase/klase_02fq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02fq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02fz_zadaci.html><div class="studioLecture" id=activity-klase_02fz_zadaci><i class="fas fa-file-alt activity-icon"></i>Повезане класе - задаци</div></a>
                 </div>
             </div>
                 
@@ -278,7 +280,97 @@
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-<p><strong>1. Змијица са индексером</strong></p>
+<p><strong>1. Велики редак низ</strong></p>
+<p>Написати класу <code class="docutils literal notranslate"><span class="pre">SparseArray</span></code>, која представља велики редак низ.</p>
+<p>Објекти ове класе треба да се понашају као низови реалних бројева, у којима је дозвољен
+сваки индекс из опсега типа <code class="docutils literal notranslate"><span class="pre">ulong</span></code>. Мада ово допушта милијарде милијарди елемената, у
+стварној употреби користио би се само понеки од од ових индекса, можда њих укупно неколико
+хиљада. Као и код обичних низова, подразумева се да је непосредно након инстанцирања
+објекта сваки елемент једнак нули.</p>
+<p>Није неопходно да се омогући коришћење објеката класе <code class="docutils literal notranslate"><span class="pre">SparseArray</span></code> у наредбама
+<code class="docutils literal notranslate"><span class="pre">foreach</span></code>. Довољно je написати класу тако да може да се изврши следећи кôд.</p>
+
+<div data-childcomponent="klasa_redakniz_test" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_redakniz_test data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+class Program
+{
+    static void Main(string[] args)
+    {
+        SparseArray x = new SparseArray();
+        ulong n = 4000000000000;
+        x[n]++;
+        x[n+1] = 3;
+        Console.WriteLine(x[n]);
+        Console.WriteLine(x[n+1]);
+    }
+}
+</textarea>
+</div>
+<p>Извршавањем кода треба да се добије следећи резултат:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">3</span>
+</pre></div>
+</div>
+
+    </div></div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>2. Сабирање ретких низова</strong></p>
+<p>Проширити претходно написану класу <code class="docutils literal notranslate"><span class="pre">SparseArray</span></code> могућношћу да се објекти ове класе
+сабирају међусобно и са реалним бројевима.</p>
+<p>Збир ретких низова је нови редак низ, чији сваки елемент је једнак збиру одговарајућих елемената
+низова сабирака. Под одговарајућим елементом се мисли на елемент са истим индексом.</p>
+<p>Збир ретког низа и реалног броја је нови редак низ, чији сваки елемент је збир одговарајућег
+елемента полазног низа и датог реалног броја.</p>
+<p>Класу треба написати тако да може да се изврши следећи кôд.</p>
+
+<div data-childcomponent="klasa_sparse_array_sabiranje_demo" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_sparse_array_sabiranje_demo data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="class Program
+{
+    static void Main(string[] args)
+    {
+        SparseArray x = new SparseArray(); x[2] = 3; x[3] = 7;
+        SparseArray y = new SparseArray(); y[2] = 1; y[4] = 9;
+        SparseArray z = 2 + x + y + 3;
+        Console.WriteLine(z[1]);
+        Console.WriteLine(z[2]);
+        Console.WriteLine(z[3]);
+        Console.WriteLine(z[4]);
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Извршавањем кода треба да се добије следећи резултат:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span>
+<span class="mi">9</span>
+<span class="mi">12</span>
+<span class="mi">14</span>
+</pre></div>
+</div>
+
+    </div></div>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>3. Змијица са индексером</strong></p>
 <p>Написати класу <code class="docutils literal notranslate"><span class="pre">Zmijica</span></code> поштујући следећу спецификацију.</p>
 <p>Објекат класе <code class="docutils literal notranslate"><span class="pre">Zmijica</span></code> представља змијицу из познате игре на првим мобилним телефонима.
 Змијица се састоји од једног или више чланака, а креће по целобројној решетки у равни.
@@ -298,7 +390,9 @@
 параметар, који може да се изостави (подразумевана вредност је један). Змијица не расте
 приликом позива овог метода, већ за по један чланак у следећих <code class="docutils literal notranslate"><span class="pre">n</span></code> померања, где је <code class="docutils literal notranslate"><span class="pre">n</span></code>
 параметар метода <code class="docutils literal notranslate"><span class="pre">Rasti</span></code>. Због тога ће, након позива овог метода, реп змијице остати
-непомичан приликом наредних <code class="docutils literal notranslate"><span class="pre">n</span></code> померања.</p></li>
+непомичан приликом наредних <code class="docutils literal notranslate"><span class="pre">n</span></code> померања. У случају да се метод <code class="docutils literal notranslate"><span class="pre">Rasti</span></code> поново позове
+пре него што се обави <code class="docutils literal notranslate"><span class="pre">n</span></code> померања, објекат памти укупан број померања током којих још
+треба да расте, тј. „не заборавља” раст који је био „дужан” од раније.</p></li>
 <li><p>Метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code>, који враћа текстуалну репрезентацију змијице. На пример, змијица са
 главом на пољу <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">5)</span></code> и осталим чланцима на пољима <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">4)</span></code>, <code class="docutils literal notranslate"><span class="pre">(2,</span> <span class="pre">4)</span></code> редом,
 приказује се као <code class="docutils literal notranslate"><span class="pre">[(1,</span> <span class="pre">5)(1,</span> <span class="pre">4)(2,</span> <span class="pre">4)]</span></code>.</p></li>
