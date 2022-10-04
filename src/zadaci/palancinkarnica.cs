@@ -1,4 +1,3 @@
-// https://rti.etf.bg.ac.rs/rti/ir2oo2/rokovi/OO2KP190630.pdf
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -98,16 +98,24 @@ lessons:
         file: klase_02dz_apstrakcija_zadaci.rst
         guid: 0e087c48-dbc0-4301-b294-5092a7731965
       - type: reading
+        title: Појединачне класе - решен пример
+        file: klase_02e_pojedinacne_primer.rst
+        guid: 01264926-cd6a-4772-80e4-39d696d7b568
+      - type: reading
+        title: Појединачне класе - задаци
+        file: klase_02ez_pojedinacne_zadaci.rst
+        guid: ed279a1e-3d61-4901-8588-2890f94ca304
+      - type: reading
         title: Модуларност, повезане класе
-        file: klase_02e_modularnost.rst
+        file: klase_02f_modularnost.rst
         guid: b2525d57-0bdb-4ea0-9390-e4b207165f12
       - type: quiz
         title: Модуларност - квиз
-        file: klase_02eq_modularnost_kviz.rst
+        file: klase_02fq_modularnost_kviz.rst
         guid: 6ec7d8a6-2572-4119-8dd5-a1aa2d3355a6
       - type: reading
         title: Повезане класе - задаци
-        file: klase_02ez_zadaci.rst
+        file: klase_02fz_zadaci.rst
         guid: 5960fa50-4520-43d8-b779-b53ce461ef51
 
 ### СЕКЦИЈА НАСЛЕЂИВАЊЕ

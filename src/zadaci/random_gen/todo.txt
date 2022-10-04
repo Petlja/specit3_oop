@@ -1,0 +1,3 @@
+- pojednostaviti, napraviti manje primere
+- inspiracija: python lib
+    https://docs.python.org/3/library/random.html
