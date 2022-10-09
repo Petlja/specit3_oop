@@ -114,6 +114,10 @@ lessons:
         file: klase_02fq_modularnost_kviz.rst
         guid: 6ec7d8a6-2572-4119-8dd5-a1aa2d3355a6
       - type: reading
+        title: Повезане класе - решен пример
+        file: klase_02fp_povezane_klase_primer.rst
+        guid: 45018cf1-d04f-44dd-a2e6-a00ff8e812b4
+      - type: reading
         title: Повезане класе - задаци
         file: klase_02fz_zadaci.rst
         guid: 5960fa50-4520-43d8-b779-b53ce461ef51

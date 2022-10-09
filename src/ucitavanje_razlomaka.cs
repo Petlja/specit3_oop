@@ -75,6 +75,11 @@ class Program
         Console.Write("Unesite drugi razlomak: ");
         Razlomak r2 = Razlomak.Parse(Console.ReadLine());
 
+        if (r1.Equals(r2))
+            Console.WriteLine("Prvi razlomak je jednak drugom.");
+        else
+            Console.WriteLine("Prvi razlomak nije jednak drugom.");
+
         int cmp = r1.CompareTo(r2);
         if (cmp < 0)
             Console.WriteLine("Prvi razlomak je manji od drugog.");

@@ -41,7 +41,7 @@ namespace geom_zadaci_con
 
         public static void Zad_03()
         {
-            // Odrediti centar kruga spolja upisanog u trougao ABC,
+            // Odrediti centar kruga spolja upisanog uz stranicu AB trougla ABC,
             // cija su temena A(6, 5), B(3, 2), C(10, 1) 
             Tacka A = new Tacka(6, 5);
             Tacka B = new Tacka(3, 2);
@@ -53,7 +53,7 @@ namespace geom_zadaci_con
             Prava sb1 = new Prava(B, BS1);
             Tacka S = sa1.Presek(sb1);
             Console.WriteLine(
-                "Zad. 3: centar kruga spolja upisanog trouglu ABC je {0}.", S);
+                "Zad. 3: centar kruga spolja upisanog uz stranicu AB trougla ABC je {0}.", S);
             //Zad. 3: centar kruga spolja upisanog trouglu ABC je(2.000, 5.000).
         }
 
