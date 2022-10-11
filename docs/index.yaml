@@ -160,6 +160,12 @@ lessons:
     title: Модуларност - квиз
     type: quiz
   - description: ''
+    file: klase_02fp_povezane_klase_primer.html
+    guid: 45018cf1-d04f-44dd-a2e6-a00ff8e812b4
+    src: klase_02fp_povezane_klase_primer.rst
+    title: Повезане класе - решен пример
+    type: reading
+  - description: ''
     file: klase_02fz_zadaci.html
     guid: 5960fa50-4520-43d8-b779-b53ce461ef51
     src: klase_02fz_zadaci.rst

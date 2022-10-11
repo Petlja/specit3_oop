@@ -243,6 +243,7 @@
                 <a href=../02_izolovane_klase/klase_02ez_pojedinacne_zadaci.html><div class="studioLecture" id=activity-klase_02ez_pojedinacne_zadaci><i class="fas fa-file-alt activity-icon"></i>Појединачне класе - задаци</div></a>
                 <a href=../02_izolovane_klase/klase_02f_modularnost.html><div class="studioLecture" id=activity-klase_02f_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност, повезане класе</div></a>
                 <a href=../02_izolovane_klase/klase_02fq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02fq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02fp_povezane_klase_primer.html><div class="studioLecture" id=activity-klase_02fp_povezane_klase_primer><i class="fas fa-file-alt activity-icon"></i>Повезане класе - решен пример</div></a>
                 <a href=../02_izolovane_klase/klase_02fz_zadaci.html><div class="studioLecture" id=activity-klase_02fz_zadaci><i class="fas fa-file-alt activity-icon"></i>Повезане класе - задаци</div></a>
                 </div>
             </div>
@@ -286,12 +287,26 @@
 <h2>Пример - разломци<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Нека је потребно обезбедити поређења и основне рачунске операције над рационалним бројевима, у којима се подаци и резултати задају у облику разломка. Логична идеја је да напишемо класу <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, чији објекти ће да представљају рационалне бројеве. Желимо да имамо на располагању и методе <code class="docutils literal notranslate"><span class="pre">Equals</span></code> и <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code>, који постоје у многим класама стандардне библиотеке. Уобичајено понашање ових метода је следеће:</p>
 <ul class="simple">
-<li><p>метод <code class="docutils literal notranslate"><span class="pre">a.Equals(b)</span></code> враћа логичку вредност, и то <code class="docutils literal notranslate"><span class="pre">true</span></code> ако су <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code> једнаки, а <code class="docutils literal notranslate"><span class="pre">false</span></code> у супротном</p></li>
-<li><p>метод <code class="docutils literal notranslate"><span class="pre">a.CompareTo(b)</span></code> враћа целобројну вредност, и то негативну ако је <code class="docutils literal notranslate"><span class="pre">a</span></code> мањи од <code class="docutils literal notranslate"><span class="pre">b</span></code>, нула ако су једнаки, а позитивну ако је <code class="docutils literal notranslate"><span class="pre">a</span></code> већи од <code class="docutils literal notranslate"><span class="pre">b</span></code></p></li>
+<li><p>метод <code class="docutils literal notranslate"><span class="pre">x.Equals(y)</span></code> враћа логичку вредност, и то <code class="docutils literal notranslate"><span class="pre">true</span></code> ако су <code class="docutils literal notranslate"><span class="pre">x</span></code> и <code class="docutils literal notranslate"><span class="pre">y</span></code> једнаки, а <code class="docutils literal notranslate"><span class="pre">false</span></code> у супротном</p></li>
+<li><p>метод <code class="docutils literal notranslate"><span class="pre">x.CompareTo(y)</span></code> враћа целобројну вредност, и то негативну ако је <code class="docutils literal notranslate"><span class="pre">x</span></code> мањи од <code class="docutils literal notranslate"><span class="pre">y</span></code>, нула ако су једнаки, а позитивну ако је <code class="docutils literal notranslate"><span class="pre">x</span></code> већи од <code class="docutils literal notranslate"><span class="pre">y</span></code></p></li>
 </ul>
-<p>па овакво понашање очекујемо и када су <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code> објекти класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>.</p>
+<p>па овакво понашање очекујемо и када су <code class="docutils literal notranslate"><span class="pre">x</span></code> и <code class="docutils literal notranslate"><span class="pre">y</span></code> објекти класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>.</p>
 <p>Знамо да су разломци <span class="math notranslate nohighlight">\(r_1 = {p_1 \over q_1}\)</span> и <span class="math notranslate nohighlight">\(r_2 = {p_2 \over q_2}\)</span> једнаки ако имају једнаке бројиоце (<span class="math notranslate nohighlight">\(p_1 = p_2\)</span>) и једнаке имениоце (<span class="math notranslate nohighlight">\(q_1 = q_2\)</span>). Међутим, ови разломци могу да буду једнаки и када <span class="math notranslate nohighlight">\(p_1 \neq q_1, p_2 \neq q_2\)</span>. На пример, <span class="math notranslate nohighlight">\({1 \over 2} = {3 \over 6}\)</span> мада <span class="math notranslate nohighlight">\(1 \neq 3, 2 \neq 6\)</span>. Такође, <span class="math notranslate nohighlight">\({-1 \over 2} = {1 \over -2}\)</span> мада <span class="math notranslate nohighlight">\(-1 \neq 1, 2 \neq -2\)</span>.</p>
-<p>Провера једнакости би била једноставнија када бисмо могли да наметнемо додатне услове на облик у коме се памти разломак. На пример, када бисмо за сваки разломак <span class="math notranslate nohighlight">\(p \over q\)</span> били сигурни да је нескратив и да важи <span class="math notranslate nohighlight">\(q &gt; 0\)</span>, за проверу једнакости би било довоољно да проверимо <span class="math notranslate nohighlight">\(p_1 = p_2\)</span> и <span class="math notranslate nohighlight">\(q_1 = q_2\)</span>. Осим тога, било би једноставније да се напише и метод <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code> (избегли бисмо поређење разломака са негативним имениоцима), метод за приказ вредности разломка (минус се не пише испред имениоца), а вероватно и неки други методи.</p>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Провера једнакости би била једноставнија када бисмо могли да наметнемо додатне услове на
+облик у коме се памти разломак. На пример, када бисмо за сваки разломак <span class="math notranslate nohighlight">\(p \over q\)</span>
+били сигурни да је нескратив и да важи <span class="math notranslate nohighlight">\(q &gt; 0\)</span>, за проверу једнакости би било довоољно
+да проверимо <span class="math notranslate nohighlight">\(p_1 = p_2\)</span> и <span class="math notranslate nohighlight">\(q_1 = q_2\)</span>. Осим тога, било би једноставније да се
+напише и метод <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code> (избегли бисмо поређење разломака са негативним имениоцима),
+метод за приказ вредности разломка (минус се не пише испред имениоца), а вероватно и неки
+други методи.</p>
+
+    </div></div>
 <p>Сада се поставља питање како да обезбедимо да увек важе услови које желимо да додатно наметнемо (да је разломак нескратив и да је именилац позитиван). Свакако треба спречити корисника класе да директно задаје или мења вредност бројиоца и имениоца било ког разломка. То значи да бројилац и именилац треба да буду приватна поља класе.</p>
 <p>Ово јесте добар почетак, али он отвара нека нова питања. Ако напишемо</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Razlomak</span><span class="w"></span>
@@ -372,7 +387,20 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Методи <code class="docutils literal notranslate"><span class="pre">Equals</span></code> и <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code> сада могу да се напишу знатно једноставније него у случају када не би важили наметнути услови. Следећи пример можете да копирате у своје радно окружење и испробате:</p>
+<p>Методи <code class="docutils literal notranslate"><span class="pre">Equals</span></code> и <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code> сада могу да се напишу знатно једноставније него у случају када не би важили наметнути услови:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">Equals</span><span class="p">(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="p">&amp;&amp;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CompareTo</span><span class="p">(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Следећи пример садржи све делове класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, које смо до сада разматрали и написали.
+Програм можете да га копирате у своје радно окружење и испробате.</p>
 
 <div data-childcomponent="poredjenje_razlomaka" class="course-box course-box-problem course-content">
 
@@ -467,16 +495,40 @@ class Program
 
 </textarea>
 </div>
-<p>У оваквом случају кажемо да су бројилац и именилац енкапсулирани (стављени у капсулу) и могу да се користе само унутар те капсуле, тј. класе. Као што семо већ рекли, корисник класе нема начина да приступи приватним деловима класе, па ни да им мења вредности, мада би њему то можда и било згодно у неким ситуацијама.</p>
-<p>У делу класе који је до сада написан, корисник може једино да формира објекте класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> и да их пореди. У наставку ћемо ову класу да дорадимо до пуне функционалности, која подразумева удобно учитавање и исписивање разломака и рачунање са разломцима</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p><strong>Напомена:</strong> Да смо изоставили дефиницију метода <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, програм би и даље могао да
+се изврши, али би се понашао другачије.</p>
+<p>Када у нашој класи не би био дефинисан метод <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, користио би се подразумевани истоимени
+метод који пореди било какве објекте (а не само разломке). Тај метод ради тако што само провери
+да ли су једнаке <strong>адресе</strong> објеката који су му прослеђени као параметри. То значи да би резултат
+извршавања тог, подразумеваног метода <code class="docutils literal notranslate"><span class="pre">Equals</span></code> за два различита објекта увек био <code class="docutils literal notranslate"><span class="pre">false</span></code>, јер
+су адресе тих објеката различите (садржаји објеката се не би ни поредили).</p>
+
+    </div></div>
+<p>За приватне чланове класе, као што су бројилац <code class="docutils literal notranslate"><span class="pre">a</span></code> и именилац <code class="docutils literal notranslate"><span class="pre">b</span></code> у нашој класи <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>,
+кажемо да су енкапсулирана (стављена у капсулу) и могу да се користе само унутар те капсуле, тј.
+класе. Као што смо већ рекли, корисник класе нема начина да приступи приватним деловима класе, па
+ни да им мења вредности, мада би њему то можда и било згодно у неким ситуацијама.</p>
+<p>У делу класе који је до сада написан, корисник може једино да формира објекте класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> и
+да их пореди. У наставку ћемо ову класу да дорадимо до пуне функционалности, која подразумева удобно
+учитавање и исписивање разломака и рачунање са разломцима.</p>
 
     <div class="note-wrapper suggestionnote-type">
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
         <div class="course-content">
             
-<p>Увођење и одржавање интерних услова које треба да испуњавају сви објекти дате класе је један од важних разлога због којих нам је енкапсулација потребна. У случају класе разломак, то је кључни разлог за енкапсулирање интерних података.</p>
-<p>Да бисмо и у наставку рада могли да се ослонимо на важење наметнутих услова унутар класе, водићемо рачуна да сви методи које будемо додали у класу <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> одржавају наметнуте услове у постојећим објектима, као и да их успостављају при стварању нових објеката.</p>
+<p>Увођење и одржавање интерних услова које треба да испуњавају сви објекти дате класе је један
+од важних разлога због којих нам је енкапсулација потребна. У случају класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, то
+је кључни разлог за енкапсулирање интерних података.</p>
+<p>Да бисмо и у наставку рада могли да се ослонимо на важење наметнутих услова унутар класе,
+водићемо рачуна да сви методи које будемо додали у класу <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> одржавају наметнуте
+услове у постојећим објектима, као и да их успостављају при стварању нових објеката.</p>
 
     </div></div>
 </div>

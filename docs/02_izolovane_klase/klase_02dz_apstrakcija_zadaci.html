@@ -243,6 +243,7 @@
                 <a href=../02_izolovane_klase/klase_02ez_pojedinacne_zadaci.html><div class="studioLecture" id=activity-klase_02ez_pojedinacne_zadaci><i class="fas fa-file-alt activity-icon"></i>Појединачне класе - задаци</div></a>
                 <a href=../02_izolovane_klase/klase_02f_modularnost.html><div class="studioLecture" id=activity-klase_02f_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност, повезане класе</div></a>
                 <a href=../02_izolovane_klase/klase_02fq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02fq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02fp_povezane_klase_primer.html><div class="studioLecture" id=activity-klase_02fp_povezane_klase_primer><i class="fas fa-file-alt activity-icon"></i>Повезане класе - решен пример</div></a>
                 <a href=../02_izolovane_klase/klase_02fz_zadaci.html><div class="studioLecture" id=activity-klase_02fz_zadaci><i class="fas fa-file-alt activity-icon"></i>Повезане класе - задаци</div></a>
                 </div>
             </div>
@@ -482,16 +483,24 @@ class Program
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Tuple</span><span class="o">&lt;</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="o">&gt;&gt;</span> <span class="n">polja</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>У једноставнијој имплементацији чланци змије у сваком тренутку одговарају редом елементима
+<ul>
+<li><p>Једна очигледна идеја је да чланци змије у сваком тренутку одговарају редом елементима
 листе. То значи да <code class="docutils literal notranslate"><span class="pre">polja[0]</span></code> представља главу, <code class="docutils literal notranslate"><span class="pre">polja[1]</span></code> следећи чланак итд. Овај
 приступ подразумева да се при померању змије убаци нови елемент на почетак листе, а да се
-избаци елемент са краја листе (уколико змијица не расте при том померању).</p>
-<p>У нешто сложенијој, али и ефикаснијој имплементацији, глава може да се нађе на било ком месту
-у листи, а на наредним местима се редом налазе следећи чланци (после последњег елемента листе,
-змијица се наставља нултим елементом, све до елемента који предтходи глави). Због тога се у
-овој имплементацији поред листе <code class="docutils literal notranslate"><span class="pre">polja</span></code> памти и индекс главе. Тиме је омогућено ефикасније
-ажурирање положаја змијице када она не расте при померању (довољно је на место репа уписати
-главу и ажурирати индекс главе).</p>
+избаци елемент са краја листе (уколико змијица не расте при том померању).</p></li>
+<li><p>Ефикасније решење је да се листа која представља змијицу само допуњава, тако да је глава увек
+на крају. ово решење је ефикасније јер не захтева премештање свих елемената листе при сваком
+померању змијице. У овом случају, у индексеру треба на основу дужине листе и индекса траженог
+чланка израчунати стваран положај тог чланка у листи.</p>
+<p>Оваквим приступом ће на почетку листе остати елементи који су некад припадали змијици, али јој
+више не припадају. Зато треба повести рачуна да ти елементи са почетка листе не буду враћени
+као стварни чланци змијице, ако грешком буду ртажени.</p>
+<p>У овом решењу може (а не мора) да се дода и провера да ли је тај почетни, непотребан део листе
+постао већи од неке изабране константе (нпр. 1000), па ако јесте – избацити га из листе.
+Овакво, повремено избацивање је много боље (ефикасније) него избацивање након сваког померања
+главе змијице.</p>
+</li>
+</ul>
 
     </div>
     </div>

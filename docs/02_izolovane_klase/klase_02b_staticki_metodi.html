@@ -243,6 +243,7 @@
                 <a href=../02_izolovane_klase/klase_02ez_pojedinacne_zadaci.html><div class="studioLecture" id=activity-klase_02ez_pojedinacne_zadaci><i class="fas fa-file-alt activity-icon"></i>Појединачне класе - задаци</div></a>
                 <a href=../02_izolovane_klase/klase_02f_modularnost.html><div class="studioLecture" id=activity-klase_02f_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност, повезане класе</div></a>
                 <a href=../02_izolovane_klase/klase_02fq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02fq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02fp_povezane_klase_primer.html><div class="studioLecture" id=activity-klase_02fp_povezane_klase_primer><i class="fas fa-file-alt activity-icon"></i>Повезане класе - решен пример</div></a>
                 <a href=../02_izolovane_klase/klase_02fz_zadaci.html><div class="studioLecture" id=activity-klase_02fz_zadaci><i class="fas fa-file-alt activity-icon"></i>Повезане класе - задаци</div></a>
                 </div>
             </div>
@@ -293,8 +294,8 @@
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">r1</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">r2</span><span class="p">))</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Подсетимо се: методи <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code> и <code class="docutils literal notranslate"><span class="pre">Equal</span></code> класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> користе вредности поља <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code> да би <strong>свој</strong> разломак упоредили са другим разломком и израчунали тражену повратну вредност. Од метода <code class="docutils literal notranslate"><span class="pre">Parse</span></code> не очекујемо да уопште има свој разломак (а још мање да га користи), него да направи и врати нови разломак.</p>
-<p>Очигледно је да постоји важна разлика између метода <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code> и <code class="docutils literal notranslate"><span class="pre">Equal</span></code> са једне, и метода <code class="docutils literal notranslate"><span class="pre">Parse</span></code> са друге стране. Могли бисмо да кажемо да методи <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code> и <code class="docutils literal notranslate"><span class="pre">Equal</span></code> припадају конкретним разломцима, тј. инстанцама класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> (имају свој разломак), док метод <code class="docutils literal notranslate"><span class="pre">Parse</span></code> представља функционалност саме класе и нема свој разломак.</p>
+<p>Подсетимо се: методи <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code> и <code class="docutils literal notranslate"><span class="pre">Equals</span></code> класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> користе вредности поља <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code> да би <strong>свој</strong> разломак упоредили са другим разломком и израчунали тражену повратну вредност. Од метода <code class="docutils literal notranslate"><span class="pre">Parse</span></code> не очекујемо да уопште има свој разломак (а још мање да га користи), него да направи и врати нови разломак.</p>
+<p>Очигледно је да постоји важна разлика између метода <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code> и <code class="docutils literal notranslate"><span class="pre">Equals</span></code> са једне, и метода <code class="docutils literal notranslate"><span class="pre">Parse</span></code> са друге стране. Могли бисмо да кажемо да методи <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code> и <code class="docutils literal notranslate"><span class="pre">Equals</span></code> припадају конкретним разломцима, тј. инстанцама класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> (имају свој разломак), док метод <code class="docutils literal notranslate"><span class="pre">Parse</span></code> представља функционалност саме класе и нема свој разломак.</p>
 
     <div class="note-wrapper infonote-type">
         <div class="note-icon-holder"> </div>
@@ -462,6 +463,11 @@ class Program
         Razlomak r1 = Razlomak.Parse(Console.ReadLine());
         Console.Write(&quot;Unesite drugi razlomak: &quot;);
         Razlomak r2 = Razlomak.Parse(Console.ReadLine());
+
+        if (r1.Equals(r2))
+            Console.WriteLine(&quot;Prvi razlomak je jednak drugom.&quot;);
+        else
+            Console.WriteLine(&quot;Prvi razlomak nije jednak drugom.&quot;);
 
         int cmp = r1.CompareTo(r2);
         if (cmp &lt; 0)

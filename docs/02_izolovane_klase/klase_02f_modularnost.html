@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Модуларност</title>
+    <title>Модуларност, повезане класе</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
     <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
@@ -243,6 +243,7 @@
                 <a href=../02_izolovane_klase/klase_02ez_pojedinacne_zadaci.html><div class="studioLecture" id=activity-klase_02ez_pojedinacne_zadaci><i class="fas fa-file-alt activity-icon"></i>Појединачне класе - задаци</div></a>
                 <a href=../02_izolovane_klase/klase_02f_modularnost.html><div class="studioLecture" id=activity-klase_02f_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност, повезане класе</div></a>
                 <a href=../02_izolovane_klase/klase_02fq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02fq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02fp_povezane_klase_primer.html><div class="studioLecture" id=activity-klase_02fp_povezane_klase_primer><i class="fas fa-file-alt activity-icon"></i>Повезане класе - решен пример</div></a>
                 <a href=../02_izolovane_klase/klase_02fz_zadaci.html><div class="studioLecture" id=activity-klase_02fz_zadaci><i class="fas fa-file-alt activity-icon"></i>Повезане класе - задаци</div></a>
                 </div>
             </div>
@@ -274,297 +275,132 @@
     <div id="main-content">
     
   <div class="section" id="id1">
-<h1>Модуларност<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>Модуларност, повезане класе<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>У овој лекцији:</p>
 <ul class="simple">
 <li><p>пример разлагања пројекта на модуле,</p></li>
 <li><p>шта је тесна, а шта лабава спрегнутост модула,</p></li>
 <li><p>које су мане тесне, односно предности лабаве спрегнутости.</p></li>
 </ul>
-<p>У већим софтвреским пројектима посебан изазов представља организовање кôда у мање целине, које често неформално зовемо модулима. Препознавање и издвајање тих мањих целина између осталог омогућава да се оне лакше употребе и у другим пројектима.</p>
-<p>У објектно оријентисаном програмирању, класа је природна целина која већ групише одређену функционалност и издваја је од осталог кода. Ипак, релативно је ретко да једна изолована класа сама за себе пружа довољно функционалности и не повезује се са другим класама. Обично је за пружање заокружене услуге потребно неколико класа које међусобно тесно сарађују.</p>
-<p>У неким случајевима је врло једноставно да се уочи таква група класа, па се она природно издваја и организује у целину коју лако можемо да укључимо у разне пројекте. Међутим, некад је за уочавање таквих целина потребан „поглед из висине”, односно сагледавање шире слике и размишљање на високом нивоу апстракције. Оно што уме да буде тешко при решавању конкретног, сложеног проблема је да умемо „да се измакнемо” и за тренутак престанемо да размишљамо само о том проблему. За разлагање проблема и организацију кода је веома корисно да сагледамо функционалности које решавају неке базичне потпроблеме и које би могле да буду корисне и у другом контексту.</p>
-<p>На пример, апликација која кориснику приказује неке податке, могла би поред осталих, да садржи ове модуле:</p>
+<p>У већим софтвреским пројектима посебан изазов представља организовање кôда у мање целине,
+које често неформално зовемо модулима. Препознавање и издвајање тих мањих целина између
+осталог омогућава да се оне лакше употребе и у другим пројектима.</p>
+<p>У објектно оријентисаном програмирању, класа је природна целина која већ групише одређену
+функционалност и издваја је од осталог кода. Ипак, релативно је ретко да једна изолована
+класа сама за себе пружа довољно функционалности и не повезује се са другим класама. Обично
+је за пружање заокружене услуге потребно неколико класа које међусобно тесно сарађују.</p>
+<p>У неким случајевима је врло једноставно да се уочи таква група класа, па се она природно
+издваја и организује у целину коју лако можемо да укључимо у разне пројекте. Међутим, некад
+је за уочавање таквих целина потребан „поглед из висине”, односно сагледавање шире слике и
+размишљање на високом нивоу апстракције. Оно што уме да буде тешко при решавању конкретног,
+сложеног проблема је да умемо „да се измакнемо” и за тренутак престанемо да размишљамо само
+о том проблему. За разлагање проблема и организацију кода је веома корисно да сагледамо
+функционалности које решавају неке базичне потпроблеме и које би могле да буду корисне и у
+другом контексту.</p>
+<p>На пример, апликација која кориснику приказује неке податке, могла би поред осталих, да
+садржи ове модуле:</p>
 <ul class="simple">
-<li><p>модул за комуникацију са сервером: успостављање конекције, прибављање података, пријављивање за праћење каснијих промена у подацима</p></li>
-<li><p>модул за израчунавање података који интересују корисника, на основу прибављених података</p></li>
-<li><p>модул за приказ података на разне начине (исписом у конзолни прозор, или помоћу разних табела, графикона, дијаграма и сл.)</p></li>
-<li><p>модул за графички интерфејс према кориснику: прихватање захтева за новим подацима, за променом приказа, за одјављивање праћења промена…</p></li>
+<li><p>модул који дефинише класе које садрже податке од интереса,</p></li>
+<li><p>модул за комуникацију са сервером (успостављање конекције, прибављање података, пријављивање
+за праћење каснијих промена у подацима, одјављивање праћења),</p></li>
+<li><p>модул за израчунавање података који интересују корисника (на основу прибављених података),</p></li>
+<li><p>модул за приказ података на разне начине (исписом у конзолни прозор, или помоћу разних
+табела, графикона, дијаграма и сл.),</p></li>
+<li><p>модул за графички интерфејс према кориснику (прихватање захтева за новим подацима, за променом
+приказа, за одјављивање праћења промена)</p></li>
 </ul>
-<p>За сваки од ових модула би релативно једноставно могло да се организује тестирање, независно од осталих модула. То у многоме олакшава развој, јер се неисправности (багови) или евентуалне регресије (назадовање у развоју, губитак функционалности услед грешке), брже и лакше откривају. Наведени модули могу даље да се састоје од још мањих модула, организованих на сличан начин.</p>
-<p>Идеју о растављању на модуле ћемо детаљније да илуструјемо на следећем малом примеру, мада овај начин размишљања постаје утолико значајнији што је пројекат већи и сложенији.</p>
+<p>За сваки од ових модула би релативно једноставно могло да се организује тестирање, које не захтева
+присутност свих модула. Многи модули могу да се тестирају у изолацији, тј. без присуства иједног
+од преосталих модула. То у многоме олакшава развој, јер се неисправности (багови) или евентуалне
+регресије (назадовање у развоју, губитак функционалности услед грешке), брже и лакше откривају.
+Наведени модули могу даље да се састоје од још мањих модула, организованих на сличан начин.</p>
+<p>Идеју о растављању на модуле ћемо детаљније да илуструјемо на следећем малом примеру, мада овај
+начин размишљања постаје утолико значајнији што је пројекат већи и сложенији.</p>
 <div class="section" id="id2">
-<h2>Пример - аналитичка геометрија<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>У задацима из аналитичке геометрије често је потребно да се одреде координате пресека две праве, пресека круга и праве, координате средишта дужи, једначина симетрале дужи, једначина праве нормалне на дату праву која садржи дату тачку итд.</p>
-<p>У таквим задацима су очигледно важни појмови тачке и праве, па је корисно да их представимо класама <code class="docutils literal notranslate"><span class="pre">Tacka</span></code>, односно <code class="docutils literal notranslate"><span class="pre">Prava</span></code>. Поред ова два основна појма, врло је користан и појам вектора, па ћемо и њега да представимо одговарајућом класом <code class="docutils literal notranslate"><span class="pre">Vektor</span></code>. Кроз дати пример ће постати очигледно колико су вектори корисни у решавању задатака овог типа.</p>
-<p>Група од ове три класе већ представља згодну целину која може да се употреби при решавању многих задатака, па смо зато ове класе издвојили у посебан фајл. Класе дефинисане у фајлу су стављене у један заједнички именски простор, чиме додатно наглашавамо њихову повезаност.</p>
+<h2>Пример - многоуглови<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 
-<div data-childcomponent="ag_lib" class="course-box course-box-problem course-content">
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Написати класу која представља многоугао у равни. Класа треба да омогући формирање многоугла,
+додавање темена, уклањање последњег додатог темена, израчунавање обима и површине.
+Поред ове финкционалности, класа треба да може да врати број темена многоугла, односно
+координате траженог темена.</p>
+<p>За израчунавање обима и површине могу да се користе следеће формуле, у којима се подразумева
+да се индекси узимају по модулу <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}O = \sum_{i=1}^{n} \sqrt{(x_{i}-x_{i-1})^2 + (y_i-y_{i-1})^2}.\\P = \frac{1}{2} \left |\sum_{i=1}^{n} {x_{i} \cdot (y_{i-1} - y_{i+1})} \right |\end{aligned}\end{align} \]</div>
+<p>Демонстрирати у програму употребу написане класе.</p>
 
-<textarea data-component="activecode" id=ag_lib data-lang="python" 
+    </div></div>
+<p>Када знамо формуле за обим и површину, не би требало да буде тешко да се напише ова класа.
+Пошто класа није прецизно спецификована, сами ћемо да одредимо њен интерејс, тј. јавна
+својства и називе и листе параметара јавних метода. Нешто ниже дато је једно од могућих
+решења.</p>
+
+<div data-childcomponent="polygons_lib" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=polygons_lib data-lang="python" 
       data-timelimit=25000  data-codelens="true"  
     data-audio=''   
              data-passivecode="true"  data-hidehistory=true
     data-includesrc="﻿using System;
+using System.Collections.Generic;
 
-namespace AG
+namespace Polygons
 {
-    public class Tacka
+    public class Polygon
+    {
+        private List&lt;Point&gt; P = new List&lt;Point&gt;();
+        public void AddPoint(double x, double y)
+        {
+            P.Add(new Point(x, y));
+        }
+        public void RemoveLastPoint()
+        {
+            if (P.Count &gt; 0)
+                P.RemoveAt(P.Count - 1);
+        }
+        public int NumPoints { get { return P.Count; } }
+        public double X(int i) { return P[i].X; }
+        public double Y(int i) { return P[i].Y; }
+        public double Perimeter()
+        {
+            int n = P.Count;
+            if (n == 0)
+                return 0.0;
+            double s = Point.Dist(P[n - 1], P[0]);
+            for (int i = 1; i &lt; n; i++) 
+                s+= Point.Dist(P[i - 1], P[i]);
+            return s;
+        }
+        public double Area()
+        {
+            int n = P.Count;
+            if (n &lt; 3)
+                return 0.0;
+
+            double a = 
+                P[0].X * (P[1].Y - P[n - 1].Y) +
+                P[n-1].X * (P[0].Y - P[n - 2].Y);
+            for (int i = 1; i &lt; n-1; i++)
+                a += P[i].X * (P[i+1].Y - P[i-1].Y);
+
+            return 0.5 * Math.Abs(a);
+        }
+    }
+
+    public class Point 
     {
         private double x;
         private double y;
         public double X { get { return x; } }
         public double Y { get { return y; } }
-
-        public Tacka(double _x, double _y) { x = _x; y = _y; }
-
-        public static Tacka operator +(Tacka A, Vektor V)
+        public Point(double x0, double y0) { x = x0; y = y0; }
+        public static double Dist(Point A, Point B)
         {
-            return new Tacka(A.X + V.X, A.Y + V.Y);
-        }
-
-        public static Tacka Srediste(Tacka A, Tacka B)
-        {
-            return new Tacka(0.5 * (A.x + B.x), 0.5 * (A.y + B.y));
-        }
-
-        public override string ToString()
-        {
-            return string.Format(&quot;({0,0:F3}, {1,0:F3})&quot;, X, Y);
-        }
-    }
-
-    public class Vektor
-    {
-        private double x;
-        private double y;
-        public double X { get { return x; } }
-        public double Y { get { return y; } }
-
-        public Vektor(Vektor v) { x = v.x; y = v.y; }
-        public Vektor(double _x, double _y) { x = _x; y = _y; }
-
-        public Vektor(Tacka P, Tacka Q)
-        {
-            x = Q.X - P.X;
-            y = Q.Y - P.Y;
-        }
-
-        public double Duzina()
-        {
-            return Math.Sqrt(X * X + Y * Y);
-        }
-
-        public Vektor Ort() // Jedinicni vektor istog smera
-        {
-            double d = Duzina();
-            if (d == 0)
-                throw new Exception(&quot;Ort nula-vektora&quot;);
-
-            return new Vektor(X / d, Y / d);
-        }
-
-        public static Vektor operator +(Vektor a, Vektor b)
-        {
-            return new Vektor(a.X + b.X, a.Y + b.Y);
-        }
-
-        public static Vektor operator -(Vektor a, Vektor b)
-        {
-            return new Vektor(a.X - b.X, a.Y - b.Y);
-        }
-
-        public static Vektor operator -(Vektor a)
-        {
-            return new Vektor(-a.X, -a.Y);
-        }
-
-        public static Vektor operator *(Vektor a, double n)
-        {
-            return new Vektor(n * a.X, n * a.Y);
-        }
-
-        public static Vektor operator *(double n, Vektor a)
-        {
-            return new Vektor(n * a.X, n * a.Y);
-        }
-
-        // Rotacija za ugao dat u radijanima, u pozitivnom (ccw) smeru 
-        public Vektor Rotacija(double ugao)
-        {
-            double c = Math.Cos(ugao);
-            double s = Math.Sin(ugao);
-            return new Vektor(c * X - s * Y, s * X + c * Y);
-        }
-    }
-
-    public class Prava
-    {
-        private Tacka tacka;
-        private Vektor pravac;
-
-        public Prava(Tacka P, Tacka Q)
-        {
-            tacka = new Tacka(P.X, P.Y);
-            pravac = new Vektor(P, Q);
-        }
-
-        public Prava(Tacka A, Vektor AB)
-        {
-            tacka = new Tacka(A.X, A.Y);
-            pravac = new Vektor(AB);
-        }
-
-        public Vektor Pravac()
-        {
-            return new Vektor(pravac);
-        }
-
-        public Vektor Normala()
-        {
-            return new Vektor(pravac.Y, -pravac.X);
-        }
-
-        public static Prava Simetrala(Tacka A, Tacka B)
-        {
-            Tacka S = Tacka.Srediste(A, B);
-            Vektor n = new Prava(A, B).Normala();
-            return new Prava(S, n);
-        }
-
-        public Tacka Presek(Prava p)
-        {
-            // Za presecnu tacku vazi:
-            // A.x + k AB.x == C.x + m CD.x
-            // A.y + k AB.y == C.y + m CD.y
-
-            // A.x * CD.y + k * AB.x * CD.y == C.x * CD.y + m * CD.x * CD.y
-            // A.y * CD.x + k * AB.y * CD.x == C.y * CD.x + m * CD.y * CD.x
-            // k * (AB.x * CD.y - AB.y * CD.x) == - A.x * CD.y + A.y * CD.x + C.x * CD.y - C.y * CD.x
-            // k = (- A.x * CD.y + A.y * CD.x + C.x * CD.y - C.y * CD.x) / (AB.x * CD.y - AB.y * CD.x)
-
-            double im = pravac.X * p.pravac.Y - pravac.Y * p.pravac.X;
-            if (im == 0)
-                throw new Exception(&quot;Presek paralelnih pravih&quot;);
-
-            double k = (-tacka.X * p.pravac.Y + tacka.Y * p.pravac.X
-                + p.tacka.X * p.pravac.Y - p.tacka.Y * p.pravac.X) / im;
-            return tacka + k * pravac;
-        }
-    }
-}"   >
-
-
-</textarea>
-</div>
-<p>Овако написан фајл може да се укључи у разне апликације, како конзолне, тако и оне са графичким интерфејсом. Да бисмо довршили пример, ми ћемо овај фајл да укључимо у конзолну апликацију која решава неколико задатака из аналитичке геометрије.</p>
-
-<div data-childcomponent="ag_lib_demo_console" class="course-box course-box-problem course-content">
-
-<textarea data-component="activecode" id=ag_lib_demo_console data-lang="python" 
-      data-timelimit=25000  data-codelens="true"  
-    data-audio=''   
-             data-passivecode="true"  data-hidehistory=true
-    data-includesrc="﻿using System;
-using AG;
-
-namespace geom_zadaci_con
-{
-    class Program
-    {
-        public static void Zad_01()
-        {
-            // Odrediti centar kruga opisanog oko trougla ABC, cija su temena
-            // A(3, 3), B(10, 10), C(12, 6)
-            Tacka A = new Tacka(3, 3);
-            Tacka B = new Tacka(10, 10);
-            Tacka C = new Tacka(12, 6);
-
-            Prava sa = Prava.Simetrala(B, C);
-            Prava sb = Prava.Simetrala(A, C);
-            Tacka O = sa.Presek(sb);
-            Console.WriteLine(
-                &quot;Zad. 1: centar kruga opisanog oko trougla ABC je {0}.&quot;, O);
-            //Zad. 1: centar kruga opisanog oko trougla ABC je(7.000, 6.000).
-        }
-
-        public static void Zad_02()
-        {
-            // Odrediti centar kruga upisanog u trougao ABC, cija su temena
-            // A(6, 5), B(3, 2), C(10, 1) 
-            Tacka A = new Tacka(6, 5);
-            Tacka B = new Tacka(3, 2);
-            Tacka C = new Tacka(10, 1);
-
-            Vektor AS = new Vektor(A, B).Ort() + new Vektor(A, C).Ort();
-            Vektor BS = new Vektor(B, A).Ort() + new Vektor(B, C).Ort();
-            Prava sa = new Prava(A, AS);
-            Prava sb = new Prava(B, BS);
-            Tacka S = sa.Presek(sb);
-            Console.WriteLine(
-                &quot;Zad. 2: centar kruga upisanog u trougao ABC je {0}.&quot;, S);
-            //Zad. 2: centar kruga upisanog u trougao ABC je(6.000, 3.000).
-        }
-
-        public static void Zad_03()
-        {
-            // Odrediti centar kruga spolja upisanog u trougao ABC,
-            // cija su temena A(6, 5), B(3, 2), C(10, 1) 
-            Tacka A = new Tacka(6, 5);
-            Tacka B = new Tacka(3, 2);
-            Tacka C = new Tacka(10, 1);
-
-            Vektor AS1 = new Vektor(A, B).Ort() - new Vektor(A, C).Ort();
-            Vektor BS1 = new Vektor(B, A).Ort() - new Vektor(B, C).Ort();
-            Prava sa1 = new Prava(A, AS1);
-            Prava sb1 = new Prava(B, BS1);
-            Tacka S = sa1.Presek(sb1);
-            Console.WriteLine(
-                &quot;Zad. 3: centar kruga spolja upisanog trouglu ABC je {0}.&quot;, S);
-            //Zad. 3: centar kruga spolja upisanog trouglu ABC je(2.000, 5.000).
-        }
-
-        public static void Zad_04()
-        {
-            // Konstruisati trougao ABC, ako je dato 
-            // A(3, 2), B(9, 2) , alfa = 30 stepeni, beta = 60 stepeni
-            Tacka A = new Tacka(3, 2);
-            Tacka B = new Tacka(9, 2);
-            double alfa = Math.PI / 6;
-            double beta = Math.PI / 3;
-
-            Prava ac = new Prava(A, new Vektor(A, B).Rotacija(alfa));
-            Prava bc = new Prava(B, new Vektor(B, A).Rotacija(-beta));
-            Tacka C = ac.Presek(bc);
-            Console.WriteLine(&quot;Zad. 4: tacka C{0}&quot;, C);
-            //Zad. 4: tacka C(7.500, 4.598)
-        }
-
-        public static void Zad_05()
-        {
-            // Konstruisati trougao ABC, ako je dato 
-            // B(21, 9), C(15, 15) , beta = 45 stepeni, b+c = 24
-            Tacka B = new Tacka(21, 9);
-            Tacka C = new Tacka(15, 15);
-            double beta = Math.PI / 4;
-            double bd = 24;
-
-            // D je tacka na pravoj AB, takva da |DB| = b+c
-            Tacka D = B + bd * new Vektor(B, C).Rotacija(beta).Ort();
-            Prava ab = new Prava(B, D);
-            Prava s = Prava.Simetrala(C, D);
-            Tacka A = ab.Presek(s);
-            Console.WriteLine(&quot;Zad. 5: tacka A{0}&quot;, A);
-            //Zad. 5: tacka A(7.000, 9.000)
-        }
-
-        public static void Main(string[] args)
-        {
-            Zad_01();
-            Zad_02();
-            Zad_03();
-            Zad_04();
-            Zad_05();
+            return Math.Sqrt((A.x - B.x) * (A.x - B.x) + (A.y - B.y) * (A.y - B.y));
         }
     }
 }
@@ -573,29 +409,217 @@ namespace geom_zadaci_con
 
 </textarea>
 </div>
-<p>На овај начин смо пројекат поделили у два модула, које можемо да назовемо <code class="docutils literal notranslate"><span class="pre">AG</span></code> и <code class="docutils literal notranslate"><span class="pre">geom_zadaci_con</span></code> по њиховим именским просторима.</p>
-<p>Даљим развојем модула <code class="docutils literal notranslate"><span class="pre">AG</span></code> би могло да се очекује да постојећој групи класа додамо још неке, а да постојеће класе добију нове методе. На пример, могли бисмо да додамо класу <code class="docutils literal notranslate"><span class="pre">Krug</span></code>, која би омогућила једнако удобно решавање шире класе задатака. Са друге стране, на пример, класи <code class="docutils literal notranslate"><span class="pre">Prava</span></code> можемо да додамо метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code> за исписивање једначине праве, метод <code class="docutils literal notranslate"><span class="pre">Parse</span></code> за инстанцирање праве на основу њене једначине записане у неком стандардном облику (дате као стринг), метод за пресек са кругом (који би могао да враћа пар референци на тачке, с тим да референце буду празне ако не постоји пресек) итд.</p>
-<p>Уколико кôд модула <code class="docutils literal notranslate"><span class="pre">AG</span></code> постане велики и непрегледан, дати фајл може да се подели на неколико фајлова, од којих би сваки садржао по једну класу. Садржај свих тако насталих фајлова би и даље припадао истом именском простору, тј. сваки фајл би био облика</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">AG</span><span class="w"></span>
+<p>Овако написан фајл може да се укључи у разне апликације, како конзолне, тако и оне са
+графичким интерфејсом.</p>
+<div class="section" id="o">
+<h3>Изворни кôд у два фајла<a class="headerlink" href="#o" title="Permalink to this headline">¶</a></h3>
+<p>Да бисмо проверили да сви делови класе <code class="docutils literal notranslate"><span class="pre">Polygon</span></code> исправно раде, написаћемо конзолну
+апликацију која се састоји од два фајла са изворним кодом. У фајлу <em>Polygon.cs</em> налазиће
+се дефиниције класа <code class="docutils literal notranslate"><span class="pre">Polygon</span></code> и <code class="docutils literal notranslate"><span class="pre">Point</span></code>, које смо управо видели. У фајлу <em>Program.cs</em>
+налазиће се уобичајена класа <code class="docutils literal notranslate"><span class="pre">Program</span></code> са методом <code class="docutils literal notranslate"><span class="pre">Main</span></code>, која демонстрира могућности
+класе <code class="docutils literal notranslate"><span class="pre">Polygon</span></code>.</p>
+
+<div data-childcomponent="polygons_demo_console" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=polygons_demo_console data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using Polygons;
+
+namespace PolygonsDemo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Polygon p = new Polygon();
+            p.AddPoint(1, 1);
+            p.AddPoint(1, 3);
+            p.AddPoint(4, 3);
+            p.AddPoint(4, 1);
+            p.AddPoint(5, 2);
+            p.RemoveLastPoint();
+
+            Console.Write(&quot;Tacke su:&quot;);
+            for (int i = 0; i &lt; p.NumPoints; i++)
+            {
+                Console.Write(&quot; ({0}, {1})&quot;, p.X(i), p.Y(i));
+            }
+            Console.WriteLine();
+
+            Console.WriteLine(&quot;Obim je {0}&quot;, p.Perimeter());
+            Console.WriteLine(&quot;Povrsina je {0}&quot;, p.Area());
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Оваква организација се не разликује много од оне у претходним програмима. Међутим, већ тиме
+што смо класе <code class="docutils literal notranslate"><span class="pre">Polygon</span></code> и <code class="docutils literal notranslate"><span class="pre">Point</span></code> издвојили у посебан фајл и посебан именски простор,
+знатно смо олакшали употребу ових класа у различитим програмима. Да бисмо ове класе укључили
+у различите пројекте, довољно је да фајл који их садржи додамо у пројекат. То можемо да урадимо
+тако што у прозору <em>Solution Explorer</em> кликнемо десним тастером миша на пројекат и одаберемо
+опцију <em>Add → Existing Item…</em> , а затим пронађемо фајл који желимо да додамо.</p>
+</div>
+<div class="section" id="id3">
+<h3>Сарадња више пројеката<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Уобичајен и још удобнији начин да искористимо групу класа у различитим појектима је да
+од те групе класа направимо библиотеку у облику одвојеног пројекта. Када покренемо
+окружење <em>Visual Studio</em> и изаберемо опцију <em>Create a new project</em>, треба да одаберемо
+<em>C# Class library</em> као тип пројекта. Пројекат можемо да назовемо <em>Polygons</em> и да у њега
+додамо фајл <em>Polygon.cs</em>.</p>
+<p>Након тога, у оквиру истог решења (<em>solution</em>) креирамо нови пројекат, нпр. конзолну
+апликацију коју можемо да назовемо <em>PolygonsDemo</em>. У прозору <em>Solution Explorer</em> у оквиру
+пројеката <em>PolygonsDemo</em> треба да кликнемо десним тастером миша на ставку <em>Dependencies</em>,
+а затим у контекстном менију изаберемо ставку <em>Add Project Reference</em>. Отвориће се нови
+прозор, у коме можемо да задамо од који пројеката зависи пројекат који подешавамо.</p>
+<div class="figure align-center" id="id6">
+<img alt="../_images/dodavanje_reference.png" src="../_images/dodavanje_reference.png" />
+<p class="caption"><span class="caption-text">Прозор за додавање референци, тј. пројеката од којих зависи текући пројекат</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>Пошто је наш пројекат – референца део истог решења, бирамо <code class="docutils literal notranslate"><span class="pre">Solution</span></code> у менију са леве
+стране, а затим означимо пројекат <em>Polygons</em>. У пројекту <em>PolygonsDemo</em> налазиће се само
+фајл <em>Program.cs</em>, који смо већ видели.</p>
+<p>На исти начин можемо да додамо и трећи пројекат у решење, а затим да подесимо и његове
+зависности од осталих пројеката. то може нпр. да буде графичка апликација која исцртава
+многоуглове задате кликовима миша. Поступак може да се настави за било који број
+пројеката и било какве зависности међу њима.</p>
+
+    <div class="note-wrapper learnmorenote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/learnmorenote-img.svg" class="note-image learnmorenote-image" /> 
+        <div class="course-content">
+            
+<p><strong>Употреба библиотеке и без изворног кода</strong></p>
+<p>Смештање модула у засебну библиотеку нам омогућава да неком дамо нашу библиотеку на употребу,
+а да му при томе не дамо изворни кôд. Уместо изворног кода, можемо да поделимо само извршиви
+фајл који садржи машински кôд наше библиотеке. Такав фајл има екстензију <em>.dll</em>, скраћено од
+<em>Dynamic link library</em> (библиотека која се са апликацијом повезује динамички, тј. у току
+извршавања апликације). У овом курсу се нећемо бавити таквим начином дељења библиотеке.</p>
+
+    </div></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>Интерне класе и њихови делови<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Организовање изворног кода у више пројеката нам доноси могућност да класа или њени делови буду
+<strong>видљиви другим класама унутар једног пројекта</strong>. (нпр. библиотеке) али <strong>не и ван њега</strong>.</p>
+<p>Претопоставимо, на пример, да желимо да класа <code class="docutils literal notranslate"><span class="pre">Point</span></code> буде доступна класи <code class="docutils literal notranslate"><span class="pre">Polygon</span></code>, али
+да буде недоступна ван бибиотеке, јер ван библиотеке за њом нема потребе. Ради тога је довољно
+да класу декларишемо као интерну, уместо да буде јавна. Прецизније, уместо да пишемо</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Point</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="p">...</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>док би се кôд који користи ове класе и даље налазио у именском простору <code class="docutils literal notranslate"><span class="pre">geom_zadaci_con</span></code>, па би било потребно само на почетку фајла да се наведе <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">AG;</span></code>.</p>
-<p>Одлука о томе када неки фајл постаје превелики и треба да се подели на мање фајлове је ствар процене и договора тима. Уобичајена величина фајла (чак и у веома великим пројектима) је од стотинак, до пар хиљада линија кода.</p>
+<p>писаћемо</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Point</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
 </div>
-<div class="section" id="id3">
-<h2>Спрегнутост модула<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>При разлагању већег пројекта на логичке целине (модуле) посебно треба водити рачуна о такозваној спрегнутости кода (енгл. <em>code coupling</em>).</p>
-<p>Како год да разложимо кôд на модуле, неки модули ће да зависе од других. У претходном примеру модул <code class="docutils literal notranslate"><span class="pre">geom_zadaci_con</span></code> зависи од модула <code class="docutils literal notranslate"><span class="pre">AG</span></code>. Међузависност модула може да се представи усмереним графом, где модули представљају чворове, а зависности гране графа. Циљ коме се тежи је да тај граф буде што једноставнији. На пример, кружне зависности модула (циклуси у графу) су веома непожељне, јер то значи да сви модули који чине циклус морају да буду заједно укључени у сваки пројекат. Ово је јасан сигнал да кôд није добро подељен на модуле, јер се узајамно зависни модули понашају као један велики модул. У таквом и сличним случајевима кажемо да у коду постоји тесна спрегнутост (<em>tight coupling</em>). Такође није добро да један модул зависи од великог броја других модула. Таква ситуација је обично сигнал да је тај модул превелики, или да је нека класа у њему лоше дизајнирана (има превише функционалности).</p>
-<p>Када је пројекат добро подељен на модуле, кôд је лабаво спрегнут (<em>loose coupling</em>). У том случају је граф зависности модула ацикличан и обично има релативно мали број грана. У ацикличном графу чворови могу да се групишу у слојеве. Најнижем слоју у графу одговарају модули који не зависе од других модула, и они представљају неку базичну функционалност. Модули тог најнижег слоја су добри кандидати за креирање потпуно независних библиотека. Вишим слојевима одговарају модули који зависе од претходних слојева.</p>
-<p>Број слојева у графу зависности модула не мора да буде велики, могуће је да их буде свега два или три чак и у великим пројектима. Умеће организовања кода у модуле се огледа у једноставности добијеног графа зависности, чак и када он има много чворова.</p>
-<div class="figure align-center" id="id4">
+<p>Реч <code class="docutils literal notranslate"><span class="pre">internal</span></code> може да се користи и за делове (чланове) класе, као што су методи, поља, својства
+и индексери. Ниво видљивости интерних делова класе је између јавног и приватног нивоа, што је
+приказано у следећој табели.</p>
+<table class="colwidths-given docutils align-left">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Место употребе</strong></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">public</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">internal</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">private</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Унутар класе</strong></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Друге класе у библиотеци</strong></p></td>
+<td><p>✅️</p></td>
+<td><p>✅</p></td>
+<td><p>❌</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Ван библиотеке</strong></p></td>
+<td><p>✅️</p></td>
+<td><p>❌</p></td>
+<td><p>❌</p></td>
+</tr>
+</tbody>
+</table>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Класе и њихови делови који су декларисани као <code class="docutils literal notranslate"><span class="pre">internal</span></code> <strong>нису део интерфејса модула</strong>
+као целине (интерфејс модула чине само његови јавни делови). Према томе, употребом речи
+<code class="docutils literal notranslate"><span class="pre">internal</span></code> у декларацијама класа и њихових делова, постижемо две ствари:</p>
+<ul class="simple">
+<li><p>прецизније одређујемо ко може да користи класу а ко не,</p></li>
+<li><p>олакшавамо читање модула његовим корисницима, јер њих пре свега интересује интерфејс, односно
+јавни део модула (интерне делове могу да прескоче, или погледају са мање пажње).</p></li>
+</ul>
+
+    </div></div>
+</div>
+<div class="section" id="id5">
+<h2>Спрегнутост модула<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>При разлагању већег пројекта на логичке целине (модуле) посебно треба водити рачуна о такозваној
+спрегнутости кода (енгл. <em>code coupling</em>).</p>
+<p>Како год да разложимо кôд на модуле, неки модули ће да зависе од других. У претходном примеру
+модул <em>PolygonsDemo</em> зависи од модула <em>Polygons</em>. Трећи могући модул, <em>PolygonsGraphics</em>,
+такође би зависио од модула <em>Polygons</em>. Међузависност модула може да се представи усмереним
+графом, где модули представљају чворове, а зависности гране графа.</p>
+<div class="figure align-center" id="id7">
+<img alt="../_images/spregnutost_poligoni.png" src="../_images/spregnutost_poligoni.png" />
+<p class="caption"><span class="caption-text">Међузависност модула</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Циљ коме се тежи је да граф међузависности буде што једноставнији. На пример, кружне зависности
+модула (циклуси у усмереном графу) су веома непожељне, јер то значи да модули који чине циклус
+морају сви да буду укључени у сваки пројекат у коме учествује макар један од њих. Ово је јасан
+сигнал да кôд није добро подељен на модуле, јер се узајамно зависни модули понашају као један
+већи, нерастављив модул. У таквом и сличним случајевима кажемо да у коду постоји тесна
+спрегнутост (<em>tight coupling</em>). Да би кôд могао да буде боље подељен на модуле, корисно је да
+су интерфејси тих модула мали. Још један непожељан случај је да неки модул зависи од великог
+броја других модула. Таква ситуација је обично сигнал да је тај модул превелики, или да је нека
+класа у њему лоше дизајнирана (има превише функционалности).</p>
+<p>Када је пројекат добро подељен на модуле, кôд је лабаво спрегнут (<em>loose coupling</em>). У том случају
+је граф зависности модула ацикличан и обично има релативно мали број грана. У ацикличном графу
+чворови могу да се групишу у слојеве. Најнижем слоју у графу одговарају модули који не зависе од
+других модула, и они представљају неку базичну функционалност. Модули тог најнижег слоја су добри
+кандидати за креирање потпуно независних библиотека. Вишим слојевима одговарају модули који зависе
+од претходних слојева.</p>
+<p>Број слојева у графу зависности модула не мора да буде велики, могуће је да их буде свега два
+или три чак и у великим пројектима. Умеће организовања кода у модуле се огледа у једноставности
+добијеног графа зависности, чак и када он има много чворова.</p>
+<div class="figure align-center" id="id8">
 <a class="reference internal image-reference" href="../_images/spregnutost.png"><img alt="../_images/spregnutost.png" src="../_images/spregnutost.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-text">Пример лоше, тесне спрегнуторсти (лево), где сваки модул посредно или непосредно зависи од сваког другог, и добре, лабаве спрегнутости (десно), где постоје слојеви.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Пример лоше, тесне спрегнуторсти (лево), где сваки модул посредно или непосредно зависи од
+сваког другог, и добре, лабаве спрегнутости (десно), где постоје слојеви.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
-<p>Неке од предности лабаво спрегнутих модула у пројекту смо већ истакли - такве модуле је знатно лакше одвојено тестирати, а и поново искористити у другим пројектима, или деловима великог пројекта. Поменућемо још једну корист коју имамо од лабаве спрегнутости, а која није тако очигледна. Током развоја програма честе су мале измене, после којих желимо да испробамо како програм ради. При лабавој спрегнутости, мале измене у коду погађају само мали број (малих) модула, тако да се извршиви фајл веома брзо формира. Када у пројекту постоје веома велики, или тесно спрегнути модули, они често завршавају у истом извршивом фајлу (статички се линкују), па може да се догоди да после измене само једне линије кода линковање траје и по неколико минута.</p>
+<p>Неке од предности лабаво спрегнутих модула у пројекту смо већ истакли - такве модуле је знатно
+лакше одвојено тестирати, а и поново искористити у другим пројектима, или другим деловима великог
+пројекта. Поменућемо још једну корист коју имамо од лабаве спрегнутости, а која није тако
+очигледна. Током развоја програма честе су мале измене, после којих желимо да испробамо како
+програм ради. При лабавој спрегнутости, мале измене у коду погађају само мали број (малих)
+модула, тако да се извршиви фајл веома брзо формира. Када у пројекту постоје веома велики, или
+тесно спрегнути модули, они често завршавају у истом извршивом фајлу (статички се линкују), па
+може да се догоди да после измене само једне линије кода линковање траје и по неколико минута.</p>
 </div>
 </div>
 

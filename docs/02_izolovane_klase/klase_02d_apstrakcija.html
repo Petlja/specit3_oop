@@ -243,6 +243,7 @@
                 <a href=../02_izolovane_klase/klase_02ez_pojedinacne_zadaci.html><div class="studioLecture" id=activity-klase_02ez_pojedinacne_zadaci><i class="fas fa-file-alt activity-icon"></i>Појединачне класе - задаци</div></a>
                 <a href=../02_izolovane_klase/klase_02f_modularnost.html><div class="studioLecture" id=activity-klase_02f_modularnost><i class="fas fa-file-alt activity-icon"></i>Модуларност, повезане класе</div></a>
                 <a href=../02_izolovane_klase/klase_02fq_modularnost_kviz.html><div class="studioLecture" id=activity-klase_02fq_modularnost_kviz><i class="far fa-question-circle activity-icon"></i>Модуларност - квиз</div></a>
+                <a href=../02_izolovane_klase/klase_02fp_povezane_klase_primer.html><div class="studioLecture" id=activity-klase_02fp_povezane_klase_primer><i class="fas fa-file-alt activity-icon"></i>Повезане класе - решен пример</div></a>
                 <a href=../02_izolovane_klase/klase_02fz_zadaci.html><div class="studioLecture" id=activity-klase_02fz_zadaci><i class="fas fa-file-alt activity-icon"></i>Повезане класе - задаци</div></a>
                 </div>
             </div>
@@ -482,7 +483,7 @@ class Program
 
 </textarea>
 </div>
-<p>Захваљујући концепту апстракције, ми не морамо да знамо шта је Жељко у међувремену научио или смислио да би класу учинио ефикаснијом, све док интерфејс класе остаје исти. Не морамо чак да знамо ни када је Жељко поставио ново решење, јер измена у имплементацији класе ни на који начин не омета наш рад. На пример, ако смо раније написали ових неколико наредби да испробамо класу <code class="docutils literal notranslate"><span class="pre">DinamickiSabirac</span></code></p>
+<p>Захваљујући концепту апстракције, ми не морамо да знамо шта је Жељко у међувремену научио или смислио да би класу учинио ефикаснијом, све док интерфејс класе остаје исти. Не морамо чак да знамо ни када је Жељко поставио ново решење, јер измена у имплементацији класе ни на који начин не омета наш рад. Нека смо, на пример, раније написали ових неколико наредби да испробамо класу <code class="docutils literal notranslate"><span class="pre">DinamickiSabirac</span></code>:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">5</span><span class="p">;</span><span class="w"></span>
 <span class="n">DinamickiSabirac</span><span class="w"> </span><span class="n">ds</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DinamickiSabirac</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="p">++)</span><span class="w"></span>
@@ -492,7 +493,7 @@ class Program
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ds</span><span class="p">.</span><span class="n">Zbir</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 3+4 = 7</span>
 </pre></div>
 </div>
-<p>тада након Жељкове измене није потребно да било шта мењамо у овим наредбама. Оне и даље могу да се изврше и да дају исти резултат. Једино што можемо да приметимо после Жељкове промене је да се метод <code class="docutils literal notranslate"><span class="pre">Zbir</span></code> сада за дугачке низове извршава знатно брже него раније (време рада метода <code class="docutils literal notranslate"><span class="pre">Zbir</span></code> је сада сразмерно логаритму дужине сегмента), а можда и то да је постављање вредности елементима низа сада нешто спорије (сразмерно лограритму дужине низа, уместо да буде константно).</p>
+<p>Нема портебе да након Жељкове измене било шта мењамо у овим наредбама. Оне и даље могу да се изврше и да дају исти резултат. Једино што можемо да приметимо после Жељкове промене је да се метод <code class="docutils literal notranslate"><span class="pre">Zbir</span></code> сада за дугачке низове извршава знатно брже него раније (време рада метода <code class="docutils literal notranslate"><span class="pre">Zbir</span></code> је сада сразмерно логаритму дужине сегмента), а можда и то да је постављање вредности елементима низа сада нешто спорије (сразмерно лограритму дужине низа, уместо да буде константно).</p>
 </div>
 </div>
 
