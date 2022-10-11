@@ -28,7 +28,7 @@
 
     .. activecode:: klasa_robot_test
         :passivecode: true
-        :includesrc: src/zadaci/21_robot/robot_test.cs
+        :includesrc: src/zadaci/robot_test.cs
 
     Извршавањем овог метода треба да се добије следећи излаз:
 
@@ -56,7 +56,7 @@
         
         .. activecode:: робот_class_interface
             :passivecode: true
-            :includesrc: src/zadaci/21_robot/robot_interfejs.cs
+            :includesrc: src/zadaci/robot_interfejs.cs
 
     При имплементацији ове класе згодно је да се тренутна оријентација робота 
     памти као једна од 4 могуће целобројне вредности (нпр. 0 за оријентацију навише, 1 за 
@@ -86,7 +86,7 @@
 
         .. activecode:: klasa_robot_1
             :passivecode: true
-            :includesrc: src/zadaci/21_robot/robot_sve1.cs
+            :includesrc: src/zadaci/resenja/robot_sve1.cs
 
     .. reveal:: robot_predlog_resenja_2
         :showtitle: Друго могуће решење за класу
@@ -94,7 +94,7 @@
 
         .. activecode:: klasa_robot_2
             :passivecode: true
-            :includesrc: src/zadaci/21_robot/robot_sve2.cs
+            :includesrc: src/zadaci/resenja/robot_sve2.cs
 
 
 
@@ -141,7 +141,7 @@
 
     .. activecode:: klasa_karte_test1
         :passivecode: true
-        :includesrc: src/zadaci/23_karte/karte_test1.cs
+        :includesrc: src/zadaci/karte_test1.cs
 
     Извршавањем овог метода треба да се добије следећи излаз:
 
@@ -170,7 +170,7 @@
         
         .. activecode:: klasa_karte_interfejs
             :passivecode: true
-            :includesrc: src/zadaci/23_karte/karte_interfejs.cs
+            :includesrc: src/zadaci/karte_interfejs.cs
 
 .. comment
 
@@ -182,4 +182,4 @@
 
         .. activecode:: klasa_karte
             :passivecode: true
-            :includesrc: src/zadaci/23_karte.cs
+            :includesrc: src/zadaci/resenja/23_karte.cs

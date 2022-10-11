@@ -25,7 +25,7 @@
 
 .. activecode:: skup_reci
     :passivecode: true
-    :includesrc: src/skup_reci.cs
+    :includesrc: src/primeri/skup_reci.cs
 
 .. suggestionnote::
 
@@ -56,7 +56,7 @@
 
 .. activecode:: sabirac_dinamicki_1
     :passivecode: true
-    :includesrc: src/sabirac_dinamicki_1.cs
+    :includesrc: src/primeri/sabirac_dinamicki_1.cs
 
 .. topic:: Индексер
 
@@ -89,7 +89,7 @@
 
 .. activecode:: sabirac_dinamicki_2
     :passivecode: true
-    :includesrc: src/sabirac_dinamicki_2.cs
+    :includesrc: src/primeri/sabirac_dinamicki_2.cs
 
 Захваљујући концепту апстракције, ми не морамо да знамо шта је Жељко у међувремену научио или смислио да би класу учинио ефикаснијом, све док интерфејс класе остаје исти. Не морамо чак да знамо ни када је Жељко поставио ново решење, јер измена у имплементацији класе ни на који начин не омета наш рад. Нека смо, на пример, раније написали ових неколико наредби да испробамо класу ``DinamickiSabirac``:
 

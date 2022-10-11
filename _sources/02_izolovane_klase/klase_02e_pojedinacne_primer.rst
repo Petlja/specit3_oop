@@ -125,13 +125,13 @@ Otvori(int iKolona, int iPojam)`` који отвара поље уједно ћ
 
 .. activecode:: asocijacije_klasa
     :passivecode: true
-    :includesrc: src/zadaci/asocijacije/asocijacije_klasa.cs
+    :includesrc: src/primeri/asocijacije_klasa.cs
 
 Класу можемо да тестирамо помоћу следеђег кода.
 
 .. activecode:: asocijacije_demo
     :passivecode: true
-    :includesrc: src/zadaci/asocijacije/asocijacije_demo.cs
+    :includesrc: src/primeri/asocijacije_demo.cs
 
 Извршавањем датог кода треба да се добије следећи излаз.
 
@@ -176,5 +176,4 @@ Otvori(int iKolona, int iPojam)`` који отвара поље уједно ћ
 
 .. activecode:: asocijacije_igra
     :passivecode: true
-    :includesrc: src/zadaci/asocijacije/asocijacije_igra.cs
-
+    :includesrc: src/primeri/asocijacije_igra.cs

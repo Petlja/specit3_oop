@@ -149,7 +149,7 @@
 
 .. activecode:: poredjenje_razlomaka
     :passivecode: true
-    :includesrc: src/poredjenje_razlomaka.cs
+    :includesrc: src/primeri/poredjenje_razlomaka.cs
 
 .. infonote::
 

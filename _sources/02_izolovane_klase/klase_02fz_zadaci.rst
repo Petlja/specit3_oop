@@ -99,14 +99,14 @@
     
     .. activecode:: pozoriste_testcode
         :passivecode: true
-        :includesrc: src/zadaci/pozoriste/pozoriste_test.cs
+        :includesrc: src/zadaci/pozoriste_test.cs
     
     Извршавањем датог кôда треба да се добијe следећи резултат:
 
     .. activecode:: pozoriste_output
         :passivecode: true
         :language: none
-        :includesrc: src/zadaci/pozoriste/pozoriste_izlaz.txt
+        :includesrc: src/zadaci/pozoriste_izlaz.txt
         
 
 Упутство: анализом функције за тестирање може да се закључи како треба да изгледа јавни део класа
@@ -120,7 +120,7 @@
 
     .. activecode:: pozoriste_classes_interface
         :passivecode: true
-        :includesrc: src/zadaci/pozoriste/pozoriste_interfejs.cs
+        :includesrc: src/zadaci/pozoriste_interfejs.cs
 
 3. Ресторан
 -----------
@@ -160,4 +160,4 @@
 се ради у пару или мањој групи, али при томе не треба да сваки члан пара или групе ради на свим 
 деловима програма, него чланови треба заједно да се договоре око интерфејса свих класа, а затим да 
 поделе посао. Након поделе, сваку класу (укључујући и класу ``Program``) треба самостално да напише 
-један члан пара или групе.
+један члан пара или групе, при чему један члан може да напише и више класа.

@@ -48,7 +48,7 @@
 
 .. activecode:: ag_lib
     :passivecode: true
-    :includesrc: src/ag_lib.cs
+    :includesrc: src/primeri/ag_lib.cs
 
 Фајл ``ag_lib.cs`` који смо управо видели, може да се смести у засебну (динамичку) библиотеку, 
 чиме омогућавамо једноставну употребу модула ``AG`` у различитим пројектима, било да они служе за 
@@ -60,7 +60,7 @@
  
 .. activecode:: ag_lib_demo_console
     :passivecode: true
-    :includesrc: src/ag_lib_demo_console.cs    
+    :includesrc: src/primeri/ag_lib_demo_console.cs    
     
 Даљим развојем модула ``AG`` би могло да се очекује да постојећој групи класа додамо још неке, а 
 да постојеће класе добију нове методе. На пример, могли бисмо да додамо класу ``Krug``, која би 

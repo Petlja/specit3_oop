@@ -56,7 +56,7 @@
 
 .. activecode:: sabirac
     :passivecode: true
-    :includesrc: src/sabirac.cs
+    :includesrc: src/primeri/sabirac.cs
 
 .. suggestionnote::
 
@@ -190,7 +190,7 @@
 
 .. activecode:: racunanje_sa_razlomcima
     :passivecode: true
-    :includesrc: src/racunanje_sa_razlomcima.cs
+    :includesrc: src/primeri/racunanje_sa_razlomcima.cs
 
 .. comment
 

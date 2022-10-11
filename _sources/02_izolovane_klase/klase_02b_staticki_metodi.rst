@@ -122,5 +122,5 @@
 
 .. activecode:: ucitavanje_razlomaka
     :passivecode: true
-    :includesrc: src/ucitavanje_razlomaka.cs
+    :includesrc: src/primeri/ucitavanje_razlomaka.cs
 

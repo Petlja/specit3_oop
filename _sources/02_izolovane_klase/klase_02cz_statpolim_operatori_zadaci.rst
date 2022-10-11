@@ -48,7 +48,7 @@
     
     .. activecode:: bubanj_testcode
         :passivecode: true
-        :includesrc: src/zadaci/32_bubanj/bubanj_test.cs
+        :includesrc: src/zadaci/bubanj_test.cs
     
     Извршавањем датог кôда треба да се добијe резултат попут овог (извучени бројеви 
     зависе од генератора случајних бројева, битно је само да се појаве сви бројеви 
@@ -164,7 +164,7 @@
     
     .. activecode:: lin_fun_testcode
         :passivecode: true
-        :includesrc: src/zadaci/31_lin_fun/lin_fun_test.cs
+        :includesrc: src/zadaci/lin_fun_test.cs
     
     Извршавањем датог кôда треба да се добијe следећи резултат:
 
@@ -187,7 +187,7 @@
 
         .. activecode:: klasa_linfun
             :passivecode: true
-            :includesrc: src/zadaci/31_lin_fun.cs
+            :includesrc: src/resenja/31_lin_fun.cs
 
 
 
