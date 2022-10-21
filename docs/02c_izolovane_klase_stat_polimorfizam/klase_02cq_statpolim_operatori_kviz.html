@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Интерфејси</title>
+    <title>Статички полиморфизам, оператори - квиз</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
     <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
@@ -320,17 +320,79 @@
     <div id="main-content">
     
   <div class="section" id="id1">
-<h1>Интерфејси<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>У овој лекцији:</p>
-<ul class="simple">
-<li><p>Шта је вишеструко наслеђивање</p></li>
-<li><p>Шта је интерфејс, чему служи и како се разликује од апстрактне класе</p></li>
-</ul>
-<p>Две разлике између интерфејса и апстрактне класе:</p>
-<ul class="simple">
-<li><p>интерфејс нема имплементиране методе (само најављене функције)</p></li>
-<li><p>класа може да наследи више интерфејса, али само једну класу (апстрактну или не)</p></li>
-</ul>
+<h1>Статички полиморфизам, оператори - квиз<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="stat_polim_q1">
+            <p>Q-17: Шта је статички полиморфизам? Означи најпрецизнији одговор.</p>
+
+            <li data-component="answer"  id="stat_polim_q1_opt_a">Употреба два или више истоимених метода или оператора у различитим класама.</li><li data-component="feedback" id="stat_polim_q1_opt_a"></li>
+            
+            <li data-component="answer" data-correct id="stat_polim_q1_opt_b">Употреба два или више истоимених метода или оператора једне класе.</li><li data-component="feedback" id="stat_polim_q1_opt_b"></li>
+            
+            <li data-component="answer"  id="stat_polim_q1_opt_c">Имплицитно (аутоматско) прилагођавање типа податка очекиваном.</li><li data-component="feedback" id="stat_polim_q1_opt_c"></li>
+            
+            <li data-component="answer"  id="stat_polim_q1_opt_d">Употреба различитих метода са истим листама аргумената у истој класи.</li><li data-component="feedback" id="stat_polim_q1_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="stat_polim_q2">
+            <p>Q-18: Када у једној класи постоје истоимени методи, на основу чега комлајлер одређује о којем методу се ради на месту позива?</p>
+
+            <li data-component="answer" data-correct id="stat_polim_q2_opt_a">На основу листе аргумената на месту позива.</li><li data-component="feedback" id="stat_polim_q2_opt_a"></li>
+            
+            <li data-component="answer"  id="stat_polim_q2_opt_b">На основу типа враћене вредности.</li><li data-component="feedback" id="stat_polim_q2_opt_b"></li>
+            
+            <li data-component="answer"  id="stat_polim_q2_opt_c">На основу квалификатора испред имена метода.</li><li data-component="feedback" id="stat_polim_q2_opt_c"></li>
+            
+            <li data-component="answer"  id="stat_polim_q2_opt_d">На основу листе аргумената и типа враћене вредности.</li><li data-component="feedback" id="stat_polim_q2_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
+
+    <div class="quiz-question">
+
+            <div class="course-box course-box-question course-content petlja-problem-box choice-question">
+                <div class="image-background"></div>
+                <div class="petlja-problem-box-icon-holder"> </div>
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image  qchoice-image" />
+                <img src="../_static/img/qchoice-img.svg" class="petlja-problem-image-quiz  qchoice-image" /> 
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="stat_polim_q3">
+            <p>Q-19: Какве објекте је могуће сабирати у програму, тј. за какве објекте <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> је могуће писати <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code>?</p>
+
+            <li data-component="answer"  id="stat_polim_q3_opt_a">Све објекте за које сабирање има смисла.</li><li data-component="feedback" id="stat_polim_q3_opt_a"></li>
+            
+            <li data-component="answer"  id="stat_polim_q3_opt_b">Све објекте који могу експлицитно да се конвертују у текст или број.</li><li data-component="feedback" id="stat_polim_q3_opt_b"></li>
+            
+            <li data-component="answer" data-correct id="stat_polim_q3_opt_c">Све објекте у чијој класи је дефинисан оператор +.</li><li data-component="feedback" id="stat_polim_q3_opt_c"></li>
+            
+            <li data-component="answer"  id="stat_polim_q3_opt_d">Све објекте који представљају неку врсту бројева.</li><li data-component="feedback" id="stat_polim_q3_opt_d"></li>
+            
+
+            </ul>
+            </div>
+            
+    </div>
 </div>
 
 
@@ -338,7 +400,7 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="nasledjivanje_03b_dinamicki_polimorfizam.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  <a  href="klase_02c_statpolim_operatori.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
   
   <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>

@@ -60,8 +60,8 @@ lessons:
   description: ''
   folder: 01_uvod
   guid: 3e6f2785-6d64-491a-952f-621eb939f466
-  normalized_title: Увод
-  title: Увод
+  normalized_title: 1. Увод
+  title: 1. Увод
 - activities:
   - description: ''
     file: klase_02a_enkapsulacija.html
@@ -81,6 +81,13 @@ lessons:
     src: klase_02az_enkapsulacija_zadaci.rst
     title: Енкапсулација - задаци
     type: reading
+  archived-activities: []
+  description: ''
+  folder: 02a_izolovane_klase_enkapsulacija
+  guid: a83603a2-f025-43ba-8792-dea0568461da
+  normalized_title: 2.1 Енкапсулација
+  title: 2.1 Енкапсулација
+- activities:
   - description: ''
     file: klase_02b_staticki_metodi.html
     guid: cff3cc2a-af35-4502-b70e-29c74b92b768
@@ -99,6 +106,13 @@ lessons:
     src: klase_02bz_staticki_metodi_zadaci.rst
     title: Чланови објекта и чланови класе - задаци
     type: reading
+  archived-activities: []
+  description: ''
+  folder: 02b_izolovane_klase_staticki_metodi
+  guid: 62ead548-214c-453f-8a3d-57d3a5564025
+  normalized_title: 2.2 Статички и нестатички методи
+  title: 2.2 Статички и нестатички методи
+- activities:
   - description: ''
     file: klase_02c_statpolim_operatori.html
     guid: 87078689-392c-4718-b438-eb252f84ec56
@@ -117,6 +131,13 @@ lessons:
     src: klase_02cz_statpolim_operatori_zadaci.rst
     title: Статички полиморфизам, оператори - задаци
     type: reading
+  archived-activities: []
+  description: ''
+  folder: 02c_izolovane_klase_stat_polimorfizam
+  guid: 02bf50b8-46af-4c64-ad29-a1ba740cb626
+  normalized_title: 2.3 Статички полиморфизам, оператори
+  title: 2.3 Статички полиморфизам, оператори
+- activities:
   - description: ''
     file: klase_02d_apstrakcija.html
     guid: 1d69f87f-ab1f-4205-9803-16224d86f86b
@@ -135,6 +156,13 @@ lessons:
     src: klase_02dz_apstrakcija_zadaci.rst
     title: Апстракција, индексери - задаци
     type: reading
+  archived-activities: []
+  description: ''
+  folder: 02d_izolovane_klase_apstrakcija
+  guid: c29952db-0d9b-4405-b465-07bde96db7a5
+  normalized_title: 2.4 Апстракција, индексери
+  title: 2.4 Апстракција, индексери
+- activities:
   - description: ''
     file: klase_02e_pojedinacne_primer.html
     guid: 01264926-cd6a-4772-80e4-39d696d7b568
@@ -147,6 +175,13 @@ lessons:
     src: klase_02ez_pojedinacne_zadaci.rst
     title: Појединачне класе - задаци
     type: reading
+  archived-activities: []
+  description: ''
+  folder: 02e_izolovane_klase_pojedinacne
+  guid: edec0d9b-3d9d-4168-b15e-38e466b5479c
+  normalized_title: 2.5 Појединачне класе - вежбање
+  title: 2.5 Појединачне класе - вежбање
+- activities:
   - description: ''
     file: klase_02f_modularnost.html
     guid: b2525d57-0bdb-4ea0-9390-e4b207165f12
@@ -173,10 +208,10 @@ lessons:
     type: reading
   archived-activities: []
   description: ''
-  folder: 02_izolovane_klase
-  guid: 57217667-7d37-49c2-b632-d62eada1308b
-  normalized_title: Концепти ООП и изоловане класе
-  title: Концепти ООП и изоловане класе
+  folder: 02f_izolovane_klase_grupe
+  guid: d2f65f85-4ea5-48b4-8e85-74ba7271239b
+  normalized_title: 2.6 Модуларност, повезане класе
+  title: 2.6 Модуларност, повезане класе
 - activities:
   - description: ''
     file: nasledjivanje_03a_izvedena_klasa.html
@@ -206,6 +241,6 @@ lessons:
   description: ''
   folder: 03_nasledjivanje
   guid: f3785baf-8dd2-4f02-ae1e-38cab3fb9660
-  normalized_title: Концепти ООП и наслеђивање
-  title: Концепти ООП и наслеђивање
+  normalized_title: 3.1 Концепти ООП и наслеђивање
+  title: 3.1 Концепти ООП и наслеђивање
 title: Програмирање за трећи разред специјализованих ИТ одељења

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Интерфејси</title>
+    <title>Појединачне класе - задаци</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
     <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
@@ -320,17 +320,116 @@
     <div id="main-content">
     
   <div class="section" id="id1">
-<h1>Интерфејси<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>У овој лекцији:</p>
-<ul class="simple">
-<li><p>Шта је вишеструко наслеђивање</p></li>
-<li><p>Шта је интерфејс, чему служи и како се разликује од апстрактне класе</p></li>
-</ul>
-<p>Две разлике између интерфејса и апстрактне класе:</p>
-<ul class="simple">
-<li><p>интерфејс нема имплементиране методе (само најављене функције)</p></li>
-<li><p>класа може да наследи више интерфејса, али само једну класу (апстрактну или не)</p></li>
-</ul>
+<h1>Појединачне класе - задаци<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>Задатак - игра „Вешала”<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Написати класу <code class="docutils literal notranslate"><span class="pre">Vesala</span></code>, која представља основу за игру <a class="reference external" href="https://en.wikipedia.org/wiki/Hangman_(game)">Вешала</a>.</p>
+<p>Након писања класе, написати и конзолни програм који користи ту класу и омогућава
+играње игре за два играча.</p>
+
+    </div></div>
+<p>Игру играју два играча, од којих један задаје једну или више речи (задавач), а дуги погађа
+задати текст (погађач). Погађање се састоји у тражењу да се прикажу сва појављивања једног
+слова. Уколико се то слово не појављује у тексту, погађач губи један живот. Игра се завршава
+када погађач открије сва слова од којих се састоји текст, или када изгуби све животе. Број
+живота које има погађач се договара пре почетка партије и обично је то 6.</p>
+</div>
+<div class="section" id="id4">
+<h2>Задатак - игра „Икс - окс”<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Написати класу <code class="docutils literal notranslate"><span class="pre">IksOks</span></code>, која представља основу за игру <em>икс - окс</em>.</p>
+<p>Након писања класе, написати и конзолни програм који користи ту класу и омогућава
+играње игре за два играча.</p>
+
+    </div></div>
+<p>Ову игру играју два играча на табли од 3 реда и 3 колоне, играјући наизменично. Један
+играч користи знак <em>X</em>, а други знак <em>O</em>. Табла је на почетку игре празна. Потез се
+састоји у постављању свог знака у једно поље на табли. Циљ игре је поређати 3 своја
+знака на 3 узастопна поља у праволинијскком низу, водоравно, усправно или косо.</p>
+</div>
+<div class="section" id="id5">
+<h2>Задатак - игра „Потапање бродова”<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Написати класу <code class="docutils literal notranslate"><span class="pre">Podmornice</span></code>, која представља основу за игру потапања бродова.</p>
+<p>Након писања класе, написати и конзолни програм који омогућава играње игре.</p>
+
+    </div></div>
+<p>Ову игру играју два играча на табли од 10 редова и 10 колона. Један играч је задавач и он
+задаје распоред бродова на табли, а други је погађач и он открива тај распоред. Сваки брод
+је представљен усправним или водоравним низом поља. Укупно треба распоредити 1 низ од 4
+поља, два низа од по 3 поља, три низа од по 2 поља и 4 појединачна квадрата. Правоугаоници
+не смеју имати заједничких тачака, чак ни темена. Погађач открива распоред бродова тако што
+поставља питања о појединим пољима, тј. „гађа их”. Задавач одговара једном од речи „промашен”,
+„погођен”, или „побеђен” (када је последњи део последњег брода погођен). Игра траје док
+погађач не нађе тачне позиције свих бродова.</p>
+<p>Уобичајено је да се игра тако да оба играча истовремено буду и задавачи и погађачи. У том
+случају сваки играч на почетку игре смисли распоред који онај други играч треба да оркрије,
+а затим гађају наизменично, док један од њих не открије све бродове противника.</p>
+<p>Конзолни програм може да се напише тако да омогућава играње игре у само једном, или у оба смера,
+тј. да распоред бродова погађа само један или оба играча. У случају да се игра двосмерно,
+програм треба да користи два објекта класе <code class="docutils literal notranslate"><span class="pre">Podmornice</span></code>, по један за сваког играча.</p>
+<p>Распоред бродова може да се зада као низ од 10 стрингова дужине 10, при чему сваки стринг
+садржи само нуле и јединице. Након задавања распореда садржај конзолног прозора треба
+да се обрише, нпр. извршавањем наредбе <code class="docutils literal notranslate"><span class="pre">Console.Clear();</span></code>. У случају двосмерног играња,
+садржај прозора се брише после сваког задавања, а затим програм наизменично нуди једног па
+другог играча да зада поље које гађа. Након задавања распореда, програм треба да приказује
+резултате гађања у облику две матрице карактера. Поља која нису гађана могу нпр. да се
+представе тачком, промашаји малим словом <code class="docutils literal notranslate"><span class="pre">o</span></code>, а погоци великим словом <code class="docutils literal notranslate"><span class="pre">X</span></code>.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Постоји и варијанта игре потапања бродова, у којој су могућа 4 одговора задавача: „промашен”,
+„погођен”, „потопљен” и „побеђен”. Одговор „погођен” се добија када у броду коме припада
+погођено поље постоје и поља која још нису погођена, а „потопљен” када су закључно са овим,
+погођени сви делови брода. Да би се у приказу видела разлика, бродови чији су сви делови
+погођени могу да се означавају великим словима <code class="docutils literal notranslate"><span class="pre">X</span></code>, а погођени делови непотопљених бродова
+малим словима <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<p>Ова варијанта игре је нешто лакша за откривање распореда бродова јер је потребно је мање
+потеза, али је тежа за израчунавање одговора и текстуалне ознаке поља.</p>
+
+    </div></div>
+</div>
+<div class="section" id="id6">
+<h2>Задатак - игра погађања комбинације<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Написати класу која представља основу за игру погађања комбинације.</p>
+<p>Након писања класе, написати и конзолни програм који омогућава играње игре.</p>
+
+    </div></div>
+<p>Ову игру играју два играча, задавач и погађач. Задавач смишља комбинацију од 4 цифре, од
+којих свака има вредност од 1 до 6. Уместо 4 места и 6 могућности са свако место, могу да
+се изаберу и други параметри.</p>
+<p>Након задавања, погађач покушава да открије задату комбинацију постављајући питања. Свако
+питање се такође састоји од 4 цифре са вредностима од 1 до 6. Задавач одговара на питање
+тако што саопшти колико цифара је погођено и на добром месту, а колико их је погођено али
+је на погрешном месту. На пример, ако је задата комбинација <code class="docutils literal notranslate"><span class="pre">1232</span></code>, а питање <code class="docutils literal notranslate"><span class="pre">1324</span></code>,
+одговор је <code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2</span></code> (један погодак на правом месту и два поготка на погрешном месту).</p>
+<p>Очекује се да класа буде написана тако да може да одигра улогу задавача. На пример,
+конструктор може да се напише тако да добија два параметра, број места и број могућности
+за свако место, у нашем примеру то су 4 и 6. На основу ових параметара конструктор бира
+случајну комбинацију цифара. Наравно, поред јавног конструктора, потребан је и јавни
+метод који одговара на питања погађача.</p>
+</div>
 </div>
 
 
@@ -338,7 +437,7 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="nasledjivanje_03b_dinamicki_polimorfizam.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  <a  href="klase_02e_pojedinacne_primer.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
   
   <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>

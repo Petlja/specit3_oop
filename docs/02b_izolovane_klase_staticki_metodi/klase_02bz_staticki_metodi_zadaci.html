@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Интерфејси</title>
+    <title>Чланови објекта и чланови класе - задаци</title>
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
     <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
     <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
@@ -320,25 +320,249 @@
     <div id="main-content">
     
   <div class="section" id="id1">
-<h1>Интерфејси<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>У овој лекцији:</p>
+<h1>Чланови објекта и чланови класе - задаци<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>1. Робот</strong></p>
+<p>Написати класу <code class="docutils literal notranslate"><span class="pre">Robot</span></code> поштујући следећу спецификацију.</p>
+<p>Робот се креће по целобројној решетки у равни и описан је својим двема целобројном координатама
+и оријентацијом (окренут је навише, наниже, налево или надесно).</p>
+<p>Конструктор има три параметра. Прва два су целобројне координате полазног положаја, а трећи је
+карактер, и то један од <code class="docutils literal notranslate"><span class="pre">N</span></code>, <code class="docutils literal notranslate"><span class="pre">E</span></code>, <code class="docutils literal notranslate"><span class="pre">S</span></code>, <code class="docutils literal notranslate"><span class="pre">W</span></code>. Слово означава почетну оријентацију робота
+(<code class="docutils literal notranslate"><span class="pre">N</span></code> значи оријентацију навише, <code class="docutils literal notranslate"><span class="pre">E</span></code> надесно, <code class="docutils literal notranslate"><span class="pre">S</span></code> наниже, а <code class="docutils literal notranslate"><span class="pre">W</span></code> налево). Ако му се
+проследи другачији карактер, конструктор треба да баци одговарајући изузетак.</p>
+<p>Класа има следеће методе:</p>
 <ul class="simple">
-<li><p>Шта је вишеструко наслеђивање</p></li>
-<li><p>Шта је интерфејс, чему служи и како се разликује од апстрактне класе</p></li>
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">Napred</span></code>, који имплементира померање робота за наведени број места у смеру
+у ком је окренут (ако се не наведе број места, подразумева се једно место),</p></li>
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">Nalevo</span></code>, који имплементира окретање робота налево за 90 степени,</p></li>
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">Nadesno</span></code>, који имплементира окретање робота надесно за 90 степени,</p></li>
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code>, који враћа текстуалну репрезентацију објекта у облику <code class="docutils literal notranslate"><span class="pre">Robot(X,</span> <span class="pre">Y,</span> <span class="pre">SMER)</span></code>
+(види пример излаза ниже).</p></li>
 </ul>
-<p>Две разлике између интерфејса и апстрактне класе:</p>
-<ul class="simple">
-<li><p>интерфејс нема имплементиране методе (само најављене функције)</p></li>
-<li><p>класа може да наследи више интерфејса, али само једну класу (апстрактну или не)</p></li>
-</ul>
+<p>Класу треба написати тако да може да се изврши следећи метод, који демонстрира употребу класе.</p>
+
+<div data-childcomponent="klasa_robot_test" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_robot_test data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="class Program
+{
+    static void Main(string[] args)
+    {
+        // proba
+        Robot r1 = new Robot(2, 3, &apos;N&apos;);
+        r1.Napred();
+        r1.Nadesno();
+        r1.Napred(5);
+        Console.WriteLine(r1);
+    }
+}
+"   >
+
+
+</textarea>
 </div>
+<p>Извршавањем овог метода треба да се добије следећи излаз:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Robot</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">E</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    </div></div>
+
+    <div data-component="reveal" id="robot_savet"   data-showtitle="Упутство" data-hidetitle="Сакриј упутство">
+    <p><strong>Упутство:</strong></p>
+<p>Из описа класе <code class="docutils literal notranslate"><span class="pre">Robot</span></code> и примера демо-метода, може да се закључи како треба
+да изгледа јавни део класе <code class="docutils literal notranslate"><span class="pre">Robot</span></code>, тј. њен интерфејс.</p>
+
+    <div data-component="reveal" id="robot_class_interface_button"   data-showtitle="Интерфејс тражене класе" data-hidetitle="Сакриј интерфејс">
+    <p><strong>Интерфејс тражене класе</strong></p>
+<p>Ово је само интерфејс класе <code class="docutils literal notranslate"><span class="pre">Robot</span></code>. Недостају имплементације метода,
+као и приватни део класе.</p>
+
+<div data-childcomponent="робот_class_interface" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=робот_class_interface data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="public class Robot
+{
+    public Robot(int x0, int y0, char orijentacija) { }
+    public void Napred(int n = 1) { }
+    public void Nalevo() { }
+    public void Nadesno() { }
+    public override string ToString() { return &quot;&quot;; }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>При имплементацији ове класе згодно је да се тренутна оријентација робота
+памти као једна од 4 могуће целобројне вредности (нпр. 0 за оријентацију навише, 1 за
+надесно, 2 за наниже и 3 за налево). У том случају, од помоћи могу да буду следећа
+статичка поља:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">const</span> <span class="pre">string</span> <span class="pre">ImeSmera</span> <span class="pre">=</span> <span class="pre">&quot;NESW&quot;;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">static</span> <span class="pre">int[]</span> <span class="pre">dx</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1</span> <span class="pre">};</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">static</span> <span class="pre">int[]</span> <span class="pre">dy</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">0</span> <span class="pre">};</span></code></p></li>
+</ul>
+<p>Поља су приватна, тако да корисник класе не може да их види и мења, а статичка су јер
+нам одговара да буду заједничка за све објекте (пошто никад не мењају вредност, нема
+потребе да сваки објекат заузима додатни простор за ова поља).</p>
+<p>Наравно, могућа је и сасвим прихватљива и имплементација класе без ових поља. На пример,
+смер може да се памти као карактере, а у потребним методима да се користи нека од
+наредби гранања (<cite>if</cite>, <cite>switch</cite>) за разликовање смерова.</p>
+
+    </div>
+    
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>2. Карте</strong></p>
+<p>Написати класу <code class="docutils literal notranslate"><span class="pre">Karta</span></code> поштујући следећу спецификацију.</p>
+<p>Класа <code class="docutils literal notranslate"><span class="pre">Karta</span></code> представља карту за играње из стандардног шпила од 52 карте. Карта је описана
+бојом и нумеричком вредношћу. У класи се дефинише набројиви тип</p>
+<p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">enum</span> <span class="pre">Boja</span> <span class="pre">{</span> <span class="pre">Pik,</span> <span class="pre">Karo,</span> <span class="pre">Herc,</span> <span class="pre">Tref</span> <span class="pre">};</span></code></p>
+<p>који представља боју карте. Нумеричка вредност карте је број од 2 до 15 (11 се не појављује, ас
+вреди 15, краљ 14,дама 13, жандар 12, нумеричка вредност осталих карата је број написан на њима).</p>
+<p>Конструктор има један параметар типа <code class="docutils literal notranslate"><span class="pre">string</span></code>, који мора да има тачно два карактера. Први карактер
+представља нумеричку вредност карте и мора да буде један од <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">K</span></code>, <code class="docutils literal notranslate"><span class="pre">Q</span></code>, <code class="docutils literal notranslate"><span class="pre">J</span></code>, <code class="docutils literal notranslate"><span class="pre">D</span></code>,
+<code class="docutils literal notranslate"><span class="pre">9</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>, <code class="docutils literal notranslate"><span class="pre">7</span></code>, <code class="docutils literal notranslate"><span class="pre">6</span></code>, <code class="docutils literal notranslate"><span class="pre">5</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code> (карактер <code class="docutils literal notranslate"><span class="pre">D</span></code> представља десетку). Други
+карактер представља боју карте и мора да буде један од <code class="docutils literal notranslate"><span class="pre">P</span></code>, <code class="docutils literal notranslate"><span class="pre">K</span></code>, <code class="docutils literal notranslate"><span class="pre">H</span></code>, <code class="docutils literal notranslate"><span class="pre">T</span></code>. У случају
+неодговарајуће вредности параметра, конструктор треба да баци изузетак.</p>
+<p>Класа има два својства само за читање, то су <code class="docutils literal notranslate"><span class="pre">BojaKarte</span></code> и <code class="docutils literal notranslate"><span class="pre">Broj</span></code>. Ова својства редом дају
+боју (као вредност набројивог типа) и нумеричку вредност карте (цео број).</p>
+<p>Класа има два јавна статичка поља:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Boja</span><span class="w"> </span><span class="n">BojaPrveKarte</span><span class="p">;</span><span class="w"></span>
+<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Boja</span><span class="w"> </span><span class="n">AdutskaBoja</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Ова поља су заједничка свим картама и мењају се „споља” током рада програма, као што се приликом
+играња партије карата мења адутска боја и боја прве бачене карте у штиху.</p>
+<p>Класа има метод <code class="docutils literal notranslate"><span class="pre">Vrednost</span></code>, који враћа целобројну вредност карте у текућем тренутку партије.
+Вредност карте зависи од адутске боје и боје прве карте у штиху. Ако боја карте није једнака ни
+адутској, ни боји прве карте, вредност карте једнака је њеној нумеричкој вредности. Ако је боја
+карте једнака адутској боји, њена вредност се увећава за 40, а ако је једнака боји прве карте,
+вредност се увећава за 20.</p>
+<p>Класу треба написати тако да може да се изврши следећи метод, који демонстрира употребу класе.</p>
+
+<div data-childcomponent="klasa_karte_test1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_karte_test1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // proba
+        try
+        {
+            int brojKarata = 5;
+            Karta[] baceneKarte = new Karta[brojKarata];
+            baceneKarte[0] = new Karta(&quot;DT&quot;);
+            baceneKarte[1] = new Karta(&quot;AT&quot;);
+            baceneKarte[2] = new Karta(&quot;AP&quot;);
+            baceneKarte[3] = new Karta(&quot;4K&quot;);
+            baceneKarte[4] = new Karta(&quot;3K&quot;);
+
+            Karta.AdutskaBoja = Karta.Boja.Karo;
+            Karta.BojaPrveKarte = baceneKarte[0].BojaKarte;
+
+            int maxVr = baceneKarte[0].Vrednost;
+            int iMax = 0;
+            for (int i = 1; i &lt; brojKarata; i++)
+            {
+                if (baceneKarte[i].Vrednost &gt; maxVr)
+                {
+                    maxVr = baceneKarte[i].Vrednost;
+                    iMax = i;
+                }
+            }
+            Console.WriteLine(&quot;Nosi igrac sa indeksom {0}&quot;, iMax);
+            Console.WriteLine(&quot;to je karta {0}&quot;, baceneKarte[iMax]);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Извршавањем овог метода треба да се добије следећи излаз:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Nosi</span> <span class="n">igrac</span> <span class="n">sa</span> <span class="n">indeksom</span> <span class="mi">3</span>
+<span class="n">to</span> <span class="n">je</span> <span class="n">karta</span> <span class="mi">4</span> <span class="n">Karo</span>
+</pre></div>
+</div>
+
+    </div></div>
+
+    <div data-component="reveal" id="karte_savet"   data-showtitle="Упутство" data-hidetitle="Сакриј упутство">
+    <p><strong>Упутство:</strong></p>
+<p>Из описа класе <code class="docutils literal notranslate"><span class="pre">Karta</span></code> и примера демо-метода, може да се закључи како треба
+да изгледа јавни део класе <code class="docutils literal notranslate"><span class="pre">Karta</span></code>, тј. њен интерфејс.</p>
+
+    <div data-component="reveal" id="karta_class_interface_button"   data-showtitle="Интерфејс тражене класе" data-hidetitle="Сакриј интерфејс">
+    <p><strong>Интерфејс тражене класе</strong></p>
+<p>Ово је само интерфејс класе <code class="docutils literal notranslate"><span class="pre">karta</span></code>. Методи и својства нису имплементирани на смислен
+начин, већ само толико да задовоље синтаксу. Приватни део класе није наведен.</p>
+
+<div data-childcomponent="klasa_karte_interfejs" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_karte_interfejs data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections.Generic;
+
+public class Karta
+{
+    public enum Boja { Pik, Karo, Herc, Tref };
+    public static Boja BojaPrveKarte;
+    public static Boja AdutskaBoja;
+
+    public Boja BojaKarte { get { return Boja.Herc; } }
+    public int Broj { get { return 0; } }
+
+    public Karta(string oznaka) { }
+    public int Vrednost { get { return 0; } }
+    public override string ToString() { return &quot;&quot;; }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    
+    </div>
+    </div>
 
 
     </div>
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="nasledjivanje_03b_dinamicki_polimorfizam.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  <a  href="klase_02bq_staticki_metodi_kviz.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
   
   <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>
