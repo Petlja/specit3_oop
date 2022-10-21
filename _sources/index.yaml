@@ -23,7 +23,7 @@ description:
 
 lessons:
 ### СЕКЦИЈА УВОД
-  - title: Увод
+  - title: 1. Увод
     guid: 3e6f2785-6d64-491a-952f-621eb939f466
     folder: 01_uvod
     activities:
@@ -45,9 +45,9 @@ lessons:
         guid: 1574e5c9-bc26-4e54-bebd-c45bc36d06a3
 
 ### СЕКЦИЈА ИЗОЛОВАНЕ КЛАСЕ
-  - title: Концепти ООП и изоловане класе
-    guid: 57217667-7d37-49c2-b632-d62eada1308b
-    folder: 02_izolovane_klase
+  - title: 2.1 Енкапсулација
+    guid: a83603a2-f025-43ba-8792-dea0568461da
+    folder: 02a_izolovane_klase_enkapsulacija
     activities:
       - type: reading
         title: Енкапсулација
@@ -61,6 +61,10 @@ lessons:
         title: Енкапсулација - задаци
         file: klase_02az_enkapsulacija_zadaci.rst
         guid: c865e755-aad2-4b2b-850e-468f393b583b
+  - title: 2.2 Статички и нестатички методи
+    guid: 62ead548-214c-453f-8a3d-57d3a5564025
+    folder: 02b_izolovane_klase_staticki_metodi
+    activities:
       - type: reading
         title: Чланови објекта и чланови класе
         file: klase_02b_staticki_metodi.rst
@@ -73,6 +77,10 @@ lessons:
         title: Чланови објекта и чланови класе - задаци
         file: klase_02bz_staticki_metodi_zadaci.rst
         guid: 510822cb-a553-4d0e-9ec3-37b9df7ee428
+  - title: 2.3 Статички полиморфизам, оператори
+    guid: 02bf50b8-46af-4c64-ad29-a1ba740cb626
+    folder: 02c_izolovane_klase_stat_polimorfizam
+    activities:
       - type: reading
         title: Статички полиморфизам, оператори
         file: klase_02c_statpolim_operatori.rst
@@ -85,6 +93,10 @@ lessons:
         title: Статички полиморфизам, оператори - задаци
         file: klase_02cz_statpolim_operatori_zadaci.rst
         guid: c0dc8b61-c976-4574-90f3-e94a1e3c43b6
+  - title: 2.4 Апстракција, индексери
+    guid: c29952db-0d9b-4405-b465-07bde96db7a5
+    folder: 02d_izolovane_klase_apstrakcija
+    activities:
       - type: reading
         title: Апстракција, индексери
         file: klase_02d_apstrakcija.rst
@@ -97,6 +109,10 @@ lessons:
         title: Апстракција, индексери - задаци
         file: klase_02dz_apstrakcija_zadaci.rst
         guid: 0e087c48-dbc0-4301-b294-5092a7731965
+  - title: 2.5 Појединачне класе - вежбање
+    guid: edec0d9b-3d9d-4168-b15e-38e466b5479c
+    folder: 02e_izolovane_klase_pojedinacne
+    activities:
       - type: reading
         title: Појединачне класе - решен пример
         file: klase_02e_pojedinacne_primer.rst
@@ -105,6 +121,10 @@ lessons:
         title: Појединачне класе - задаци
         file: klase_02ez_pojedinacne_zadaci.rst
         guid: ed279a1e-3d61-4901-8588-2890f94ca304
+  - title: 2.6 Модуларност, повезане класе
+    guid: d2f65f85-4ea5-48b4-8e85-74ba7271239b
+    folder: 02f_izolovane_klase_grupe
+    activities:
       - type: reading
         title: Модуларност, повезане класе
         file: klase_02f_modularnost.rst
@@ -123,7 +143,7 @@ lessons:
         guid: 5960fa50-4520-43d8-b779-b53ce461ef51
 
 ### СЕКЦИЈА НАСЛЕЂИВАЊЕ
-  - title: Концепти ООП и наслеђивање
+  - title: 3.1 Концепти ООП и наслеђивање
     guid: f3785baf-8dd2-4f02-ae1e-38cab3fb9660
     folder: 03_nasledjivanje
     activities:
