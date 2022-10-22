@@ -1,19 +1,21 @@
 using System;
 using System.Collections.Generic;
 
-// Na T treba da se stave neka ogranicenja (verovatno da bude imutable)
-public class QueueWNoDup<T> where T : struct
+public class QueueWNoDup<T>
 {
     Queue<T> q = new Queue<T>();
     HashSet<T> s = new HashSet<T>();
 
     public bool Empty() { return q.Count == 0; }
-    public void Push(T x)
+    public bool Push(T x)
     {
-        if (!s.Contains(x))
+        if (s.Contains(x))
+            return false;
+        else
         {
             q.Enqueue(x);
             s.Add(x);
+            return true;
         }
     }
     public T Pop()

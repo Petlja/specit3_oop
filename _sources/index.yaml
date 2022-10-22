@@ -142,41 +142,79 @@ lessons:
         file: klase_02fz_zadaci.rst
         guid: 5960fa50-4520-43d8-b779-b53ce461ef51
 
+### СЕКЦИЈА ГЕНЕРИЧКЕ КЛАСЕ
+  - title: 3.1 Генеричке класе, вишеструка употребљивост
+    guid: 20acaebf-53f0-42a5-8109-05786cb89456
+    folder: 03a_genericke_klase
+    activities:
+      - type: reading
+        title: Генеричке класе
+        file: genericke_03a_uvod.rst
+        guid: f9ba85e6-ba8b-4a95-8dd6-6a6e4ce4b063
+      - type: reading
+        title: Генеричке класе - решен пример
+        file: genericke_03ap_primer.rst
+        guid: 1d0adf05-1c6e-4964-b726-817f2d44c29b
+      - type: quiz
+        title: Генеричке класе и методи - квиз
+        file: genericke_03aq_kviz.rst
+        guid: 502783ab-c873-443e-99b5-ecbe00461a76
+      - type: reading
+        title: Генеричке класе - задаци
+        file: genericke_03az_zadaci.rst
+        guid: 2df5b53e-4aac-4af4-a1cf-898fc71c90ff
+
+
 ### СЕКЦИЈА НАСЛЕЂИВАЊЕ
-  - title: 3.1 Концепти ООП и наслеђивање
-    guid: f3785baf-8dd2-4f02-ae1e-38cab3fb9660
-    folder: 03_nasledjivanje
+  - title: 4.1 Наслеђивање класа
+    guid: 56d2ffbe-adde-4eb4-a343-7c6653144936
+    folder: 04a_nasledjivanje
     activities:
       - type: reading
         title: Појам наслеђивања
-        file: nasledjivanje_03a_izvedena_klasa.rst
-        guid: 077964c6-0292-48d8-90eb-2e5d375bbc95
+        file: nasledjivanje_04a_izvedena_klasa.rst
+        guid: d4c7077b-b234-4288-953e-791eb69497c5
+      - type: quiz
+        title: Појам наслеђивања - квиз
+        file: nasledjivanje_04aq_kviz.rst
+        guid: 27c0de42-5f05-4726-81e7-7c0bf524834e
+      - type: reading
+        title: Наслеђивање - задаци
+        file: nasledjivanje_04az_zadaci.rst
+        guid: 7cd1fcda-bbc8-44f9-9847-51ebb1b87076
+  - title: 4.2 Динамички полиморфизам
+    guid: 309ee94f-ec9a-4e0d-b52c-a521fbe361be
+    folder: 04b_dinamicki_polimorfizam
+    activities:
       - type: reading
         title: Динамички полиморфизам
-        file: nasledjivanje_03b_dinamicki_polimorfizam.rst
-        guid: c1b2c5c1-0fbb-4e47-999f-e602053ca15d
+        file: nasledjivanje_04b_dinamicki_polimorfizam.rst
+        guid: 46977a82-c010-4539-8140-6b6c069e0d5d
+      - type: quiz
+        title: Динамички полиморфизам - квиз
+        file: nasledjivanje_04bq_dinamicki_polimorfizam_kviz.rst
+        guid: 24ede43d-04fe-4d35-9732-5dfcab24e286
+      - type: reading
+        title: Динамички полиморфизам - задаци
+        file: nasledjivanje_04bz_dinamicki_polimorfizam_zadaci.rst
+        guid: 5e661ece-a910-469e-ba8a-82b1f70fd293
+  - title: 4.3 Интерфејси
+    guid: ddf8e487-cc44-428d-8b39-beb6d4ed8de0
+    folder: 04c_interfejsi
+    activities:
       - type: reading
         title: Интерфејси
-        file: nasledjivanje_03c_interfejsi.rst
-        guid: 8297a28b-090a-4164-af4b-a09fe2a05bad
+        file: nasledjivanje_04c_interfejsi.rst
+        guid: 01cdc952-831f-425d-9209-1f604239eb0c
+      - type: quiz
+        title: Интерфејси - квиз
+        file: nasledjivanje_04cq_interfejsi_kviz.rst
+        guid: 8d096be2-3589-4e40-b923-8d20d524df77
       - type: reading
-        title: Наслеђивање - задаци за вежбу
-        file: nasledjivanje_03d_zadaci.rst
-        guid: b8fcb37f-992b-412f-90bc-5410e47f124c
-        
-# Шта је још у програму: (погледај поново)
-# - Механизам креирања и механизам обраде изузетка.
-# - Генеричке класе (темплејти)
-# - релације наслеђивања
-#   - генерализација (на горе у хијерархији) / специјализација (на доле), реализација (имплементација интерфеса)
-# - односи (током рада програма)
-#     http://poincare.matf.bg.ac.rs/~asimic/2017/is/UMLSeminarski/DijagramKlasa_NikolaDimitrijevic.pdf
-#   - асоцијација (једна класа зна за другу и користи је у својој имплементацији)
-#     асоцијација може да буде унидирекциона, биидирекциона и рефлексивна
-#   - агрегација (једна класа је део друге класе)
-#   - композиција (јак тип агрегације, једна класа постоји само као део друге, иначе нема смисла)
-#
-#
-#
-### СЕКЦИЈА ГЕНЕРИЧКЕ КЛАСЕ (ТЕМПЛЕЈТИ) ? - ово није ООП, а битно је
+        title: Интерфејси - задаци
+        file: nasledjivanje_04cz_interfejsi_zadaci.rst
+        guid: 6636573e-c861-4a6d-bbc3-e0ca28d4e95e
+
+
+
 
