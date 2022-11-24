@@ -214,33 +214,108 @@ lessons:
   title: 2.6 Модуларност, повезане класе
 - activities:
   - description: ''
-    file: nasledjivanje_03a_izvedena_klasa.html
-    guid: 077964c6-0292-48d8-90eb-2e5d375bbc95
-    src: nasledjivanje_03a_izvedena_klasa.rst
-    title: Појам наслеђивања
+    file: genericke_03a_uvod.html
+    guid: f9ba85e6-ba8b-4a95-8dd6-6a6e4ce4b063
+    src: genericke_03a_uvod.rst
+    title: Генеричке класе
     type: reading
   - description: ''
-    file: nasledjivanje_03b_dinamicki_polimorfizam.html
-    guid: c1b2c5c1-0fbb-4e47-999f-e602053ca15d
-    src: nasledjivanje_03b_dinamicki_polimorfizam.rst
-    title: Динамички полиморфизам
+    file: genericke_03ap_primer.html
+    guid: 1d0adf05-1c6e-4964-b726-817f2d44c29b
+    src: genericke_03ap_primer.rst
+    title: Генеричке класе - решен пример
     type: reading
   - description: ''
-    file: nasledjivanje_03c_interfejsi.html
-    guid: 8297a28b-090a-4164-af4b-a09fe2a05bad
-    src: nasledjivanje_03c_interfejsi.rst
-    title: Интерфејси
-    type: reading
+    file: genericke_03aq_kviz.html
+    guid: 502783ab-c873-443e-99b5-ecbe00461a76
+    src: genericke_03aq_kviz.rst
+    title: Генеричке класе и методи - квиз
+    type: quiz
   - description: ''
-    file: nasledjivanje_03d_zadaci.html
-    guid: b8fcb37f-992b-412f-90bc-5410e47f124c
-    src: nasledjivanje_03d_zadaci.rst
-    title: Наслеђивање - задаци за вежбу
+    file: genericke_03az_zadaci.html
+    guid: 2df5b53e-4aac-4af4-a1cf-898fc71c90ff
+    src: genericke_03az_zadaci.rst
+    title: Генеричке класе - задаци
     type: reading
   archived-activities: []
   description: ''
-  folder: 03_nasledjivanje
-  guid: f3785baf-8dd2-4f02-ae1e-38cab3fb9660
-  normalized_title: 3.1 Концепти ООП и наслеђивање
-  title: 3.1 Концепти ООП и наслеђивање
+  folder: 03a_genericke_klase
+  guid: 20acaebf-53f0-42a5-8109-05786cb89456
+  normalized_title: 3.1 Генеричке класе, вишеструка употребљивост
+  title: 3.1 Генеричке класе, вишеструка употребљивост
+- activities:
+  - description: ''
+    file: nasledjivanje_04a_izvedena_klasa.html
+    guid: d4c7077b-b234-4288-953e-791eb69497c5
+    src: nasledjivanje_04a_izvedena_klasa.rst
+    title: Појам наслеђивања
+    type: reading
+  - description: ''
+    file: nasledjivanje_04aq_kviz.html
+    guid: 27c0de42-5f05-4726-81e7-7c0bf524834e
+    src: nasledjivanje_04aq_kviz.rst
+    title: Појам наслеђивања - квиз
+    type: quiz
+  - description: ''
+    file: nasledjivanje_04az_zadaci.html
+    guid: 7cd1fcda-bbc8-44f9-9847-51ebb1b87076
+    src: nasledjivanje_04az_zadaci.rst
+    title: Наслеђивање - задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 04a_nasledjivanje
+  guid: 56d2ffbe-adde-4eb4-a343-7c6653144936
+  normalized_title: 4.1 Наслеђивање класа
+  title: 4.1 Наслеђивање класа
+- activities:
+  - description: ''
+    file: nasledjivanje_04b_dinamicki_polimorfizam.html
+    guid: 46977a82-c010-4539-8140-6b6c069e0d5d
+    src: nasledjivanje_04b_dinamicki_polimorfizam.rst
+    title: Динамички полиморфизам
+    type: reading
+  - description: ''
+    file: nasledjivanje_04bq_dinamicki_polimorfizam_kviz.html
+    guid: 24ede43d-04fe-4d35-9732-5dfcab24e286
+    src: nasledjivanje_04bq_dinamicki_polimorfizam_kviz.rst
+    title: Динамички полиморфизам - квиз
+    type: quiz
+  - description: ''
+    file: nasledjivanje_04bz_dinamicki_polimorfizam_zadaci.html
+    guid: 5e661ece-a910-469e-ba8a-82b1f70fd293
+    src: nasledjivanje_04bz_dinamicki_polimorfizam_zadaci.rst
+    title: Динамички полиморфизам - задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 04b_dinamicki_polimorfizam
+  guid: 309ee94f-ec9a-4e0d-b52c-a521fbe361be
+  normalized_title: 4.2 Динамички полиморфизам
+  title: 4.2 Динамички полиморфизам
+- activities:
+  - description: ''
+    file: nasledjivanje_04c_interfejsi.html
+    guid: 01cdc952-831f-425d-9209-1f604239eb0c
+    src: nasledjivanje_04c_interfejsi.rst
+    title: Интерфејси
+    type: reading
+  - description: ''
+    file: nasledjivanje_04cq_interfejsi_kviz.html
+    guid: 8d096be2-3589-4e40-b923-8d20d524df77
+    src: nasledjivanje_04cq_interfejsi_kviz.rst
+    title: Интерфејси - квиз
+    type: quiz
+  - description: ''
+    file: nasledjivanje_04cz_interfejsi_zadaci.html
+    guid: 6636573e-c861-4a6d-bbc3-e0ca28d4e95e
+    src: nasledjivanje_04cz_interfejsi_zadaci.rst
+    title: Интерфејси - задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 04c_interfejsi
+  guid: ddf8e487-cc44-428d-8b39-beb6d4ed8de0
+  normalized_title: 4.3 Интерфејси
+  title: 4.3 Интерфејси
 title: Програмирање за трећи разред специјализованих ИТ одељења
