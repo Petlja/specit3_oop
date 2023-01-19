@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class Vesala
 {
     private string zadato;
-    private HashSet<char> pokusanaSlova;
+    private string pokusanaSlova;
     private char[] polupogodjeno;
     private int preostaloZivota;
     private int n;
@@ -13,7 +13,7 @@ public class Vesala
     {
         zadato = pojam.ToUpper();
         n = pojam.Length;
-        pokusanaSlova = new HashSet<char>();
+        pokusanaSlova = "";
         polupogodjeno = new char[n];
         for (int i = 0; i < n; i++)
             polupogodjeno[i] = '_';
@@ -22,16 +22,7 @@ public class Vesala
     }
     public string Stanje { get { return new string(polupogodjeno); } }
     public int PreostaloZivota { get { return preostaloZivota; } }
-    public string PokusanaSlova
-    {
-        get
-        {
-            string rez = "";
-            foreach (char c in pokusanaSlova)
-                rez += c;
-            return rez;
-        }
-    }
+    public string PokusanaSlova { get { return pokusanaSlova; } }
     public bool Pokusaj(char c)
     {
         if (pokusanaSlova.Contains(c))
@@ -52,7 +43,7 @@ public class Vesala
         }
         if (!imaToSlovo)
         {
-            pokusanaSlova.Add(c);
+            pokusanaSlova += c;
             preostaloZivota--;
         }
 

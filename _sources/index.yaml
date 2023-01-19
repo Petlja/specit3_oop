@@ -182,6 +182,10 @@ lessons:
         title: Наслеђивање - задаци
         file: nasledjivanje_04az_zadaci.rst
         guid: 7cd1fcda-bbc8-44f9-9847-51ebb1b87076
+      - type: reading
+        title: Виртуелни методи
+        file: nasledjivanje_04a_virtuelne_funkcije.rst
+        guid: a690d3fb-7f73-4c62-8bf8-652cefb1fd44
   - title: 4.2 Динамички полиморфизам
     guid: 309ee94f-ec9a-4e0d-b52c-a521fbe361be
     folder: 04b_dinamicki_polimorfizam
@@ -198,6 +202,7 @@ lessons:
         title: Динамички полиморфизам - задаци
         file: nasledjivanje_04bz_dinamicki_polimorfizam_zadaci.rst
         guid: 5e661ece-a910-469e-ba8a-82b1f70fd293
+
   - title: 4.3 Интерфејси
     guid: ddf8e487-cc44-428d-8b39-beb6d4ed8de0
     folder: 04c_interfejsi
