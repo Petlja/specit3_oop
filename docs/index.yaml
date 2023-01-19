@@ -262,6 +262,12 @@ lessons:
     src: nasledjivanje_04az_zadaci.rst
     title: Наслеђивање - задаци
     type: reading
+  - description: ''
+    file: nasledjivanje_04a_virtuelne_funkcije.html
+    guid: a690d3fb-7f73-4c62-8bf8-652cefb1fd44
+    src: nasledjivanje_04a_virtuelne_funkcije.rst
+    title: Виртуелни методи
+    type: reading
   archived-activities: []
   description: ''
   folder: 04a_nasledjivanje

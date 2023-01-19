@@ -131,6 +131,7 @@
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
     <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -319,6 +320,7 @@
                 <div class="courseContentsSubSection d-none"><a href=../04a_nasledjivanje/nasledjivanje_04a_izvedena_klasa.html><div class="studioLecture" id=activity-nasledjivanje_04a_izvedena_klasa><i class="fas fa-file-alt activity-icon"></i>Појам наслеђивања</div></a>
                 <a href=../04a_nasledjivanje/nasledjivanje_04aq_kviz.html><div class="studioLecture" id=activity-nasledjivanje_04aq_kviz><i class="far fa-question-circle activity-icon"></i>Појам наслеђивања - квиз</div></a>
                 <a href=../04a_nasledjivanje/nasledjivanje_04az_zadaci.html><div class="studioLecture" id=activity-nasledjivanje_04az_zadaci><i class="fas fa-file-alt activity-icon"></i>Наслеђивање - задаци</div></a>
+                <a href=../04a_nasledjivanje/nasledjivanje_04a_virtuelne_funkcije.html><div class="studioLecture" id=activity-nasledjivanje_04a_virtuelne_funkcije><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи</div></a>
                 </div>
             </div>
                 
@@ -366,6 +368,319 @@
 <li><p>шта је наслеђивање и шта њиме добијамо</p></li>
 <li><p>могући односи између класа</p></li>
 </ul>
+<p>Наслеђивање је централни, или један од централних концепата објектно оријентисаног програмирања.
+Механизам наслеђивања нам омогућава да направимо нову класу, користећи неку постојећу класу као
+полазну основу. Ту полазну класу називамо <strong>базна класа</strong>, а нову класу <strong>изведена класа</strong>. Када
+помоћу механизма наслеђивања формирамо нову класу на основу постојеће, нова класа одмах садржи
+сву функционалност базне класе, коју може по потреби делимично и да преиначи и/или допуни.</p>
+<p>Да би поља базне класе била доступна у методима изведене класе, довољно је да та поља у базној
+класи буду декларисана као <strong>заштићена</strong> (<code class="docutils literal notranslate"><span class="pre">protected</span></code>) уместо као приватна (<code class="docutils literal notranslate"><span class="pre">private</span></code>).
+Тако декларисана поља ће у свим осталим класама (које нису изведене из базне) и даље бити
+недоступна, исто као када их декларишемо као приватна.</p>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ниво приступа</p></th>
+<th class="head"><p>значење</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>private</p></td>
+<td><p>Поља доступна у класи, а недоступна ван класе</p></td>
+</tr>
+<tr class="row-odd"><td><p>protected</p></td>
+<td><p>Поља доступна у класи и из ње изведеним класама, а недоступна у осталим класама</p></td>
+</tr>
+<tr class="row-even"><td><p>public</p></td>
+<td><p>Поља доступна свуда у кôду</p></td>
+</tr>
+</tbody>
+</table>
+<p>У програмирању је честа ситуација да нам постојећи кôд одговара делимично, али не у потпуности.
+Тај исти постојећи кôд неком другом вероватно одговара у потпуности, па не можемо само да га
+преправимо и прилагодимо својим потребама, јер бисмо тиме пореметили рад других програмера. Могли
+бисмо да направимо копију кода који нам је потребан, па да ту копију прилагодимо, али такво решење
+није препоручљиво. Наиме, на такав начин се гомилају веома слични делови кода и програм брзо
+постаје непотребно велики и тежак за одржавање (нпр. исправке грешака и друге будуће измене треба
+уносити на више места у коду) и непрегледан (лако можемо да помешамо у којој од неколико истих или
+сличних функција се налазимо). Боље решење нам доноси управо наслеђивање. Постојећи кôд треба сместити
+у класу, а нову класу треба извести из постојеће. На тај начин постојећи кôд не мора ни да се мења,
+ни да се копира, а ми добијамо класу која је делом иста као нека постојећа, а разликује се у делу
+у коме нам је то потребно. Ово ћемо ускоро да илуструјемо на примерима.</p>
+<section id="id2">
+<h2>Писање изведене класе<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p><strong>Навођење базне класе</strong></p>
+<p>Јасно је да приликом писања дефиниције изведене класе треба негде да се наведе из које класе се
+изводи та класа, да би компајлер имао све потребне информације за генерисање извршивог кода. Име
+базне класе се наводи након имена изведене класе и двотачке. На пример, ако изводимо класу <code class="docutils literal notranslate"><span class="pre">B</span></code>
+из класе <code class="docutils literal notranslate"><span class="pre">A</span></code>, треба писати:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">A</span>
+<span class="p">{</span>
+    <span class="o">//</span> <span class="o">...</span>
+<span class="p">}</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">B</span> <span class="p">:</span> <span class="n">A</span>
+<span class="p">{</span>
+    <span class="o">//</span> <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Конструктори</strong></p>
+<p>Приликом креирања инстанце изведене класе, потребно је да се иницијализује и онај део објекта
+који постоји и у базној класи. Пошто се то већ дешава у конструктору базне класе (а може да буде
+сложен поступак), било би непрактично да се кôд за иницијализацију основног дела понавља у
+конструктору изведене класе. Стога је механизам наслеђивања осмишљен тако да се при инстанцирању
+изведене класе <strong>увек</strong> прво позива конструктор базне класе, а затим конструктор изведене класе.
+На тај начин нам је омогућено да се конструктором изведене класе само надовежемо на оно што ради
+конструктор базне класе и да његов рад само допунимо (и евентуално модификујемо колико је
+потребно), али не морамо да га понављамо.</p>
+<p>Приликом писања консруктора изведене класе, имамо могућност да наведемо који конструктор базне
+класе желимо да се изврши пре њега (а неки мора да се изврши), и са којим аргументима. Аргументе
+конструктора базне класе наводимо након листе аргумената конструктора изведене класе, двотачке и
+кључне речи <code class="docutils literal notranslate"><span class="pre">base</span></code>, на пример:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">A</span>
+<span class="p">{</span>
+    <span class="n">protected</span> <span class="nb">int</span> <span class="n">x</span><span class="p">;</span>
+    <span class="n">public</span> <span class="n">A</span><span class="p">(</span><span class="nb">int</span> <span class="n">x0</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x0</span><span class="p">;</span> <span class="p">}</span>
+    <span class="o">//</span> <span class="o">...</span>
+<span class="p">}</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">B</span> <span class="p">:</span> <span class="n">A</span>
+<span class="p">{</span>
+    <span class="n">private</span> <span class="nb">int</span> <span class="n">y</span><span class="p">;</span>
+    <span class="n">public</span> <span class="n">B</span><span class="p">(</span><span class="nb">int</span> <span class="n">x0</span><span class="p">,</span> <span class="nb">int</span> <span class="n">y0</span><span class="p">)</span>
+        <span class="p">:</span> <span class="n">base</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="o">//</span> <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Ако базна класа има више конструктора, на основу броја и типа аргумената наведених иза речи
+<code class="docutils literal notranslate"><span class="pre">base</span></code> се одређује који од њих ће бити изрвршен. Уколико базна класа има и подразумевани
+конструктор (који не користи параметре), део <code class="docutils literal notranslate"><span class="pre">:</span> <span class="pre">base(&lt;lista</span> <span class="pre">ragumenata&gt;)</span></code> можемо и да изоставимо,
+а у том случају ће бити извршен подразумевани консруктор базне класе. Уколико базна класа нема
+подразумевани конструктор, реч <code class="docutils literal notranslate"><span class="pre">base</span></code> и листу аргумената морамо да наведемо.</p>
+</section>
+<section id="id3">
+<h2>Пример - правоугаоник<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>Претпоставимо да је некоме била потребна класа <code class="docutils literal notranslate"><span class="pre">Pravougaonik</span></code>, која моделира правоугаоник
+чије су странице паралелне са координатним осама. Такав правоугаоник је потпуно одређен
+координатама једног (нпр. доњег левог) темена и дужинама двеју суседних страница. Према
+томе, ако темена означимо са <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">B</span></code>, <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">D</span></code>, довољно је да од података
+правоугаоник садржи координате <code class="docutils literal notranslate"><span class="pre">ax,</span> <span class="pre">ay</span></code> темена <code class="docutils literal notranslate"><span class="pre">A</span></code> и дужину <code class="docutils literal notranslate"><span class="pre">w</span></code> и висину <code class="docutils literal notranslate"><span class="pre">h</span></code>
+правоугаоника.</p>
+<p>Интерфејс, тј. јавни део класе могу да чине нпр. методи <code class="docutils literal notranslate"><span class="pre">Obim</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrisna</span></code>, који враћају
+обим и површину правоугаоника, својства <code class="docutils literal notranslate"><span class="pre">AX</span></code>, <code class="docutils literal notranslate"><span class="pre">AY</span></code>, <code class="docutils literal notranslate"><span class="pre">BX</span></code>, <code class="docutils literal notranslate"><span class="pre">BY</span></code>, <code class="docutils literal notranslate"><span class="pre">CX</span></code>, <code class="docutils literal notranslate"><span class="pre">CY</span></code>,
+<code class="docutils literal notranslate"><span class="pre">DX</span></code>, <code class="docutils literal notranslate"><span class="pre">DY</span></code> за дохватање координата темена правоугаоника, и на кају својства <code class="docutils literal notranslate"><span class="pre">W</span></code> i <code class="docutils literal notranslate"><span class="pre">H</span></code>,
+за добијање дужине и висине правоугаоника. Та класа је могла да буде написана овако:</p>
+
+<div data-childcomponent="klasa_pravougaonik" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_pravougaonik data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+public class Pravougaonik
+{
+    protected double w, h;
+    protected double ax, ay;
+    public Pravougaonik(double w, double h, double ax, double ay)
+    {
+        this.w = w;
+        this.h = h;
+        this.ax = ax;
+        this.ay = ay;
+    }
+
+    public double Obim() { return 2 * w + 2 * h; }
+    public double Povrisna() { return w * h; }
+
+    public double W { get { return w; } }
+    public double H { get { return h; } }
+
+    public double AX { get { return ax; } }
+    public double AY { get { return ay; } }
+    public double BX { get { return ax + w; } }
+    public double BY { get { return ay; } }
+    public double CX { get { return ax + w; } }
+    public double CY { get { return ay + h; } }
+    public double DX { get { return ax; } }
+    public double DY { get { return ay + h; } }
+}
+</textarea>
+</div>
+<p>Једино што је у овој класи другачије од класа које смо до сада писали је реч <code class="docutils literal notranslate"><span class="pre">protected</span></code>
+испред назива поља која су до сада по правилу била приватна.</p>
+<p>Претпоставимо даље да нам се указала потреба за сличном класом, која допушта да правоугаоник
+буде под углом у односу на координатне осе. За такав правоугаоник, потребно је поред једног
+темена и дужина страница памтити и нпр. угао <span class="math notranslate nohighlight">\(\varphi\)</span> између позитивног смера <cite>x</cite> осе
+и странице <cite>AB</cite>.</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/rotirani_pravougaonik.png" src="../_images/rotirani_pravougaonik.png" />
+<figcaption>
+<p><span class="caption-text">Ротирани правоугаоник, задат теменом <span class="math notranslate nohighlight">\(A\)</span>, дужинама страница <span class="math notranslate nohighlight">\(w, h\)</span> и углом
+<span class="math notranslate nohighlight">\(\varphi\)</span>.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Методи <code class="docutils literal notranslate"><span class="pre">Obim</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrisna</span></code> нам одговарају у постојећем облику, а исто важи и за својства
+<code class="docutils literal notranslate"><span class="pre">AX</span></code>, <code class="docutils literal notranslate"><span class="pre">AY</span></code>, <code class="docutils literal notranslate"><span class="pre">W</span></code> i <code class="docutils literal notranslate"><span class="pre">H</span></code>. Део који треба променити су дефиниције својстава <code class="docutils literal notranslate"><span class="pre">BX</span></code>, <code class="docutils literal notranslate"><span class="pre">BY</span></code>,
+<code class="docutils literal notranslate"><span class="pre">CX</span></code>, <code class="docutils literal notranslate"><span class="pre">CY</span></code>, <code class="docutils literal notranslate"><span class="pre">DX</span></code>, <code class="docutils literal notranslate"><span class="pre">DY</span></code>.</p>
+<p>Ако претпоставимо да су дате координате темена <span class="math notranslate nohighlight">\(A\)</span> и угао <span class="math notranslate nohighlight">\(\varphi\)</span>, Формуле за
+израчунавање координата осталих темена можемо да изведемо користећи основне тригонометријске
+једнакости и адиционе формуле:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align} \\
+B_x &amp;= A_x + w \cdot \cos \varphi \\
+B_y &amp;= A_y + w \cdot \sin \varphi \\
+C_x &amp;= B_x + h \cdot \cos \left( {\varphi + \frac{\pi}{2}} \right)
+     = B_x + h \cdot \left( \cos \varphi \cos \frac{\pi}{2} - \sin \varphi \sin \frac{\pi}{2} \right)
+     = B_x - h \cdot \sin \varphi \\
+C_y &amp;= B_y + h \cdot \sin \left( {\varphi + \frac{\pi}{2}} \right)
+     = B_x + h \cdot \left( \sin \varphi \cos \frac{\pi}{2} + \cos \varphi \sin \frac{\pi}{2} \right)
+     = B_x + h \cdot \cos \varphi \\
+D_x &amp;= AX + w \cdot \cos \left( {\varphi + \frac{\pi}{2}} \right)
+     = A_x + h \cdot \left( \cos \varphi \cos \frac{\pi}{2} - \sin \varphi \sin \frac{\pi}{2} \right)
+     = A_x - h \cdot \sin \varphi \\
+D_y &amp;= A_y + w \cdot \sin \left( {\varphi + \frac{\pi}{2}} \right)
+     = A_x + h \cdot \left( \sin \varphi \cos \frac{\pi}{2} + \cos \varphi \sin \frac{\pi}{2} \right)
+     = A_x + h \cdot \cos \varphi \\
+\end{align}\end{split}\]</div>
+<p>Пошто координате темена могу да буду потребне више пута, боље је да уместо угла памтимо његов синус и
+косинус, које израчунавамо само једном, у конструктору класе <code class="docutils literal notranslate"><span class="pre">RotiraniPravougaonik</span></code>.</p>
+<p>Сада класу <code class="docutils literal notranslate"><span class="pre">RotiraniPravougaonik</span></code> можемо да напишемо овако:</p>
+
+<div data-childcomponent="klasa_rotirani_pravougaonik" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klasa_rotirani_pravougaonik data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+public class RotiraniPravougaonik : Pravougaonik
+{
+    private double sinUgla;
+    private double cosUgla;
+    public RotiraniPravougaonik(double a, double b,
+        double ax, double ay, double ugao)
+        : base(a, b, ax, ay)
+    {
+        this.sinUgla = Math.Sin(ugao);
+        this.cosUgla = Math.Cos(ugao);
+    }
+    public new double BX { get { return ax + w * cosUgla; } }
+    public new double BY { get { return ay + w * sinUgla; } }
+    public new double CX { get { return BX - h * sinUgla; } }
+    public new double CY { get { return BY + h * cosUgla; } }
+    public new double DX { get { return ax - h * sinUgla; } }
+    public new double DY { get { return ay + h * cosUgla; } }
+}
+</textarea>
+</div>
+<p><strong>Сакривање члана базне класе</strong></p>
+<p>Приметимо да смо у „преправљеним” верзијама својстава додали кључну реч <code class="docutils literal notranslate"><span class="pre">new</span></code> пре типа
+својства. Тиме истичемо да не желимо да користимо стара својства са истим именима, дефинисана
+у базној класи.</p>
+<p>Уколико бисмо изоставили кључну реч <code class="docutils literal notranslate"><span class="pre">new</span></code> у овим дефиницијама, компајлер би нам упозорењем
+скренуо пажњу на то да овим дефиницијама онемогућавамо употребу претходних истоимених дефиниција
+у објектима изведене класе, тј. сакривамо претходне, наслеђене дефиниције. На пример, ако бисмо
+уместо <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">new</span> <span class="pre">double</span> <span class="pre">BX</span></code> писали само <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">double</span> <span class="pre">BX</span></code>, добили бисмо овакво упозорење:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">Warning</span> <span class="n">CS0108</span> <span class="s1">&#39;RotiraniPravougaonik.BX&#39;</span> <span class="n">hides</span> <span class="n">inherited</span> <span class="n">member</span>
+<span class="s1">&#39;Pravougaonik.BX&#39;</span><span class="o">.</span> <span class="n">Use</span> <span class="n">the</span> <span class="n">new</span> <span class="n">keyword</span> <span class="k">if</span> <span class="n">hiding</span> <span class="n">was</span> <span class="n">intended</span><span class="o">.</span>
+</pre></div>
+</div>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Дефинисањем члана у изведеној класи, који се зове исто као неки члан базне класе, онемогућили
+смо употребу тог члана базне класе. Каже се и да смо сакрили одговарајућег истоименог члана
+базне класе. Због тога из класе <code class="docutils literal notranslate"><span class="pre">RotiraniPravougaonik</span></code> не можемо (директно) да користимо
+својства <code class="docutils literal notranslate"><span class="pre">BX</span></code>, <code class="docutils literal notranslate"><span class="pre">BY</span></code>, <code class="docutils literal notranslate"><span class="pre">CX</span></code>, <code class="docutils literal notranslate"><span class="pre">CY</span></code>, <code class="docutils literal notranslate"><span class="pre">DX</span></code>, <code class="docutils literal notranslate"><span class="pre">DY</span></code> базне класе, али та својства нам нису
+ни потребна у изведеној класи (она би за ротирани правоугаоник давала неисправне вредности
+координата).</p>
+
+    </div></div>
+<p>На крају, да бисмо се уверили да су класе <code class="docutils literal notranslate"><span class="pre">RotiraniPravougaonik</span></code> и <code class="docutils literal notranslate"><span class="pre">Pravougaonik</span></code> исправно
+написане, увек је добро да се оне испробају. Брзу проверу исправности написаних класа можемо да
+изведемо нпр. помоћу следећег кода:</p>
+
+<div data-childcomponent="testiranje_rotiranih_pravougaonika" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=testiranje_rotiranih_pravougaonika data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        Pravougaonik p = new Pravougaonik(5, 3, 1, 1);
+        Console.WriteLine("Duzina(sirina) je {0}, a visina {1}",
+            p.W, p.H);
+        Console.WriteLine("Obim je {0}, a povrsina {1}",
+            p.Obim(), p.Povrisna());
+        Console.Write("A({0:0.00}, {1:0.00}), ", p.AX, p.AY);
+        Console.Write("B({0:0.00}, {1:0.00}), ", p.BX, p.BY);
+        Console.Write("C({0:0.00}, {1:0.00}), ", p.CX, p.CY);
+        Console.WriteLine("D({0:0.00}, {1:0.00})", p.DX, p.DY);
+        Console.WriteLine();
+
+        RotiraniPravougaonik rp =
+            new RotiraniPravougaonik(4, 2, 3, 3, -Math.PI / 6);
+        Console.WriteLine("Duzina(sirina) je {0}, a visina {1}",
+            rp.W, rp.H); // preuzeto iz bazne klase
+        Console.WriteLine("Obim je {0}, a povrsina {1}",
+            rp.Obim(), rp.Povrisna()); // preuzeto iz bazne klase
+        Console.Write("A({0:0.00}, {1:0.00}), ",
+            rp.AX, rp.AY); // preuzeto iz bazne klase
+        Console.Write("B({0:0.00}, {1:0.00}), ", rp.BX, rp.BY); // novo
+        Console.Write("C({0:0.00}, {1:0.00}), ", rp.CX, rp.CY); // novo
+        Console.WriteLine("D({0:0.00}, {1:0.00})", rp.DX, rp.DY); // novo
+    }
+}
+</textarea>
+</div>
+<p>Програм исписује</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Duzina</span><span class="p">(</span><span class="n">sirina</span><span class="p">)</span> <span class="n">je</span> <span class="mi">5</span><span class="p">,</span> <span class="n">a</span> <span class="n">visina</span> <span class="mi">3</span>
+<span class="n">Obim</span> <span class="n">je</span> <span class="mi">16</span><span class="p">,</span> <span class="n">a</span> <span class="n">povrsina</span> <span class="mi">15</span>
+<span class="n">A</span><span class="p">(</span><span class="mf">1.00</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">),</span> <span class="n">B</span><span class="p">(</span><span class="mf">6.00</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">),</span> <span class="n">C</span><span class="p">(</span><span class="mf">6.00</span><span class="p">,</span> <span class="mf">4.00</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="mf">1.00</span><span class="p">,</span> <span class="mf">4.00</span><span class="p">)</span>
+
+<span class="n">Duzina</span><span class="p">(</span><span class="n">sirina</span><span class="p">)</span> <span class="n">je</span> <span class="mi">4</span><span class="p">,</span> <span class="n">a</span> <span class="n">visina</span> <span class="mi">2</span>
+<span class="n">Obim</span> <span class="n">je</span> <span class="mi">12</span><span class="p">,</span> <span class="n">a</span> <span class="n">povrsina</span> <span class="mi">8</span>
+<span class="n">A</span><span class="p">(</span><span class="mf">3.00</span><span class="p">,</span> <span class="mf">3.00</span><span class="p">),</span> <span class="n">B</span><span class="p">(</span><span class="mf">6.46</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">),</span> <span class="n">C</span><span class="p">(</span><span class="mf">7.46</span><span class="p">,</span> <span class="mf">2.73</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="mf">4.00</span><span class="p">,</span> <span class="mf">4.73</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Лако се проверава да су добијене вредности својстава управо оне које је и требало да добијемо за
+дате аргументе конструктора једног и другог правоугаоника.</p>
+</section>
+<section id="id4">
+<h2>Једна могућа грешка<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<p>У претходном прогрмау који проверава исправност класа <code class="docutils literal notranslate"><span class="pre">Pravougaonik</span></code> и <code class="docutils literal notranslate"><span class="pre">RotiraniPravougaonik</span></code>,
+ротирани правоугаоник смо дефинисали овако:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RotiraniPravougaonik</span> <span class="n">rp</span> <span class="o">=</span> <span class="n">new</span> <span class="n">RotiraniPravougaonik</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="n">Math</span><span class="o">.</span><span class="n">PI</span> <span class="o">/</span> <span class="mi">6</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Програм би могао да се изврши и да смо писали</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pravougaonik</span> <span class="n">rp</span> <span class="o">=</span> <span class="n">new</span> <span class="n">RotiraniPravougaonik</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="n">Math</span><span class="o">.</span><span class="n">PI</span> <span class="o">/</span> <span class="mi">6</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Међутим, у овом случају не бисмо добили очекивани резултат. За овако формиран објекат <code class="docutils literal notranslate"><span class="pre">rp</span></code>,
+писањем <code class="docutils literal notranslate"><span class="pre">rp.BX</span></code> бисмо извршили приступник дефинисан у базној класи, и добили бисмо координату
+темена <code class="docutils literal notranslate"><span class="pre">B</span></code> као да је правоугаоник поравнат са осама. У ово лако можемо да се уверимо малом
+приверменом преправком (тј. „кварењем”) претходног програма.</p>
+<p>Декларисање имена <code class="docutils literal notranslate"><span class="pre">rp</span></code> помоћу базне класе, а инстанцирање помоћу изведене класе би у овом
+случају била грешка. У лекцији посвећеној динамичком полиморфизму ћемо видети примере у којима
+је ова могућност врло корисна.</p>
+</section>
 </section>
 
 

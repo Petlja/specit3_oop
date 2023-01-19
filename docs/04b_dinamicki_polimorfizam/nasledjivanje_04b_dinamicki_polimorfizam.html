@@ -319,6 +319,7 @@
                 <div class="courseContentsSubSection d-none"><a href=../04a_nasledjivanje/nasledjivanje_04a_izvedena_klasa.html><div class="studioLecture" id=activity-nasledjivanje_04a_izvedena_klasa><i class="fas fa-file-alt activity-icon"></i>Појам наслеђивања</div></a>
                 <a href=../04a_nasledjivanje/nasledjivanje_04aq_kviz.html><div class="studioLecture" id=activity-nasledjivanje_04aq_kviz><i class="far fa-question-circle activity-icon"></i>Појам наслеђивања - квиз</div></a>
                 <a href=../04a_nasledjivanje/nasledjivanje_04az_zadaci.html><div class="studioLecture" id=activity-nasledjivanje_04az_zadaci><i class="fas fa-file-alt activity-icon"></i>Наслеђивање - задаци</div></a>
+                <a href=../04a_nasledjivanje/nasledjivanje_04a_virtuelne_funkcije.html><div class="studioLecture" id=activity-nasledjivanje_04a_virtuelne_funkcije><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи</div></a>
                 </div>
             </div>
                 
@@ -363,21 +364,91 @@
 <h1>Динамички полиморфизам<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>У овој лекцији:</p>
 <ul class="simple">
-<li><p>шта је виртуелан метод, а шта апстрактна класа</p></li>
+<li><p>шта је виртуелан, а шта апстрактан метод</p></li>
+<li><p>шта је апстрактна класа</p></li>
 <li><p>шта је динамички полиморфизам</p></li>
 </ul>
-<p>Пример игрице у којој учествују различити кaрактери</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">abstract</span> <span class="k">class</span> <span class="nc">Karakter</span>
-    <span class="n">PrikaziSe</span><span class="p">();</span>
-</pre></div>
-</div>
-<p>Разни карактери се приказују на различите начине.</p>
+<section id="id2">
+<h2>Редефинисање метода<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p><strong>Причица - шта подразумевамо под редефинисањем.</strong> Сценарио - функционалност коју желимо</p>
+<p><strong>Слика</strong> - базна класа са <code class="docutils literal notranslate"><span class="pre">abstract</span></code> или <code class="docutils literal notranslate"><span class="pre">virtual</span></code>, изведене класе са <code class="docutils literal notranslate"><span class="pre">override</span></code> или ничим.
+Оне пре <code class="docutils literal notranslate"><span class="pre">override</span></code> су или апстрактне или користе дифолт, а оне после користе редефиницију.</p>
+<p>Метод који је предвиђен за накнадно редефинисање, на месту првог помињања треба да буде означен
+као апстрактан (<code class="docutils literal notranslate"><span class="pre">abstract</span></code>) или као виртуелан (<code class="docutils literal notranslate"><span class="pre">virtual</span></code>).</p>
 <ul class="simple">
-<li><p>Непокретан карактер може само да нацрта своју битмапу на својој локацији</p></li>
-<li><p>Покретан карактер може да користи једну од неколико битмапа, зависно од тога да ли стоји или се креће у неком смеру</p></li>
-<li><p>Неки карактери могу да се приказују помоћу две или више битмапа (нпр. према томе како држе оружје)</p></li>
-<li><p>Неки карактери могу да преко своје битмапе нацртају одређене ефекте у складу са акцијом коју предузимају</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">abstract</span></code> значи да метод није дефинисан и да треба да буде дефинисан у класама наследницама,
+за које желимо да имају инстанце.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual</span></code> значи да је метод дефинисан и намењен за редефинисање. Овај метод је подразумевани за
+класе наследнице (важи за класе које га не редефинишу).</p></li>
 </ul>
+<p>Ако је метод означен као апстрактан, редефинисање је обавезно, а ако је означен као виртуелан,
+редефинисање је могуће али није обавезно. Свако накнадно редефинисање у некој од класа наследница,
+означава се речју <code class="docutils literal notranslate"><span class="pre">override</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">override</span></code> значи да се метод редефинише у односу на неку њему базну класу, а може (и не
+мора) да се даље редефинише у класама наследницама.</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>Пример динамичког полиморфизма<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>У примеру који следи појављују се два истоимена метода <code class="docutils literal notranslate"><span class="pre">f</span></code>, један у класи <code class="docutils literal notranslate"><span class="pre">B</span></code>, а други у класи
+<code class="docutils literal notranslate"><span class="pre">C</span></code>. Овакво појављивање истоимених метода је такође један облик полиморфизма, али другачији од
+оног који познајемо од раније.</p>
+
+<div data-childcomponent="dinamicki_polimorfizam" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=dinamicki_polimorfizam data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+
+namespace ns
+{
+    abstract class A { public abstract void f(); }
+    class B : A { public override void f() { Console.WriteLine(&quot;B.f&quot;); } }
+    class C : A { public override void f() { Console.WriteLine(&quot;C.f&quot;); } }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            A a;
+            string s = Console.ReadLine();
+            if (s == &quot;b&quot;)
+                a = new B();
+            else
+                a = new C();
+            a.f();
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>У случају да у датом примеру корисник унесе слово <code class="docutils literal notranslate"><span class="pre">b</span></code>, биће позван конструктор класе <code class="docutils literal notranslate"><span class="pre">B</span></code>, а
+у противном ће бити позван конструктор класе <code class="docutils literal notranslate"><span class="pre">C</span></code>. Након тога, позива се метод <code class="docutils literal notranslate"><span class="pre">f</span></code> оне класе
+чији конструктор је креирао објекат <code class="docutils literal notranslate"><span class="pre">a</span></code> (испробајте ово).</p>
+<p>Очигледно, компајлер у време превођења програма на машински кôд не може да зна да ли ће објекат
+<code class="docutils literal notranslate"><span class="pre">a</span></code> бити креиран конструктором класе <code class="docutils literal notranslate"><span class="pre">B</span></code> или класе <code class="docutils literal notranslate"><span class="pre">C</span></code>. Самим тим, компајлер не може да
+разреши на који метод <code class="docutils literal notranslate"><span class="pre">a</span></code> се односи позив <code class="docutils literal notranslate"><span class="pre">a.f()</span></code>. Ова дилема може да се разреши једино у
+време извршавања програма, па се зато овај облик полиморфизма назива динамички полиморфизам.
+Подсетимо се, за разлику од овог облика полиморфизма, статички полиморфизам представља појаву
+истоимених метода у једној класи, а може да се разреши (и разрешава се) у време компајлирања
+јер се такви истоимени методи разликују по листама параметара.</p>
+
+    <div data-component="reveal" id="jedinstveni_id"   data-showtitle="Како се разрешава динамички полиморфизам?" data-hidetitle="Сакриј текст о разрешавању динамичког полиморфизма">
+    <p><strong>Како се разрешава динамички полиморфизам?</strong></p>
+<p>За класу која има виртуелне методе компајлер формира табелу, у којој сваки ред табеле одговара
+једном виртуелном методу. Када се објекат инстанцира, та табела се попуњава адресама актуелних
+(стварних) метода. Касније, када неки од метода буде позван, у табели се проналази адреса
+конкретног метода који треба позвати.</p>
+<p>За више информација, потражите појам <strong>табела виртуелних метода</strong>
+(<a class="reference external" href="https://en.wikipedia.org/wiki/Virtual_method_table">virtual method table</a>).</p>
+
+    </div>
+    </section>
 </section>
 
 
