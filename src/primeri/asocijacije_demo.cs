@@ -22,15 +22,9 @@ class Program
 
     static void Main(string[] args)
     {
-        string c = "tocak";
-        string[] b = { "vodenica", "kamion", "krug", "guma" };
-        string[,] a = {
-            { "brasno", "potok", "kamen" },
-            { "vozac", "teret", "prikolica" },
-            { "centar", "geometrija", "kolo" },
-            { "kaucuk", "zvaka", "izolator" },
-        };
-        Asocijacije igra = new Asocijacije(a, b, c);
+        Console.Write("Unesi putanju do fajla: ");
+        string putanja = Console.ReadLine();
+        Asocijacije igra = Asocijacije.Kreiraj(putanja);
         int ukPoena = 0;
         igra.Otvori(1, 0);
         Prikazi(igra, ukPoena);

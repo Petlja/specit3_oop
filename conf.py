@@ -41,8 +41,8 @@ import petljadoc
 #petljadoc.runestone_ext.add_module('nimgame')
                           
 
-extensions = ['sphinx.ext.mathjax'] + runestone_extensions() + petljadoc.runestone_ext.extensions()
-
+# extensions = ['sphinx.ext.mathjax'] + runestone_extensions() + petljadoc.runestone_ext.extensions()
+extensions = ['sphinx.ext.mathjax', 'sphinx_toolbox.collapse'] + runestone_extensions() + petljadoc.runestone_ext.extensions()
 #,'runestone.video','runestone.reveal','runestone.poll','runestone.tabbedStuff','runestone.disqus','runestone.codelens','runestone.activecode', 'runestone.assess', 'runestone.animation','runestone.meta', 'runestone.parsons', 'runestone.blockly', 'runestone.livecode','runestone.accessibility']
 
 # Add any paths that contain templates here, relative to this directory.

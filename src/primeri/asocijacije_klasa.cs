@@ -23,6 +23,51 @@ public class Asocijacije
             brNeotvorenih[kol] = brPojmova;
         reseno = false;
     }
+
+    // privatan konstruktor, koristi se samo u metodu Kreiraj
+    private Asocijacije() 
+    {
+    } 
+
+    public static Asocijacije Kreiraj(string putanja)
+    {
+        if (!File.Exists(putanja))
+            return null;
+
+        Asocijacije igra = new Asocijacije();
+        try
+        {
+            using (StreamReader sr = new StreamReader(putanja))
+            {
+                string[] linija = sr.ReadLine().Split();
+                igra.brKolona = int.Parse(linija[0]);
+                igra.brPojmova = int.Parse(linija[1]);
+
+                igra.pojam = new string[igra.brKolona, igra.brPojmova];
+                igra.resenjeKolone = new string[igra.brKolona];
+                for (int k = 0; k < igra.brKolona; k++)
+                {
+                    for (int p = 0; p < igra.brPojmova; p++)
+                        igra.pojam[k, p] = sr.ReadLine();
+
+                    igra.resenjeKolone[k] = sr.ReadLine();
+                }
+                igra.konacnoResenje = sr.ReadLine();
+            }
+            igra.otvoreno = new bool[igra.brKolona, igra.brPojmova];
+            igra.resenaKolona = new bool[igra.brKolona];
+            igra.brNeotvorenih = new int[igra.brKolona];
+            for (int kol = 0; kol < igra.brKolona; kol++)
+                igra.brNeotvorenih[kol] = igra.brPojmova;
+            igra.reseno = false;
+        }
+        catch (System.Exception)
+        {
+            return null;
+        }
+
+        return igra;
+    }
     public bool SveOtvoreno
     {
         get

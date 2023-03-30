@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-public class CollectionWihCursor<T>
+public class CollectionWithCursor<T>
 {
     private List<T> left = new List<T>();
     private List<T> right = new List<T>();
@@ -37,7 +37,7 @@ public class CollectionWihCursor<T>
 
 class Program
 {
-    static void Display(CollectionWihCursor<char> a)
+    static void Display(CollectionWithCursor<char> a)
     {
         Console.Write(
             "br. elemenata: {0}, pozicija kursora: {1}, elementi:",
@@ -48,7 +48,7 @@ class Program
     }
     static void Main(string[] args)
     {
-        CollectionWihCursor<char> a = new CollectionWihCursor<char>();
+        CollectionWithCursor<char> a = new CollectionWithCursor<char>();
         foreach (char c in "abcdef")
             a.Insert(c);
 
