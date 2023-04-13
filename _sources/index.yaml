@@ -156,15 +156,15 @@ lessons:
     activities:
       - type: reading
         title: Повезане класе
-        file: klase_02h2_povezane.rst
+        file: klase_02h1_povezane.rst
         guid: 6946a291-2f35-4997-8ffb-d8545609efc2
       - type: reading
         title: Неповезане класе
-        file: klase_02h3_nepovezane.rst
+        file: klase_02h2_nepovezane.rst
         guid: b2525d57-0bdb-4ea0-9390-e4b207165f12
       - type: reading
         title: О распоређивању класа у модуле
-        file: klase_02h1_grupe.rst
+        file: klase_02h3_grupe.rst
         guid: 7a79823a-81af-4d97-bb8f-455754afcfd8
       - type: quiz
         title: Групе класа - квиз
@@ -222,10 +222,6 @@ lessons:
         title: Основно о наслеђивању
         file: nasl_04a_01_izvedene_klase.rst
         guid: 6ea06015-390f-442e-bd52-cf9827f26602
-      - type: reading
-        title: Модификација базне класе
-        file: nasl_04a_02_modifikacija.rst
-        guid: d4c7077b-b234-4288-953e-791eb69497c5
       - type: quiz
         title: Изведена класа - квиз
         file: nasl_04aq_kviz.rst
@@ -239,15 +235,19 @@ lessons:
     folder: 04b_virtuelni_metodi
     activities:
       - type: reading
+        title: Модификација базне класе
+        file: vm_04b_01_modifikacija.rst
+        guid: 5bdee971-9779-4040-917c-dc89845a7a48
+      - type: reading
         title: Виртуелни методи
-        file: vm_04b_virtuelni_metodi.rst
+        file: vm_04b_02_virtuelni_metodi.rst
         guid: a690d3fb-7f73-4c62-8bf8-652cefb1fd44
       - type: quiz
         title: Виртуелни методи - квиз
         file: vm_04bq_kviz.rst
         guid: 69f0d2c8-7b49-4307-bcd5-4761b06dca96
       - type: reading
-        title: Виртуелни методи - примери
+        title: Виртуелни методи - примери и задаци
         file: vm_04bz_primeri_zadaci.rst
         guid: e2436ecd-9770-4162-85ca-cd6a1bb484a8
   - title: 4.3 Апстрактни методи и класе
@@ -259,11 +259,11 @@ lessons:
         file: am_04c_apstraktni_metodi.rst
         guid: 46977a82-c010-4539-8140-6b6c069e0d5d
       - type: quiz
-        title: Апстрактни методи - квиз
+        title: Апстрактни методи и класе - квиз
         file: am_04cq_kviz.rst
         guid: 24ede43d-04fe-4d35-9732-5dfcab24e286
       - type: reading
-        title: Апстрактни методи - задаци
+        title: Апстрактни методи и класе - задаци
         file: am_04cz_zadaci.rst
         guid: 5e661ece-a910-469e-ba8a-82b1f70fd293
   - title: 4.4 Вишеструко наслеђивање, интерфејси
@@ -305,12 +305,12 @@ lessons:
 #        title: Површине и запремине
 #        file: dpp_05a_povrsine_zapremine.rst
 #        guid: 85bc4cd0-9fcc-473f-8439-cb66e42a3c05
-  - title: 5.1 Кретање тела
+  - title: 5.1 Различита кретања
     guid: 263701f8-aa40-4676-8560-87e200cd351c
     folder: 05a_dp_kretanje_tela
     activities:
       - type: reading
-        title: Кретање тела
+        title: Различита кретања
         file: dpp_05a_kretanje_tela.rst
         guid: 9ce24b73-2f37-4797-bb41-6bb397bc057a
   - title: 5.2 Квиз

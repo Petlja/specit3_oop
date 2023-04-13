@@ -66,7 +66,7 @@
 
 .. activecode:: ag_lib
     :passivecode: true
-    :includesrc: src/primeri/ag_lib.cs
+    :includesrc: src/primeri/ag/ag_lib/ag_lib.cs
 
 .. suggestionnote::
 
@@ -74,17 +74,72 @@
     за тестирање библиотеке, решавање математичких задатака, графичко приказивање геометријских 
     конструкција или за било коју другу сврху. 
 
-Да бисмо заокружили овај пример и илустровали употребу библиотеке ``AG``, прилажемо једну конзолну 
-апликацију која користи пројекат ``AG``, односно зависи од њега (ово треба подесити у окружењу). 
-Апликација решава неколико задатака из аналитичке геометрије, а може веома једноставно да се подели 
-у неколко сасвим малих конзолних апликација, које решавају појединачне математичке задатке. При 
-томе не би дошло до било каквог понављања заједничког кода, већ је само потребно за сваку апликацију 
-подесити зависнот од библиотеке. Подсећамо да је подешавање међусобне зависности пројеката објашњено 
-на примеру игре `Асоцијације` у лекцији `Модуларност, библиотеке`.
+Да бисмо заокружили овај пример и илустровали употребу библиотеке ``AG``, прилажемо неколико малих 
+конзолних апликација које користе пројекат ``AG``, односно зависе од њега (ово треба подесити у 
+окружењу). Свака од ових апликација решава по један математички задатак, у коме је потребно да се 
+нека геометријска конструкција изврши средствима аналитичке геометрије. При томе не долази до 
+понављања заједничког кода, већ је довољно за сваку апликацију подесити зависност од библиотеке. 
+Подсећамо да је подешавање међусобне зависности пројеката објашњено на примеру игре `Асоцијације` 
+у лекцији `Модуларност, библиотеке`.
 
-.. activecode:: ag_lib_demo_console
+.. questionnote::
+
+    Пример -- одредити центар круга описаног око троугла :math:`ABC`, чија су темена :math:`A(3, 3), B(10, 10), C(12, 6)`.
+            
+.. activecode:: ag_con_centar_opisanog
     :passivecode: true
-    :includesrc: src/primeri/ag_lib_demo_console.cs    
+    :includesrc: src/primeri/ag/con_centar_opisanog/program.cs
+    
+.. reveal:: ag_dugme_primer2
+    :showtitle: Пример 2
+    :hidetitle: Сакриј Пример 2
+
+    .. questionnote::
+
+        Пример -- одредити центар круга уписаног у троугао :math:`ABC`, чија су темена :math:`A(6, 5), B(3, 2), C(10, 1)`.
+
+    .. activecode:: ag_con_centar_upisanog
+        :passivecode: true
+        :includesrc: src/primeri/ag/con_centar_upisanog/program.cs
+    
+.. reveal:: ag_dugme_primer3
+    :showtitle: Пример 3
+    :hidetitle: Сакриј Пример 3
+
+    .. questionnote::
+
+        Пример -- одредити центар круга споља уписаног уз страницу :math:`AB` троугла :math:`ABC`, 
+        чија су темена :math:`A(6, 5), B(3, 2), C(10, 1)`.
+
+    .. activecode:: ag_con_centar_spolja_upisanog
+        :passivecode: true
+        :includesrc: src/primeri/ag/con_centar_spolja_upisanog/program.cs
+
+.. reveal:: ag_dugme_primer4
+    :showtitle: Пример 4
+    :hidetitle: Сакриј Пример 4
+
+    .. questionnote::
+
+        Пример -- конструисати троугао :math:`ABC`, ако је дато :math:`A(3, 2)`, :math:`B(9, 2)`, 
+        :math:`\alpha = 30 ^{\circ}`, :math:`\beta = 60 ^{\circ}`.
+
+    .. activecode:: ag_con_konstrusanje_trougla1
+        :passivecode: true
+        :includesrc: src/primeri/ag/con_konstrusanje_trougla1/program.cs
+
+.. reveal:: ag_dugme_primer5
+    :showtitle: Пример 5
+    :hidetitle: Сакриј Пример 5
+
+    .. questionnote::
+
+        Пример -- конструисати троугао :math:`ABC`, ако је дато :math:`B(21, 9)`, :math:`C(15, 15)`, 
+        :math:`\beta = 45 ^{\circ}`, :math:`b+c = 24`.
+
+    .. activecode:: ag_con_konstrusanje_trougla2
+        :passivecode: true
+        :includesrc: src/primeri/ag/con_konstrusanje_trougla2/program.cs
     
 Даљим развојем модула ``AG`` би могло да се очекује да постојећој групи класа додамо још неке, а 
 да постојеће класе добију нове методе. На пример, могли бисмо да додамо класу ``Krug``, која би 

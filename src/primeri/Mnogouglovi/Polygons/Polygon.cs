@@ -5,52 +5,69 @@ namespace Polygons
 {
     public class Polygon
     {
-        private List<Point> P = new List<Point>();
-        public void AddPoint(double x, double y)
+        private List<Point> pts = new List<Point>();
+        private double perimeter;
+        private double area;
+        public int PointCount { get { return pts.Count; } }
+        public string Text
         {
-            P.Add(new Point(x, y));
+            get { return string.Format("Обим={0:0.00}, Површина={1:0.00}", perimeter, area); }
+        }
+        public void AddPoint(float x, float y)
+        {
+            pts.Add(new Point(x, y));
+            UpdateAreaAndPerimeter();
         }
         public void RemoveLastPoint()
         {
-            if (P.Count > 0)
-                P.RemoveAt(P.Count - 1);
+            if (pts.Count > 0)
+            {
+                pts.RemoveAt(pts.Count - 1);
+                UpdateAreaAndPerimeter();
+            }
         }
-        public int NumPoints { get { return P.Count; } }
-        public double X(int i) { return P[i].X; }
-        public double Y(int i) { return P[i].Y; }
+        public int NumPoints { get { return pts.Count; } }
+        public float X(int i) { return pts[i].X; }
+        public float Y(int i) { return pts[i].Y; }
+        
+        private void UpdateAreaAndPerimeter()
+        {
+            perimeter = Perimeter();
+            area = Area();
+        }
         public double Perimeter()
         {
-            int n = P.Count;
+            int n = pts.Count;
             if (n == 0)
                 return 0.0;
-            double s = Point.Dist(P[n - 1], P[0]);
+            double s = Point.Dist(pts[n - 1], pts[0]);
             for (int i = 1; i < n; i++) 
-                s+= Point.Dist(P[i - 1], P[i]);
+                s+= Point.Dist(pts[i - 1], pts[i]);
             return s;
         }
         public double Area()
         {
-            int n = P.Count;
+            int n = pts.Count;
             if (n < 3)
                 return 0.0;
 
             double a = 
-                P[0].X * (P[1].Y - P[n - 1].Y) +
-                P[n-1].X * (P[0].Y - P[n - 2].Y);
+                pts[0].X * (pts[1].Y - pts[n - 1].Y) +
+                pts[n-1].X * (pts[0].Y - pts[n - 2].Y);
             for (int i = 1; i < n-1; i++)
-                a += P[i].X * (P[i+1].Y - P[i-1].Y);
+                a += pts[i].X * (pts[i+1].Y - pts[i-1].Y);
 
             return 0.5 * Math.Abs(a);
         }
     }
 
-    public class Point 
+    internal class Point 
     {
-        private double x;
-        private double y;
-        public double X { get { return x; } }
-        public double Y { get { return y; } }
-        public Point(double x0, double y0) { x = x0; y = y0; }
+        private float x;
+        private float y;
+        public float X { get { return x; } }
+        public float Y { get { return y; } }
+        public Point(float x0, float y0) { x = x0; y = y0; }
         public static double Dist(Point A, Point B)
         {
             return Math.Sqrt((A.x - B.x) * (A.x - B.x) + (A.y - B.y) * (A.y - B.y));
