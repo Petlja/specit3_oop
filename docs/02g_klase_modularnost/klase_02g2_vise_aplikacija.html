@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Прилог - графичка апликација</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'specit3_oop';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'specit3_oop';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_uvod>
+                    <h5>1. Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_klase_i_objekti>
+                    <h5>2 Класе и објекти</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_klase_i_objekti/02_klase_i_objekti.html><div class="studioLecture" id=activity-02_klase_i_objekti><i class="fas fa-file-alt activity-icon"></i>Класе и објекти</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02a_klase_osnovni_pojmovi>
+                    <h5>2.1 Основни појмови о класама и објектима</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02a_klase_osnovni_pojmovi/klase_02a_osnovni_pojmovi.html><div class="studioLecture" id=activity-klase_02a_osnovni_pojmovi><i class="fas fa-file-alt activity-icon"></i>Основни појмови о класама и објектима</div></a>
+                <a href=../02a_klase_osnovni_pojmovi/klase_02aq_osnovni_pojmovi_kviz.html><div class="studioLecture" id=activity-klase_02aq_osnovni_pojmovi_kviz><i class="fas fa-file-alt activity-icon"></i>Класе и објекти - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02b_klase_enkapsulacija>
+                    <h5>2.2 Енкапсулација</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02b_klase_enkapsulacija/klase_02b_enkapsulacija.html><div class="studioLecture" id=activity-klase_02b_enkapsulacija><i class="fas fa-file-alt activity-icon"></i>Енкапсулација</div></a>
+                <a href=../02b_klase_enkapsulacija/klase_02bq_enkapsulacija_kviz.html><div class="studioLecture" id=activity-klase_02bq_enkapsulacija_kviz><i class="far fa-question-circle activity-icon"></i>Енкапсулација - квиз</div></a>
+                <a href=../02b_klase_enkapsulacija/klase_02bz_enkapsulacija_zadaci.html><div class="studioLecture" id=activity-klase_02bz_enkapsulacija_zadaci><i class="fas fa-file-alt activity-icon"></i>Енкапсулација - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02c_klase_staticki_metodi>
+                    <h5>2.3 Статички и нестатички методи</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02c_klase_staticki_metodi/klase_02c_staticki_metodi.html><div class="studioLecture" id=activity-klase_02c_staticki_metodi><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе</div></a>
+                <a href=../02c_klase_staticki_metodi/klase_02cq_staticki_metodi_kviz.html><div class="studioLecture" id=activity-klase_02cq_staticki_metodi_kviz><i class="far fa-question-circle activity-icon"></i>Чланови објекта и чланови класе - квиз</div></a>
+                <a href=../02c_klase_staticki_metodi/klase_02cz_staticki_metodi_zadaci.html><div class="studioLecture" id=activity-klase_02cz_staticki_metodi_zadaci><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02d_klase_stat_polimorfizam>
+                    <h5>2.4 Статички полиморфизам, оператори</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02d_klase_stat_polimorfizam/klase_02d_statpolim_operatori.html><div class="studioLecture" id=activity-klase_02d_statpolim_operatori><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори</div></a>
+                <a href=../02d_klase_stat_polimorfizam/klase_02dq_statpolim_operatori_kviz.html><div class="studioLecture" id=activity-klase_02dq_statpolim_operatori_kviz><i class="far fa-question-circle activity-icon"></i>Статички полиморфизам, оператори - квиз</div></a>
+                <a href=../02d_klase_stat_polimorfizam/klase_02dz_statpolim_operatori_zadaci.html><div class="studioLecture" id=activity-klase_02dz_statpolim_operatori_zadaci><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02e_klase_apstrakcija>
+                    <h5>2.5 Апстракција, индексери</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02e_klase_apstrakcija/klase_02e_apstrakcija.html><div class="studioLecture" id=activity-klase_02e_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери</div></a>
+                <a href=../02e_klase_apstrakcija/klase_02eq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02eq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција, индексери - квиз</div></a>
+                <a href=../02e_klase_apstrakcija/klase_02ez_apstrakcija_zadaci.html><div class="studioLecture" id=activity-klase_02ez_apstrakcija_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02f_klase_dizajniranje>
+                    <h5>2.6 Пример дизајнирања класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02f_klase_dizajniranje/klase_02f_dizajniranje.html><div class="studioLecture" id=activity-klase_02f_dizajniranje><i class="fas fa-file-alt activity-icon"></i>Пример дизајнирања класе</div></a>
+                <a href=../02f_klase_dizajniranje/klase_02fz_dizajniranje_zadaci.html><div class="studioLecture" id=activity-klase_02fz_dizajniranje_zadaci><i class="fas fa-file-alt activity-icon"></i>Дизајнирање класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02g_klase_modularnost>
+                    <h5>2.7 Модуларност, библиотеке</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02g_klase_modularnost/klase_02g1_modularnost_bibl.html><div class="studioLecture" id=activity-klase_02g1_modularnost_bibl><i class="fas fa-file-alt activity-icon"></i>Модуларност, библиотеке</div></a>
+                <a href=../02g_klase_modularnost/klase_02g2_vise_aplikacija.html><div class="studioLecture" id=activity-klase_02g2_vise_aplikacija><i class="fas fa-file-alt activity-icon"></i>Прилог - графичка апликација</div></a>
+                <a href=../02g_klase_modularnost/klase_02gz_modularnost_zadaci.html><div class="studioLecture" id=activity-klase_02gz_modularnost_zadaci><i class="fas fa-file-alt activity-icon"></i>Модуларност - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02h_klase_grupe>
+                    <h5>2.8 Групе класа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02h_klase_grupe/klase_02h1_povezane.html><div class="studioLecture" id=activity-klase_02h1_povezane><i class="fas fa-file-alt activity-icon"></i>Повезане класе</div></a>
+                <a href=../02h_klase_grupe/klase_02h2_nepovezane.html><div class="studioLecture" id=activity-klase_02h2_nepovezane><i class="fas fa-file-alt activity-icon"></i>Неповезане класе</div></a>
+                <a href=../02h_klase_grupe/klase_02h3_grupe.html><div class="studioLecture" id=activity-klase_02h3_grupe><i class="fas fa-file-alt activity-icon"></i>О распоређивању класа у модуле</div></a>
+                <a href=../02h_klase_grupe/klase_02hq_grupe_kviz.html><div class="studioLecture" id=activity-klase_02hq_grupe_kviz><i class="far fa-question-circle activity-icon"></i>Групе класа - квиз</div></a>
+                <a href=../02h_klase_grupe/klase_02hz_grupe_zadaci.html><div class="studioLecture" id=activity-klase_02hz_grupe_zadaci><i class="fas fa-file-alt activity-icon"></i>Групе класа - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_genericke_klase>
+                    <h5>3 Генеричке класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_genericke_klase/03_genericke_klase.html><div class="studioLecture" id=activity-03_genericke_klase><i class="fas fa-file-alt activity-icon"></i>Генеричке класе</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03a_genericke_klase>
+                    <h5>3.1 Генеричке класе, вишеструка употребљивост</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03a_genericke_klase/genericke_03a_uvod.html><div class="studioLecture" id=activity-genericke_03a_uvod><i class="fas fa-file-alt activity-icon"></i>Генеричке класе</div></a>
+                <a href=../03a_genericke_klase/genericke_03ap_primer.html><div class="studioLecture" id=activity-genericke_03ap_primer><i class="fas fa-file-alt activity-icon"></i>Генеричке класе - решен пример</div></a>
+                <a href=../03a_genericke_klase/genericke_03aq_kviz.html><div class="studioLecture" id=activity-genericke_03aq_kviz><i class="far fa-question-circle activity-icon"></i>Генеричке класе и методи - квиз</div></a>
+                <a href=../03a_genericke_klase/genericke_03az_zadaci.html><div class="studioLecture" id=activity-genericke_03az_zadaci><i class="fas fa-file-alt activity-icon"></i>Генеричке класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_nasledjivanje>
+                    <h5>4 Наслеђивање и полиморфизам</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_nasledjivanje/04_nasledjivanje.html><div class="studioLecture" id=activity-04_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Наслеђивање и полиморфизам</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04a_izvedene_klase>
+                    <h5>4.1 Основно о наслеђивању</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04a_izvedene_klase/nasl_04a_01_izvedene_klase.html><div class="studioLecture" id=activity-nasl_04a_01_izvedene_klase><i class="fas fa-file-alt activity-icon"></i>Основно о наслеђивању</div></a>
+                <a href=../04a_izvedene_klase/nasl_04aq_kviz.html><div class="studioLecture" id=activity-nasl_04aq_kviz><i class="far fa-question-circle activity-icon"></i>Изведена класа - квиз</div></a>
+                <a href=../04a_izvedene_klase/nasl_04az_zadaci.html><div class="studioLecture" id=activity-nasl_04az_zadaci><i class="fas fa-file-alt activity-icon"></i>Изведена класа - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04b_apstraktni_metodi_i_klase>
+                    <h5>4.2 Апстрактни методи и класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04b_apstraktni_metodi_i_klase/am_04b1_apstraktni_metodi.html><div class="studioLecture" id=activity-am_04b1_apstraktni_metodi><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода  и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04bq_kviz.html><div class="studioLecture" id=activity-am_04bq_kviz><i class="far fa-question-circle activity-icon"></i>Апстрактни методи и класе - квиз</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04bz_zadaci.html><div class="studioLecture" id=activity-am_04bz_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
+                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
+                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
+                <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04d_virtuelni_metodi>
+                    <h5>4.4  Виртуелни методи</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04d_virtuelni_metodi/vm_04d_01_modifikacija.html><div class="studioLecture" id=activity-vm_04d_01_modifikacija><i class="fas fa-file-alt activity-icon"></i>Модификација базне класе</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04d_02_virtuelni_metodi.html><div class="studioLecture" id=activity-vm_04d_02_virtuelni_metodi><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04dq_kviz.html><div class="studioLecture" id=activity-vm_04dq_kviz><i class="far fa-question-circle activity-icon"></i>Виртуелни методи - квиз</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04dz_primeri_zadaci.html><div class="studioLecture" id=activity-vm_04dz_primeri_zadaci><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи - примери и задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_dp_primeri>
+                    <h5>5 Динамички полиморфизам - примери</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_dp_primeri/05_dp_primeri.html><div class="studioLecture" id=activity-05_dp_primeri><i class="fas fa-file-alt activity-icon"></i>Динамички полиморфизам - примери</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05a_dp_kretanje_tela>
+                    <h5>5.1 Различита кретања</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05a_dp_kretanje_tela/dpp_05a_kretanje_tela.html><div class="studioLecture" id=activity-dpp_05a_kretanje_tela><i class="fas fa-file-alt activity-icon"></i>Различита кретања</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05b_dp_kviz>
+                    <h5>5.2 Квиз</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05b_dp_kviz/dpp_05b_kviz_pr.html><div class="studioLecture" id=activity-dpp_05b_kviz_pr><i class="fas fa-file-alt activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05c_dp_vrednost_funkcije>
+                    <h5>5.3 Вредност функције</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_primeri_proj_zadataka>
+                    <h5>6 Примери пројектних задатака</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_primeri_proj_zadataka/06_proj_primeri.html><div class="studioLecture" id=activity-06_proj_primeri><i class="fas fa-file-alt activity-icon"></i>Примери пројектних задатака</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Прилог - графичка апликација<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Као допуну примера са игром <cite>Асоцијације</cite>, креираћемо и графичку апликацију која омогућава играње
+исте игре, користећи исту библиотеку. Поред тога што вежбамо сáмо прављење оваквих програма, па и
+формално повезивање програма са библиотеком, тј. подешавање зависности, овим постижемо још једну
+важну ствар. Прављењем апликације другачијег типа која користи исту класу, проверавамо да ли је
+класа погодна за такву употребу, односно да ли је направљена тако да се уклапа у два различита
+програма.</p>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Чак и када правимо само једну апликацију (нпр. графичку), свакако је пожељно да логику игре
+издвојимо у посебну класу, а ту класу сместимо у посебан фајл (или библиотеку). На тај начин
+разлажемо проблем који је пред нама на мање делове и лакше савладавамо његову сложеност.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Употребу исте класе из више програма различитог типа можемо да схватимо као завршни тест, којим
+потврђујемо да је класа заиста направљена онако како смо желели.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>У овом случају, то је провера да смо на прави начин раздвојили логику игре од корисничког
+интерфејса. На пример:</p>
+<ul class="simple">
+<li><p>Уколико нам се делови кода понављају у различитим апликацијама, треба да размислимо да ли ти
+делови можда спадају у логику игре, а не у кориснички интерфејс,</p></li>
+<li><p>Уколико у класи која садржи логику игре имамо делове који се користе у једној, али не и у другој
+апликацији, треба да размислимо да ли ти делови можда спадају у кориснички интерфејс, а не у
+логику игре.</p></li>
+</ul>
+
+    </div></div>
+<p>Кораци за креирање графичке апликације су слични као и за креирање конзолне апликације.</p>
+<ul class="simple">
+<li><p>Из менија изаберемо опцију <cite>File / Add / New project</cite> (или после десног клика на решење у прозору
+<cite>Solution Explorer</cite> изаберемо опцију <cite>Add / New project</cite> у контекстном менију)</p></li>
+<li><p>За тип пројекта бирамо <cite>Windows Forms App</cite></p></li>
+<li><p>У дијалогу који се отвара, можемо као име пројекта (<cite>Project name</cite>) да упишемо <code class="docutils literal notranslate"><span class="pre">AsocijacijeWin</span></code></p></li>
+</ul>
+<p>Најбоље је да одмах подесимо и зависност новог програма од библиотеке, као што смо то учинили и
+за конзолну апликацију. Такође, на почетак проргама треба да додамо ред <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">AsocijacijeLib;</span></code>,
+којим омогућавамо програму да користи име класе и њених делова, дефинисаних у именском простору <code class="docutils literal notranslate"><span class="pre">AsocijacijeLib</span></code>.</p>
+<p>У програму ће нам бити потребан један објекат класе <code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code> (назовимо га <code class="docutils literal notranslate"><span class="pre">igra</span></code>), као и
+целобројна променљива за бројање поена (променљива <code class="docutils literal notranslate"><span class="pre">ukupnoPoena</span></code>). У случају да желимо игру за
+више играча, потребан је целобројни низ, у коме би се чували поени сваког играча. После ових почетних
+подешавања, програм изгледа овако и може да се покрене (мада програм још увек ништа не ради, могућност
+покретања потврђује да је до сада све урађено како треба).</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Forms</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">AsocijacijeLib</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">AsocijacijeWin</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Form1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Form</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Asocijacije</span><span class="w"> </span><span class="n">igra</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">ukupnoPoena</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Form1</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">InitializeComponent</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Позабавимо се сада и дизајном и садржајем ове графичке апликације.</p>
+<p>Дволиком на форму, добијамо метод <code class="docutils literal notranslate"><span class="pre">Form1_Load</span></code> који ћемо касније да искористимо за све потребне
+иницијализације, када будемо видели шта све треба да се иницијализује.</p>
+<p>За учитавање фајла са појмовима и решењима уобичајено је да се креира мени са опцијом <cite>File / Open</cite>.
+Уколико нисте сигурни како да то урадите, додавање менија и дијалога за отварање фајла је објашњено
+у Петљином приручнику „C# програмирање графичког корисничког интерфејса”, у примеру <a class="reference external" href="https://petlja.org/biblioteka/r/lekcije/gui_cs-sr-cyrl/1_gui_komponente-gui_04_prakticniprimeri#id6">Едитор текста</a>.</p>
+<p>Као следећи корак, можемо да додамо дугмад за отварање поља. Да би кôд програма био прегледнији,
+самим објектима класе <code class="docutils literal notranslate"><span class="pre">Button</span></code> можемо да доделимо редом имена
+<code class="docutils literal notranslate"><span class="pre">btnA1</span></code>, <code class="docutils literal notranslate"><span class="pre">btnA2</span></code>, <code class="docutils literal notranslate"><span class="pre">btnA3</span></code>, <code class="docutils literal notranslate"><span class="pre">btnA4</span></code>, <code class="docutils literal notranslate"><span class="pre">btnB1</span></code>, <code class="docutils literal notranslate"><span class="pre">btnB2</span></code>, <code class="docutils literal notranslate"><span class="pre">btnB3</span></code>, <code class="docutils literal notranslate"><span class="pre">btnB4</span></code>,
+<code class="docutils literal notranslate"><span class="pre">btnC1</span></code>, <code class="docutils literal notranslate"><span class="pre">btnC2</span></code>, <code class="docutils literal notranslate"><span class="pre">btnC3</span></code>, <code class="docutils literal notranslate"><span class="pre">btnC4</span></code>, <code class="docutils literal notranslate"><span class="pre">btnD1</span></code>, <code class="docutils literal notranslate"><span class="pre">btnD2</span></code>, <code class="docutils literal notranslate"><span class="pre">btnD3</span></code>, <code class="docutils literal notranslate"><span class="pre">btnD4</span></code>.
+Један начин да то урадимо је да селектујемо једно по једно дугме и да за свако селектовано дугме
+у прозору <cite>Properties</cite> међу својствима нађемо својство <cite>(Name)</cite> и упишемо име објекта. Натписе на
+дугметима, односно вредност поља <cite>Text</cite> не морамо да подешавамо, јер ће ти натписи свакако бити
+стално ажурирани током игре, користећи индексер класе <code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code> са два индекса.</p>
+<p>Кликом на свако дугме треба да се изврши суштински исти поступак, а то је отварање једног поља у
+игри. Било би добро да избегнемо писање кода за свако дугме посебно и да направимо један метод
+који се извршава када кликнемо на било које дугме. Метод који реагује на клик на дугме можемо да
+направимо нпр. двокликом на дугме <code class="docutils literal notranslate"><span class="pre">A1</span></code>. Метод аутоматски добија име <code class="docutils literal notranslate"><span class="pre">btnA1_Click</span></code>. Пошто
+желимо да то буде метод који се извршава кликом на свако дугме, можемо да му прво променимо име
+у <code class="docutils literal notranslate"><span class="pre">btn_Click</span></code>. Ово треба да урадимо користећи прозор <cite>Properties</cite>, тако што међу догађајима нађемо
+догађај <cite>Click</cite>, а затим променимо име метода на десној страни.</p>
+<p>Даље, потребно је да осталих 15 дугмета повежемо са овим догађајем. Ово радимо тако што селектујемо
+једно по једно дугме и међу догађајима у прозору <cite>Properties</cite> подесимо да на догађај <cite>Click</cite>
+одговара метод <code class="docutils literal notranslate"><span class="pre">btn_Click</span></code>. У изворном коду за сада празног метода видимо да је он декларисан као
+<code class="docutils literal notranslate"><span class="pre">btn_Click(object</span> <span class="pre">sender,</span> <span class="pre">EventArgs</span> <span class="pre">e)</span></code>. Први параметар овог метода је објекат на коме се догађај
+десио, тј. дугме на које је кликнуто. Захваљујући томе, метод зна за које дугме је позван и може да
+закључи које параметре да проследи метиду игре <code class="docutils literal notranslate"><span class="pre">igra.Otvori(kol,</span> <span class="pre">polje)</span></code>. Ипак, пошто упоређивање
+објекта <code class="docutils literal notranslate"><span class="pre">sender</span></code> са сваким од 16 дугмета није нарочито елегантно решење, можемо да искористимо поље
+<code class="docutils literal notranslate"><span class="pre">Tag</span></code> дугмета, и по том тагу једноставније одредимо који параметри су нам потребни. За поље <code class="docutils literal notranslate"><span class="pre">Tag</span></code>
+може да се веже било који објекат, а ми ћемо у то поље да упишемо неки текст из кога лако могу да се
+одреде редни број колоне и поља у колони. На пример, можемо за свако дугме редом као вредност поља
+<code class="docutils literal notranslate"><span class="pre">Tag</span></code> да упишемо <code class="docutils literal notranslate"><span class="pre">A1</span></code>, <code class="docutils literal notranslate"><span class="pre">A2</span></code>, <code class="docutils literal notranslate"><span class="pre">A3</span></code>, <code class="docutils literal notranslate"><span class="pre">A4</span></code>, <code class="docutils literal notranslate"><span class="pre">B1</span></code>, <code class="docutils literal notranslate"><span class="pre">B2</span></code>, <code class="docutils literal notranslate"><span class="pre">B3</span></code>, <code class="docutils literal notranslate"><span class="pre">B4</span></code>, <code class="docutils literal notranslate"><span class="pre">C1</span></code>, <code class="docutils literal notranslate"><span class="pre">C2</span></code>,
+<code class="docutils literal notranslate"><span class="pre">C3</span></code>, <code class="docutils literal notranslate"><span class="pre">C4</span></code>, <code class="docutils literal notranslate"><span class="pre">D1</span></code>, <code class="docutils literal notranslate"><span class="pre">D2</span></code>, <code class="docutils literal notranslate"><span class="pre">D3</span></code>, <code class="docutils literal notranslate"><span class="pre">D4</span></code>. Сам метод за сада можемо да напишемо овако</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">btn_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Button</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sender</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Button</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="n">b</span><span class="p">.</span><span class="n">Tag</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">kol</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tag</span><span class="p">[</span><span class="m">0</span><span class="p">]</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">polje</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tag</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">igra</span><span class="p">.</span><span class="n">Otvori</span><span class="p">(</span><span class="n">kol</span><span class="p">,</span><span class="w"> </span><span class="n">polje</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">b</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">igra</span><span class="p">[</span><span class="n">kol</span><span class="p">,</span><span class="w"> </span><span class="n">polje</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>а касније ћемо по потреби да га изменимо или допунимо.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>На сличан начин треба да припремимо и текстуална поља за унос решења колона, као и поље за унос
+коначног решења. Додаћемо пет објекта типа <code class="docutils literal notranslate"><span class="pre">TextBox</span></code> на форму и даћемо им имена <code class="docutils literal notranslate"><span class="pre">tbA</span></code>, <code class="docutils literal notranslate"><span class="pre">tbB</span></code>,
+<code class="docutils literal notranslate"><span class="pre">tbC</span></code>, <code class="docutils literal notranslate"><span class="pre">tbD</span></code>, <code class="docutils literal notranslate"><span class="pre">tbKonacno</span></code>. Размислимо које би било жељено понашање ових текстуалних поља.</p>
+<ul class="simple">
+<li><p>Када корисник кликне на неко поље да би погађао решење, претходни текст (реч <code class="docutils literal notranslate"><span class="pre">Konacno</span></code> или
+назив колоне) треба да нестане. Ово можемо да постигнемо ако реагујемо на догађај <cite>Enter</cite>,
+који се дешава када пребацимо фокус на текстуално поље (нпр. кликом на њега).</p></li>
+<li><p>Када корисник напусти поље, треба да се врати претходни текст, тј. име поља. Ово можемо да
+постигнемо ако реагујемо на догађај <cite>Leave</cite>, који се дешава приликом преласка са овог
+текстуалног поља на неку другу контролу (нпр. друго текстуално поље).</p></li>
+<li><p>Када корисник притисне тастер <cite>Enter</cite> док је текстуално поље у фокусу, требало би да се провери
+да ли је до тада унети текст решење за то поље. За ово можемо да искористимо догађај <cite>PreviewKeyDown</cite>,
+који нам омогућава да додатно обрадимо притиске на тастере тастатуре, док се текст уноси.</p></li>
+</ul>
+<p>Повезаћемо свих пет поља са догађајима <cite>Enter</cite>, <cite>Leave</cite> и <cite>PreviewKeyDown</cite>. Нека се методи који
+реагују на ове догађаје за свих пет поља зову редом <code class="docutils literal notranslate"><span class="pre">tbABCD_Enter</span></code>, <code class="docutils literal notranslate"><span class="pre">tbABCD_Leave</span></code> и
+<code class="docutils literal notranslate"><span class="pre">tbABCD_PreviewKeyDown</span></code>. Да бисмо из ових метода могли удобно да установимо на ком пољу се
+догађај десио, можемо да поставимо тагове ових пет текстуалних поља редом на <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">B</span></code>, <code class="docutils literal notranslate"><span class="pre">C</span></code>,
+<code class="docutils literal notranslate"><span class="pre">D</span></code>, односно <code class="docutils literal notranslate"><span class="pre">Konacno</span></code>. То ће нам поједноставити писање припремљених метода.</p>
+<p>У оквиру корисничког интерфејса желимо још да кориснику негде приказујемо број освојених поена,
+као и да му на неки начин саопштавамо шта се од њега очекује (да учита игру, да отвори поље, или да
+погађа решење). За то ћемо да употребимо две лабеле, <code class="docutils literal notranslate"><span class="pre">lblPoeni</span></code> и <code class="docutils literal notranslate"><span class="pre">lblPoruka</span></code>. Тиме смо довршили
+дизајнирање форме, односно избор и подешавање контрола.</p>
+<p>Преостаје још да попунимо припремљене методе <code class="docutils literal notranslate"><span class="pre">tbABCD_Enter</span></code>, <code class="docutils literal notranslate"><span class="pre">tbABCD_Leave</span></code> и
+<code class="docutils literal notranslate"><span class="pre">tbABCD_PreviewKeyDown</span></code>. Осим ових метода који реагују на одговарајуће догађаје, згодно је да
+имамо и два помоћна метода, јер се поступци садржани у њима користе на више места у коду.</p>
+<ul class="simple">
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">Osvezi()</span></code> ће после акције корисника да ажурира натписе на дугметима и текстуалним
+пољима, тако што поставља појмове и решења уместо имена поља свуда где је то потребно.</p></li>
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">DozvoliUnos(bool</span> <span class="pre">dozvoli)</span></code> омогућава или онемогућава погађање, према томе да ли
+корисник има право да погађа или треба прво да отвори поље.</p></li>
+</ul>
+<p>У наставку је комплетан изворни кôд фајла <code class="docutils literal notranslate"><span class="pre">Form1.cs</span></code>. Напомињемо да није довољно да се овај
+кôд ископира у истоимени фајл ваше апликације, већ је потребно да се обаве све претходно описане
+радње: постављање елемената корисничког интерфејса (контрола), њихово именовање као у коду,
+повезивање контрола са одговарајућим догађајима, именовање догађаја као у коду и постављање
+тагова за дугмад и текстуална поља.</p>
+
+<div data-childcomponent="asocijacije_igra-win" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=asocijacije_igra-win data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System.Windows.Forms;
+using AsocijacijeLib;
+
+namespace AsocijacijeWin
+{
+    public partial class Form1 : Form
+    {
+        Asocijacije igra;
+        int ukupnoPoena = 0;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, System.EventArgs e)
+        {
+            Osvezi();
+        }
+        private void openToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                igra = Asocijacije.Kreiraj(openFileDialog1.FileName);
+                Osvezi();
+                lblPoruka.Text = &quot;Отворите поље&quot;;
+            }
+        }
+        private void btn_Click(object sender, System.EventArgs e)
+        {
+            if (igra == null)
+            {
+                MessageBox.Show(&quot;Прво треба да учитате игру&quot;);
+                return;
+            }
+
+            Button b = sender as Button;
+            string tag = (string)b.Tag;
+            int kol = tag[0] - &apos;A&apos;;
+            int polje = tag[1] - &apos;1&apos;;
+            if (igra.Otvori(kol, polje))
+            {
+                b.Text = igra[kol, polje];
+                DozvoliUnos(true);
+            }
+        }
+
+        private void tbABCD_Leave(object sender, System.EventArgs e)
+        {
+            if (igra == null)
+            {
+                MessageBox.Show(&quot;Прво треба да учитате игру&quot;);
+                return;
+            }
+
+            TextBox tb = sender as TextBox;
+            string tag = (string)tb.Tag;
+            if (tag.Length == 1)
+            {
+                int kol = tag[0] - &apos;A&apos;;
+                tb.Text = igra[kol];
+            }
+            else if (!igra.Reseno)
+                tb.Text = tag;
+        }
+
+        private void tbABCD_Enter(object sender, System.EventArgs e)
+        {
+            if (igra == null)
+            {
+                MessageBox.Show(&quot;Прво треба да учитате игру&quot;);
+                return;
+            }
+
+            TextBox tb = sender as TextBox;
+            tb.Text = &quot;&quot;;
+        }
+
+        private void tbABCD_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (igra == null)
+            {
+                MessageBox.Show(&quot;Прво треба да учитате игру&quot;);
+                return;
+            }
+
+            TextBox tb = sender as TextBox;
+            string tag = (string)tb.Tag;
+            int kol = tag[0] - &apos;A&apos;;
+            if (e.KeyCode == Keys.Enter)
+            {
+                int poeni = (kol &lt; igra.BrojKolona) ?
+                    igra.Pokusaj(kol, tb.Text) :
+                    igra.Pokusaj(tb.Text);
+
+                if (poeni &gt; 0)
+                {
+                    ukupnoPoena += poeni;
+                    lblPoeni.Text = string.Format(&quot;Поени: {0}&quot;, ukupnoPoena);
+                    Osvezi();
+                }
+                else
+                {
+                    tb.Text = tag;
+                    DozvoliUnos(false); // posle promasaja mora da se otvori novo polje
+                }
+
+                this.ActiveControl = null;
+            }
+        }
+        private void DozvoliUnos(bool dozvoli)
+        {
+            TextBox[] tb = { tbA, tbB, tbC, tbD };
+
+            if (igra == null)
+            {
+                for (int kol = 0; kol &lt; 4; kol++)
+                    tb[kol].Enabled = dozvoli;
+
+                tbKonacno.Enabled = dozvoli;
+                return;
+            }
+
+            for (int kol = 0; kol &lt; igra.BrojKolona; kol++)
+                tb[kol].Enabled = dozvoli &amp;&amp; !igra.ResenaKol(kol);
+
+            tbKonacno.Enabled = dozvoli &amp;&amp; !igra.Reseno;
+
+            if (igra.Reseno)
+                lblPoruka.Text = &quot;Браво!&quot;;
+            else if (dozvoli)
+                lblPoruka.Text = &quot;Погађајте&quot;;
+            else
+                lblPoruka.Text = &quot;Отворите поље&quot;;
+        }
+        private void Osvezi()
+        {
+            Button[,] b = {
+                { btnA1, btnA2, btnA3, btnA4 },
+                { btnB1, btnB2, btnB3, btnB4 },
+                { btnC1, btnC2, btnC3, btnC4 },
+                { btnD1, btnD2, btnD3, btnD4 },
+            };
+
+            TextBox[] tb = { tbA, tbB, tbC, tbD };
+
+            if (igra == null)
+            {
+                for (int kol = 0; kol &lt; 4; kol++)
+                {
+                    for (int pojam = 0; pojam &lt; 4; pojam++)
+                    {
+                        b[kol, pojam].Text = &quot;&quot;;
+                        b[kol, pojam].Enabled = false;
+                    }
+                }
+
+                lblPoruka.Text = &quot;Учитајте игру&quot;;
+                DozvoliUnos(false);
+                return;
+            }
+
+            for (int kol = 0; kol &lt; igra.BrojKolona; kol++)
+                for (int pojam = 0; pojam &lt; igra.BrojPojmova; pojam++)
+                {
+                    b[kol, pojam].Enabled = true;
+                    b[kol, pojam].Text = igra[kol, pojam];
+                }
+
+            for (int kol = 0; kol &lt; igra.BrojKolona; kol++)
+            {
+                tb[kol].Text = igra[kol];
+                if (igra.ResenaKol(kol))
+                    tb[kol].Enabled = false;
+            }
+
+            if (igra.Reseno)
+                DozvoliUnos(false);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="klase_02g1_modularnost_bibl.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Неповезане класе</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'specit3_oop';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'specit3_oop';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_uvod>
+                    <h5>1. Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_klase_i_objekti>
+                    <h5>2 Класе и објекти</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_klase_i_objekti/02_klase_i_objekti.html><div class="studioLecture" id=activity-02_klase_i_objekti><i class="fas fa-file-alt activity-icon"></i>Класе и објекти</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02a_klase_osnovni_pojmovi>
+                    <h5>2.1 Основни појмови о класама и објектима</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02a_klase_osnovni_pojmovi/klase_02a_osnovni_pojmovi.html><div class="studioLecture" id=activity-klase_02a_osnovni_pojmovi><i class="fas fa-file-alt activity-icon"></i>Основни појмови о класама и објектима</div></a>
+                <a href=../02a_klase_osnovni_pojmovi/klase_02aq_osnovni_pojmovi_kviz.html><div class="studioLecture" id=activity-klase_02aq_osnovni_pojmovi_kviz><i class="fas fa-file-alt activity-icon"></i>Класе и објекти - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02b_klase_enkapsulacija>
+                    <h5>2.2 Енкапсулација</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02b_klase_enkapsulacija/klase_02b_enkapsulacija.html><div class="studioLecture" id=activity-klase_02b_enkapsulacija><i class="fas fa-file-alt activity-icon"></i>Енкапсулација</div></a>
+                <a href=../02b_klase_enkapsulacija/klase_02bq_enkapsulacija_kviz.html><div class="studioLecture" id=activity-klase_02bq_enkapsulacija_kviz><i class="far fa-question-circle activity-icon"></i>Енкапсулација - квиз</div></a>
+                <a href=../02b_klase_enkapsulacija/klase_02bz_enkapsulacija_zadaci.html><div class="studioLecture" id=activity-klase_02bz_enkapsulacija_zadaci><i class="fas fa-file-alt activity-icon"></i>Енкапсулација - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02c_klase_staticki_metodi>
+                    <h5>2.3 Статички и нестатички методи</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02c_klase_staticki_metodi/klase_02c_staticki_metodi.html><div class="studioLecture" id=activity-klase_02c_staticki_metodi><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе</div></a>
+                <a href=../02c_klase_staticki_metodi/klase_02cq_staticki_metodi_kviz.html><div class="studioLecture" id=activity-klase_02cq_staticki_metodi_kviz><i class="far fa-question-circle activity-icon"></i>Чланови објекта и чланови класе - квиз</div></a>
+                <a href=../02c_klase_staticki_metodi/klase_02cz_staticki_metodi_zadaci.html><div class="studioLecture" id=activity-klase_02cz_staticki_metodi_zadaci><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02d_klase_stat_polimorfizam>
+                    <h5>2.4 Статички полиморфизам, оператори</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02d_klase_stat_polimorfizam/klase_02d_statpolim_operatori.html><div class="studioLecture" id=activity-klase_02d_statpolim_operatori><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори</div></a>
+                <a href=../02d_klase_stat_polimorfizam/klase_02dq_statpolim_operatori_kviz.html><div class="studioLecture" id=activity-klase_02dq_statpolim_operatori_kviz><i class="far fa-question-circle activity-icon"></i>Статички полиморфизам, оператори - квиз</div></a>
+                <a href=../02d_klase_stat_polimorfizam/klase_02dz_statpolim_operatori_zadaci.html><div class="studioLecture" id=activity-klase_02dz_statpolim_operatori_zadaci><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02e_klase_apstrakcija>
+                    <h5>2.5 Апстракција, индексери</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02e_klase_apstrakcija/klase_02e_apstrakcija.html><div class="studioLecture" id=activity-klase_02e_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери</div></a>
+                <a href=../02e_klase_apstrakcija/klase_02eq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02eq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција, индексери - квиз</div></a>
+                <a href=../02e_klase_apstrakcija/klase_02ez_apstrakcija_zadaci.html><div class="studioLecture" id=activity-klase_02ez_apstrakcija_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02f_klase_dizajniranje>
+                    <h5>2.6 Пример дизајнирања класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02f_klase_dizajniranje/klase_02f_dizajniranje.html><div class="studioLecture" id=activity-klase_02f_dizajniranje><i class="fas fa-file-alt activity-icon"></i>Пример дизајнирања класе</div></a>
+                <a href=../02f_klase_dizajniranje/klase_02fz_dizajniranje_zadaci.html><div class="studioLecture" id=activity-klase_02fz_dizajniranje_zadaci><i class="fas fa-file-alt activity-icon"></i>Дизајнирање класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02g_klase_modularnost>
+                    <h5>2.7 Модуларност, библиотеке</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02g_klase_modularnost/klase_02g1_modularnost_bibl.html><div class="studioLecture" id=activity-klase_02g1_modularnost_bibl><i class="fas fa-file-alt activity-icon"></i>Модуларност, библиотеке</div></a>
+                <a href=../02g_klase_modularnost/klase_02g2_vise_aplikacija.html><div class="studioLecture" id=activity-klase_02g2_vise_aplikacija><i class="fas fa-file-alt activity-icon"></i>Прилог - графичка апликација</div></a>
+                <a href=../02g_klase_modularnost/klase_02gz_modularnost_zadaci.html><div class="studioLecture" id=activity-klase_02gz_modularnost_zadaci><i class="fas fa-file-alt activity-icon"></i>Модуларност - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02h_klase_grupe>
+                    <h5>2.8 Групе класа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02h_klase_grupe/klase_02h1_povezane.html><div class="studioLecture" id=activity-klase_02h1_povezane><i class="fas fa-file-alt activity-icon"></i>Повезане класе</div></a>
+                <a href=../02h_klase_grupe/klase_02h2_nepovezane.html><div class="studioLecture" id=activity-klase_02h2_nepovezane><i class="fas fa-file-alt activity-icon"></i>Неповезане класе</div></a>
+                <a href=../02h_klase_grupe/klase_02h3_grupe.html><div class="studioLecture" id=activity-klase_02h3_grupe><i class="fas fa-file-alt activity-icon"></i>О распоређивању класа у модуле</div></a>
+                <a href=../02h_klase_grupe/klase_02hq_grupe_kviz.html><div class="studioLecture" id=activity-klase_02hq_grupe_kviz><i class="far fa-question-circle activity-icon"></i>Групе класа - квиз</div></a>
+                <a href=../02h_klase_grupe/klase_02hz_grupe_zadaci.html><div class="studioLecture" id=activity-klase_02hz_grupe_zadaci><i class="fas fa-file-alt activity-icon"></i>Групе класа - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_genericke_klase>
+                    <h5>3 Генеричке класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_genericke_klase/03_genericke_klase.html><div class="studioLecture" id=activity-03_genericke_klase><i class="fas fa-file-alt activity-icon"></i>Генеричке класе</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03a_genericke_klase>
+                    <h5>3.1 Генеричке класе, вишеструка употребљивост</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03a_genericke_klase/genericke_03a_uvod.html><div class="studioLecture" id=activity-genericke_03a_uvod><i class="fas fa-file-alt activity-icon"></i>Генеричке класе</div></a>
+                <a href=../03a_genericke_klase/genericke_03ap_primer.html><div class="studioLecture" id=activity-genericke_03ap_primer><i class="fas fa-file-alt activity-icon"></i>Генеричке класе - решен пример</div></a>
+                <a href=../03a_genericke_klase/genericke_03aq_kviz.html><div class="studioLecture" id=activity-genericke_03aq_kviz><i class="far fa-question-circle activity-icon"></i>Генеричке класе и методи - квиз</div></a>
+                <a href=../03a_genericke_klase/genericke_03az_zadaci.html><div class="studioLecture" id=activity-genericke_03az_zadaci><i class="fas fa-file-alt activity-icon"></i>Генеричке класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_nasledjivanje>
+                    <h5>4 Наслеђивање и полиморфизам</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_nasledjivanje/04_nasledjivanje.html><div class="studioLecture" id=activity-04_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Наслеђивање и полиморфизам</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04a_izvedene_klase>
+                    <h5>4.1 Основно о наслеђивању</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04a_izvedene_klase/nasl_04a_01_izvedene_klase.html><div class="studioLecture" id=activity-nasl_04a_01_izvedene_klase><i class="fas fa-file-alt activity-icon"></i>Основно о наслеђивању</div></a>
+                <a href=../04a_izvedene_klase/nasl_04aq_kviz.html><div class="studioLecture" id=activity-nasl_04aq_kviz><i class="far fa-question-circle activity-icon"></i>Изведена класа - квиз</div></a>
+                <a href=../04a_izvedene_klase/nasl_04az_zadaci.html><div class="studioLecture" id=activity-nasl_04az_zadaci><i class="fas fa-file-alt activity-icon"></i>Изведена класа - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04b_apstraktni_metodi_i_klase>
+                    <h5>4.2 Апстрактни методи и класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04b_apstraktni_metodi_i_klase/am_04b1_apstraktni_metodi.html><div class="studioLecture" id=activity-am_04b1_apstraktni_metodi><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода  и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04bq_kviz.html><div class="studioLecture" id=activity-am_04bq_kviz><i class="far fa-question-circle activity-icon"></i>Апстрактни методи и класе - квиз</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04bz_zadaci.html><div class="studioLecture" id=activity-am_04bz_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
+                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
+                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
+                <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04d_virtuelni_metodi>
+                    <h5>4.4  Виртуелни методи</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04d_virtuelni_metodi/vm_04d_01_modifikacija.html><div class="studioLecture" id=activity-vm_04d_01_modifikacija><i class="fas fa-file-alt activity-icon"></i>Модификација базне класе</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04d_02_virtuelni_metodi.html><div class="studioLecture" id=activity-vm_04d_02_virtuelni_metodi><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04dq_kviz.html><div class="studioLecture" id=activity-vm_04dq_kviz><i class="far fa-question-circle activity-icon"></i>Виртуелни методи - квиз</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04dz_primeri_zadaci.html><div class="studioLecture" id=activity-vm_04dz_primeri_zadaci><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи - примери и задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_dp_primeri>
+                    <h5>5 Динамички полиморфизам - примери</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_dp_primeri/05_dp_primeri.html><div class="studioLecture" id=activity-05_dp_primeri><i class="fas fa-file-alt activity-icon"></i>Динамички полиморфизам - примери</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05a_dp_kretanje_tela>
+                    <h5>5.1 Различита кретања</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05a_dp_kretanje_tela/dpp_05a_kretanje_tela.html><div class="studioLecture" id=activity-dpp_05a_kretanje_tela><i class="fas fa-file-alt activity-icon"></i>Различита кретања</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05b_dp_kviz>
+                    <h5>5.2 Квиз</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05b_dp_kviz/dpp_05b_kviz_pr.html><div class="studioLecture" id=activity-dpp_05b_kviz_pr><i class="fas fa-file-alt activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05c_dp_vrednost_funkcije>
+                    <h5>5.3 Вредност функције</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_primeri_proj_zadataka>
+                    <h5>6 Примери пројектних задатака</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_primeri_proj_zadataka/06_proj_primeri.html><div class="studioLecture" id=activity-06_proj_primeri><i class="fas fa-file-alt activity-icon"></i>Примери пројектних задатака</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Неповезане класе<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>У овој активности:</p>
+<ul class="simple">
+<li><p>Примери са неповезаним класама и више раздвојених библиотека</p></li>
+</ul>
+<p>До сада смо видели примере програма који користе библиотеку са једном или више класа. У примеру
+који следи, класе које користимо нису све међусобно тесно повезане. Низак ниво сарадње између
+појединих класа нам сугерише да те класе не треба да буду део једне библиотеке. Зато ћемо у овом
+примеру да распоредимо класе у <strong>две библиотеке</strong> и да направимо неколико апликација које користе
+једну, другу или обе библиотеке.</p>
+<section id="id2">
+<h2>Пример - Цртање многоуглова у кординатном систему<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Креирати графичку апликацију која приказује многоуглове у координатном систему и рачуна
+њихове обиме и површине. Апликација треба да омогући:</p>
+<ul class="simple">
+<li><p>Додавање темена многоугла кликом на леви тастер миша</p></li>
+<li><p>Брисање последњег додатог темена притиском на тастер <cite>Delete</cite></p></li>
+<li><p>Ажурно приказивање обима и површине многоугла у насловној линији форме</p></li>
+<li><p>Приказ координата позиције на којој се налази миш</p></li>
+<li><p>Померање приказа координатног система и многоугла вучењем</p></li>
+<li><p>Увећање и умањење приказа координатног система и многоугла померањем точкића миша</p></li>
+</ul>
+
+    </div></div>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../_images/CrtanjeMnogouglovaApp.png"><img alt="../_images/CrtanjeMnogouglovaApp.png" src="../_images/CrtanjeMnogouglovaApp.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-text">Изглед апликације за цртање многоуглова</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="id3">
+<h3>Анализа<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
+<p>У овом задатку појављују се два координатна система. Један је математички координатни систем, који
+користи неку апстрактну јеединичну дуж и у коме се рачунају обим и површина многоугла. Други је
+координатни систем прозора у коме цртамо, у коме се координате изражавају у пикселима. Када се у
+програму користе два координатна система, уобичајено је да се координатни систем који приказујемо
+кориснику назива <strong>координатни систем света</strong>, а интерни координатни систем са координатама у
+пикселима се назива <strong>координатни систем екрана</strong>.</p>
+<figure class="align-center" id="id6">
+<img alt="../_images/transformacija_koordinata.png" src="../_images/transformacija_koordinata.png" />
+<figcaption>
+<p><span class="caption-text">Координатни систем света (зелено) и координатни систем екрана (плаво)</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Биће нам потребни методи за прерачунавање координата из једног у други систем и обрнуто, за
+прилагођавање формула везе када се координатни систем помери, увећа или умањи, као и за приказ
+координтног система у прозору дате величине. Сви ти методи могу да се сместе у једну класу, коју
+ћемо да назовемо <code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code>.</p>
+<p>Примера ради, један од задатака ове класе би био да одреди екранске координате <span class="math notranslate nohighlight">\((x_s, y_s)\)</span>
+неке тачке <span class="math notranslate nohighlight">\(P\)</span>, ако су нам познате њене светске координате <span class="math notranslate nohighlight">\((x_w, y_w)\)</span>. Да би класа
+<code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code> могла да обави овај задатак, потребно је да памти екранске координате
+<span class="math notranslate nohighlight">\((x_t, y_t)\)</span> тачке <span class="math notranslate nohighlight">\(O\)</span> и дужине <span class="math notranslate nohighlight">\(a, b\)</span> јединичних дужи светског система у
+пикселима. На основу ових података, екранске координате било које тачке <span class="math notranslate nohighlight">\(P\)</span> лако можемо
+да израчунамо по следећим формулама:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x_s &amp;= a \cdot x_w + x_t,\\
+y_s &amp;= -b \cdot y_w + y_t.\\
+\end{aligned}\end{split}\]</div>
+<hr class="docutils" />
+<p>Још једна целина би могла да буде класа <code class="docutils literal notranslate"><span class="pre">Polygon</span></code>, у којој би се чувала темена у координатном
+систему света и рачунали обим и површина. За израчунавање обима и површине могу да се користе
+следеће формуле, у којима се подразумева да се индекси узимају по модулу <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+O &amp;= \sum_{i=1}^{n} \sqrt{(x_{i}-x_{i-1})^2 + (y_i-y_{i-1})^2}\\
+P &amp;= \frac{1}{2} \left |\sum_{i=1}^{n} {x_{i} \cdot (y_{i-1} - y_{i+1})} \right |\\
+\end{aligned}\end{split}\]</div>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Лако се уочава да ове две целине нису повезане. Штавише, програм може да се напише тако да класа
+<code class="docutils literal notranslate"><span class="pre">Polygon</span></code> не мора да буде свесна постојања другог (екранског) координатног система, а класа
+<code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code> не мора да буде свесна постојања многоуглова. Раздвајање ових класа у
+засебне библиотеке не отежава решавање овог задатка, а омогућава лакшу употребу направљених
+класа у другим задацима.</p>
+
+    </div></div>
+<p>На пример, класа <code class="docutils literal notranslate"><span class="pre">Polygon</span></code> може да се искористи и у малој конзолној
+апликацији која само рачуна обим и површину датог многоугла, а класа <code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code> може
+да се искористи у апликацији која приказује графике изабраних математичких функција.</p>
+<p>Ово размишљање сугерише да би добар дизајн у случају цртања многоуглова био да направимо две библиотеке,
+једну за бављење координатним системом, а другу за бављење многоуглом, а затим да напишемо и графичку
+апликацију која користи обе ове библиотеке. Касније могу да се додају и друге поменуте апликације,
+да би се потврдило да дизајн класа одговара и тим апликацијама.</p>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../_images/medjuzavisnost_cc_polygons.png"><img alt="../_images/medjuzavisnost_cc_polygons.png" src="../_images/medjuzavisnost_cc_polygons.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-text">Међузависност модула</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="ra">
+<h3>Rеализацијa<a class="headerlink" href="#ra" title="Permalink to this heading">¶</a></h3>
+<section id="polygons">
+<h4>Библиотека Polygons<a class="headerlink" href="#polygons" title="Permalink to this heading">¶</a></h4>
+<p>Прво ћемо да формирамо библиотеку класа <code class="docutils literal notranslate"><span class="pre">Polygons</span></code>, која садржи само један фајл, <code class="docutils literal notranslate"><span class="pre">Polygon.cs</span></code>.
+У њему се, осим главне класе <code class="docutils literal notranslate"><span class="pre">Polygon</span></code> налази и једна мала, помоћна класа <code class="docutils literal notranslate"><span class="pre">Point</span></code>.</p>
+
+    <div data-component="reveal" id="dugme_lib_polygons"   data-showtitle="Садржај фајла Polygon.cs" data-hidetitle="Сакриј садржај фајла Polygon.cs">
+    
+<div data-childcomponent="lib_polygons" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=lib_polygons data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+
+namespace Polygons
+{
+    public class Polygon
+    {
+        private List&lt;Point&gt; pts = new List&lt;Point&gt;();
+        private double perimeter;
+        private double area;
+        public int PointCount { get { return pts.Count; } }
+        public string Text
+        {
+            get { return string.Format(&quot;Обим={0:0.00}, Површина={1:0.00}&quot;, perimeter, area); }
+        }
+        public void AddPoint(float x, float y)
+        {
+            pts.Add(new Point(x, y));
+            UpdateAreaAndPerimeter();
+        }
+        public void RemoveLastPoint()
+        {
+            if (pts.Count &gt; 0)
+            {
+                pts.RemoveAt(pts.Count - 1);
+                UpdateAreaAndPerimeter();
+            }
+        }
+        public int NumPoints { get { return pts.Count; } }
+        public float X(int i) { return pts[i].X; }
+        public float Y(int i) { return pts[i].Y; }
+        
+        private void UpdateAreaAndPerimeter()
+        {
+            perimeter = Perimeter();
+            area = Area();
+        }
+        public double Perimeter()
+        {
+            int n = pts.Count;
+            if (n == 0)
+                return 0.0;
+            double s = Point.Dist(pts[n - 1], pts[0]);
+            for (int i = 1; i &lt; n; i++) 
+                s+= Point.Dist(pts[i - 1], pts[i]);
+            return s;
+        }
+        public double Area()
+        {
+            int n = pts.Count;
+            if (n &lt; 3)
+                return 0.0;
+
+            double a = 
+                pts[0].X * (pts[1].Y - pts[n - 1].Y) +
+                pts[n-1].X * (pts[0].Y - pts[n - 2].Y);
+            for (int i = 1; i &lt; n-1; i++)
+                a += pts[i].X * (pts[i+1].Y - pts[i-1].Y);
+
+            return 0.5 * Math.Abs(a);
+        }
+    }
+
+    internal class Point 
+    {
+        private float x;
+        private float y;
+        public float X { get { return x; } }
+        public float Y { get { return y; } }
+        public Point(float x0, float y0) { x = x0; y = y0; }
+        public static double Dist(Point A, Point B)
+        {
+            return Math.Sqrt((A.x - B.x) * (A.x - B.x) + (A.y - B.y) * (A.y - B.y));
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Класа <code class="docutils literal notranslate"><span class="pre">Point</span></code> не мора да буде видљива ван библиотеке <code class="docutils literal notranslate"><span class="pre">Polygons</span></code>, јер је корисницима библиотеке
+довољна класа <code class="docutils literal notranslate"><span class="pre">Polygon</span></code>. Ипак, класа <code class="docutils literal notranslate"><span class="pre">Point</span></code> треба да буде доступна класи <code class="docutils literal notranslate"><span class="pre">Polygon</span></code> унутар
+библиотеке. Да бисмо постигли такву видљивост класе <code class="docutils literal notranslate"><span class="pre">Point</span></code>, довољно је било да је декларишемо као
+интерну, уместо да буде јавна. Прецизније, уместо да пишемо</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Point</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>писали смо</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Point</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Реч <code class="docutils literal notranslate"><span class="pre">internal</span></code> може да се користи за класе и за делове (чланове) класа, као што су методи,
+поља, својства и индексери. Ниво видљивости интерних класа и интерних делова класе је између
+јавног и приватног нивоа, јер су такве класе или њихови чланови доступни класама у истој
+библиотеци (као да су јавни), а нису доступни ван библиотеке (као да су приватни).</p>
+
+    </div></div>
+<p>Следећа табела приказује доступност интерних класа и делова класа.</p>
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Место употребе</strong></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">public</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">internal</span></code></p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">private</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Унутар класе</strong></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Друге класе у библиотеци</strong></p></td>
+<td><p>✅️</p></td>
+<td><p>✅</p></td>
+<td><p>❌</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Ван библиотеке</strong></p></td>
+<td><p>✅️</p></td>
+<td><p>❌</p></td>
+<td><p>❌</p></td>
+</tr>
+</tbody>
+</table>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Класе и њихови делови који су декларисани као <code class="docutils literal notranslate"><span class="pre">internal</span></code> <strong>нису део интерфејса модула</strong>
+као целине (интерфејс модула чине само његови јавни делови). Према томе, употребом речи
+<code class="docutils literal notranslate"><span class="pre">internal</span></code> у декларацијама класа и њихових делова, постижемо две ствари:</p>
+<ul class="simple">
+<li><p>прецизније одређујемо ко може да користи класу а ко не,</p></li>
+<li><p>олакшавамо читање модула његовим корисницима, јер њих пре свега интересује интерфејс, односно
+јавни део модула (интерне делове могу да прескоче, или погледају са мање пажње).</p></li>
+</ul>
+
+    </div></div>
+</section>
+<section id="coordinateconverter">
+<h4>Библиотека CoordinateConverter<a class="headerlink" href="#coordinateconverter" title="Permalink to this heading">¶</a></h4>
+<p>Прелазимо на формирање библиотеке <code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code>. Пошто ова класа садржи метод за цртање
+координатног система и користи класе <code class="docutils literal notranslate"><span class="pre">Graphics</span></code>, <code class="docutils literal notranslate"><span class="pre">Font</span></code>, <code class="docutils literal notranslate"><span class="pre">PointF</span></code> и друге, њу треба да
+креирамо мало другачије. Уместо да као тип новог пројекта бирамо „Class Library”, треба да
+изаберемо „Windows Forms Class Library”. Надаље са овом библиотеком радимо све исто као и са
+обичном библиотеком класа.</p>
+<p>Библиотека <code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code> такође садржи само један фајл, а то је фајл <code class="docutils literal notranslate"><span class="pre">CoordinateConverter.cs</span></code>.</p>
+
+    <div data-component="reveal" id="dugme_lib_CoordinateConverter"   data-showtitle="Садржај фајла CoordinateConverter.cs" data-hidetitle="Сакриј садржај фајла CoordinateConverter.cs">
+    
+<div data-childcomponent="lib_CoordinateConverter" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=lib_CoordinateConverter data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Drawing;
+
+namespace coordinate_converter
+{
+    public class CoordinateConverter
+    {
+        private float FontSize = 16.0f;
+        private float ScalingX = 50.0f;
+        private float ScalingY = 50.0f;
+        private float TranslationX;
+        private float TranslationY;
+        private float xePivot;
+        private float yePivot;
+        private string PivotPos = &quot;&quot;;
+        public CoordinateConverter(float xeSize, float yeSize)
+        {
+            // Biramo pocetni polozaj sistema sveta tako da je 
+            // tacka (-1, -1) u donjem levom uglu prozora
+            TranslationX = ScalingX;
+            TranslationY = yeSize - ScalingY;
+        }
+        public void SetPivot(float x, float y)
+        {
+            xePivot = x;
+            yePivot = y;
+            PivotPos = string.Format(&quot;({0:0.00}, {1:0.00})&quot;,
+                XScreenToWorld(xePivot), YScreenToWorld(yePivot));
+        }
+        public void Translate(float xeNewPivot, float yeNewPivot)
+        {
+            TranslationX += xeNewPivot - xePivot;
+            TranslationY += yeNewPivot - yePivot;
+            xePivot = xeNewPivot;
+            yePivot = yeNewPivot;
+        }
+        public void Zoom(float zoomFactor)
+        {
+            TranslationX = xePivot + (TranslationX - xePivot) * zoomFactor;
+            TranslationY = yePivot + (TranslationY - yePivot) * zoomFactor;
+            FontSize *= zoomFactor;
+            ScalingX *= zoomFactor;
+            ScalingY *= zoomFactor;
+        }
+        public void DrawGrid(Graphics g, float xeSize, float yeSize, Color clr)
+        {
+            Font fnt = new Font(&quot;Arial&quot;, FontSize);
+
+            //ClientRectangle u koordinatama ekrana
+            float xs0 = 0, xs1 = xeSize;
+            float ys0 = 0, ys1 = yeSize;
+
+            //ClientRectangle u koordinatama sveta
+            float xw0 = XScreenToWorld(xs0);
+            float yw0 = YScreenToWorld(ys0);
+            float xw1 = XScreenToWorld(xs1);
+            float yw1 = YScreenToWorld(ys1);
+
+            // koordinate linija resetke u sistemu sveta
+            float gxw0 = MathF.Ceiling(xw0);
+            float gxw1 = MathF.Floor(xw1);
+            float gyw0 = MathF.Floor(yw0);
+            float gyw1 = MathF.Ceiling(yw1);
+
+            // koordinate linija resetke u sistemu ekrana
+            float gxs0 = XWorldToScreen(gxw0);
+            float gys0 = YWorldToScreen(gyw0);
+            float gxs1 = XWorldToScreen(gxw1);
+            float gys1 = YWorldToScreen(gyw1);
+            float xsYAxis = XWorldToScreen(0); // ekranska koordinata y ose
+            float ysXAxis = YWorldToScreen(0); // ekranska koordinata x ose
+
+            Pen p1 = new Pen(clr, 1);
+            Brush b = new SolidBrush(clr); // za crtanje teksta (koordinata)
+
+            // uspravne linije resetke, ispisivanje x koordinata
+            float xw = gxw0;
+            for (float xs = gxs0; xs &lt;= gxs1; xs += ScalingX)
+            {
+                g.DrawLine(p1, xs, ys0, xs, ys1);
+                string txt = xw.ToString();
+                SizeF txtSize = g.MeasureString(txt, fnt);
+                g.DrawString(txt, fnt, b, xs, ys1 - txtSize.Height);
+                xw += 1;
+            }
+
+            // vodoravne linije resetke, ispisivanje y koordinata
+            float yw = gyw0;
+            for (float ys = gys0; ys &lt;= gys1; ys += ScalingY)
+            {
+                g.DrawLine(p1, xs0, ys, xs1, ys);
+                g.DrawString(yw.ToString(), fnt, b, xs0, ys);
+                yw -= 1;
+            }
+
+            Pen p3 = new Pen(clr, 3); // koordinatne ose crtamo podebljano 
+            g.DrawLine(p3, xs0, ysXAxis, xs1, ysXAxis); // x-osa
+            g.DrawLine(p3, xsYAxis, ys0, xsYAxis, ys1); // y-osa
+            g.DrawString(PivotPos, new Font(&quot;Arial&quot;, 16), b, xePivot, yePivot); // pozicija pivota
+        }
+        public float XWorldToScreen(float xw) { return xw * ScalingX + TranslationX; }
+        public float YWorldToScreen(float yw) { return -yw * ScalingY + TranslationY; }
+        public float XScreenToWorld(float xs) { return (xs - TranslationX) / ScalingX; }
+        public float YScreenToWorld(float ys) { return (ys - TranslationY) / -ScalingY; }
+        public PointF WorldToScreen(PointF w)
+        {
+            return new PointF(XWorldToScreen(w.X), YWorldToScreen(w.Y));
+        }
+        public PointF ScreenToWorld(PointF s)
+        {
+            return new PointF(XScreenToWorld(s.X), YScreenToWorld(s.Y));
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Поред метода за прерачунавање координата (који би требало да су јасни), класа садржи и следеће мотоде:</p>
+<ul class="simple">
+<li><p>метод <code class="docutils literal notranslate"><span class="pre">DrawGrid</span></code> који за дати објекат типа <code class="docutils literal notranslate"><span class="pre">Graphics</span></code> и дату величину прозора исцртава координатни систем.</p></li>
+<li><p>метод <code class="docutils literal notranslate"><span class="pre">Translate</span></code>, који ажурира положај светског координатног почетка у екранским координатама кад се координатни систем помери</p></li>
+<li><p>метод <code class="docutils literal notranslate"><span class="pre">Zoom</span></code>, који ажурира дужине усправне и водоравне јединичне дужи светског координатног система изражене у пикселима,
+као и положај светског координатног почетка у екранским координатама кад се координатни систем увећа или умањи. Формуле су изведене
+тако да се приликом зумирања светске координате позиције миша не мењају (то је постављено као додатни услов, па су одатле изведене формуле).</p></li>
+<li><p>метод <code class="docutils literal notranslate"><span class="pre">SetPivot</span></code>, који задаје координате позиције миша.</p></li>
+</ul>
+</section>
+<section id="crtanjemnogouglova">
+<h4>Апликација CrtanjeMnogouglova<a class="headerlink" href="#crtanjemnogouglova" title="Permalink to this heading">¶</a></h4>
+<p>Апликацију <code class="docutils literal notranslate"><span class="pre">CrtanjeMnogouglova</span></code> креирамо као <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Forms</span></code> апликацију и подешавамо је да зависи
+од пројеката <code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code> и <code class="docutils literal notranslate"><span class="pre">Polygons</span></code>, као што је објашњено у лекцији „Модуларност,
+библиотеке”. У нашем програму везивање метода за догађаје је обављено у конструктору форме, па није
+потребно да се преузима фајл <code class="docutils literal notranslate"><span class="pre">Form1.Designer.cs</span></code>, већ је довољно прегазити фајл <code class="docutils literal notranslate"><span class="pre">Form1.cs</span></code> овим
+садржајем.</p>
+
+    <div data-component="reveal" id="dugme_app_CrtanjeMnogouglova"   data-showtitle="Садржај фајла Form1.cs" data-hidetitle="Сакриј садржај фајла Form1.cs">
+    
+<div data-childcomponent="app_CrtanjeMnogouglova" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=app_CrtanjeMnogouglova data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+using coordinate_converter;
+using Polygons;
+
+namespace CrtanjeMnogouglova
+{
+    public partial class Form1 : Form
+    {
+        CoordinateConverter cc;
+        Polygon poly;
+        bool IsDragging;
+        public Form1()
+        {
+            InitializeComponent();
+            DoubleBuffered = true;
+            KeyDown += new KeyEventHandler(Form1_KeyDown);
+            MouseDown += new MouseEventHandler(Form1_MouseDown);
+            MouseWheel += new MouseEventHandler(Form1_MouseMove);
+            MouseMove += new MouseEventHandler(Form1_MouseMove);
+            MouseUp += new MouseEventHandler(Form1_MouseUp);
+            Paint += new System.Windows.Forms.PaintEventHandler(Form1_Paint);
+            ClientSize = new System.Drawing.Size(800, 600);
+            ResizeRedraw = true;
+
+            cc = new CoordinateConverter(ClientSize.Width, ClientSize.Height);
+            poly = new Polygon();
+        }
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                IsDragging = true; // zapocni vucenje
+                cc.SetPivot(e.X, e.Y);
+            }
+            else if (e.Button == MouseButtons.Left)
+            {
+                poly.AddPoint(cc.XScreenToWorld(e.X), cc.YScreenToWorld(e.Y));
+                Invalidate();
+            }
+        }
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (IsDragging)
+                cc.Translate(e.X, e.Y);
+
+            if (e.Delta != 0) // ako je tocak misa okrenut, zumiraj (ka ili od)
+            {
+                float WheelDelta = SystemInformation.MouseWheelScrollDelta;
+                float f = MathF.Pow(1.1f, -e.Delta / WheelDelta);
+                cc.Zoom(f);
+            }
+            cc.SetPivot(e.X, e.Y); // azurira koordinate misa za prikaz koordinata na ekranu
+            Invalidate();
+        }
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                IsDragging = false;
+        }
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+            {
+                poly.RemoveLastPoint();
+                Invalidate();
+            }
+        }
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Text = poly.Text;
+            Graphics g = e.Graphics;
+            cc.DrawGrid(g, ClientSize.Width, ClientSize.Height, Color.Black);
+
+            // Izracunaj temena mnogougla u koordinatama ekrana i nacrtaj ga
+            int n = poly.PointCount;
+            if (n &gt; 0)
+            {
+                Pen pen = new Pen(Color.Blue, 3);
+                g.DrawLine(pen, 
+                    cc.XWorldToScreen(poly.X(n - 1)), cc.YWorldToScreen(poly.Y(n - 1)),
+                    cc.XWorldToScreen(poly.X(0)), cc.YWorldToScreen(poly.Y(0)));
+                for (int i = 1; i &lt; n; i++)
+                    g.DrawLine(pen,
+                    cc.XWorldToScreen(poly.X(i - 1)), cc.YWorldToScreen(poly.Y(i - 1)),
+                    cc.XWorldToScreen(poly.X(i)), cc.YWorldToScreen(poly.Y(i)));
+            }
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Приметимо да су методи класе <code class="docutils literal notranslate"><span class="pre">Form1</span></code> веома кратки, јер се главни део посла обавља у класама
+<code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code> и <code class="docutils literal notranslate"><span class="pre">Polygon</span></code>.</p>
+</section>
+</section>
+<section id="id4">
+<h3>Додатне апликације<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
+<p>Да бисмо истакли да се креиране библиотеке врло добро и сасвим једноставно уклапају и у друге
+апликације, додајемо још две апликације, од којих свака користи по једну од направљених библиотека.</p>
+<section id="polygonsdemo">
+<h4>Апликација PolygonsDemo<a class="headerlink" href="#polygonsdemo" title="Permalink to this heading">¶</a></h4>
+<p>Након што креирамо нову конзолну апликацију и подесимо је да зависи од библиотеке <code class="docutils literal notranslate"><span class="pre">Polygons</span></code>,
+можемо да преузмемо садржај фајла <code class="docutils literal notranslate"><span class="pre">Program.cs</span></code>.</p>
+
+    <div data-component="reveal" id="dugme_app_PolygonsDemo"   data-showtitle="Садржај фајла Program.cs" data-hidetitle="Сакриј садржај фајла Program.cs">
+    
+<div data-childcomponent="app_PolygonsDemo" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=app_PolygonsDemo data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using Polygons;
+
+namespace PolygonsDemo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Polygon p = new Polygon();
+            p.AddPoint(1, 1);
+            p.AddPoint(1, 3);
+            p.AddPoint(4, 3);
+            p.AddPoint(4, 1);
+            p.AddPoint(5, 2);
+            p.RemoveLastPoint();
+
+            Console.Write(&quot;Tacke su:&quot;);
+            for (int i = 0; i &lt; p.NumPoints; i++)
+            {
+                Console.Write(&quot; ({0}, {1})&quot;, p.X(i), p.Y(i));
+            }
+            Console.WriteLine();
+
+            Console.WriteLine(&quot;Obim je {0}&quot;, p.Perimeter());
+            Console.WriteLine(&quot;Povrsina je {0}&quot;, p.Area());
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Програм исписује</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Tacke</span> <span class="n">su</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">Obim</span> <span class="n">je</span> <span class="mi">10</span>
+<span class="n">Povrsina</span> <span class="n">je</span> <span class="mi">6</span>
+</pre></div>
+</div>
+<p>Овом једноставном апликацијом само показујемо да библиотека <code class="docutils literal notranslate"><span class="pre">Polygons</span></code> може лако и удобно да се
+користи и из конзолне апликације, а да при томе није потребно да се кôд копира и/или прилагођава.</p>
+</section>
+<section id="graficiodabranihfunkcija">
+<h4>Апликација GraficiOdabranihFunkcija<a class="headerlink" href="#graficiodabranihfunkcija" title="Permalink to this heading">¶</a></h4>
+<p>На крају ове активности дајемо и пример графичке апликације, која користи само библиотеку
+<code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code>. То је апликација која црта график једне од неколико функција понуђених у
+менију.</p>
+<p>Поступак за креирање ове апликације је следећи:</p>
+<ul class="simple">
+<li><p>Креирати нови пројкат типа <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Forms</span> <span class="pre">App</span></code></p></li>
+<li><p>Подесити апликацију да зависи од пројекта <code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code></p></li>
+<li><p>Прегазити садржај фајла <code class="docutils literal notranslate"><span class="pre">Form1.cs</span></code> датим садржајем</p></li>
+<li><p>Прегазити садржај фајла <code class="docutils literal notranslate"><span class="pre">Form1.Designer.cs</span></code> датим садржајем</p></li>
+<li><p>У фајлу <code class="docutils literal notranslate"><span class="pre">Program.cs</span></code> променити назив именског простора, тако да тај ред гласи</p></li>
+</ul>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">GraficiOdabranihFunkcija</span><span class="w"></span>
+</pre></div>
+</div>
+
+    <div data-component="reveal" id="dugme_app_grafici_meni_forma"   data-showtitle="Садржај фајла Form1.cs" data-hidetitle="Сакриј садржај фајла Form1.cs">
+    
+<div data-childcomponent="app_grafici_meni_forma" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=app_grafici_meni_forma data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+using coordinate_converter;
+
+namespace GraficiOdabranihFunkcija
+{
+    public partial class Form1 : Form
+    {
+        private enum Function { Sin, Cos, Tg, Ctg, Sqr, Sqrt, Exp, Log, None };
+        private Function SelectedFunction = Function.None;
+        private CoordinateConverter cc;
+        bool IsDragging;
+        public Form1()
+        {
+            InitializeComponent();
+            DoubleBuffered = true;
+            MouseDown += new MouseEventHandler(Form1_MouseDown);
+            MouseWheel += new MouseEventHandler(Form1_MouseMove);
+            MouseMove += new MouseEventHandler(Form1_MouseMove);
+            MouseUp += new MouseEventHandler(Form1_MouseUp);
+            Paint += new System.Windows.Forms.PaintEventHandler(Form1_Paint);
+            ClientSize = new System.Drawing.Size(800, 600);
+            ResizeRedraw = true;
+            Text = &quot;Цртање графика&quot;;
+            cc = new CoordinateConverter(ClientSize.Width, ClientSize.Height);
+        }
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                IsDragging = true; // zapocni vucenje
+                cc.SetPivot(e.X, e.Y);
+            }
+        }
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (IsDragging)
+                cc.Translate(e.X, e.Y);
+
+            if (e.Delta != 0) // ako je tocak misa okrenut, zumiraj (ka ili od)
+            {
+                float WheelDelta = SystemInformation.MouseWheelScrollDelta;
+                float f = MathF.Pow(1.1f, -e.Delta / WheelDelta);
+                cc.Zoom(f);
+            }
+            cc.SetPivot(e.X, e.Y); // azurira koordinate misa za prikaz koordinata na ekranu
+            Invalidate();
+        }
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                IsDragging = false;
+        }
+
+        private void sineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectedFunction = Function.Sin;
+            Text = &quot;Цртање графика - синус&quot;;
+        }
+
+        private void cosineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectedFunction = Function.Cos;
+            Text = &quot;Цртање графика - косинус&quot;;
+        }
+
+        private void tangentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectedFunction = Function.Tg;
+            Text = &quot;Цртање графика - тангенс&quot;;
+        }
+
+        private void cotangentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectedFunction = Function.Ctg;
+            Text = &quot;Цртање графика - котангенс&quot;;
+        }
+
+        private void squareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectedFunction = Function.Sqr;
+            Text = &quot;Цртање графика - квадрат&quot;;
+        }
+
+        private void squareRootToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectedFunction = Function.Sqrt;
+            Text = &quot;Цртање графика - квадратни корен&quot;;
+        }
+
+        private void exponentialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectedFunction = Function.Exp;
+            Text = &quot;Цртање графика - експоненцијална&quot;;
+        }
+
+        private void logToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SelectedFunction = Function.Log;
+            Text = &quot;Цртање графика - природни логаритам&quot;;
+        }
+        private float F(float x)
+        {
+            switch (SelectedFunction)
+            {
+                case Function.Sin: return MathF.Sin(x);
+                case Function.Cos: return MathF.Cos(x);
+                case Function.Tg: return MathF.Tan(x);
+                case Function.Ctg: return 1.0f / MathF.Tan(x);
+                case Function.Sqr: return x * x;
+                case Function.Sqrt: return MathF.Sqrt(x);
+                case Function.Exp: return MathF.Exp(x);
+                case Function.Log: return MathF.Log(x);
+            }
+            throw new Exception(&quot;Nepoznata funcija&quot;);
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            cc.DrawGrid(g, ClientSize.Width, ClientSize.Height, Color.Black);
+
+            // grafik
+            if (SelectedFunction == Function.None)
+                return;
+
+            Pen p3 = new Pen(Color.Blue, 3);
+            float xsPrev = 0.0f;
+            float xwPrev = cc.XScreenToWorld(xsPrev);
+            float ywPrev = F(xwPrev);
+            float ysPrev = cc.YWorldToScreen(ywPrev);
+            for (float xs = 0; xs &lt; ClientSize.Width; xs++)
+            {
+                float xw = cc.XScreenToWorld(xs);
+                float yw = F(xw);
+                float ys = cc.YWorldToScreen(yw);
+                // ako je F definisana u prethodnoj i tekucoj tacki
+                // i te tacke nisu u razlicitim granama grafika
+                // spoj te tacke linijom
+                if (float.IsFinite(ys) &amp;&amp; float.IsFinite(ysPrev) &amp;&amp; 
+                    MathF.Abs(ysPrev - ys) &lt; ClientSize.Height / 2)
+                    g.DrawLine(p3, xsPrev, ysPrev, xs, ys);
+                xsPrev = xs;
+                ysPrev = ys;
+            }
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    
+    <div data-component="reveal" id="dugme_app_grafici_meni_dizajner"   data-showtitle="Садржај фајла Form1.Designer.cs" data-hidetitle="Сакриј садржај фајла Form1.Designer.cs">
+    
+<div data-childcomponent="app_grafici_meni_dizajner" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=app_grafici_meni_dizajner data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿
+namespace GraficiOdabranihFunkcija
+{
+    partial class Form1
+    {
+        /// &lt;summary&gt;
+        ///  Required designer variable.
+        /// &lt;/summary&gt;
+        private System.ComponentModel.IContainer components = null;
+
+        /// &lt;summary&gt;
+        ///  Clean up any resources being used.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;disposing&quot;&gt;true if managed resources should be disposed; otherwise, false.&lt;/param&gt;
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing &amp;&amp; (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// &lt;summary&gt;
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// &lt;/summary&gt;
+        private void InitializeComponent()
+        {
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.functionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cosineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tangentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cotangentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.squareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.squareRootToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exponentialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.functionToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = &quot;menuStrip1&quot;;
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = &quot;menuStrip1&quot;;
+            // 
+            // functionToolStripMenuItem
+            // 
+            this.functionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sineToolStripMenuItem,
+            this.cosineToolStripMenuItem,
+            this.tangentToolStripMenuItem,
+            this.cotangentToolStripMenuItem,
+            this.squareToolStripMenuItem,
+            this.squareRootToolStripMenuItem,
+            this.exponentialToolStripMenuItem,
+            this.logToolStripMenuItem});
+            this.functionToolStripMenuItem.Name = &quot;functionToolStripMenuItem&quot;;
+            this.functionToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.functionToolStripMenuItem.Text = &quot;Функција&quot;;
+            // 
+            // sineToolStripMenuItem
+            // 
+            this.sineToolStripMenuItem.Name = &quot;sineToolStripMenuItem&quot;;
+            this.sineToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.sineToolStripMenuItem.Text = &quot;Синус&quot;;
+            this.sineToolStripMenuItem.Click += new System.EventHandler(this.sineToolStripMenuItem_Click);
+            // 
+            // cosineToolStripMenuItem
+            // 
+            this.cosineToolStripMenuItem.Name = &quot;cosineToolStripMenuItem&quot;;
+            this.cosineToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.cosineToolStripMenuItem.Text = &quot;Косинус&quot;;
+            this.cosineToolStripMenuItem.Click += new System.EventHandler(this.cosineToolStripMenuItem_Click);
+            // 
+            // tangentToolStripMenuItem
+            // 
+            this.tangentToolStripMenuItem.Name = &quot;tangentToolStripMenuItem&quot;;
+            this.tangentToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.tangentToolStripMenuItem.Text = &quot;Тангенс&quot;;
+            this.tangentToolStripMenuItem.Click += new System.EventHandler(this.tangentToolStripMenuItem_Click);
+            // 
+            // cotangentToolStripMenuItem
+            // 
+            this.cotangentToolStripMenuItem.Name = &quot;cotangentToolStripMenuItem&quot;;
+            this.cotangentToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.cotangentToolStripMenuItem.Text = &quot;Котангенс&quot;;
+            this.cotangentToolStripMenuItem.Click += new System.EventHandler(this.cotangentToolStripMenuItem_Click);
+            // 
+            // squareToolStripMenuItem
+            // 
+            this.squareToolStripMenuItem.Name = &quot;squareToolStripMenuItem&quot;;
+            this.squareToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.squareToolStripMenuItem.Text = &quot;Квадрат&quot;;
+            this.squareToolStripMenuItem.Click += new System.EventHandler(this.squareToolStripMenuItem_Click);
+            // 
+            // squareRootToolStripMenuItem
+            // 
+            this.squareRootToolStripMenuItem.Name = &quot;squareRootToolStripMenuItem&quot;;
+            this.squareRootToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.squareRootToolStripMenuItem.Text = &quot;Квадратни корен&quot;;
+            this.squareRootToolStripMenuItem.Click += new System.EventHandler(this.squareRootToolStripMenuItem_Click);
+            // 
+            // exponentialToolStripMenuItem
+            // 
+            this.exponentialToolStripMenuItem.Name = &quot;exponentialToolStripMenuItem&quot;;
+            this.exponentialToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.exponentialToolStripMenuItem.Text = &quot;Експоненцијална&quot;;
+            this.exponentialToolStripMenuItem.Click += new System.EventHandler(this.exponentialToolStripMenuItem_Click);
+            // 
+            // logToolStripMenuItem
+            // 
+            this.logToolStripMenuItem.Name = &quot;logToolStripMenuItem&quot;;
+            this.logToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.logToolStripMenuItem.Text = &quot;Природни логаритам&quot;;
+            this.logToolStripMenuItem.Click += new System.EventHandler(this.logToolStripMenuItem_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = &quot;Form1&quot;;
+            this.Text = &quot;Form1&quot;;
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem functionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cosineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tangentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cotangentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem squareToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem squareRootToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exponentialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logToolStripMenuItem;
+    }
+}
+
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Вероватно најинтересантнији део ове апликације је петља у методу <code class="docutils literal notranslate"><span class="pre">Form1_Paint</span></code>, у којој се
+израчунавају тачке графика. Петља тече по екранској <code class="docutils literal notranslate"><span class="pre">xs</span></code> координати у пикселима. За сваку
+вредност <code class="docutils literal notranslate"><span class="pre">xs</span></code> врше се следећа четири корака:</p>
+<ul class="simple">
+<li><p>применом конвертора координата, израчунава се математичка (светска) <span class="math notranslate nohighlight">\(x\)</span> координата исте тачке, означена са <code class="docutils literal notranslate"><span class="pre">xw</span></code></p></li>
+<li><p>применом изабране функције <span class="math notranslate nohighlight">\(F\)</span>, израчунава се математичка (светска) <span class="math notranslate nohighlight">\(y\)</span> координата tе тачке, означена са <code class="docutils literal notranslate"><span class="pre">yw</span></code></p></li>
+<li><p>применом конвертора координата, израчунава се екранска <span class="math notranslate nohighlight">\(x\)</span> координата те тачке, означена са <code class="docutils literal notranslate"><span class="pre">xs</span></code></p></li>
+<li><p>тачка <code class="docutils literal notranslate"><span class="pre">(xs,</span> <span class="pre">ys)</span></code> се споји линијом са претходном таквом тачком</p></li>
+</ul>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Pen</span><span class="w"> </span><span class="n">p3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pen</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">Blue</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">);</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">xsPrev</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0.0f</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">xwPrev</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">cc</span><span class="p">.</span><span class="n">XScreenToWorld</span><span class="p">(</span><span class="n">xsPrev</span><span class="p">);</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">ywPrev</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="n">xwPrev</span><span class="p">);</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">ysPrev</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">cc</span><span class="p">.</span><span class="n">YWorldToScreen</span><span class="p">(</span><span class="n">ywPrev</span><span class="p">);</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">xs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">xs</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="n">ClientSize</span><span class="p">.</span><span class="n">Width</span><span class="p">;</span><span class="w"> </span><span class="n">xs</span><span class="p">++)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">xw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">cc</span><span class="p">.</span><span class="n">XScreenToWorld</span><span class="p">(</span><span class="n">xs</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">yw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="n">xw</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">ys</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">cc</span><span class="p">.</span><span class="n">YWorldToScreen</span><span class="p">(</span><span class="n">yw</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// ako je F definisana u prethodnoj i tekucoj tacki</span>
+<span class="w">    </span><span class="c1">// i te tacke nisu u razlicitim granama grafika</span>
+<span class="w">    </span><span class="c1">// spoj te tacke linijom</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">.</span><span class="n">IsFinite</span><span class="p">(</span><span class="n">ys</span><span class="p">)</span><span class="w"> </span><span class="p">&amp;&amp;</span><span class="w"> </span><span class="kt">float</span><span class="p">.</span><span class="n">IsFinite</span><span class="p">(</span><span class="n">ysPrev</span><span class="p">)</span><span class="w"> </span><span class="p">&amp;&amp;</span><span class="w"></span>
+<span class="w">        </span><span class="n">MathF</span><span class="p">.</span><span class="n">Abs</span><span class="p">(</span><span class="n">ysPrev</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="n">ys</span><span class="p">)</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="n">ClientSize</span><span class="p">.</span><span class="n">Height</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">g</span><span class="p">.</span><span class="n">DrawLine</span><span class="p">(</span><span class="n">p3</span><span class="p">,</span><span class="w"> </span><span class="n">xsPrev</span><span class="p">,</span><span class="w"> </span><span class="n">ysPrev</span><span class="p">,</span><span class="w"> </span><span class="n">xs</span><span class="p">,</span><span class="w"> </span><span class="n">ys</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">xsPrev</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">xs</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">ysPrev</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ys</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="klase_02h1_povezane.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

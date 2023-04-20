@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Апстрактни методи и класе</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'specit3_oop';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'specit3_oop';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_uvod>
+                    <h5>1. Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_klase_i_objekti>
+                    <h5>2 Класе и објекти</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_klase_i_objekti/02_klase_i_objekti.html><div class="studioLecture" id=activity-02_klase_i_objekti><i class="fas fa-file-alt activity-icon"></i>Класе и објекти</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02a_klase_osnovni_pojmovi>
+                    <h5>2.1 Основни појмови о класама и објектима</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02a_klase_osnovni_pojmovi/klase_02a_osnovni_pojmovi.html><div class="studioLecture" id=activity-klase_02a_osnovni_pojmovi><i class="fas fa-file-alt activity-icon"></i>Основни појмови о класама и објектима</div></a>
+                <a href=../02a_klase_osnovni_pojmovi/klase_02aq_osnovni_pojmovi_kviz.html><div class="studioLecture" id=activity-klase_02aq_osnovni_pojmovi_kviz><i class="fas fa-file-alt activity-icon"></i>Класе и објекти - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02b_klase_enkapsulacija>
+                    <h5>2.2 Енкапсулација</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02b_klase_enkapsulacija/klase_02b_enkapsulacija.html><div class="studioLecture" id=activity-klase_02b_enkapsulacija><i class="fas fa-file-alt activity-icon"></i>Енкапсулација</div></a>
+                <a href=../02b_klase_enkapsulacija/klase_02bq_enkapsulacija_kviz.html><div class="studioLecture" id=activity-klase_02bq_enkapsulacija_kviz><i class="far fa-question-circle activity-icon"></i>Енкапсулација - квиз</div></a>
+                <a href=../02b_klase_enkapsulacija/klase_02bz_enkapsulacija_zadaci.html><div class="studioLecture" id=activity-klase_02bz_enkapsulacija_zadaci><i class="fas fa-file-alt activity-icon"></i>Енкапсулација - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02c_klase_staticki_metodi>
+                    <h5>2.3 Статички и нестатички методи</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02c_klase_staticki_metodi/klase_02c_staticki_metodi.html><div class="studioLecture" id=activity-klase_02c_staticki_metodi><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе</div></a>
+                <a href=../02c_klase_staticki_metodi/klase_02cq_staticki_metodi_kviz.html><div class="studioLecture" id=activity-klase_02cq_staticki_metodi_kviz><i class="far fa-question-circle activity-icon"></i>Чланови објекта и чланови класе - квиз</div></a>
+                <a href=../02c_klase_staticki_metodi/klase_02cz_staticki_metodi_zadaci.html><div class="studioLecture" id=activity-klase_02cz_staticki_metodi_zadaci><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02d_klase_stat_polimorfizam>
+                    <h5>2.4 Статички полиморфизам, оператори</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02d_klase_stat_polimorfizam/klase_02d_statpolim_operatori.html><div class="studioLecture" id=activity-klase_02d_statpolim_operatori><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори</div></a>
+                <a href=../02d_klase_stat_polimorfizam/klase_02dq_statpolim_operatori_kviz.html><div class="studioLecture" id=activity-klase_02dq_statpolim_operatori_kviz><i class="far fa-question-circle activity-icon"></i>Статички полиморфизам, оператори - квиз</div></a>
+                <a href=../02d_klase_stat_polimorfizam/klase_02dz_statpolim_operatori_zadaci.html><div class="studioLecture" id=activity-klase_02dz_statpolim_operatori_zadaci><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02e_klase_apstrakcija>
+                    <h5>2.5 Апстракција, индексери</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02e_klase_apstrakcija/klase_02e_apstrakcija.html><div class="studioLecture" id=activity-klase_02e_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери</div></a>
+                <a href=../02e_klase_apstrakcija/klase_02eq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02eq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција, индексери - квиз</div></a>
+                <a href=../02e_klase_apstrakcija/klase_02ez_apstrakcija_zadaci.html><div class="studioLecture" id=activity-klase_02ez_apstrakcija_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02f_klase_dizajniranje>
+                    <h5>2.6 Пример дизајнирања класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02f_klase_dizajniranje/klase_02f_dizajniranje.html><div class="studioLecture" id=activity-klase_02f_dizajniranje><i class="fas fa-file-alt activity-icon"></i>Пример дизајнирања класе</div></a>
+                <a href=../02f_klase_dizajniranje/klase_02fz_dizajniranje_zadaci.html><div class="studioLecture" id=activity-klase_02fz_dizajniranje_zadaci><i class="fas fa-file-alt activity-icon"></i>Дизајнирање класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02g_klase_modularnost>
+                    <h5>2.7 Модуларност, библиотеке</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02g_klase_modularnost/klase_02g1_modularnost_bibl.html><div class="studioLecture" id=activity-klase_02g1_modularnost_bibl><i class="fas fa-file-alt activity-icon"></i>Модуларност, библиотеке</div></a>
+                <a href=../02g_klase_modularnost/klase_02g2_vise_aplikacija.html><div class="studioLecture" id=activity-klase_02g2_vise_aplikacija><i class="fas fa-file-alt activity-icon"></i>Прилог - графичка апликација</div></a>
+                <a href=../02g_klase_modularnost/klase_02gz_modularnost_zadaci.html><div class="studioLecture" id=activity-klase_02gz_modularnost_zadaci><i class="fas fa-file-alt activity-icon"></i>Модуларност - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02h_klase_grupe>
+                    <h5>2.8 Групе класа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02h_klase_grupe/klase_02h1_povezane.html><div class="studioLecture" id=activity-klase_02h1_povezane><i class="fas fa-file-alt activity-icon"></i>Повезане класе</div></a>
+                <a href=../02h_klase_grupe/klase_02h2_nepovezane.html><div class="studioLecture" id=activity-klase_02h2_nepovezane><i class="fas fa-file-alt activity-icon"></i>Неповезане класе</div></a>
+                <a href=../02h_klase_grupe/klase_02h3_grupe.html><div class="studioLecture" id=activity-klase_02h3_grupe><i class="fas fa-file-alt activity-icon"></i>О распоређивању класа у модуле</div></a>
+                <a href=../02h_klase_grupe/klase_02hq_grupe_kviz.html><div class="studioLecture" id=activity-klase_02hq_grupe_kviz><i class="far fa-question-circle activity-icon"></i>Групе класа - квиз</div></a>
+                <a href=../02h_klase_grupe/klase_02hz_grupe_zadaci.html><div class="studioLecture" id=activity-klase_02hz_grupe_zadaci><i class="fas fa-file-alt activity-icon"></i>Групе класа - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_genericke_klase>
+                    <h5>3 Генеричке класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_genericke_klase/03_genericke_klase.html><div class="studioLecture" id=activity-03_genericke_klase><i class="fas fa-file-alt activity-icon"></i>Генеричке класе</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03a_genericke_klase>
+                    <h5>3.1 Генеричке класе, вишеструка употребљивост</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03a_genericke_klase/genericke_03a_uvod.html><div class="studioLecture" id=activity-genericke_03a_uvod><i class="fas fa-file-alt activity-icon"></i>Генеричке класе</div></a>
+                <a href=../03a_genericke_klase/genericke_03ap_primer.html><div class="studioLecture" id=activity-genericke_03ap_primer><i class="fas fa-file-alt activity-icon"></i>Генеричке класе - решен пример</div></a>
+                <a href=../03a_genericke_klase/genericke_03aq_kviz.html><div class="studioLecture" id=activity-genericke_03aq_kviz><i class="far fa-question-circle activity-icon"></i>Генеричке класе и методи - квиз</div></a>
+                <a href=../03a_genericke_klase/genericke_03az_zadaci.html><div class="studioLecture" id=activity-genericke_03az_zadaci><i class="fas fa-file-alt activity-icon"></i>Генеричке класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_nasledjivanje>
+                    <h5>4 Наслеђивање и полиморфизам</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_nasledjivanje/04_nasledjivanje.html><div class="studioLecture" id=activity-04_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Наслеђивање и полиморфизам</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04a_izvedene_klase>
+                    <h5>4.1 Основно о наслеђивању</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04a_izvedene_klase/nasl_04a_01_izvedene_klase.html><div class="studioLecture" id=activity-nasl_04a_01_izvedene_klase><i class="fas fa-file-alt activity-icon"></i>Основно о наслеђивању</div></a>
+                <a href=../04a_izvedene_klase/nasl_04aq_kviz.html><div class="studioLecture" id=activity-nasl_04aq_kviz><i class="far fa-question-circle activity-icon"></i>Изведена класа - квиз</div></a>
+                <a href=../04a_izvedene_klase/nasl_04az_zadaci.html><div class="studioLecture" id=activity-nasl_04az_zadaci><i class="fas fa-file-alt activity-icon"></i>Изведена класа - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04b_apstraktni_metodi_i_klase>
+                    <h5>4.2 Апстрактни методи и класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04b_apstraktni_metodi_i_klase/am_04b1_apstraktni_metodi.html><div class="studioLecture" id=activity-am_04b1_apstraktni_metodi><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода  и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04bq_kviz.html><div class="studioLecture" id=activity-am_04bq_kviz><i class="far fa-question-circle activity-icon"></i>Апстрактни методи и класе - квиз</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04bz_zadaci.html><div class="studioLecture" id=activity-am_04bz_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
+                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
+                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
+                <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04d_virtuelni_metodi>
+                    <h5>4.4  Виртуелни методи</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04d_virtuelni_metodi/vm_04d_01_modifikacija.html><div class="studioLecture" id=activity-vm_04d_01_modifikacija><i class="fas fa-file-alt activity-icon"></i>Модификација базне класе</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04d_02_virtuelni_metodi.html><div class="studioLecture" id=activity-vm_04d_02_virtuelni_metodi><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04dq_kviz.html><div class="studioLecture" id=activity-vm_04dq_kviz><i class="far fa-question-circle activity-icon"></i>Виртуелни методи - квиз</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04dz_primeri_zadaci.html><div class="studioLecture" id=activity-vm_04dz_primeri_zadaci><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи - примери и задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_dp_primeri>
+                    <h5>5 Динамички полиморфизам - примери</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_dp_primeri/05_dp_primeri.html><div class="studioLecture" id=activity-05_dp_primeri><i class="fas fa-file-alt activity-icon"></i>Динамички полиморфизам - примери</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05a_dp_kretanje_tela>
+                    <h5>5.1 Различита кретања</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05a_dp_kretanje_tela/dpp_05a_kretanje_tela.html><div class="studioLecture" id=activity-dpp_05a_kretanje_tela><i class="fas fa-file-alt activity-icon"></i>Различита кретања</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05b_dp_kviz>
+                    <h5>5.2 Квиз</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05b_dp_kviz/dpp_05b_kviz_pr.html><div class="studioLecture" id=activity-dpp_05b_kviz_pr><i class="fas fa-file-alt activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05c_dp_vrednost_funkcije>
+                    <h5>5.3 Вредност функције</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_primeri_proj_zadataka>
+                    <h5>6 Примери пројектних задатака</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_primeri_proj_zadataka/06_proj_primeri.html><div class="studioLecture" id=activity-06_proj_primeri><i class="fas fa-file-alt activity-icon"></i>Примери пројектних задатака</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Апстрактни методи и класе<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>У овој лекцији:</p>
+<ul class="simple">
+<li><p>Шта доносе апстрактни методи и апстрактне класе</p></li>
+<li><p>Пример употребе апстрактне класе и апстрактних метода</p></li>
+<li><p>Апстрактне класе као облик динамичког полиморфизма</p></li>
+</ul>
+<p>Да бисмо најлаше разумели у којој ситуацији апстрактни методи и класе могу да нам буду од користи и
+шта тачно помоћу њих добијамо, овај пут полазимо од конкретног задатка, који ћемо да решимо на више
+начина.</p>
+<section id="id2">
+<h2>Пример – обими и површине кругова и многоуглова<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Дато је неколико кругова и правилних многоуглова, који су различито обојени. За сваки круг
+позната је боја и полупречник, а за сваки многоугао боја, број страница и дужина странице.</p>
+<p>Потребно је да се за сваку фигуру израчуна обим и површина те фигуре, а за сваку боју
+укупна површина те боје.</p>
+
+    </div></div>
+<p>Задатак је довољно једноставан да би му решење без класа и објеката било сасвим примерено. Међутим,
+овде желимо да управо на малом примеру уведемо један нови концепт, који ће се показати као врло
+користан у већим задацима.</p>
+<section id="id3">
+<h3>Прво решење<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
+<p>За укупне површине по бојама можемо да користимо речник који пресликава боје у површине. Поред
+тога, за сваку фигуру треба да израчунамо обим и површину. Природно је да у овом тренутку замишљамо
+класе <code class="docutils literal notranslate"><span class="pre">Krug</span></code> и <code class="docutils literal notranslate"><span class="pre">Ntougao</span></code> са методима <code class="docutils literal notranslate"><span class="pre">Obim</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrsina</span></code>. Прво решење би могло да користи
+ове две класе као независне.</p>
+
+<div data-childcomponent="klase_obimi_povrsine1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klase_obimi_povrsine1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections.Generic;
+using System.Drawing;
+
+internal class Program
+{
+    public class Krug
+    {
+        private Color boja;
+        private double r;
+        public Krug(Color b, double r0) { boja = b; r = r0; }
+        public double Povrsina() { return r * r * Math.PI; }
+        public double Obim() { return 2 * r * Math.PI; }
+        public Color Boja { get { return boja; } }
+    }
+    public class Ntougao
+    {
+        private Color boja;
+        private double a;
+        private int n;
+        public Ntougao(Color b, double a0, int n0) { boja = b; a = a0; n = n0; }
+        public double Povrsina()
+        {
+            double rUpisanogKruga = 0.5 * a / Math.Tan(Math.PI / n);
+            return n * 0.5 * a * rUpisanogKruga;
+        }
+        public double Obim() { return n * a; }
+        public Color Boja { get { return boja; } }
+    }
+
+    static void Main(string[] args)
+    {
+        List&lt;Krug&gt; krugovi = new List&lt;Krug&gt;();
+        krugovi.Add(new Krug(Color.Red, 5));        // crveni krug poluprecnika 5
+        krugovi.Add(new Krug(Color.Green, 7));      // zeleni krug poluprecnika 7
+        List&lt;Ntougao&gt; mnogouglovi = new List&lt;Ntougao&gt;();
+        mnogouglovi.Add(new Ntougao(Color.Red, 6, 4));  // crveni kvadrat stranice 6
+        mnogouglovi.Add(new Ntougao(Color.Blue, 2, 6)); // plavi sestougao stranice 2
+
+        Dictionary&lt;Color, double&gt; povBoje = new Dictionary&lt;Color, double&gt;();
+        foreach (Krug k in krugovi)
+        {
+            Console.WriteLine(&quot;Figura: Boja={0}, Obim={1:0.00}, Povrsina={2:0.00}&quot;,
+                k.Boja, k.Obim(), k.Povrsina());
+
+            double prethPov = 0;
+            povBoje.TryGetValue(k.Boja, out prethPov);
+            povBoje[k.Boja] = prethPov + k.Povrsina();
+        }
+        foreach (Ntougao p in mnogouglovi)
+        {
+            Console.WriteLine(&quot;Figura: Boja={0}, Obim={1:0.00}, Povrsina={2:0.00}&quot;,
+                p.Boja, p.Obim(), p.Povrsina());
+
+            double prethPov = 0;
+            povBoje.TryGetValue(p.Boja, out prethPov);
+            povBoje[p.Boja] = prethPov + p.Povrsina();
+        }
+
+        foreach (KeyValuePair&lt;Color, double&gt; kv in povBoje)
+        {
+            Console.WriteLine(&quot;Ukupna povrsina boje {0} je {1:0.00}&quot;, kv.Key, kv.Value);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Програм исписује</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Figura</span><span class="p">:</span> <span class="n">Boja</span><span class="o">=</span><span class="n">Color</span> <span class="p">[</span><span class="n">Red</span><span class="p">],</span> <span class="n">Obim</span><span class="o">=</span><span class="mf">31.42</span><span class="p">,</span> <span class="n">Povrsina</span><span class="o">=</span><span class="mf">78.54</span>
+<span class="n">Figura</span><span class="p">:</span> <span class="n">Boja</span><span class="o">=</span><span class="n">Color</span> <span class="p">[</span><span class="n">Green</span><span class="p">],</span> <span class="n">Obim</span><span class="o">=</span><span class="mf">43.98</span><span class="p">,</span> <span class="n">Povrsina</span><span class="o">=</span><span class="mf">153.94</span>
+<span class="n">Figura</span><span class="p">:</span> <span class="n">Boja</span><span class="o">=</span><span class="n">Color</span> <span class="p">[</span><span class="n">Red</span><span class="p">],</span> <span class="n">Obim</span><span class="o">=</span><span class="mf">24.00</span><span class="p">,</span> <span class="n">Povrsina</span><span class="o">=</span><span class="mf">36.00</span>
+<span class="n">Figura</span><span class="p">:</span> <span class="n">Boja</span><span class="o">=</span><span class="n">Color</span> <span class="p">[</span><span class="n">Blue</span><span class="p">],</span> <span class="n">Obim</span><span class="o">=</span><span class="mf">12.00</span><span class="p">,</span> <span class="n">Povrsina</span><span class="o">=</span><span class="mf">10.39</span>
+<span class="n">Ukupna</span> <span class="n">povrsina</span> <span class="n">boje</span> <span class="n">Color</span> <span class="p">[</span><span class="n">Red</span><span class="p">]</span> <span class="n">je</span> <span class="mf">114.54</span>
+<span class="n">Ukupna</span> <span class="n">povrsina</span> <span class="n">boje</span> <span class="n">Color</span> <span class="p">[</span><span class="n">Green</span><span class="p">]</span> <span class="n">je</span> <span class="mf">153.94</span>
+<span class="n">Ukupna</span> <span class="n">povrsina</span> <span class="n">boje</span> <span class="n">Color</span> <span class="p">[</span><span class="n">Blue</span><span class="p">]</span> <span class="n">je</span> <span class="mf">10.39</span>
+</pre></div>
+</div>
+<p>У делу програма где се рачунају обими и површине (линије 41-58) видимо <strong>две скоро исте петље</strong>.
+Првом од њих се пролази кроз листу кругова, а другом кроз листу многоуглова. У сложенијем примеру
+можемо да замислимо да такве петље буду знатно дуже, па би било добро <strong>да се оне некако сведу на
+једну петљу</strong>. Да бисмо то постигли, треба да имамо заједничку листу за кругове и многоуглове, а то
+значи да нам је потребна заједничка базна класа, коју можемо да назовемо <code class="docutils literal notranslate"><span class="pre">Figura2D</span></code> (дводимензиона
+фигура). У овој класи би се нашло поље <code class="docutils literal notranslate"><span class="pre">boja</span></code> и својство <code class="docutils literal notranslate"><span class="pre">Boja</span></code>, али није јасно како бисмо
+позивали методе <code class="docutils literal notranslate"><span class="pre">Obim</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrsina</span></code>.</p>
+</section>
+<section id="id4">
+<h3>Друго решење<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
+<p>Комплетности ради, напомињемо да језик <cite>C#</cite> (као и већина објектно оријентисаних програмских језика)
+нуди могућност да за дату референцу на базну класу проверимо да ли указује на објекат одређене
+изведене класе. Поред других начина, у језику <cite>C#</cite> у ту сврху могу да се употребе оператори <code class="docutils literal notranslate"><span class="pre">is</span></code> и
+<code class="docutils literal notranslate"><span class="pre">as</span></code>, као што показује следећи исечак кода.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Figura2D</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">figure</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">obim</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">povrsina</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">Krug</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Krug</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Krug</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">obim</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">k</span><span class="p">.</span><span class="n">Obim</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">povrsina</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">k</span><span class="p">.</span><span class="n">Povrsina</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="nf">if</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">Ntougao</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Ntougao</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Ntougao</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">obim</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">Obim</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">povrsina</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">Povrsina</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Figura: Boja={0}, Obim={1:0.00}, Povrsina={2:0.00}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">f</span><span class="p">.</span><span class="n">Boja</span><span class="p">,</span><span class="w"> </span><span class="n">obim</span><span class="p">,</span><span class="w"> </span><span class="n">povrsina</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">prethPov</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">povBoje</span><span class="p">.</span><span class="n">TryGetValue</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">Boja</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">prethPov</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">povBoje</span><span class="p">[</span><span class="n">f</span><span class="p">.</span><span class="n">Boja</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">prethPov</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">povrsina</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Логички услов <code class="docutils literal notranslate"><span class="pre">(f</span> <span class="pre">is</span> <span class="pre">Krug)</span></code> у овом случају има вредност <code class="docutils literal notranslate"><span class="pre">true</span></code> ако је објекат на који указује
+референца <code class="docutils literal notranslate"><span class="pre">f</span></code> инстанца класе <code class="docutils literal notranslate"><span class="pre">Krug</span></code>, а вредност <code class="docutils literal notranslate"><span class="pre">false</span></code> у супротном. У општем случају,
+вредност <code class="docutils literal notranslate"><span class="pre">true</span></code> би се добила и да је објекат инстанца неке класе компатибилне са класом <code class="docutils literal notranslate"><span class="pre">Krug</span></code>
+(нпр. класе изведене из класе <code class="docutils literal notranslate"><span class="pre">Krug</span></code>).</p>
+<p>Наредбом <code class="docutils literal notranslate"><span class="pre">Krug</span> <span class="pre">k</span> <span class="pre">=</span> <span class="pre">f</span> <span class="pre">as</span> <span class="pre">Krug;</span></code> креирамо референцу <code class="docutils literal notranslate"><span class="pre">k</span></code> класе <code class="docutils literal notranslate"><span class="pre">Krug</span></code>, која указује на исти
+објекат као и референца <code class="docutils literal notranslate"><span class="pre">f</span></code>, ако је тај објекат инстанца класе <code class="docutils literal notranslate"><span class="pre">Krug</span></code> (или неке компатибилне
+класе).
+У противном, референца <code class="docutils literal notranslate"><span class="pre">k</span></code> добија вредност <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
+<p>На овај начин претходне две петље се заиста своде на једну, али поента је некако промашена. Овакво
+решење није нарочито удобно и елегантно јер морамо да водимо рачуна о типу фигуре, а нисмо се у
+потпуности ослободили ни понављања кода (позиви метода за израчунавање обима и површине се и даље
+јављају на два места). Зато овај приступ не препоручујемо за решавање постављеног проблема. Комплетан
+програм можете да видите ако кликнете на дугме испод.</p>
+
+    <div data-component="reveal" id="dugme_klase_obimi_povrsine2"   data-showtitle="Комплетан програм са провером типа у време извршавања" data-hidetitle="Сакриј програм са провером типа у време извршавања">
+    <p><strong>Комплетан програм са провером типа у време извршавања</strong></p>
+
+<div data-childcomponent="klase_obimi_povrsine2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klase_obimi_povrsine2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections.Generic;
+using System.Drawing;
+
+internal class Program
+{
+    public class Figura2D
+    {
+        protected Color boja;
+        public Figura2D(Color b) { boja = b; }
+        public Color Boja { get { return boja; } }
+    }
+    public class Krug : Figura2D
+    {
+        private double r;
+        public Krug(Color b, double r0) : base(b) { r = r0; }
+        public double Povrsina() { return r * r * Math.PI; }
+        public double Obim() { return 2 * r * Math.PI; }
+    }
+    public class Ntougao : Figura2D
+    {
+        private double a;
+        private int n;
+        public Ntougao(Color b, double a0, int n0) : base(b) { a = a0; n = n0; }
+        public double Povrsina()
+        {
+            double rUpisanogKruga = 0.5 * a / Math.Tan(Math.PI / n);
+            return n * 0.5 * a * rUpisanogKruga;
+        }
+        public double Obim() { return n * a; }
+    }
+
+    static void Main(string[] args)
+    {
+        List&lt;Figura2D&gt; figure = new List&lt;Figura2D&gt;();
+        figure.Add(new Krug(Color.Red, 5));        // crveni krug poluprecnika 5
+        figure.Add(new Krug(Color.Green, 7));      // zeleni krug poluprecnika 7
+        figure.Add(new Ntougao(Color.Red, 6, 4));  // crveni kvadrat stranice 6
+        figure.Add(new Ntougao(Color.Blue, 2, 6)); // plavi sestougao stranice 2
+
+        Dictionary&lt;Color, double&gt; povBoje = new Dictionary&lt;Color, double&gt;();
+        foreach (Figura2D f in figure)
+        {
+            double obim = 0, povrsina = 0;
+            if (f is Krug)
+            {
+                Krug k = f as Krug;
+                obim = k.Obim();
+                povrsina = k.Povrsina();
+            }
+            else if (f is Ntougao)
+            {
+                Ntougao p = f as Ntougao;
+                obim = p.Obim();
+                povrsina = p.Povrsina();
+            }
+            Console.WriteLine(&quot;Figura: Boja={0}, Obim={1:0.00}, Povrsina={2:0.00}&quot;,
+                f.Boja, obim, povrsina);
+
+            double prethPov = 0;
+            povBoje.TryGetValue(f.Boja, out prethPov);
+            povBoje[f.Boja] = prethPov + povrsina;
+        }
+
+        foreach (KeyValuePair&lt;Color, double&gt; kv in povBoje)
+        {
+            Console.WriteLine(&quot;Ukupna povrsina boje {0} je {1:0.00}&quot;, kv.Key, kv.Value);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Резултат рада програма је исти као у првом решењу.</p>
+</section>
+<section id="id5">
+<h3>Треће решење<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
+<p>Удобно решење би тебало да нам омогући да завршни део програма изгледа овако:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Figura2D</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">figure</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Figura: Boja={0}, Obim={1:0.00}, Povrsina={2:0.00}&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">f</span><span class="p">.</span><span class="n">Boja</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">Obim</span><span class="p">(),</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">Povrsina</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">prethPov</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">povBoje</span><span class="p">.</span><span class="n">TryGetValue</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">Boja</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">prethPov</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">povBoje</span><span class="p">[</span><span class="n">f</span><span class="p">.</span><span class="n">Boja</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">prethPov</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">Povrsina</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Уколико бисмо пробали да убацимо позиве <code class="docutils literal notranslate"><span class="pre">f.Obim()</span></code> и <code class="docutils literal notranslate"><span class="pre">f.Povrsina()</span></code> у неки од претходних програма,
+добили бисмо синтаксне грешке, јер у класи <code class="docutils literal notranslate"><span class="pre">Figura2D</span></code> нема ових метода. Са друге стране, методе
+<code class="docutils literal notranslate"><span class="pre">Obim</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrsina</span></code> не можемо да дефинишемо у базној класи, јер обим и површина се за круг и
+многоугао израчунавају на различите начине. Према томе, потребно нам је да базна класа зна за ове
+методе да не бисмо добијали синтаксне грешке, а да се дефиниције метода ипак налазе у изведеним
+класама. Управо ту могућност нам доносе апстрактни методи.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p><strong>Апстрактан метод</strong> је метод који у базној класи није дефинисан, већ је само декларисан (најављен)
+својим нивоом приступа, именом, типом повратне вредности и типовима параметара.</p>
+<p>Испред апстрактног метода се пише реч <code class="docutils literal notranslate"><span class="pre">abstract</span></code>. Она компајлеру (и другим програмерима) говори
+да метод није дефинисан и да се очекује да буде дефинисан у класама наследницама.</p>
+<p>Када нека класа има бар један апстрактан, недефинисан метод, она није довршена и објекти те класе не
+могу да буду креирани (класа не може да се инстанцира). Таква класа се назива <strong>апстрактна класа</strong> и
+такође се означава речју <code class="docutils literal notranslate"><span class="pre">abstract</span></code> на свом почетку. Да би класа која непосредно или посредно (кроз
+хијерархију) наслеђује апстрактну класу могла да има инстанце, неопходно је да у њој (или у класама
+које јој претходе у хијерархији) буду дефинисани сви апстрактни методи базне класе.</p>
+<p>Свако накнадно дефинисање (као и редефинисање) у некој од класа наследница означава се речју
+<code class="docutils literal notranslate"><span class="pre">override</span></code>. Реч <code class="docutils literal notranslate"><span class="pre">override</span></code> значи да се метод редефинише у односу на базну класу, а може (и не
+мора) да се даље редефинише у класама наследницама.</p>
+
+    </div></div>
+<p>У трећем решењу базну класу проглашавамо за апстрактну и додајемо јој декларације апстрактних метода
+<code class="docutils literal notranslate"><span class="pre">Obim</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrsina</span></code>. Обратите пажњу на то да се реч <code class="docutils literal notranslate"><span class="pre">abstract</span></code> појављује на три места у базној
+класи.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">abstract</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Figura2D</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">boja</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Figura2D</span><span class="p">(</span><span class="n">Color</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">boja</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="n">Boja</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">boja</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">abstract</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">Povrsina</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">abstract</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">Obim</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>У дефиницијама метода у изведеним класама треба да назначимо да се ради дефиницији управо апсрактног
+метода декларисаног у базној класи. Обратите пажњу на реч <code class="docutils literal notranslate"><span class="pre">override</span></code> уи изведеним класама.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Krug</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Figura2D</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Krug</span><span class="p">(</span><span class="n">Color</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">r0</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">base</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">r0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">Povrsina</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">Obim</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Ntougao</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Figura2D</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Ntougao</span><span class="p">(</span><span class="n">Color</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">a0</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n0</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">base</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a0</span><span class="p">;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">n0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">Povrsina</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">rUpisanogKruga</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0.5</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Tan</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">PI</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="m">0.5</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">rUpisanogKruga</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">Obim</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Ево како изгледа цео програм, који користи апстрактну базну класу.</p>
+
+<div data-childcomponent="klase_obimi_povrsine3" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=klase_obimi_povrsine3 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections.Generic;
+using System.Drawing;
+
+internal class Program
+{
+    public abstract class Figura2D
+    {
+        protected Color boja;
+        public Figura2D(Color b) { boja = b; }
+        public Color Boja { get { return boja; } }
+        public abstract double Povrsina();
+        public abstract double Obim();
+    }
+    public class Krug : Figura2D
+    {
+        private double r;
+        public Krug(Color b, double r0) : base(b) { r = r0; }
+        public override double Povrsina() { return r * r * Math.PI; }
+        public override double Obim() { return 2 * r * Math.PI; }
+    }
+    public class Ntougao : Figura2D
+    {
+        private double a;
+        private int n;
+        public Ntougao(Color b, double a0, int n0) : base(b) { a = a0; n = n0; }
+        public override double Povrsina()
+        {
+            double rUpisanogKruga = 0.5 * a / Math.Tan(Math.PI / n);
+            return n * 0.5 * a * rUpisanogKruga;
+        }
+        public override double Obim() { return n * a; }
+    }
+
+    static void Main(string[] args)
+    {
+        List&lt;Figura2D&gt; figure = new List&lt;Figura2D&gt;();
+        figure.Add(new Krug(Color.Red, 5));        // crveni krug poluprecnika 5
+        figure.Add(new Krug(Color.Green, 7));      // zeleni krug poluprecnika 7
+        figure.Add(new Ntougao(Color.Red, 6, 4));  // crveni kvadrat stranice 6
+        figure.Add(new Ntougao(Color.Blue, 2, 6)); // plavi sestougao stranice 2
+
+        Dictionary&lt;Color, double&gt; povBoje = new Dictionary&lt;Color, double&gt;();
+        foreach (Figura2D f in figure)
+        {
+            Console.WriteLine(&quot;Figura: Boja={0}, Obim={1:0.00}, Povrsina={2:0.00}&quot;,
+                f.Boja, f.Obim(), f.Povrsina());
+
+            double prethPov = 0;
+            povBoje.TryGetValue(f.Boja, out prethPov);
+            povBoje[f.Boja] = prethPov + f.Povrsina();
+        }
+
+        foreach (KeyValuePair&lt;Color, double&gt; kv in povBoje)
+        {
+            Console.WriteLine(&quot;Ukupna povrsina boje {0} je {1:0.00}&quot;, kv.Key, kv.Value);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Резултат рада програма је исти као у прва два решења.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Видимо да се инстанциране фигуре <strong>користе помоћу референци на базну класу на исти, униформан начин.</strong>
+Приликом употребе (петља <code class="docutils literal notranslate"><span class="pre">foreach</span> <span class="pre">(Figura2D</span> <span class="pre">f</span> <span class="pre">in</span> <span class="pre">figure)</span></code>) не морамо да водимо рачуна о томе која
+фигура је круг, а која многоугао, али се ипак обим и површина сваке од њих израчунавају правилно, тј.
+у складу са стварном природом фигуре.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>Различито понашање једнако третираних објеката, тј. понашање објеката у складу са њиховим стварним
+типом је појава коју називамо <strong>динамички полиморфизам</strong>.</p>
+<p>Подсетимо се, раније смо помињали статички полиморфизам и тада смо реч полиморфизам објаснили као
+појављивање у више облика. Статички полиморфизам подразумева употребу више истоимених метода у
+оквиру једне класе. Ти методи се разликују већ и по броју и типу параметара, па већ у време превођења
+(компајлирања) постоји довољно информација да се сваки од позива тих метода разреши, тј. да се
+зкључи о којем од неколико истоимених метода се ради. Зато тај вид полиморфизма називамо статички.</p>
+<p>За разлику од тога, облик полиморфизма који смо управо упознали не може да се разреши у време
+превођења (статички). То значи да се позив метода разрешава тек у време извршавања програма, па се
+зато овај вид полиморфизма назива динамички.</p>
+
+    </div></div>
+<p>Следеће наредбе појашњавају зашто позив метода преко референце на базну класу не може да се разреши
+у време превођења програма.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Figura2D</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="s">&quot;krug&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Krug</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">Red</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">);</span><span class="w"></span>
+<span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="n">f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Ntougao</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">Red</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">Povrsina</span><span class="p">());</span><span class="w"></span>
+</pre></div>
+</div>
+<p>У оваквом случају врста објекта на који указује <code class="docutils literal notranslate"><span class="pre">f</span></code> зависи од уноса корисника, па је јасно да
+компајлер нема информацију на какав објекат указује референца <code class="docutils literal notranslate"><span class="pre">f</span></code> у последњем реду. То нам
+говори да у време превођења не може да се закључи о којем од два истоимена метода <code class="docutils literal notranslate"><span class="pre">Povrsina</span></code>
+се ради (по један метод се налази у свакој од изведених класа).</p>
+<p>Ово је први пример динамичког полиморфизма у овом курсу. Он је овде остварен помоћу апстрактне базне
+класе, што је најважнији, али не и једини начин остваривања динамичког полиморфизма.</p>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Динамичким полиморфизмом ћемо се бавити у већем делу овог поглавља, а у наредним поглављима ћемо
+видети и неке његове примене које доприносе мањој сложености кода тамо где је то заиста потребно.</p>
+<p>Сложеност у случају динамичког полиморфизма није на једном месту, већ је разложена и распоређена
+по класама наследницама.</p>
+
+    </div></div>
+</section>
+</section>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

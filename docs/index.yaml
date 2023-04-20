@@ -35,26 +35,16 @@ lessons:
   - description: ''
     file: uvod_01a_promene.html
     guid: d8ff4bd3-c73e-454b-ab72-d5ed0432b0de
+    normalized_title: Зашто се мења начин програмирања
     src: uvod_01a_promene.rst
     title: Зашто се мења начин програмирања
     type: reading
   - description: ''
     file: uvod_01aq_paradigme_kviz.html
     guid: 8c249332-fba2-4c25-95e9-f10a9b35618d
+    normalized_title: Парадигме у програмирању - квиз
     src: uvod_01aq_paradigme_kviz.rst
     title: Парадигме у програмирању - квиз
-    type: quiz
-  - description: ''
-    file: uvod_01b_klase_i_objekti.html
-    guid: af78c1f1-73ac-468c-b7c5-f69f894b76b2
-    src: uvod_01b_klase_i_objekti.rst
-    title: Најосновније о класама и објектима
-    type: reading
-  - description: ''
-    file: uvod_01bq_klase_i_objekti_kviz.html
-    guid: 1574e5c9-bc26-4e54-bebd-c45bc36d06a3
-    src: uvod_01bq_klase_i_objekti_kviz.rst
-    title: Класе и објекти - квиз
     type: quiz
   archived-activities: []
   description: ''
@@ -64,176 +54,282 @@ lessons:
   title: 1. Увод
 - activities:
   - description: ''
-    file: klase_02a_enkapsulacija.html
+    file: 02_klase_i_objekti.html
+    guid: 7352d34b-1ee8-4e4b-b550-63b6057296ca
+    normalized_title: Класе и објекти
+    src: 02_klase_i_objekti.rst
+    title: Класе и објекти
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 02_klase_i_objekti
+  guid: f6d0bf10-8f9c-4684-9c94-fcfdc837102b
+  normalized_title: 2 Класе и објекти
+  title: 2 Класе и објекти
+- activities:
+  - description: ''
+    file: klase_02a_osnovni_pojmovi.html
+    guid: 6ad758ae-ee31-4766-915f-f874e9e81d27
+    normalized_title: Основни појмови о класама и објектима
+    src: klase_02a_osnovni_pojmovi.rst
+    title: Основни појмови о класама и објектима
+    type: reading
+  - description: ''
+    file: klase_02aq_osnovni_pojmovi_kviz.html
+    guid: 02fc359d-f9f5-45cb-938e-c66079b6b5ad
+    normalized_title: Класе и објекти - квиз
+    src: klase_02aq_osnovni_pojmovi_kviz.rst
+    title: Класе и објекти - квиз
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 02a_klase_osnovni_pojmovi
+  guid: b47f92f2-b6f2-4900-bc15-5570cb262a31
+  normalized_title: 2.1 Основни појмови о класама и објектима
+  title: 2.1 Основни појмови о класама и објектима
+- activities:
+  - description: ''
+    file: klase_02b_enkapsulacija.html
     guid: 3c79a46e-1629-41eb-aa30-2890879e374b
-    src: klase_02a_enkapsulacija.rst
+    normalized_title: Енкапсулација
+    src: klase_02b_enkapsulacija.rst
     title: Енкапсулација
     type: reading
   - description: ''
-    file: klase_02aq_enkapsulacija_kviz.html
+    file: klase_02bq_enkapsulacija_kviz.html
     guid: 357f6a1f-8fe0-432d-b5cc-9252cad6700b
-    src: klase_02aq_enkapsulacija_kviz.rst
+    normalized_title: Енкапсулација - квиз
+    src: klase_02bq_enkapsulacija_kviz.rst
     title: Енкапсулација - квиз
     type: quiz
   - description: ''
-    file: klase_02az_enkapsulacija_zadaci.html
+    file: klase_02bz_enkapsulacija_zadaci.html
     guid: c865e755-aad2-4b2b-850e-468f393b583b
-    src: klase_02az_enkapsulacija_zadaci.rst
+    normalized_title: Енкапсулација - задаци
+    src: klase_02bz_enkapsulacija_zadaci.rst
     title: Енкапсулација - задаци
     type: reading
   archived-activities: []
   description: ''
-  folder: 02a_izolovane_klase_enkapsulacija
+  folder: 02b_klase_enkapsulacija
   guid: a83603a2-f025-43ba-8792-dea0568461da
-  normalized_title: 2.1 Енкапсулација
-  title: 2.1 Енкапсулација
+  normalized_title: 2.2 Енкапсулација
+  title: 2.2 Енкапсулација
 - activities:
   - description: ''
-    file: klase_02b_staticki_metodi.html
+    file: klase_02c_staticki_metodi.html
     guid: cff3cc2a-af35-4502-b70e-29c74b92b768
-    src: klase_02b_staticki_metodi.rst
+    normalized_title: Чланови објекта и чланови класе
+    src: klase_02c_staticki_metodi.rst
     title: Чланови објекта и чланови класе
     type: reading
   - description: ''
-    file: klase_02bq_staticki_metodi_kviz.html
+    file: klase_02cq_staticki_metodi_kviz.html
     guid: fb26de8d-e28c-422c-9cdb-08e81c7eb59f
-    src: klase_02bq_staticki_metodi_kviz.rst
+    normalized_title: Чланови објекта и чланови класе - квиз
+    src: klase_02cq_staticki_metodi_kviz.rst
     title: Чланови објекта и чланови класе - квиз
     type: quiz
   - description: ''
-    file: klase_02bz_staticki_metodi_zadaci.html
+    file: klase_02cz_staticki_metodi_zadaci.html
     guid: 510822cb-a553-4d0e-9ec3-37b9df7ee428
-    src: klase_02bz_staticki_metodi_zadaci.rst
+    normalized_title: Чланови објекта и чланови класе - задаци
+    src: klase_02cz_staticki_metodi_zadaci.rst
     title: Чланови објекта и чланови класе - задаци
     type: reading
   archived-activities: []
   description: ''
-  folder: 02b_izolovane_klase_staticki_metodi
+  folder: 02c_klase_staticki_metodi
   guid: 62ead548-214c-453f-8a3d-57d3a5564025
-  normalized_title: 2.2 Статички и нестатички методи
-  title: 2.2 Статички и нестатички методи
+  normalized_title: 2.3 Статички и нестатички методи
+  title: 2.3 Статички и нестатички методи
 - activities:
   - description: ''
-    file: klase_02c_statpolim_operatori.html
+    file: klase_02d_statpolim_operatori.html
     guid: 87078689-392c-4718-b438-eb252f84ec56
-    src: klase_02c_statpolim_operatori.rst
+    normalized_title: Статички полиморфизам, оператори
+    src: klase_02d_statpolim_operatori.rst
     title: Статички полиморфизам, оператори
     type: reading
   - description: ''
-    file: klase_02cq_statpolim_operatori_kviz.html
+    file: klase_02dq_statpolim_operatori_kviz.html
     guid: 2178d8e5-fba5-4c77-af1c-eb54e33edfc3
-    src: klase_02cq_statpolim_operatori_kviz.rst
+    normalized_title: Статички полиморфизам, оператори - квиз
+    src: klase_02dq_statpolim_operatori_kviz.rst
     title: Статички полиморфизам, оператори - квиз
     type: quiz
   - description: ''
-    file: klase_02cz_statpolim_operatori_zadaci.html
+    file: klase_02dz_statpolim_operatori_zadaci.html
     guid: c0dc8b61-c976-4574-90f3-e94a1e3c43b6
-    src: klase_02cz_statpolim_operatori_zadaci.rst
+    normalized_title: Статички полиморфизам, оператори - задаци
+    src: klase_02dz_statpolim_operatori_zadaci.rst
     title: Статички полиморфизам, оператори - задаци
     type: reading
   archived-activities: []
   description: ''
-  folder: 02c_izolovane_klase_stat_polimorfizam
+  folder: 02d_klase_stat_polimorfizam
   guid: 02bf50b8-46af-4c64-ad29-a1ba740cb626
-  normalized_title: 2.3 Статички полиморфизам, оператори
-  title: 2.3 Статички полиморфизам, оператори
+  normalized_title: 2.4 Статички полиморфизам, оператори
+  title: 2.4 Статички полиморфизам, оператори
 - activities:
   - description: ''
-    file: klase_02d_apstrakcija.html
+    file: klase_02e_apstrakcija.html
     guid: 1d69f87f-ab1f-4205-9803-16224d86f86b
-    src: klase_02d_apstrakcija.rst
+    normalized_title: Апстракција, индексери
+    src: klase_02e_apstrakcija.rst
     title: Апстракција, индексери
     type: reading
   - description: ''
-    file: klase_02dq_apstrakcija_kviz.html
+    file: klase_02eq_apstrakcija_kviz.html
     guid: 98820380-51f8-47b4-9477-6eae3757fa32
-    src: klase_02dq_apstrakcija_kviz.rst
+    normalized_title: Апстракција, индексери - квиз
+    src: klase_02eq_apstrakcija_kviz.rst
     title: Апстракција, индексери - квиз
     type: quiz
   - description: ''
-    file: klase_02dz_apstrakcija_zadaci.html
+    file: klase_02ez_apstrakcija_zadaci.html
     guid: 0e087c48-dbc0-4301-b294-5092a7731965
-    src: klase_02dz_apstrakcija_zadaci.rst
+    normalized_title: Апстракција, индексери - задаци
+    src: klase_02ez_apstrakcija_zadaci.rst
     title: Апстракција, индексери - задаци
     type: reading
   archived-activities: []
   description: ''
-  folder: 02d_izolovane_klase_apstrakcija
+  folder: 02e_klase_apstrakcija
   guid: c29952db-0d9b-4405-b465-07bde96db7a5
-  normalized_title: 2.4 Апстракција, индексери
-  title: 2.4 Апстракција, индексери
+  normalized_title: 2.5 Апстракција, индексери
+  title: 2.5 Апстракција, индексери
 - activities:
   - description: ''
-    file: klase_02e_pojedinacne_primer.html
-    guid: 01264926-cd6a-4772-80e4-39d696d7b568
-    src: klase_02e_pojedinacne_primer.rst
-    title: Појединачне класе - решен пример
+    file: klase_02f_dizajniranje.html
+    guid: 8dc93155-9b3d-46bc-a516-d8058d22a899
+    normalized_title: Пример дизајнирања класе
+    src: klase_02f_dizajniranje.rst
+    title: Пример дизајнирања класе
     type: reading
   - description: ''
-    file: klase_02ez_pojedinacne_zadaci.html
-    guid: ed279a1e-3d61-4901-8588-2890f94ca304
-    src: klase_02ez_pojedinacne_zadaci.rst
-    title: Појединачне класе - задаци
+    file: klase_02fz_dizajniranje_zadaci.html
+    guid: 1f86ae0e-a569-4bb1-a6ef-2ea3a82f2fd4
+    normalized_title: Дизајнирање класе - задаци
+    src: klase_02fz_dizajniranje_zadaci.rst
+    title: Дизајнирање класе - задаци
     type: reading
   archived-activities: []
   description: ''
-  folder: 02e_izolovane_klase_pojedinacne
-  guid: edec0d9b-3d9d-4168-b15e-38e466b5479c
-  normalized_title: 2.5 Појединачне класе - вежбање
-  title: 2.5 Појединачне класе - вежбање
+  folder: 02f_klase_dizajniranje
+  guid: a0beb072-a7e1-4b58-ac44-e32c0d00b4dd
+  normalized_title: 2.6 Пример дизајнирања класе
+  title: 2.6 Пример дизајнирања класе
 - activities:
   - description: ''
-    file: klase_02f_modularnost.html
-    guid: b2525d57-0bdb-4ea0-9390-e4b207165f12
-    src: klase_02f_modularnost.rst
-    title: Модуларност, повезане класе
+    file: klase_02g1_modularnost_bibl.html
+    guid: 01264926-cd6a-4772-80e4-39d696d7b568
+    normalized_title: Модуларност, библиотеке
+    src: klase_02g1_modularnost_bibl.rst
+    title: Модуларност, библиотеке
     type: reading
   - description: ''
-    file: klase_02fq_modularnost_kviz.html
+    file: klase_02g2_vise_aplikacija.html
+    guid: 6e2f5e46-6953-49d2-8b76-eb53028d1fdf
+    normalized_title: Прилог - графичка апликација
+    src: klase_02g2_vise_aplikacija.rst
+    title: Прилог - графичка апликација
+    type: reading
+  - description: ''
+    file: klase_02gz_modularnost_zadaci.html
+    guid: ed279a1e-3d61-4901-8588-2890f94ca304
+    normalized_title: Модуларност - задаци
+    src: klase_02gz_modularnost_zadaci.rst
+    title: Модуларност - задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 02g_klase_modularnost
+  guid: edec0d9b-3d9d-4168-b15e-38e466b5479c
+  normalized_title: 2.7 Модуларност, библиотеке
+  title: 2.7 Модуларност, библиотеке
+- activities:
+  - description: ''
+    file: klase_02h1_povezane.html
+    guid: 6946a291-2f35-4997-8ffb-d8545609efc2
+    normalized_title: Повезане класе
+    src: klase_02h1_povezane.rst
+    title: Повезане класе
+    type: reading
+  - description: ''
+    file: klase_02h2_nepovezane.html
+    guid: b2525d57-0bdb-4ea0-9390-e4b207165f12
+    normalized_title: Неповезане класе
+    src: klase_02h2_nepovezane.rst
+    title: Неповезане класе
+    type: reading
+  - description: ''
+    file: klase_02h3_grupe.html
+    guid: 7a79823a-81af-4d97-bb8f-455754afcfd8
+    normalized_title: О распоређивању класа у модуле
+    src: klase_02h3_grupe.rst
+    title: О распоређивању класа у модуле
+    type: reading
+  - description: ''
+    file: klase_02hq_grupe_kviz.html
     guid: 6ec7d8a6-2572-4119-8dd5-a1aa2d3355a6
-    src: klase_02fq_modularnost_kviz.rst
-    title: Модуларност - квиз
+    normalized_title: Групе класа - квиз
+    src: klase_02hq_grupe_kviz.rst
+    title: Групе класа - квиз
     type: quiz
   - description: ''
-    file: klase_02fp_povezane_klase_primer.html
-    guid: 45018cf1-d04f-44dd-a2e6-a00ff8e812b4
-    src: klase_02fp_povezane_klase_primer.rst
-    title: Повезане класе - решен пример
-    type: reading
-  - description: ''
-    file: klase_02fz_zadaci.html
+    file: klase_02hz_grupe_zadaci.html
     guid: 5960fa50-4520-43d8-b779-b53ce461ef51
-    src: klase_02fz_zadaci.rst
-    title: Повезане класе - задаци
+    normalized_title: Групе класа - задаци
+    src: klase_02hz_grupe_zadaci.rst
+    title: Групе класа - задаци
     type: reading
   archived-activities: []
   description: ''
-  folder: 02f_izolovane_klase_grupe
+  folder: 02h_klase_grupe
   guid: d2f65f85-4ea5-48b4-8e85-74ba7271239b
-  normalized_title: 2.6 Модуларност, повезане класе
-  title: 2.6 Модуларност, повезане класе
+  normalized_title: 2.8 Групе класа
+  title: 2.8 Групе класа
+- activities:
+  - description: ''
+    file: 03_genericke_klase.html
+    guid: 95f14db9-7b83-4c36-ad58-41605d7eaa4c
+    normalized_title: Генеричке класе
+    src: 03_genericke_klase.rst
+    title: Генеричке класе
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 03_genericke_klase
+  guid: f4981bb3-2c91-4b0b-b452-ae73835a9d31
+  normalized_title: 3 Генеричке класе
+  title: 3 Генеричке класе
 - activities:
   - description: ''
     file: genericke_03a_uvod.html
     guid: f9ba85e6-ba8b-4a95-8dd6-6a6e4ce4b063
+    normalized_title: Генеричке класе
     src: genericke_03a_uvod.rst
     title: Генеричке класе
     type: reading
   - description: ''
     file: genericke_03ap_primer.html
     guid: 1d0adf05-1c6e-4964-b726-817f2d44c29b
+    normalized_title: Генеричке класе - решен пример
     src: genericke_03ap_primer.rst
     title: Генеричке класе - решен пример
     type: reading
   - description: ''
     file: genericke_03aq_kviz.html
     guid: 502783ab-c873-443e-99b5-ecbe00461a76
+    normalized_title: Генеричке класе и методи - квиз
     src: genericke_03aq_kviz.rst
     title: Генеричке класе и методи - квиз
     type: quiz
   - description: ''
     file: genericke_03az_zadaci.html
     guid: 2df5b53e-4aac-4af4-a1cf-898fc71c90ff
+    normalized_title: Генеричке класе - задаци
     src: genericke_03az_zadaci.rst
     title: Генеричке класе - задаци
     type: reading
@@ -245,83 +341,240 @@ lessons:
   title: 3.1 Генеричке класе, вишеструка употребљивост
 - activities:
   - description: ''
-    file: nasledjivanje_04a_izvedena_klasa.html
-    guid: d4c7077b-b234-4288-953e-791eb69497c5
-    src: nasledjivanje_04a_izvedena_klasa.rst
-    title: Појам наслеђивања
+    file: 04_nasledjivanje.html
+    guid: 7a887e9c-7990-4ff6-84cc-b94c1087d65b
+    normalized_title: Наслеђивање и полиморфизам
+    src: 04_nasledjivanje.rst
+    title: Наслеђивање и полиморфизам
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 04_nasledjivanje
+  guid: 3f1cc3e5-9fe0-4103-8a6c-9807335cbd91
+  normalized_title: 4 Наслеђивање и полиморфизам
+  title: 4 Наслеђивање и полиморфизам
+- activities:
+  - description: ''
+    file: nasl_04a_01_izvedene_klase.html
+    guid: 6ea06015-390f-442e-bd52-cf9827f26602
+    normalized_title: Основно о наслеђивању
+    src: nasl_04a_01_izvedene_klase.rst
+    title: Основно о наслеђивању
     type: reading
   - description: ''
-    file: nasledjivanje_04aq_kviz.html
+    file: nasl_04aq_kviz.html
     guid: 27c0de42-5f05-4726-81e7-7c0bf524834e
-    src: nasledjivanje_04aq_kviz.rst
-    title: Појам наслеђивања - квиз
+    normalized_title: Изведена класа - квиз
+    src: nasl_04aq_kviz.rst
+    title: Изведена класа - квиз
     type: quiz
   - description: ''
-    file: nasledjivanje_04az_zadaci.html
+    file: nasl_04az_zadaci.html
     guid: 7cd1fcda-bbc8-44f9-9847-51ebb1b87076
-    src: nasledjivanje_04az_zadaci.rst
-    title: Наслеђивање - задаци
-    type: reading
-  - description: ''
-    file: nasledjivanje_04a_virtuelne_funkcije.html
-    guid: a690d3fb-7f73-4c62-8bf8-652cefb1fd44
-    src: nasledjivanje_04a_virtuelne_funkcije.rst
-    title: Виртуелни методи
+    normalized_title: Изведена класа - задаци
+    src: nasl_04az_zadaci.rst
+    title: Изведена класа - задаци
     type: reading
   archived-activities: []
   description: ''
-  folder: 04a_nasledjivanje
+  folder: 04a_izvedene_klase
   guid: 56d2ffbe-adde-4eb4-a343-7c6653144936
-  normalized_title: 4.1 Наслеђивање класа
-  title: 4.1 Наслеђивање класа
+  normalized_title: 4.1 Основно о наслеђивању
+  title: 4.1 Основно о наслеђивању
 - activities:
   - description: ''
-    file: nasledjivanje_04b_dinamicki_polimorfizam.html
+    file: am_04b1_apstraktni_metodi.html
     guid: 46977a82-c010-4539-8140-6b6c069e0d5d
-    src: nasledjivanje_04b_dinamicki_polimorfizam.rst
-    title: Динамички полиморфизам
+    normalized_title: Апстрактни методи и класе
+    src: am_04b1_apstraktni_metodi.rst
+    title: Апстрактни методи и класе
     type: reading
   - description: ''
-    file: nasledjivanje_04bq_dinamicki_polimorfizam_kviz.html
+    file: am_04b2_primer_3d.html
+    guid: 3eb6a062-0d5d-402b-895d-ba5bf3dab528
+    normalized_title: Пример апстрактних метода  и класа
+    src: am_04b2_primer_3d.rst
+    title: Пример апстрактних метода  и класа
+    type: reading
+  - description: ''
+    file: am_04bq_kviz.html
     guid: 24ede43d-04fe-4d35-9732-5dfcab24e286
-    src: nasledjivanje_04bq_dinamicki_polimorfizam_kviz.rst
-    title: Динамички полиморфизам - квиз
+    normalized_title: Апстрактни методи и класе - квиз
+    src: am_04bq_kviz.rst
+    title: Апстрактни методи и класе - квиз
     type: quiz
   - description: ''
-    file: nasledjivanje_04bz_dinamicki_polimorfizam_zadaci.html
+    file: am_04bz_zadaci.html
     guid: 5e661ece-a910-469e-ba8a-82b1f70fd293
-    src: nasledjivanje_04bz_dinamicki_polimorfizam_zadaci.rst
-    title: Динамички полиморфизам - задаци
+    normalized_title: Апстрактни методи и класе - задаци
+    src: am_04bz_zadaci.rst
+    title: Апстрактни методи и класе - задаци
     type: reading
   archived-activities: []
   description: ''
-  folder: 04b_dinamicki_polimorfizam
+  folder: 04b_apstraktni_metodi_i_klase
   guid: 309ee94f-ec9a-4e0d-b52c-a521fbe361be
-  normalized_title: 4.2 Динамички полиморфизам
-  title: 4.2 Динамички полиморфизам
+  normalized_title: 4.2 Апстрактни методи и класе
+  title: 4.2 Апстрактни методи и класе
 - activities:
   - description: ''
-    file: nasledjivanje_04c_interfejsi.html
+    file: int_04c1_interfejsi.html
     guid: 01cdc952-831f-425d-9209-1f604239eb0c
-    src: nasledjivanje_04c_interfejsi.rst
+    normalized_title: Интерфејси
+    src: int_04c1_interfejsi.rst
     title: Интерфејси
     type: reading
   - description: ''
-    file: nasledjivanje_04cq_interfejsi_kviz.html
+    file: int_04c2_visetruko_nasledjivanje.html
+    guid: f07f9363-5c53-4408-ad44-309064c1b319
+    normalized_title: Вишеструко наслеђивање
+    src: int_04c2_visetruko_nasledjivanje.rst
+    title: Вишеструко наслеђивање
+    type: reading
+  - description: ''
+    file: int_04cq_visetruko_nasledjivanje_kviz.html
     guid: 8d096be2-3589-4e40-b923-8d20d524df77
-    src: nasledjivanje_04cq_interfejsi_kviz.rst
+    normalized_title: Интерфејси - квиз
+    src: int_04cq_visetruko_nasledjivanje_kviz.rst
     title: Интерфејси - квиз
     type: quiz
   - description: ''
-    file: nasledjivanje_04cz_interfejsi_zadaci.html
+    file: int_04cz_visetruko_nasledjivanje_zadaci.html
     guid: 6636573e-c861-4a6d-bbc3-e0ca28d4e95e
-    src: nasledjivanje_04cz_interfejsi_zadaci.rst
+    normalized_title: Интерфејси - задаци
+    src: int_04cz_visetruko_nasledjivanje_zadaci.rst
     title: Интерфејси - задаци
     type: reading
   archived-activities: []
   description: ''
   folder: 04c_interfejsi
-  guid: ddf8e487-cc44-428d-8b39-beb6d4ed8de0
-  normalized_title: 4.3 Интерфејси
-  title: 4.3 Интерфејси
+  guid: 97e9ed85-4ff2-4b13-a449-cfa0b8436781
+  normalized_title: 4.3 Интерфејси, вишеструко наслеђивање
+  title: 4.3 Интерфејси, вишеструко наслеђивање
+- activities:
+  - description: ''
+    file: vm_04d_01_modifikacija.html
+    guid: 5bdee971-9779-4040-917c-dc89845a7a48
+    normalized_title: Модификација базне класе
+    src: vm_04d_01_modifikacija.rst
+    title: Модификација базне класе
+    type: reading
+  - description: ''
+    file: vm_04d_02_virtuelni_metodi.html
+    guid: a690d3fb-7f73-4c62-8bf8-652cefb1fd44
+    normalized_title: Виртуелни методи
+    src: vm_04d_02_virtuelni_metodi.rst
+    title: Виртуелни методи
+    type: reading
+  - description: ''
+    file: vm_04dq_kviz.html
+    guid: 69f0d2c8-7b49-4307-bcd5-4761b06dca96
+    normalized_title: Виртуелни методи - квиз
+    src: vm_04dq_kviz.rst
+    title: Виртуелни методи - квиз
+    type: quiz
+  - description: ''
+    file: vm_04dz_primeri_zadaci.html
+    guid: e2436ecd-9770-4162-85ca-cd6a1bb484a8
+    normalized_title: Виртуелни методи - примери и задаци
+    src: vm_04dz_primeri_zadaci.rst
+    title: Виртуелни методи - примери и задаци
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 04d_virtuelni_metodi
+  guid: 3059206c-25f2-42b6-96ba-643333e3ee7d
+  normalized_title: 4.4  Виртуелни методи
+  title: 4.4  Виртуелни методи
+- activities:
+  - description: ''
+    file: 05_dp_primeri.html
+    guid: 09c8c4d1-c56d-4254-9a82-d49582033867
+    normalized_title: Динамички полиморфизам - примери
+    src: 05_dp_primeri.rst
+    title: Динамички полиморфизам - примери
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 05_dp_primeri
+  guid: f0b23dae-4ab4-469c-a758-188a7e667b32
+  normalized_title: 5 Динамички полиморфизам - примери
+  title: 5 Динамички полиморфизам - примери
+- activities:
+  - description: ''
+    file: dpp_05a_kretanje_tela.html
+    guid: 9ce24b73-2f37-4797-bb41-6bb397bc057a
+    normalized_title: Различита кретања
+    src: dpp_05a_kretanje_tela.rst
+    title: Различита кретања
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 05a_dp_kretanje_tela
+  guid: 263701f8-aa40-4676-8560-87e200cd351c
+  normalized_title: 5.1 Различита кретања
+  title: 5.1 Различита кретања
+- activities:
+  - description: ''
+    file: dpp_05b_kviz_pr.html
+    guid: e6798c96-6997-4b77-84cc-59cb292687db
+    normalized_title: Квиз
+    src: dpp_05b_kviz_pr.rst
+    title: Квиз
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 05b_dp_kviz
+  guid: f21609cd-0af6-4f1f-9f05-03dedec7aced
+  normalized_title: 5.2 Квиз
+  title: 5.2 Квиз
+- activities:
+  - description: ''
+    file: dpp_05c1_funkcije.html
+    guid: 03d5961b-044f-43e3-ba19-cfd18481f716
+    normalized_title: Класа Функција и изведене класе
+    src: dpp_05c1_funkcije.rst
+    title: Класа Функција и изведене класе
+    type: reading
+  - description: ''
+    file: dpp_05c2_parser.html
+    guid: d59b7010-b9a1-4595-b512-705446c4bf8f
+    normalized_title: Парсер - креатор функција
+    src: dpp_05c2_parser.rst
+    title: Парсер - креатор функција
+    type: reading
+  - description: ''
+    file: dpp_05c3_crtanje_grafika.html
+    guid: e096cd07-11f7-4909-a6dc-fac8270f24df
+    normalized_title: Апликација за цртање графика
+    src: dpp_05c3_crtanje_grafika.rst
+    title: Апликација за цртање графика
+    type: reading
+  - description: ''
+    file: dpp_05c4_nule_funkcije.html
+    guid: cfb3ed22-c7b3-4536-a3ae-19a158cdbb47
+    normalized_title: Апликација за израчунавање нула функције
+    src: dpp_05c4_nule_funkcije.rst
+    title: Апликација за израчунавање нула функције
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 05c_dp_vrednost_funkcije
+  guid: bb8329e2-089f-4f7c-a0dd-384b6a8ab900
+  normalized_title: 5.3 Вредност функције
+  title: 5.3 Вредност функције
+- activities:
+  - description: ''
+    file: 06_proj_primeri.html
+    guid: eb0bf24b-ba09-4406-ad8b-0accfe2dbf92
+    normalized_title: Примери пројектних задатака
+    src: 06_proj_primeri.rst
+    title: Примери пројектних задатака
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 06_primeri_proj_zadataka
+  guid: a1c034f2-776a-4ab3-ba94-9fdd942c95f8
+  normalized_title: 6 Примери пројектних задатака
+  title: 6 Примери пројектних задатака
 title: Програмирање за трећи разред специјализованих ИТ одељења

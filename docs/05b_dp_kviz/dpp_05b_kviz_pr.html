@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Квиз</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'specit3_oop';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'specit3_oop';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_uvod>
+                    <h5>1. Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_klase_i_objekti>
+                    <h5>2 Класе и објекти</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_klase_i_objekti/02_klase_i_objekti.html><div class="studioLecture" id=activity-02_klase_i_objekti><i class="fas fa-file-alt activity-icon"></i>Класе и објекти</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02a_klase_osnovni_pojmovi>
+                    <h5>2.1 Основни појмови о класама и објектима</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02a_klase_osnovni_pojmovi/klase_02a_osnovni_pojmovi.html><div class="studioLecture" id=activity-klase_02a_osnovni_pojmovi><i class="fas fa-file-alt activity-icon"></i>Основни појмови о класама и објектима</div></a>
+                <a href=../02a_klase_osnovni_pojmovi/klase_02aq_osnovni_pojmovi_kviz.html><div class="studioLecture" id=activity-klase_02aq_osnovni_pojmovi_kviz><i class="fas fa-file-alt activity-icon"></i>Класе и објекти - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02b_klase_enkapsulacija>
+                    <h5>2.2 Енкапсулација</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02b_klase_enkapsulacija/klase_02b_enkapsulacija.html><div class="studioLecture" id=activity-klase_02b_enkapsulacija><i class="fas fa-file-alt activity-icon"></i>Енкапсулација</div></a>
+                <a href=../02b_klase_enkapsulacija/klase_02bq_enkapsulacija_kviz.html><div class="studioLecture" id=activity-klase_02bq_enkapsulacija_kviz><i class="far fa-question-circle activity-icon"></i>Енкапсулација - квиз</div></a>
+                <a href=../02b_klase_enkapsulacija/klase_02bz_enkapsulacija_zadaci.html><div class="studioLecture" id=activity-klase_02bz_enkapsulacija_zadaci><i class="fas fa-file-alt activity-icon"></i>Енкапсулација - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02c_klase_staticki_metodi>
+                    <h5>2.3 Статички и нестатички методи</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02c_klase_staticki_metodi/klase_02c_staticki_metodi.html><div class="studioLecture" id=activity-klase_02c_staticki_metodi><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе</div></a>
+                <a href=../02c_klase_staticki_metodi/klase_02cq_staticki_metodi_kviz.html><div class="studioLecture" id=activity-klase_02cq_staticki_metodi_kviz><i class="far fa-question-circle activity-icon"></i>Чланови објекта и чланови класе - квиз</div></a>
+                <a href=../02c_klase_staticki_metodi/klase_02cz_staticki_metodi_zadaci.html><div class="studioLecture" id=activity-klase_02cz_staticki_metodi_zadaci><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02d_klase_stat_polimorfizam>
+                    <h5>2.4 Статички полиморфизам, оператори</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02d_klase_stat_polimorfizam/klase_02d_statpolim_operatori.html><div class="studioLecture" id=activity-klase_02d_statpolim_operatori><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори</div></a>
+                <a href=../02d_klase_stat_polimorfizam/klase_02dq_statpolim_operatori_kviz.html><div class="studioLecture" id=activity-klase_02dq_statpolim_operatori_kviz><i class="far fa-question-circle activity-icon"></i>Статички полиморфизам, оператори - квиз</div></a>
+                <a href=../02d_klase_stat_polimorfizam/klase_02dz_statpolim_operatori_zadaci.html><div class="studioLecture" id=activity-klase_02dz_statpolim_operatori_zadaci><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02e_klase_apstrakcija>
+                    <h5>2.5 Апстракција, индексери</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02e_klase_apstrakcija/klase_02e_apstrakcija.html><div class="studioLecture" id=activity-klase_02e_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери</div></a>
+                <a href=../02e_klase_apstrakcija/klase_02eq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02eq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција, индексери - квиз</div></a>
+                <a href=../02e_klase_apstrakcija/klase_02ez_apstrakcija_zadaci.html><div class="studioLecture" id=activity-klase_02ez_apstrakcija_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02f_klase_dizajniranje>
+                    <h5>2.6 Пример дизајнирања класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02f_klase_dizajniranje/klase_02f_dizajniranje.html><div class="studioLecture" id=activity-klase_02f_dizajniranje><i class="fas fa-file-alt activity-icon"></i>Пример дизајнирања класе</div></a>
+                <a href=../02f_klase_dizajniranje/klase_02fz_dizajniranje_zadaci.html><div class="studioLecture" id=activity-klase_02fz_dizajniranje_zadaci><i class="fas fa-file-alt activity-icon"></i>Дизајнирање класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02g_klase_modularnost>
+                    <h5>2.7 Модуларност, библиотеке</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02g_klase_modularnost/klase_02g1_modularnost_bibl.html><div class="studioLecture" id=activity-klase_02g1_modularnost_bibl><i class="fas fa-file-alt activity-icon"></i>Модуларност, библиотеке</div></a>
+                <a href=../02g_klase_modularnost/klase_02g2_vise_aplikacija.html><div class="studioLecture" id=activity-klase_02g2_vise_aplikacija><i class="fas fa-file-alt activity-icon"></i>Прилог - графичка апликација</div></a>
+                <a href=../02g_klase_modularnost/klase_02gz_modularnost_zadaci.html><div class="studioLecture" id=activity-klase_02gz_modularnost_zadaci><i class="fas fa-file-alt activity-icon"></i>Модуларност - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02h_klase_grupe>
+                    <h5>2.8 Групе класа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02h_klase_grupe/klase_02h1_povezane.html><div class="studioLecture" id=activity-klase_02h1_povezane><i class="fas fa-file-alt activity-icon"></i>Повезане класе</div></a>
+                <a href=../02h_klase_grupe/klase_02h2_nepovezane.html><div class="studioLecture" id=activity-klase_02h2_nepovezane><i class="fas fa-file-alt activity-icon"></i>Неповезане класе</div></a>
+                <a href=../02h_klase_grupe/klase_02h3_grupe.html><div class="studioLecture" id=activity-klase_02h3_grupe><i class="fas fa-file-alt activity-icon"></i>О распоређивању класа у модуле</div></a>
+                <a href=../02h_klase_grupe/klase_02hq_grupe_kviz.html><div class="studioLecture" id=activity-klase_02hq_grupe_kviz><i class="far fa-question-circle activity-icon"></i>Групе класа - квиз</div></a>
+                <a href=../02h_klase_grupe/klase_02hz_grupe_zadaci.html><div class="studioLecture" id=activity-klase_02hz_grupe_zadaci><i class="fas fa-file-alt activity-icon"></i>Групе класа - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_genericke_klase>
+                    <h5>3 Генеричке класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_genericke_klase/03_genericke_klase.html><div class="studioLecture" id=activity-03_genericke_klase><i class="fas fa-file-alt activity-icon"></i>Генеричке класе</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03a_genericke_klase>
+                    <h5>3.1 Генеричке класе, вишеструка употребљивост</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03a_genericke_klase/genericke_03a_uvod.html><div class="studioLecture" id=activity-genericke_03a_uvod><i class="fas fa-file-alt activity-icon"></i>Генеричке класе</div></a>
+                <a href=../03a_genericke_klase/genericke_03ap_primer.html><div class="studioLecture" id=activity-genericke_03ap_primer><i class="fas fa-file-alt activity-icon"></i>Генеричке класе - решен пример</div></a>
+                <a href=../03a_genericke_klase/genericke_03aq_kviz.html><div class="studioLecture" id=activity-genericke_03aq_kviz><i class="far fa-question-circle activity-icon"></i>Генеричке класе и методи - квиз</div></a>
+                <a href=../03a_genericke_klase/genericke_03az_zadaci.html><div class="studioLecture" id=activity-genericke_03az_zadaci><i class="fas fa-file-alt activity-icon"></i>Генеричке класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_nasledjivanje>
+                    <h5>4 Наслеђивање и полиморфизам</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_nasledjivanje/04_nasledjivanje.html><div class="studioLecture" id=activity-04_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Наслеђивање и полиморфизам</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04a_izvedene_klase>
+                    <h5>4.1 Основно о наслеђивању</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04a_izvedene_klase/nasl_04a_01_izvedene_klase.html><div class="studioLecture" id=activity-nasl_04a_01_izvedene_klase><i class="fas fa-file-alt activity-icon"></i>Основно о наслеђивању</div></a>
+                <a href=../04a_izvedene_klase/nasl_04aq_kviz.html><div class="studioLecture" id=activity-nasl_04aq_kviz><i class="far fa-question-circle activity-icon"></i>Изведена класа - квиз</div></a>
+                <a href=../04a_izvedene_klase/nasl_04az_zadaci.html><div class="studioLecture" id=activity-nasl_04az_zadaci><i class="fas fa-file-alt activity-icon"></i>Изведена класа - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04b_apstraktni_metodi_i_klase>
+                    <h5>4.2 Апстрактни методи и класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04b_apstraktni_metodi_i_klase/am_04b1_apstraktni_metodi.html><div class="studioLecture" id=activity-am_04b1_apstraktni_metodi><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода  и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04bq_kviz.html><div class="studioLecture" id=activity-am_04bq_kviz><i class="far fa-question-circle activity-icon"></i>Апстрактни методи и класе - квиз</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04bz_zadaci.html><div class="studioLecture" id=activity-am_04bz_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
+                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
+                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
+                <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04d_virtuelni_metodi>
+                    <h5>4.4  Виртуелни методи</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04d_virtuelni_metodi/vm_04d_01_modifikacija.html><div class="studioLecture" id=activity-vm_04d_01_modifikacija><i class="fas fa-file-alt activity-icon"></i>Модификација базне класе</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04d_02_virtuelni_metodi.html><div class="studioLecture" id=activity-vm_04d_02_virtuelni_metodi><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04dq_kviz.html><div class="studioLecture" id=activity-vm_04dq_kviz><i class="far fa-question-circle activity-icon"></i>Виртуелни методи - квиз</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04dz_primeri_zadaci.html><div class="studioLecture" id=activity-vm_04dz_primeri_zadaci><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи - примери и задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_dp_primeri>
+                    <h5>5 Динамички полиморфизам - примери</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_dp_primeri/05_dp_primeri.html><div class="studioLecture" id=activity-05_dp_primeri><i class="fas fa-file-alt activity-icon"></i>Динамички полиморфизам - примери</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05a_dp_kretanje_tela>
+                    <h5>5.1 Различита кретања</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05a_dp_kretanje_tela/dpp_05a_kretanje_tela.html><div class="studioLecture" id=activity-dpp_05a_kretanje_tela><i class="fas fa-file-alt activity-icon"></i>Различита кретања</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05b_dp_kviz>
+                    <h5>5.2 Квиз</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05b_dp_kviz/dpp_05b_kviz_pr.html><div class="studioLecture" id=activity-dpp_05b_kviz_pr><i class="fas fa-file-alt activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05c_dp_vrednost_funkcije>
+                    <h5>5.3 Вредност функције</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_primeri_proj_zadataka>
+                    <h5>6 Примери пројектних задатака</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_primeri_proj_zadataka/06_proj_primeri.html><div class="studioLecture" id=activity-06_proj_primeri><i class="fas fa-file-alt activity-icon"></i>Примери пројектних задатака</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Квиз<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>У овом примеру представљамо апликацију Квиз. То је конзолна апликација, која омогућава кориснику
+да одговара на питања из учитаног квиза, а када заврши са одговарањем да види свој резултат.</p>
+<p>Апликација приликом покретања нуди корисника да зада путању до фајла са питањима, а затим учитава
+садржај квиза и приказује прво питање. Корисник у сваком тренутку може да пређе на претходно или
+следеће питање притиском на тастере <cite>PageUp</cite> и <cite>PageDown</cite>. На текућем питању корисник може да зада,
+или да промени претходно дати одговор.</p>
+<ul class="simple">
+<li><p>У питањима са више понуђених одговора, корисник се креће кроз одговоре стрелицама горе/доле.
+Избор одгвоора се врши притиском на тастер <cite>Space</cite>. Постоје две подврсте овог типа питања, а то
+су питања у којима треба изабрати тачно један одговор и питања у којима треба изабрати нула или
+више понуђених одговора.</p></li>
+<li><p>У питањима у којима треба да се упише реч, корисник може да користи тастере <cite>Backspace</cite>, <cite>Delete</cite>,
+стрелице лево и десно, као и слова и цифре.</p></li>
+<li><p>У питањима у којима треба да се одреди редослед датих појмова, корисник такође може да користи
+тастере <cite>Backspace</cite>, <cite>Delete</cite>, стрелице лево/десно и почетна слова енглеске абецеде (онолико слова
+колико има појмова).</p></li>
+</ul>
+<p>Притиском на тастер <cite>Enter</cite> корисник завршава са одговарањем и програм исписује број освојених поена.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Свака врста питања има своје специфичности, тако да се намеће формирање апстрактне класе <code class="docutils literal notranslate"><span class="pre">Question</span></code>,
+из које ће бити изведене класе за појединачне врсте питања. Те класе су:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ABCQuestion</span></code> за питања са више понуђених одговора од којих је један тачан</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MultipleAnswersQuestion</span></code> за питања са више понуђених одговора, од којих омже бити било који број тачних</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FillInTheBlanksQuestion</span></code> за питања у којима треба да се упише реч</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ParsonsQuestion</span></code> за питања у којима треба да се одреди редослед датих појмова</p></li>
+</ul>
+<p>Свака од охих класа на свој начин приказује питање, тумачи улаз корисника, бодује одговор, учитава
+питање из фајла и претвара га у специјално форматиран текст ради уписа у фајл. Ове радње се
+најједноставније остварују помоћу метода који су у базној класи апстрактни, а у изведеним класама
+имплементирани на одговарајући начин. Детаљи имплементације могу да се виде у изворном коду.</p>
+<p><strong>Садржај фајла</strong> <code class="docutils literal notranslate"><span class="pre">Question.cs</span></code></p>
+
+<div data-childcomponent="quiz_question.cs" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=quiz_question.cs data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.IO;
+
+namespace Quiz
+{
+    public abstract class Question
+    {
+        protected string questionText;
+        protected int points;
+        public static Question Sample(string type)
+        {
+            Question q = null;
+            switch (type)
+            {
+                case &quot;ABC&quot;: q = ABCQuestion.Sample(); break;
+                case &quot;MA&quot;: q = MultipleAnswersQuestion.Sample(); break;
+                case &quot;FITB&quot;: q = FillInTheBlanksQuestion.Sample(); break;
+                case &quot;Parsons&quot;: q = ParsonsQuestion.Sample(); break;
+            }
+            return q;
+        }
+        public static Question FromStream(StreamReader sr)
+        {
+            Question q = null;
+            string t = sr.ReadLine();
+            switch (t)
+            {
+                case &quot;ABC&quot;: q = ABCQuestion.FromStream(sr); break;
+                case &quot;MA&quot;: q = MultipleAnswersQuestion.FromStream(sr); break;
+                case &quot;FITB&quot;: q = FillInTheBlanksQuestion.FromStream(sr); break;
+                case &quot;Parsons&quot;: q = ParsonsQuestion.FromStream(sr); break;
+            }
+            return q;
+        }
+        abstract public string ToText();
+        abstract public void Display();
+        abstract public void HandleInput(ConsoleKeyInfo ki);
+        abstract public int Evaluate();
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    <div data-component="reveal" id="dugme_quiz_ABCQuestion.cs"   data-showtitle="Садржај фајла ABCQuestion.cs" data-hidetitle="Сакриј садржај фајла ABCQuestion.cs">
+    
+<div data-childcomponent="quiz_ABCQuestion.cs" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=quiz_ABCQuestion.cs data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+
+namespace Quiz
+{
+    public class ABCQuestion : Question
+    {
+        string[] answers;
+        int selectedAnswer;
+        int cursorPosition;
+        int correctAnswer;
+
+        private ABCQuestion()
+        {
+            selectedAnswer = -1;
+            cursorPosition = 0;
+        }
+
+        public static ABCQuestion Sample()
+        {
+            ABCQuestion q = new ABCQuestion()
+            {
+                questionText = &quot;Koliko je 2+2 ?&quot;,
+                points = 1,
+                answers = new string[] { &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot; },
+                selectedAnswer = -1,
+                cursorPosition = 0,
+                correctAnswer = 1
+            };
+            return q;
+        }
+        public static new Question FromStream(StreamReader sr)
+        {
+            ABCQuestion q = new ABCQuestion();
+            q.questionText = sr.ReadLine();
+            int n = int.Parse(sr.ReadLine());
+            q.answers = new string[n];
+            for (int i = 0; i &lt; n; i++)
+                q.answers[i] = sr.ReadLine();
+
+            q.correctAnswer = int.Parse(sr.ReadLine());
+            q.points = int.Parse(sr.ReadLine());
+
+            return q;
+        }
+
+        override public string ToText()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(&quot;ABC&quot;); sb.Append(&quot;\n&quot;);
+            sb.Append(questionText); sb.Append(&quot;\n&quot;);
+            sb.Append(answers.Length); sb.Append(&quot;\n&quot;);
+            foreach (string ans in answers)
+            {
+                sb.Append(ans); sb.Append(&quot;\n&quot;);
+            }
+            sb.Append(correctAnswer); sb.Append(&quot;\n&quot;);
+            sb.Append(points); sb.Append(&quot;\n&quot;);
+            return sb.ToString();
+        }
+        override public void Display()
+        {
+            Console.SetCursorPosition(0, 0);
+            string cursor = &quot;»&quot;;
+            string noCursor = &quot; &quot;;
+            string selection = &quot;[✓]&quot;;  // карактер &quot;✓&quot; je \u2713;
+            string noSelection = &quot;[ ]&quot;;
+            Console.WriteLine(questionText);
+            char option = &apos;A&apos;;
+            for (int i = 0; i &lt; answers.Length; i++)
+            {
+                string cursorMark = (i == cursorPosition) ? cursor : noCursor;
+                string selectionMark = (i == selectedAnswer) ? selection : noSelection;
+                Console.WriteLine(&quot;{0} {1} {2}: {3}&quot;, cursorMark, selectionMark, option, answers[i]);
+                option++;
+            }
+        }
+        public override void HandleInput(ConsoleKeyInfo ki)
+        {
+            int n = answers.Length;
+            switch (ki.Key)
+            {
+                case ConsoleKey.LeftArrow:
+                    cursorPosition = (cursorPosition + n - 1) % n;
+                    break;
+                case ConsoleKey.UpArrow:
+                    cursorPosition = (cursorPosition + n - 1) % n;
+                    break;
+                case ConsoleKey.RightArrow:
+                    cursorPosition = (cursorPosition + 1) % n;
+                    break;
+                case ConsoleKey.DownArrow:
+                    cursorPosition = (cursorPosition + 1) % n;
+                    break;
+                case ConsoleKey.Spacebar:
+                    selectedAnswer = cursorPosition;
+                    break;
+            }
+        }
+
+        public override int Evaluate()
+        {
+            return (selectedAnswer == correctAnswer) ? points : 0;
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    
+    <div data-component="reveal" id="dugme_quiz_FillInTheBlanksQuestion.cs"   data-showtitle="Садржај фајла FillInTheBlanksQuestion.cs" data-hidetitle="Сакриј садржај фајла FillInTheBlanksQuestion.cs">
+    
+<div data-childcomponent="quiz_FillInTheBlanksQuestion.cs" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=quiz_FillInTheBlanksQuestion.cs data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+
+namespace Quiz
+{
+    public class FillInTheBlanksQuestion : Question
+    {
+        string userAnswer;
+        string correctAnswer;
+        int cursorPosition = 0;
+        private FillInTheBlanksQuestion()
+        {
+            userAnswer = &quot;&quot;;
+            cursorPosition = 0;
+        }
+        public static FillInTheBlanksQuestion Sample()
+        {
+            FillInTheBlanksQuestion q = new FillInTheBlanksQuestion()
+            {
+                questionText = &quot;Upisi rec koja nedostaje: ko rako rani, dve srece &quot;,
+                userAnswer = &quot;&quot;,
+                correctAnswer = &quot;^[Gg]rabi|GRABI$&quot;,
+                cursorPosition = 0,
+                points = 1
+            };
+            return q;
+        }
+        public static new Question FromStream(StreamReader sr)
+        {
+            FillInTheBlanksQuestion q = new FillInTheBlanksQuestion();
+            q.questionText = sr.ReadLine();
+            q.correctAnswer = sr.ReadLine();
+            q.points = int.Parse(sr.ReadLine());
+            return q;
+        }
+        override public string ToText()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(&quot;FITB&quot;); sb.Append(&quot;\n&quot;);
+            sb.Append(questionText); sb.Append(&quot;\n&quot;);
+            sb.Append(correctAnswer); sb.Append(&quot;\n&quot;);
+            sb.Append(points); sb.Append(&quot;\n&quot;);
+            return sb.ToString();
+        }
+        override public void Display()
+        {
+            Console.SetCursorPosition(0, 0);
+            Console.WriteLine(questionText);
+            Console.WriteLine();
+            Console.Write(&quot;Odgovor: {0} &quot;, userAnswer);
+            int x, y;
+            (x, y) = Console.GetCursorPosition();
+            Console.SetCursorPosition(x + cursorPosition - userAnswer.Length - 1, y);
+        }
+        public override void HandleInput(ConsoleKeyInfo ki)
+        {
+            int n = userAnswer.Length;
+            switch (ki.Key)
+            {
+                case ConsoleKey.Backspace:
+                    if (cursorPosition &gt; 0)
+                    {
+                        userAnswer = userAnswer.Remove(cursorPosition - 1, 1);
+                        cursorPosition--;
+                    }
+                    break;
+                case ConsoleKey.Delete:
+                    if (cursorPosition &lt; n)
+                    {
+                        userAnswer = userAnswer.Remove(cursorPosition, 1);
+                    }
+                    break;
+                case ConsoleKey.LeftArrow:
+                    if (cursorPosition &gt; 0)
+                    {
+                        cursorPosition--;
+                    }
+                    break;
+                case ConsoleKey.RightArrow:
+                    if (cursorPosition &lt; n)
+                    {
+                        cursorPosition++;
+                    }
+                    break;
+                default:
+                    if (char.IsLetterOrDigit(ki.KeyChar))
+                    {
+                        userAnswer = userAnswer.Insert(cursorPosition, ki.KeyChar.ToString());
+                        cursorPosition++;
+                    }
+                    break;
+            }
+        }
+
+        public override int Evaluate()
+        {
+            Regex rCorrectAnswer = new Regex(correctAnswer);
+            return (rCorrectAnswer.IsMatch(userAnswer)) ? points : 0;
+            //return (userAnswer == correctAnswer) ? points : 0;
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    
+    <div data-component="reveal" id="dugme_quiz_MultipleAnswersQuestion.cs"   data-showtitle="Садржај фајла MultipleAnswersQuestion.cs" data-hidetitle="Сакриј садржај фајла MultipleAnswersQuestion.cs">
+    
+<div data-childcomponent="quiz_MultipleAnswersQuestion.cs" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=quiz_MultipleAnswersQuestion.cs data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+
+namespace Quiz
+{
+    public class MultipleAnswersQuestion : Question
+    {
+        string[] answers;
+        bool[] selectedAnswers;
+        bool[] correctAnswers;
+        int cursorPosition;
+        private MultipleAnswersQuestion ()
+        {
+            cursorPosition = 0;
+        }
+        public static MultipleAnswersQuestion Sample()
+        {
+            MultipleAnswersQuestion q = new MultipleAnswersQuestion();
+            q.questionText = &quot;Koji izrazi su jednaki 4? (zaokruzi sve tacne odgovore)&quot;;
+            q.points = 1;
+            q.answers = new string[] { &quot;3+3&quot;, &quot;3+2&quot;, &quot;3+1&quot;, &quot;2+2&quot; };
+            q.selectedAnswers = new bool[4];
+            q.correctAnswers = new bool[4] { false, false, true, true };
+            q.cursorPosition = 0;
+            return q;
+        }
+        public static new Question FromStream(StreamReader sr)
+        {
+            MultipleAnswersQuestion q = new MultipleAnswersQuestion();
+            q.questionText = sr.ReadLine();
+            int n = int.Parse(sr.ReadLine());
+            q.answers = new string[n];
+            q.selectedAnswers = new bool[n];
+            q.correctAnswers = new bool[n];
+            for (int i = 0; i &lt; n; i++)
+                q.answers[i] = sr.ReadLine();
+            for (int i = 0; i &lt; n; i++)
+            {
+                string s = sr.ReadLine();
+                q.correctAnswers[i] = (s == &quot;1&quot;);
+            }
+            q.points = int.Parse(sr.ReadLine());
+            q.cursorPosition = 0;
+            return q;
+        }
+        override public string ToText()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(&quot;MA&quot;); sb.Append(&quot;\n&quot;);
+            sb.Append(questionText); sb.Append(&quot;\n&quot;);
+            sb.Append(answers.Length); sb.Append(&quot;\n&quot;);
+
+            foreach (string ans in answers)
+            {
+                sb.Append(ans); sb.Append(&quot;\n&quot;);
+            }
+            foreach (bool correctAns in correctAnswers)
+            {
+                sb.Append(correctAns ? &quot;1&quot; : &quot;0&quot;); sb.Append(&quot;\n&quot;);
+            }
+            sb.Append(points); sb.Append(&quot;\n&quot;);
+            return sb.ToString();
+        }
+
+        override public void Display()
+        {
+            Console.SetCursorPosition(0, 0);
+            string cursor = &quot;»&quot;;
+            string noCursor = &quot; &quot;;
+            string selection = &quot;[✓]&quot;;  // карактер &quot;✓&quot; je \u2713;
+            string noSelection = &quot;[ ]&quot;;
+            Console.WriteLine(questionText);
+            char option = &apos;A&apos;;
+            for (int i = 0; i &lt; answers.Length; i++)
+            {
+                string cursorMark = (i == cursorPosition) ? cursor : noCursor;
+                string selectionMark = (selectedAnswers[i]) ? selection : noSelection;
+                Console.WriteLine(&quot;{0} {1} {2}: {3}&quot;, cursorMark, selectionMark, option, answers[i]);
+                option++;
+            }
+        }
+        public override void HandleInput(ConsoleKeyInfo ki)
+        {
+            int n = answers.Length;
+            switch (ki.Key)
+            {
+                case ConsoleKey.LeftArrow:
+                    cursorPosition = (cursorPosition + n - 1) % n;
+                    break;
+                case ConsoleKey.UpArrow:
+                    cursorPosition = (cursorPosition + n - 1) % n;
+                    break;
+                case ConsoleKey.RightArrow:
+                    cursorPosition = (cursorPosition + 1) % n;
+                    break;
+                case ConsoleKey.DownArrow:
+                    cursorPosition = (cursorPosition + 1) % n;
+                    break;
+                case ConsoleKey.Spacebar:
+                    selectedAnswers[cursorPosition] = !selectedAnswers[cursorPosition];
+                    break;
+            }
+        }
+
+        public override int Evaluate()
+        {
+            bool allCorrect = true;
+            int n = answers.Length;
+            for (int i = 0; i &lt; n; i++)
+                if (selectedAnswers[i] != correctAnswers[i])
+                    allCorrect = false;
+
+            return allCorrect ? points : 0;
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    
+    <div data-component="reveal" id="dugme_quiz_ParsonsQuestion.cs"   data-showtitle="Садржај фајла ParsonsQuestion.cs" data-hidetitle="Сакриј садржај фајла ParsonsQuestion.cs">
+    
+<div data-childcomponent="quiz_ParsonsQuestion.cs" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=quiz_ParsonsQuestion.cs data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+
+namespace Quiz
+{
+    public class ParsonsQuestion : Question
+    {
+        string[] items;
+        bool[] selected;
+        string userAnswer = &quot;&quot;;
+        string correctOrder;
+        int cursorPosition;
+        public static ParsonsQuestion Sample()
+        {
+            ParsonsQuestion q = new ParsonsQuestion()
+            {
+                questionText = &quot;Poredjaj od najmladjeg do najstarijeg&quot;,
+                items = new string[] { &quot;deda&quot;, &quot;dete&quot;, &quot;covek&quot; },
+                selected = new bool[3],
+                userAnswer = &quot;&quot;,
+                correctOrder = &quot;BCA&quot;,
+                cursorPosition = 0,
+                points = 1
+            };
+            return q;
+        }
+        public static new Question FromStream(StreamReader sr)
+        {
+            ParsonsQuestion q = new ParsonsQuestion();
+            q.questionText = sr.ReadLine();
+            int n = int.Parse(sr.ReadLine());
+            q.items = new string[n];
+            q.selected = new bool[n];
+            for (int i = 0; i &lt; n; i++)
+                q.items[i] = sr.ReadLine();
+
+            q.correctOrder = sr.ReadLine();
+            q.points = int.Parse(sr.ReadLine());
+
+            return q;
+        }
+        override public string ToText()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(&quot;Parsons&quot;); sb.Append(&quot;\n&quot;);
+            sb.Append(questionText); sb.Append(&quot;\n&quot;);
+            sb.Append(items.Length); sb.Append(&quot;\n&quot;);
+            foreach (string item in items)
+            {
+                sb.Append(item); sb.Append(&quot;\n&quot;);
+            }
+            sb.Append(correctOrder); sb.Append(&quot;\n&quot;);
+            sb.Append(points); sb.Append(&quot;\n&quot;);
+            return sb.ToString();
+        }
+        override public void Display()
+        {
+            Console.SetCursorPosition(0, 0);
+            string noCursor = &quot; &quot;;
+            string selection = &quot;[X]&quot;;
+            string noSelection = &quot;[ ]&quot;;
+            Console.WriteLine(questionText);
+            char option = &apos;A&apos;;
+            string options = &quot;&quot;;
+            for (int i = 0; i &lt; items.Length; i++)
+            {
+                string selectionMark = selected[i] ? selection : noSelection;
+                Console.WriteLine(&quot;{0} {1} {2}: {3}&quot;, noCursor, selectionMark, option, items[i]);
+                options += option + &quot;, &quot;;
+                option++;
+            }
+            Console.WriteLine(&quot;Unesi slova {0}u potrebnom redosledu.&quot;, options);
+            Console.Write(&quot;Odgovor: {0} &quot;, userAnswer);
+            int x, y;
+            (x, y) = Console.GetCursorPosition();
+            Console.SetCursorPosition(x + cursorPosition - userAnswer.Length - 1, y);
+        }
+        public override void HandleInput(ConsoleKeyInfo ki)
+        {
+            int n = userAnswer.Length;
+            int i;
+            switch (ki.Key)
+            {
+                case ConsoleKey.Backspace:
+                    if (cursorPosition &gt; 0)
+                    {
+                        cursorPosition--;
+                        i = userAnswer[cursorPosition] - &apos;A&apos;;
+                        selected[i] = false;
+                        userAnswer = userAnswer.Remove(cursorPosition, 1);
+                    }
+                    break;
+                case ConsoleKey.Delete:
+                    if (cursorPosition &lt; n)
+                    {
+                        i = userAnswer[cursorPosition] - &apos;A&apos;;
+                        selected[i] = false;
+                        userAnswer = userAnswer.Remove(cursorPosition, 1);
+                    }
+                    break;
+                case ConsoleKey.LeftArrow:
+                    if (cursorPosition &gt; 0)
+                    {
+                        cursorPosition--;
+                    }
+                    break;
+                case ConsoleKey.RightArrow:
+                    if (cursorPosition &lt; n)
+                    {
+                        cursorPosition++;
+                    }
+                    break;
+                default:
+                    if (char.IsLetter(ki.KeyChar))
+                    {
+                        char ch = char.ToUpper(ki.KeyChar);
+                        i = ch - &apos;A&apos;;
+                        if (0 &lt;= i &amp;&amp; i &lt; selected.Length &amp;&amp; !selected[i])
+                        {
+                            selected[i] = true;
+                            userAnswer = userAnswer.Insert(cursorPosition, ch.ToString());
+                            cursorPosition++;
+                        }
+                    }
+                    break;
+            }
+        }
+
+        public override int Evaluate()
+        {
+            return (userAnswer == correctOrder) ? points : 0;
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Потребна нам је и једна централна класа, која садржи колекцију питања, омогућава учитавање квиза
+из фајла, чување квиза у фајлу (мада не садржи едитор питања), кретање кроз питања, сабирање и
+приказ поена. Ту класу смо назвали <code class="docutils literal notranslate"><span class="pre">Quiz</span></code>.</p>
+<p>У класи <code class="docutils literal notranslate"><span class="pre">Quiz</span></code> се не помињу класе које представљају појединачне врсте питања, већ се користи
+само апстрактна базна класа <code class="docutils literal notranslate"><span class="pre">Question</span></code>, преко које се позивају методи за приказ, руковање
+улазом корисника, бодовање итд. Пошто не мора да води рачуна врстама питања, класа <code class="docutils literal notranslate"><span class="pre">Quiz</span></code> је
+прилично једноставна.</p>
+<p><strong>Садржај фајла</strong> <code class="docutils literal notranslate"><span class="pre">Quiz.cs</span></code></p>
+
+<div data-childcomponent="quiz_Quiz.cs" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=quiz_Quiz.cs data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+
+namespace Quiz
+{
+    class Quiz
+    {
+        List&lt;Question&gt; questions;
+
+        public static Quiz Sample()
+        {
+            Quiz q = new Quiz();
+            q.questions = new List&lt;Question&gt;();
+            q.questions.Add(Question.Sample(&quot;ABC&quot;));
+            q.questions.Add(Question.Sample(&quot;MA&quot;));
+            q.questions.Add(Question.Sample(&quot;FITB&quot;));
+            q.questions.Add(Question.Sample(&quot;Parsons&quot;));
+            return q;
+        }
+        public static Quiz FromStream(StreamReader sr)
+        {
+            Quiz q = new Quiz();
+            int n = int.Parse(sr.ReadLine());
+            q.questions = new List&lt;Question&gt;();
+            for (int i = 0; i &lt; n; i++)
+                q.questions.Add(Question.FromStream(sr));
+
+            return q;
+        }
+        public string ToText()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(questions.Count);
+            sb.Append(&quot;\n&quot;);
+            foreach (Question q in questions)
+            {
+                sb.Append(q.ToText());
+            }
+            return sb.ToString();
+        }
+
+        public void DoTheQuiz()
+        {
+            int iQuestion = 0;
+            int numQuestions = questions.Count;
+            bool questionChanged = true;
+            while (true)
+            {
+                if (questionChanged)
+                    Console.Clear();
+                
+                questionChanged = false;
+                questions[iQuestion].Display();
+                ConsoleKeyInfo ki = Console.ReadKey(true);
+                switch (ki.Key)
+                {
+                    case ConsoleKey.PageUp:
+                        iQuestion = (iQuestion + numQuestions - 1) % numQuestions;
+                        questionChanged = true;
+                        break;
+                    case ConsoleKey.PageDown:
+                        iQuestion = (iQuestion + 1) % numQuestions;
+                        questionChanged = true;
+                        break;
+                    case ConsoleKey.Enter:
+                        Console.Clear();
+                        int pts = 0;
+                        for (int i = 0; i &lt; numQuestions; i++)
+                            pts += questions[i].Evaluate();
+
+                        Console.WriteLine(&quot;Ukupan broj poena: {0}&quot;, pts);
+                        return;
+
+                    default:
+                        questions[iQuestion].HandleInput(ki);
+                        break;
+                }
+            }
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>На крају, ево и класе <code class="docutils literal notranslate"><span class="pre">Program</span></code>, од које почиње извршавање. У методу <code class="docutils literal notranslate"><span class="pre">Main</span></code> се само учитава
+и покреће квиз.</p>
+<p><strong>Садржај фајла</strong> <code class="docutils literal notranslate"><span class="pre">Program.cs</span></code></p>
+
+<div data-childcomponent="quiz_program.cs" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=quiz_program.cs data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.IO;
+
+namespace Quiz
+{
+
+    class Program 
+    {
+        static void TestWriteSampleQuiz(string path)
+        {
+            Quiz quiz = Quiz.Sample();
+            string s = quiz.ToText();
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                sw.WriteLine(s);
+            }
+        }
+        static void TestReadQuiz(string path)
+        {
+            Quiz quiz = null;
+            using (StreamReader sr = new StreamReader(path))
+                quiz = Quiz.FromStream(sr);
+
+            string s = quiz.ToText();
+            Console.WriteLine(s);
+        }
+        static void Main(string[] args)
+        {
+            Console.InputEncoding = System.Text.Encoding.UTF8;
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            TestWriteSampleQuiz(@&quot;../../a.txt&quot;);
+            string path = @&quot;../../a.txt&quot;;
+            //TestReadQuiz(@&quot;../../a.txt&quot;);
+
+            //Console.Write(&quot;Unesite putanju do fajla sa pitanjima: &quot;);
+            //string path = Console.ReadLine();
+            Quiz quiz = null;
+            using (StreamReader sr = new StreamReader(path))
+                quiz = Quiz.FromStream(sr);
+
+            quiz.DoTheQuiz();
+        }
+    }
+}
+
+"   >
+
+
+</textarea>
+</div>
+<p>Апликација би могла да се допуни на разне начине (нпр. да након бодовања прикаже и тачне одговоре,
+да понуди отврање новог квиза и слично), али и без тога има минималну заокружену функционалност и
+потпуно је употребљива. Мада као целина није сасвим једноставна, у њој нема нарочито сложених
+делова – свака класа је довољно мала и може да се детљно разуме.</p>
+<p>Класе нису направљене тако да могу у потпуности да се уклопе у апликацију са другачијим корисничким
+интерфејсом, али би њихов значајан део (методи <code class="docutils literal notranslate"><span class="pre">Sample</span></code>, <code class="docutils literal notranslate"><span class="pre">FromStream</span></code>, <code class="docutils literal notranslate"><span class="pre">ToText</span></code>, <code class="docutils literal notranslate"><span class="pre">Evaluate</span></code>)
+могао да се искористи и у другим апликацијама.</p>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>
