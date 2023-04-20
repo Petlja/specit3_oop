@@ -230,63 +230,67 @@ lessons:
         title: Изведена класа - задаци
         file: nasl_04az_zadaci.rst
         guid: 7cd1fcda-bbc8-44f9-9847-51ebb1b87076
-  - title: 4.2  Виртуелни методи
-    guid: 3059206c-25f2-42b6-96ba-643333e3ee7d
-    folder: 04b_virtuelni_metodi
-    activities:
-      - type: reading
-        title: Модификација базне класе
-        file: vm_04b_01_modifikacija.rst
-        guid: 5bdee971-9779-4040-917c-dc89845a7a48
-      - type: reading
-        title: Виртуелни методи
-        file: vm_04b_02_virtuelni_metodi.rst
-        guid: a690d3fb-7f73-4c62-8bf8-652cefb1fd44
-      - type: quiz
-        title: Виртуелни методи - квиз
-        file: vm_04bq_kviz.rst
-        guid: 69f0d2c8-7b49-4307-bcd5-4761b06dca96
-      - type: reading
-        title: Виртуелни методи - примери и задаци
-        file: vm_04bz_primeri_zadaci.rst
-        guid: e2436ecd-9770-4162-85ca-cd6a1bb484a8
-  - title: 4.3 Апстрактни методи и класе
+  - title: 4.2 Апстрактни методи и класе
     guid: 309ee94f-ec9a-4e0d-b52c-a521fbe361be
-    folder: 04c_apstraktni_metodi_i_klase
+    folder: 04b_apstraktni_metodi_i_klase
     activities:
       - type: reading
         title: Апстрактни методи и класе
-        file: am_04c_apstraktni_metodi.rst
+        file: am_04b1_apstraktni_metodi.rst
         guid: 46977a82-c010-4539-8140-6b6c069e0d5d
+      - type: reading
+        title: Пример апстрактних метода  и класа
+        file: am_04b2_primer_3d.rst
+        guid: 3eb6a062-0d5d-402b-895d-ba5bf3dab528
       - type: quiz
         title: Апстрактни методи и класе - квиз
-        file: am_04cq_kviz.rst
+        file: am_04bq_kviz.rst
         guid: 24ede43d-04fe-4d35-9732-5dfcab24e286
       - type: reading
         title: Апстрактни методи и класе - задаци
-        file: am_04cz_zadaci.rst
+        file: am_04bz_zadaci.rst
         guid: 5e661ece-a910-469e-ba8a-82b1f70fd293
-  - title: 4.4 Вишеструко наслеђивање, интерфејси
+  - title: 4.3 Интерфејси, вишеструко наслеђивање
     guid: 97e9ed85-4ff2-4b13-a449-cfa0b8436781
-    folder: 04d_visetruko_nasledjivanje
+    folder: 04c_interfejsi
     activities:
       - type: reading
-        title: Вишеструко наслеђивање
+        title: Интерфејси
         ### Интерфејси и апстрактне класе, пример IComparable (можда још неки), имплементација готових интерфејса
-        file: int_04d1_visetruko_nasledjivanje.rst
+        file: int_04c1_interfejsi.rst
         guid: 01cdc952-831f-425d-9209-1f604239eb0c
       - type: reading
-        title: Креирање сопствених интерфејса
-        file: int_04d2_kreiranje_interfejsa.rst
+        title: Вишеструко наслеђивање
+        file: int_04c2_visetruko_nasledjivanje.rst
         guid: f07f9363-5c53-4408-ad44-309064c1b319
       - type: quiz
         title: Интерфејси - квиз
-        file: int_04dq_visetruko_nasledjivanje_kviz.rst
+        file: int_04cq_visetruko_nasledjivanje_kviz.rst
         guid: 8d096be2-3589-4e40-b923-8d20d524df77
       - type: reading
         title: Интерфејси - задаци
-        file: int_04dz_visetruko_nasledjivanje_zadaci.rst
+        file: int_04cz_visetruko_nasledjivanje_zadaci.rst
         guid: 6636573e-c861-4a6d-bbc3-e0ca28d4e95e
+  - title: 4.4  Виртуелни методи
+    guid: 3059206c-25f2-42b6-96ba-643333e3ee7d
+    folder: 04d_virtuelni_metodi
+    activities:
+      - type: reading
+        title: Модификација базне класе
+        file: vm_04d_01_modifikacija.rst
+        guid: 5bdee971-9779-4040-917c-dc89845a7a48
+      - type: reading
+        title: Виртуелни методи
+        file: vm_04d_02_virtuelni_metodi.rst
+        guid: a690d3fb-7f73-4c62-8bf8-652cefb1fd44
+      - type: quiz
+        title: Виртуелни методи - квиз
+        file: vm_04dq_kviz.rst
+        guid: 69f0d2c8-7b49-4307-bcd5-4761b06dca96
+      - type: reading
+        title: Виртуелни методи - примери и задаци
+        file: vm_04dz_primeri_zadaci.rst
+        guid: e2436ecd-9770-4162-85ca-cd6a1bb484a8
 
 ### СЕКЦИЈА ДИНАМИЧКИ ПОЛИМОРФИЗАМ - ПРИМЕРИ
   - title: 5 Динамички полиморфизам - примери

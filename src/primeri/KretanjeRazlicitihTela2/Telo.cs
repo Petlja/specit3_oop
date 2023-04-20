@@ -12,9 +12,9 @@ namespace Kretanje
         protected Color boja;
 
         private enum VrstaTela { Loptica, Tocak, Avioncic, BrojVrsta };
-        static public Telo Kreiraj(int w, int h)
+        static public Telo Kreiraj(int w, int h, int vrsta)
         {
-        VrstaTela t = (VrstaTela)(rnd.Next((int)VrstaTela.BrojVrsta));
+        VrstaTela t = (VrstaTela)(vrsta % (int)VrstaTela.BrojVrsta);
             switch (t)
             {
                 case VrstaTela.Loptica:

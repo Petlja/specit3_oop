@@ -3,21 +3,32 @@ namespace primer
 {
     public class Vozilo
     {
-        protected float potrosnja; // u litrima na 100 Km
-        protected float kilometraza; // u Km
-        protected float uRezervoaru; // u litrima
-        // ...
-        public Vozilo(float potr)
+        protected float potrosnja;           // u litrima na 100 Km
+        protected float kilometraza;         // u Km
+        protected float uRezervoaru;         // u litrima
+        protected float kapacitetRezervoara; // u litrima
+        public Vozilo(float potr, float v)
         {
             potrosnja = potr;
+            kapacitetRezervoara = v;
             kilometraza = 0;
             uRezervoaru = 0;
         }
-        public void Natoci(float gorivo) { uRezervoaru += gorivo; }
+        public void Natoci(float gorivo)
+        {
+            if (uRezervoaru + gorivo >= kapacitetRezervoara)
+                throw new Exception("Nema mesta u rezervoaru");
+
+            uRezervoaru += gorivo;
+        }
         public void Predji(float rastojanje)
         {
+            float potrebnoLitara = potrosnja * rastojanje * 0.01f;
+            if (uRezervoaru < potrebnoLitara)
+                throw new Exception("Nema dovoljno goriva");
+
             kilometraza += rastojanje;
-            uRezervoaru -= potrosnja * rastojanje * 0.01f;
+            uRezervoaru -= potrebnoLitara;
         }
         public float Domet { get { return 100 * uRezervoaru / potrosnja; } }
     }
@@ -26,33 +37,52 @@ namespace primer
     {
         private int brSedista;
         private int brPutnika;
-        public Autobus(float potr, int n)
-            : base(potr)
+        public Autobus(float potr, float kapac, int brMesta)
+            : base(potr, kapac)
         {
-            brSedista = n;
+            brSedista = brMesta;
             brPutnika = 0;
         }
+        public void Ulaz(int x)
+        {
+            if (BrSlobodnihMesta < x)
+                throw new Exception("Nema mesta za putnike");
 
-        public void Ulaz(int x) { brPutnika += x; }
-        public void Izlaz(int x) { brPutnika -= x; }
+            brPutnika += x;
+        }
+        public void Izlaz(int x)
+        {
+            if (brPutnika < x)
+                throw new Exception("Nema toliko putnika");
+
+            brPutnika -= x;
+        }
+        public int BrSlobodnihMesta { get { return brSedista - brPutnika; } }
         public int BrPutnika { get { return brPutnika; } }
     }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Vozilo v = new Vozilo(5);
-            v.Natoci(30);
-            v.Predji(200);
-            Console.WriteLine(v.Domet);
+            try
+            {
+                Vozilo v = new Vozilo(5, 40);
+                v.Natoci(35);
+                v.Predji(200);
+                Console.WriteLine("Vozilo v moze da predje jos {0}Km.", v.Domet);
 
-            Autobus a = new Autobus(10, 55);
-            a.Natoci(30);
-            a.Ulaz(20);
-            a.Predji(200);
-            a.Izlaz(5);
-            Console.WriteLine(a.Domet);
-            Console.WriteLine(a.BrPutnika);
+                Autobus a = new Autobus(25, 300, 55);
+                a.Natoci(250);
+                a.Ulaz(20);
+                a.Predji(200);
+                a.Izlaz(5);
+                Console.WriteLine("Vozilo a moze da predje jos {0}Km.", a.Domet);
+                Console.WriteLine("U vozilu a ima jos {0} mesta za putnike.", a.BrSlobodnihMesta);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Popravi brojeve u primeru i probaj ponovo");
+            }
         }
     }
 }

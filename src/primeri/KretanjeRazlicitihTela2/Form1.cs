@@ -18,7 +18,7 @@ namespace Kretanje
             int h = ClientSize.Height;
             tela = new List<Telo>();
             for (int i = 0; i < 30; i++)
-                tela.Add(Telo.Kreiraj(w, h));
+                tela.Add(Telo.Kreiraj(w, h, i));
         }
         private void timer1_Tick(object sender, EventArgs e)
         {

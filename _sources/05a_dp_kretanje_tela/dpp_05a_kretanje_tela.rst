@@ -18,7 +18,7 @@
 
 .. activecode:: kretanje_tela_telo
     :passivecode: true
-    :includesrc: src/primeri/KretanjeRazlicitihTela/Telo.cs
+    :includesrc: src/primeri/KretanjeRazlicitihTela2/Telo.cs
 
 
 Класе ``Tocak``, ``Loptica`` и ``Avioncic``, изведене из класе ``Telo``, могу да буду написане овако.
@@ -29,7 +29,7 @@
 
     .. activecode:: kretanje_tela_Tocak
         :passivecode: true
-        :includesrc: src/primeri/KretanjeRazlicitihTela/Tocak.cs
+        :includesrc: src/primeri/KretanjeRazlicitihTela2/Tocak.cs
 
 
 .. reveal:: dugme_kretanje_tela_Loptica
@@ -38,7 +38,7 @@
 
     .. activecode:: kretanje_tela_Loptica
         :passivecode: true
-        :includesrc: src/primeri/KretanjeRazlicitihTela/Loptica.cs
+        :includesrc: src/primeri/KretanjeRazlicitihTela2/Loptica.cs
 
 
 .. reveal:: dugme_kretanje_tela_Avioncic
@@ -47,7 +47,7 @@
 
     .. activecode:: kretanje_tela_Avioncic
         :passivecode: true
-        :includesrc: src/primeri/KretanjeRazlicitihTela/Avioncic.cs
+        :includesrc: src/primeri/KretanjeRazlicitihTela2/Avioncic.cs
 
 Класа ``Form1`` је необично мала, јер се састоји од само три врло кратка метода. Класа садржи само 
 једну листу типа ``List<Telo>``. У форми се не помињу изведене класе, нити форма има потребу да зна 
@@ -75,7 +75,7 @@
 
 .. activecode:: kretanje_tela_Form1
     :passivecode: true
-    :includesrc: src/primeri/KretanjeRazlicitihTela/Form1.cs
+    :includesrc: src/primeri/KretanjeRazlicitihTela2/Form1.cs
     
 
 
@@ -86,4 +86,4 @@
 
     .. activecode:: kretanje_tela_Form1.Designer.cs
         :passivecode: true
-        :includesrc: src/primeri/KretanjeRazlicitihTela/Form1.Designer.cs
+        :includesrc: src/primeri/KretanjeRazlicitihTela2/Form1.Designer.cs
