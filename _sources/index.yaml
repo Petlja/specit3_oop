@@ -250,18 +250,17 @@ lessons:
         title: Апстрактни методи и класе - задаци
         file: am_04bz_zadaci.rst
         guid: 5e661ece-a910-469e-ba8a-82b1f70fd293
-  - title: 4.3 Интерфејси, вишеструко наслеђивање
+  - title: 4.3 Интерфејси
     guid: 97e9ed85-4ff2-4b13-a449-cfa0b8436781
     folder: 04c_interfejsi
     activities:
       - type: reading
-        title: Интерфејси
-        ### Интерфејси и апстрактне класе, пример IComparable (можда још неки), имплементација готових интерфејса
+        title: Вишеструко наслеђивање и појам интерфејса
         file: int_04c1_interfejsi.rst
         guid: 01cdc952-831f-425d-9209-1f604239eb0c
       - type: reading
-        title: Вишеструко наслеђивање
-        file: int_04c2_visetruko_nasledjivanje.rst
+        title: Употреба сопствених интерфејса
+        file: int_04c2_sopstveni_interfejsi.rst
         guid: f07f9363-5c53-4408-ad44-309064c1b319
       - type: quiz
         title: Интерфејси - квиз
