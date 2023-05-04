@@ -1,11 +1,11 @@
 using System;
 
-interface IClanPoClan
+interface INizClanPoClan
 {
-    long Sledeci();
+    public long Sledeci();
 }
 
-class AritmetickiNiz : IClanPoClan
+class AritmetickiNiz : INizClanPoClan
 {
     private long a0, d, sled;
     public AritmetickiNiz(long a0, long d)
@@ -21,7 +21,7 @@ class AritmetickiNiz : IClanPoClan
         return rez;
     }
 }
-class GeometrijskiNiz : IClanPoClan
+class GeometrijskiNiz : INizClanPoClan
 {
     private long a0, q, sled;
     public GeometrijskiNiz(long a0, long q)
@@ -37,11 +37,11 @@ class GeometrijskiNiz : IClanPoClan
         return rez;
     }
 }
-class NaizmenicniNiz : IClanPoClan
+class DveAritmProgresije : INizClanPoClan
 {
     private long sledA, sledB, da, db;
     private bool naReduJeA;
-    public NaizmenicniNiz(long a0, long da, long b0, long db)
+    public DveAritmProgresije(long a0, long da, long b0, long db)
     {
         this.sledA = a0; this.da = da;
         this.sledB = b0; this.db = db;
@@ -57,7 +57,7 @@ class NaizmenicniNiz : IClanPoClan
         return rez;
     }
 }
-class FibonacijevNiz : IClanPoClan
+class FibonacijevNiz : INizClanPoClan
 {
     private long sledeci1, sledeci2;
     public FibonacijevNiz(long a0, long a1)
@@ -73,6 +73,27 @@ class FibonacijevNiz : IClanPoClan
         return rez;
     }
 }
+
+class NaizmenicnoPlusPuta: INizClanPoClan
+{
+    private long sled, d, q;
+    private bool naReduJePlus;
+    public NaizmenicnoPlusPuta(long a0, long d, long q)
+    {
+        this.sled = a0; 
+        this.d = d;
+        this.q = q;
+        naReduJePlus = true;
+    }
+    public long Sledeci()
+    {
+        long rez = sled;
+        sled = naReduJePlus ? sled + d : sled * q;
+        naReduJePlus = !naReduJePlus;
+        return rez;
+    }
+}
+
 class Program
 {
     static void Main(string[] args)
@@ -92,26 +113,30 @@ class Program
 
             Console.WriteLine("Pocinje novi niz");
             bool pogodio = false;
-            IClanPoClan niz = null;
-            int vrstaNiza = rnd.Next(4);
+            INizClanPoClan niz = null;
+            int vrstaNiza = rnd.Next(5); // biramo jedan od 5 tipova niza
             switch (vrstaNiza)
             {
-                case 0: 
-                    niz = new AritmetickiNiz(rnd.Next(1, 10), rnd.Next(3, 9)); 
+                case 0:
+                    niz = new AritmetickiNiz(rnd.Next(1, 10), rnd.Next(3, 9));
                     break;
-                case 1: 
-                    niz = new GeometrijskiNiz(rnd.Next(1, 5), rnd.Next(2, 5)); 
+                case 1:
+                    niz = new GeometrijskiNiz(rnd.Next(1, 5), rnd.Next(2, 5));
                     break;
                 case 2:
                     long a1 = rnd.Next(1, 4);
                     long a2 = rnd.Next((int)a1, 6);
-                    niz = new FibonacijevNiz(a1, a2); 
+                    niz = new FibonacijevNiz(a1, a2);
                     break;
                 case 3:
                     long db = rnd.Next(-3, 3);
                     if (db == 0) db++;
-                    niz = new NaizmenicniNiz(rnd.Next(3, 7),
+                    niz = new DveAritmProgresije(rnd.Next(3, 7),
                         rnd.Next(2, 5), rnd.Next(45, 51), db);
+                    break;
+                case 4:
+                    niz = new NaizmenicnoPlusPuta(rnd.Next(1, 10),
+                        rnd.Next(3, 7), rnd.Next(2, 5));
                     break;
             }
             long novi = niz.Sledeci();
@@ -129,7 +154,7 @@ class Program
 
                 pogodio = (long.Parse(unos) == novi);
             }
-            if (pogodio) 
+            if (pogodio)
                 Console.WriteLine("Bravo!");
             else if (unos == "-")
             {
