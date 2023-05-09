@@ -389,12 +389,12 @@
                 
                 <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
-                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <h5>4.3 Интерфејси</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
-                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
                 <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
@@ -489,7 +489,7 @@
 или да промени претходно дати одговор.</p>
 <ul class="simple">
 <li><p>У питањима са више понуђених одговора, корисник се креће кроз одговоре стрелицама горе/доле.
-Избор одгвоора се врши притиском на тастер <cite>Space</cite>. Постоје две подврсте овог типа питања, а то
+Избор одговора се врши притиском на тастер <cite>Space</cite>. Постоје две подврсте овог типа питања, а то
 су питања у којима треба изабрати тачно један одговор и питања у којима треба изабрати нула или
 више понуђених одговора.</p></li>
 <li><p>У питањима у којима треба да се упише реч, корисник може да користи тастере <cite>Backspace</cite>, <cite>Delete</cite>,
@@ -506,11 +506,11 @@
 из које ће бити изведене класе за појединачне врсте питања. Те класе су:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ABCQuestion</span></code> за питања са више понуђених одговора од којих је један тачан</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MultipleAnswersQuestion</span></code> за питања са више понуђених одговора, од којих омже бити било који број тачних</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MultipleAnswersQuestion</span></code> за питања са више понуђених одговора, од којих може бити било који број тачних</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">FillInTheBlanksQuestion</span></code> за питања у којима треба да се упише реч</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ParsonsQuestion</span></code> за питања у којима треба да се одреди редослед датих појмова</p></li>
 </ul>
-<p>Свака од охих класа на свој начин приказује питање, тумачи улаз корисника, бодује одговор, учитава
+<p>Свака од ових класа на свој начин приказује питање, тумачи улаз корисника, бодује одговор, учитава
 питање из фајла и претвара га у специјално форматиран текст ради уписа у фајл. Ове радње се
 најједноставније остварују помоћу метода који су у базној класи апстрактни, а у изведеним класама
 имплементирани на одговарајући начин. Детаљи имплементације могу да се виде у изворном коду.</p>

@@ -389,12 +389,12 @@
                 
                 <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
-                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <h5>4.3 Интерфејси</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
-                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
                 <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
@@ -486,7 +486,7 @@
 <li><p>Зашто су генеричке класе боље од обичних</p></li>
 <li><p>Како да правимо своје генеричке класе</p></li>
 <li><p>Шта су генерички методи и како да их пишемо</p></li>
-<li><p>Апстрактни типови податка и њигова веза са генеричким класама</p></li>
+<li><p>Апстрактни типови податка и њихова веза са генеричким класама</p></li>
 </ul>
 <section id="id2">
 <h2>Предности генеричких класа<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
@@ -543,11 +543,11 @@
 <p>Према томе, у предности генеричких класа и метода у односу на друга решења можемо да убројимо:</p>
 <ul class="simple">
 <li><p><strong>безбедност типова</strong> (енгл. <cite>type safety</cite>), јер се слагање типова при операцијама код
-генеричких класа проверава статички, тј. у веме компајлирања. Ово је у случају генеричких
+генеричких класа проверава статички, тј. у време компајлирања. Ово је у случају генеричких
 класа изводљиво, јер за разлику од решења у коме се користе општи објекти, компајлер тачно
 зна који тип података се користи на сваком месту.</p></li>
 <li><p><strong>боље перформансе</strong> у односу на решења са општим објектима. Употребом генеричких класа
-извегава се потреба за конверзијом променљивих простог типа у објекте (тзв. боксовање, енгл.
+избегава се потреба за конверзијом променљивих простог типа у објекте (тзв. боксовање, енгл.
 <cite>boxing</cite>), распакивањем из објеката назад у променљиве (<cite>unboxing</cite>) и провером типа у време
 извршавања. На пример, генеричка листа целих бројева садржи само целе бројеве, а не објекте
 који садрже целе бројеве.</p></li>

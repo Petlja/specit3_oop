@@ -390,12 +390,12 @@
                 
                 <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
-                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <h5>4.3 Интерфејси</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
-                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
                 <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
@@ -520,7 +520,7 @@
 (значење, ефекти) различитих начина модификовања базне класе.</p>
 
     </div></div>
-<p>У следећем примеру понашање базне класе је промењено на начин који се не прпоручује, јер може да
+<p>У следећем примеру понашање базне класе је промењено на начин који се не препоручује, јер може да
 доведе до различитих грешака. У наставку ћемо видети бољи начин да модификујемо базну класу.</p>
 <section id="id3">
 <h3>Пример - правоугаоник<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
@@ -531,7 +531,7 @@
 <code class="docutils literal notranslate"><span class="pre">ax,</span> <span class="pre">ay</span></code> темена <code class="docutils literal notranslate"><span class="pre">A</span></code> и дужину <code class="docutils literal notranslate"><span class="pre">w</span></code> и висину <code class="docutils literal notranslate"><span class="pre">h</span></code> правоугаоника.</p>
 <p>Интерфејс, тј. јавни део класе могу да чине нпр. методи <code class="docutils literal notranslate"><span class="pre">Obim</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrisna</span></code>, који враћају
 обим и површину правоугаоника, својства <code class="docutils literal notranslate"><span class="pre">AX</span></code>, <code class="docutils literal notranslate"><span class="pre">AY</span></code>, <code class="docutils literal notranslate"><span class="pre">BX</span></code>, <code class="docutils literal notranslate"><span class="pre">BY</span></code>, <code class="docutils literal notranslate"><span class="pre">CX</span></code>, <code class="docutils literal notranslate"><span class="pre">CY</span></code>,
-<code class="docutils literal notranslate"><span class="pre">DX</span></code>, <code class="docutils literal notranslate"><span class="pre">DY</span></code> за дохватање координата темена правоугаоника, и на кају својства <code class="docutils literal notranslate"><span class="pre">W</span></code> i <code class="docutils literal notranslate"><span class="pre">H</span></code>,
+<code class="docutils literal notranslate"><span class="pre">DX</span></code>, <code class="docutils literal notranslate"><span class="pre">DY</span></code> за дохватање координата темена правоугаоника, и на крају својства <code class="docutils literal notranslate"><span class="pre">W</span></code> i <code class="docutils literal notranslate"><span class="pre">H</span></code>,
 за добијање дужине и висине правоугаоника. Та класа је могла да буде написана овако:</p>
 
 <div data-childcomponent="klasa_pravougaonik" class="course-box course-box-problem course-content">
@@ -752,9 +752,9 @@ internal class Program
 израчунате координате тачке <span class="math notranslate nohighlight">\(B\)</span> као да он није ротиран. То значи да се над подацима из изведене
 класе извршио приступник <code class="docutils literal notranslate"><span class="pre">get</span></code> својстава <code class="docutils literal notranslate"><span class="pre">BX</span></code> и <code class="docutils literal notranslate"><span class="pre">BY</span></code> базне класе, који „не зна” да је реч о
 ротираном правоугаонику.</p>
-<p>Да бисмо разумели зашто долази до оваквог понашања програма, имајмо на уму да се у неким
-ситуацијама одлука о томе који конструктор ће бити позван доноси тек у време извршавања програма,
-као што показује следећи пример.</p>
+<p>Да бисмо разумели зашто долази до оваквог понашања програма, подестимо се да се у неким ситуацијама
+одлука о томе који конструктор ће бити позван доноси тек у време извршавања програма, као што
+показује следећи пример.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Pravougaonik</span><span class="w"> </span><span class="n">p2</span><span class="p">;</span><span class="w"></span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Da li da napravim obican ili rotirani pravougaonik?&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="kt">string</span><span class="w"> </span><span class="n">odgovor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span><span class="w"></span>

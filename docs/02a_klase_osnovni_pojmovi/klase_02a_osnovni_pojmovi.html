@@ -389,12 +389,12 @@
                 
                 <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
-                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <h5>4.3 Интерфејси</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
-                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
                 <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
@@ -488,14 +488,14 @@
 <li><p>Приватни и јавни чланови класе.</p></li>
 </ul>
 <p>Из самог назива <em>објектно оријентисано програмирање</em> је јасно да је централни појам ове парадигме
-објекат. Зато, пре него што почнемо да се бавимо концептима ООП, потебно је да се укратко упознамо
+објекат. Зато, пре него што почнемо да се бавимо концептима ООП, потребно је да се укратко упознамо
 са основним појмовима.</p>
 <section id="id2">
 <h2>Објекти и класе<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>Однос између класа и објеката је исти као однос између типова и променљивих. Програмски језици
 најчешће подржавају више целобројних и реалних типова, логички тип и знаковни тип. Ове типове
 сматрамо основним типовима и они су део самог језика. Поред основних типова, можемо да користимо
-и типове које сами дефинишемо. Тако можемо да дефинишемо разне набројевиве типове (<em>Enum</em>) и
+и типове које сами дефинишемо. Тако можемо да дефинишемо разне набројиве типове (<em>Enum</em>) и
 структуре.</p>
 <p>У објектно оријентисаним језицима, <strong>класа</strong> је у суштини још један од типова које сами дефинишемо
 када пишемо програм. Након што дефинишемо класу, можемо у програму да користимо примерке (инстанце)
@@ -672,7 +672,7 @@
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">.</span><span class="n">poslednjiRed</span><span class="p">++;</span><span class="w"></span>
 </pre></div>
 </div>
-<p>што би са овако дефинисам приступником <code class="docutils literal notranslate"><span class="pre">set</span></code> повећало висину прозора за један.</p>
+<p>што би са овако дефинисаним приступником <code class="docutils literal notranslate"><span class="pre">set</span></code> повећало висину прозора за један.</p>
 </section>
 </section>
 <section id="id8">
@@ -736,7 +736,7 @@
 <code class="docutils literal notranslate"><span class="pre">Prozor</span></code>.</p>
 <p>У случају да програмерима који користе нашу класу желимо да омогућимо да читају вредност поља али
 не и да је мењају, једноставно и често примењивано решење је да поље оставимо као приватно и да му
-придружимо ствоство које има само приступник <code class="docutils literal notranslate"><span class="pre">get</span></code>. На пример:</p>
+придружимо ствојство које има само приступник <code class="docutils literal notranslate"><span class="pre">get</span></code>. На пример:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Prozor</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">prviRed</span><span class="p">;</span><span class="w"></span>
@@ -764,7 +764,7 @@
 </pre></div>
 </div>
 <p>Тиме се постиже исти ефекат као када само изоставимо реч <code class="docutils literal notranslate"><span class="pre">public</span></code> у дефиницији метода. Ми ћемо
-у примерима ипак експицитно да означавамо приватне делове класе као такве, да бисмо истакли одлуку
+у примерима ипак експлицитно да означавамо приватне делове класе као такве, да бисмо истакли одлуку
 да ти делови буду приватни. У пракси, тим програмера обично усвоји конвенцију о томе да ли ће код
 приватних чланова (поља и метода) класе писати реч <code class="docutils literal notranslate"><span class="pre">private</span></code> или неће. Мада ова одлука не утиче
 на понашање програма, корисно је да се усвојено правило доследно примењује, јер доприниси

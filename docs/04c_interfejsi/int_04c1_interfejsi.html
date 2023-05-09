@@ -389,12 +389,12 @@
                 
                 <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
-                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <h5>4.3 Интерфејси</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
-                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
                 <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
@@ -483,11 +483,593 @@
 <h1>Интерфејси<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>У овој лекцији:</p>
 <ul class="simple">
-<li><p>Зашто су нам потребни интерфејси (проблем вишеструког наслеђивања)</p></li>
+<li><p>Шта је вишеструко наслеђивање</p></li>
 <li><p>Шта је интерфејс и како се разликује од апстрактне класе</p></li>
-<li><p>Примери интерфејса из .Net библиотеке</p></li>
+<li><p>Примери имплементирања интерфејса из .Net библиотеке</p></li>
 <li><p>Креирање и имплементирање сопствених интерфејса</p></li>
 </ul>
+<section id="id2">
+<h2>Појам интерфејса<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>У одређеним ситуацијама се јавља потреба да једна класа има више базних класа, тј. да наследи више
+различитих класа. Овакав облик наслеђивања се назива <strong>вишеструко наслеђивање</strong> (скраћено: в.н.).
+Око овог концепта било је много полемике још од његовог увођења, а мишљења нису у потпуности
+усаглашена ни данас. Наиме, многи научници рачунарства мисле да в.н. уводи сувише проблема (компликује
+језик и његову имплементацију, повећава шансе појављивања багова због погрешне употребе в.н.) и да због
+тога не треба да буде подржано у програмским језицима, док неки и даље мисле да програмски језици
+треба да га омогуће, а да је на програмерима да савладају његову правилну употребу и тако заобиђу
+могуће проблеме. Због тога данас неки језици подржавају вишеструко наслеђивање, а неки не. Типично,
+новији језици су ти који не подржавају в.н. а уместо њега уводе неке сличне концепте, који нуде
+приближно исте могућности уз мање ризика од погрешне употребе. Постојећи концепти који служе као
+замене за вишеструко наслеђивање и даље се развијају и мењају. Са друге стране, разни језици који
+дозвољавају в.н. имају различите додатне захтеве за писање кода (у смислу синтаксе), како би се
+смањила могућност грешке.</p>
+<p>Темом вишеструког наслеђивања и могућим проблемима који са њим долазе нећемо се овде даље бавити,
+а заинтересовани читаоци могу да нађу више информација већ на страници Википедије <a class="reference external" href="https://en.wikipedia.org/wiki/Multiple_inheritance">о вишеструком
+наслеђивању</a>.</p>
+<p>У језику <cite>C#</cite>, наслеђивање више класа није могуће. Сродан концепт који у великој мери надокнађује
+потребу за вишеструким наслеђивањем се у језику <cite>C#</cite> назива <strong>интерфејс</strong>. До сада смо реч интерфејс
+користили мање формално, да означимо јавни (изложени) део класе. Сада се срећемо са новим, друкчијим
+значењем ове речи.</p>
+
+    <div class="note-wrapper infonote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/infonote-img.svg" class="note-image infonote-image" /> 
+        <div class="course-content">
+            
+<p>У језику <cite>C#</cite>, <strong>интерфејс</strong> је посебан језички конструкт који пре свега служи да зада декларације
+(потписе) једног или више метода. Поред метода, интерфејс може да садржи декларације својстава,
+индексера и догађаја. За класу која садржи дефиниције метода и других чланова декларисаних у
+интерфејсу, каже се да <strong>имплементира дати интерфејс</strong>.</p>
+<p>У неким програмским језицима уместо речи интерфејс користи се реч протокол, а уместо да се
+каже да класа имплементира интерфејс, каже се да класа усваја (енгл. <cite>adopts</cite>) протокол.
+Реч је о суштински истом концепту.</p>
+
+    </div></div>
+<p>Појам интерфејса је врло близак појму апстрактне класе, јер оба садрже „најављене”, тј. декларисане
+методе (и друге чланове) без дефиниције. Главна разлика је у томе што <strong>интерфејс не може да садржи
+нестатичка поља са подацима</strong>. На пример, раније уведена апстрактна класа <code class="docutils literal notranslate"><span class="pre">Figura3D</span></code> не би (таква
+каква је) могла да се напише као интерфејс, јер садржи референцу <code class="docutils literal notranslate"><span class="pre">osnova</span></code> на класу <code class="docutils literal notranslate"><span class="pre">Figura2D</span></code>,
+као и реалан податак <code class="docutils literal notranslate"><span class="pre">visina</span></code>. У том смислу, <strong>интерфејс можемо да схватимо као апстрактну класу
+без (нестатичких) података</strong>. Из ове разлике између интерфејса и апстрактних класа проистиче и
+разлика у употреби, а то је да остале класе могу да имплементирају више интерфејса, али могу да
+наследе само једну класу, било апстрактну или не. То и јесте основни разлог за увођење интерфејса.</p>
+<p>У новијим верзијама језика <cite>C#</cite> разлике између интерфејса и апстрактних класа се све више смањују,
+са идејом да интерфејси дају што више могућности које би донело вишеструко наслеђивање класа, али
+тако да не уведу и исте проблеме.</p>
+</section>
+<section id="net">
+<h2>Имплементирање интерфејса из .Net библиотеке<a class="headerlink" href="#net" title="Permalink to this heading">¶</a></h2>
+<p>Један важан разлог за упознавање интерфејса је правилна употреба интерфејса из библиотеке <cite>.Net</cite>.
+Погледајмо пар примера у којима је корисно да наше класе имплементирају неке од интерфејса из
+библиотеке.</p>
+<section id="icomparable">
+<h3>Пример – сортирање низова и листи (интерфејс <code class="docutils literal notranslate"><span class="pre">IComparable</span></code>)<a class="headerlink" href="#icomparable" title="Permalink to this heading">¶</a></h3>
+<p>Подсетимо се примера са разломцима са почетка овог курса. Написали смо једну релативно богату
+класу, која омогућава читање, исписивање и рачунање са разломцима на исти начин као што се то
+ради са целим или реалним бројевима. Ипак, тиме нисмо достигли пуну функционалност, коју би
+неко могао да очекује од класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>. На пример, са постојећом имплементацијом класе
+није могуће сортирати низ разломака. Ако бисмо писали</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
+<span class="n">Razlomak</span><span class="p">[]</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">[</span><span class="n">n</span><span class="p">];</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="p">++)</span><span class="w"></span>
+<span class="w">    </span><span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
+
+<span class="n">Array</span><span class="p">.</span><span class="n">Sort</span><span class="p">(</span><span class="n">r</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>програм би могао да се покрене, али би пукао током извршавања наредбе <code class="docutils literal notranslate"><span class="pre">Array.Sort(r);</span></code>. Тачније,
+програм би бацио изузетак и добили бисмо следећу поруку:</p>
+<div class="line-block">
+<div class="line">System.InvalidOperationException: ’Failed to compare two elements in the array.’</div>
+<div class="line">Inner Exception</div>
+<div class="line">ArgumentException: At least one object must implement IComparable.</div>
+</div>
+<p>Ово значи да статички метод <code class="docutils literal notranslate"><span class="pre">Sort</span></code> класе <code class="docutils literal notranslate"><span class="pre">Array</span></code> тек приликом покушаја да упореди два елемента
+низа <code class="docutils literal notranslate"><span class="pre">r</span></code> открива да му није доступан метод помоћу кога би могао да изврши поређење. Мада смо у
+класи <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> дефинисали метод <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code>, нигде нисмо саопштили да је то метод који друге
+класе (нпр. оне из библиотеке) треба да користе за поређење инстанци класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>. Управо у
+ту сврху је у библиотеци дефинисан интерфејс <code class="docutils literal notranslate"><span class="pre">IComparable</span></code>.</p>
+
+    <div class="note-wrapper suggestionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
+        <div class="course-content">
+            
+<p>Када нека класа имплементира интерфејс <code class="docutils literal notranslate"><span class="pre">IComparable</span></code>, друге класе је виде као класу чије
+инстанце могу да се пореде методом <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code>.</p>
+
+    </div></div>
+<p>Према томе, да бисмо могли да сортирамо бројеве на наведени начин, потребно је да мало преправимо
+класу <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>. Конкретно, уместо</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Razlomak</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// ...</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CompareTo</span><span class="p">(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>треба да пишемо</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Razlomak</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IComparable</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// ...</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">CompareTo</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Сада се претходне наредбе за сортирање низа разломака извршавају баш онако како смо и очекивали.</p>
+<p>Из овог примера видимо да се интерфејс који дата класа имплементира наводи после имена класе и
+двотачке, потпуно исто као и базна класа коју дата класа наслеђује. Друга измена је измена типа
+параметра метода <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code>. Она је потребна зато што је је таква декларација овог метода у
+библиотечком интерфејсу.</p>
+</section>
+<section id="using-idisposable">
+<h3>Пример – наредба <code class="docutils literal notranslate"><span class="pre">using</span></code> (интерфејс <code class="docutils literal notranslate"><span class="pre">IDisposable</span></code>)<a class="headerlink" href="#using-idisposable" title="Permalink to this heading">¶</a></h3>
+<p>У Петљином курсу за први разред објашњено је да постоји више начина да упишемо податке у текстуални
+фајл, користећи објекат <code class="docutils literal notranslate"><span class="pre">StreamWriter</span></code>. Један начин подразумева експлицитно затварање фајла помоћу
+метода <code class="docutils literal notranslate"><span class="pre">Close</span></code>.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">StreamWriter</span><span class="w"> </span><span class="n">sw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StreamWriter</span><span class="p">(</span><span class="n">putanja</span><span class="p">);</span><span class="w">  </span><span class="c1">// Отвори фајл за писање</span>
+<span class="n">sw</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">);</span><span class="w">                              </span><span class="c1">// Пиши у фајл</span>
+<span class="n">sw</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">);</span><span class="w">                          </span><span class="c1">// Пиши у фајл</span>
+<span class="c1">// ...</span>
+<span class="n">sw</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span><span class="w">                                   </span><span class="c1">// Затвори фајл</span>
+</pre></div>
+</div>
+<p>Други, новији начин подразумева употребу наредбе <code class="docutils literal notranslate"><span class="pre">using</span></code>, која аутоматски води рачуна о
+затварању фајла.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">StreamWriter</span><span class="w"> </span><span class="n">sw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StreamWriter</span><span class="p">(</span><span class="n">putanja</span><span class="p">))</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">sw</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">sw</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Подсетимо се укратко по чему је други начин бољи од првог, тј. зашто је језик проширен наредбом
+<code class="docutils literal notranslate"><span class="pre">using</span></code>. Употреба наредбе <code class="docutils literal notranslate"><span class="pre">using</span></code> гарантује да ће фајл бити затворен чак и у случају да током
+употребе објекта <code class="docutils literal notranslate"><span class="pre">sw</span></code> наступи изузетак. Самим тим гарантује се и да ће пре затварања фајла сви
+подаци бити преписани из бафера на диск, као и да ће бити ослобођени ресурси оперативног система
+(<cite>file handle</cite>), који омогућавају да се фајл држи отвореним. У случају незатварања фајла (први
+начин писања података у фајл), може да дође до губитка података заосталих у баферу фајла, као и
+до продуженог заузећа ресурса, а тиме и до успореног рада система и ометања других програма у
+њиховом раду.</p>
+<p>Сличне проблеме можемо да имамо и када објекти наше класе држе неке ресурсе отворене. То може да
+буде интернет конекција, велика количина меморије (нпр. велики <code class="docutils literal notranslate"><span class="pre">Bitmap</span></code> објекат) или било који
+други ресурс. Истина је да ће меморија свакако бити ослобођена посредством сакупљача отпада (енгл.
+<cite>garbage collector</cite>), али до тада може да прође извесно време, а да у међувремену систем буде
+успорен због недостатка оперативне меморије. Без обзира на то о којој врсти ресурса се ради, било
+би добро да предности наредбе <code class="docutils literal notranslate"><span class="pre">using</span></code> можемо да користимо и за инстанце наше класе. Конкретно,
+било би корисно да уместо</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">MojaKlasa</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MojaKlasa</span><span class="p">();</span><span class="w"></span>
+<span class="c1">// koristi objekat a</span>
+<span class="c1">// ...</span>
+</pre></div>
+</div>
+<p>можемо да пишемо</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">MojaKlasa</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MojaKlasa</span><span class="p">())</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// koristi objekat a</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Ако ово покушамо, добијамо следећу синтаксну грешку приликом компајлирања програма:</p>
+<div class="line-block">
+<div class="line">Error CS1674  ’MojaKlasa’: type used in a using statement must be implicitly convertible to ’System.IDisposable’.</div>
+</div>
+<p>Ово значи да класа <code class="docutils literal notranslate"><span class="pre">MojaKlasa</span></code> треба да имплементира интерфејс <code class="docutils literal notranslate"><span class="pre">IDisposable</span></code>, односно његов
+једини метод <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Dispose()</span></code>, да би могла да буде употребљена у наредби <code class="docutils literal notranslate"><span class="pre">using</span></code>. Следећи мали
+пример показује како то може да се уради.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MojaKlasa</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IDisposable</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Bitmap</span><span class="w"> </span><span class="n">bmp</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">MojaKlasa</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">bmp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Bitmap</span><span class="p">(</span><span class="m">10000</span><span class="p">,</span><span class="w"> </span><span class="m">10000</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Dispose</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Pozvan metod A.Dispose&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">bmp</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+<span class="c1">// ...</span>
+
+<span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">MojaKlasa</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MojaKlasa</span><span class="p">())</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Upotreba objekta a&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;kraj programa&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Извршавањем последња три реда исписује се</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Upotreba</span> <span class="n">objekta</span> <span class="n">a</span>
+<span class="n">Pozvan</span> <span class="n">metod</span> <span class="n">A</span><span class="o">.</span><span class="n">Dispose</span>
+<span class="n">kraj</span> <span class="n">programa</span>
+</pre></div>
+</div>
+<p>Поред синтаксе потребне за имплементацију интерфејса <code class="docutils literal notranslate"><span class="pre">IDisposable</span></code>, пример показује да се по
+изласку из тела наредбе <code class="docutils literal notranslate"><span class="pre">using</span></code> позива метод <code class="docutils literal notranslate"><span class="pre">Dispose()</span></code> објекта <code class="docutils literal notranslate"><span class="pre">a</span></code>, што је и поента
+целог примера. Наравно, исписивање је додато само да би могао да се испрати редослед извршавања.
+У реалној употреби у методу <code class="docutils literal notranslate"><span class="pre">Dispose()</span></code> би се нашле све потребне наредбе за ослобађање ресурса
+које је објекат <code class="docutils literal notranslate"><span class="pre">a</span></code> заузимао. У овом примеру, то је само наредба <code class="docutils literal notranslate"><span class="pre">bmp.Dispose()</span></code>, која
+ослобађа све ресурсе које је заузимао објекат <code class="docutils literal notranslate"><span class="pre">bmp</span></code>.</p>
+</section>
+</section>
+<section id="ienumerable">
+<h2>Интерфејс IEnumerable<a class="headerlink" href="#ienumerable" title="Permalink to this heading">¶</a></h2>
+<p>Када већ говоримо о интерфејсима, искористићемо прилику да нешто детаљније представимо један који
+често користимо, а да тога можда нисмо ни свесни. То је интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>. Многе библиотечке
+колекције, као што су <code class="docutils literal notranslate"><span class="pre">Stack</span></code>, <code class="docutils literal notranslate"><span class="pre">Queue</span></code>, <code class="docutils literal notranslate"><span class="pre">List</span></code>, <code class="docutils literal notranslate"><span class="pre">SortedSet</span></code> и друге, имплементирају овај,
+као и неке друге интерфејсе. Међутим, управо имплементирање интерфејса <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code> је оно што
+колекције чини колекцијама. Ако се запитамо које су то карактеристичне активности, које обављамо
+над свим колекцијама, вероватно ћемо се сетити итерирања кроз колекцију, претраживања (провере да
+ли колекција садржи одређени елемент), филтрирања (издвајања елемената са одређеном особином) и
+слично. Испосатавља се да све ове активности можемо да обављамо над сваком класом која имплементира
+интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>.</p>
+<p>Као што знамо, за <strong>итерирање</strong> кроз различите колекције користи се наредба <code class="docutils literal notranslate"><span class="pre">foreach</span></code>. Ова наредба
+се сматра удобнијом и безбеднијом од наредбе <code class="docutils literal notranslate"><span class="pre">for</span></code>, јер индексирање није потребно, а спречава се
+и могућност приступања непостојећем елементу колекције (када је индекс ван граница). Наредбу
+<code class="docutils literal notranslate"><span class="pre">foreach</span></code> сте до сада вероватно користили над низовима, листама, скуповима и речницима, а можда и
+над још неким колекцијама, дефинисаним у стандардној библиотеци. Оно што до сада нисмо истицали је да
+наредба <code class="docutils literal notranslate"><span class="pre">foreach</span></code> може да се користи <strong>над сваком класом која имплементира интерфејс</strong> <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>.
+На пример, пошто стекови и редови имплементирају овај интерфејс, петља <code class="docutils literal notranslate"><span class="pre">foreach</span></code> може да се користи
+чак и над њима, мада одговарајући теоријски апстрактни типови својим интерфејсом не допуштају итерирање,
+већ само приступ једном елементу (оном на врху стека, односно првом у реду).</p>
+<p>Поред итерирања помоћу наредбе <code class="docutils literal notranslate"><span class="pre">foreach</span></code>, над класама које имплементирају интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>
+можемо да итерирамо и користећи помоћни објекат, који се назива <strong>енумератор</strong> (набрајач). За овакво
+итерирање довољни су метод <code class="docutils literal notranslate"><span class="pre">MoveNext</span></code> и својство <code class="docutils literal notranslate"><span class="pre">Current</span></code> енумератора, што може да се види у
+програму који следи.</p>
+<p>Овде се подршка интерфејсу <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code> не завршава, јер за класе које га имплементирају доступан
+је и <strong>велики број метода</strong> из именског простора <code class="docutils literal notranslate"><span class="pre">System.Linq</span></code> стандардне библиотеке. То су, на
+пример, методи који враћају неку специфичну вредност из колекције (<code class="docutils literal notranslate"><span class="pre">First</span></code>, <code class="docutils literal notranslate"><span class="pre">Last</span></code>, <code class="docutils literal notranslate"><span class="pre">Min</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Max</span></code>…), методи који враћају резултат неке агрегатне функције над колекцијом (<code class="docutils literal notranslate"><span class="pre">Any</span></code>, <code class="docutils literal notranslate"><span class="pre">All</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Sum`,</span> <span class="pre">``Count</span></code>, <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>…), као и методи-упити, који враћају друге колекције,
+односно референце на интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code> (<code class="docutils literal notranslate"><span class="pre">Where</span></code>, <code class="docutils literal notranslate"><span class="pre">Distinct</span></code>, <code class="docutils literal notranslate"><span class="pre">Union</span></code>, <code class="docutils literal notranslate"><span class="pre">Intersect</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Except</span></code>, <code class="docutils literal notranslate"><span class="pre">Select</span></code>, <code class="docutils literal notranslate"><span class="pre">GroupBy</span></code>, <code class="docutils literal notranslate"><span class="pre">Take</span></code>…). Друге колекције се добијају од постојећих помоћу
+операција пресека, уније, разлике, филтрирањем и другим сличним операцијама.</p>
+<p>Следећи програм показује употребу интерфејса <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>, односно инстанци класа које
+имплементирају овај интерфејс. Сви ти објекти се користе на исти начин, без обзира на њихов стварни
+тип. Поменимо још да интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code> може да се користи и као негенерички (не дефинишући
+тип елемената), и као генерички, нпр. <code class="docutils literal notranslate"><span class="pre">IEnumerable&lt;int&gt;</span></code> или <code class="docutils literal notranslate"><span class="pre">IEnumerable&lt;char&gt;</span></code>, као што је и
+учињено у овом програму.</p>
+
+<div data-childcomponent="ienumerable_kolekcije" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ienumerable_kolekcije data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        // nekoliko razlicitih vrsta kolekcija
+        Stack&lt;int&gt; s = new Stack&lt;int&gt;(); s.Push(1); s.Push(2); s.Push(3);
+        Queue&lt;int&gt; q = new Queue&lt;int&gt;(); q.Enqueue(1); q.Enqueue(2); q.Enqueue(3);
+        SortedSet&lt;int&gt; s2 = new SortedSet&lt;int&gt;() { 1, 2, 3 };
+        List&lt;int&gt; l = new List&lt;int&gt;() { 1, 2, 3 };
+        int[] a = new int[] { 1, 2, 3 };
+
+        // uniformna upotreba kolekcija, putem interfejsa IEnumerable
+        var kolekcije = new List&lt;IEnumerable&lt;int&gt;&gt; { s, q, s2, l, a };
+        foreach (IEnumerable&lt;int&gt; e in kolekcije)
+        {
+            Console.WriteLine(&quot;Tip kolekcije: {0}&quot;, e.GetType());
+            Console.Write(&quot;Iteriranje kroz kolekciju pomocu enumeratora:&quot;);
+            using (var enumerator = e.GetEnumerator())
+            {
+                while (enumerator.MoveNext())
+                    Console.Write(&quot; {0}&quot;, enumerator.Current);
+            }
+            Console.WriteLine();
+
+            Console.Write(&quot;Iteriranje kroz kolekciju pomocu naredbe foreach:&quot;);
+            foreach (int x in e)
+                Console.Write(&quot; {0}&quot;, x);
+            Console.WriteLine();
+
+            Console.WriteLine(&quot;S={0}, N={1}, avg={2}, prvi={3}, poslednji={4}, min={5}, max={6}&quot;, 
+                e.Sum(), e.Count(), e.Average(), e.First(), e.Last(), e.Min(), e.Max());
+
+            var neparni = e.Where(x =&gt; x % 2 != 0);
+            Console.Write(&quot;Neparni elementi:&quot;);
+            foreach (long x in neparni)
+                Console.Write(&quot; {0}&quot;, x);
+            Console.WriteLine();
+
+            Console.WriteLine(&quot;------------------&quot;);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Програм исписује:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Tip kolekcije: System.Collections.Generic.Stack`1[System.Int32]
+Iteriranje kroz kolekciju pomocu enumeratora: 3 2 1
+Iteriranje kroz kolekciju pomocu naredbe foreach: 3 2 1
+S=6, N=3, avg=2, prvi=3, poslednji=1, min=1, max=3
+Neparni elementi: 3 1
+------------------
+Tip kolekcije: System.Collections.Generic.Queue`1[System.Int32]
+Iteriranje kroz kolekciju pomocu enumeratora: 1 2 3
+Iteriranje kroz kolekciju pomocu naredbe foreach: 1 2 3
+S=6, N=3, avg=2, prvi=1, poslednji=3, min=1, max=3
+Neparni elementi: 1 3
+------------------
+Tip kolekcije: System.Collections.Generic.SortedSet`1[System.Int32]
+Iteriranje kroz kolekciju pomocu enumeratora: 1 2 3
+Iteriranje kroz kolekciju pomocu naredbe foreach: 1 2 3
+S=6, N=3, avg=2, prvi=1, poslednji=3, min=1, max=3
+Neparni elementi: 1 3
+------------------
+Tip kolekcije: System.Collections.Generic.List`1[System.Int32]
+Iteriranje kroz kolekciju pomocu enumeratora: 1 2 3
+Iteriranje kroz kolekciju pomocu naredbe foreach: 1 2 3
+S=6, N=3, avg=2, prvi=1, poslednji=3, min=1, max=3
+Neparni elementi: 1 3
+------------------
+Tip kolekcije: System.Int32[]
+Iteriranje kroz kolekciju pomocu enumeratora: 1 2 3
+Iteriranje kroz kolekciju pomocu naredbe foreach: 1 2 3
+S=6, N=3, avg=2, prvi=1, poslednji=3, min=1, max=3
+Neparni elementi: 1 3
+------------------
+</pre></div>
+</div>
+<p>Због овако богате подршке интерфејсу <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>, напомињемо да и класе које ми пишемо могу да
+се користе на овај начин, а ради тога је довољно да имплементирају интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>. У
+наставку дајемо две различите дораде претходног програма. У обе дораде је дефинисана класа <code class="docutils literal notranslate"><span class="pre">Fib</span></code>,
+која имплементира интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable&lt;int&gt;</span></code>. Захваљујући томе, ова класа може да се користи
+на исти начин као и библиотечке класе из основног програма, што је овим у дорадама и демонстрирано.
+Интересантно је да, иако се класа <code class="docutils literal notranslate"><span class="pre">Fib</span></code> користи као колекција Фибоначијевих бројева, она у себи
+не садржи стварно колекцију тих бројева, већ сваки број израчунава тек када је то потребно, тј.
+када се итерирањем стигне до њега.</p>
+<p>Различите имплементације класе <code class="docutils literal notranslate"><span class="pre">Fib</span></code>, заједно са програмом у коме се она користи, можете да
+видите кликом на одговарајуће дугме испод.</p>
+
+    <div data-component="reveal" id="dugme_prva_implementacija"   data-showtitle="Класа Fib са енумераторском класом" data-hidetitle="Сакриј имплементацију са енумераторском класом">
+    <p><strong>Класа Fib са енумераторском класом</strong></p>
+
+<div data-childcomponent="ienumerable_fib_enumerator_class" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ienumerable_fib_enumerator_class data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    class Fib : IEnumerable&lt;int&gt;
+    {
+        private int first, second, max;
+
+        public Fib(int f1, int f2, int n)
+        {
+            first = f1;
+            second = f2;
+            max = n;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator&lt;int&gt; IEnumerable&lt;int&gt;.GetEnumerator()
+        {
+            return new FibEnumerator(this);
+        }
+
+        // klasa FibEnumerator je privatna unutar klase Fib
+        // pa ima pravo da pristupa privatnim poljima klase Fib
+        private class FibEnumerator : IEnumerator&lt;int&gt;
+        {
+            private Fib instance;
+            private int current, next;
+            public FibEnumerator(Fib inst)
+            {
+                this.instance = inst;
+                current = instance.first;
+                next = instance.second;
+            }
+            int IEnumerator&lt;int&gt;.Current
+            {
+                get { return current; }
+            }
+
+            public object Current { get { throw new NotImplementedException(); } }
+
+            public bool MoveNext()
+            {
+                int next2 = current + next;
+                current = next;
+                next = next2;
+                return (current &lt;= instance.max);
+            }
+
+            public void Reset()
+            {
+                current = instance.first;
+                next = instance.second;
+            }
+
+            public void Dispose()
+            {
+                return;
+            }
+        }
+    }
+
+    public static void Main(String[] args)
+    {
+        // nekoliko razlicitih vrsta kolekcija
+        Stack&lt;int&gt; s = new Stack&lt;int&gt;(); s.Push(1); s.Push(2); s.Push(3);
+        Queue&lt;int&gt; q = new Queue&lt;int&gt;(); q.Enqueue(1); q.Enqueue(2); q.Enqueue(3);
+        SortedSet&lt;int&gt; s2 = new SortedSet&lt;int&gt;() { 1, 2, 3 };
+        List&lt;int&gt; l = new List&lt;int&gt;() { 1, 2, 3 };
+        int[] a = new int[] { 1, 2, 3 };
+        Fib f = new Fib(1, 2, 1000);
+
+        // uniformna upotreba kolekcija
+        var kolekcije = new List&lt;IEnumerable&lt;int&gt;&gt; { s, q, s2, l, a, f };
+        foreach (IEnumerable&lt;int&gt; e in kolekcije)
+        {
+            Console.WriteLine(&quot;Tip kolekcije: {0}&quot;, e.GetType());
+            Console.Write(&quot;Iteriranje kroz kolekciju pomocu enumeratora:&quot;);
+            using (var enumerator = e.GetEnumerator())
+            {
+                while (enumerator.MoveNext())
+                    Console.Write(&quot; {0}&quot;, enumerator.Current);
+            }
+            Console.WriteLine();
+
+            Console.Write(&quot;Iteriranje kroz kolekciju pomocu naredbe foreach:&quot;);
+            foreach (int x in e)
+                Console.Write(&quot; {0}&quot;, x);
+            Console.WriteLine();
+
+            Console.WriteLine(&quot;S={0}, N={1}, avg={2}, prvi={3}, poslednji={4}, min={5}, max={6}&quot;, 
+                e.Sum(), e.Count(), e.Average(), e.First(), e.Last(), e.Min(), e.Max());
+
+            var neparni = e.Where(x =&gt; x % 2 != 0);
+            Console.Write(&quot;Neparni elementi:&quot;);
+            foreach (int x in neparni)
+                Console.Write(&quot; {0}&quot;, x);
+            Console.WriteLine();
+
+            Console.WriteLine(&quot;------------------&quot;);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    
+    <div data-component="reveal" id="dugme_druga_implementacija"   data-showtitle="Класа Fib са наредбом yield" data-hidetitle="Сакриј имплементацију са наредбом yield">
+    <p><strong>Класа Fib са наредбом yield</strong></p>
+
+<div data-childcomponent="ienumerable_fib_enumerator_yield" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ienumerable_fib_enumerator_yield data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    class Fib : IEnumerable&lt;int&gt;
+    {
+        private int first, second, current, next, max;
+
+        public Fib(int f1, int f2, int n)
+        {
+            first = current = f1;
+            second = next = f2;
+            max = n;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator&lt;int&gt; IEnumerable&lt;int&gt;.GetEnumerator()
+        {
+            current = first;
+            next = second;
+            while (current &lt;= max)
+            {
+                yield return current;
+                int next2 = current + next;
+                current = next;
+                next = next2;
+            }
+        }
+    }
+    public static void Main(String[] args)
+    {
+        // nekoliko razlicitih vrsta kolekcija
+        Stack&lt;int&gt; s = new Stack&lt;int&gt;(); s.Push(1); s.Push(2); s.Push(3);
+        Queue&lt;int&gt; q = new Queue&lt;int&gt;(); q.Enqueue(1); q.Enqueue(2); q.Enqueue(3);
+        SortedSet&lt;int&gt; s2 = new SortedSet&lt;int&gt;() { 1, 2, 3 };
+        List&lt;int&gt; l = new List&lt;int&gt;() { 1, 2, 3 };
+        int[] a = new int[] { 1, 2, 3 };
+        Fib f = new Fib(1, 2, 1000);
+
+        // uniformna upotreba kolekcija
+        var kolekcije = new List&lt;IEnumerable&lt;int&gt;&gt; { s, q, s2, l, a, f };
+        foreach (IEnumerable&lt;int&gt; e in kolekcije)
+        {
+            Console.WriteLine(&quot;Tip kolekcije: {0}&quot;, e.GetType());
+            Console.Write(&quot;Iteriranje kroz kolekciju pomocu enumeratora:&quot;);
+            using (var enumerator = e.GetEnumerator())
+            {
+                while (enumerator.MoveNext())
+                    Console.Write(&quot; {0}&quot;, enumerator.Current);
+            }
+            Console.WriteLine();
+
+            Console.Write(&quot;Iteriranje kroz kolekciju pomocu naredbe foreach:&quot;);
+            foreach (int x in e)
+                Console.Write(&quot; {0}&quot;, x);
+            Console.WriteLine();
+
+            Console.WriteLine(&quot;S={0}, N={1}, avg={2}, prvi={3}, poslednji={4}, min={5}, max={6}&quot;, 
+                e.Sum(), e.Count(), e.Average(), e.First(), e.Last(), e.Min(), e.Max());
+
+            var neparni = e.Where(x =&gt; x % 2 != 0);
+            Console.Write(&quot;Neparni elementi:&quot;);
+            foreach (int x in neparni)
+                Console.Write(&quot; {0}&quot;, x);
+            Console.WriteLine();
+
+            Console.WriteLine(&quot;------------------&quot;);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    </section>
 </section>
 
 

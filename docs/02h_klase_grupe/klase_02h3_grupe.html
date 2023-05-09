@@ -389,12 +389,12 @@
                 
                 <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
-                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <h5>4.3 Интерфејси</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
-                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
                 <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
@@ -501,7 +501,7 @@
 различитим параметрима алгоритама, различитим редоследом примене филтара итд. У сваком случају,
 логично је да опште алгоритме за обраду слике издвојимо у посебну библиотеку коју бисмо могли да
 назовемо <code class="docutils literal notranslate"><span class="pre">ObradaSlike</span></code>, јер би та библиотека веома лако могла да буде потребна и у другим
-пројектима. Са друге стране, класе које на специфичан начин користе ове алогиритме су везане за
+пројектима. Са друге стране, класе које на специфичан начин користе ове алгоритме су везане за
 проблем који решавамо. Због тога оне нису нарочито важне за друге пројекте и не треба да
 оптерећују претходну библиотеку. Те класе и даље могу да се издвоје у нову, посебну библиотеку,
 која би могла да се зове нпр. <code class="docutils literal notranslate"><span class="pre">PronalazenjeObjekata</span></code>. Тада би библиотека <code class="docutils literal notranslate"><span class="pre">PronalazenjeObjekata</span></code>
@@ -526,7 +526,7 @@
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../_images/spregnutost.png"><img alt="../_images/spregnutost.png" src="../_images/spregnutost.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">Пример лоше, тесне спрегнуторсти (лево), где сваки модул посредно или непосредно зависи од
+<p><span class="caption-text">Пример лоше, тесне спрегнутости (лево), где сваки модул посредно или непосредно зависи од
 сваког другог, и добре, лабаве спрегнутости (десно), где постоје слојеви.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
@@ -554,7 +554,7 @@
 пројекта. Поменућемо још једну корист коју имамо од лабаве спрегнутости, а која није тако
 очигледна. Током развоја програма честе су мале измене, после којих желимо да испробамо како
 програм ради. При лабавој спрегнутости, мале измене у коду погађају само мали број (малих)
-модула, тако да се извршиви фајлови (библиотеке и прогрми) веома брзо формирају. Када у пројекту
+модула, тако да се извршиви фајлови (библиотеке и програми) веома брзо формирају. Када у пројекту
 постоје тесно спрегнути модули, они често завршавају у истом извршивом фајлу (статички се линкују),
 па може да се догоди да после измене само једне линије кода линковање траје и по неколико минута.</p>
 </section>

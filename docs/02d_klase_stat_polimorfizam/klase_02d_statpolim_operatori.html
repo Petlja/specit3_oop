@@ -390,12 +390,12 @@
                 
                 <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
-                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <h5>4.3 Интерфејси</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
-                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
                 <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
@@ -500,9 +500,9 @@
 <p>Као што знамо, метод <code class="docutils literal notranslate"><span class="pre">Substring</span></code> враћа подстринг стринга из којег је позван. Овај метод смо већ
 користили и навикли смо на то да можемо да га позивамо на два начина:</p>
 <ul class="simple">
-<li><p>када наведемо само један параметар, нпр <code class="docutils literal notranslate"><span class="pre">s.Substring(odakle)</span></code>, резултујући подстринг садржи
+<li><p>када наведемо само један параметар, нпр. <code class="docutils literal notranslate"><span class="pre">s.Substring(odakle)</span></code>, резултујући подстринг садржи
 знакове од наведене позиције до краја стринга <code class="docutils literal notranslate"><span class="pre">s</span></code>;</p></li>
-<li><p>када наведемо два параметра, нпр <code class="docutils literal notranslate"><span class="pre">s.Substring(odakle,</span> <span class="pre">koliko)</span></code>, резултујући подстринг садржи
+<li><p>када наведемо два параметра, нпр. <code class="docutils literal notranslate"><span class="pre">s.Substring(odakle,</span> <span class="pre">koliko)</span></code>, резултујући подстринг садржи
 <code class="docutils literal notranslate"><span class="pre">koliko</span></code> знакова почев од наведене позиције <code class="docutils literal notranslate"><span class="pre">odakle</span></code>.</p></li>
 </ul>
 <p>Врло често се иза ових различитих начина позивања заправо налазе различити методи, тако да би често
@@ -625,7 +625,7 @@ class Program
 подржимо рачунске операције са разломцима. Један начин да то урадимо је да напишемо методе <code class="docutils literal notranslate"><span class="pre">Saberi</span></code>,
 <code class="docutils literal notranslate"><span class="pre">Oduzmi</span></code>, <code class="docutils literal notranslate"><span class="pre">Pomnozi</span></code> и <code class="docutils literal notranslate"><span class="pre">Podeli</span></code>. Сваки од ових метода би могао да буде статички, са два
 параметра типа <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> и резултатом истог типа.</p>
-<p>Ипак, за прогамера који користи нашу класу би било удобније да може да рачуна са разломцима на исти
+<p>Ипак, за програмера који користи нашу класу би било удобније да може да рачуна са разломцима на исти
 начин као са целим и реалним бројевима. На пример:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Razlomak</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
 <span class="n">Razlomak</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
@@ -637,7 +637,7 @@ class Program
 пише (<code class="docutils literal notranslate"><span class="pre">+</span></code>) можемо да сабирамо целе бројеве, реалне бројеве и стрингове. Према типу аргумената
 компајлер може да одреди о којем од неколико оператора сабирања је реч.</p>
 <p><strong>Дефинисање оператора</strong></p>
-<p>Језик <em>C#</em> подржава могућност да дефинишемо оператор сабирања и за објекте ило које наше класе.
+<p>Језик <em>C#</em> подржава могућност да дефинишемо оператор сабирања и за објекте било које наше класе.
 Решење је веома једноставно, довољно је да напишемо метод који се зове <code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">+</span></code>:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">+(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
@@ -688,7 +688,7 @@ class Program
 попут <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">-</span> <span class="pre">b;</span></code>, тј. дефинише како се <code class="docutils literal notranslate"><span class="pre">-</span></code> извршава као бинарни оператор (оператор одузимања).</p>
 <p>Методи <code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">*</span></code> и <code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">/</span></code> функционишу на исти начин, тј. дефинишу како се извршавају
 оператори <code class="docutils literal notranslate"><span class="pre">*</span></code> и <code class="docutils literal notranslate"><span class="pre">/</span></code>. Ови оператори су могли да буду имплементирани и једноставније, али смо их
-написали на овај начин (користећи скраћивање) да бисмо смањили моућност да дође до прекорачења
+написали на овај начин (користећи скраћивање) да бисмо смањили могућност да дође до прекорачења
 опсега целобројне променљиве.</p>
 <p>Да бисмо подржали и изразе попут <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">-</span> <span class="pre">3</span></code> или <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">a</span></code>, можемо да напишемо и методе</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">+(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
@@ -735,7 +735,7 @@ class Program
 са <code class="docutils literal notranslate"><span class="pre">Math.Sqrt(2)</span></code>, мада не постоји посебан метод <code class="docutils literal notranslate"><span class="pre">Math.Sqrt</span></code> са целобројним параметром.
 Када компајлер наиђе на позив метода (или оператора) са параметрима који не одговарају директно
 ни једној од истоимених верзија метода, он покушава дозвољеним имплицитним конверзијама да
-прилагоди типове праметара неком од постојећих метода са тим именом. Тако се целобројно 2
+прилагоди типове параметара неком од постојећих метода са тим именом. Тако се целобројно 2
 имплицитно конвертује у реално 2.0 и метод може да се позове.</p>
 <p><strong>Дефинисање имплицитне конверзије</strong></p>
 <p>У језику <em>C#</em> имамо могућност да дефинишемо имплицитну конверзију једног типа у други, коју ће
@@ -779,9 +779,9 @@ class Program
 желимо да прегазимо (редефинишемо, надјачамо) постојећи метод који такође нема параметара
 (<em>override</em> на енглеском значи <em>прегази</em>). Редефинисање метода <code class="docutils literal notranslate"><span class="pre">ToString</span></code> је такође неки вид
 полиморфизма, али њиме ћемо се нешто детаљније бавити касније.</p>
-<p>Следи пример са <strong>комплетном класом</strong> <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, који омогућава учитавање разломака са
-тастатуре, приказ на екрану, поређење и рачунање са разломцима. Пример можете да копирате и
-испробате у свом радном окружењу.</p>
+<p>Следи пример са допуњеном класом <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, који омогућава учитавање разломака са тастатуре,
+приказ на екрану, поређење и рачунање са разломцима (у примеру се решава линеарна једначина са
+разломцима). Пример можете да копирате и испробате у свом радном окружењу.</p>
 
 <div data-childcomponent="racunanje_sa_razlomcima" class="course-box course-box-problem course-content">
 

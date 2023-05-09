@@ -389,12 +389,12 @@
                 
                 <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
-                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <h5>4.3 Интерфејси</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
-                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
                 <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
@@ -499,13 +499,13 @@
 постојећа функционалност поремети, тј. да се унесу багови. Због свега овога, мењање постојеће класе
 није свима прихватљиво решење.</p>
 <p>Након одустајања од измене класе, следеће што може да нам падне на памет је да поменуту класу
-копирамо и преименујемо, а затим прилагодимо својим потребама. На жалост, ту долази до делимичног
+копирамо и преименујемо, а затим прилагодимо својим потребама. Нажалост, ту долази до делимичног
 дуплирања кода, што је лоше из више разлога, као што смо често истицали. Као прво, цео програм
 расте и постаје непрегледнији и тежи за сналажење. Као друго, ако се усвоји пракса копирања кода,
 пре или касније се дешава да исправка или раније планирана измена која је учињена на једном месту,
 не буде пренесена у све копије у које би требало. Због таквог стања кода, може да буде потрошено
-доста времена да се установи да ли неке разлике које су у међуверемену настале треба да се
-елиминишу или не, односно која везија треба да се прилагоди оној другој. Ситуација је још
+доста времена да се установи да ли неке разлике које су у међувремену настале треба да се
+елиминишу или не, односно која верзија треба да се прилагоди оној другој. Ситуација је још
 компликованија ако уместо две постоји више верзија сличног кода. Све у свему, дугорочно гледано,
 копирање је такође лоша идеја.</p>
 <p>На срећу, постоји и трећа могућност, а то је управо употреба наслеђивања. Наслеђивање нам омогућава
@@ -609,7 +609,7 @@
 <p>Ако базна класа има више конструктора, компајлер на основу броја и типа аргумената наведених иза
 речи <code class="docutils literal notranslate"><span class="pre">base</span></code> одређује који од њих треба да буде изрвршен. Уколико базна класа има и конструктор
 без параметара, део <code class="docutils literal notranslate"><span class="pre">:</span> <span class="pre">base(&lt;lista</span> <span class="pre">ragumenata&gt;)</span></code> можемо и да изоставимо, а у том случају ће да
-буде извршен консруктор базне класе без параметара. Уколико базна класа нема такав конструктор,
+буде извршен конструктор базне класе без параметара. Уколико базна класа нема такав конструктор,
 реч <code class="docutils literal notranslate"><span class="pre">base</span></code> и листу аргумената морамо да наведемо.</p>
 </section>
 <section id="id5">
@@ -618,7 +618,7 @@
 <h3>Производи и намирнице<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
 <p>У овом примеру, производе који се купују у самопослугама представљамо помоћу само два податка,
 а то су назив и цена производа. У реалистичнијем примеру могло би се за сваки производ памтити
-више података, нпр. пореска стопа (пдв), количина (број комада у паковању), величина (маса или
+више података, нпр. пореска стопа (ПДВ), количина (број комада у паковању), величина (маса или
 запремина) итд. Међутим, назив и цена су нам довољни да илуструју идеју. Са овако једноставно
 дефинисаном класом може, на пример, да се израчуна укупна цена групе неких приозвода.</p>
 
@@ -778,7 +778,7 @@ namespace Program
 <p>За сва возила која користе течно гориво (аутомобили, камиони, моторцикли, аутобуси, трактори) може
 да се води евиденција о наточеном гориву, пређеној километражи, преосталом гориву у резервоару,
 домету са расположивим горивом и слично. У ту сврху служи класа <code class="docutils literal notranslate"><span class="pre">Vozilo</span></code> из овог примера. Поред
-ове евиденције о гориву и клометражи, за аутобусе може додатно да буде од интереса евиденција о
+ове евиденције о гориву и километражи, за аутобусе може додатно да буде од интереса евиденција о
 превезеним путницима, попуњености аутобуса, продатим картама за вожњу и слично. Зато је класа
 <code class="docutils literal notranslate"><span class="pre">Autobus</span></code> изведена из класе <code class="docutils literal notranslate"><span class="pre">Vozilo</span></code> и допуњена подацима и методима за праћење броја путника.
 Требало би да су класе и пример употребе довољно јасни и без детаљнијег објашњења.</p>

@@ -420,16 +420,16 @@ lessons:
   - description: ''
     file: int_04c1_interfejsi.html
     guid: 01cdc952-831f-425d-9209-1f604239eb0c
-    normalized_title: Интерфејси
+    normalized_title: Вишеструко наслеђивање и појам интерфејса
     src: int_04c1_interfejsi.rst
-    title: Интерфејси
+    title: Вишеструко наслеђивање и појам интерфејса
     type: reading
   - description: ''
-    file: int_04c2_visetruko_nasledjivanje.html
+    file: int_04c2_sopstveni_interfejsi.html
     guid: f07f9363-5c53-4408-ad44-309064c1b319
-    normalized_title: Вишеструко наслеђивање
-    src: int_04c2_visetruko_nasledjivanje.rst
-    title: Вишеструко наслеђивање
+    normalized_title: Употреба сопствених интерфејса
+    src: int_04c2_sopstveni_interfejsi.rst
+    title: Употреба сопствених интерфејса
     type: reading
   - description: ''
     file: int_04cq_visetruko_nasledjivanje_kviz.html
@@ -449,8 +449,8 @@ lessons:
   description: ''
   folder: 04c_interfejsi
   guid: 97e9ed85-4ff2-4b13-a449-cfa0b8436781
-  normalized_title: 4.3 Интерфејси, вишеструко наслеђивање
-  title: 4.3 Интерфејси, вишеструко наслеђивање
+  normalized_title: 4.3 Интерфејси
+  title: 4.3 Интерфејси
 - activities:
   - description: ''
     file: vm_04d_01_modifikacija.html

@@ -389,12 +389,12 @@
                 
                 <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
-                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <h5>4.3 Интерфејси</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
-                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
                 <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
@@ -523,7 +523,7 @@
 <li><p>У дијалогу који се отвара, можемо као име пројекта (<cite>Project name</cite>) да упишемо <code class="docutils literal notranslate"><span class="pre">AsocijacijeWin</span></code></p></li>
 </ul>
 <p>Најбоље је да одмах подесимо и зависност новог програма од библиотеке, као што смо то учинили и
-за конзолну апликацију. Такође, на почетак проргама треба да додамо ред <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">AsocijacijeLib;</span></code>,
+за конзолну апликацију. Такође, на почетак програма треба да додамо ред <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">AsocijacijeLib;</span></code>,
 којим омогућавамо програму да користи име класе и њених делова, дефинисаних у именском простору <code class="docutils literal notranslate"><span class="pre">AsocijacijeLib</span></code>.</p>
 <p>У програму ће нам бити потребан један објекат класе <code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code> (назовимо га <code class="docutils literal notranslate"><span class="pre">igra</span></code>), као и
 целобројна променљива за бројање поена (променљива <code class="docutils literal notranslate"><span class="pre">ukupnoPoena</span></code>). У случају да желимо игру за
@@ -550,7 +550,7 @@
 </pre></div>
 </div>
 <p>Позабавимо се сада и дизајном и садржајем ове графичке апликације.</p>
-<p>Дволиком на форму, добијамо метод <code class="docutils literal notranslate"><span class="pre">Form1_Load</span></code> који ћемо касније да искористимо за све потребне
+<p>Двокликом на форму, добијамо метод <code class="docutils literal notranslate"><span class="pre">Form1_Load</span></code> који ћемо касније да искористимо за све потребне
 иницијализације, када будемо видели шта све треба да се иницијализује.</p>
 <p>За учитавање фајла са појмовима и решењима уобичајено је да се креира мени са опцијом <cite>File / Open</cite>.
 Уколико нисте сигурни како да то урадите, додавање менија и дијалога за отварање фајла је објашњено
@@ -575,7 +575,7 @@
 одговара метод <code class="docutils literal notranslate"><span class="pre">btn_Click</span></code>. У изворном коду за сада празног метода видимо да је он декларисан као
 <code class="docutils literal notranslate"><span class="pre">btn_Click(object</span> <span class="pre">sender,</span> <span class="pre">EventArgs</span> <span class="pre">e)</span></code>. Први параметар овог метода је објекат на коме се догађај
 десио, тј. дугме на које је кликнуто. Захваљујући томе, метод зна за које дугме је позван и може да
-закључи које параметре да проследи метиду игре <code class="docutils literal notranslate"><span class="pre">igra.Otvori(kol,</span> <span class="pre">polje)</span></code>. Ипак, пошто упоређивање
+закључи које параметре да проследи методу игре <code class="docutils literal notranslate"><span class="pre">igra.Otvori(kol,</span> <span class="pre">polje)</span></code>. Ипак, пошто упоређивање
 објекта <code class="docutils literal notranslate"><span class="pre">sender</span></code> са сваким од 16 дугмета није нарочито елегантно решење, можемо да искористимо поље
 <code class="docutils literal notranslate"><span class="pre">Tag</span></code> дугмета, и по том тагу једноставније одредимо који параметри су нам потребни. За поље <code class="docutils literal notranslate"><span class="pre">Tag</span></code>
 може да се веже било који објекат, а ми ћемо у то поље да упишемо неки текст из кога лако могу да се

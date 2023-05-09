@@ -389,12 +389,12 @@
                 
                 <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
-                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <h5>4.3 Интерфејси</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
-                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
                 <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
@@ -487,7 +487,7 @@
 <li><p>Пример употребе апстрактне класе и апстрактних метода</p></li>
 <li><p>Апстрактне класе као облик динамичког полиморфизма</p></li>
 </ul>
-<p>Да бисмо најлаше разумели у којој ситуацији апстрактни методи и класе могу да нам буду од користи и
+<p>Да бисмо најлакше разумели у којој ситуацији апстрактни методи и класе могу да нам буду од користи и
 шта тачно помоћу њих добијамо, овај пут полазимо од конкретног задатка, који ћемо да решимо на више
 начина.</p>
 <section id="id2">
@@ -741,7 +741,7 @@ internal class Program
 </section>
 <section id="id5">
 <h3>Треће решење<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
-<p>Удобно решење би тебало да нам омогући да завршни део програма изгледа овако:</p>
+<p>Удобно решење би требало да нам омогући да завршни део програма изгледа овако:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Figura2D</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">figure</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Figura: Boja={0}, Obim={1:0.00}, Povrsina={2:0.00}&quot;</span><span class="p">,</span><span class="w"></span>
@@ -792,8 +792,8 @@ internal class Program
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>У дефиницијама метода у изведеним класама треба да назначимо да се ради дефиницији управо апсрактног
-метода декларисаног у базној класи. Обратите пажњу на реч <code class="docutils literal notranslate"><span class="pre">override</span></code> уи изведеним класама.</p>
+<p>У дефиницијама метода у изведеним класама треба да назначимо да се ради дефиницији управо апстрактног
+метода декларисаног у базној класи. Обратите пажњу на реч <code class="docutils literal notranslate"><span class="pre">override</span></code> у изведеним класама.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Krug</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Figura2D</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">r</span><span class="p">;</span><span class="w"></span>
@@ -907,7 +907,7 @@ internal class Program
 појављивање у више облика. Статички полиморфизам подразумева употребу више истоимених метода у
 оквиру једне класе. Ти методи се разликују већ и по броју и типу параметара, па већ у време превођења
 (компајлирања) постоји довољно информација да се сваки од позива тих метода разреши, тј. да се
-зкључи о којем од неколико истоимених метода се ради. Зато тај вид полиморфизма називамо статички.</p>
+закључи о којем од неколико истоимених метода се ради. Зато тај вид полиморфизма називамо статички.</p>
 <p>За разлику од тога, облик полиморфизма који смо управо упознали не може да се разреши у време
 превођења (статички). То значи да се позив метода разрешава тек у време извршавања програма, па се
 зато овај вид полиморфизма назива динамички.</p>

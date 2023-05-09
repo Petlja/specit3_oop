@@ -390,12 +390,12 @@
                 
                 <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
-                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <h5>4.3 Интерфејси</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
-                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
                 <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
@@ -482,12 +482,12 @@
     
   <section id="id1">
 <h1>Вредност функције<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
-<p>Опвај пример је знатно већи од претходна два и обухвата неколико пројеката. Најважнији пројекат
+<p>Овај пример је знатно већи од претходна два и обухвата неколико пројеката. Најважнији пројекат
 у примеру је библиотека <code class="docutils literal notranslate"><span class="pre">Funkcije</span></code>,  која омогућава задавање функције у текстуалном облику и
 брзо израчунавање вредности те функције за разне вредности променљиве <span class="math notranslate nohighlight">\(x\)</span>. Ова библиотека
 се затим користи у различитим апликацијама.</p>
 <p>Прва употреба библиотеке <code class="docutils literal notranslate"><span class="pre">Funkcije</span></code> је једноставна конзолна апликација, која табеларно
-приказује фредности задате функције у задатом интервалу. Она уједно служи и за тестирање библиотеке.</p>
+приказује вредности задате функције у задатом интервалу. Она уједно служи и за тестирање библиотеке.</p>
 <p>Друга употреба је апликација за цртање графика функције коју унесе корисник. У овој апликацији је
 употребљена и библиотека <code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code>, која омогућава флексибилан приказ координатног
 система и прерачунавање координата из координатног система света у координатни систем екрана и обрнуто.</p>
@@ -520,7 +520,7 @@
 </div>
 <p>Функције се често компонују у сложене функције, на пример <span class="math notranslate nohighlight">\(e^{\sin(x)}\)</span>, <span class="math notranslate nohighlight">\(\sqrt{x^2+1}\)</span> и
 слично. Да бисмо могли да градимо овакве, сложене функције, згодно је да објекат који представља
-функцију садржи рефреенце на друге функције, које се појављују као њени параметри. На пример, ако
+функцију садржи референце на друге функције, које се појављују као њени параметри. На пример, ако
 желимо да формирамо објекат који представља функцију <span class="math notranslate nohighlight">\(e^{f(x)}\)</span> где је <span class="math notranslate nohighlight">\(f\)</span> нека већ
 креирана функција, згодно је да нова, експоненцијална функција садржи референцу на функцију <span class="math notranslate nohighlight">\(f\)</span>
 и да је користи за израчунавање своје вредности.</p>
@@ -633,9 +633,9 @@ namespace FunctionValue
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Function</span><span class="w"> </span><span class="n">triPutaX</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Product</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// implicitna konverzija</span>
 </pre></div>
 </div>
-<p>Креирањем врло сличних класа за остале уобичајене фунције долазимо до коначног облика
+<p>Креирањем врло сличних класа за остале уобичајене функције долазимо до коначног облика
 хијерархије класа за представљање математичких функција. На крају фајла је мала класа
-<code class="docutils literal notranslate"><span class="pre">FunctionTester</span></code> којом испорбавамо написани кôд.</p>
+<code class="docutils literal notranslate"><span class="pre">FunctionTester</span></code> којом испробавамо написани кôд.</p>
 
     <div data-component="reveal" id="dugme_ParsiranjeFunkcija_Functions.cs"   data-showtitle="Садржај фајла Functions.cs" data-hidetitle="Сакриј садржај фајла Functions.cs">
     

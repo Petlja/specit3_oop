@@ -390,12 +390,12 @@
                 
                 <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
-                    <h5>4.3 Интерфејси, вишеструко наслеђивање</h5>
+                    <h5>4.3 Интерфејси</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Интерфејси</div></a>
-                <a href=../04c_interfejsi/int_04c2_visetruko_nasledjivanje.html><div class="studioLecture" id=activity-int_04c2_visetruko_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
                 <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
@@ -492,7 +492,7 @@
 примеру да распоредимо класе у <strong>две библиотеке</strong> и да направимо неколико апликација које користе
 једну, другу или обе библиотеке.</p>
 <section id="id2">
-<h2>Пример - Цртање многоуглова у кординатном систему<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>Пример - Цртање многоуглова у координатном систему<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 
     <div class="note-wrapper questionnote-type">
         <div class="note-icon-holder"> </div>
@@ -519,7 +519,7 @@
 <section id="id3">
 <h3>Анализа<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
 <p>У овом задатку појављују се два координатна система. Један је математички координатни систем, који
-користи неку апстрактну јеединичну дуж и у коме се рачунају обим и површина многоугла. Други је
+користи неку апстрактну јединичну дуж и у коме се рачунају обим и површина многоугла. Други је
 координатни систем прозора у коме цртамо, у коме се координате изражавају у пикселима. Када се у
 програму користе два координатна система, уобичајено је да се координатни систем који приказујемо
 кориснику назива <strong>координатни систем света</strong>, а интерни координатни систем са координатама у
@@ -896,7 +896,7 @@ namespace coordinate_converter
 </div>
 
     </div>
-    <p>Поред метода за прерачунавање координата (који би требало да су јасни), класа садржи и следеће мотоде:</p>
+    <p>Поред метода за прерачунавање координата (који би требало да су јасни), класа садржи и следеће методе:</p>
 <ul class="simple">
 <li><p>метод <code class="docutils literal notranslate"><span class="pre">DrawGrid</span></code> који за дати објекат типа <code class="docutils literal notranslate"><span class="pre">Graphics</span></code> и дату величину прозора исцртава координатни систем.</p></li>
 <li><p>метод <code class="docutils literal notranslate"><span class="pre">Translate</span></code>, који ажурира положај светског координатног почетка у екранским координатама кад се координатни систем помери</p></li>

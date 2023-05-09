@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Пример дизајнирања класе</title>
+    <title>Употреба сопствених интерфејса</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -131,6 +131,7 @@
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
     <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -480,507 +481,284 @@
     <div id="main-content">
     
   <section id="id1">
-<h1>Пример дизајнирања класе<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
-<p>У овој лекцији:</p>
-<ul class="simple">
-<li><p>Креирање класе на основу описа проблема</p></li>
-<li><p>Примена концепата ООП</p></li>
-<li><p>Удобност употребе класе из различитих програма</p></li>
-</ul>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>У овој лекцији ћемо на једном примеру да илуструјемо анализу проблема који није детаљно
-спецификован, као и доношење могућих одлука о интерфејсу на основу описа проблема и
-општих препорука.</p>
-<p>Приликом смишљања решења, применићемо различите концепте ООП, о којима је било речи.
-У класи која представља игру користићемо приватне чланове и јавна својства (енкапсулација
-и апстракција), истоимене методе (статички полиморфизам), као и две врсте индексера, са
-једним и два индекса (и ово је један вид апстракције).</p>
-<p>У класи <code class="docutils literal notranslate"><span class="pre">Program</span></code> конзолне апликације користићемо (као и обично) само статичке методе,
-јер се ова класа не инстанцира.</p>
+<h1>Употреба сопствених интерфејса<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <section id="id2">
-<h2>Задатак - игра асоцијације<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>Писање интерфејса<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>Писање интерфејса је једноставније од писања апстрактне класе. Као прво, није потребно писати реч
+<code class="docutils literal notranslate"><span class="pre">abstract</span></code> ни испред имена интерфејса, ни испред имена метода, јер интерфејс је апстрактан по
+дефиницији. Такође, подразумева се да су методи јавни ако се не наведе другачије, па не мора да се
+пише ни реч <code class="docutils literal notranslate"><span class="pre">public</span></code> испред имена метода. У класи која имплементира интерфејс није потребно писати
+реч <code class="docutils literal notranslate"><span class="pre">override</span></code> испред имена метода, јер ако класа није апстрактна она свакако мора да имплементира
+све методе декларисане у интерфејсу.</p>
+<p>Погледајмо ово на следећем примеру.</p>
+<section id="id3">
+<h3>Пример - настави низ<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
 
     <div class="note-wrapper questionnote-type">
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-<p>Написати класу <code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code>, која представља основу за познату игру асоцијације.</p>
-<p>Приликом писања класе предвидети њену употебу из конзолних апликација и апликација са
-графикчким корисничким интерфејсом, које употребом те класе треба да омогуће играње игре
-за једног или два играча.</p>
-<p>Тестирати класу помоћу једноставне конзолне апликације, која само проверава функционалност
-класе без могућности играња игре.</p>
+<p>Написати програм који омогућава кориснику да игра игру „настави низ”. Програм треба да изабере
+неку правилност по којој се ређају елементи низа и да приказује елементе један по један, а корисник
+програма може после сваког приказаног елемента да погађа следећи елемент, да тражи још један
+елемент, да тражи нови низ, или да напусти програм.</p>
+<p>Правилности по којима се ређају елементи могу, на пример, да буду:</p>
+<ul class="simple">
+<li><p>следећи број је за <span class="math notranslate nohighlight">\(a\)</span> већи од претходног (аритметичка прогресија)</p></li>
+<li><p>следећи број је <span class="math notranslate nohighlight">\(b\)</span> пута већи од претходног (геометријска прогресија)</p></li>
+<li><p>следећи број је збир претходна два (Фибоначијев низ)</p></li>
+<li><p>низ се састоји од две аритметичке прогресије, чији елементи се наизменично појављују</p></li>
+<li><p>следећи број је наизменично за <span class="math notranslate nohighlight">\(a\)</span> већи и <span class="math notranslate nohighlight">\(b\)</span> пута већи од претходног</p></li>
+</ul>
+<p>и слично.</p>
 
     </div></div>
-<section id="id3">
-<h3>Правила игре<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
-<p>У игри постоји табела са одређеним бројем колона (најчешће 4), а у свакој колони
-дат је одређени број појмова, исти за сваку колону. Појмови на почетку нису видљиви.
-Појмови из сваке колоне асоцирају на појам који је решење те колоне, а решења колона
-асоцирају на коначно решење.</p>
-<p>Игру може да игра један или више играча. Ако има два играча, они играју наизменично.
-У случају да игра више играча, они играју редом у круг.</p>
-<p>Потез једног играча састоји се у следећем:</p>
-<ul class="simple">
-<li><p>ако има још појмова који нису видљиви, играч бира једно неотворено поље из табеле и
-отвара га, чиме појам са тог поља постаје видљив.</p></li>
-<li><p>играч покушава да погоди решење неке од колона или коначно решење. Ако у томе успе,
-добија одређени број поена и има право да настави да погађа решење још неке колоне
-или коначно решење, све док не погреши или не одустане од потеза.</p></li>
-</ul>
-<p>За успешно решавање колоне играч добија 3 поена, плус за свако неотворено поље те
-колоне по један додатни поен. Када се реши једна колона, отварају се сва њена поља.</p>
-<p>За успешно налажење коначног решења играч добија 8 поена, плус за сваку нерешену колону
-додатни број поена, који би добио решавањем те колоне.</p>
-<p>Игра се завршава када се нађе коначно решење (или када истекне време за погађање).</p>
-<figure class="align-center" id="id5">
-<a class="reference internal image-reference" href="../_images/asocijacije.png"><img alt="../_images/asocijacije.png" src="../_images/asocijacije.png" style="width: 600px;" /></a>
-<figcaption>
-<p><span class="caption-text">Игра асоцијације, имплементирана у апликацији са графичким интерфејсом.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-</section>
-</section>
-<section id="id4">
-<h2>Решење<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
-<p>У овом задатку није задат опис класе, већ нам је препуштено да је сами осмислимо на основу
-правила игре (описа проблема). Овде дајемо једно могуће решење за класу <code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code>.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p><strong>Учитавање игре из фајла</strong></p>
-<p>Као прво, да не бисмо сваки пут играли игру са истим појмовима, или једну од свега неколико игара
-задатих у коду, било би добро да омогућимо учитавање игре из фајла. То је посао који може да се
-уради на страни корисника, или унутар класе. Пошто замишљамо употребу ове класе из различитих
-програма, остављање учитавања игре на страни корисника би значило да сваки корисник треба да има
-наредбе за учитавање игре.</p>
+<p>За сваки од ових типова низа можемо да напишемо по једну малу класу. Објекту класе можемо у
+конструктору да проследимо параметре за генерисање елемената, а следећи елемент да добијамо позивом
+метода <code class="docutils literal notranslate"><span class="pre">long</span> <span class="pre">Sledeci()</span></code>. Да бисмо након формирања објекта једне од ових класа што једноставније
+користили тај објекат, генерализоваћемо класе и направићемо једноставан интерфејс, који ће оне да
+имплементирају. Ево како би могао да изгледа тај интерфејс и саме класе.</p>
 
-    <div class="note-wrapper suggestionnote-type">
-        <div class="note-icon-holder"> </div>
-        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
-        <div class="course-content">
-            
-<p>Ако различити корисници класе приликом употребе те класе треба да обаве исти или сличан посао
-који је могао да буде урађен унутар класе, то је наговештај да дизајн класе можда може да се
-побољша.</p>
+<div data-childcomponent="interfejs_nastavi_niz_klase" class="course-box course-box-problem course-content">
 
-    </div></div>
-<p>Јасно је да понављање кода није пожељно и да га треба избећи. Зато ћемо метод за учитавање игре
-из фајла да направимо унутар класе. Природно је да тај метод врати објекат класе, јер би објекат
-пре задавања појмова и решења био неупотребљив и не би имао смисла.</p>
-<p>Постоје два често коришћена начина да се креира објекат на основу датих података, а овде би ти
-подаци били само путања до фајла. Један начин је употреба конструктора са датим подацима као
-параметрима.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// prvi nacin</span>
-<span class="k">public</span><span class="w"> </span><span class="nf">Asocijacije</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">putanja</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="p">...</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<p>Други начин је статички метод (нпр. метод <code class="docutils literal notranslate"><span class="pre">Kreiraj</span></code>) који враћа објекат.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// drugi nacin</span>
-<span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Asocijacije</span><span class="w"> </span><span class="nf">Kreiraj</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">putanja</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="p">...</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<p>У случају да фајл на датој путањи не постоји, или не може да се отвори, или његов садржај није
-одговарајући, можемо да бацимо изузетак (било из конструктора, било из статичког метода). Статички
-метод има и другу могућност, а то је да врати <code class="docutils literal notranslate"><span class="pre">null</span></code> уместо објекта. На страни корисника би
-свакако требало пазити на могућност да учитавање није успело и користити или <code class="docutils literal notranslate"><span class="pre">try-catch</span></code> наредбу
-(у случају да класа баца изузетак), или проверу да ли је статички метод вратио <code class="docutils literal notranslate"><span class="pre">null</span></code>. Овде је
-нешто боље да се определимо за статички метод који враћа <code class="docutils literal notranslate"><span class="pre">null</span></code> у случају неуспеха. Разлог за
-ову одлуку је то што намеравамо да класу <code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code> издвојимо у посебну целину која се зове
-библиотека (види следећу лекцију), а не желимо да изузеци бачени из библиотеке буду хватани и
-обрађивани ван ње.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p><strong>Приказивање појмова или назива поља</strong></p>
-<p>Корисницима ове класе треба да омогућимо да правилно прикажу поља са појмовима, односно поља за
-решења колона и коначно решење. Прецизније, корисници класе треба да знају да ли треба да испишу
-назив поља (нпр. <strong>„C2”</strong>, <strong>„Kolona C”</strong>, <strong>„Konacno”</strong>), или сам појам, односно решење. Примера
-ради, када играч реши колону или целу асоцијацију пре него што се отворе сва поља, потребно је да
-се ажурира приказ и отворе поља (прикажу појмови) свих решених колона.</p>
-<p>Један начин да кориснику обезбедимо потребне информације су јавни методи помоћу којих он може да
-пита да ли је одређено поље отворено, да ли је колона решена, односно да ли је решена цела
-игра. У том случају, корисник би приликом приказивања табеле морао да проверава стање сваког
-поља. То је опет посао који би морао да обави сваки корисник класе, било да је то конзолна или
-графичка апликација, што (као што смо већ истакли) није најбоље решење.</p>
-<p>Да се ове провере не би вршиле у коду сваког корисника, боље решење је да у класи обезбедимо
-методе који враћају одговарајући стринг са именом поља или појмом, односно решењем, у зависности
-од стања поља. Још мало удобније је да за поља са појмовима користимо индексер са два индекса, за
-решења колона индексер са једним индексом, а за коначно решење својство. Ови индексери и својство
-би израчунавали свој одговор, уместо да то препуштамо сваком кориснику класе, што би било понављање
-кода.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p><strong>Остала потребна функционалност класе</strong></p>
-<p>Да би корисник класе <code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code> (нпр. метод <code class="docutils literal notranslate"><span class="pre">Main</span></code> у случају конзолне апликације) могао да
-имплементира игру, потребно је да класа може да му одговори на следећа питања.</p>
-<ul class="simple">
-<li><p>Да ли су сва поља са појмовима отворена? Ово је потребно да би корисник класе знао
-да ли да понуди играча да отвори поље, тј. да ли да му то омогући.</p></li>
-<li><p>Да ли је отварање датог поља успело (или: да ли је дато поље већ отворено)? Ово је потребно
-да играч не би могао да (случајно или намерно) отвори већ отворено поље и тиме пропусти (или
-избегне) отварање новог поља.</p></li>
-<li><p>Да ли је покушај решавања колоне успео? Ово је потребно да би се знало да ли играч има право
-да настави да решава, или следи отварање новог поља (било да игру игра један или више играча).
-Ова информација може да се врати у облику броја добијених поена за покушај (за неуспешан покушај
-добија се 0 поена, а за успешан неки позитиван број). Тиме омогућавамо кориснику класе да уједно
-и прикаже број освојених поена за последњи покушај решавања, а такође и да успут рачуна укупан број поена.</p></li>
-<li><p>Да ли је покушај налажења коначног решења успео? Очигледно, ово је потребно да би корисник
-класе знао да ли је игра завршена. Ова информација такође може да се врати као број освојених
-поена за покушај налажења коначног решења.</p></li>
-</ul>
-<p>Да бисмо омогућили одговоре на набројана питања, размотримо које све информације класа
-<code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code> треба да памти. Информације које су очигледно потребне су</p>
-<ul class="simple">
-<li><p>димензије табеле појмова (то ће бити целобројна поља <code class="docutils literal notranslate"><span class="pre">brKolona</span></code> и <code class="docutils literal notranslate"><span class="pre">brPojmova</span></code>),</p></li>
-<li><p>сама табела појмова (поље <code class="docutils literal notranslate"><span class="pre">pojam</span></code>, које је матрица стрингова),</p></li>
-<li><p>решења колона (поље <code class="docutils literal notranslate"><span class="pre">resenjeKolone</span></code>, које је низ стрингова)</p></li>
-<li><p>коначно решење (поље <code class="docutils literal notranslate"><span class="pre">konacnoResenje</span></code> типа стринг).</p></li>
-</ul>
-<p>Поред ових поља, можемо да се определимо да додатно памтимо и одржавамо следеће податке:</p>
-<ul class="simple">
-<li><p>поље <code class="docutils literal notranslate"><span class="pre">bool[,]</span> <span class="pre">otvoreno</span></code>, које говори да ли је одређено поље табеле отворено,</p></li>
-<li><p>поље <code class="docutils literal notranslate"><span class="pre">int[]</span> <span class="pre">brNeotvorenih</span></code>, које садржи број неотворених поља по колонама (згодно због
-лакшег одређивања броја поена за дати покушај решавања),</p></li>
-<li><p>поље <code class="docutils literal notranslate"><span class="pre">bool[]</span> <span class="pre">resenaKolona</span></code>, које говори да ли је одређена колона решена,</p></li>
-<li><p>поље <code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">reseno</span></code>, које говори да ли је нађено коначно решење.</p></li>
-</ul>
-<p>За одговор на питање да ли су сва поља са појмовима отворена, направићемо метод <code class="docutils literal notranslate"><span class="pre">bool</span>
-<span class="pre">SveOtvoreno()</span></code>. За одговор на питање да ли је отварање датог поља успело, метод <code class="docutils literal notranslate"><span class="pre">bool</span>
-<span class="pre">Otvori(int</span> <span class="pre">iKolona,</span> <span class="pre">int</span> <span class="pre">iPojam)</span></code> који отвара поље уједно ће да врати ову информацију.
-Методи који обрађују покушај решавања колоне, односно налажења коначног решења, уједно ће
-да врате и број освојених поена. Ова два метода могу да носе исто име <code class="docutils literal notranslate"><span class="pre">Pokusaj</span></code>, пошто се
-разликују по листи параметара.</p>
-<ul class="simple">
-<li><p>Метод <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">int</span> <span class="pre">Pokusaj(int</span> <span class="pre">kol,</span> <span class="pre">string</span> <span class="pre">odgovor)</span></code> обрађује покушај решавања колоне.</p></li>
-<li><p>Метод <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">int</span> <span class="pre">Pokusaj(string</span> <span class="pre">odgovor)</span></code> обрађује покушај налажења коначног решења.</p></li>
-</ul>
-<p>Овај интерфејс је  довољан да се игра реализује. Ипак, у нашем решењу се појављаују још
-два јавна метода и једно својство који нису неопходни у овом програму, али могу да пруже
-додатну удобност другим корисницима класе. То су:</p>
-<ul class="simple">
-<li><p>метод <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">bool</span> <span class="pre">Otvoreno(int</span> <span class="pre">kol,</span> <span class="pre">int</span> <span class="pre">p)</span></code>, који говори да ли је дато поље отворено,</p></li>
-<li><p>метод <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">bool</span> <span class="pre">ResenaKol(int</span> <span class="pre">kol)</span></code>, који говори да ли је дата колона решена,</p></li>
-<li><p>својство <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">bool</span> <span class="pre">Reseno</span></code>, које говори да ли је решена цела игра.</p></li>
-</ul>
-<p>Методи <code class="docutils literal notranslate"><span class="pre">Otvoreno</span></code>, <code class="docutils literal notranslate"><span class="pre">ResenaKol</span></code> и својство <code class="docutils literal notranslate"><span class="pre">Reseno</span></code> су прилично јасни, па не збуњују и
-не оптерећују корисника класе, односно не нарушавају принцип апстракције.</p>
-<p>Требало би да је после ове анализе и разраде кôд довољно јасан, па га нећемо детаљно
-објашњавати.</p>
-
-<div data-childcomponent="asocijacije_klasa" class="course-box course-box-problem course-content">
-
-<textarea data-component="activecode" id=asocijacije_klasa data-lang="python" 
+<textarea data-component="activecode" id=interfejs_nastavi_niz_klase data-lang="python" 
       data-timelimit=25000  data-codelens="true"  
     data-audio=''   
              data-passivecode="true"  data-hidehistory=true
-    data-includesrc="public class Asocijacije
+       >
+using System;
+
+interface INizClanPoClan
 {
-    private int brKolona;
-    private int brPojmova;
-    private string[,] pojam;
-    private string[] resenjeKolone;
-    private string konacnoResenje;
-    private bool[,] otvoreno;
-    private int[] brNeotvorenih;
-    private bool[] resenaKolona;
-    private bool reseno;
-    public Asocijacije(string[,] a, string[] b, string c)
-    {
-        brKolona = a.GetLength(0);
-        brPojmova = a.GetLength(1);
-        pojam = (string[,])a.Clone();
-        resenjeKolone = (string[])b.Clone();
-        konacnoResenje = c;
-        otvoreno = new bool[brKolona, brPojmova];
-        resenaKolona = new bool[brKolona];
-        brNeotvorenih = new int[brKolona];
-        for (int kol = 0; kol &lt; brKolona; kol++)
-            brNeotvorenih[kol] = brPojmova;
-        reseno = false;
-    }
+    public long Sledeci();
+}
 
-    // privatan konstruktor, koristi se samo u metodu Kreiraj
-    private Asocijacije() 
+class AritmetickiNiz : INizClanPoClan
+{
+    private long a0, d, sled;
+    public AritmetickiNiz(long a0, long d)
     {
-    } 
-
-    public static Asocijacije Kreiraj(string putanja)
-    {
-        if (!File.Exists(putanja))
-            return null;
-
-        Asocijacije igra = new Asocijacije();
-        try
-        {
-            using (StreamReader sr = new StreamReader(putanja))
-            {
-                string[] linija = sr.ReadLine().Split();
-                igra.brKolona = int.Parse(linija[0]);
-                igra.brPojmova = int.Parse(linija[1]);
-
-                igra.pojam = new string[igra.brKolona, igra.brPojmova];
-                igra.resenjeKolone = new string[igra.brKolona];
-                for (int k = 0; k &lt; igra.brKolona; k++)
-                {
-                    for (int p = 0; p &lt; igra.brPojmova; p++)
-                        igra.pojam[k, p] = sr.ReadLine();
-
-                    igra.resenjeKolone[k] = sr.ReadLine();
-                }
-                igra.konacnoResenje = sr.ReadLine();
-            }
-            igra.otvoreno = new bool[igra.brKolona, igra.brPojmova];
-            igra.resenaKolona = new bool[igra.brKolona];
-            igra.brNeotvorenih = new int[igra.brKolona];
-            for (int kol = 0; kol &lt; igra.brKolona; kol++)
-                igra.brNeotvorenih[kol] = igra.brPojmova;
-            igra.reseno = false;
-        }
-        catch (System.Exception)
-        {
-            return null;
-        }
-
-        return igra;
+        this.a0 = a0;
+        this.d = d;
+        this.sled = a0;
     }
-    public bool SveOtvoreno
+    public long Sledeci()
     {
-        get
-        {
-            for (int kol = 0; kol &lt; brKolona; kol++)
-                if (brNeotvorenih[kol] &gt; 0)
-                    return false;
-            return true;
-        }
-    }
-    public int BrojKolona { get { return brKolona; } }
-    public int BrojPojmova { get { return brPojmova; } }
-    public bool Otvori(int kol, int p)
-    {
-        if (!otvoreno[kol, p])
-        {
-            brNeotvorenih[kol]--;
-            otvoreno[kol, p] = true;
-            return true;
-        }
-        return false;
-    }
-    public string this[int kol, int p]
-    {
-        get
-        {
-            if (otvoreno[kol, p])
-                return pojam[kol, p];
-            else
-                return string.Format(&quot;{0}{1}&quot;, (char)(&apos;A&apos; + kol), p + 1);
-        }
-    }
-    public string this[int kol]
-    {
-        get
-        {
-            if (resenaKolona[kol])
-                return resenjeKolone[kol];
-            else
-                return string.Format(&quot;Kolona {0}&quot;, (char)(&apos;A&apos; + kol));
-        }
-    }
-    public bool Otvoreno(int kol, int p) { return otvoreno[kol, p]; }
-    public bool ResenaKol(int kol) { return resenaKolona[kol]; }
-    public bool Reseno { get { return reseno; } }
-    public string Konacno { get { return reseno ? konacnoResenje : &quot;Konacno&quot;; } }
-    public int Pokusaj(int kol, string odgovor)
-    {
-        if (resenaKolona[kol])
-            return 0;
-        if (resenjeKolone[kol] == odgovor)
-        {
-            resenaKolona[kol] = true;
-            int poeni = 3 + brNeotvorenih[kol];
-            for (int p = 0; p &lt; brPojmova; p++)
-                otvoreno[kol, p] = true;
-            return poeni;
-        }
-        else
-            return 0;
-    }
-    public int Pokusaj(string odgovor)
-    {
-        if (reseno)
-            return 0;
-        if (konacnoResenje == odgovor)
-        {
-            reseno = true;
-            int poeni = 8;
-            for (int kol = 0; kol &lt; brKolona; kol++)
-            {
-                poeni += 3 + brNeotvorenih[kol];
-                for (int p = 0; p &lt; brPojmova; p++)
-                    otvoreno[kol, p] = true;
-                resenaKolona[kol] = true;
-            }
-            return poeni;
-        }
-        else
-            return 0;
+        long rez = sled;
+        sled += d;
+        return rez;
     }
 }
-"   >
+class GeometrijskiNiz : INizClanPoClan
+{
+    private long a0, q, sled;
+    public GeometrijskiNiz(long a0, long q)
+    {
+        this.a0 = a0;
+        this.q = q;
+        this.sled = a0;
+    }
+    public long Sledeci()
+    {
+        long rez = sled;
+        sled *= q;
+        return rez;
+    }
+}
+class DveAritmProgresije : INizClanPoClan
+{
+    private long sledA, sledB, da, db;
+    private bool naReduJeA;
+    public DveAritmProgresije(long a0, long da, long b0, long db)
+    {
+        this.sledA = a0; this.da = da;
+        this.sledB = b0; this.db = db;
+        naReduJeA = true;
+    }
+    public long Sledeci()
+    {
+        long rez;
+        if (naReduJeA) { rez = sledA; sledA += da; }
+        else { rez = sledB; sledB += db; }
+        naReduJeA = !naReduJeA;
 
+        return rez;
+    }
+}
+class FibonacijevNiz : INizClanPoClan
+{
+    private long sledeci1, sledeci2;
+    public FibonacijevNiz(long a0, long a1)
+    {
+        this.sledeci1 = a0;
+        this.sledeci2 = a1;
+    }
+    public long Sledeci()
+    {
+        long rez = sledeci1;
+        sledeci1 = sledeci2;
+        sledeci2 = sledeci1 + rez;
+        return rez;
+    }
+}
 
+class NaizmenicnoPlusPuta: INizClanPoClan
+{
+    private long sled, d, q;
+    private bool naReduJePlus;
+    public NaizmenicnoPlusPuta(long a0, long d, long q)
+    {
+        this.sled = a0;
+        this.d = d;
+        this.q = q;
+        naReduJePlus = true;
+    }
+    public long Sledeci()
+    {
+        long rez = sled;
+        sled = naReduJePlus ? sled + d : sled * q;
+        naReduJePlus = !naReduJePlus;
+        return rez;
+    }
+}
 </textarea>
 </div>
-<p>За тестирање треба да припремимо текстуални фајл са појмовима, решењима колона и коначним решењем.</p>
+<p>Пре него што пређемо на програмирање игре, можемо помоћу следеће класе <code class="docutils literal notranslate"><span class="pre">Program</span></code> да тестирамо
+написане класе за генерисање елемената низова.</p>
 
-    <div data-component="reveal" id="dugme_podaci_za_igru_asocijacije"   data-showtitle="Пример фајла са подацима за игру асоцијације" data-hidetitle="Сакриј фајл са подацима за игру">
-    <p>Фајл са појмовима, решењима колона и коначним решењем може да изгледа овако.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="mi">4</span>
-<span class="n">brasno</span>
-<span class="n">potok</span>
-<span class="n">kamen</span>
-<span class="n">mlevenje</span>
-<span class="n">vodenica</span>
-<span class="n">vozac</span>
-<span class="n">teret</span>
-<span class="n">prikolica</span>
-<span class="n">sleper</span>
-<span class="n">kamion</span>
-<span class="n">centar</span>
-<span class="n">geometrija</span>
-<span class="n">kolo</span>
-<span class="n">pi</span>
-<span class="n">krug</span>
-<span class="n">kaucuk</span>
-<span class="n">zvaka</span>
-<span class="n">izolator</span>
-<span class="n">rastezanje</span>
-<span class="n">guma</span>
-<span class="n">tocak</span>
-</pre></div>
-</div>
+<div data-childcomponent="interfejs_nastavi_niz_test" class="course-box course-box-problem course-content">
 
-    </div>
-    <p>Класу можемо да тестирамо помоћу следећег кода.</p>
-
-<div data-childcomponent="asocijacije_demo" class="course-box course-box-problem course-content">
-
-<textarea data-component="activecode" id=asocijacije_demo data-lang="python" 
+<textarea data-component="activecode" id=interfejs_nastavi_niz_test data-lang="python" 
       data-timelimit=25000  data-codelens="true"  
     data-audio=''   
              data-passivecode="true"  data-hidehistory=true
-    data-includesrc="class Program
+       >
+class Program
 {
-    static void Prikazi(Asocijacije igra, int ukPoena, string konacno = &quot;&quot;)
-    {
-        for (int p = 0; p &lt; igra.BrojPojmova; p++)
-        {
-            for (int kol = 0; kol &lt; igra.BrojKolona; kol++)
-            {
-                Console.Write(&quot;{0,15}&quot;, igra[kol, p]);
-            }
-            Console.WriteLine();
-        }
-        Console.WriteLine(new string(&apos;-&apos;, 15 * igra.BrojKolona));
-        for (int kol = 0; kol &lt; igra.BrojKolona; kol++)
-            Console.Write(&quot;{0,15}&quot;, igra[kol]);
-        Console.WriteLine();
-        if (konacno != &quot;&quot;)
-            Console.WriteLine(&quot;Konacno: {0}&quot;, konacno);
-        Console.WriteLine(&quot;Ukupan broj poena do sada: {0}&quot;, ukPoena);
-        Console.WriteLine();
-    }
-
     static void Main(string[] args)
     {
-        Console.Write(&quot;Unesi putanju do fajla: &quot;);
-        string putanja = Console.ReadLine();
-        Asocijacije igra = Asocijacije.Kreiraj(putanja);
-        int ukPoena = 0;
-        igra.Otvori(1, 0);
-        Prikazi(igra, ukPoena);
-        int poeni = igra.Pokusaj(1, &quot;kamion&quot;);
-        if (poeni &gt; 0)
+        INizClanPoClan[] nizovi = new INizClanPoClan[]
         {
-            ukPoena += poeni;
-            Prikazi(igra, ukPoena);
-        }
-        poeni = igra.Pokusaj(&quot;tocak&quot;);
-        if (poeni &gt; 0)
+            new AritmetickiNiz(10, 20),
+            new GeometrijskiNiz(3, 2),
+            new FibonacijevNiz(1, 1),
+            new DveAritmProgresije(1, 3, 100, -2),
+            new NaizmenicnoPlusPuta(2, 3, 2)
+        };
+
+        foreach (var niz in nizovi)
         {
-            ukPoena += poeni;
-            Prikazi(igra, ukPoena, &quot;tocak&quot;);
+            for (int i = 0; i < 10; i++)
+                Console.Write("{0,7}", niz.Sledeci());
+
+            Console.WriteLine();
         }
     }
 }
-"   >
-
-
 </textarea>
 </div>
-<p>Извршавањем датог кода треба да се добије следећи излаз.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>             <span class="n">A1</span>          <span class="n">vozac</span>             <span class="n">C1</span>             <span class="n">D1</span>
-             <span class="n">A2</span>             <span class="n">B2</span>             <span class="n">C2</span>             <span class="n">D2</span>
-             <span class="n">A3</span>             <span class="n">B3</span>             <span class="n">C3</span>             <span class="n">D3</span>
-             <span class="n">A4</span>             <span class="n">B4</span>             <span class="n">C4</span>             <span class="n">D4</span>
-<span class="o">------------------------------------------------------------</span>
-       <span class="n">Kolona</span> <span class="n">A</span>       <span class="n">Kolona</span> <span class="n">B</span>       <span class="n">Kolona</span> <span class="n">C</span>       <span class="n">Kolona</span> <span class="n">D</span>
-<span class="n">Ukupan</span> <span class="n">broj</span> <span class="n">poena</span> <span class="n">do</span> <span class="n">sada</span><span class="p">:</span> <span class="mi">0</span>
-
-             <span class="n">A1</span>          <span class="n">vozac</span>             <span class="n">C1</span>             <span class="n">D1</span>
-             <span class="n">A2</span>          <span class="n">teret</span>             <span class="n">C2</span>             <span class="n">D2</span>
-             <span class="n">A3</span>      <span class="n">prikolica</span>             <span class="n">C3</span>             <span class="n">D3</span>
-             <span class="n">A4</span>         <span class="n">sleper</span>             <span class="n">C4</span>             <span class="n">D4</span>
-<span class="o">------------------------------------------------------------</span>
-       <span class="n">Kolona</span> <span class="n">A</span>         <span class="n">kamion</span>       <span class="n">Kolona</span> <span class="n">C</span>       <span class="n">Kolona</span> <span class="n">D</span>
-<span class="n">Ukupan</span> <span class="n">broj</span> <span class="n">poena</span> <span class="n">do</span> <span class="n">sada</span><span class="p">:</span> <span class="mi">6</span>
-
-         <span class="n">brasno</span>          <span class="n">vozac</span>         <span class="n">centar</span>         <span class="n">kaucuk</span>
-          <span class="n">potok</span>          <span class="n">teret</span>     <span class="n">geometrija</span>          <span class="n">zvaka</span>
-          <span class="n">kamen</span>      <span class="n">prikolica</span>           <span class="n">kolo</span>       <span class="n">izolator</span>
-       <span class="n">mlevenje</span>         <span class="n">sleper</span>             <span class="n">pi</span>     <span class="n">rastezanje</span>
-<span class="o">------------------------------------------------------------</span>
-       <span class="n">vodenica</span>         <span class="n">kamion</span>           <span class="n">krug</span>           <span class="n">guma</span>
-<span class="n">Konacno</span><span class="p">:</span> <span class="n">tocak</span>
-<span class="n">Ukupan</span> <span class="n">broj</span> <span class="n">poena</span> <span class="n">do</span> <span class="n">sada</span><span class="p">:</span> <span class="mi">41</span>
+<p>Овај програм исписује</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span>     <span class="mi">30</span>     <span class="mi">50</span>     <span class="mi">70</span>     <span class="mi">90</span>    <span class="mi">110</span>    <span class="mi">130</span>    <span class="mi">150</span>    <span class="mi">170</span>    <span class="mi">190</span>
+ <span class="mi">3</span>      <span class="mi">6</span>     <span class="mi">12</span>     <span class="mi">24</span>     <span class="mi">48</span>     <span class="mi">96</span>    <span class="mi">192</span>    <span class="mi">384</span>    <span class="mi">768</span>   <span class="mi">1536</span>
+ <span class="mi">1</span>      <span class="mi">1</span>      <span class="mi">2</span>      <span class="mi">3</span>      <span class="mi">5</span>      <span class="mi">8</span>     <span class="mi">13</span>     <span class="mi">21</span>     <span class="mi">34</span>     <span class="mi">55</span>
+ <span class="mi">1</span>    <span class="mi">100</span>      <span class="mi">4</span>     <span class="mi">98</span>      <span class="mi">7</span>     <span class="mi">96</span>     <span class="mi">10</span>     <span class="mi">94</span>     <span class="mi">13</span>     <span class="mi">92</span>
+ <span class="mi">2</span>      <span class="mi">5</span>     <span class="mi">10</span>     <span class="mi">13</span>     <span class="mi">26</span>     <span class="mi">29</span>     <span class="mi">58</span>     <span class="mi">61</span>    <span class="mi">122</span>    <span class="mi">125</span>
 </pre></div>
 </div>
+<p>Овим се уверавамо да да свака класа враћа баш оне елементе које очекујемо. Ово би било теже
+проверити главним програмом, јер се у њему користи генератор случајних бројева, па не бисмо знали
+када је која класа инстанцирана. Чак и када бисмо препознавали тип низа током тестирања, било би
+потребно да сачекамо да се свака класа инстанцира бар по једном, чиме тестирање постаје спорије и
+неудобније.</p>
+<p>На крају, ево и класе <code class="docutils literal notranslate"><span class="pre">Program</span></code> која омогућава играње игре.</p>
 
-    <div class="note-wrapper suggestionnote-type">
-        <div class="note-icon-holder"> </div>
-        <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
-        <div class="course-content">
-            
-<p>Испробавање рада класе на овакав начин треба радити и када се то не тражи.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Овакви једноставни демо-програми су врло корисни, зато што омогућавају удобније налажење
-и исправљање грешака. Наиме, програм за демонстрацију функционалности класе (или за детаљно
-тестирање) циљано изазива различите ситуације у којима класа треба да се нађе и током стварне
-употребе. Захваљујући томе, брже се види да ли сви методи класе раде према очекивању,
-односно лакше се дебагује ако има потребе за тиме. Ово је утолико важније када је класа коју
-тестирамо сложенија или када укључује случајност, обично тако што користи генератор случајних
-бројева. У таквим случајевима се током стварне употребе класе (овде: играња игре) до неких
-специфичних ситуација долази споро, или само понекад, што отежава квалитетно тестирање.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Током испробавања рада класе проверавамо
-и да ли нам је на располагању сва потребна функционалност класе. Према томе, ово је уједно
-прилика да се по потреби вратимо и на осмишљавање класе и њену дораду, пре него што пређемо
-на нову целину у којој се класа реално користи.</p>
+<div data-childcomponent="interfejs_nastavi_niz_igra" class="course-box course-box-problem course-content">
 
-    </div></div>
+<textarea data-component="activecode" id=interfejs_nastavi_niz_igra data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Dobijaces redom clanove nekog pravilnog niza,");
+        Console.WriteLine("pokusaj da pogodis sledeci element");
+        Console.WriteLine("\tPritisni 'Enter' za novi element istog niza");
+        Console.WriteLine("\tPritisni '-' i 'Enter' za novi niz");
+        Console.WriteLine("\tPritisni '--' i 'Enter' za izlazak iz programa");
+        bool kraj = false;
+        string unos = "";
+        Random rnd = new Random();
+        while (!kraj)
+        {
+            if (unos == "--")
+                break;
+
+            Console.WriteLine("Pocinje novi niz");
+            bool pogodio = false;
+            INizClanPoClan niz = null;
+            int vrstaNiza = rnd.Next(5); // biramo jedan od 5 tipova niza
+            switch (vrstaNiza)
+            {
+                case 0:
+                    niz = new AritmetickiNiz(rnd.Next(1, 10), rnd.Next(3, 9));
+                    break;
+                case 1:
+                    niz = new GeometrijskiNiz(rnd.Next(1, 5), rnd.Next(2, 5));
+                    break;
+                case 2:
+                    long a1 = rnd.Next(1, 4);
+                    long a2 = rnd.Next((int)a1, 6);
+                    niz = new FibonacijevNiz(a1, a2);
+                    break;
+                case 3:
+                    long db = rnd.Next(-3, 3);
+                    if (db == 0) db++;
+                    niz = new DveAritmProgresije(rnd.Next(3, 7),
+                        rnd.Next(2, 5), rnd.Next(45, 51), db);
+                    break;
+                case 4:
+                    niz = new NaizmenicnoPlusPuta(rnd.Next(1, 10),
+                        rnd.Next(3, 7), rnd.Next(2, 5));
+                    break;
+            }
+            long novi = niz.Sledeci();
+            while (!pogodio)
+            {
+                Console.Write("Novi element je {0}, pogadjaj sledeci ", novi);
+                novi = niz.Sledeci();
+
+                unos = Console.ReadLine();
+                if (unos == "") // Enter
+                    continue;
+
+                if (unos == "-" || unos == "--")
+                    break;
+
+                pogodio = (long.Parse(unos) == novi);
+            }
+            if (pogodio)
+                Console.WriteLine("Bravo!");
+            else if (unos == "-")
+            {
+                Console.Write("Steta, evo ti jos nekoliko elemenata: {0} ", novi);
+                for (int i = 0; i < 5; i++)
+                    Console.Write("{0,7}", niz.Sledeci());
+
+                Console.WriteLine();
+                Console.WriteLine();
+            }
+        }
+    }
+}
+</textarea>
+</div>
+<p>Приметимо да објекат <code class="docutils literal notranslate"><span class="pre">niz</span></code> након формирања користимо сасвим једноставно, не знајући (у том делу
+програма) који тип низа је у питању. Све што нам је потребно да знамо је да је метод <code class="docutils literal notranslate"><span class="pre">Sledeci()</span></code>
+из интерфејса имплементиран и да можемо да га позовемо и добијемо следећи број.</p>
+</section>
 </section>
 </section>
 
@@ -989,7 +767,7 @@
     
     <div>
 <div class="lecture-prev-next-toggle">
-  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  <a  href="int_04c1_interfejsi.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
   
   <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
 </div>
