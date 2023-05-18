@@ -1,0 +1,7 @@
+ienum00_fiksna_kolekcija.cs     Linq metodi                         #       Sum, Average, Min, foreach
+ienum01_generator.cs            generisanje po rekurentnoj formuli  #       while ... {yield return x; update x;}
+ienum02_pozitivni.cs            filtriranje postojece kolekcije:    #       foreach x if (f(x)) yield return x;
+ienum03_do_parnog.cs            prefiks do ispunjenja uslova        #       yield break;
+ienum04_spajac.cs               drugi oblik iteriranja osim foreach #       IEnumerator, GetEnumerator, MoveNext, 
+ienum05_komb.cs                 rekurzivan nabrajac                 #       foreach y in f(n-1) yield return y;
+ienum06_hanoj-con.cs            rekurzivan nabrajac                 #       
