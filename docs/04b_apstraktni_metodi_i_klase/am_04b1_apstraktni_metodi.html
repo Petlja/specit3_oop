@@ -394,9 +394,11 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04cq_interfejsi_kviz.html><div class="studioLecture" id=activity-int_04cq_interfejsi_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
-                <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
-                <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
+                <a href=../04c_interfejsi/int_04c3_ienum.html><div class="studioLecture" id=activity-int_04c3_ienum><i class="fas fa-file-alt activity-icon"></i>Више о интерфејсу IEnumerable</div></a>
+                <a href=../04c_interfejsi/int_04c4_yield.html><div class="studioLecture" id=activity-int_04c4_yield><i class="fas fa-file-alt activity-icon"></i>Још неке могућности генератора колекција</div></a>
+                <a href=../04c_interfejsi/int_04cz_interfejsi_zadaci.html><div class="studioLecture" id=activity-int_04cz_interfejsi_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
             </div>
                 
@@ -453,6 +455,16 @@
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05d_dp_algoritmi_sortiranja>
+                    <h5>5.4 Приказ рада алгоритама сортирања</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05d_dp_algoritmi_sortiranja/dpp_05c2_sortovi.html><div class="studioLecture" id=activity-dpp_05c2_sortovi><i class="fas fa-file-alt activity-icon"></i>Приказ рада алгоритама сортирања</div></a>
                 </div>
             </div>
                 
@@ -604,7 +616,7 @@ internal class Program
 можемо да замислимо да такве петље буду знатно дуже, па би било добро <strong>да се оне некако сведу на
 једну петљу</strong>. Да бисмо то постигли, треба да имамо заједничку листу за кругове и многоуглове, а то
 значи да нам је потребна заједничка базна класа, коју можемо да назовемо <code class="docutils literal notranslate"><span class="pre">Figura2D</span></code> (дводимензиона
-фигура). У овој класи би се нашло поље <code class="docutils literal notranslate"><span class="pre">boja</span></code> и својство <code class="docutils literal notranslate"><span class="pre">Boja</span></code>, али није јасно како бисмо
+фигура). У овој класи би се нашло поље <code class="docutils literal notranslate"><span class="pre">boja</span></code> и својство <code class="docutils literal notranslate"><span class="pre">Boja</span></code>, али за сада није јасно како бисмо
 позивали методе <code class="docutils literal notranslate"><span class="pre">Obim</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrsina</span></code>.</p>
 </section>
 <section id="id4">
@@ -891,7 +903,8 @@ internal class Program
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Видимо да се инстанциране фигуре <strong>користе помоћу референци на базну класу на исти, униформан начин.</strong>
+<p>Видимо да се инстанциране фигуре <strong>користе помоћу референци на базну класу на униформан начин,
+исти за све објекте.</strong>
 Приликом употребе (петља <code class="docutils literal notranslate"><span class="pre">foreach</span> <span class="pre">(Figura2D</span> <span class="pre">f</span> <span class="pre">in</span> <span class="pre">figure)</span></code>) не морамо да водимо рачуна о томе која
 фигура је круг, а која многоугао, али се ипак обим и површина сваке од њих израчунавају правилно, тј.
 у складу са стварном природом фигуре.</p>
@@ -905,7 +918,7 @@ internal class Program
 типом је појава коју називамо <strong>динамички полиморфизам</strong>.</p>
 <p>Подсетимо се, раније смо помињали статички полиморфизам и тада смо реч полиморфизам објаснили као
 појављивање у више облика. Статички полиморфизам подразумева употребу више истоимених метода у
-оквиру једне класе. Ти методи се разликују већ и по броју и типу параметара, па већ у време превођења
+оквиру једне класе. Ти методи се разликују по броју и типу параметара, па већ у време превођења
 (компајлирања) постоји довољно информација да се сваки од позива тих метода разреши, тј. да се
 закључи о којем од неколико истоимених метода се ради. Зато тај вид полиморфизма називамо статички.</p>
 <p>За разлику од тога, облик полиморфизма који смо управо упознали не може да се разреши у време

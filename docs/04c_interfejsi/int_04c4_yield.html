@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Још неке могућности генератора колекција</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'specit3_oop';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'specit3_oop';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_uvod>
+                    <h5>1. Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_klase_i_objekti>
+                    <h5>2 Класе и објекти</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_klase_i_objekti/02_klase_i_objekti.html><div class="studioLecture" id=activity-02_klase_i_objekti><i class="fas fa-file-alt activity-icon"></i>Класе и објекти</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02a_klase_osnovni_pojmovi>
+                    <h5>2.1 Основни појмови о класама и објектима</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02a_klase_osnovni_pojmovi/klase_02a_osnovni_pojmovi.html><div class="studioLecture" id=activity-klase_02a_osnovni_pojmovi><i class="fas fa-file-alt activity-icon"></i>Основни појмови о класама и објектима</div></a>
+                <a href=../02a_klase_osnovni_pojmovi/klase_02aq_osnovni_pojmovi_kviz.html><div class="studioLecture" id=activity-klase_02aq_osnovni_pojmovi_kviz><i class="fas fa-file-alt activity-icon"></i>Класе и објекти - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02b_klase_enkapsulacija>
+                    <h5>2.2 Енкапсулација</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02b_klase_enkapsulacija/klase_02b_enkapsulacija.html><div class="studioLecture" id=activity-klase_02b_enkapsulacija><i class="fas fa-file-alt activity-icon"></i>Енкапсулација</div></a>
+                <a href=../02b_klase_enkapsulacija/klase_02bq_enkapsulacija_kviz.html><div class="studioLecture" id=activity-klase_02bq_enkapsulacija_kviz><i class="far fa-question-circle activity-icon"></i>Енкапсулација - квиз</div></a>
+                <a href=../02b_klase_enkapsulacija/klase_02bz_enkapsulacija_zadaci.html><div class="studioLecture" id=activity-klase_02bz_enkapsulacija_zadaci><i class="fas fa-file-alt activity-icon"></i>Енкапсулација - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02c_klase_staticki_metodi>
+                    <h5>2.3 Статички и нестатички методи</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02c_klase_staticki_metodi/klase_02c_staticki_metodi.html><div class="studioLecture" id=activity-klase_02c_staticki_metodi><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе</div></a>
+                <a href=../02c_klase_staticki_metodi/klase_02cq_staticki_metodi_kviz.html><div class="studioLecture" id=activity-klase_02cq_staticki_metodi_kviz><i class="far fa-question-circle activity-icon"></i>Чланови објекта и чланови класе - квиз</div></a>
+                <a href=../02c_klase_staticki_metodi/klase_02cz_staticki_metodi_zadaci.html><div class="studioLecture" id=activity-klase_02cz_staticki_metodi_zadaci><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02d_klase_stat_polimorfizam>
+                    <h5>2.4 Статички полиморфизам, оператори</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02d_klase_stat_polimorfizam/klase_02d_statpolim_operatori.html><div class="studioLecture" id=activity-klase_02d_statpolim_operatori><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори</div></a>
+                <a href=../02d_klase_stat_polimorfizam/klase_02dq_statpolim_operatori_kviz.html><div class="studioLecture" id=activity-klase_02dq_statpolim_operatori_kviz><i class="far fa-question-circle activity-icon"></i>Статички полиморфизам, оператори - квиз</div></a>
+                <a href=../02d_klase_stat_polimorfizam/klase_02dz_statpolim_operatori_zadaci.html><div class="studioLecture" id=activity-klase_02dz_statpolim_operatori_zadaci><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02e_klase_apstrakcija>
+                    <h5>2.5 Апстракција, индексери</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02e_klase_apstrakcija/klase_02e_apstrakcija.html><div class="studioLecture" id=activity-klase_02e_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери</div></a>
+                <a href=../02e_klase_apstrakcija/klase_02eq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02eq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција, индексери - квиз</div></a>
+                <a href=../02e_klase_apstrakcija/klase_02ez_apstrakcija_zadaci.html><div class="studioLecture" id=activity-klase_02ez_apstrakcija_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02f_klase_dizajniranje>
+                    <h5>2.6 Пример дизајнирања класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02f_klase_dizajniranje/klase_02f_dizajniranje.html><div class="studioLecture" id=activity-klase_02f_dizajniranje><i class="fas fa-file-alt activity-icon"></i>Пример дизајнирања класе</div></a>
+                <a href=../02f_klase_dizajniranje/klase_02fz_dizajniranje_zadaci.html><div class="studioLecture" id=activity-klase_02fz_dizajniranje_zadaci><i class="fas fa-file-alt activity-icon"></i>Дизајнирање класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02g_klase_modularnost>
+                    <h5>2.7 Модуларност, библиотеке</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02g_klase_modularnost/klase_02g1_modularnost_bibl.html><div class="studioLecture" id=activity-klase_02g1_modularnost_bibl><i class="fas fa-file-alt activity-icon"></i>Модуларност, библиотеке</div></a>
+                <a href=../02g_klase_modularnost/klase_02g2_vise_aplikacija.html><div class="studioLecture" id=activity-klase_02g2_vise_aplikacija><i class="fas fa-file-alt activity-icon"></i>Прилог - графичка апликација</div></a>
+                <a href=../02g_klase_modularnost/klase_02gz_modularnost_zadaci.html><div class="studioLecture" id=activity-klase_02gz_modularnost_zadaci><i class="fas fa-file-alt activity-icon"></i>Модуларност - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02h_klase_grupe>
+                    <h5>2.8 Групе класа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02h_klase_grupe/klase_02h1_povezane.html><div class="studioLecture" id=activity-klase_02h1_povezane><i class="fas fa-file-alt activity-icon"></i>Повезане класе</div></a>
+                <a href=../02h_klase_grupe/klase_02h2_nepovezane.html><div class="studioLecture" id=activity-klase_02h2_nepovezane><i class="fas fa-file-alt activity-icon"></i>Неповезане класе</div></a>
+                <a href=../02h_klase_grupe/klase_02h3_grupe.html><div class="studioLecture" id=activity-klase_02h3_grupe><i class="fas fa-file-alt activity-icon"></i>О распоређивању класа у модуле</div></a>
+                <a href=../02h_klase_grupe/klase_02hq_grupe_kviz.html><div class="studioLecture" id=activity-klase_02hq_grupe_kviz><i class="far fa-question-circle activity-icon"></i>Групе класа - квиз</div></a>
+                <a href=../02h_klase_grupe/klase_02hz_grupe_zadaci.html><div class="studioLecture" id=activity-klase_02hz_grupe_zadaci><i class="fas fa-file-alt activity-icon"></i>Групе класа - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_genericke_klase>
+                    <h5>3 Генеричке класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_genericke_klase/03_genericke_klase.html><div class="studioLecture" id=activity-03_genericke_klase><i class="fas fa-file-alt activity-icon"></i>Генеричке класе</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03a_genericke_klase>
+                    <h5>3.1 Генеричке класе, вишеструка употребљивост</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03a_genericke_klase/genericke_03a_uvod.html><div class="studioLecture" id=activity-genericke_03a_uvod><i class="fas fa-file-alt activity-icon"></i>Генеричке класе</div></a>
+                <a href=../03a_genericke_klase/genericke_03ap_primer.html><div class="studioLecture" id=activity-genericke_03ap_primer><i class="fas fa-file-alt activity-icon"></i>Генеричке класе - решен пример</div></a>
+                <a href=../03a_genericke_klase/genericke_03aq_kviz.html><div class="studioLecture" id=activity-genericke_03aq_kviz><i class="far fa-question-circle activity-icon"></i>Генеричке класе и методи - квиз</div></a>
+                <a href=../03a_genericke_klase/genericke_03az_zadaci.html><div class="studioLecture" id=activity-genericke_03az_zadaci><i class="fas fa-file-alt activity-icon"></i>Генеричке класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_nasledjivanje>
+                    <h5>4 Наслеђивање и полиморфизам</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_nasledjivanje/04_nasledjivanje.html><div class="studioLecture" id=activity-04_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Наслеђивање и полиморфизам</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04a_izvedene_klase>
+                    <h5>4.1 Основно о наслеђивању</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04a_izvedene_klase/nasl_04a_01_izvedene_klase.html><div class="studioLecture" id=activity-nasl_04a_01_izvedene_klase><i class="fas fa-file-alt activity-icon"></i>Основно о наслеђивању</div></a>
+                <a href=../04a_izvedene_klase/nasl_04aq_kviz.html><div class="studioLecture" id=activity-nasl_04aq_kviz><i class="far fa-question-circle activity-icon"></i>Изведена класа - квиз</div></a>
+                <a href=../04a_izvedene_klase/nasl_04az_zadaci.html><div class="studioLecture" id=activity-nasl_04az_zadaci><i class="fas fa-file-alt activity-icon"></i>Изведена класа - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04b_apstraktni_metodi_i_klase>
+                    <h5>4.2 Апстрактни методи и класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04b_apstraktni_metodi_i_klase/am_04b1_apstraktni_metodi.html><div class="studioLecture" id=activity-am_04b1_apstraktni_metodi><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода  и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04bq_kviz.html><div class="studioLecture" id=activity-am_04bq_kviz><i class="far fa-question-circle activity-icon"></i>Апстрактни методи и класе - квиз</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04bz_zadaci.html><div class="studioLecture" id=activity-am_04bz_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
+                    <h5>4.3 Интерфејси</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04cq_interfejsi_kviz.html><div class="studioLecture" id=activity-int_04cq_interfejsi_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c3_ienum.html><div class="studioLecture" id=activity-int_04c3_ienum><i class="fas fa-file-alt activity-icon"></i>Више о интерфејсу IEnumerable</div></a>
+                <a href=../04c_interfejsi/int_04c4_yield.html><div class="studioLecture" id=activity-int_04c4_yield><i class="fas fa-file-alt activity-icon"></i>Још неке могућности генератора колекција</div></a>
+                <a href=../04c_interfejsi/int_04cz_interfejsi_zadaci.html><div class="studioLecture" id=activity-int_04cz_interfejsi_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04d_virtuelni_metodi>
+                    <h5>4.4  Виртуелни методи</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04d_virtuelni_metodi/vm_04d_01_modifikacija.html><div class="studioLecture" id=activity-vm_04d_01_modifikacija><i class="fas fa-file-alt activity-icon"></i>Модификација базне класе</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04d_02_virtuelni_metodi.html><div class="studioLecture" id=activity-vm_04d_02_virtuelni_metodi><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04dq_kviz.html><div class="studioLecture" id=activity-vm_04dq_kviz><i class="far fa-question-circle activity-icon"></i>Виртуелни методи - квиз</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04dz_primeri_zadaci.html><div class="studioLecture" id=activity-vm_04dz_primeri_zadaci><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи - примери и задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_dp_primeri>
+                    <h5>5 Динамички полиморфизам - примери</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_dp_primeri/05_dp_primeri.html><div class="studioLecture" id=activity-05_dp_primeri><i class="fas fa-file-alt activity-icon"></i>Динамички полиморфизам - примери</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05a_dp_kretanje_tela>
+                    <h5>5.1 Различита кретања</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05a_dp_kretanje_tela/dpp_05a_kretanje_tela.html><div class="studioLecture" id=activity-dpp_05a_kretanje_tela><i class="fas fa-file-alt activity-icon"></i>Различита кретања</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05b_dp_kviz>
+                    <h5>5.2 Квиз</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05b_dp_kviz/dpp_05b_kviz_pr.html><div class="studioLecture" id=activity-dpp_05b_kviz_pr><i class="fas fa-file-alt activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05c_dp_vrednost_funkcije>
+                    <h5>5.3 Вредност функције</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05d_dp_algoritmi_sortiranja>
+                    <h5>5.4 Приказ рада алгоритама сортирања</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05d_dp_algoritmi_sortiranja/dpp_05c2_sortovi.html><div class="studioLecture" id=activity-dpp_05c2_sortovi><i class="fas fa-file-alt activity-icon"></i>Приказ рада алгоритама сортирања</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_primeri_proj_zadataka>
+                    <h5>6 Примери пројектних задатака</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_primeri_proj_zadataka/06_proj_primeri.html><div class="studioLecture" id=activity-06_proj_primeri><i class="fas fa-file-alt activity-icon"></i>Примери пројектних задатака</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Још неке могућности генератора колекција<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Овде настављамо приказивање техника које могу да се користе у методима који генеришу колекције.</p>
+<section id="id2">
+<h2>Завршавање колекције пре краја метода<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>Метод може да заврши са генерисањем колекције и пре него што стигне до своје последње наредбе. Када
+желимо да на такав начин прекинемо извршавање метода, користимо наредбу <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">break</span></code>, као што је
+показано у примеру који следи.</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Написати метод који за две дате колекције целих бројева враћа колекцију свих
+елемената прве, а затим ако је портебно и друге дате колекције, све до првог парног броја,
+не укључујући тај број. Написати и програм који илуструје рад метода.</p>
+
+    </div></div>
+<p>Довољно је да при наиласку на паран број у било којој од две колекције извршимо поменуту наредбу
+<code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">break</span></code>. Ако се у двема датим колекцијама не појави ниједан паран број, у резултујућој
+колекцији ће се наћи сви елементи обе дате колекције, а у том случају са генерисањем елемената
+се престаје када се изврши последња наредба генераторског метода.</p>
+
+<div data-childcomponent="ienum03_do_parnog" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ienum03_do_parnog data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections.Generic;
+using System.Linq;
+class Program
+{
+    static IEnumerable&lt;int&gt; DoParnog(IEnumerable&lt;int&gt; a, IEnumerable&lt;int&gt; b)
+    {
+        foreach (var x in a)
+        {
+            if (x % 2 == 0)
+                yield break;
+            
+            yield return x;
+        }
+        foreach (var x in b)
+        {
+            if (x % 2 == 0)
+                yield break;
+
+            yield return x;
+        }
+    }
+    static void Main()
+    {
+        List&lt;int&gt; parNep = new List&lt;int&gt; { -1, -3, 5, 6, 2, -1, 7, -8 };
+        List&lt;int&gt; sviNep = new List&lt;int&gt; { 9, -3, 17, 1 };
+        Console.Write(&quot;Elementi do prvog parnog su &quot;);
+        foreach (var br in DoParnog(parNep, sviNep))
+            Console.Write(&quot; &quot; + br);
+        Console.WriteLine(&quot;. Njihov zbir je {0}.&quot;, 
+            DoParnog(parNep, sviNep).Sum());
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Програм исписује</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Elementi</span> <span class="n">do</span> <span class="n">prvog</span> <span class="n">parnog</span> <span class="n">su</span>  <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">3</span> <span class="mf">5.</span> <span class="n">Njihov</span> <span class="n">zbir</span> <span class="n">je</span> <span class="mf">1.</span>
+</pre></div>
+</div>
+<p>Приметимо да би обична наредба <code class="docutils literal notranslate"><span class="pre">break</span></code> у првој <code class="docutils literal notranslate"><span class="pre">foreach</span></code> петљи метода изазвала наставак
+извршавања метода од следеће наредбе, а то је друга петља, што није понашање које желимо у овом
+примеру. Обична наредба <code class="docutils literal notranslate"><span class="pre">return</span></code> написана у методу <code class="docutils literal notranslate"><span class="pre">DoParnog</span></code> би била синтаксна грешка. Према
+томе, једини начин да прекинемо извршавање метода без могућности повратка и продужавања колекције
+је наредба <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">break</span></code>. Њеним извршавањем завршавамо генерисање колекције и јављамо делу
+програма који конзумира колекцију да је стигао до њеног краја.</p>
+</section>
+<section id="id3">
+<h2>Употреба набрајача при генерисању колекција<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>У овом примеру је потребно да кроз колекцију итерирамо на начин који нам даје више контроле него
+наредба <code class="docutils literal notranslate"><span class="pre">foreach</span></code>. Као што знамо, у ту сврху можемо да користимо набрајач (енумератор).</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Написати метод који за две дате монотоно неопадајуће колекције целих бројева враћа
+неопадајућу колекцију која се састоји од свих елемената те две колекције. Написати и програм који
+илуструје рад метода.</p>
+
+    </div></div>
+<p>Ово је у суштини познати проблем спајања два сортирана низа (<cite>merge</cite> алгоритам, који је део алгоритма
+<cite>merge-sort</cite>), само се уместо низова користе колекције. Користићемо два набрајача, за сваку колекцију
+по један. На тај начин можемо да напредујемо кроз обе колекције упоредо. Тачније, након поређења
+текућих елемената у две колекције, враћамо мањи од та два елемента и напредујемо у колекцији из које
+је тај елемент. Када стигнемо до краја једне од датих колекција, треба још да вратимо све елементе
+преостале колекције.</p>
+
+<div data-childcomponent="ienum04_spajac2" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ienum04_spajac2 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections.Generic;
+using System.Linq;
+class Program
+{
+    static IEnumerable&lt;int&gt; Spajac(IEnumerable&lt;int&gt; a, IEnumerable&lt;int&gt; b)
+    {
+        IEnumerator&lt;int&gt; ea = a.GetEnumerator();
+        IEnumerator&lt;int&gt; eb = b.GetEnumerator();
+        bool imaA = ea.MoveNext(), imaB = eb.MoveNext();
+        while (imaA || imaB)
+        {
+            if (!imaB || (imaA &amp;&amp; ea.Current &lt; eb.Current))
+            {
+                yield return ea.Current;
+                imaA = ea.MoveNext();
+            }
+            else
+            {
+                yield return eb.Current;
+                imaB = eb.MoveNext();
+            }
+        }
+    }
+
+    static void Main()
+    {
+        var e = Spajac(
+                new List&lt;int&gt; { 1, 3, 7 },
+                new List&lt;int&gt; { 2, 4, 5, 6 });
+
+        foreach (int x in e)
+            Console.Write(x + &quot; &quot;);
+        Console.WriteLine();
+    }
+}"   >
+
+
+</textarea>
+</div>
+<p>Напомињемо да се приликом креирања набрајача над резултатом неког метода <code class="docutils literal notranslate"><span class="pre">f()</span></code> који генерише
+колекцију, тј. приликом извршавања метода <code class="docutils literal notranslate"><span class="pre">f().GetEnumerator()</span></code>, сам метод <code class="docutils literal notranslate"><span class="pre">f()</span></code> још увек не
+извршава, нити започиње са извршавањем. Креирање набрајача је само нека врста иницијализације,
+односно припреме за итереирање кроз колекцију коју генерише метод <code class="docutils literal notranslate"><span class="pre">f()</span></code>.</p>
+</section>
+<section id="id4">
+<h2>Рекурзивни методи који генеришу колекције<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
+<p>Метод који генерише колекцију може у свој резултат да укомпонује резулатате других метода који
+враћају колекције. На пример, ако метод <code class="docutils literal notranslate"><span class="pre">f</span></code> треба да врати све целе бројеве које враћају
+методи <code class="docutils literal notranslate"><span class="pre">f1</span></code>, <code class="docutils literal notranslate"><span class="pre">f2</span></code> и <code class="docutils literal notranslate"><span class="pre">f3</span></code> редом, он може да буде написан овако:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">f1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">f2</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">f3</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">f1</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">f2</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">f2</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Метод који генерише колекцију може да овај начин да користи и сам себе, тј. да буде рекурзиван.</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Написати метод који за дате <span class="math notranslate nohighlight">\(k\)</span> и <span class="math notranslate nohighlight">\(m\)</span> враћа све <span class="math notranslate nohighlight">\(k\)</span>-цифрене
+бројеве са цифрама од 1 до <span class="math notranslate nohighlight">\(m\)</span> у растућем поретку. Написати и програм који илуструје
+рад метода.</p>
+
+    </div></div>
+<p>Дефинисаћемо рекурзиван метод <code class="docutils literal notranslate"><span class="pre">Kombinacije</span></code> са три параметра. Први параметар је већ формирани
+почетак (префикс) броја, који ће рекурзивно да буде допуњен на све могуће начине. Други параметар
+је број цифара које је још потребно дописати на формирани префикс. У иницијалном позиву из метода
+<code class="docutils literal notranslate"><span class="pre">Main</span></code> овај параметар има вредност <span class="math notranslate nohighlight">\(k\)</span>, а у каснијим позивима се смањује. Трећи параметар
+је највећа дозвољена цифра <span class="math notranslate nohighlight">\(m\)</span>.</p>
+
+<div data-childcomponent="ienum05_komb" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ienum05_komb data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+using System.Collections.Generic;
+using System.Linq;
+class Program
+{
+    static IEnumerable&lt;int&gt; Kombinacije(int prefiks, int josCifara, int maxCifra)
+    {
+        if (josCifara == 0)
+            yield return prefiks;
+        else
+        {
+            for (int i = prefiks % 10 + 1; i &lt;= maxCifra; i++)
+            {
+                foreach (var y in Kombinacije(10 * prefiks + i, josCifara - 1, maxCifra))
+                    yield return y;
+            }
+        }
+    }
+    static void Main()
+    {
+        foreach (int br in Kombinacije(0, 3, 5))
+            Console.Write(br + &quot; &quot;);
+        Console.WriteLine();
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Метод <code class="docutils literal notranslate"><span class="pre">Kombinacije</span></code> је позван из метода <code class="docutils literal notranslate"><span class="pre">Main</span></code> тако да генерише троцифрене бројеве са цифрама
+од 1 до 5 у растућем поретку. Зато програм исписује</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">123</span> <span class="mi">124</span> <span class="mi">125</span> <span class="mi">134</span> <span class="mi">135</span> <span class="mi">145</span> <span class="mi">234</span> <span class="mi">235</span> <span class="mi">245</span> <span class="mi">345</span>
+</pre></div>
+</div>
+<p>Приметимо да ни у овом програму не долази до гомилања елемената колекције, сваки од њих се само
+ланчано прослеђује из позива највеће дубине преко позива мање дубине све до наредбе исписивања у
+методу <code class="docutils literal notranslate"><span class="pre">Main</span></code>.</p>
+</section>
+<section id="id5">
+<h2>Примена у графичким апликацијама<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
+<p>У последњем примеру овог прилога илустрваћемо графичко решење познатог <a class="reference external" href="https://sr.wikipedia.org/wiki/Ханојска_кула">проблема ханојских
+кула</a>. Подсетимо се најпре поставке задатка.</p>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p>Дата су три једнака усправна штапа. На први од њих наређано је <span class="math notranslate nohighlight">\(n\)</span> дискова различите
+величине. Дискови су наређани редом по величини, тако да је највећи диск доле, а најмањи горе.
+Потребно је да се свих <span class="math notranslate nohighlight">\(n\)</span> дискова премести са првог штапа на трећи, користећи други
+штап као помоћни. При томе треба поштовати следећа правила:</p>
+<ul class="simple">
+<li><p>дозвољено је једино да се узме горњи (највиши) диск са неког штапа и да се стави на врх гомиле
+на неком другом штапу</p></li>
+<li><p>дискови могу да се премештају искључиво један по један</p></li>
+<li><p>није дозвољено ставити већи диск преко мањег</p></li>
+</ul>
+
+    </div></div>
+<p>Означимо штапове редом словима <cite>A</cite>, <cite>B</cite>, <cite>C</cite>. Низ корака који представљају решење добија се следећим
+једноставним рекурзивним поступком:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Hanoj</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">poc</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">pom</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">kraj</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">Hanoj</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">poc</span><span class="p">,</span><span class="w"> </span><span class="n">kraj</span><span class="p">,</span><span class="w"> </span><span class="n">pom</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;Kotur {n} sa {poc} na {kraj}&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">Hanoj</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">pom</span><span class="p">,</span><span class="w"> </span><span class="n">poc</span><span class="p">,</span><span class="w"> </span><span class="n">kraj</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
+<span class="w">        </span><span class="n">Hanoj</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Размортимо како би могао да се испрограмира графички приказ овог решења.</p>
+<p><strong>Дизајн, компоненте</strong></p>
+<p>Од компоненти корисничког интерфејса, можемо да искористимо поље типа <code class="docutils literal notranslate"><span class="pre">NumericUpDown</span></code> за задавање
+броја дискова и дугме (<code class="docutils literal notranslate"><span class="pre">Button</span></code>) за покретање решења. Приказивање намеравамо да успоримо, тако да
+после приказа сваког корака програм застане да би корисник могао да испрати решење. Зато ћемо
+апликацији да додамо и тајмер (<code class="docutils literal notranslate"><span class="pre">Timer</span></code>), са идејом да се на сваки откуцај (tick) тајмера изврши и
+прикаже по један корак решења.</p>
+<p><strong>Репрезентација податка</strong></p>
+<p>Да бисмо могли да приказујемо стање после сваког корака, треба да памтимо који дискови се налазе
+на ком штапу. Из описа проблема јасно је да се сваки штап понаша као стек, јер се дискови узимају
+само са врха и додају само на врх. Према томе, за представљање тренутног распореда дискова можемо
+да користимо листу <code class="docutils literal notranslate"><span class="pre">stap</span></code>, која се састоји од три стека. Уместо слова <cite>A</cite>, <cite>B</cite>, <cite>C</cite>, која
+означавају штапове, можемо да користимо бројеве 0, 1, 2 као индексе тих штапова у листи <code class="docutils literal notranslate"><span class="pre">stap</span></code>.</p>
+<p><strong>Решавање</strong></p>
+<p>Сваки корак је одређен паром индекса <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>, где овај пар означава да се узима диск са штапа
+<code class="docutils literal notranslate"><span class="pre">i</span></code> и ставља на штап <code class="docutils literal notranslate"><span class="pre">j</span></code>. Сам корак, односно премештање једног диска, у програму може да се
+изведе овако:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">disk</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">stap</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Pop</span><span class="p">();</span><span class="w"></span>
+<span class="n">stap</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">Push</span><span class="p">(</span><span class="n">disk</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Желимо да на догађај тајмера извршимо један корак решења. Зато нам је погодно да дато рекурзивно
+решење напишемо у облику метода који генерише колекцију потеза, односно парова бројева. Нови облик
+метода који решава задатак може да изгледа овако:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">Tuple</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">&gt;&gt;</span><span class="w"> </span><span class="n">HanojskeKule</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">poc</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pom</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">kraj</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">HanojskeKule</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">poc</span><span class="p">,</span><span class="w"> </span><span class="n">kraj</span><span class="p">,</span><span class="w"> </span><span class="n">pom</span><span class="p">))</span><span class="w"></span>
+<span class="w">            </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Tuple</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">&gt;(</span><span class="n">poc</span><span class="p">,</span><span class="w"> </span><span class="n">kraj</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">HanojskeKule</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">pom</span><span class="p">,</span><span class="w"> </span><span class="n">poc</span><span class="p">,</span><span class="w"> </span><span class="n">kraj</span><span class="p">))</span><span class="w"></span>
+<span class="w">            </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Преостали посао обухвата иницијализацију, писање метода за цртање тренутног стања, као и неколико
+краћих метода који реагују на остале догађаје (учитавање форме, клик на дугме за покретање решења,
+догађај тајмера). Тај део посла нећемо детаљно описивати, већ вам препуштамо да га самостално
+проучите читајући дати кôд и коментаре. У наставку је комплетан садржај фајла <code class="docutils literal notranslate"><span class="pre">Form1.cs</span></code>.</p>
+
+<div data-childcomponent="ienum06_hanoj-win" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=ienum06_hanoj-win data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace Hanoj
+{
+    public partial class Form1 : Form
+    {
+        // lista od tri stapa koja opisuje trenutno stanje 
+        List&lt;Stack&lt;int&gt;&gt; stap; 
+
+        // nabrajac kolekcije koraka koja predstavlja resenje
+        IEnumerator&lt;Tuple&lt;int, int&gt;&gt; koraciResenja;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ResizeRedraw = true;
+            Reset();
+        }
+
+        void Reset()
+        {
+            // postavljamo stapove u pocetno stanje
+
+            Stack&lt;int&gt; A = new Stack&lt;int&gt;();
+            Stack&lt;int&gt; B = new Stack&lt;int&gt;();
+            Stack&lt;int&gt; C = new Stack&lt;int&gt;();
+            // na prvi stap stavljamo sve diskove od najveceg do najmanjeg
+            int n = (int)numericUpDown1.Value;
+            for (int i = n; i &gt; 0; i--)
+                A.Push(i);
+
+            // formiramo listu stapova
+            stap = new List&lt;Stack&lt;int&gt;&gt;() { A, B, C };
+            Invalidate();
+        }
+
+        private void btnResi_Click(object sender, EventArgs e)
+        {
+            // inicijalizujemo resavanje, tako sto kreiramo nabrajac i ukljucimo tajmer
+            numericUpDown1.Enabled = false;
+            btnResi.Enabled = false;
+            Reset();
+            int n = (int)numericUpDown1.Value;
+            koraciResenja = HanojskeKule(n, 0, 1, 2).GetEnumerator();
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            // ako nisu izvrseni svi koraci
+            if (koraciResenja.MoveNext())
+            {
+                // izvrsavamo jedan korak resenja
+                var t = koraciResenja.Current;
+                int disk = stap[t.Item1].Pop();
+                stap[t.Item2].Push(disk);
+                Invalidate();
+            }
+            else
+            {
+                // kraj postupka, azuriramo korisnicki interfejs
+                numericUpDown1.Enabled = true;
+                btnResi.Enabled = true;
+                timer1.Enabled = false;
+            }
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            if (stap == null)
+                return;
+
+            Graphics g = e.Graphics;
+            Brush b = new SolidBrush(Color.Yellow);
+            Pen p = new Pen(Color.Black, 2);
+
+            int w = ClientSize.Width, h = ClientSize.Height;
+            int n = (int)numericUpDown1.Value;
+            int r0 = w / (n * 7), hDiska = h / (n * 2);
+
+            int x0 = w / 6;
+            for (int i = 0; i &lt; 3; i++) // za svaki stap
+            {
+                int y0 = h - hDiska * stap[i].Count;
+                foreach (int d in stap[i]) // za svaki disk na stapu
+                {
+                    g.FillRectangle(b, x0 - r0 * d, y0, 2 * r0 * d, hDiska);
+                    g.DrawRectangle(p, x0 - r0 * d, y0, 2 * r0 * d, hDiska);
+                    y0 += hDiska;
+                }
+                x0 += w / 3;
+            }
+        }
+
+        // Rekurzivno resenje problema, koje vraca kolekciju poteza (potez je par brojeva)
+        static IEnumerable&lt;Tuple&lt;int, int&gt;&gt; HanojskeKule(
+            int n, int poc, int pom, int kraj)
+        {
+            if (n &gt; 0)
+            {
+                foreach (var x in HanojskeKule(n - 1, poc, kraj, pom))
+                    yield return x;
+
+                yield return new Tuple&lt;int, int&gt;(poc, kraj);
+
+                foreach (var x in HanojskeKule(n - 1, pom, poc, kraj))
+                    yield return x;
+            }
+        }
+
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+</section>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="int_04c3_ienum.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

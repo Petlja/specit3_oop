@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sr-Cyrl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Приказ рада алгоритама сортирања</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/qchoice.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/notes.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/associations.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/editor.css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/petlja-course.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/nbstyle.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/runestonebase.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/jquery.highlight.js"></script>
+    <script src="../_static/bookfuncs.js"></script>
+    <script src="../_static/codemirror.js"></script>
+    <script src="../_static/xml.js"></script>
+    <script src="../_static/css.js"></script>
+    <script src="../_static/python.js"></script>
+    <script src="../_static/htmlmixed.js"></script>
+    <script src="../_static/javascript.js"></script>
+    <script src="../_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script src="../_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="../_static/activecode-i18n.en.js"></script>
+    <script src="../_static/activecode-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/activecode.js"></script>
+    <script src="../_static/clike.js"></script>
+    <script src="../_static/timed_activecode.js"></script>
+    <script src="../_static/animationbase.js"></script>
+    <script src="../_static/mchoice.js"></script>
+    <script src="../_static/timedmc.js"></script>
+    <script src="../_static/timed.js"></script>
+    <script src="../_static/mchoice-i18n.en.js"></script>
+    <script src="../_static/mchoice-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/clickable.js"></script>
+    <script src="../_static/timedclickable.js"></script>
+    <script src="../_static/d3.v2.min.js"></script>
+    <script src="../_static/jquery.ba-bbq.min.js"></script>
+    <script src="../_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script src="../_static/pytutor.js"></script>
+    <script src="../_static/codelens.js"></script>
+    <script src="../_static/skulpt.min.js"></script>
+    <script src="../_static/skulpt-stdlib.js"></script>
+    <script src="../_static/datafile.js"></script>
+    <script src="../_static/dragndrop.js"></script>
+    <script src="../_static/timeddnd.js"></script>
+    <script src="../_static/dragndrop-i18n.en.js"></script>
+    <script src="../_static/dragndrop-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/fitb.js"></script>
+    <script src="../_static/timedfitb.js"></script>
+    <script src="../_static/fitb-i18n.en.js"></script>
+    <script src="../_static/fitb-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/matrixeq.js"></script>
+    <script src="../_static/lib/prettify.js"></script>
+    <script src="../_static/lib/hammer.min.js"></script>
+    <script src="../_static/parsons.js"></script>
+    <script src="../_static/parsons-i18n.en.js"></script>
+    <script src="../_static/parsons-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/timedparsons.js"></script>
+    <script src="../_static/poll.js"></script>
+    <script src="../_static/reveal.js"></script>
+    <script src="../_static/shortanswer.js"></script>
+    <script src="../_static/timed_shortanswer.js"></script>
+    <script src="../_static/showEval.js"></script>
+    <script src="../_static/tabbedstuff.js"></script>
+    <script src="../_static/runestonevideo.js"></script>
+    <script src="../_static/webglinteractive.js"></script>
+    <script src="../_static/FileSaver.min.js"></script>
+    <script src="../_static/Blob.js"></script>
+    <script src="../_static/karelCorner.js"></script>
+    <script src="../_static/karelRobot.js"></script>
+    <script src="../_static/karelWorld.js"></script>
+    <script src="../_static/karelChat.js"></script>
+    <script src="../_static/karelRobotDrawer.js"></script>
+    <script src="../_static/karelUI.js"></script>
+    <script src="../_static/karel.js"></script>
+    <script src="../_static/karel-i18n.en.js"></script>
+    <script src="../_static/karel-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/notes.js"></script>
+    <script src="../_static/pygamelib-init.js"></script>
+    <script src="../_static/gallery.js"></script>
+    <script src="../_static/associations.js"></script>
+    <script src="../_static/associations-i18n.en.js"></script>
+    <script src="../_static/associations-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/editor.js"></script>
+    <script src="../_static/jszip.js"></script>
+    <script src="../_static/editor-i18n.en.js"></script>
+    <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="../_static/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
+    <script src="../_static/waypoints.min.js"></script>
+    <script src="../_static/rangy-core.js"></script>
+    <script src="../_static/rangy-textrange.js"></script>
+    <script src="../_static/rangy-cssclassapplier.js"></script>
+    <script src="../_static/user-highlights.js"></script>
+    <script src="../_static/jquery.idle-timer.js"></script>
+    <script src="../_static/processing-1.4.1.min.js"></script>
+    <script src="../_static/jquery.hotkey.js"></script>
+    <script src="../_static/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../_static/course-errors.js"></script>
+    <script src="../_static/petlja.js"></script>
+    <script src="../_static/require.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link rel="shortcut icon" href="../_static/favicon.ico" type="image/ico" />
+    <script type="text/javascript">
+      eBookConfig = {};
+      eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+      eBookConfig.app = eBookConfig.host + '/runestone';
+      eBookConfig.ajaxURL = eBookConfig.app + '/ajax/';
+      eBookConfig.course = 'specit3_oop';
+      eBookConfig.logLevel = '0';
+      eBookConfig.loginRequired = 'false';
+      eBookConfig.build_info = "";
+      eBookConfig.isLoggedIn = false;
+      eBookConfig.useRunestoneServices = false;
+      eBookConfig.python3 = true;
+      eBookConfig.basecourse = 'specit3_oop';
+      eBookConfig.runestone_version = '';
+      eBookConfig.imagesDir = '../_images/';
+      eBookConfig.staticDir = '../_static/';
+      if (typeof (Sk) != "undefined")
+        Sk.imgPath = eBookConfig.imagesDir;
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+<div id="navbar" class="content-header">
+  <div class="right-side-nav">
+    
+</div>
+
+<div class="left-side-nav">
+  <div class="course-logo-nav">
+      <a target="_blank" href="https://petlja.org">
+          <img src="../_static/img/petlja-logo-wt.svg" alt="petlja.org" id="lightPetljaLogo">
+      </a>
+  </div>
+  <div class="course-logo-nav-kabinet">
+      <a target="_blank" href="https://petlja.org/net.kabinet">
+          <img src="../_static/img/netkabinet-logo-strelica-wt.svg" alt="petlja.org" id="lightNetKabinetLogo">
+      </a>
+  </div>
+</div>
+
+
+<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+
+</div>
+
+
+
+
+<div class="petljaCourseContainer">
+
+<div class="petljaCourseContent">
+  
+           <div class="tableOfContent">
+            <h5> Садржај </h5>
+            </div>
+           <div>
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-01_uvod>
+                    <h5>1. Увод</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02_klase_i_objekti>
+                    <h5>2 Класе и објекти</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02_klase_i_objekti/02_klase_i_objekti.html><div class="studioLecture" id=activity-02_klase_i_objekti><i class="fas fa-file-alt activity-icon"></i>Класе и објекти</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02a_klase_osnovni_pojmovi>
+                    <h5>2.1 Основни појмови о класама и објектима</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02a_klase_osnovni_pojmovi/klase_02a_osnovni_pojmovi.html><div class="studioLecture" id=activity-klase_02a_osnovni_pojmovi><i class="fas fa-file-alt activity-icon"></i>Основни појмови о класама и објектима</div></a>
+                <a href=../02a_klase_osnovni_pojmovi/klase_02aq_osnovni_pojmovi_kviz.html><div class="studioLecture" id=activity-klase_02aq_osnovni_pojmovi_kviz><i class="fas fa-file-alt activity-icon"></i>Класе и објекти - квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02b_klase_enkapsulacija>
+                    <h5>2.2 Енкапсулација</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02b_klase_enkapsulacija/klase_02b_enkapsulacija.html><div class="studioLecture" id=activity-klase_02b_enkapsulacija><i class="fas fa-file-alt activity-icon"></i>Енкапсулација</div></a>
+                <a href=../02b_klase_enkapsulacija/klase_02bq_enkapsulacija_kviz.html><div class="studioLecture" id=activity-klase_02bq_enkapsulacija_kviz><i class="far fa-question-circle activity-icon"></i>Енкапсулација - квиз</div></a>
+                <a href=../02b_klase_enkapsulacija/klase_02bz_enkapsulacija_zadaci.html><div class="studioLecture" id=activity-klase_02bz_enkapsulacija_zadaci><i class="fas fa-file-alt activity-icon"></i>Енкапсулација - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02c_klase_staticki_metodi>
+                    <h5>2.3 Статички и нестатички методи</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02c_klase_staticki_metodi/klase_02c_staticki_metodi.html><div class="studioLecture" id=activity-klase_02c_staticki_metodi><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе</div></a>
+                <a href=../02c_klase_staticki_metodi/klase_02cq_staticki_metodi_kviz.html><div class="studioLecture" id=activity-klase_02cq_staticki_metodi_kviz><i class="far fa-question-circle activity-icon"></i>Чланови објекта и чланови класе - квиз</div></a>
+                <a href=../02c_klase_staticki_metodi/klase_02cz_staticki_metodi_zadaci.html><div class="studioLecture" id=activity-klase_02cz_staticki_metodi_zadaci><i class="fas fa-file-alt activity-icon"></i>Чланови објекта и чланови класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02d_klase_stat_polimorfizam>
+                    <h5>2.4 Статички полиморфизам, оператори</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02d_klase_stat_polimorfizam/klase_02d_statpolim_operatori.html><div class="studioLecture" id=activity-klase_02d_statpolim_operatori><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори</div></a>
+                <a href=../02d_klase_stat_polimorfizam/klase_02dq_statpolim_operatori_kviz.html><div class="studioLecture" id=activity-klase_02dq_statpolim_operatori_kviz><i class="far fa-question-circle activity-icon"></i>Статички полиморфизам, оператори - квиз</div></a>
+                <a href=../02d_klase_stat_polimorfizam/klase_02dz_statpolim_operatori_zadaci.html><div class="studioLecture" id=activity-klase_02dz_statpolim_operatori_zadaci><i class="fas fa-file-alt activity-icon"></i>Статички полиморфизам, оператори - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02e_klase_apstrakcija>
+                    <h5>2.5 Апстракција, индексери</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02e_klase_apstrakcija/klase_02e_apstrakcija.html><div class="studioLecture" id=activity-klase_02e_apstrakcija><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери</div></a>
+                <a href=../02e_klase_apstrakcija/klase_02eq_apstrakcija_kviz.html><div class="studioLecture" id=activity-klase_02eq_apstrakcija_kviz><i class="far fa-question-circle activity-icon"></i>Апстракција, индексери - квиз</div></a>
+                <a href=../02e_klase_apstrakcija/klase_02ez_apstrakcija_zadaci.html><div class="studioLecture" id=activity-klase_02ez_apstrakcija_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстракција, индексери - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02f_klase_dizajniranje>
+                    <h5>2.6 Пример дизајнирања класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02f_klase_dizajniranje/klase_02f_dizajniranje.html><div class="studioLecture" id=activity-klase_02f_dizajniranje><i class="fas fa-file-alt activity-icon"></i>Пример дизајнирања класе</div></a>
+                <a href=../02f_klase_dizajniranje/klase_02fz_dizajniranje_zadaci.html><div class="studioLecture" id=activity-klase_02fz_dizajniranje_zadaci><i class="fas fa-file-alt activity-icon"></i>Дизајнирање класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02g_klase_modularnost>
+                    <h5>2.7 Модуларност, библиотеке</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02g_klase_modularnost/klase_02g1_modularnost_bibl.html><div class="studioLecture" id=activity-klase_02g1_modularnost_bibl><i class="fas fa-file-alt activity-icon"></i>Модуларност, библиотеке</div></a>
+                <a href=../02g_klase_modularnost/klase_02g2_vise_aplikacija.html><div class="studioLecture" id=activity-klase_02g2_vise_aplikacija><i class="fas fa-file-alt activity-icon"></i>Прилог - графичка апликација</div></a>
+                <a href=../02g_klase_modularnost/klase_02gz_modularnost_zadaci.html><div class="studioLecture" id=activity-klase_02gz_modularnost_zadaci><i class="fas fa-file-alt activity-icon"></i>Модуларност - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-02h_klase_grupe>
+                    <h5>2.8 Групе класа</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../02h_klase_grupe/klase_02h1_povezane.html><div class="studioLecture" id=activity-klase_02h1_povezane><i class="fas fa-file-alt activity-icon"></i>Повезане класе</div></a>
+                <a href=../02h_klase_grupe/klase_02h2_nepovezane.html><div class="studioLecture" id=activity-klase_02h2_nepovezane><i class="fas fa-file-alt activity-icon"></i>Неповезане класе</div></a>
+                <a href=../02h_klase_grupe/klase_02h3_grupe.html><div class="studioLecture" id=activity-klase_02h3_grupe><i class="fas fa-file-alt activity-icon"></i>О распоређивању класа у модуле</div></a>
+                <a href=../02h_klase_grupe/klase_02hq_grupe_kviz.html><div class="studioLecture" id=activity-klase_02hq_grupe_kviz><i class="far fa-question-circle activity-icon"></i>Групе класа - квиз</div></a>
+                <a href=../02h_klase_grupe/klase_02hz_grupe_zadaci.html><div class="studioLecture" id=activity-klase_02hz_grupe_zadaci><i class="fas fa-file-alt activity-icon"></i>Групе класа - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03_genericke_klase>
+                    <h5>3 Генеричке класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03_genericke_klase/03_genericke_klase.html><div class="studioLecture" id=activity-03_genericke_klase><i class="fas fa-file-alt activity-icon"></i>Генеричке класе</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-03a_genericke_klase>
+                    <h5>3.1 Генеричке класе, вишеструка употребљивост</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../03a_genericke_klase/genericke_03a_uvod.html><div class="studioLecture" id=activity-genericke_03a_uvod><i class="fas fa-file-alt activity-icon"></i>Генеричке класе</div></a>
+                <a href=../03a_genericke_klase/genericke_03ap_primer.html><div class="studioLecture" id=activity-genericke_03ap_primer><i class="fas fa-file-alt activity-icon"></i>Генеричке класе - решен пример</div></a>
+                <a href=../03a_genericke_klase/genericke_03aq_kviz.html><div class="studioLecture" id=activity-genericke_03aq_kviz><i class="far fa-question-circle activity-icon"></i>Генеричке класе и методи - квиз</div></a>
+                <a href=../03a_genericke_klase/genericke_03az_zadaci.html><div class="studioLecture" id=activity-genericke_03az_zadaci><i class="fas fa-file-alt activity-icon"></i>Генеричке класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04_nasledjivanje>
+                    <h5>4 Наслеђивање и полиморфизам</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04_nasledjivanje/04_nasledjivanje.html><div class="studioLecture" id=activity-04_nasledjivanje><i class="fas fa-file-alt activity-icon"></i>Наслеђивање и полиморфизам</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04a_izvedene_klase>
+                    <h5>4.1 Основно о наслеђивању</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04a_izvedene_klase/nasl_04a_01_izvedene_klase.html><div class="studioLecture" id=activity-nasl_04a_01_izvedene_klase><i class="fas fa-file-alt activity-icon"></i>Основно о наслеђивању</div></a>
+                <a href=../04a_izvedene_klase/nasl_04aq_kviz.html><div class="studioLecture" id=activity-nasl_04aq_kviz><i class="far fa-question-circle activity-icon"></i>Изведена класа - квиз</div></a>
+                <a href=../04a_izvedene_klase/nasl_04az_zadaci.html><div class="studioLecture" id=activity-nasl_04az_zadaci><i class="fas fa-file-alt activity-icon"></i>Изведена класа - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04b_apstraktni_metodi_i_klase>
+                    <h5>4.2 Апстрактни методи и класе</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04b_apstraktni_metodi_i_klase/am_04b1_apstraktni_metodi.html><div class="studioLecture" id=activity-am_04b1_apstraktni_metodi><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода  и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04bq_kviz.html><div class="studioLecture" id=activity-am_04bq_kviz><i class="far fa-question-circle activity-icon"></i>Апстрактни методи и класе - квиз</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04bz_zadaci.html><div class="studioLecture" id=activity-am_04bz_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04c_interfejsi>
+                    <h5>4.3 Интерфејси</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04cq_interfejsi_kviz.html><div class="studioLecture" id=activity-int_04cq_interfejsi_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
+                <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04c3_ienum.html><div class="studioLecture" id=activity-int_04c3_ienum><i class="fas fa-file-alt activity-icon"></i>Више о интерфејсу IEnumerable</div></a>
+                <a href=../04c_interfejsi/int_04c4_yield.html><div class="studioLecture" id=activity-int_04c4_yield><i class="fas fa-file-alt activity-icon"></i>Још неке могућности генератора колекција</div></a>
+                <a href=../04c_interfejsi/int_04cz_interfejsi_zadaci.html><div class="studioLecture" id=activity-int_04cz_interfejsi_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-04d_virtuelni_metodi>
+                    <h5>4.4  Виртуелни методи</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../04d_virtuelni_metodi/vm_04d_01_modifikacija.html><div class="studioLecture" id=activity-vm_04d_01_modifikacija><i class="fas fa-file-alt activity-icon"></i>Модификација базне класе</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04d_02_virtuelni_metodi.html><div class="studioLecture" id=activity-vm_04d_02_virtuelni_metodi><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04dq_kviz.html><div class="studioLecture" id=activity-vm_04dq_kviz><i class="far fa-question-circle activity-icon"></i>Виртуелни методи - квиз</div></a>
+                <a href=../04d_virtuelni_metodi/vm_04dz_primeri_zadaci.html><div class="studioLecture" id=activity-vm_04dz_primeri_zadaci><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи - примери и задаци</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05_dp_primeri>
+                    <h5>5 Динамички полиморфизам - примери</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05_dp_primeri/05_dp_primeri.html><div class="studioLecture" id=activity-05_dp_primeri><i class="fas fa-file-alt activity-icon"></i>Динамички полиморфизам - примери</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05a_dp_kretanje_tela>
+                    <h5>5.1 Различита кретања</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05a_dp_kretanje_tela/dpp_05a_kretanje_tela.html><div class="studioLecture" id=activity-dpp_05a_kretanje_tela><i class="fas fa-file-alt activity-icon"></i>Различита кретања</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05b_dp_kviz>
+                    <h5>5.2 Квиз</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05b_dp_kviz/dpp_05b_kviz_pr.html><div class="studioLecture" id=activity-dpp_05b_kviz_pr><i class="fas fa-file-alt activity-icon"></i>Квиз</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05c_dp_vrednost_funkcije>
+                    <h5>5.3 Вредност функције</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
+                <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05d_dp_algoritmi_sortiranja>
+                    <h5>5.4 Приказ рада алгоритама сортирања</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05d_dp_algoritmi_sortiranja/dpp_05c2_sortovi.html><div class="studioLecture" id=activity-dpp_05c2_sortovi><i class="fas fa-file-alt activity-icon"></i>Приказ рада алгоритама сортирања</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_primeri_proj_zadataka>
+                    <h5>6 Примери пројектних задатака</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../06_primeri_proj_zadataka/06_proj_primeri.html><div class="studioLecture" id=activity-06_proj_primeri><i class="fas fa-file-alt activity-icon"></i>Примери пројектних задатака</div></a>
+                </div>
+            </div>
+                </div>
+</div>
+
+
+
+<div class="lectureContent">
+
+  <div id="errors">
+  </div>
+  
+  <div class="lectureContentMaterial">
+  
+    <div id="main-content">
+    
+  <section id="id1">
+<h1>Приказ рада алгоритама сортирања<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Тема овог примера је апликација која илуструје рад шест алгоритама сортирања. Прозор апликације
+је подељен на шест делова (у два реда по три), и у сваком од ових делова приказује се рад
+једног од одабраних алгоритама.</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/algoritmi_sortiranja.png" src="../_images/algoritmi_sortiranja.png" />
+<figcaption>
+<p><span class="caption-text">Изглед апликације која приказује рад неколико алгоритама сортирања</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="id2">
+<h2>Одлуке у вези са концептом апликације<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<p>Да би рад појединих алгоритама сортирања могао да се испрати погледом и разуме, важно је да се
+алгоритми не извршавају сувише брзо. Идеално, алгоритми треба да застану после сваке размене
+елемената низа и да сачекају да се прикаже ново стање. Ово застајкивање алгоритама може да се
+постигне помоћу метода <code class="docutils literal notranslate"><span class="pre">Thread.Sleep</span></code>, али ако се апликација извршава у једној нити, то није
+најбоље решење. Наиме, док апликација чека задати број милисекунди, она не може да реагује на
+акције корисника, па је мање одзивна и оставља утисак да нешто није у реду са програмом. Употреба
+више нити би отклонила овај проблем, али такво решење је непотребно сложено за оно што желимо да
+постигнемо у овом примеру. Једноставнија идеја је да на догађај тајмера извршимо по један корак
+сваког од изабраних алгоритама сортирања и освежимо приказ. Тиме апликација између узастопних
+догађаја тамера остаје спремна да по потреби реагује на остале догађаје.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Постоје различити начини да се за све изабране алгоритме сортирања изврши по један корак. Један начин
+је да се алгоритми сортирања напишу на специфичан начин, тако да се при једном позиву одређеног метода
+извршава само један корак алгоритма. Узмимо за пример познати алгоритам <cite>Bubble Sort</cite>, који као целина
+изгледа овако:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">iSortedFrom</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">iSortedFrom</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">iSortedFrom</span><span class="p">--)</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">iBubble</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">iBubble</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="n">iSortedFrom</span><span class="p">;</span><span class="w"> </span><span class="n">iBubble</span><span class="p">++)</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">iBubble</span><span class="p">]</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">iBubble</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">1</span><span class="p">])</span><span class="w"></span>
+<span class="w">            </span><span class="n">Swap</span><span class="p">(</span><span class="n">iBubble</span><span class="p">,</span><span class="w"> </span><span class="n">iBubble</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">1</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>За овај алгоритам сортирања би могао да се напише метод који извршава само један корак тог алгоритма,
+односно једну итерацију унутрашње петље. У том случају, бројачке променљиве петљи би морале да
+постану поља класе, како би метод при следећем позиву могао да настави поступак тамо где је стао.
+У случају овакве организације, метод би могао да изгледа овако:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">iSortedFrom</span><span class="p">;</span><span class="w"></span>
+<span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">iBubble</span><span class="p">;</span><span class="w"></span>
+<span class="k">private</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">finished</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DoSortingStep</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">finished</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">iBubble</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="n">iSortedFrom</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">iBubble</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">iSortedFrom</span><span class="p">--;</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">iSortedFrom</span><span class="w"> </span><span class="p">&lt;=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">finished</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">iBubble</span><span class="p">]</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">iBubble</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">1</span><span class="p">])</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Swap</span><span class="p">(</span><span class="n">iBubble</span><span class="p">,</span><span class="w"> </span><span class="n">iBubble</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">iBubble</span><span class="p">++;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Видимо да се чак и код овако једноставног алгоритма поступак прилично закомпликовао. Можемо да
+претпоставимо да би код сложенијих алгоритама, а поготово код оних рекурзивних, издвајање једног
+корака у посебан метод било знатно сложеније.</p>
+<p>На срећу, постоји једноставно решење које нам омогућава да алгоритме записане на уобичајени начин
+ипак извршавамо корак по корак, враћајући контролу апликацији после сваког корака, како би она могла
+да одговори на евентуалне догађаје. Довољно је да метод напишемо тако да не враћа <code class="docutils literal notranslate"><span class="pre">void</span></code> него нпр.
+<code class="docutils literal notranslate"><span class="pre">IEnumerable&lt;int&gt;</span></code>. При томе нам уопште нису битне враћене вредности које чине колекцију, већ само
+чињеница да после сваке враћене вредности можемо да паузирамо извршавање метода враћајући контролу,
+а да касније наставимо извршавање метода тачно тамо где је заустављен. Семантика наредбе <code class="docutils literal notranslate"><span class="pre">yield</span></code>
+нам омогућава управо такво извршавање метода <code class="docutils literal notranslate"><span class="pre">DoSortingStep()</span></code>. Како је сама колекција коју враћа
+метод небитна, можемо као елементе колекције да враћамо нпр. нуле, јер се сама колекција и не користи
+на страни која позива метод <code class="docutils literal notranslate"><span class="pre">DoSortingStep</span></code>. Ево како би метод могао да се напише по овој идеји.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">DoSortingStep</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">iSortedFrom</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">iSortedFrom</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">iSortedFrom</span><span class="p">--)</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">iBubble</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">iBubble</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="n">iSortedFrom</span><span class="p">;</span><span class="w"> </span><span class="n">iBubble</span><span class="p">++)</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">iBubble</span><span class="p">]</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">iBubble</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">1</span><span class="p">])</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">Swap</span><span class="p">(</span><span class="n">iBubble</span><span class="p">,</span><span class="w"> </span><span class="n">iBubble</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">finished</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>Организација класа<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<p>Метод <code class="docutils literal notranslate"><span class="pre">DoSortingStep</span></code> ће за сваки алгоритам сортирања да изгледа другачије, па је природно да
+уведемо заједничку базну апстрактну класу <code class="docutils literal notranslate"><span class="pre">Algorithm</span></code>, у којој ће овај метод да буде апстрактан.
+Програм би могао да се напише и тако да ово буде једини апстрактан метод, јер тренутно стање низа
+код сваког алгоритма може да се прикаже истим методом (различити су само подаци, попут вредности у
+низу, боје стубића, назива алгоритма и слично). Ми смо у приказ додали и исцравање хоризонталних
+црних правоугаоника испод графикона који представља низ. Ови правоугаоници су различити за сваки
+алгоритам и помажу да се боље разуме и прати рад алгоритма.</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/bubble_sort.gif" src="../_images/bubble_sort.gif" />
+<figcaption>
+<p><span class="caption-text">Приказ рада једног од алгоритама сортирања (притиснути F5 за анимацију).</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Ови црни правоугаоници сами по себи не захтевају да се приказивање реализује као нови апстрактан метод.
+Могуће је, на пример, да се у базној класи дефинише заштићена листа правоугаоника, или података који
+дефинишу те правоугаонике, а да се у методу <code class="docutils literal notranslate"><span class="pre">DoSortingStep</span></code> листа ажурира на начин који одговара
+конкретном алгоритму. За такво решење се нисмо одлучили јер се њиме „прља” алгоритам сортирања, који
+би онда радио и нешто што нема везе са сортирањем (него само са приказом), а то цео програм чини мање
+јасним.</p>
+<p>У нашем решењу, све наредбе за исцртавање су смештене у заштићени метод базне класе, али је остављен
+и апстрактан јавни метод <code class="docutils literal notranslate"><span class="pre">Display</span></code>. Тиме је омогућено да се из сваке од изведених класа које
+представљају конкретне алгоритме, позове заједнички метод за приказ са другачијом листом правоугаоника.</p>
+<p>Ево како изгеда базна класа <code class="docutils literal notranslate"><span class="pre">Algorithm</span></code>.</p>
+
+<div data-childcomponent="algorithm" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=algorithm data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+
+namespace SortingAlgorithms
+{
+        public abstract class Algorithm
+        {
+            abstract public void Display(Graphics g);
+            abstract public IEnumerable&lt;int&gt; DoSortingStep();
+
+        public void SetWindow(float l, float t, float w, float h)
+        {
+            wndTop = t;
+            wndLeft = l;
+            wndWidth = w;
+            wndHeight = h;
+        }
+        public bool Finished { get { return finished; } }
+
+        protected int[] a;
+        protected string name;
+        protected int numSwaps;
+        protected bool finished;
+
+        private int aMax;
+        private float wndLeft, wndTop, wndWidth, wndHeight;
+        private Color color;
+        private Color finishColor;
+        protected Algorithm(int[] _a, Color c, Color fc, string n) 
+        {
+            a = (int[])_a.Clone();
+            color = c;
+            finishColor = fc;
+            name = n;
+
+            aMax = a.Max(); // max needed for displaying
+            numSwaps = 0;
+        }
+        protected void Display(Graphics g, List&lt;Tuple&lt;int, int&gt;&gt; ranges)
+        {
+            float h = wndHeight - 10; // 10 pixels for additional drawing by each specific algorithm
+            float barWidth = wndWidth / (float)a.Length;
+            float k = h / (float)aMax;
+            Pen pen = new Pen(Color.Black);
+            Brush brush = new SolidBrush(finished ? finishColor : color);
+
+            // bars
+            for (int i = 0; i &lt; a.Length; i++)
+            {
+                float barHeight = a[i] * k;
+                float x = wndLeft + i * barWidth;
+                float y = wndTop + h - barHeight;
+                g.FillRectangle(brush, x, y, barWidth, barHeight);
+                g.DrawRectangle(pen, x, y, barWidth, barHeight);
+            }
+
+            // algorithm name and step count
+            brush = new SolidBrush(Color.Black);
+            string s = string.Format(&quot;{0}:\n{1} korak(a)&quot;, name, numSwaps);
+            g.DrawString(s, new Font(&quot;Arial&quot;, 16), brush, wndLeft + 10, wndTop + 10);
+            g.DrawRectangle(pen, wndLeft, wndTop, wndWidth, wndHeight);
+
+            // specific ranges below bars
+            if (!finished)
+            {
+                float y = wndTop + h;
+                foreach (var r in ranges)
+                {
+                    float x = wndLeft + r.Item1 * barWidth;
+                    float w = wndLeft + r.Item2 * barWidth - x;
+                    g.FillRectangle(brush, x, y, w, 10);
+                }
+            }
+        }
+        protected int Swap(int p1, int p2)
+        {
+            int tmp = a[p1];
+            a[p1] = a[p2];
+            a[p2] = tmp;
+            numSwaps++;
+            return 0;
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Класе изведене из класе <code class="docutils literal notranslate"><span class="pre">Algorithm</span></code> су све веома кратке и међусобно сличне. На пример, класа
+<code class="docutils literal notranslate"><span class="pre">BubbleSort</span></code> изгледа овако.</p>
+
+<div data-childcomponent="bubble_sort" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=bubble_sort data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+
+namespace SortingAlgorithms
+{
+    public class BubbleSort : Algorithm
+    {
+        private int iSortedFrom, iBubble;
+
+        public BubbleSort(int[] _a, Color c, Color fc) : base(_a, c, fc, &quot;Bubble Sort&quot;) { }
+
+        override public void Display(Graphics g)
+        {
+            Display(g, new List&lt;Tuple&lt;int, int&gt;&gt;
+            {
+                new Tuple&lt;int, int&gt;(iBubble, iBubble + 1), // the bubble
+                new Tuple&lt;int, int&gt;(iSortedFrom, a.Length) // sorted part
+            });
+        }
+
+        public override IEnumerable&lt;int&gt; DoSortingStep()
+        {
+            for (iSortedFrom = a.Length - 1; iSortedFrom &gt; 0; iSortedFrom--)
+                for (iBubble = 0; iBubble &lt; iSortedFrom; iBubble++)
+                    if (a[iBubble] &gt; a[iBubble + 1])
+                        yield return Swap(iBubble, iBubble + 1);
+
+            finished = true;
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Остале класе које представљају конкретне алгоритме можете да видите кликом на одговарајуће дугме.</p>
+
+    <div data-component="reveal" id="dugme_selection_sort"   data-showtitle="Класа SelectionSort" data-hidetitle="Сакриј класу SelectionSort">
+    <p><strong>Класа</strong> <code class="docutils literal notranslate"><span class="pre">SelectionSort</span></code></p>
+
+<div data-childcomponent="selection_sort" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=selection_sort data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+
+namespace SortingAlgorithms
+{
+    public class SelectionSort : Algorithm
+    {
+        public SelectionSort(int[] _a, Color c, Color fc) : base(_a, c, fc, &quot;Selection Sort&quot;) { }
+
+        private int nSorted, iMin, iCmp;
+
+        override public void Display(Graphics g)
+        {
+            Display(g, new List&lt;Tuple&lt;int, int&gt;&gt;
+            {
+                new Tuple&lt;int, int&gt;(0, nSorted), // sorted part 
+                new Tuple&lt;int, int&gt;(iMin, iMin + 1), // current min
+                new Tuple&lt;int, int&gt;(iCmp, iCmp + 1) // current comparing value
+            });
+        }
+
+        public override IEnumerable&lt;int&gt; DoSortingStep()
+        {
+            for (nSorted = 0; nSorted &lt; a.Length - 1; nSorted++)
+            {
+                iMin = nSorted;
+                for (iCmp = nSorted + 1; iCmp &lt; a.Length; iCmp++)
+                    if (a[iCmp] &lt; a[iMin])
+                        yield return Swap(iCmp, iMin);
+            }
+            finished = true;
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    
+    <div data-component="reveal" id="dugme_insertion_sort"   data-showtitle="Класа InsertionSort" data-hidetitle="Сакриј класу InsertionSort">
+    <p><strong>Класа</strong> <code class="docutils literal notranslate"><span class="pre">InsertionSort</span></code></p>
+
+<div data-childcomponent="insertion_sort" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=insertion_sort data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+
+namespace SortingAlgorithms
+{
+    public class InsertionSort : Algorithm
+    {
+        public InsertionSort(int[] _a, Color c, Color fc) : base(_a, c, fc, &quot;Insertion Sort&quot;) { }
+        private int nSorted, iPos;
+        override public void Display(Graphics g)
+        {
+            Display(g, new List&lt;Tuple&lt;int, int&gt;&gt;
+            {
+                new Tuple&lt;int, int&gt;(0, iPos),
+                new Tuple&lt;int, int&gt;(iPos + 1, nSorted)
+            });
+        }
+        public override IEnumerable&lt;int&gt; DoSortingStep()
+        {
+            for (nSorted = 1; nSorted &lt; a.Length; nSorted++)
+                for (iPos = nSorted - 1; iPos &gt;= 0 &amp;&amp; a[iPos] &gt; a[iPos + 1]; iPos--)
+                    yield return Swap(iPos, iPos + 1);
+
+            finished = true;
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    
+    <div data-component="reveal" id="dugme_shell_sort"   data-showtitle="Класа ShellSort" data-hidetitle="Сакриј класу ShellSort">
+    <p><strong>Класа</strong> <code class="docutils literal notranslate"><span class="pre">ShellSort</span></code></p>
+
+<div data-childcomponent="shell_sort" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=shell_sort data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+
+namespace SortingAlgorithms
+{
+    public class ShellSort : Algorithm
+    {
+        public ShellSort(int[] _a, Color c, Color fc) : base(_a, c, fc, &quot;Shell Sort&quot;) { }
+        private int iBubble, iBubbleStart;
+
+        override public void Display(Graphics g)
+        {
+            Display(g, new List&lt;Tuple&lt;int, int&gt;&gt;
+            {
+                new Tuple&lt;int, int&gt;(iBubble, iBubble + 1), // sorted part 
+                new Tuple&lt;int, int&gt;(iBubbleStart, iBubbleStart + 1) // current comparing value
+            });
+        }
+
+        public override IEnumerable&lt;int&gt; DoSortingStep()
+        {
+            int n = a.Length;
+            for (int gap = n / 2; gap &gt; 0; gap /= 2)
+                for (iBubbleStart = gap; iBubbleStart &lt; n; iBubbleStart++)
+                    for (iBubble = iBubbleStart; 
+                            iBubble &gt;= gap &amp;&amp; a[iBubble - gap] &gt; a[iBubble]; 
+                            iBubble -= gap)
+                        yield return Swap(iBubble, iBubble - gap);
+
+            finished = true;
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    
+    <div data-component="reveal" id="dugme_merge_sort"   data-showtitle="Класа MergeSort" data-hidetitle="Сакриј класу MergeSort">
+    <p><strong>Класа</strong> <code class="docutils literal notranslate"><span class="pre">MergeSort</span></code></p>
+
+<div data-childcomponent="merge_sort" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=merge_sort data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+
+namespace SortingAlgorithms
+{
+    public class MergeSort : Algorithm
+    {
+        public MergeSort(int[] _a, Color c, Color fc) : base(_a, c, fc, &quot;Merge Sort&quot;)
+        {
+            b = new int[a.Length];
+            currentRange.Push(new Tuple&lt;int, int&gt;(0, a.Length));
+        }
+
+        private int[] b;
+        private Stack&lt;Tuple&lt;int, int&gt;&gt; currentRange = new Stack&lt;Tuple&lt;int, int&gt;&gt;();
+
+        override public void Display(Graphics g)
+        {
+            Display(g, new List&lt;Tuple&lt;int, int&gt;&gt;
+            {
+                currentRange.Peek() // sub-array currently being merged
+            });
+        }
+
+        public override IEnumerable&lt;int&gt; DoSortingStep()
+        {
+            foreach (var _ in Sort(0, a.Length))
+                yield return _;
+
+            finished = true;
+        }
+
+        public IEnumerable&lt;int&gt; Sort(int lo, int hi)
+        {
+            if (lo + 1 &gt;= hi)
+                yield break;
+
+            currentRange.Push(new Tuple&lt;int, int&gt;(lo, hi-1));
+            int mid = lo + (hi - lo) / 2;
+            foreach (var _ in Sort(lo, mid))
+                yield return _;
+
+            foreach (var _ in Sort(mid, hi))
+                yield return _;
+
+            for (int p = lo; p &lt; hi; p++) { b[p] = a[p]; a[p] = 0; }
+
+            int i = lo, j = mid, k = lo;
+            while (i &lt; mid || j &lt; hi)
+            {
+                if (j == hi || (i &lt; mid &amp;&amp; b[i] &lt; b[j])) 
+                    a[k++] = b[i++]; 
+                else 
+                    a[k++] = b[j++];
+
+                numSwaps++;
+                yield return 0;
+            }
+            currentRange.Pop();
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    
+    <div data-component="reveal" id="dugme_quick_sort"   data-showtitle="Класа QuickSort" data-hidetitle="Сакриј класу QuickSort">
+    <p><strong>Класа</strong> <code class="docutils literal notranslate"><span class="pre">QuickSort</span></code></p>
+
+<div data-childcomponent="quick_sort" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=quick_sort data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+
+namespace SortingAlgorithms
+{
+    public class QuickSort : Algorithm
+    {
+        public QuickSort(int[] _a, Color c, Color fc) : base(_a, c, fc, &quot;Quick Sort&quot;)
+        {
+            currentRange.Push(new Tuple&lt;int, int&gt;(0, a.Length));
+        }
+
+        private Random rnd = new Random();
+        private Stack&lt;Tuple&lt;int, int&gt;&gt; currentRange = new Stack&lt;Tuple&lt;int, int&gt;&gt;();
+        private int i, j;
+        override public void Display(Graphics g)
+        {
+            Display(g, new List&lt;Tuple&lt;int, int&gt;&gt;
+            {
+                currentRange.Peek() // sub-array currently being merged
+            });
+        }
+
+        public override IEnumerable&lt;int&gt; DoSortingStep()
+        {
+            foreach (var _ in Sort(0, a.Length))
+                yield return _;
+
+            finished = true;
+        }
+
+        public IEnumerable&lt;int&gt; Sort(int lo, int hi)
+        {
+            if (lo + 1 &gt;= hi)
+                yield break;
+
+            currentRange.Push(new Tuple&lt;int, int&gt;(lo, hi - 1));
+            int pivot = a[rnd.Next(lo, hi)];
+            i = lo;
+            j = hi;
+            while (i &lt; j)
+            {
+                if (a[i] &lt; pivot) i++;
+                else if (a[j - 1] &gt; pivot) j--;
+                else
+                {
+                    yield return Swap(i, j - 1);
+                    i++; j--;
+                }
+            }
+
+            foreach (var _ in Sort(lo, i))
+                yield return _;
+
+            foreach (var _ in Sort(i, hi))
+                yield return _;
+
+            currentRange.Pop();
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Поред класа које представљају алгоритме сортирања, потребна је још и класа форме. У овом примеру,
+ни она није нарочито сложена – сви методи за обраду догађаја су веома кратки.</p>
+
+<div data-childcomponent="Form1" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Form1 data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace SortingAlgorithms
+{
+    public partial class Form1 : Form
+    {
+        List&lt;Algorithm&gt; algorithms;
+        List&lt;IEnumerator&lt;int&gt;&gt; enumerators;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Reset() 
+        {
+            // re-generate array
+            int arrayLength = 100;
+            Random rnd = new Random();
+            int[] a = new int[arrayLength];
+            for (int i = 0; i &lt; a.Length; i++)
+                a[i] = rnd.Next(5, 300);
+
+            algorithms = new List&lt;Algorithm&gt;
+            {
+                new SelectionSort(a, Color.Red, Color.DarkRed),
+                new BubbleSort(a, Color.Orange, Color.DarkOrange),
+                new InsertionSort(a, Color.LightYellow, Color.Yellow),
+                new MergeSort(a, Color.Cyan, Color.DarkCyan),
+                new ShellSort(a, Color.LightGreen, Color.Green),
+                new QuickSort(a, Color.Blue, Color.DarkBlue)
+            };
+
+            enumerators = new List&lt;IEnumerator&lt;int&gt;&gt;();
+            foreach (Algorithm sa in algorithms)
+                enumerators.Add(sa.DoSortingStep().GetEnumerator());
+
+            ArrangeSubwindows();
+            timer1.Enabled = true;
+        }
+
+        private void ArrangeSubwindows()
+        {
+            float w = ((float)ClientSize.Width - 10.0f) / 3.0f;
+            float h = ((float)ClientSize.Height - 10.0f) / 2.0f;
+
+            if (algorithms != null)
+                for (int row = 0; row &lt; 2; row++)
+                    for (int col = 0; col &lt; 3; col++)
+                        algorithms[3 * row + col].SetWindow(10 + col * w, 10 + row * h, w - 10, h - 10);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Text = &quot;Algoritmi sortiranja (pritisni P za pauzu, R za reset)&quot;;
+            ResizeRedraw = true;
+            Reset();
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            ArrangeSubwindows();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            foreach (var en in enumerators)
+                en.MoveNext();
+
+            Invalidate();
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.P)
+                timer1.Enabled = !timer1.Enabled;
+            if (e.KeyCode == Keys.R)
+                Reset();
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            foreach (Algorithm sa in algorithms)
+                sa.Display(e.Graphics);
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Ако желите да испробате апликацију, потребно је да урадите следеће:</p>
+<ul class="simple">
+<li><p>Креирајте нови пројекат типа <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Forms</span> <span class="pre">App</span></code> и назовите га <code class="docutils literal notranslate"><span class="pre">SortingAlgorithms</span></code></p></li>
+<li><p>Додајте у пројекат фајлове са класама које представљају алгоритме сортирања (базна и шест
+изведених класа) и копирајте у њих кôд који је дат горе.</p></li>
+<li><p>Прегазите кôд фајла <code class="docutils literal notranslate"><span class="pre">Form1.cs</span></code> кодом датим непосредно изнад</p></li>
+<li><p>Прегазите кôд фајла <code class="docutils literal notranslate"><span class="pre">Form1.Designer.cs</span></code> кодом датим у наставку</p></li>
+</ul>
+
+    <div data-component="reveal" id="dugme_Form1_Designer"   data-showtitle="Фајл Form1.Designer.cs" data-hidetitle="Сакриј фајл Form1.Designer.cs">
+    <p>Садржај фајла <code class="docutils literal notranslate"><span class="pre">Form1.Designer.cs</span></code></p>
+
+<div data-childcomponent="Form1_Designer" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=Form1_Designer data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="﻿
+namespace SortingAlgorithms
+{
+    partial class Form1
+    {
+        /// &lt;summary&gt;
+        ///  Required designer variable.
+        /// &lt;/summary&gt;
+        private System.ComponentModel.IContainer components = null;
+
+        /// &lt;summary&gt;
+        ///  Clean up any resources being used.
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;disposing&quot;&gt;true if managed resources should be disposed; otherwise, false.&lt;/param&gt;
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing &amp;&amp; (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// &lt;summary&gt;
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// &lt;/summary&gt;
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1143, 588);
+            this.DoubleBuffered = true;
+            this.Name = &quot;Form1&quot;;
+            this.Text = &quot;Form1&quot;;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Timer timer1;
+    }
+}
+
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    </section>
+</section>
+
+
+    </div>
+    
+    <div>
+<div class="lecture-prev-next-toggle">
+  <a  href="index.html" id="prevLectureLink" class="lecture-toggler-arrows"><i class="fas fa-arrow-left fa"></i> <span> Претходна лекција </span> </a>
+  
+  <a id="nextLectureLink" class="lecture-toggler-arrows"><span> Следећа лекција</span>  <i class="fas fa-arrow-right fa"></i> </a>
+</div>
+
+<script type="text/javascript">
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+</script>
+</div>
+
+    
+  </div>
+</div>
+
+<div class="petljadoc-resources">
+  <span class="pull-left">(Created using  <a href="https://pypi.org/project/Sphinx/">Swinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>) <br> © 2022 Petlja</span>
+</div>
+
+
+<div class="lectureToolbox">
+
+  <label class="font-size-toggle" id="fontSizeToggle">
+
+      <i class="fas fa-font"></i><label>Слова</label>
+  </label>
+  <div class="font-change d-none" id="fontChangeModal">
+      <span class="dec-letter-icon" id="decLetterIcon">A-</span>
+      <label id="currentFontSize">16</label>
+      <span class="inc-letter-icon" id="incLetterIcon">A+</span>
+  </div>
+</div>
+
+</div>
+
+  </body>
+</html>

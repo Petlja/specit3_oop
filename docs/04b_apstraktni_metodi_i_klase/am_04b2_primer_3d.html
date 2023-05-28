@@ -395,9 +395,11 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../04c_interfejsi/int_04c1_interfejsi.html><div class="studioLecture" id=activity-int_04c1_interfejsi><i class="fas fa-file-alt activity-icon"></i>Вишеструко наслеђивање и појам интерфејса</div></a>
+                <a href=../04c_interfejsi/int_04cq_interfejsi_kviz.html><div class="studioLecture" id=activity-int_04cq_interfejsi_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
                 <a href=../04c_interfejsi/int_04c2_sopstveni_interfejsi.html><div class="studioLecture" id=activity-int_04c2_sopstveni_interfejsi><i class="fas fa-file-alt activity-icon"></i>Употреба сопствених интерфејса</div></a>
-                <a href=../04c_interfejsi/int_04cq_visetruko_nasledjivanje_kviz.html><div class="studioLecture" id=activity-int_04cq_visetruko_nasledjivanje_kviz><i class="far fa-question-circle activity-icon"></i>Интерфејси - квиз</div></a>
-                <a href=../04c_interfejsi/int_04cz_visetruko_nasledjivanje_zadaci.html><div class="studioLecture" id=activity-int_04cz_visetruko_nasledjivanje_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
+                <a href=../04c_interfejsi/int_04c3_ienum.html><div class="studioLecture" id=activity-int_04c3_ienum><i class="fas fa-file-alt activity-icon"></i>Више о интерфејсу IEnumerable</div></a>
+                <a href=../04c_interfejsi/int_04c4_yield.html><div class="studioLecture" id=activity-int_04c4_yield><i class="fas fa-file-alt activity-icon"></i>Још неке могућности генератора колекција</div></a>
+                <a href=../04c_interfejsi/int_04cz_interfejsi_zadaci.html><div class="studioLecture" id=activity-int_04cz_interfejsi_zadaci><i class="fas fa-file-alt activity-icon"></i>Интерфејси - задаци</div></a>
                 </div>
             </div>
                 
@@ -458,6 +460,16 @@
             </div>
                 
                 <div class="courseContentsSection">
+                <div class="lecture-div courseContentsSectionHeadline" id=lecture-05d_dp_algoritmi_sortiranja>
+                    <h5>5.4 Приказ рада алгоритама сортирања</h5>
+                    <i class="fas fa-angle-down caret-position "> </i>
+                    <i class="fas fa-angle-up caret-position d-none"></i>
+                </div>
+                <div class="courseContentsSubSection d-none"><a href=../05d_dp_algoritmi_sortiranja/dpp_05c2_sortovi.html><div class="studioLecture" id=activity-dpp_05c2_sortovi><i class="fas fa-file-alt activity-icon"></i>Приказ рада алгоритама сортирања</div></a>
+                </div>
+            </div>
+                
+                <div class="courseContentsSection">
                 <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_primeri_proj_zadataka>
                     <h5>6 Примери пројектних задатака</h5>
                     <i class="fas fa-angle-down caret-position "> </i>
@@ -502,7 +514,7 @@
 
     </div></div>
 <p>Можемо да кажемо да су специјализација и генерализација два различита погледа на наслеђивање. У
-случају специјализације полазимо од опшије класе и на основу ње креирамо једну или више
+случају специјализације полазимо од општије класе и на основу ње креирамо једну или више
 специјализованих класа наследница. Код генерализације је смер размишљања и редослед креирања обрнут,
 полазимо од специјализованих класа и креирамо општији појам, који служи као базна класа за полазне
 класе.</p>
@@ -519,7 +531,7 @@
 <p>Проширити решење из примера са обимима и површинама фигура у равни и доћи до скупа класа помоћу
 којег могу да се рачунају површине и запремине ваљка, призме, купе и пирамиде (мисли се на прави
 ваљак, праву купу, праву правилну призму и праву правилну пирамиду). Ислустровати рад тих класа
-као и у претходном примеру.</p>
+као у претходном примеру.</p>
 
     </div></div>
 <p>Подсетимо се познатих формула за површину и запремину ваљка и призме.</p>
@@ -599,9 +611,10 @@
 </div>
 <p>Поново имамо две сличне класе, које намеравамо да користимо на униформан начин. Зато постављамо себи
 питање како би могла да изгледа заједничка базна класа за две назначене класе. Као прво, поља
-<code class="docutils literal notranslate"><span class="pre">osnova</span></code> и <code class="docutils literal notranslate"><span class="pre">visina</span></code> могу да буду заштићена поља базне класе, пошто су потребна за рачунање сва
-четири поменута тела. Даље, методи <code class="docutils literal notranslate"><span class="pre">Zapremina</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrsina</span></code> могу да буду апстрактни методи базне
-класе, због чега ће и цела класа да буде апстрактна. Ево како би она могла да изгледа.</p>
+<code class="docutils literal notranslate"><span class="pre">osnova</span></code> и <code class="docutils literal notranslate"><span class="pre">visina</span></code> могу да буду заштићена поља базне класе, пошто су потребна за рачунање
+површина и запремина сва четири поменута тела. Даље, методи <code class="docutils literal notranslate"><span class="pre">Zapremina</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrsina</span></code> могу да
+буду апстрактни методи базне класе, због чега ће и цела класа да буде апстрактна. Ево како би она
+могла да изгледа.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">abstract</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Figura3D</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="n">Figura2D</span><span class="w"> </span><span class="n">osnova</span><span class="p">;</span><span class="w"></span>
@@ -628,7 +641,8 @@
 <figure class="align-center" id="id3">
 <img alt="../_images/apstraktne_figure.png" src="../_images/apstraktne_figure.png" />
 <figcaption>
-<p><span class="caption-text">Однос класа које се појављују у примеру, са означеним генерализацијама (је базна класа за) и агрегацијама (садржи).</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Однос класа које се појављују у примеру, са означеним генерализацијама (однос базне и изведене класе) и
+агрегацијама (однос у коме једна класа садржи референцу на другу).</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Класе <code class="docutils literal notranslate"><span class="pre">StubastaFigura</span></code> и <code class="docutils literal notranslate"><span class="pre">SpicastaFigura</span></code> треба прилагодити идеји да су оне изведене из класе <code class="docutils literal notranslate"><span class="pre">Figura3D</span></code>.

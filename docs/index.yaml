@@ -425,6 +425,13 @@ lessons:
     title: Вишеструко наслеђивање и појам интерфејса
     type: reading
   - description: ''
+    file: int_04cq_interfejsi_kviz.html
+    guid: 8d096be2-3589-4e40-b923-8d20d524df77
+    normalized_title: Интерфејси - квиз
+    src: int_04cq_interfejsi_kviz.rst
+    title: Интерфејси - квиз
+    type: quiz
+  - description: ''
     file: int_04c2_sopstveni_interfejsi.html
     guid: f07f9363-5c53-4408-ad44-309064c1b319
     normalized_title: Употреба сопствених интерфејса
@@ -432,17 +439,24 @@ lessons:
     title: Употреба сопствених интерфејса
     type: reading
   - description: ''
-    file: int_04cq_visetruko_nasledjivanje_kviz.html
-    guid: 8d096be2-3589-4e40-b923-8d20d524df77
-    normalized_title: Интерфејси - квиз
-    src: int_04cq_visetruko_nasledjivanje_kviz.rst
-    title: Интерфејси - квиз
-    type: quiz
+    file: int_04c3_ienum.html
+    guid: 262187f4-27a2-47cd-a47f-7619c1ff3a87
+    normalized_title: Више о интерфејсу IEnumerable
+    src: int_04c3_ienum.rst
+    title: Више о интерфејсу IEnumerable
+    type: reading
   - description: ''
-    file: int_04cz_visetruko_nasledjivanje_zadaci.html
+    file: int_04c4_yield.html
+    guid: a3baed2b-825a-4b2b-9f6c-651f85546ce5
+    normalized_title: Још неке могућности генератора колекција
+    src: int_04c4_yield.rst
+    title: Још неке могућности генератора колекција
+    type: reading
+  - description: ''
+    file: int_04cz_interfejsi_zadaci.html
     guid: 6636573e-c861-4a6d-bbc3-e0ca28d4e95e
     normalized_title: Интерфејси - задаци
-    src: int_04cz_visetruko_nasledjivanje_zadaci.rst
+    src: int_04cz_interfejsi_zadaci.rst
     title: Интерфејси - задаци
     type: reading
   archived-activities: []
@@ -563,6 +577,20 @@ lessons:
   guid: bb8329e2-089f-4f7c-a0dd-384b6a8ab900
   normalized_title: 5.3 Вредност функције
   title: 5.3 Вредност функције
+- activities:
+  - description: ''
+    file: dpp_05c2_sortovi.html
+    guid: 0d3f3163-fb05-4160-b618-3e37527b54e8
+    normalized_title: Приказ рада алгоритама сортирања
+    src: dpp_05c2_sortovi.rst
+    title: Приказ рада алгоритама сортирања
+    type: reading
+  archived-activities: []
+  description: ''
+  folder: 05d_dp_algoritmi_sortiranja
+  guid: 90ac6210-414b-471d-ad78-48d24a5bca05
+  normalized_title: 5.4 Приказ рада алгоритама сортирања
+  title: 5.4 Приказ рада алгоритама сортирања
 - activities:
   - description: ''
     file: 06_proj_primeri.html
