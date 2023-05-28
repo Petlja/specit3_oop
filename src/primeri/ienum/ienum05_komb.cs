@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 class Program
 {
-    static IEnumerable<int> Kombinacije(int x, int d, int max)
+    static IEnumerable<int> Kombinacije(int prefiks, int josCifara, int maxCifra)
     {
-        if (d == 0)
-            yield return x;
+        if (josCifara == 0)
+            yield return prefiks;
         else
         {
-            for (int i = x % 10 + 1; i <= max; i++)
+            for (int i = prefiks % 10 + 1; i <= maxCifra; i++)
             {
-                foreach (var y in Kombinacije(10 * x + i, d - 1, max))
+                foreach (var y in Kombinacije(10 * prefiks + i, josCifara - 1, maxCifra))
                     yield return y;
             }
         }

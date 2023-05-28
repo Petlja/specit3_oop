@@ -5,10 +5,9 @@ class Program
 {
     static IEnumerable<int> f()
     {
+        yield return 5;
         yield return 4;
         yield return 5;
-        yield return 5;
-        yield return 3;
     }
 
     static void Main()

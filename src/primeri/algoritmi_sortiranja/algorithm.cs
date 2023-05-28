@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace SortingAlgorithms
 {
-    public abstract class Algorithm
-    {
-        abstract public void Display(Graphics g);
-        abstract public IEnumerable<int> DoSortingStep();
+        public abstract class Algorithm
+        {
+            abstract public void Display(Graphics g);
+            abstract public IEnumerable<int> DoSortingStep();
 
         public void SetWindow(float l, float t, float w, float h)
         {

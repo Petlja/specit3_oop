@@ -258,17 +258,25 @@ lessons:
         title: Вишеструко наслеђивање и појам интерфејса
         file: int_04c1_interfejsi.rst
         guid: 01cdc952-831f-425d-9209-1f604239eb0c
+      - type: quiz
+        title: Интерфејси - квиз
+        file: int_04cq_interfejsi_kviz.rst
+        guid: 8d096be2-3589-4e40-b923-8d20d524df77
       - type: reading
         title: Употреба сопствених интерфејса
         file: int_04c2_sopstveni_interfejsi.rst
         guid: f07f9363-5c53-4408-ad44-309064c1b319
-      - type: quiz
-        title: Интерфејси - квиз
-        file: int_04cq_visetruko_nasledjivanje_kviz.rst
-        guid: 8d096be2-3589-4e40-b923-8d20d524df77
+      - type: reading
+        title: Више о интерфејсу IEnumerable
+        file: int_04c3_ienum.rst
+        guid: 262187f4-27a2-47cd-a47f-7619c1ff3a87
+      - type: reading
+        title: Још неке могућности генератора колекција
+        file: int_04c4_yield.rst
+        guid: a3baed2b-825a-4b2b-9f6c-651f85546ce5
       - type: reading
         title: Интерфејси - задаци
-        file: int_04cz_visetruko_nasledjivanje_zadaci.rst
+        file: int_04cz_interfejsi_zadaci.rst
         guid: 6636573e-c861-4a6d-bbc3-e0ca28d4e95e
   - title: 4.4  Виртуелни методи
     guid: 3059206c-25f2-42b6-96ba-643333e3ee7d
@@ -344,6 +352,15 @@ lessons:
         title: Апликација за израчунавање нула функције
         file: dpp_05c4_nule_funkcije.rst
         guid: cfb3ed22-c7b3-4536-a3ae-19a158cdbb47
+  - title: 5.4 Приказ рада алгоритама сортирања
+    guid: 90ac6210-414b-471d-ad78-48d24a5bca05
+    folder: 05d_dp_algoritmi_sortiranja
+    activities:
+      - type: reading
+        title: Приказ рада алгоритама сортирања
+        file: dpp_05c2_sortovi.rst
+        guid: 0d3f3163-fb05-4160-b618-3e37527b54e8
+
 
 ### СЕКЦИЈА ПРИМЕРИ ПРОЈЕКТНИХ ЗАДАТАКА
   - title: 6 Примери пројектних задатака
