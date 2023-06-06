@@ -29,11 +29,11 @@ namespace Primer
                     Console.WriteLine("Propadose ti pare, trebalo je da sacekas isporuku");
                     break;
                 case Status.VracaKusur:
-                    Console.WriteLine("Propadose ti pare, trebalo je da sacekas vracanje novca prethodnom kupcu");
+                    Console.WriteLine("Propadose ti pare, trebalo je da sacekas vracanje novca");
                     break;
             }
         }
-        public void IzborProizvoda()
+        public void IzborProizvoda(double iznos)
         {
             switch (status)
             {
@@ -41,20 +41,20 @@ namespace Primer
                     Console.WriteLine("Prvo ubaci novac");
                     break;
                 case Status.PrimioNovac:
-                    if (ubacenNovac >= 100)
+                    if (ubacenNovac >= iznos)
                     {
-                        ubacenNovac -= 100;
+                        ubacenNovac -= iznos;
                         Console.WriteLine("Sacekaj isporuku");
                         status = Status.Isporucuje;
                     }
                     else
-                        Console.WriteLine("Proizvod kosta 100 dinara, ubaci jos novca");
+                        Console.WriteLine("Proizvod kosta {0} dinara, ubaci jos novca", iznos);
                     break;
                 case Status.Isporucuje:
                     Console.WriteLine("Sacekaj da se zavrsi isporuka");
                     break;
                 case Status.VracaKusur:
-                    Console.WriteLine("Sacekaj vracanje novca prethodnom kupcu");
+                    Console.WriteLine("Sacekaj vracanje novca za prethodnu kupovinu");
                     break;
             }
         }
@@ -73,7 +73,7 @@ namespace Primer
                     Console.WriteLine("Kasno, isporuka je u toku, sacekaj da se zavrsi");
                     break;
                 case Status.VracaKusur:
-                    Console.WriteLine("Kasno, u toku je vracanje novca prethodnom kupcu, sacekaj da se zavrsi");
+                    Console.WriteLine("U toku je vracanje novca, sacekaj da se zavrsi");
                     break;
             }
 

@@ -226,10 +226,10 @@ lessons:
         title: Изведена класа - квиз
         file: nasl_04aq_kviz.rst
         guid: 27c0de42-5f05-4726-81e7-7c0bf524834e
-      - type: reading
-        title: Изведена класа - задаци
-        file: nasl_04az_zadaci.rst
-        guid: 7cd1fcda-bbc8-44f9-9847-51ebb1b87076
+#      - type: reading
+#        title: Изведена класа - задаци
+#        file: nasl_04az_zadaci.rst
+#        guid: 7cd1fcda-bbc8-44f9-9847-51ebb1b87076
   - title: 4.2 Апстрактни методи и класе
     guid: 309ee94f-ec9a-4e0d-b52c-a521fbe361be
     folder: 04b_apstraktni_metodi_i_klase
@@ -239,9 +239,13 @@ lessons:
         file: am_04b1_apstraktni_metodi.rst
         guid: 46977a82-c010-4539-8140-6b6c069e0d5d
       - type: reading
-        title: Пример апстрактних метода  и класа
+        title: Пример апстрактних метода и класа
         file: am_04b2_primer_3d.rst
         guid: 3eb6a062-0d5d-402b-895d-ba5bf3dab528
+      - type: reading
+        title: Напреднији пример хијерархије класа
+        file: am_04b3_primer_prodajni_automat.rst
+        guid: a3022967-b803-4843-87b4-4856903619da
       - type: quiz
         title: Апстрактни методи и класе - квиз
         file: am_04bq_kviz.rst
@@ -294,10 +298,10 @@ lessons:
         title: Виртуелни методи - квиз
         file: vm_04dq_kviz.rst
         guid: 69f0d2c8-7b49-4307-bcd5-4761b06dca96
-      - type: reading
-        title: Виртуелни методи - примери и задаци
-        file: vm_04dz_primeri_zadaci.rst
-        guid: e2436ecd-9770-4162-85ca-cd6a1bb484a8
+#      - type: reading
+#        title: Виртуелни методи - примери и задаци
+#        file: vm_04dz_primeri_zadaci.rst
+#        guid: e2436ecd-9770-4162-85ca-cd6a1bb484a8
 
 ### СЕКЦИЈА ДИНАМИЧКИ ПОЛИМОРФИЗАМ - ПРИМЕРИ
   - title: 5 Динамички полиморфизам - примери
@@ -308,14 +312,6 @@ lessons:
         title: Динамички полиморфизам - примери
         file: 05_dp_primeri.rst
         guid: 09c8c4d1-c56d-4254-9a82-d49582033867
-#  - title: 5.1 Површине и запремине
-#    guid: 05b52159-e96c-4c29-b8df-6cdb236cd05f
-#    folder: 05a_dp_povrsine_zapremine
-#    activities:
-#      - type: reading
-#        title: Површине и запремине
-#        file: dpp_05a_povrsine_zapremine.rst
-#        guid: 85bc4cd0-9fcc-473f-8439-cb66e42a3c05
   - title: 5.1 Различита кретања
     guid: 263701f8-aa40-4676-8560-87e200cd351c
     folder: 05a_dp_kretanje_tela
@@ -363,22 +359,11 @@ lessons:
 
 
 ### СЕКЦИЈА ПРИМЕРИ ПРОЈЕКТНИХ ЗАДАТАКА
-  - title: 6 Примери пројектних задатака
-    guid: a1c034f2-776a-4ab3-ba94-9fdd942c95f8
-    folder: 06_primeri_proj_zadataka
-    activities:
-      - type: reading
-        title: Примери пројектних задатака
-        file: 06_proj_primeri.rst
-        guid: eb0bf24b-ba09-4406-ad8b-0accfe2dbf92
-
-
-
-# Редослед примера динамичког полиморфизма:
-#    + povrisne_zapremine - primer za vezbu  // abstract class Figura2D (Krug, Ntougao),     abstract class Figura3D (SpicastaFigura, StubastaFigura)
-#    . Kretanje
-#    + Quiz - primer din. polim.         // abstract class Question,     class Quiz (koja ima listu apstraktnih pitanja)
-#    * VrednostFunkcije                      // abstract class Function,     Parser.Evaluate generise funkciju, i onda tu funkciju pitamo za vrednosti u raznim tackama
-#      poravnanje teksta
-#      algoritmi sortiranja
-#    * Chess - lep, ali veoma slozen primer
+#  - title: 6 Примери пројектних задатака
+#    guid: a1c034f2-776a-4ab3-ba94-9fdd942c95f8
+#    folder: 06_primeri_proj_zadataka
+#    activities:
+#      - type: reading
+#        title: Примери пројектних задатака
+#        file: 06_proj_primeri.rst
+#        guid: eb0bf24b-ba09-4406-ad8b-0accfe2dbf92
