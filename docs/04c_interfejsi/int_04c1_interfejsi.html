@@ -370,7 +370,6 @@
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../04a_izvedene_klase/nasl_04a_01_izvedene_klase.html><div class="studioLecture" id=activity-nasl_04a_01_izvedene_klase><i class="fas fa-file-alt activity-icon"></i>Основно о наслеђивању</div></a>
                 <a href=../04a_izvedene_klase/nasl_04aq_kviz.html><div class="studioLecture" id=activity-nasl_04aq_kviz><i class="far fa-question-circle activity-icon"></i>Изведена класа - квиз</div></a>
-                <a href=../04a_izvedene_klase/nasl_04az_zadaci.html><div class="studioLecture" id=activity-nasl_04az_zadaci><i class="fas fa-file-alt activity-icon"></i>Изведена класа - задаци</div></a>
                 </div>
             </div>
                 
@@ -381,7 +380,8 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../04b_apstraktni_metodi_i_klase/am_04b1_apstraktni_metodi.html><div class="studioLecture" id=activity-am_04b1_apstraktni_metodi><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе</div></a>
-                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода  и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b3_primer_prodajni_automat.html><div class="studioLecture" id=activity-am_04b3_primer_prodajni_automat><i class="fas fa-file-alt activity-icon"></i>Напреднији пример хијерархије класа</div></a>
                 <a href=../04b_apstraktni_metodi_i_klase/am_04bq_kviz.html><div class="studioLecture" id=activity-am_04bq_kviz><i class="far fa-question-circle activity-icon"></i>Апстрактни методи и класе - квиз</div></a>
                 <a href=../04b_apstraktni_metodi_i_klase/am_04bz_zadaci.html><div class="studioLecture" id=activity-am_04bz_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе - задаци</div></a>
                 </div>
@@ -411,7 +411,6 @@
                 <div class="courseContentsSubSection d-none"><a href=../04d_virtuelni_metodi/vm_04d_01_modifikacija.html><div class="studioLecture" id=activity-vm_04d_01_modifikacija><i class="fas fa-file-alt activity-icon"></i>Модификација базне класе</div></a>
                 <a href=../04d_virtuelni_metodi/vm_04d_02_virtuelni_metodi.html><div class="studioLecture" id=activity-vm_04d_02_virtuelni_metodi><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи</div></a>
                 <a href=../04d_virtuelni_metodi/vm_04dq_kviz.html><div class="studioLecture" id=activity-vm_04dq_kviz><i class="far fa-question-circle activity-icon"></i>Виртуелни методи - квиз</div></a>
-                <a href=../04d_virtuelni_metodi/vm_04dz_primeri_zadaci.html><div class="studioLecture" id=activity-vm_04dz_primeri_zadaci><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи - примери и задаци</div></a>
                 </div>
             </div>
                 
@@ -465,16 +464,6 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../05d_dp_algoritmi_sortiranja/dpp_05c2_sortovi.html><div class="studioLecture" id=activity-dpp_05c2_sortovi><i class="fas fa-file-alt activity-icon"></i>Приказ рада алгоритама сортирања</div></a>
-                </div>
-            </div>
-                
-                <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_primeri_proj_zadataka>
-                    <h5>6 Примери пројектних задатака</h5>
-                    <i class="fas fa-angle-down caret-position "> </i>
-                    <i class="fas fa-angle-up caret-position d-none"></i>
-                </div>
-                <div class="courseContentsSubSection d-none"><a href=../06_primeri_proj_zadataka/06_proj_primeri.html><div class="studioLecture" id=activity-06_proj_primeri><i class="fas fa-file-alt activity-icon"></i>Примери пројектних задатака</div></a>
                 </div>
             </div>
                 </div>
@@ -543,8 +532,9 @@
 каква је) могла да се напише као интерфејс, јер садржи референцу <code class="docutils literal notranslate"><span class="pre">osnova</span></code> на класу <code class="docutils literal notranslate"><span class="pre">Figura2D</span></code>,
 као и реалан податак <code class="docutils literal notranslate"><span class="pre">visina</span></code>. У том смислу, <strong>интерфејс можемо да схватимо као апстрактну класу
 без (нестатичких) података</strong>. Из ове разлике између интерфејса и апстрактних класа проистиче и
-разлика у употреби, а то је да остале класе могу да имплементирају више интерфејса, али могу да
-наследе само једну класу, било апстрактну или не. То и јесте основни разлог за увођење интерфејса.</p>
+разлика у употреби, а то је да остале класе могу да имплементирају више интерфејса, али независно
+од броја интерфејса које имплементирају, могу да наследе само једну класу, било апстрактну или не.
+То и јесте основни разлог за увођење интерфејса.</p>
 <p>У новијим верзијама језика <cite>C#</cite> разлике између интерфејса и апстрактних класа се све више смањују,
 са идејом да интерфејси дају што више могућности које би донело вишеструко наслеђивање класа, али
 тако да не уведу и исте проблеме.</p>
@@ -606,7 +596,7 @@
 као параметар. Више од тога, оваквим методом смо подржали исписивање и свих објеката који још не
 постоје, а који ће бити написани тако да имплементирају интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>. Такође, ако на
 неком месту у коду користимо листу, па се касније предомислимо и желимо да користимо низ или неку
-другу колекцију, ради тога нећемо морати да преправљамо и функцију за исписивање елемената колекције.</p>
+другу колекцију, ради тога нећемо морати да преправљамо и метод за исписивање елемената колекције.</p>
 
     <div class="note-wrapper suggestionnote-type">
         <div class="note-icon-holder"> </div>
@@ -622,22 +612,23 @@
 томе рачуна о стварном типу објеката. Зато је пожељно да, где год нам то природа алгоритма допушта,
 користимо интерфејсе уместо конкретних типова. Ово се једнако односи на готове интерфејсе из <cite>.Net</cite>
 библиотеке и на интерфејсе које сами креирамо, с тим да уместо сопствених интерфејса можемо да
-користимо и апстрактне класе (ако нам није портебно више интерфејса истовремено).</p>
+користимо и апстрактне класе (ако нам није портебно да објекти задовољавају више интерфејса
+истовремено).</p>
 </section>
 <section id="net">
 <h2>Имплементирање интерфејса из .Net библиотеке<a class="headerlink" href="#net" title="Permalink to this heading">¶</a></h2>
 <p>Језик <cite>C#</cite> је веома богат већ дефинисаним интерфејсима у библиотеци <cite>.Net</cite>, као и наредбама и
 библиотечким методима који користе те интерфејсе. Да бисмо објекте наших класа могли да користимо
-у таквим наредбама и методима, довољно је да те класе имплементирају одговарајуће интерфејсе.
-Следећих пар примера илуструје неке од користи које можемо да имамо када класама које ми пишемо
-имплементирамо интерфејсе из библиотеке.</p>
+у таквим наредбама и методима, довољно је да те наше класе имплементирају одговарајуће интерфејсе.
+Следећих пар примера илуструје неке од користи које можемо да имамо када класом коју ми пишемо
+имплементирамо интерфејс из библиотеке.</p>
 <section id="icomparable">
 <h3>Пример – сортирање низова и листи (интерфејс <code class="docutils literal notranslate"><span class="pre">IComparable</span></code>)<a class="headerlink" href="#icomparable" title="Permalink to this heading">¶</a></h3>
 <p>Подсетимо се примера са разломцима са почетка овог курса. Написали смо једну релативно богату
 класу, која омогућава читање, исписивање и рачунање са разломцима на исти начин као што се то
 ради са целим или реалним бројевима. Ипак, тиме нисмо достигли пуну функционалност, коју би
 неко могао да очекује од класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>. На пример, са постојећом имплементацијом класе
-није могуће сортирати низ разломака. Ако бисмо писали</p>
+није могуће сортирати низ разломака методом <code class="docutils literal notranslate"><span class="pre">Array.Sort</span></code>. Ако бисмо писали</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
 <span class="n">Razlomak</span><span class="p">[]</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">[</span><span class="n">n</span><span class="p">];</span><span class="w"></span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="p">++)</span><span class="w"></span>
@@ -738,7 +729,7 @@
 буде интернет конекција, велика количина меморије (нпр. велики <code class="docutils literal notranslate"><span class="pre">Bitmap</span></code> објекат) или било који
 други ресурс. Истина је да ће меморија свакако бити ослобођена посредством сакупљача отпада (енгл.
 <cite>garbage collector</cite>), али до тада може да прође извесно време, а да у међувремену систем буде
-успорен због недостатка оперативне меморије. Без обзира на то о којој врсти ресурса се ради, било
+успорен због недостатка оперативне меморије. Без обзира на врсту ресурса о коме је реч, било
 би добро да предности наредбе <code class="docutils literal notranslate"><span class="pre">using</span></code> можемо да користимо и за инстанце наше класе. Конкретно,
 било би корисно да уместо</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">MojaKlasa</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MojaKlasa</span><span class="p">();</span><span class="w"></span>

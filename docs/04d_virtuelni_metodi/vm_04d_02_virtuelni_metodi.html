@@ -370,7 +370,6 @@
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../04a_izvedene_klase/nasl_04a_01_izvedene_klase.html><div class="studioLecture" id=activity-nasl_04a_01_izvedene_klase><i class="fas fa-file-alt activity-icon"></i>Основно о наслеђивању</div></a>
                 <a href=../04a_izvedene_klase/nasl_04aq_kviz.html><div class="studioLecture" id=activity-nasl_04aq_kviz><i class="far fa-question-circle activity-icon"></i>Изведена класа - квиз</div></a>
-                <a href=../04a_izvedene_klase/nasl_04az_zadaci.html><div class="studioLecture" id=activity-nasl_04az_zadaci><i class="fas fa-file-alt activity-icon"></i>Изведена класа - задаци</div></a>
                 </div>
             </div>
                 
@@ -381,7 +380,8 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../04b_apstraktni_metodi_i_klase/am_04b1_apstraktni_metodi.html><div class="studioLecture" id=activity-am_04b1_apstraktni_metodi><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе</div></a>
-                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода  и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b3_primer_prodajni_automat.html><div class="studioLecture" id=activity-am_04b3_primer_prodajni_automat><i class="fas fa-file-alt activity-icon"></i>Напреднији пример хијерархије класа</div></a>
                 <a href=../04b_apstraktni_metodi_i_klase/am_04bq_kviz.html><div class="studioLecture" id=activity-am_04bq_kviz><i class="far fa-question-circle activity-icon"></i>Апстрактни методи и класе - квиз</div></a>
                 <a href=../04b_apstraktni_metodi_i_klase/am_04bz_zadaci.html><div class="studioLecture" id=activity-am_04bz_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе - задаци</div></a>
                 </div>
@@ -411,7 +411,6 @@
                 <div class="courseContentsSubSection d-none"><a href=../04d_virtuelni_metodi/vm_04d_01_modifikacija.html><div class="studioLecture" id=activity-vm_04d_01_modifikacija><i class="fas fa-file-alt activity-icon"></i>Модификација базне класе</div></a>
                 <a href=../04d_virtuelni_metodi/vm_04d_02_virtuelni_metodi.html><div class="studioLecture" id=activity-vm_04d_02_virtuelni_metodi><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи</div></a>
                 <a href=../04d_virtuelni_metodi/vm_04dq_kviz.html><div class="studioLecture" id=activity-vm_04dq_kviz><i class="far fa-question-circle activity-icon"></i>Виртуелни методи - квиз</div></a>
-                <a href=../04d_virtuelni_metodi/vm_04dz_primeri_zadaci.html><div class="studioLecture" id=activity-vm_04dz_primeri_zadaci><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи - примери и задаци</div></a>
                 </div>
             </div>
                 
@@ -467,16 +466,6 @@
                 <div class="courseContentsSubSection d-none"><a href=../05d_dp_algoritmi_sortiranja/dpp_05c2_sortovi.html><div class="studioLecture" id=activity-dpp_05c2_sortovi><i class="fas fa-file-alt activity-icon"></i>Приказ рада алгоритама сортирања</div></a>
                 </div>
             </div>
-                
-                <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_primeri_proj_zadataka>
-                    <h5>6 Примери пројектних задатака</h5>
-                    <i class="fas fa-angle-down caret-position "> </i>
-                    <i class="fas fa-angle-up caret-position d-none"></i>
-                </div>
-                <div class="courseContentsSubSection d-none"><a href=../06_primeri_proj_zadataka/06_proj_primeri.html><div class="studioLecture" id=activity-06_proj_primeri><i class="fas fa-file-alt activity-icon"></i>Примери пројектних задатака</div></a>
-                </div>
-            </div>
                 </div>
 </div>
 
@@ -497,7 +486,7 @@
 модификација базне класе лако може да дође до погрешне употребе изведене класе и последично до
 погрешних резултата. Да би описани проблеми били превазиђени, потребан нам је нови механизам,
 који ће да узме у обзир динамичку природу објеката, односно њихов стварни тип у тренутку извршавања
-дате наредбе, односно позива метода. Ту могућност нам доносе <strong>виртуелни методи</strong>.</p>
+дате наредбе, у којој се позива спорни метод. Ту могућност нам доносе <strong>виртуелни методи</strong>.</p>
 <p>Виртуелни методи су начин да компајлеру кажемо да приликом приступања члановима класе који у суштини
 представљају функције (методи, својства, индексери) не проналази одговарајући члан на основу
 декларације (тј. типа референце), већ на основу стварног типа актуелног објекта.</p>
@@ -611,7 +600,7 @@
 </div>
 <p>Уношењем различитих одговора можемо да се уверимо да се овај пут добија исправан резултат и када је
 објекат типа <code class="docutils literal notranslate"><span class="pre">Pravougaonik</span></code>, као и када је типа <code class="docutils literal notranslate"><span class="pre">RotiraniPravougaonik</span></code>. Исто важи и за текстуалну
-репрезентацију објката, тј. имплицитну употребу метода <code class="docutils literal notranslate"><span class="pre">ToString</span></code> у последњој наредби, где се сада
+репрезентацију објеката, тј. имплицитну употребу метода <code class="docutils literal notranslate"><span class="pre">ToString</span></code> у последњој наредби, где се сада
 такође узима у обзир стваран тип објекта. Другим речима, постигли смо исправно, полиморфно понашање
 правоугаоника (динамички полиморфизам).</p>
 <div class="line-block">
@@ -639,8 +628,8 @@
 у тој табели адресе одговарајућег метода који ће бити позван.</p></li>
 <li><p>За методе који нису виртуелни, компајлер и даље може да угради у кôд директан позив метода
 са конкретном адресом, било да је реч о наслеђеном, или новом методу. Међутим, компајлери
-често не користе ту могућност јер је сложена за имплементацију, већ у случају да је бар
-један метод виртуелан, свим методима се приступа преко табеле.</p></li>
+понекад не користе ту могућност јер је нешто сложенија за имплементацију, већ у случају да
+је бар један метод виртуелан, свим методима уграђују приступ преко табеле.</p></li>
 </ul>
 <p>Овим поступком се омогућава да одлука о избору метода који ће бити позван буде одложена
 до извршавања програма, уместо да се та одлука доноси у време превођења. Пошто се адреса

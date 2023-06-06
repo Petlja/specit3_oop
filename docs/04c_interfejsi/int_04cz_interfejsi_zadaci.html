@@ -131,6 +131,7 @@
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
     <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -370,7 +371,6 @@
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../04a_izvedene_klase/nasl_04a_01_izvedene_klase.html><div class="studioLecture" id=activity-nasl_04a_01_izvedene_klase><i class="fas fa-file-alt activity-icon"></i>Основно о наслеђивању</div></a>
                 <a href=../04a_izvedene_klase/nasl_04aq_kviz.html><div class="studioLecture" id=activity-nasl_04aq_kviz><i class="far fa-question-circle activity-icon"></i>Изведена класа - квиз</div></a>
-                <a href=../04a_izvedene_klase/nasl_04az_zadaci.html><div class="studioLecture" id=activity-nasl_04az_zadaci><i class="fas fa-file-alt activity-icon"></i>Изведена класа - задаци</div></a>
                 </div>
             </div>
                 
@@ -381,7 +381,8 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../04b_apstraktni_metodi_i_klase/am_04b1_apstraktni_metodi.html><div class="studioLecture" id=activity-am_04b1_apstraktni_metodi><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе</div></a>
-                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода  и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b3_primer_prodajni_automat.html><div class="studioLecture" id=activity-am_04b3_primer_prodajni_automat><i class="fas fa-file-alt activity-icon"></i>Напреднији пример хијерархије класа</div></a>
                 <a href=../04b_apstraktni_metodi_i_klase/am_04bq_kviz.html><div class="studioLecture" id=activity-am_04bq_kviz><i class="far fa-question-circle activity-icon"></i>Апстрактни методи и класе - квиз</div></a>
                 <a href=../04b_apstraktni_metodi_i_klase/am_04bz_zadaci.html><div class="studioLecture" id=activity-am_04bz_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе - задаци</div></a>
                 </div>
@@ -411,7 +412,6 @@
                 <div class="courseContentsSubSection d-none"><a href=../04d_virtuelni_metodi/vm_04d_01_modifikacija.html><div class="studioLecture" id=activity-vm_04d_01_modifikacija><i class="fas fa-file-alt activity-icon"></i>Модификација базне класе</div></a>
                 <a href=../04d_virtuelni_metodi/vm_04d_02_virtuelni_metodi.html><div class="studioLecture" id=activity-vm_04d_02_virtuelni_metodi><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи</div></a>
                 <a href=../04d_virtuelni_metodi/vm_04dq_kviz.html><div class="studioLecture" id=activity-vm_04dq_kviz><i class="far fa-question-circle activity-icon"></i>Виртуелни методи - квиз</div></a>
-                <a href=../04d_virtuelni_metodi/vm_04dz_primeri_zadaci.html><div class="studioLecture" id=activity-vm_04dz_primeri_zadaci><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи - примери и задаци</div></a>
                 </div>
             </div>
                 
@@ -467,16 +467,6 @@
                 <div class="courseContentsSubSection d-none"><a href=../05d_dp_algoritmi_sortiranja/dpp_05c2_sortovi.html><div class="studioLecture" id=activity-dpp_05c2_sortovi><i class="fas fa-file-alt activity-icon"></i>Приказ рада алгоритама сортирања</div></a>
                 </div>
             </div>
-                
-                <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_primeri_proj_zadataka>
-                    <h5>6 Примери пројектних задатака</h5>
-                    <i class="fas fa-angle-down caret-position "> </i>
-                    <i class="fas fa-angle-up caret-position d-none"></i>
-                </div>
-                <div class="courseContentsSubSection d-none"><a href=../06_primeri_proj_zadataka/06_proj_primeri.html><div class="studioLecture" id=activity-06_proj_primeri><i class="fas fa-file-alt activity-icon"></i>Примери пројектних задатака</div></a>
-                </div>
-            </div>
                 </div>
 </div>
 
@@ -493,6 +483,183 @@
     
   <section id="id1">
 <h1>Интерфејси - задаци<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>1. Гласни и покретни објекти.</strong> Написати минималне интерфејсе и класе, тако да следећи
+програм може да се изврши.</p>
+
+<div data-childcomponent="interfejsi_glasan_pokretan_zad" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=interfejsi_glasan_pokretan_zad data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Pas p = new Pas();
+        MotornaTestera mt = new MotornaTestera();
+        Bicikl b = new Bicikl();
+
+        IGlasan[] glasni = { p, mt };
+        IPokretan[] pokretni = { p, b };
+
+        Console.WriteLine(&quot;Glasovi glasnih:&quot;);
+        foreach (var glasan in glasni)
+            Console.WriteLine(&quot;\t{0}: {1}&quot;, glasan, glasan.Zvuk());
+
+        Console.WriteLine(&quot;Brzine pokretnih:&quot;);
+        foreach (var pokretan in pokretni)
+            Console.WriteLine(&quot;\t{0}: {1}Km/h&quot;, pokretan, pokretan.Brzina());
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+<p>Извршавањем овог програма треба да се добије следећи излаз.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Glasovi</span> <span class="n">glasnih</span><span class="p">:</span>
+        <span class="n">pas</span><span class="p">:</span> <span class="n">av</span> <span class="n">av</span>
+        <span class="n">motorna</span> <span class="n">testera</span><span class="p">:</span> <span class="n">vruum</span>
+<span class="n">Brzine</span> <span class="n">pokretnih</span><span class="p">:</span>
+        <span class="n">pas</span><span class="p">:</span> <span class="mi">36</span><span class="n">Km</span><span class="o">/</span><span class="n">h</span>
+        <span class="n">bicikl</span><span class="p">:</span> <span class="mi">50</span><span class="n">Km</span><span class="o">/</span><span class="n">h</span>
+</pre></div>
+</div>
+
+    </div></div>
+<details class="summary-">
+<summary>Упутство</summary><p>Интерфејс <code class="docutils literal notranslate"><span class="pre">IGlasan</span></code> треба да има само метод <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">Zvuk()</span></code>, а интерфејс <code class="docutils literal notranslate"><span class="pre">IPokretan</span></code>
+само метод <code class="docutils literal notranslate"><span class="pre">double</span> <span class="pre">Brzina()</span></code> (или <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">Brzina()</span></code>).</p>
+<p>Класа <code class="docutils literal notranslate"><span class="pre">Pas</span></code> треба да имплементира оба интерфејса, класа <code class="docutils literal notranslate"><span class="pre">MotornaTestera</span></code> само интерфејс
+<code class="docutils literal notranslate"><span class="pre">IGlasan</span></code>, а класа <code class="docutils literal notranslate"><span class="pre">Bicikl</span></code> само интерфејс <code class="docutils literal notranslate"><span class="pre">IPokretan</span></code>. Поред тога, свака од ове три
+класе треба да редефинише метод <code class="docutils literal notranslate"><span class="pre">ToString</span></code> користећи кључну реч <code class="docutils literal notranslate"><span class="pre">override</span></code>.</p>
+</details>
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>2. Упоредиви велики бројеви.</strong> Написати класу <code class="docutils literal notranslate"><span class="pre">VelikiBroj</span></code> која омогућава правилно поређење
+бројева са великим бројем цифара. Класу написати тако да следећи програм може да се изврши.</p>
+
+<div data-childcomponent="poredjenje_velikih_brojeva" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=poredjenje_velikih_brojeva data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        List<VelikiBroj> brojevi = new List<VelikiBroj>();
+        brojevi.Add(new VelikiBroj("-123"));
+        brojevi.Add(new VelikiBroj("-12"));
+        brojevi.Add(new VelikiBroj("-125"));
+        brojevi.Add(new VelikiBroj("0"));
+        brojevi.Add(new VelikiBroj("2500"));
+        brojevi.Add(new VelikiBroj("251"));
+        brojevi.Add(new VelikiBroj("263"));
+
+        brojevi.Sort();
+        foreach (var broj in brojevi)
+            Console.WriteLine(broj);
+    }
+}
+</textarea>
+</div>
+<p>Извршавањем овог програма треба да се добије следећи излаз.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">125</span>
+<span class="o">-</span><span class="mi">123</span>
+<span class="o">-</span><span class="mi">12</span>
+<span class="mi">0</span>
+<span class="mi">251</span>
+<span class="mi">263</span>
+<span class="mi">2500</span>
+</pre></div>
+</div>
+<p>Напомена: у комплетној класи требало би написати бар још и операторе за сабирање, одузимање и
+множење, али то није тема овог задатака.</p>
+
+    </div></div>
+<details class="summary-">
+<summary>Упутство</summary><p>Класа <code class="docutils literal notranslate"><span class="pre">VelikiBroj</span></code> треба да имплементира интерфејс <code class="docutils literal notranslate"><span class="pre">IComparable</span></code>. Знак и цифре броја могу
+заједно да се чувају у приватној ниски <code class="docutils literal notranslate"><span class="pre">cifre</span></code>. Написати одговарајући метод <code class="docutils literal notranslate"><span class="pre">ToString()</span></code>.
+Приликом поређења два броја (задата помоћу ниски), у методу <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code> водити рачуна о
+следећем:</p>
+<ul class="simple">
+<li><p>ако су оба броја негативна, резултат поређења је обрнут од оног који се добија поређењм тих
+бројева без предзнака.</p></li>
+<li><p>ако је само један број негативан, он је мањи.</p></li>
+<li><p>ако су оба броја позитивна, мањи је онај који има мање цифара.</p></li>
+<li><p>ако су оба броја позитивна и имају једнак број цифара, мањи по вредности је уједно и
+лексикографски мањи, тј. бројеви могу да се пореде као ниске.</p></li>
+</ul>
+</details>
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>3. Фибоначијев низ.</strong> Написати метод који <strong>генерише</strong> колекцију Фибоначијевих бројева
+<span class="math notranslate nohighlight">\(1, 1, 2, 3, 5, 8, \ldots\)</span>, све до задате границе. Као што је познато, сваки Фибоначијев
+број (осим прва два) се добија као збир претходна два. Написати и програм, који помоћу овог
+метода исписује све Фибоначијеве бројеве мање од милион. Ни метод који генерише колекцију, ни
+метод који је користи, не треба да чувају елементе колекције.</p>
+
+    </div></div>
+<details class="summary-">
+<summary>Упутство</summary><p>Метод треба да враћа референцу на интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable&lt;int&gt;</span></code>. Довољно је да метод памти два
+узастопна елемента Фибоначијевог низа, да у петљи враћа следећи елемент помоћу наредбе <code class="docutils literal notranslate"><span class="pre">yield</span>
+<span class="pre">return</span></code> и (у истој петљи) да израчунава нови пар узастопних елемената.</p>
+</details>
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>4. Пермутације.</strong> Написати класу <code class="docutils literal notranslate"><span class="pre">GeneratorPermutacija</span></code> са методом <code class="docutils literal notranslate"><span class="pre">Permutacije</span></code>, који
+генерише колекцију ниски (стрингова) састављених од задатих карактера у свим могућим редоследима.
+Класу написати тако да може да се изврши следећи програм.</p>
+
+<div data-childcomponent="generator_permutacija" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=generator_permutacija data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+       >
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        GeneratorPermutacija gp = new GeneratorPermutacija();
+        foreach (string s in gp.Permutacije("sve"))
+            Console.WriteLine(s);
+    }
+}
+</textarea>
+</div>
+<p>Извршавањем програма треба да добије следећи излаз, при чему ниске не морају да буду исписане
+баш у овом редоследу.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sve</span>
+<span class="n">sev</span>
+<span class="n">vse</span>
+<span class="n">ves</span>
+<span class="n">evs</span>
+<span class="n">esv</span>
+</pre></div>
+</div>
+<p>Ни у класи чији метод генерише пермутације датих карактера, ни на месту употребе тог метода, генерисане
+ниске не треба да се чувају.</p>
+
+    </div></div>
 </section>
 
 

@@ -131,6 +131,7 @@
     <script src="../_static/editor-i18n.en.js"></script>
     <script src="../_static/editor-i18n.sr-Cyrl.js"></script>
     <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="../_static/jquery-fix.js"></script>
     <script src="../_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
@@ -370,7 +371,6 @@
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../04a_izvedene_klase/nasl_04a_01_izvedene_klase.html><div class="studioLecture" id=activity-nasl_04a_01_izvedene_klase><i class="fas fa-file-alt activity-icon"></i>Основно о наслеђивању</div></a>
                 <a href=../04a_izvedene_klase/nasl_04aq_kviz.html><div class="studioLecture" id=activity-nasl_04aq_kviz><i class="far fa-question-circle activity-icon"></i>Изведена класа - квиз</div></a>
-                <a href=../04a_izvedene_klase/nasl_04az_zadaci.html><div class="studioLecture" id=activity-nasl_04az_zadaci><i class="fas fa-file-alt activity-icon"></i>Изведена класа - задаци</div></a>
                 </div>
             </div>
                 
@@ -381,7 +381,8 @@
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
                 <div class="courseContentsSubSection d-none"><a href=../04b_apstraktni_metodi_i_klase/am_04b1_apstraktni_metodi.html><div class="studioLecture" id=activity-am_04b1_apstraktni_metodi><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе</div></a>
-                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода  и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b2_primer_3d.html><div class="studioLecture" id=activity-am_04b2_primer_3d><i class="fas fa-file-alt activity-icon"></i>Пример апстрактних метода и класа</div></a>
+                <a href=../04b_apstraktni_metodi_i_klase/am_04b3_primer_prodajni_automat.html><div class="studioLecture" id=activity-am_04b3_primer_prodajni_automat><i class="fas fa-file-alt activity-icon"></i>Напреднији пример хијерархије класа</div></a>
                 <a href=../04b_apstraktni_metodi_i_klase/am_04bq_kviz.html><div class="studioLecture" id=activity-am_04bq_kviz><i class="far fa-question-circle activity-icon"></i>Апстрактни методи и класе - квиз</div></a>
                 <a href=../04b_apstraktni_metodi_i_klase/am_04bz_zadaci.html><div class="studioLecture" id=activity-am_04bz_zadaci><i class="fas fa-file-alt activity-icon"></i>Апстрактни методи и класе - задаци</div></a>
                 </div>
@@ -411,7 +412,6 @@
                 <div class="courseContentsSubSection d-none"><a href=../04d_virtuelni_metodi/vm_04d_01_modifikacija.html><div class="studioLecture" id=activity-vm_04d_01_modifikacija><i class="fas fa-file-alt activity-icon"></i>Модификација базне класе</div></a>
                 <a href=../04d_virtuelni_metodi/vm_04d_02_virtuelni_metodi.html><div class="studioLecture" id=activity-vm_04d_02_virtuelni_metodi><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи</div></a>
                 <a href=../04d_virtuelni_metodi/vm_04dq_kviz.html><div class="studioLecture" id=activity-vm_04dq_kviz><i class="far fa-question-circle activity-icon"></i>Виртуелни методи - квиз</div></a>
-                <a href=../04d_virtuelni_metodi/vm_04dz_primeri_zadaci.html><div class="studioLecture" id=activity-vm_04dz_primeri_zadaci><i class="fas fa-file-alt activity-icon"></i>Виртуелни методи - примери и задаци</div></a>
                 </div>
             </div>
                 
@@ -467,16 +467,6 @@
                 <div class="courseContentsSubSection d-none"><a href=../05d_dp_algoritmi_sortiranja/dpp_05c2_sortovi.html><div class="studioLecture" id=activity-dpp_05c2_sortovi><i class="fas fa-file-alt activity-icon"></i>Приказ рада алгоритама сортирања</div></a>
                 </div>
             </div>
-                
-                <div class="courseContentsSection">
-                <div class="lecture-div courseContentsSectionHeadline" id=lecture-06_primeri_proj_zadataka>
-                    <h5>6 Примери пројектних задатака</h5>
-                    <i class="fas fa-angle-down caret-position "> </i>
-                    <i class="fas fa-angle-up caret-position d-none"></i>
-                </div>
-                <div class="courseContentsSubSection d-none"><a href=../06_primeri_proj_zadataka/06_proj_primeri.html><div class="studioLecture" id=activity-06_proj_primeri><i class="fas fa-file-alt activity-icon"></i>Примери пројектних задатака</div></a>
-                </div>
-            </div>
                 </div>
 </div>
 
@@ -498,11 +488,600 @@
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-<p><strong>1. Телефонски претплатници</strong></p>
+<p><strong>1. Игра погађања замишљеног броја</strong> Написати програм који омогућава играчу да зада ниво тежине
+игре и број <span class="math notranslate nohighlight">\(n\)</span> као дужину интервала, а затим да погађа замишљени број између <span class="math notranslate nohighlight">\(1\)</span> и
+<span class="math notranslate nohighlight">\(n\)</span>. Играч после сваког покушаја треба да добије информацију да ли је замишљени број мањи,
+већи или једнак његовом покушају. Када играч погоди замишљени број, програм му саопштава број
+покушаја који су му били потребни, а затим понуди нову игру.</p>
+<p>Програм написати тако да подржава два нивоа тежине. На првом нивоу програм заиста бира случајан
+број од <span class="math notranslate nohighlight">\(1\)</span> до <span class="math notranslate nohighlight">\(n\)</span> и после сваког покушаја играча одговара као што је описано. На
+другом нивоу програм не бира замишљени број него само ствара утисак да је замислио неки број.
+На покушаје погађања, програм одговара у складу са претходним одговорима, али тако да играчу
+сваки пут даје најнеповољнији одговор, тј. одговор који оставља највећу недоумицу. На пример,
+ако играч погађа број од 1 до 100, за наведене покушаје погађања одговори треба да изгледају
+овако:</p>
+<ul class="simple">
+<li><p>играч: 40? програм: замишљени број је већи</p></li>
+<li><p>играч: 90? програм: замишљени број је мањи</p></li>
+<li><p>играч: 38? програм: замишљени број је већи</p></li>
+<li><p>играч: 60? програм: замишљени број је већи</p></li>
+<li><p>играч: 80? програм: замишљени број је мањи</p></li>
+<li><p>играч: 71? програм: замишљени број је мањи</p></li>
+<li><p>играч: 67? програм: замишљени број је мањи</p></li>
+<li><p>играч: 63? програм: замишљени број је већи</p></li>
+<li><p>играч: 65? програм: замишљени број је мањи (овде је одговор могао да буде и да је замишљени број већи)</p></li>
+<li><p>играч: 62? програм: замишљени број је већи</p></li>
+<li><p>играч: 68? програм: замишљени број је мањи</p></li>
+<li><p>играч: 64? програм: честитам, погодили сте из 12 покушаја.</p></li>
+</ul>
+
+    </div></div>
+<details class="summary-">
+<summary>Упутство</summary><p>Може да се напише апстрактна класа <code class="docutils literal notranslate"><span class="pre">Igra</span></code> и две из ње изведене класе, за сваки ниво тежине по
+једна. Довољна су два апстрактна метода: <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Pocni(int</span> <span class="pre">n)</span></code> и <code class="docutils literal notranslate"><span class="pre">string</span> <span class="pre">Odgovori(int</span> <span class="pre">pokusaj)</span></code>.</p>
+<p>Једноставан начин да се имплементира други ниво је да програм одржава интервал коме „замишљени”
+број мора да припада. На пример, ако играч погађа број од 1 до 100, тај интервал је на самом
+почетку <span class="math notranslate nohighlight">\([1 .. 100]\)</span>, након покушаја <span class="math notranslate nohighlight">\(40\)</span> и одговора да је замишљени број већи,
+интервал је <span class="math notranslate nohighlight">\([41 .. 100]\)</span> итд. Једина ситуација у којој програм на другом нивоу одговара
+да је број погођен је да се овај интервал претходно свео на један број и да играч као свој
+покушај наведе баш тај број.</p>
+</details>
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>2. Роботи</strong> Четири типа робота могу да се крећу по бинарној матрици, у којој нуле представљају
+пролаз, а јединице препреке. Роботи разумеју команде „десно”, „лево”, „напред” и „назад”, али
+их извршавају на различите начине:</p>
+<ul class="simple">
+<li><p>тип 1 – неусмерен спор робот</p>
+<ul>
+<li><p>На команду <strong>десно</strong> иде једно поље десно, тј. у следећу колону ако је могуће (поље постоји и слободно је)</p></li>
+<li><p>На команду <strong>лево</strong> иде једно поље лево, тј. у претходну колону ако је могуће (поље постоји и слободно је)</p></li>
+<li><p>На команду <strong>напред</strong> иде једно поље горе, тј. у претходну врсту ако је могуће (поље постоји и слободно је)</p></li>
+<li><p>На команду <strong>назад</strong> иде једно поље доле, тј. у следећу врсту  ако је могуће (поље постоји и слободно је)</p></li>
+</ul>
+</li>
+<li><p>тип 2 – неусмерен брз робот</p>
+<ul>
+<li><p>На команду <strong>десно</strong> иде десно док постоје слободна поља десно</p></li>
+<li><p>На команду <strong>лево</strong> иде лево док постоје слободна поља лево</p></li>
+<li><p>На команду <strong>напред</strong> иде горе док постоје слободна поља горе</p></li>
+<li><p>На команду <strong>назад</strong> иде доле док постоје слободна поља доле</p></li>
+</ul>
+</li>
+<li><p>тип 3 – усмерен спор робот (на почетку окренут на горе)</p>
+<ul>
+<li><p>На команду <strong>десно</strong> окреће се 90 степени удесно</p></li>
+<li><p>На команду <strong>лево</strong> окреће се 90 степени улево</p></li>
+<li><p>На команду <strong>напред</strong> иде једно поље у смеру у ком је окренут, ако у том смеру поље постоји и слободно је</p></li>
+<li><p>На команду <strong>назад</strong> иде једно поље уназад, ако поље иза робота (тј. у смеру супротном од смера у ком је окренут) постоји и слободно је</p></li>
+</ul>
+</li>
+<li><p>тип 4 – усмерен брз робот (на почетку окренут на горе)</p>
+<ul>
+<li><p>На команду <strong>десно</strong> окреће се 90 степени удесно</p></li>
+<li><p>На команду <strong>лево</strong> окреће се 90 степени улево</p></li>
+<li><p>На команду <strong>напред</strong> иде у смеру у ком је окренут док постоје слободна поља у том смеру</p></li>
+<li><p>На команду <strong>назад</strong> иде уназад (без окретања) док постоје слободна поља у том смеру, а то је смер супротан од смера у ком је окренут</p></li>
+</ul>
+</li>
+</ul>
+<p>Дат је програм који, не користећи никакве класе, само демонстрира кретање робота. Овај програм
+нуди корисника да одабере тип робота а затим на унапред припремљеној матрици извршава низ
+унапред припремљених команди за одабраног робота. На крају, програм исписује координате поља
+на коме се налаази робот након извршења команди.</p>
+
+    <div data-component="reveal" id="kretanje_razlicitih_robota_0_dugme"   data-showtitle="Програм без класа" data-hidetitle="Сакриј програм без класа">
+    <p><strong>Кретање различитих робота – програм без класа</strong></p>
+
+<div data-childcomponent="kretanje_razlicitih_robota_0_bez_klasa" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=kretanje_razlicitih_robota_0_bez_klasa data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+class Program
+{
+    static void Main()
+    {
+        int[,] tabla = new int[,] {
+            { 0, 0, 0, 1, 0, 0, 0, 0, 1 },
+            { 0, 0, 0, 1, 0, 0, 0, 0, 0 },
+            { 0, 0, 0, 0, 0, 0, 0, 1, 0 },
+            { 1, 0, 0, 1, 0, 0, 0, 0, 1 },
+        };
+        Console.WriteLine(&quot;1: neusmeren spor robot&quot;);
+        Console.WriteLine(&quot;2: neusmeren brz robot&quot;);
+        Console.WriteLine(&quot;3: usmeren spor robot&quot;);
+        Console.WriteLine(&quot;4: usmeren brz robot&quot;);
+        Console.Write(&quot;Izaberi robota (1/2/3/4) &quot;);
+        int tipRobota = int.Parse(Console.ReadLine());
+        const int NEUSM_SPOR = 1, NEUSM_BRZ = 2, USM_SPOR = 3, USM_BRZ = 4;
+        int[] dx = new int[] { 0, 1, 0, -1 };
+        int[] dy = new int[] { -1, 0, 1, 0 };
+        int nV = tabla.GetLength(0);
+        int nK = tabla.GetLength(1);
+        int x = 0, y = 0, smer = 0, x1, y1; 
+        string komande = &quot;RRFLFRFLBF&quot;;
+        foreach (char komanda in komande)
+        {
+            switch (komanda)
+            {
+                case &apos;R&apos;: //Desno
+                    switch (tipRobota)
+                    {
+                        case NEUSM_SPOR: 
+                            if (x + 1 &lt; nK &amp;&amp; tabla[y, x + 1] == 0) 
+                                x++;
+                            break;
+                        case NEUSM_BRZ:
+                            while (x + 1 &lt; nK &amp;&amp; tabla[y, x + 1] == 0) 
+                                x++;
+                            break;
+                        case USM_SPOR:
+                            smer = (smer + 1) % 4; 
+                            break;
+                        case USM_BRZ:
+                            smer = (smer + 1) % 4;
+                            break;
+
+                        default:
+                            break;
+                    }
+                    break;
+                case &apos;L&apos;: // Levo
+                    switch (tipRobota)
+                    {
+                        case NEUSM_SPOR:
+                            if (x &gt; 0 &amp;&amp; tabla[y, x - 1] == 0) 
+                                x--;
+                            break;
+                        case NEUSM_BRZ:
+                            while (x &gt; 0 &amp;&amp; tabla[y, x - 1] == 0) 
+                                x--; 
+                            break;
+                        case USM_SPOR:
+                            smer = (smer + 3) % 4;
+                            break;
+                        case USM_BRZ:
+                            smer = (smer + 3) % 4; 
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case &apos;F&apos;: // Napred
+                    switch (tipRobota)
+                    {
+                        case NEUSM_SPOR:
+                            if (y &gt; 0 &amp;&amp; tabla[y - 1, x] == 0) 
+                                y--;
+                            break;
+                        case NEUSM_BRZ:
+                            while (y &gt; 0 &amp;&amp; tabla[y - 1, x] == 0) 
+                                y--;
+                            break;
+                        case USM_SPOR:
+                            x1 = x + dx[smer];
+                            y1 = y + dy[smer];
+                            if (x1 &gt;= 0 &amp;&amp; y1 &gt;= 0 &amp;&amp; x1 &lt; nK &amp;&amp; y1 &lt; nV &amp;&amp; tabla[y1, x1] == 0)
+                            {
+                                y = y1;
+                                x = x1;
+                            }
+                            break;
+                        case USM_BRZ:
+                            while (true)
+                            {
+                                x1 = x + dx[smer];
+                                y1 = y + dy[smer];
+                                if (x1 &gt;= 0 &amp;&amp; y1 &gt;= 0 &amp;&amp; x1 &lt; nK &amp;&amp; y1 &lt; nV &amp;&amp; tabla[y1, x1] == 0)
+                                {
+                                    y = y1;
+                                    x = x1;
+                                }
+                                else break;
+                            }
+                            break;
+
+                        default:
+                            break;
+                    }
+                    break;
+                case &apos;B&apos;: //Nazad
+                    switch (tipRobota)
+                    {
+                        case NEUSM_SPOR:
+                            if (y + 1 &lt; nV &amp;&amp; tabla[y + 1, x] == 0) 
+                                y++; 
+                            break;
+                        case NEUSM_BRZ:
+                            while (y + 1 &lt; nV &amp;&amp; tabla[y + 1, x] == 0) 
+                                y++;
+                            break;
+                        case USM_SPOR:
+                            x1 = x - dx[smer];
+                            y1 = y - dy[smer];
+                            if (x1 &gt;= 0 &amp;&amp; y1 &gt;= 0 &amp;&amp; x1 &lt; nK &amp;&amp; y1 &lt; nV &amp;&amp; tabla[y1, x1] == 0)
+                            {
+                                y = y1;
+                                x = x1;
+                            }
+                            break;
+                        case USM_BRZ:
+                            while (true)
+                            {
+                                x1 = x - dx[smer];
+                                y1 = y - dy[smer];
+                                if (x1 &gt;= 0 &amp;&amp; y1 &gt;= 0 &amp;&amp; x1 &lt; nK &amp;&amp; y1 &lt; nV &amp;&amp; tabla[y1, x1] == 0)
+                                {
+                                    y = y1;
+                                    x = x1;
+                                }
+                                else break;
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                default: break;
+            }
+        }
+        Console.WriteLine(&quot;Robot je na polju ({0}, {1})&quot;, x, y);
+    }
+}
+/*
+za tip 1 ispisuje:  Robot je na polju (1, 0) 
+za tip 2 ispisuje:  Robot je na polju (0, 0) 
+za tip 3 ispisuje:  Robot je na polju (1, 2) 
+za tip 4 ispisuje:  Robot je na polju (7, 3) 
+*/"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Пробрам би био комплетнији када би омогућио задавање матрице, као и низа команди, а могао би и да
+приказује кретање одабраног робота по матрици. У овом задатку се не тражи писање таквог програма.</p>
+<p>Потребно је на основу датог програма допунити следећи започет програм одговарајућим класама
+робота, тако да овај програм при извршавању даје исти резултат као претходни програм који не
+користи класе.</p>
+<p><strong>Програм који треба допунити писањем класа</strong></p>
+
+<div data-childcomponent="kretanje_razlicitih_robota_1_zadatak" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=kretanje_razlicitih_robota_1_zadatak data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+class Program
+{
+    static void Main()
+    {
+        int[,] tabla = new int[,] {
+            { 0, 0, 0, 1, 0, 0, 0, 0, 1 },
+            { 0, 0, 0, 1, 0, 0, 0, 0, 0 },
+            { 0, 0, 0, 0, 0, 0, 0, 1, 0 },
+            { 1, 0, 0, 1, 0, 0, 0, 0, 1 },
+        };
+        Console.WriteLine(&quot;1: neusmeren spor robot&quot;);
+        Console.WriteLine(&quot;2: neusmeren brz robot&quot;);
+        Console.WriteLine(&quot;3: usmeren spor robot&quot;);
+        Console.WriteLine(&quot;4: usmeren brz robot&quot;);
+        Console.Write(&quot;Izaberi robota (1/2/3/4) &quot;);
+        int tipRobota = int.Parse(Console.ReadLine());
+        Robot robot = Robot.Napravi(tipRobota, 0, 0, tabla);
+        string komande = &quot;RRFLFRFLBF&quot;;
+        foreach (char komanda in komande)
+        {
+            switch (komanda)
+            {
+                case &apos;R&apos;: robot.Desno(); break;
+                case &apos;L&apos;: robot.Levo(); break;
+                case &apos;F&apos;: robot.Napred(); break;
+                case &apos;B&apos;: robot.Nazad(); break;
+                default: break;
+            }
+        }
+        Console.WriteLine(&quot;Robot je na polju ({0}, {1})&quot;,
+            robot.X, robot.Y);
+    }
+}
+/*
+za tip 1 ispisuje:  Robot je na polju (1, 0) 
+za tip 2 ispisuje:  Robot je na polju (0, 0) 
+za tip 3 ispisuje:  Robot je na polju (1, 2) 
+za tip 4 ispisuje:  Robot je na polju (7, 3) 
+*/"   >
+
+
+</textarea>
+</div>
+
+    </div></div>
+<details class="summary-">
+<summary>Упутство</summary><p>Треба прво написати апстрактну базну класу робот. Ова класа свакако треба да има апстрактне
+јавне методе <code class="docutils literal notranslate"><span class="pre">Desno()</span></code>, <code class="docutils literal notranslate"><span class="pre">Levo()</span></code>, <code class="docutils literal notranslate"><span class="pre">Napred()</span></code> и <code class="docutils literal notranslate"><span class="pre">Nazad()</span></code>.  У базној класи треба
+написати и статички метод <code class="docutils literal notranslate"><span class="pre">Napravi</span></code>, који враћа референцу на класу <code class="docutils literal notranslate"><span class="pre">Robot</span></code>, позивајући
+конструктор одговарајуће изведене класе (зависно од целобројног типа робота, који се задаје
+као први параметар метода <code class="docutils literal notranslate"><span class="pre">Napravi</span></code>).</p>
+<p>Осим тога, базна класа може да има два целобројна заштићена поља, помоћу којих памти локацију
+робота у матрици. За базну класу може да се напише и заштићени конструктор, помоћу којег се
+задаје почетна локација робота.</p>
+<p>Даље, за сваки од четири описана типа робота треба написати по једну класу, изведену из класе
+<code class="docutils literal notranslate"><span class="pre">Robot</span></code>. Усмерени роботи треба да имају и поље <code class="docutils literal notranslate"><span class="pre">smer</span></code>, које може да има једну од четири
+вредности. На пример, ако је поље типа <code class="docutils literal notranslate"><span class="pre">char</span></code>, вредности могу да буду <code class="docutils literal notranslate"><span class="pre">'N'</span></code>, <code class="docutils literal notranslate"><span class="pre">'E'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'S'</span></code> и <code class="docutils literal notranslate"><span class="pre">'W'</span></code>, а ако је поље целобројно, вредности могу да буду бројеви 0, 1, 2 и 3.</p>
+</details>
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>3. Банковни рачун</strong> У зависности од количине расположивог новца на рачуну, банка може
+различито да наплаћује одржавање рачуна, да исплаћује или не исплаћује камате итд. На пример:</p>
+<ul class="simple">
+<li><p>ако је рачун у минусу, одржавање се наплаћује 500 динара месечно (подразумева се да нема камате)</p></li>
+<li><p>ако је рачун у умереном плусу, одржавање се наплаћује 200 динара месечно и нема камате</p></li>
+<li><p>ако је рачун у великом плусу, одржавање се наплаћује 250 динара месечно, а камата је 5%</p></li>
+</ul>
+<p>За рачун који је у минусу кажемо да је презадужен, за рачун у умереном плусу да је стандардан,
+а рачун у великом плусу је повлашћен. После сваке уплате или исплате рачун може да промени статус
+у складу са тренутном количином новца на њему.</p>
+<p>Дат је програм који моделира један такав рачун. Детаљи модела могу да се виде у самом програму.</p>
+
+    <div data-component="reveal" id="bankovni_racun_priprema_dugme"   data-showtitle="Банковни рачун - уводни програм" data-hidetitle="Сакриј уводни програм">
+    <p><strong>Банковни рачун – уводни програм</strong></p>
+
+<div data-childcomponent="bankovni_racun_priprema" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=bankovni_racun_priprema data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+namespace Primer
+{
+    public class Racun
+    {
+        // Zaduzen status:    racun je u minusu, ne dobija kamatu, odrzavanje mu je najskuplje 
+        // Standardan status: racun je u malom plusu, ne dobija kamatu, odrzavanje mu je najjeftinije
+        // Povlascen status:  racun je u velikom plusu, dobija kamatu, srednji torskovi odrzavanja
+        // Svaki novi racun se otvara kao standardan
+
+        #region PODACI
+        private enum StatusRacuna { Zaduzen, Standardan, Povlascen };
+        private string vlasnik;
+        private StatusRacuna status;
+        private double stanje, donjaGranica, gornjaGranica, kamatnaStopa, odrzavanjeRacuna;
+        #endregion
+
+        #region INTERFEJS (public metodi i svojstva)
+        public Racun(string vlasnik)
+        {
+            this.vlasnik = vlasnik;
+            PostaviStatus(StatusRacuna.Standardan);
+        }
+        public string Vlasnik { get { return vlasnik; } }
+        public double Stanje { get { return stanje; } }
+        public string Status { get { return status.ToString(); } }
+        public void Uplata(double iznos)
+        {
+            stanje += iznos;
+            AzurirajStatus();
+            Izvestaj(&quot;uplata&quot;, iznos);
+        }
+        public void Isplata(double iznos)
+        {
+            if (stanje &gt; 0)
+            {
+                stanje -= iznos;
+                AzurirajStatus();
+            }
+            else
+                Console.WriteLine(&quot;Nema novca za podizanje!&quot;);
+
+            Izvestaj(&quot;isplata&quot;, iznos);
+        }
+        public void ObracunOdrzavanja()
+        {
+            stanje -= odrzavanjeRacuna;
+            AzurirajStatus();
+            Izvestaj(&quot;odrzavanje&quot;, odrzavanjeRacuna);
+        }
+        public void PripisKamate()
+        {
+            double kamata = (status == StatusRacuna.Povlascen) ? kamatnaStopa * stanje : 0;
+            stanje += kamata;
+            Izvestaj(&quot;pripis kamate&quot;, kamata);
+        }
+        #endregion
+
+        #region PRIVATNI METODI
+        private void PostaviStatus(StatusRacuna noviStatus)
+        {
+            status = noviStatus;
+            switch (status)
+            {
+                case StatusRacuna.Zaduzen:
+                    kamatnaStopa = 0.0;          // nebitna, ne dobija kametu
+                    donjaGranica = -1.0;         // nebitna, ne postoji nizi status
+                    gornjaGranica = 0.0;         // za prelazak u standardan
+                    odrzavanjeRacuna = 500.0;
+                    break;
+                case StatusRacuna.Standardan:
+                    kamatnaStopa = 0.0;          // nebitna, ne dobija kametu
+                    donjaGranica = 0.0;          // za prelazak u zaduzen
+                    gornjaGranica = 200000.0;    // za prelazak u povlascen
+                    odrzavanjeRacuna = 200.0;
+                    break;
+                case StatusRacuna.Povlascen:
+                    kamatnaStopa = 0.05;
+                    donjaGranica = 100000.0;     // za prelazak u standardan (za zaduzen je 0)
+                    gornjaGranica = 100000000.0; // nebitna, ne postoji visi status
+                    odrzavanjeRacuna = 250.0;
+                    break;
+            }
+        }
+        private void AzurirajStatus()
+        {
+            switch (status)
+            {
+                case StatusRacuna.Zaduzen:
+                    if (stanje &gt; gornjaGranica)
+                        PostaviStatus(StatusRacuna.Standardan);
+                    break;
+                case StatusRacuna.Standardan:
+                    if (stanje &lt; donjaGranica)
+                        PostaviStatus(StatusRacuna.Zaduzen);
+                    else if (stanje &gt; gornjaGranica)
+                        PostaviStatus(StatusRacuna.Povlascen);
+                    break;
+                case StatusRacuna.Povlascen:
+                    if (stanje &lt; 0.0)
+                        PostaviStatus(StatusRacuna.Zaduzen);
+                    else if (stanje &lt; donjaGranica)
+                        PostaviStatus(StatusRacuna.Standardan);
+                    break;
+            }
+        }
+        private void Izvestaj(string usluga, double iznos)
+        {
+            Console.WriteLine(
+                &quot;Racun {0,-20} {1,-14} {2}: novo stanje = {3:10}, status = {4,7}.&quot;,
+                vlasnik,
+                usluga,
+                string.Format(&quot;{0,10:#0.00}&quot;, iznos),
+                string.Format(&quot;{0,10:#0.00}&quot;, stanje),
+                status);
+        }
+        #endregion
+    }
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Racun perinRacun = new Racun(&quot;Petar Zivkovic&quot;);
+            Racun lazinRacun = new Racun(&quot;Marko Lazovic&quot;);
+
+            perinRacun.Uplata(135000.0);
+            perinRacun.ObracunOdrzavanja();
+            perinRacun.PripisKamate();
+
+            perinRacun.Uplata(80000.0);
+            perinRacun.ObracunOdrzavanja();
+            perinRacun.PripisKamate();
+
+            lazinRacun.Uplata(15500.0);
+
+            perinRacun.Isplata(80000.0);
+            perinRacun.ObracunOdrzavanja();
+            perinRacun.PripisKamate();
+            perinRacun.Isplata(70000.00);
+            perinRacun.Isplata(100000.00);
+            perinRacun.Isplata(10000.00);
+            perinRacun.ObracunOdrzavanja();
+        }
+    }
+}
+/*
+Racun Petar Zivkovic       uplata          135000.00: novo stanje =  135000.00, status = Standardan.
+Racun Petar Zivkovic       odrzavanje         200.00: novo stanje =  134800.00, status = Standardan.
+Racun Petar Zivkovic       pripis kamate        0.00: novo stanje =  134800.00, status = Standardan.
+Racun Petar Zivkovic       uplata           80000.00: novo stanje =  214800.00, status = Povlascen.
+Racun Petar Zivkovic       odrzavanje         250.00: novo stanje =  214550.00, status = Povlascen.
+Racun Petar Zivkovic       pripis kamate    10727.50: novo stanje =  225277.50, status = Povlascen.
+Racun Marko Lazovic        uplata           15500.00: novo stanje =   15500.00, status = Standardan.
+Racun Petar Zivkovic       isplata          80000.00: novo stanje =  145277.50, status = Povlascen.
+Racun Petar Zivkovic       odrzavanje         250.00: novo stanje =  145027.50, status = Povlascen.
+Racun Petar Zivkovic       pripis kamate     7251.38: novo stanje =  152278.88, status = Povlascen.
+Racun Petar Zivkovic       isplata          70000.00: novo stanje =   82278.88, status = Standardan.
+Racun Petar Zivkovic       isplata         100000.00: novo stanje =  -17721.13, status = Zaduzen.
+Nema novca za podizanje!
+Racun Petar Zivkovic       isplata          10000.00: novo stanje =  -17721.13, status = Zaduzen.
+Racun Petar Zivkovic       odrzavanje         500.00: novo stanje =  -18221.13, status = Zaduzen.
+*/
+"   >
+
+
+</textarea>
+</div>
+
+    </div>
+    <p>Твој задатак је да допуниш доле започети програм писањем апстрактне класе <code class="docutils literal notranslate"><span class="pre">RacunSaStatusom</span></code>
+и три из ње изведене класе (за сваки статус рачуна по једна класа), тако да након допуне програм
+има исту функционалност као и уводни програм.</p>
+
+<div data-childcomponent="bankovni_racun_zadatak" class="course-box course-box-problem course-content">
+
+<textarea data-component="activecode" id=bankovni_racun_zadatak data-lang="python" 
+      data-timelimit=25000  data-codelens="true"  
+    data-audio=''   
+             data-passivecode="true"  data-hidehistory=true
+    data-includesrc="using System;
+namespace Primer
+{
+    //
+    // ovde dodati sve potrebne klase 
+    //
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Racun perinRacun = new Racun(&quot;Petar Zivkovic&quot;);
+            Racun lazinRacun = new Racun(&quot;Marko Lazovic&quot;);
+
+            perinRacun.Uplata(135000.0);
+            perinRacun.ObracunOdrzavanja();
+            perinRacun.PripisKamate();
+
+            perinRacun.Uplata(80000.0);
+            perinRacun.ObracunOdrzavanja();
+            perinRacun.PripisKamate();
+
+            lazinRacun.Uplata(15500.0);
+
+            perinRacun.Isplata(80000.0);
+            perinRacun.ObracunOdrzavanja();
+            perinRacun.PripisKamate();
+            perinRacun.Isplata(70000.00);
+            perinRacun.Isplata(100000.00);
+            perinRacun.Isplata(10000.00);
+            perinRacun.ObracunOdrzavanja();
+        }
+    }
+}
+"   >
+
+
+</textarea>
+</div>
+
+    </div></div>
+<details class="summary-">
+<summary>Упутство</summary><p>Ако до сада ниси, пажљиво проучи пример „Продајни аутомат” из ове лекције. Решење овог задатка
+може да се напише по угледу на друго решење поменутог примера.</p>
+</details>
+    <div class="note-wrapper questionnote-type">
+        <div class="note-icon-holder"> </div>
+        <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
+        <div class="course-content">
+<p><strong>4. Телефонски претплатници</strong></p>
 <p>Написати класу <code class="docutils literal notranslate"><span class="pre">TelefonskiPretplatnik</span></code>, која садржи податке о особи, број телефона, евиденцију
-о обављеним разговорима и објекат класе <code class="docutils literal notranslate"><span class="pre">TarifniPaket</span></code>, који на основу евиденције позива
-израчунава износ рачуна. Класа <code class="docutils literal notranslate"><span class="pre">TarifniPaket</span></code> има више изведених класа (на пример <code class="docutils literal notranslate"><span class="pre">Pripejd</span></code> и
-<code class="docutils literal notranslate"><span class="pre">Postpejd</span></code>). Могуће је различито тарифирати разговоре у истој и различитој мрежи, домаћи и инострани саобраћај и слично.</p>
+о послатим SMS порукама, обављеним разговорима и протоку података на интернету. Поред свих ових
+података, класа <code class="docutils literal notranslate"><span class="pre">TelefonskiPretplatnik</span></code> садржи и референцу на класу <code class="docutils literal notranslate"><span class="pre">TarifniPaket</span></code>, која на
+основу евиденције укупног комуницирања израчунава износ рачуна. Класа <code class="docutils literal notranslate"><span class="pre">TarifniPaket</span></code> треба да
+има више изведених класа, од којих свака може на различит начин да тарифира разговоре и поруке у
+истој и различитој мрежи, домаћи и инострани саобраћај, потрошене гигабајте на интернету и слично.</p>
+<p>Напомена: спецификација у овом задатку није сасвим прецизна и детаљна, што оставља слободу да
+се она допуни на различите начине. Самим тим, могућа су решења која се за исте улазне податке
+различито понашају.</p>
 
     </div></div>
 </section>
