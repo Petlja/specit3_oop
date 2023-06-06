@@ -54,7 +54,7 @@
         Ово је само интерфејс класе ``Robot``. Недостају имплементације метода, 
         као и приватни део класе.
         
-        .. activecode:: робот_class_interface
+        .. activecode:: robot_class_interface
             :passivecode: true
             :includesrc: src/zadaci/robot_interfejs.cs
 
