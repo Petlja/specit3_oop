@@ -79,7 +79,7 @@ namespace AsocijacijeCon
                         ulaz = Console.ReadLine().Split();
                         if (ulaz.Length == 1)
                         {
-                            // pokusaj konacnog resenja
+                            // pokušaj konacnog rešenja
                             int poeni = igra.Pokusaj(ulaz[0]);
                             if (poeni > 0)
                             {
@@ -94,7 +94,7 @@ namespace AsocijacijeCon
                         }
                         else
                         {
-                            // pokusaj resenja kolone
+                            // pokušaj rešenja kolone
                             int kol = ulaz[0].ToUpper()[0] - 'A';
                             int poeni = igra.Pokusaj(kol, ulaz[1]);
                             if (poeni > 0)

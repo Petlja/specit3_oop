@@ -7,10 +7,10 @@ namespace Hanoj
 {
     public partial class Form1 : Form
     {
-        // lista od tri stapa koja opisuje trenutno stanje 
+        // lista od tri štapa koja opisuje trenutno stanje 
         List<Stack<int>> stap; 
 
-        // nabrajac kolekcije koraka koja predstavlja resenje
+        // nabrajač kolekcije koraka koja predstavlja rešenje
         IEnumerator<Tuple<int, int>> koraciResenja;
 
         public Form1()
@@ -26,24 +26,24 @@ namespace Hanoj
 
         void Reset()
         {
-            // postavljamo stapove u pocetno stanje
+            // postavljamo štapove u početno stanje
 
             Stack<int> A = new Stack<int>();
             Stack<int> B = new Stack<int>();
             Stack<int> C = new Stack<int>();
-            // na prvi stap stavljamo sve diskove od najveceg do najmanjeg
+            // na prvi štap stavljamo sve diskove od najvećeg do najmanjeg
             int n = (int)numericUpDown1.Value;
             for (int i = n; i > 0; i--)
                 A.Push(i);
 
-            // formiramo listu stapova
+            // formiramo listu štapova
             stap = new List<Stack<int>>() { A, B, C };
             Invalidate();
         }
 
         private void btnResi_Click(object sender, EventArgs e)
         {
-            // inicijalizujemo resavanje, tako sto kreiramo nabrajac i ukljucimo tajmer
+            // inicijalizujemo rešavanje, tako što kreiramo nabrajač i uključimo tajmer
             numericUpDown1.Enabled = false;
             btnResi.Enabled = false;
             Reset();
@@ -54,10 +54,10 @@ namespace Hanoj
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            // ako nisu izvrseni svi koraci
+            // ako nisu izvršeni svi koraci
             if (koraciResenja.MoveNext())
             {
-                // izvrsavamo jedan korak resenja
+                // izvršavamo jedan korak rešenja
                 var t = koraciResenja.Current;
                 int disk = stap[t.Item1].Pop();
                 stap[t.Item2].Push(disk);
@@ -65,7 +65,7 @@ namespace Hanoj
             }
             else
             {
-                // kraj postupka, azuriramo korisnicki interfejs
+                // kraj postupka, ažuriramo korisnički interfejs
                 numericUpDown1.Enabled = true;
                 btnResi.Enabled = true;
                 timer1.Enabled = false;
@@ -86,10 +86,10 @@ namespace Hanoj
             int r0 = w / (n * 7), hDiska = h / (n * 2);
 
             int x0 = w / 6;
-            for (int i = 0; i < 3; i++) // za svaki stap
+            for (int i = 0; i < 3; i++) // za svaki štap
             {
                 int y0 = h - hDiska * stap[i].Count;
-                foreach (int d in stap[i]) // za svaki disk na stapu
+                foreach (int d in stap[i]) // za svaki disk na štapu
                 {
                     g.FillRectangle(b, x0 - r0 * d, y0, 2 * r0 * d, hDiska);
                     g.DrawRectangle(p, x0 - r0 * d, y0, 2 * r0 * d, hDiska);
@@ -99,7 +99,7 @@ namespace Hanoj
             }
         }
 
-        // Rekurzivno resenje problema, koje vraca kolekciju poteza (potez je par brojeva)
+        // Rekurzivno rešenje problema, koje vraća kolekciju poteza (potez je par brojeva)
         static IEnumerable<Tuple<int, int>> HanojskeKule(
             int n, int poc, int pom, int kraj)
         {

@@ -3,8 +3,8 @@ namespace primer
 {
     public class Vozilo
     {
-        protected float potrosnja;           // u litrima na 100 Km
-        protected float kilometraza;         // u Km
+        protected float potrosnja;           // u litrima na 100 km
+        protected float kilometraza;         // u km
         protected float uRezervoaru;         // u litrima
         protected float kapacitetRezervoara; // u litrima
         public Vozilo(float potr, float v)

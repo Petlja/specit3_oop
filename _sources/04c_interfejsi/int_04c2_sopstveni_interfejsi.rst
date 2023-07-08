@@ -13,8 +13,8 @@
 
 Погледајмо ово на следећем примеру.
 
-Пример - настави низ
-^^^^^^^^^^^^^^^^^^^^
+Пример -- "настави низ"
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. questionnote::
 
@@ -178,7 +178,7 @@
       1    100      4     98      7     96     10     94     13     92
       2      5     10     13     26     29     58     61    122    125
      
-Овим се уверавамо да да свака класа враћа баш оне елементе које очекујемо. Ово би било теже 
+Овим се уверавамо да свака класа враћа баш оне елементе које очекујемо. Ово би било теже 
 проверити главним програмом, јер се у њему користи генератор случајних бројева, па не бисмо знали 
 када је која класа инстанцирана. Чак и када бисмо препознавали тип низа током тестирања, било би 
 потребно да сачекамо да се свака класа инстанцира бар по једном, чиме тестирање постаје спорије и 
@@ -193,8 +193,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Dobijaces redom clanove nekog pravilnog niza,");
-            Console.WriteLine("pokusaj da pogodis sledeci element");
+            Console.WriteLine("Dobijaces redom clanove nekog pravilnog niza");
+            Console.WriteLine("Pokusaj da pogodis sledeci element");
             Console.WriteLine("\tPritisni 'Enter' za novi element istog niza");
             Console.WriteLine("\tPritisni '-' i 'Enter' za novi niz");
             Console.WriteLine("\tPritisni '--' i 'Enter' za izlazak iz programa");

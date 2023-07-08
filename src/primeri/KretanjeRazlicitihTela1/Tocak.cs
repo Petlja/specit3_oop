@@ -6,7 +6,7 @@ namespace Kretanje
     public class Tocak
     {
         private static Random rnd = new Random();
-        private float x, y, vx, vy; // Trenutni polozaj i brzina
+        private float x, y, vx, vy; // Trenutni položaj i brzina
         private Color boja;
         private float r;
         private float rMalo;

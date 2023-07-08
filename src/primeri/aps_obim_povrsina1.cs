@@ -35,7 +35,7 @@ internal class Program
         krugovi.Add(new Krug(Color.Green, 7));      // zeleni krug poluprecnika 7
         List<Ntougao> mnogouglovi = new List<Ntougao>();
         mnogouglovi.Add(new Ntougao(Color.Red, 6, 4));  // crveni kvadrat stranice 6
-        mnogouglovi.Add(new Ntougao(Color.Blue, 2, 6)); // plavi sestougao stranice 2
+        mnogouglovi.Add(new Ntougao(Color.Blue, 2, 6)); // plavi šestougao stranice 2
 
         Dictionary<Color, double> povBoje = new Dictionary<Color, double>();
         foreach (Krug k in krugovi)

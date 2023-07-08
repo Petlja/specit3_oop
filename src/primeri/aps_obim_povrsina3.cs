@@ -38,7 +38,7 @@ internal class Program
         figure.Add(new Krug(Color.Red, 5));        // crveni krug poluprecnika 5
         figure.Add(new Krug(Color.Green, 7));      // zeleni krug poluprecnika 7
         figure.Add(new Ntougao(Color.Red, 6, 4));  // crveni kvadrat stranice 6
-        figure.Add(new Ntougao(Color.Blue, 2, 6)); // plavi sestougao stranice 2
+        figure.Add(new Ntougao(Color.Blue, 2, 6)); // plavi šestougao stranice 2
 
         Dictionary<Color, double> povBoje = new Dictionary<Color, double>();
         foreach (Figura2D f in figure)
