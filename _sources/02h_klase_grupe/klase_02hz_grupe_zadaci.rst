@@ -32,7 +32,7 @@
         :passivecode: true
         :includesrc: src/zadaci/51_layered_image_testcode.cs
     
-    Подразумева се да се овај кôд извршава у овиру *Windows Forms* апликације.
+    Подразумева се да се овај кôд извршава у оквиру *Windows Forms* апликације.
     Извршавањем датог кода треба да се добију редом ове слике:
 
     .. figure:: ../../_images/layered_image.png
