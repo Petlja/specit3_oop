@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -487,22 +487,22 @@
 <p>За уочавање заокружених целина у великом програму може да буде потребан „поглед из висине”,
 односно сагледавање шире слике и размишљање на високом нивоу апстракције. Оно што уме да буде
 тешко при решавању конкретног, сложеног проблема је да умемо „да се измакнемо” и за тренутак
-престанемо да размишљамо само о том проблему. За разлагање проблема и организацију кода је
-веома корисно да препознамо делове који се баве решавањем неких мањих, али општих проблема.
+престанемо да размишљамо само о том проблему. За разлагање проблема и организацију кода веома
+је корисно да препознамо делове који се баве решавањем неких мањих, али општих проблема.
 Такви делови служе као основа, а на њих се надовезује конкретна употреба тих делова као
 надградња. Делови који чине основу су добар кандидат за независне библиотеке, јер лако могу да
 буду потребни и у другим пројектима. Од библиотека које смо видели, овом опису највише одговара
 класа/библиотека <code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code>, која приказује координатни систем и прерачунава координате,
 мада за такву, базичну функционалност има и много бољих примера.</p>
 <p><strong>Пример – обрада слике</strong></p>
-<p>Нека је у оквиру неког већег задтака потребно да
+<p>Нека је у оквиру неког већег задатка потребно да
 обрадимо слику на одређени начин. У ту сврху ћемо вероватно да користимо неке стандардне алгоритме
 за обраду слике, као што је промена величине слике, конверзија у сиву скалу или бинаризација
 слике, примена одређених филтара и слично. Вероватно ћемо желети и да експериментишемо са
 различитим параметрима алгоритама, различитим редоследом примене филтара итд. У сваком случају,
 логично је да опште алгоритме за обраду слике издвојимо у посебну библиотеку коју бисмо могли да
 назовемо <code class="docutils literal notranslate"><span class="pre">ObradaSlike</span></code>, јер би та библиотека веома лако могла да буде потребна и у другим
-пројектима. Са друге стране, класе које на специфичан начин користе ове алгоритме су везане за
+пројектима. Са друге стране, класе које на специфичан начин користе ове алгоритме везане су за
 проблем који решавамо. Због тога оне нису нарочито важне за друге пројекте и не треба да
 оптерећују претходну библиотеку. Те класе и даље могу да се издвоје у нову, посебну библиотеку,
 која би могла да се зове нпр. <code class="docutils literal notranslate"><span class="pre">PronalazenjeObjekata</span></code>. Тада би библиотека <code class="docutils literal notranslate"><span class="pre">PronalazenjeObjekata</span></code>
@@ -536,7 +536,7 @@
 неке библиотеке опште намене које могу и да се купе или преузму као готове. У том случају кажемо
 да је библиотеке направила тзв. трећа страна (<cite>third party</cite>), тј. независан произвођач софтвера.
 Вишим слојевима одговарају модули који зависе од модула из претходних слојева.</p>
-<p>Број слојева у графу зависности модула не мора да буде велики, могуће је да их буде свега два или
+<p>Број слојева у графу зависности модула не мора да буде велики – могуће је да их буде свега два или
 три чак и у веома великим пројектима. Умеће организовања кода у модуле се између осталог огледа и
 у једноставности добијеног графа зависности, нарочито када он има много чворова.</p>
 
@@ -550,7 +550,7 @@
 раде све што нам је потребно.</p>
 
     </div></div>
-<p>Неке од предности лабаво спрегнутих модула у пројекту смо већ истакли - такве модуле је знатно
+<p>Неке од предности лабаво спрегнутих модула у пројекту смо већ истакли – такве модуле је знатно
 лакше одвојено тестирати, а и поново искористити у другим пројектима, или другим деловима великог
 пројекта. Поменућемо још једну корист коју имамо од лабаве спрегнутости, а која није тако
 очигледна. Током развоја програма честе су мале измене, после којих желимо да испробамо како

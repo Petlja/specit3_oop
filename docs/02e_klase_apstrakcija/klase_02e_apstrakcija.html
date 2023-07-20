@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -493,7 +493,7 @@
 ће омашком и да обрише све меморисане канале или да пребаци улаз са антене на <em>HDMI</em> прикључак,
 на који није прикључен никакав уређај и са ког не стиже никакав сигнал. За овог корисника је
 најудобније да уопште нема могућност да бира улаз са ког  долази сигнал, нити могућност да ручно
-бира те-ве канале. Могућност детаљније контроле телевизора га само збуњује и отежава му употребу
+бира ТВ канале. Могућност детаљније контроле телевизора га само збуњује и отежава му употребу
 даљинског управљача.</p>
 <p>Сваки објекат може да буде сложенији него што нас у одређеном контексту интересује. Претпоставимо
 да водимо евиденцију ученика једне школе. У том контексту нас за сваког ученика интересује име и
@@ -588,7 +588,7 @@ class Program
 
     </div></div>
 <section id="id2">
-<h2>Пример - динамички сабирач<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>Пример – динамички сабирач<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>Замислимо да смо од другог програмера (зваћемо га Жељко) тражили да за нас напише класу по
 следећем опису:</p>
 
@@ -596,15 +596,18 @@ class Program
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-<p>Написати класу чији објекти могу да се користе као целобројни низови. Прецизније, класа
-треба да подржи следеће поступке:</p>
 <ul class="simple">
+<li><p>Написати класу чији објекти могу да се користе као целобројни низови. Прецизније, класа
+треба да подржи следеће поступке:</p>
+<ul>
 <li><p>формирање објекта који представља низ задате дужине</p></li>
 <li><p>постављање вредности задатом елементу низа</p></li>
 <li><p>очитавање вредности  задатог елемента низа</p></li>
 </ul>
-<p>Додатно, ова класа треба да омогући свом кориснику да тражи и добије збир елемената задатог
-сегмента низа.</p>
+</li>
+<li><p>Додатно, ова класа треба да омогући свом кориснику да тражи и добије збир елемената задатог
+сегмента низа.</p></li>
+</ul>
 
     </div></div>
 <p>У једном од претходних примера смо решавали нешто једноставнији задатак. У том примеру је објекат
@@ -665,7 +668,7 @@ class Program
 својство је што приступници индексера користе параметар. У овом примеру је то целобројни
 параметар <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
 <p>Друга разлика између својства и индексера је да се својство на месту употребе понаша као
-поље објекта, док се индекс примењује на сам објекат. Тачније, индексер нам омогућава да
+поље објекта, док се индекс примењује на сâм објекат. Тачније, индексер нам омогућава да
 користимо објекат са индексом, као да уместо објекта имамо низ. На пример, захваљујући
 индексеру можемо да пишемо:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">DinamickiSabirac</span><span class="w"> </span><span class="n">ds</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DinamickiSabirac</span><span class="p">(</span><span class="m">100</span><span class="p">);</span><span class="w"></span>
@@ -674,7 +677,7 @@ class Program
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="m">3</span><span class="p">]);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Наредбом <code class="docutils literal notranslate"><span class="pre">ds[3]</span> <span class="pre">=</span> <span class="pre">7;</span></code> се извршава приступник <code class="docutils literal notranslate"><span class="pre">set</span></code> индексера, док писање <code class="docutils literal notranslate"><span class="pre">ds[3]</span></code> у
+<p>Наредбом <code class="docutils literal notranslate"><span class="pre">ds[3]</span> <span class="pre">=</span> <span class="pre">7;</span></code> извршава се приступник <code class="docutils literal notranslate"><span class="pre">set</span></code> индексера, док писање <code class="docutils literal notranslate"><span class="pre">ds[3]</span></code> у
 следећој наредби значи позив приступника <code class="docutils literal notranslate"><span class="pre">get</span></code>.</p>
 <p>На основу датог примера делује да индексер и не доноси ништа нарочито, јер смо могли и да
 поље <code class="docutils literal notranslate"><span class="pre">а</span></code> прогласимо за јавно и да уместо <code class="docutils literal notranslate"><span class="pre">ds[3]</span></code> пишемо <code class="docutils literal notranslate"><span class="pre">ds.a[3]</span></code>. Из следеће верзије
@@ -772,7 +775,7 @@ class Program
 смислио да би класу учинио ефикаснијом, све док интерфејс класе остаје исти. Не морамо чак ни
 да знамо када је Жељко поставио ново решење, јер измена у имплементацији класе ни на који начин
 не омета наш рад. Мали пример употребе којим смо испробали класу морао би да ради једнако добро
-и даје исти резултат као и пре измене (ако не ради, то значи да Жељко није добро одрадио свој
+и да даје исти резултат као и пре измене (ако не ради, то значи да Жељко није добро одрадио свој
 део посла). Наравно, исто важи и за сваки други кôд који користи ту класу.</p>
 
     </div></div>

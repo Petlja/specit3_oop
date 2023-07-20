@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -487,8 +487,8 @@
 у самом језику <cite>C#</cite>.</p>
 <p>Ако се запитамо које су то карактеристичне активности, које обављамо над свим колекцијама, вероватно
 ћемо се сетити итерирања кроз колекцију, претраживања (провере да ли колекција садржи одређени
-елемент), филтрирања (издвајања елемената са одређеном особином) и слично. Испосатавља се да је за
-обвављање свих ових активности довољно да класа објекта који желимо да користимо као колекцију
+елемент), филтрирања (издвајања елемената са одређеном особином) и слично. Испоставља се да је за
+обављање свих ових активности довољно да класа објекта који желимо да користимо као колекцију
 имплементира интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>. Другим речима, практично све оно што подразумевамо под
 апстрактним појмом колекције, садржано је управо у интерфејсу <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>, тј. имплементирање
 овог интерфејса је оно што колекције чини колекцијама.</p>
@@ -498,7 +498,7 @@
         <img src="../_static/img/suggestionnote-img.svg" class="note-image suggestionnote-image" /> 
         <div class="course-content">
             
-<p>У наставку ћемо видети неколико начина употребе разних врста колекција. Могуће је да су вам неки
+<p>У наставку ћемо видети неколико начина употребе разних врста колекција. Могуће је да су вам неки,
 или чак сви ти начини употребе познати од раније. Оно што је вероватно ново је чињеница да све
 ове и сличне поступке можемо да <strong>користимо над било којим објектом, који задовољава интерфејс
 IEnumerable</strong>. Ово укључује и објекте које ми креирамо, било као и инстанце наших класа које
@@ -513,7 +513,7 @@ IEnumerable</strong>. Ово укључује и објекте које ми к
 се сматра удобнијом и безбеднијом од наредбе <code class="docutils literal notranslate"><span class="pre">for</span></code>, јер индексирање није потребно, па се спречава
 могућност приступања непостојећем елементу колекције (када је индекс ван граница). Поменули смо да
 наредба <code class="docutils literal notranslate"><span class="pre">foreach</span></code> прихвата било који објекат, чија класа имплементира интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>.
-Тако, на пример, пошто речници имплементирају интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>, можемо да пишемо</p>
+Тако, на пример, пошто речници имплементирају интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>, можемо да пишемо:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">&gt;();</span><span class="w"></span>
 <span class="n">d</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">4</span><span class="p">;</span><span class="w"></span>
 <span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"></span>
@@ -584,7 +584,7 @@ class Program
     static void RazneOperacije(IEnumerable&lt;int&gt; e)
     {
         Console.Write(&quot;Elementi kolekcije redom:    &quot;); Ispis(e);
-        Console.Write(&quot;Elementi od kraja ka pocetku:&quot;); Ispis(e.Reverse());
+        Console.Write(&quot;Elementi od kraja ka početku:&quot;); Ispis(e.Reverse());
         Console.Write(&quot;Samo neparni elementi:       &quot;); Ispis(e.Where(x =&gt; x % 2 != 0));
         Console.WriteLine(&quot;S={0}, N={1}, avg={2}, prvi={3}, poslednji={4}, min={5}, max={6}&quot;,
             e.Sum(), e.Count(), e.Average(), e.First(), e.Last(), e.Min(), e.Max());
@@ -592,7 +592,7 @@ class Program
     }
     public static void Main(String[] args)
     {
-        // uniformna upotreba razlicitih kolekcija pomocu interfejsa IEnumerable
+        // uniformna upotreba različitih kolekcija pomoću interfejsa IEnumerable
         var kolekcije = new List&lt;IEnumerable&lt;int&gt;&gt; { F1(), F2(), F3(), F4(), F5() };
         foreach (IEnumerable&lt;int&gt; e in kolekcije)
             RazneOperacije(e);
@@ -647,12 +647,12 @@ class Program
 вредност <code class="docutils literal notranslate"><span class="pre">true</span></code> као обавештење да још нисмо стигли до краја колекције. Након тога, елемент на
 који смо се позиционирали можемо да користимо помоћу својства <code class="docutils literal notranslate"><span class="pre">Current</span></code> нашег набрајача. Када
 стигнемо до краја колекције, следећи позив метода <code class="docutils literal notranslate"><span class="pre">MoveNext()</span></code> враћа логичку вредност <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-На пример, ако је <code class="docutils literal notranslate"><span class="pre">a</span></code> колекција целих бројева, онда уместо</p>
+На пример, ако је <code class="docutils literal notranslate"><span class="pre">a</span></code> колекција целих бројева, онда уместо:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"></span>
 <span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>можемо равноправно да пишемо</p>
+<p>…можемо равноправно да пишемо:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">IEnumerator</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">GetEnumerator</span><span class="p">();</span><span class="w"></span>
 <span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="n">MoveNext</span><span class="p">())</span><span class="w"></span>
 <span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="n">Current</span><span class="p">);</span><span class="w"></span>
@@ -668,7 +668,7 @@ class Program
 елемент колекције, кроз колекцију и даље можемо да се крећемо само напред, тј. не можемо да се враћамо
 на претходне елементе дате колекције помоћу датог набрајача.</p>
 <p>Погледајмо и пример у коме помоћу набрајача постижемо сложеније итерирање, какво не бисмо могли да
-изведемо наредбом <code class="docutils literal notranslate"><span class="pre">foreach</span></code>. Следећи програм у обичној <code class="docutils literal notranslate"><span class="pre">for</span></code> петљи нуди корисника да изабере да ли
+изведемо наредбом <code class="docutils literal notranslate"><span class="pre">foreach</span></code>. Следећи програм у обичној <code class="docutils literal notranslate"><span class="pre">for</span></code> петљи кориснику нуди да изабере да ли
 жели да добије следећи елемент са почетка или са краја колекције. Петља се извршава онолико пута колико
 има елемената у колекцији, тако да ниједан елемент не може да буде дохваћен и са једне и са друге стране.</p>
 
@@ -745,7 +745,7 @@ Sa pocetka ili sa kraja (p/k)? k
 израчуна цела колекција. Ако колекција има нпр. хиљаду елемената, корисник би на комплетну колекцију
 чекао 100 секунди, док од метода који генерише ту колекцију може да добије нпр. првих десет елемената
 практично одмах (тј. за једну секунду), а да остали елементи пристижу у малим количинама на захтев,
-брзином којом их корисних употребљава (конзумира), тако да корисник током рада нема осећај да је
+брзином којом их корисник употребљава (конзумира), тако да корисник током рада нема осећај да је
 чекао на податке.</p>
 <p>Напоменимо да нас, уз ове погодности, употреба метода који генеришу колекције ни у чему не ограничава,
 тј. ни по чему не заостаје за методима који враћају целе колекције. Када нам је из било ког разлога
@@ -759,7 +759,7 @@ Sa pocetka ili sa kraja (p/k)? k
 <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">f</span><span class="p">().</span><span class="n">ToList</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<p>У наставку ћемо да објаснимо како се пишу методи који генеришу колекције, а успут ћемо видети неке
+<p>У наставку ћемо објаснити како се пишу методи који генеришу колекције, а успут ћемо видети неке
 примене таквих метода.</p>
 <section id="yield-return">
 <h3>Наредба yield return<a class="headerlink" href="#yield-return" title="Permalink to this heading">¶</a></h3>
@@ -810,7 +810,7 @@ class Program
 именског простора <code class="docutils literal notranslate"><span class="pre">System.Linq</span></code>, као што су <code class="docutils literal notranslate"><span class="pre">f().Sum()</span></code>, <code class="docutils literal notranslate"><span class="pre">f().Average()</span></code>, <code class="docutils literal notranslate"><span class="pre">f().Min()</span></code> и многи
 други. Такође, метод <code class="docutils literal notranslate"><span class="pre">f()</span></code> може да се користи у наредби <code class="docutils literal notranslate"><span class="pre">foreach</span></code> за итерирање кроз генерисану
 колекцију.</p>
-<p>Чак и без потпуног разумевања програма, односно метода <code class="docutils literal notranslate"><span class="pre">f</span></code>, може да се прeтпостави да резултат
+<p>Чак и без потпуног разумевања програма, односно метода <code class="docutils literal notranslate"><span class="pre">f</span></code>, може да се претпостави да резултат
 рада изгледа овако:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">suma</span><span class="p">:</span> <span class="mi">14</span>
 <span class="n">prosek</span><span class="p">:</span> <span class="mf">4.666666666666667</span>
@@ -919,7 +919,7 @@ class Program
 <p>Написати и програм који илуструје рад метода тако што исписује све факторијеле мање од 10000.</p>
 
     </div></div>
-<p>Решење је сасвим једноставно, метод у петљи израчунава и враћа бројеве један по један.</p>
+<p>Решење је сасвим једноставно – метод у петљи израчунава и враћа бројеве један по један.</p>
 
 <div data-childcomponent="ienum01c_generator_factorial" class="course-box course-box-problem course-content">
 

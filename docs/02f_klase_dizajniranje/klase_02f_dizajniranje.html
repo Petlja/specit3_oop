@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -501,7 +501,7 @@
 <p>У класи <code class="docutils literal notranslate"><span class="pre">Program</span></code> конзолне апликације користићемо (као и обично) само статичке методе,
 јер се ова класа не инстанцира.</p>
 <section id="id2">
-<h2>Задатак - игра асоцијације<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>Задатак – игра асоцијације<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 
     <div class="note-wrapper questionnote-type">
         <div class="note-icon-holder"> </div>
@@ -509,7 +509,7 @@
         <div class="course-content">
 <p>Написати класу <code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code>, која представља основу за познату игру асоцијације.</p>
 <p>Приликом писања класе предвидети њену употребу из конзолних апликација и апликација са
-графикчким корисничким интерфејсом, које употребом те класе треба да омогуће играње игре
+графичким корисничким интерфејсом, које употребом те класе треба да омогуће играње игре
 за једног или два играча.</p>
 <p>Тестирати класу помоћу једноставне конзолне апликације, која само проверава функционалност
 класе без могућности играња игре.</p>
@@ -590,13 +590,13 @@
 </pre></div>
 </div>
 <p>У случају да фајл на датој путањи не постоји, или не може да се отвори, или његов садржај није
-одговарајући, можемо да бацимо изузетак (било из конструктора, било из статичког метода). Статички
+одговарајући, можемо да „бацимо” изузетак (било из конструктора, било из статичког метода). Статички
 метод има и другу могућност, а то је да врати <code class="docutils literal notranslate"><span class="pre">null</span></code> уместо објекта. На страни корисника би
 свакако требало пазити на могућност да учитавање није успело и користити или <code class="docutils literal notranslate"><span class="pre">try-catch</span></code> наредбу
-(у случају да класа баца изузетак), или проверу да ли је статички метод вратио <code class="docutils literal notranslate"><span class="pre">null</span></code>. Овде је
+(у случају да класа „баца” изузетак), или проверу да ли је статички метод вратио <code class="docutils literal notranslate"><span class="pre">null</span></code>. Овде је
 нешто боље да се определимо за статички метод који враћа <code class="docutils literal notranslate"><span class="pre">null</span></code> у случају неуспеха. Разлог за
 ову одлуку је то што намеравамо да класу <code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code> издвојимо у посебну целину која се зове
-библиотека (види следећу лекцију), а не желимо да изузеци бачени из библиотеке буду хватани и
+библиотека (види следећу лекцију), а не желимо да изузеци „бачени” из библиотеке буду „хватани” и
 обрађивани ван ње.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -604,14 +604,14 @@
 <p><strong>Приказивање појмова или назива поља</strong></p>
 <p>Корисницима ове класе треба да омогућимо да правилно прикажу поља са појмовима, односно поља за
 решења колона и коначно решење. Прецизније, корисници класе треба да знају да ли треба да испишу
-назив поља (нпр. <strong>„C2”</strong>, <strong>„Kolona C”</strong>, <strong>„Konacno”</strong>), или сам појам, односно решење. Примера
+назив поља (нпр. <strong>„C2”</strong>, <strong>„Kolona C”</strong>, <strong>„Konacno”</strong>), или сâм појам, односно решење. Примера
 ради, када играч реши колону или целу асоцијацију пре него што се отворе сва поља, потребно је да
 се ажурира приказ и отворе поља (прикажу појмови) свих решених колона.</p>
 <p>Један начин да кориснику обезбедимо потребне информације су јавни методи помоћу којих он може да
 пита да ли је одређено поље отворено, да ли је колона решена, односно да ли је решена цела
 игра. У том случају, корисник би приликом приказивања табеле морао да проверава стање сваког
 поља. То је опет посао који би морао да обави сваки корисник класе, било да је то конзолна или
-графичка апликација, што (као што смо већ истакли) није најбоље решење.</p>
+графичка апликација, а то (као што смо већ истакли) није најбоље решење.</p>
 <p>Да се ове провере не би вршиле у коду сваког корисника, боље решење је да у класи обезбедимо
 методе који враћају одговарајући стринг са именом поља или појмом, односно решењем, у зависности
 од стања поља. Још мало удобније је да за поља са појмовима користимо индексер са два индекса, за
@@ -623,7 +623,7 @@
 </div>
 <p><strong>Остала потребна функционалност класе</strong></p>
 <p>Да би корисник класе <code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code> (нпр. метод <code class="docutils literal notranslate"><span class="pre">Main</span></code> у случају конзолне апликације) могао да
-имплементира игру, потребно је да класа може да му одговори на следећа питања.</p>
+имплементира игру, потребно је да класа може да му одговори на следећа питања:</p>
 <ul class="simple">
 <li><p>Да ли су сва поља са појмовима отворена? Ово је потребно да би корисник класе знао
 да ли да понуди играча да отвори поље, тј. да ли да му то омогући.</p></li>
@@ -640,11 +640,11 @@
 поена за покушај налажења коначног решења.</p></li>
 </ul>
 <p>Да бисмо омогућили одговоре на набројана питања, размотримо које све информације класа
-<code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code> треба да памти. Информације које су очигледно потребне су</p>
+<code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code> треба да памти. Информације које су очигледно потребне су:</p>
 <ul class="simple">
 <li><p>димензије табеле појмова (то ће бити целобројна поља <code class="docutils literal notranslate"><span class="pre">brKolona</span></code> и <code class="docutils literal notranslate"><span class="pre">brPojmova</span></code>),</p></li>
-<li><p>сама табела појмова (поље <code class="docutils literal notranslate"><span class="pre">pojam</span></code>, које је матрица стрингова),</p></li>
-<li><p>решења колона (поље <code class="docutils literal notranslate"><span class="pre">resenjeKolone</span></code>, које је низ стрингова)</p></li>
+<li><p>сâма табела појмова (поље <code class="docutils literal notranslate"><span class="pre">pojam</span></code>, које је матрица стрингова),</p></li>
+<li><p>решења колона (поље <code class="docutils literal notranslate"><span class="pre">resenjeKolone</span></code>, које је низ стрингова), и</p></li>
 <li><p>коначно решење (поље <code class="docutils literal notranslate"><span class="pre">konacnoResenje</span></code> типа стринг).</p></li>
 </ul>
 <p>Поред ових поља, можемо да се определимо да додатно памтимо и одржавамо следеће податке:</p>
@@ -665,12 +665,12 @@
 <li><p>Метод <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">int</span> <span class="pre">Pokusaj(int</span> <span class="pre">kol,</span> <span class="pre">string</span> <span class="pre">odgovor)</span></code> обрађује покушај решавања колоне.</p></li>
 <li><p>Метод <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">int</span> <span class="pre">Pokusaj(string</span> <span class="pre">odgovor)</span></code> обрађује покушај налажења коначног решења.</p></li>
 </ul>
-<p>Овај интерфејс је  довољан да се игра реализује. Ипак, у нашем решењу се појављаују још
+<p>Овај интерфејс је  довољан да се игра реализује. Ипак, у нашем решењу се појављују још
 два јавна метода и једно својство који нису неопходни у овом програму, али могу да пруже
 додатну удобност другим корисницима класе. То су:</p>
 <ul class="simple">
 <li><p>метод <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">bool</span> <span class="pre">Otvoreno(int</span> <span class="pre">kol,</span> <span class="pre">int</span> <span class="pre">p)</span></code>, који говори да ли је дато поље отворено,</p></li>
-<li><p>метод <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">bool</span> <span class="pre">ResenaKol(int</span> <span class="pre">kol)</span></code>, који говори да ли је дата колона решена,</p></li>
+<li><p>метод <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">bool</span> <span class="pre">ResenaKol(int</span> <span class="pre">kol)</span></code>, који говори да ли је дата колона решена, и</p></li>
 <li><p>својство <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">bool</span> <span class="pre">Reseno</span></code>, које говори да ли је решена цела игра.</p></li>
 </ul>
 <p>Методи <code class="docutils literal notranslate"><span class="pre">Otvoreno</span></code>, <code class="docutils literal notranslate"><span class="pre">ResenaKol</span></code> и својство <code class="docutils literal notranslate"><span class="pre">Reseno</span></code> су прилично јасни, па не збуњују и
@@ -928,7 +928,7 @@
 
 </textarea>
 </div>
-<p>Извршавањем датог кода треба да се добије следећи излаз.</p>
+<p>Извршавањем датог кода треба да се добије следећи излаз:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>             <span class="n">A1</span>          <span class="n">vozac</span>             <span class="n">C1</span>             <span class="n">D1</span>
              <span class="n">A2</span>             <span class="n">B2</span>             <span class="n">C2</span>             <span class="n">D2</span>
              <span class="n">A3</span>             <span class="n">B3</span>             <span class="n">C3</span>             <span class="n">D3</span>

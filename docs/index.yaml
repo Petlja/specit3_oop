@@ -3,8 +3,8 @@ description:
   externalLinks: []
   longDescription: '<div class="document">
 
-    <p>Овај курс је намењен ученицима специјализованих ИТ одељена 3. разреда за предмет
-    Програмирање и програмски језици.</p>
+    <p>Овај курс је намењен ученицима специјализованих ИТ одељења 3. разреда за предмет
+    објектно оријентисано програмирање.</p>
 
     <p>Поред рада у школи, курс може да се пролази и самостално.</p>
 
@@ -15,7 +15,7 @@ description:
   - Инсталирано окружење *Visual Studio* (довољно је инсталирати издање *Community
     edition* које је бесплатно) или неко друго окружење за развој програма у језику
     C# (на пример *Mono develop*).
-  shortDescription: Програмирање
+  shortDescription: Објектно оријентисано програмирање
   toc:
   - Зашто се програмски језици мењају
   - Основни појмови ООП (објектно оријентисаног прогрмирања)
@@ -35,9 +35,9 @@ lessons:
   - description: ''
     file: uvod_01a_promene.html
     guid: d8ff4bd3-c73e-454b-ab72-d5ed0432b0de
-    normalized_title: Зашто се мења начин програмирања
+    normalized_title: Како и зашто се програмирање мења
     src: uvod_01a_promene.rst
-    title: Зашто се мења начин програмирања
+    title: Како и зашто се програмирање мења
     type: reading
   - description: ''
     file: uvod_01aq_paradigme_kviz.html
@@ -539,9 +539,9 @@ lessons:
   - description: ''
     file: dpp_05c1_funkcije.html
     guid: 03d5961b-044f-43e3-ba19-cfd18481f716
-    normalized_title: Класа Функција и изведене класе
+    normalized_title: Класа Function и изведене класе
     src: dpp_05c1_funkcije.rst
-    title: Класа Функција и изведене класе
+    title: Класа Function и изведене класе
     type: reading
   - description: ''
     file: dpp_05c2_parser.html
@@ -584,4 +584,4 @@ lessons:
   guid: 90ac6210-414b-471d-ad78-48d24a5bca05
   normalized_title: 5.4 Приказ рада алгоритама сортирања
   title: 5.4 Приказ рада алгоритама сортирања
-title: Програмирање за трећи разред специјализованих ИТ одељења
+title: Објектно оријентисано програмирање за трећи разред специјализованих ИТ одељења

@@ -198,7 +198,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -219,7 +219,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -451,7 +451,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -629,11 +629,11 @@ class Program
 <p>Напомињемо да се приликом креирања набрајача над резултатом неког метода <code class="docutils literal notranslate"><span class="pre">f()</span></code> који генерише
 колекцију, тј. приликом извршавања метода <code class="docutils literal notranslate"><span class="pre">f().GetEnumerator()</span></code>, сам метод <code class="docutils literal notranslate"><span class="pre">f()</span></code> још увек не
 извршава, нити започиње са извршавањем. Креирање набрајача је само нека врста иницијализације,
-односно припреме за итереирање кроз колекцију коју генерише метод <code class="docutils literal notranslate"><span class="pre">f()</span></code>.</p>
+односно припреме за итерирање кроз колекцију коју генерише метод <code class="docutils literal notranslate"><span class="pre">f()</span></code>.</p>
 </section>
 <section id="id4">
 <h2>Рекурзивни методи који генеришу колекције<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
-<p>Метод који генерише колекцију може у свој резултат да укомпонује резулатате других метода који
+<p>Метод који генерише колекцију може у свој резултат да укомпонује резултате других метода који
 враћају колекције. На пример, ако метод <code class="docutils literal notranslate"><span class="pre">f</span></code> треба да врати све целе бројеве које враћају
 методи <code class="docutils literal notranslate"><span class="pre">f1</span></code>, <code class="docutils literal notranslate"><span class="pre">f2</span></code> и <code class="docutils literal notranslate"><span class="pre">f3</span></code> редом, он може да буде написан овако:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">f1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
@@ -665,8 +665,8 @@ class Program
 <p>Дефинисаћемо рекурзиван метод <code class="docutils literal notranslate"><span class="pre">Kombinacije</span></code> са три параметра. Први параметар је већ формирани
 почетак (префикс) броја, који ће рекурзивно да буде допуњен на све могуће начине. Други параметар
 је број цифара које је још потребно дописати на формирани префикс. У иницијалном позиву из метода
-<code class="docutils literal notranslate"><span class="pre">Main</span></code> овај параметар има вредност <span class="math notranslate nohighlight">\(k\)</span>, а у каснијим позивима се смањује. Трећи параметар
-је највећа дозвољена цифра <span class="math notranslate nohighlight">\(m\)</span>.</p>
+<code class="docutils literal notranslate"><span class="pre">Main</span></code> овај параметар има вредност <cite>k</cite>, а у каснијим позивима се смањује. Трећи параметар
+је највећа дозвољена цифра <cite>m</cite>.</p>
 
 <div data-childcomponent="ienum05_komb" class="course-box course-box-problem course-content">
 
@@ -705,7 +705,7 @@ class Program
 </textarea>
 </div>
 <p>Метод <code class="docutils literal notranslate"><span class="pre">Kombinacije</span></code> је позван из метода <code class="docutils literal notranslate"><span class="pre">Main</span></code> тако да генерише троцифрене бројеве са цифрама
-од 1 до 5 у растућем поретку. Зато програм исписује</p>
+од 1 до 5 у растућем поретку. Зато програм исписује:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">123</span> <span class="mi">124</span> <span class="mi">125</span> <span class="mi">134</span> <span class="mi">135</span> <span class="mi">145</span> <span class="mi">234</span> <span class="mi">235</span> <span class="mi">245</span> <span class="mi">345</span>
 </pre></div>
 </div>
@@ -715,7 +715,7 @@ class Program
 </section>
 <section id="id5">
 <h2>Примена у графичким апликацијама<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
-<p>У последњем примеру овог прилога илустрваћемо графичко решење познатог <a class="reference external" href="https://sr.wikipedia.org/wiki/Ханојска_кула">проблема ханојских
+<p>У последњем примеру овог прилога илустроваћемо графичко решење познатог <a class="reference external" href="https://sr.wikipedia.org/wiki/Ханојска_кула">проблема ханојских
 кула</a>. Подсетимо се најпре поставке задатка.</p>
 
     <div class="note-wrapper questionnote-type">
@@ -757,7 +757,7 @@ class Program
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Размортимо како би могао да се испрограмира графички приказ овог решења.</p>
+<p>Размотримо како би могао да се испрограмира графички приказ овог решења.</p>
 <p><strong>Дизајн, компоненте</strong></p>
 <p>Од компоненти корисничког интерфејса, можемо да искористимо поље типа <code class="docutils literal notranslate"><span class="pre">NumericUpDown</span></code> за задавање
 броја дискова и дугме (<code class="docutils literal notranslate"><span class="pre">Button</span></code>) за покретање решења. Приказивање намеравамо да успоримо, тако да
@@ -817,10 +817,10 @@ namespace Hanoj
 {
     public partial class Form1 : Form
     {
-        // lista od tri stapa koja opisuje trenutno stanje 
+        // lista od tri štapa koja opisuje trenutno stanje 
         List&lt;Stack&lt;int&gt;&gt; stap; 
 
-        // nabrajac kolekcije koraka koja predstavlja resenje
+        // nabrajač kolekcije koraka koja predstavlja rešenje
         IEnumerator&lt;Tuple&lt;int, int&gt;&gt; koraciResenja;
 
         public Form1()
@@ -836,24 +836,24 @@ namespace Hanoj
 
         void Reset()
         {
-            // postavljamo stapove u pocetno stanje
+            // postavljamo štapove u početno stanje
 
             Stack&lt;int&gt; A = new Stack&lt;int&gt;();
             Stack&lt;int&gt; B = new Stack&lt;int&gt;();
             Stack&lt;int&gt; C = new Stack&lt;int&gt;();
-            // na prvi stap stavljamo sve diskove od najveceg do najmanjeg
+            // na prvi štap stavljamo sve diskove od najvećeg do najmanjeg
             int n = (int)numericUpDown1.Value;
             for (int i = n; i &gt; 0; i--)
                 A.Push(i);
 
-            // formiramo listu stapova
+            // formiramo listu štapova
             stap = new List&lt;Stack&lt;int&gt;&gt;() { A, B, C };
             Invalidate();
         }
 
         private void btnResi_Click(object sender, EventArgs e)
         {
-            // inicijalizujemo resavanje, tako sto kreiramo nabrajac i ukljucimo tajmer
+            // inicijalizujemo rešavanje, tako što kreiramo nabrajač i uključimo tajmer
             numericUpDown1.Enabled = false;
             btnResi.Enabled = false;
             Reset();
@@ -864,10 +864,10 @@ namespace Hanoj
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            // ako nisu izvrseni svi koraci
+            // ako nisu izvršeni svi koraci
             if (koraciResenja.MoveNext())
             {
-                // izvrsavamo jedan korak resenja
+                // izvršavamo jedan korak rešenja
                 var t = koraciResenja.Current;
                 int disk = stap[t.Item1].Pop();
                 stap[t.Item2].Push(disk);
@@ -875,7 +875,7 @@ namespace Hanoj
             }
             else
             {
-                // kraj postupka, azuriramo korisnicki interfejs
+                // kraj postupka, ažuriramo korisnički interfejs
                 numericUpDown1.Enabled = true;
                 btnResi.Enabled = true;
                 timer1.Enabled = false;
@@ -896,10 +896,10 @@ namespace Hanoj
             int r0 = w / (n * 7), hDiska = h / (n * 2);
 
             int x0 = w / 6;
-            for (int i = 0; i &lt; 3; i++) // za svaki stap
+            for (int i = 0; i &lt; 3; i++) // za svaki štap
             {
                 int y0 = h - hDiska * stap[i].Count;
-                foreach (int d in stap[i]) // za svaki disk na stapu
+                foreach (int d in stap[i]) // za svaki disk na štapu
                 {
                     g.FillRectangle(b, x0 - r0 * d, y0, 2 * r0 * d, hDiska);
                     g.DrawRectangle(p, x0 - r0 * d, y0, 2 * r0 * d, hDiska);
@@ -909,7 +909,7 @@ namespace Hanoj
             }
         }
 
-        // Rekurzivno resenje problema, koje vraca kolekciju poteza (potez je par brojeva)
+        // Rekurzivno rešenje problema, koje vraća kolekciju poteza (potez je par brojeva)
         static IEnumerable&lt;Tuple&lt;int, int&gt;&gt; HanojskeKule(
             int n, int poc, int pom, int kraj)
         {

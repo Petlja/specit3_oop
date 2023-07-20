@@ -198,7 +198,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -219,7 +219,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -451,7 +451,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -517,20 +517,20 @@
 <p>Модификовање базне класе је осетљивији поступак него њено проширивање. Сама чињеница да ћемо
 у базној и изведеној класи имати истоимене чланове (најчешће својства и методе) отвара могућност
 погрешне употребе. На пример, може да се догоди да желимо да покренемо метод изведене класе, а
-да се уместо њега покрене истоимени метод базне класе. Зато је важно да се добро разуме сематника
+да се уместо њега покрене истоимени метод базне класе. Зато је важно да се добро разуме семантика
 (значење, ефекти) различитих начина модификовања базне класе.</p>
 
     </div></div>
 <p>У следећем примеру понашање базне класе је промењено на начин који се не препоручује, јер може да
 доведе до различитих грешака. У наставку ћемо видети бољи начин да модификујемо базну класу.</p>
 <section id="id3">
-<h3>Пример - правоугаоник<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
+<h3>Пример – правоугаоник<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
 <p>Претпоставимо да је некоме била потребна класа <code class="docutils literal notranslate"><span class="pre">Pravougaonik</span></code>, која моделира правоугаоник чије
 су странице паралелне са координатним осама. Такав правоугаоник је потпуно одређен координатама
 једног (нпр. доњег левог) темена и дужинама двеју суседних страница. Према томе, ако темена
 означимо са <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">B</span></code>, <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">D</span></code>, довољно је да правоугаоник од података садржи координате
 <code class="docutils literal notranslate"><span class="pre">ax,</span> <span class="pre">ay</span></code> темена <code class="docutils literal notranslate"><span class="pre">A</span></code> и дужину <code class="docutils literal notranslate"><span class="pre">w</span></code> и висину <code class="docutils literal notranslate"><span class="pre">h</span></code> правоугаоника.</p>
-<p>Интерфејс, тј. јавни део класе могу да чине нпр. методи <code class="docutils literal notranslate"><span class="pre">Obim</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrisna</span></code>, који враћају
+<p>Интерфејс, тј. јавни део класе могу да чине нпр. методи <code class="docutils literal notranslate"><span class="pre">Obim</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrsina</span></code>, који враћају
 обим и површину правоугаоника, својства <code class="docutils literal notranslate"><span class="pre">AX</span></code>, <code class="docutils literal notranslate"><span class="pre">AY</span></code>, <code class="docutils literal notranslate"><span class="pre">BX</span></code>, <code class="docutils literal notranslate"><span class="pre">BY</span></code>, <code class="docutils literal notranslate"><span class="pre">CX</span></code>, <code class="docutils literal notranslate"><span class="pre">CY</span></code>,
 <code class="docutils literal notranslate"><span class="pre">DX</span></code>, <code class="docutils literal notranslate"><span class="pre">DY</span></code> за дохватање координата темена правоугаоника, и на крају својства <code class="docutils literal notranslate"><span class="pre">W</span></code> i <code class="docutils literal notranslate"><span class="pre">H</span></code>,
 за добијање дужине и висине правоугаоника. Та класа је могла да буде написана овако:</p>
@@ -555,7 +555,7 @@ public class Pravougaonik
     }
 
     public double Obim() { return 2 * w + 2 * h; }
-    public double Povrisna() { return w * h; }
+    public double Povrsina() { return w * h; }
 
     public double W { get { return w; } }
     public double H { get { return h; } }
@@ -572,7 +572,7 @@ public class Pravougaonik
 </textarea>
 </div>
 <p>Претпоставимо даље да нам се указала потреба за сличном класом, која допушта да правоугаоник буде
-под углом у односу на координатне осе. За такав правоугаоник, потребно је поред коордианта једног
+под углом у односу на координатне осе. За такав правоугаоник, потребно је поред координата једног
 темена и дужина страница памтити и нпр. угао <span class="math notranslate nohighlight">\(\varphi\)</span> између позитивног смера <cite>x</cite> осе и
 странице <cite>AB</cite>.</p>
 <figure class="align-center" id="id5">
@@ -582,10 +582,10 @@ public class Pravougaonik
 <span class="math notranslate nohighlight">\(\varphi\)</span>.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Методи <code class="docutils literal notranslate"><span class="pre">Obim</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrisna</span></code> нам одговарају у постојећем облику, а исто важи и за својства
+<p>Методи <code class="docutils literal notranslate"><span class="pre">Obim</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrsina</span></code> нам одговарају у постојећем облику, а исто важи и за својства
 <code class="docutils literal notranslate"><span class="pre">AX</span></code>, <code class="docutils literal notranslate"><span class="pre">AY</span></code>, <code class="docutils literal notranslate"><span class="pre">W</span></code> i <code class="docutils literal notranslate"><span class="pre">H</span></code>. Део који треба променити су дефиниције својстава <code class="docutils literal notranslate"><span class="pre">BX</span></code>, <code class="docutils literal notranslate"><span class="pre">BY</span></code>,
 <code class="docutils literal notranslate"><span class="pre">CX</span></code>, <code class="docutils literal notranslate"><span class="pre">CY</span></code>, <code class="docutils literal notranslate"><span class="pre">DX</span></code>, <code class="docutils literal notranslate"><span class="pre">DY</span></code>.</p>
-<p>Ако претпоставимо да су дате координате темена <span class="math notranslate nohighlight">\(A\)</span> и угао <span class="math notranslate nohighlight">\(\varphi\)</span>, Формуле за
+<p>Ако претпоставимо да су дате координате темена <span class="math notranslate nohighlight">\(A\)</span> и угао <span class="math notranslate nohighlight">\(\varphi\)</span>, формуле за
 израчунавање координата осталих темена можемо да изведемо користећи основне тригонометријске
 једнакости и адиционе формуле:</p>
 <div class="math notranslate nohighlight">
@@ -682,7 +682,7 @@ internal class Program
         Console.WriteLine("Duzina(sirina) je {0}, a visina {1}",
             p.W, p.H);
         Console.WriteLine("Obim je {0}, a povrsina {1}",
-            p.Obim(), p.Povrisna());
+            p.Obim(), p.Povrsina());
         Console.Write("A({0:0.00}, {1:0.00}), ", p.AX, p.AY);
         Console.Write("B({0:0.00}, {1:0.00}), ", p.BX, p.BY);
         Console.Write("C({0:0.00}, {1:0.00}), ", p.CX, p.CY);
@@ -694,7 +694,7 @@ internal class Program
         Console.WriteLine("Duzina(sirina) je {0}, a visina {1}",
             rp.W, rp.H); // preuzeto iz bazne klase
         Console.WriteLine("Obim je {0}, a povrsina {1}",
-            rp.Obim(), rp.Povrisna()); // preuzeto iz bazne klase
+            rp.Obim(), rp.Povrsina()); // preuzeto iz bazne klase
         Console.Write("A({0:0.00}, {1:0.00}), ",
             rp.AX, rp.AY); // preuzeto iz bazne klase
         Console.Write("B({0:0.00}, {1:0.00}), ", rp.BX, rp.BY); // novo
@@ -704,7 +704,7 @@ internal class Program
 }
 </textarea>
 </div>
-<p>Програм исписује</p>
+<p>Програм исписује:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Duzina</span><span class="p">(</span><span class="n">sirina</span><span class="p">)</span> <span class="n">je</span> <span class="mi">5</span><span class="p">,</span> <span class="n">a</span> <span class="n">visina</span> <span class="mi">3</span>
 <span class="n">Obim</span> <span class="n">je</span> <span class="mi">16</span><span class="p">,</span> <span class="n">a</span> <span class="n">povrsina</span> <span class="mi">15</span>
 <span class="n">A</span><span class="p">(</span><span class="mf">1.00</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">),</span> <span class="n">B</span><span class="p">(</span><span class="mf">6.00</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">),</span> <span class="n">C</span><span class="p">(</span><span class="mf">6.00</span><span class="p">,</span> <span class="mf">4.00</span><span class="p">),</span> <span class="n">D</span><span class="p">(</span><span class="mf">1.00</span><span class="p">,</span> <span class="mf">4.00</span><span class="p">)</span>
@@ -736,16 +736,16 @@ internal class Program
 преко референце на базну класу можемо да добијемо неисправан резултат!</p>
 
     </div></div>
-<p>На пример, ако програму за проверу исправности додамо следећа два реда на сам крај</p>
+<p>На пример, ако програму за проверу исправности додамо следећа два реда на сам крај:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">rp</span><span class="p">;</span><span class="w"></span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;B({0:0.00}, {1:0.00})&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">BX</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">BY</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>програм би на крају још исписао</p>
+<p>…програм би на крају још исписао:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">B</span><span class="p">(</span><span class="mf">7.00</span><span class="p">,</span> <span class="mf">3.00</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>што не одговара тачки <span class="math notranslate nohighlight">\(B\)</span> ниједног од два правоугаоника. Заиста, као што смо већ видели, тачка
+<p>…што не одговара тачки <span class="math notranslate nohighlight">\(B\)</span> ниједног од два правоугаоника. Заиста, као што смо већ видели, тачка
 <span class="math notranslate nohighlight">\(B\)</span> првог правоугаоника има координате <span class="math notranslate nohighlight">\(B(6.00, 1.00)\)</span> а другог <span class="math notranslate nohighlight">\(B(6.46, 1.00)\)</span>.
 Уз мало додатне анализе, можемо да приметимо да су за податке другог, ротираног правоугаоника
 израчунате координате тачке <span class="math notranslate nohighlight">\(B\)</span> као да он није ротиран. То значи да се над подацима из изведене
@@ -753,12 +753,12 @@ internal class Program
 ротираном правоугаонику.</p>
 <p>Да бисмо разумели зашто се овде извршавају приступници базне класе, истакнимо следеће чињенице.</p>
 <ul class="simple">
-<li><p>У овом примеру ми ни на који начин нисмо назанчили у коду да желимо да се стваран тип одређује
+<li><p>У овом примеру ми ни на који начин нисмо назначили у коду да желимо да се стваран тип одређује
 у време извршавања, као што је то случај код апстрактних метода. Према томе, одлука о томе који
 приступник <code class="docutils literal notranslate"><span class="pre">get</span></code> својстава <code class="docutils literal notranslate"><span class="pre">BX</span></code> и <code class="docutils literal notranslate"><span class="pre">BY</span></code> треба да се изврши мора да се донесе у време компајлирања
 програма.</p></li>
 <li><p>У неким ситуацијама компајлер не може да зна стваран тип објекта на који указује референца <code class="docutils literal notranslate"><span class="pre">p2</span></code>,
-јер додељивање референци може да се налази у наредби гранања, као што показује следећи пример.</p></li>
+јер додељивање референци може да се налази у наредби гранања, као што показује следећи пример:</p></li>
 </ul>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Pravougaonik</span><span class="w"> </span><span class="n">p2</span><span class="p">;</span><span class="w"></span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Da li da napravim obican ili rotirani pravougaonik?&quot;</span><span class="p">);</span><span class="w"></span>
@@ -772,7 +772,7 @@ internal class Program
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Tacka B je B({0:0.00}, {1:0.00}), &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="n">BX</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="n">BY</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Овде стваран тип објекта зависи од уноса корисника, па је јасно да у време комплајлирања програма не
+<p>Овде стваран тип објекта зависи од уноса корисника, па је јасно да у време компајлирања програма не
 знамо (а не зна ни компајлер) ког стварног типа ће бити објекат на који указује референца <code class="docutils literal notranslate"><span class="pre">p2</span></code>.
 Пошто <strong>компајлер у принципу не може да зна стваран тип објекта</strong>, он и не покушава да га одреди, већ
 за разрешавање позива својстава <code class="docutils literal notranslate"><span class="pre">p2.BX</span></code> и <code class="docutils literal notranslate"><span class="pre">p2.BY</span></code> <strong>користи тип референце</strong>, а то је класа

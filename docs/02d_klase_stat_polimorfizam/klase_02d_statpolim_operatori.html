@@ -198,7 +198,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -219,7 +219,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -451,7 +451,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -487,7 +487,7 @@
 <ul class="simple">
 <li><p>Статички полиморфизам - дефинисање више истоимених метода или оператора у једној класи,</p></li>
 <li><p>Како да дефинишемо значење израза облика <code class="docutils literal notranslate"><span class="pre">a+b</span></code> и сличних, за објекте наше класе,</p></li>
-<li><p>Како да дозволимо компајлеру да сам (имплицитно) конвертује целе бројеве у разломке,</p></li>
+<li><p>Како да дозволимо компајлеру да сâм (имплицитно) конвертује целе бројеве у разломке,</p></li>
 <li><p>Како да обезбедимо удобно исписивање објеката наше класе.</p></li>
 </ul>
 <section id="id2">
@@ -535,7 +535,7 @@
         <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
 <p>Написати и тестирати класу, која омогућава брзо сабирање сегмената датог, непроменљивог низа.
-Обезбедити методе који сабирају</p>
+Обезбедити методе који сабирају:</p>
 <ul class="simple">
 <li><p>све елементе низа</p></li>
 <li><p>елементе почев од задате позиције до краја низа</p></li>
@@ -627,7 +627,7 @@ class Program
 <code class="docutils literal notranslate"><span class="pre">Oduzmi</span></code>, <code class="docutils literal notranslate"><span class="pre">Pomnozi</span></code> и <code class="docutils literal notranslate"><span class="pre">Podeli</span></code>. Сваки од ових метода би могао да буде статички, са два
 параметра типа <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> и резултатом истог типа.</p>
 <p>Ипак, за програмера који користи нашу класу би било удобније да може да рачуна са разломцима на исти
-начин као са целим и реалним бројевима. На пример:</p>
+начин као и са целим и реалним бројевима. На пример:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Razlomak</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
 <span class="n">Razlomak</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
 <span class="n">Razlomak</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="p">*</span><span class="n">a</span><span class="p">+</span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// umesto: Razlomak c = Saberi(Pomnozi(2, a), b);</span>
@@ -635,11 +635,11 @@ class Program
 </pre></div>
 </div>
 <p>Знамо да је, на пример, за оператор + већ подржан полиморфизам, јер помоћу оператора који се исто
-пише (<code class="docutils literal notranslate"><span class="pre">+</span></code>) можемо да сабирамо целе бројеве, реалне бројеве и стрингове. Према типу аргумената
+пише (<code class="docutils literal notranslate"><span class="pre">+</span></code>) можемо да сабирамо целе бројеве, реалне бројеве и стрингове. Према типу аргумената,
 компајлер може да одреди о којем од неколико оператора сабирања је реч.</p>
 <p><strong>Дефинисање оператора</strong></p>
 <p>Језик <em>C#</em> подржава могућност да дефинишемо оператор сабирања и за објекте било које наше класе.
-Решење је веома једноставно, довољно је да напишемо метод који се зове <code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">+</span></code>:</p>
+Решење је веома једноставно – довољно је да напишемо метод који се зове <code class="docutils literal notranslate"><span class="pre">operator</span> <span class="pre">+</span></code>:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">+(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">NZD</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">b</span><span class="p">);</span><span class="w"></span>
@@ -648,7 +648,7 @@ class Program
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Након овога, ако су <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> објекти класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, можемо да пишемо нпр.</p>
+<p>Након овога, ако су <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> објекти класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, можемо да пишемо, нпр:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
@@ -691,7 +691,7 @@ class Program
 оператори <code class="docutils literal notranslate"><span class="pre">*</span></code> и <code class="docutils literal notranslate"><span class="pre">/</span></code>. Ови оператори су могли да буду имплементирани и једноставније, али смо их
 написали на овај начин (користећи скраћивање) да бисмо смањили могућност да дође до прекорачења
 опсега целобројне променљиве.</p>
-<p>Да бисмо подржали и изразе попут <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">-</span> <span class="pre">3</span></code> или <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">a</span></code>, можемо да напишемо и методе</p>
+<p>Да бисмо подржали и изразе попут <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">-</span> <span class="pre">3</span></code> или <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">a</span></code>, можемо да напишемо и ове методе:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Razlomak</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="p">+(</span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
@@ -752,7 +752,7 @@ class Program
 може да избегне синтаксну грешку због неслагања типова. Захваљујући томе, претходних осам метода
 који дефинишу операције између целог броја и разломка постају непотребни. Додатно, у свакој будућој
 ситуацији где се у коду очекује разломак а наведен је цео број, компајлер ће моћи да разреши
-сутуацију помоћу имплицитне конверзије.</p>
+ситуацију помоћу имплицитне конверзије.</p>
 <p><strong>Подешавање приказа на екрану</strong></p>
 <p>Да би рад са разломцима био сасвим удобан, недостаје још само подршка да се вредност разломка
 прикаже на екрану. Тренутно, за разломак <code class="docutils literal notranslate"><span class="pre">r</span></code> би се наредбом</p>

@@ -198,7 +198,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -219,7 +219,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -451,7 +451,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -502,15 +502,15 @@
 <li><p>Графичка апликација за цртање графика произвољне функције</p></li>
 <li><p>Конзолна апликација за налажење нула функције</p></li>
 </ul>
-<section id="funkcije">
-<h2>Структура библиотеке <cite>Funkcije</cite><a class="headerlink" href="#funkcije" title="Permalink to this heading">¶</a></h2>
+<section id="function">
+<h2>Класа Function и изведене класе<a class="headerlink" href="#function" title="Permalink to this heading">¶</a></h2>
 <p>Суштина сваке математичке функције је да дефинише правило по коме се дати реалан број <span class="math notranslate nohighlight">\(x\)</span>
 пресликава у реалан број <span class="math notranslate nohighlight">\(f(x)\)</span>. Према томе, класа која представља математичку функцију треба
-да има метод попут</p>
+да има метод попут:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="nf">Value</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>помоћу кога се добија вредност функције за дато <span class="math notranslate nohighlight">\(x\)</span>. Пошто свака функција ту вредност одређује
+<p>…помоћу кога се добија вредност функције за дато <span class="math notranslate nohighlight">\(x\)</span>. Пошто свака функција ту вредност одређује
 на свој начин, можемо да формирамо апстрактну класу <code class="docutils literal notranslate"><span class="pre">Function</span></code> са јавним апстрактним методом
 <code class="docutils literal notranslate"><span class="pre">Value</span></code>, који свака конкретна функција треба да имплементира на свој начин.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">abstract</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Function</span><span class="w"></span>
@@ -525,7 +525,7 @@
 желимо да формирамо објекат који представља функцију <span class="math notranslate nohighlight">\(e^{f(x)}\)</span> где је <span class="math notranslate nohighlight">\(f\)</span> нека већ
 креирана функција, згодно је да нова, експоненцијална функција садржи референцу на функцију <span class="math notranslate nohighlight">\(f\)</span>
 и да је користи за израчунавање своје вредности.</p>
-<p>Тако долазимо до прве, поједностављене верзије хијерархије класа за представљање математичких функција.</p>
+<p>Тако долазимо до прве, поједностављене верзије хијерархије класа за представљање математичких функција:</p>
 
 <div data-childcomponent="ParsiranjeFunkcija_Functions0.cs" class="course-box course-box-problem course-content">
 
@@ -598,8 +598,8 @@ namespace FunctionValue
 }
 </textarea>
 </div>
-<p>Након овквог креирања класа <code class="docutils literal notranslate"><span class="pre">Sine</span></code>, <code class="docutils literal notranslate"><span class="pre">Exponential</span></code>, <code class="docutils literal notranslate"><span class="pre">Product</span></code>, <code class="docutils literal notranslate"><span class="pre">Variable</span></code> и <code class="docutils literal notranslate"><span class="pre">Constant</span></code>,
-можемо да пишемо наредбе попут</p>
+<p>Након оваквог креирања класа <code class="docutils literal notranslate"><span class="pre">Sine</span></code>, <code class="docutils literal notranslate"><span class="pre">Exponential</span></code>, <code class="docutils literal notranslate"><span class="pre">Product</span></code>, <code class="docutils literal notranslate"><span class="pre">Variable</span></code> и <code class="docutils literal notranslate"><span class="pre">Constant</span></code>,
+можемо да пишемо наредбе попут:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Function</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Variable</span><span class="p">();</span><span class="w"></span>
 <span class="n">Function</span><span class="w"> </span><span class="n">sin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Sine</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"></span>
 <span class="n">Function</span><span class="w"> </span><span class="n">expsin</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Exponential</span><span class="p">(</span><span class="n">sin</span><span class="p">);</span><span class="w"></span>
@@ -624,13 +624,13 @@ namespace FunctionValue
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Сада уместо</p>
+<p>Сада уместо:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Function</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Variable</span><span class="p">();</span><span class="w"></span>
 <span class="n">Function</span><span class="w"> </span><span class="n">tri</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Constant</span><span class="p">(</span><span class="m">3</span><span class="p">);</span><span class="w"></span>
 <span class="n">Function</span><span class="w"> </span><span class="n">triPutaX</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Product</span><span class="p">(</span><span class="n">tri</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>можемо краће да пишемо</p>
+<p>…можемо краће да пишемо</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Function</span><span class="w"> </span><span class="n">triPutaX</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Product</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;x&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// implicitna konverzija</span>
 </pre></div>
 </div>

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Прилог - графичка апликација</title>
+    <title>Прилог – графичка апликација</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -481,7 +481,7 @@
     <div id="main-content">
     
   <section id="id1">
-<h1>Прилог - графичка апликација<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>Прилог – графичка апликација<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>Као допуну примера са игром <cite>Асоцијације</cite>, креираћемо и графичку апликацију која омогућава играње
 исте игре, користећи исту библиотеку. Поред тога што вежбамо сáмо прављење оваквих програма, па и
 формално повезивање програма са библиотеком, тј. подешавање зависности, овим постижемо још једну
@@ -516,12 +516,12 @@
 </ul>
 
     </div></div>
-<p>Кораци за креирање графичке апликације су слични као и за креирање конзолне апликације.</p>
+<p>Кораци за креирање графичке апликације су слични као и за креирање конзолне апликације:</p>
 <ul class="simple">
-<li><p>Из менија изаберемо опцију <cite>File / Add / New project</cite> (или после десног клика на решење у прозору
+<li><p>из менија изаберемо опцију <cite>File / Add / New project</cite> (или после десног клика на решење у прозору
 <cite>Solution Explorer</cite> изаберемо опцију <cite>Add / New project</cite> у контекстном менију)</p></li>
-<li><p>За тип пројекта бирамо <cite>Windows Forms App</cite></p></li>
-<li><p>У дијалогу који се отвара, можемо као име пројекта (<cite>Project name</cite>) да упишемо <code class="docutils literal notranslate"><span class="pre">AsocijacijeWin</span></code></p></li>
+<li><p>за тип пројекта бирамо <cite>Windows Forms App</cite></p></li>
+<li><p>у дијалогу који се отвара, можемо као име пројекта (<cite>Project name</cite>) да упишемо <code class="docutils literal notranslate"><span class="pre">AsocijacijeWin</span></code></p></li>
 </ul>
 <p>Најбоље је да одмах подесимо и зависност новог програма од библиотеке, као што смо то учинили и
 за конзолну апликацију. Такође, на почетак програма треба да додамо ред <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">AsocijacijeLib;</span></code>,
@@ -530,7 +530,7 @@
 целобројна променљива за бројање поена (променљива <code class="docutils literal notranslate"><span class="pre">ukupnoPoena</span></code>). У случају да желимо игру за
 више играча, потребан је целобројни низ, у коме би се чували поени сваког играча. После ових почетних
 подешавања, програм изгледа овако и може да се покрене (мада програм још увек ништа не ради, могућност
-покретања потврђује да је до сада све урађено како треба).</p>
+покретања потврђује да је до сада све урађено како треба):</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Forms</span><span class="p">;</span><span class="w"></span>
 <span class="k">using</span><span class="w"> </span><span class="nn">AsocijacijeLib</span><span class="p">;</span><span class="w"></span>
 
@@ -559,10 +559,10 @@
 <p>Као следећи корак, можемо да додамо дугмад за отварање поља. Да би кôд програма био прегледнији,
 самим објектима класе <code class="docutils literal notranslate"><span class="pre">Button</span></code> можемо да доделимо редом имена
 <code class="docutils literal notranslate"><span class="pre">btnA1</span></code>, <code class="docutils literal notranslate"><span class="pre">btnA2</span></code>, <code class="docutils literal notranslate"><span class="pre">btnA3</span></code>, <code class="docutils literal notranslate"><span class="pre">btnA4</span></code>, <code class="docutils literal notranslate"><span class="pre">btnB1</span></code>, <code class="docutils literal notranslate"><span class="pre">btnB2</span></code>, <code class="docutils literal notranslate"><span class="pre">btnB3</span></code>, <code class="docutils literal notranslate"><span class="pre">btnB4</span></code>,
-<code class="docutils literal notranslate"><span class="pre">btnC1</span></code>, <code class="docutils literal notranslate"><span class="pre">btnC2</span></code>, <code class="docutils literal notranslate"><span class="pre">btnC3</span></code>, <code class="docutils literal notranslate"><span class="pre">btnC4</span></code>, <code class="docutils literal notranslate"><span class="pre">btnD1</span></code>, <code class="docutils literal notranslate"><span class="pre">btnD2</span></code>, <code class="docutils literal notranslate"><span class="pre">btnD3</span></code>, <code class="docutils literal notranslate"><span class="pre">btnD4</span></code>.
+<code class="docutils literal notranslate"><span class="pre">btnC1</span></code>, <code class="docutils literal notranslate"><span class="pre">btnC2</span></code>, <code class="docutils literal notranslate"><span class="pre">btnC3</span></code>, <code class="docutils literal notranslate"><span class="pre">btnC4</span></code>, <code class="docutils literal notranslate"><span class="pre">btnD1</span></code>, <code class="docutils literal notranslate"><span class="pre">btnD2</span></code>, <code class="docutils literal notranslate"><span class="pre">btnD3</span></code> и <code class="docutils literal notranslate"><span class="pre">btnD4</span></code>.
 Један начин да то урадимо је да селектујемо једно по једно дугме и да за свако селектовано дугме
 у прозору <cite>Properties</cite> међу својствима нађемо својство <cite>(Name)</cite> и упишемо име објекта. Натписе на
-дугметима, односно вредност поља <cite>Text</cite> не морамо да подешавамо, јер ће ти натписи свакако бити
+дугмади, односно вредност поља <cite>Text</cite> не морамо да подешавамо, јер ће ти натписи свакако бити
 стално ажурирани током игре, користећи индексер класе <code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code> са два индекса.</p>
 <p>Кликом на свако дугме треба да се изврши суштински исти поступак, а то је отварање једног поља у
 игри. Било би добро да избегнемо писање кода за свако дугме посебно и да направимо један метод
@@ -571,18 +571,18 @@
 желимо да то буде метод који се извршава кликом на свако дугме, можемо да му прво променимо име
 у <code class="docutils literal notranslate"><span class="pre">btn_Click</span></code>. Ово треба да урадимо користећи прозор <cite>Properties</cite>, тако што међу догађајима нађемо
 догађај <cite>Click</cite>, а затим променимо име метода на десној страни.</p>
-<p>Даље, потребно је да осталих 15 дугмета повежемо са овим догађајем. Ово радимо тако што селектујемо
+<p>Даље, потребно је да осталих 15 дугмади повежемо са овим догађајем. Ово радимо тако што селектујемо
 једно по једно дугме и међу догађајима у прозору <cite>Properties</cite> подесимо да на догађај <cite>Click</cite>
 одговара метод <code class="docutils literal notranslate"><span class="pre">btn_Click</span></code>. У изворном коду за сада празног метода видимо да је он декларисан као
 <code class="docutils literal notranslate"><span class="pre">btn_Click(object</span> <span class="pre">sender,</span> <span class="pre">EventArgs</span> <span class="pre">e)</span></code>. Први параметар овог метода је објекат на коме се догађај
 десио, тј. дугме на које је кликнуто. Захваљујући томе, метод зна за које дугме је позван и може да
 закључи које параметре да проследи методу игре <code class="docutils literal notranslate"><span class="pre">igra.Otvori(kol,</span> <span class="pre">polje)</span></code>. Ипак, пошто упоређивање
-објекта <code class="docutils literal notranslate"><span class="pre">sender</span></code> са сваким од 16 дугмета није нарочито елегантно решење, можемо да искористимо поље
+објекта <code class="docutils literal notranslate"><span class="pre">sender</span></code> са сваким од 16 дугмади није нарочито елегантно решење, можемо да искористимо поље
 <code class="docutils literal notranslate"><span class="pre">Tag</span></code> дугмета, и по том тагу једноставније одредимо који параметри су нам потребни. За поље <code class="docutils literal notranslate"><span class="pre">Tag</span></code>
 може да се веже било који објекат, а ми ћемо у то поље да упишемо неки текст из кога лако могу да се
 одреде редни број колоне и поља у колони. На пример, можемо за свако дугме редом као вредност поља
 <code class="docutils literal notranslate"><span class="pre">Tag</span></code> да упишемо <code class="docutils literal notranslate"><span class="pre">A1</span></code>, <code class="docutils literal notranslate"><span class="pre">A2</span></code>, <code class="docutils literal notranslate"><span class="pre">A3</span></code>, <code class="docutils literal notranslate"><span class="pre">A4</span></code>, <code class="docutils literal notranslate"><span class="pre">B1</span></code>, <code class="docutils literal notranslate"><span class="pre">B2</span></code>, <code class="docutils literal notranslate"><span class="pre">B3</span></code>, <code class="docutils literal notranslate"><span class="pre">B4</span></code>, <code class="docutils literal notranslate"><span class="pre">C1</span></code>, <code class="docutils literal notranslate"><span class="pre">C2</span></code>,
-<code class="docutils literal notranslate"><span class="pre">C3</span></code>, <code class="docutils literal notranslate"><span class="pre">C4</span></code>, <code class="docutils literal notranslate"><span class="pre">D1</span></code>, <code class="docutils literal notranslate"><span class="pre">D2</span></code>, <code class="docutils literal notranslate"><span class="pre">D3</span></code>, <code class="docutils literal notranslate"><span class="pre">D4</span></code>. Сам метод за сада можемо да напишемо овако</p>
+<code class="docutils literal notranslate"><span class="pre">C3</span></code>, <code class="docutils literal notranslate"><span class="pre">C4</span></code>, <code class="docutils literal notranslate"><span class="pre">D1</span></code>, <code class="docutils literal notranslate"><span class="pre">D2</span></code>, <code class="docutils literal notranslate"><span class="pre">D3</span></code> и <code class="docutils literal notranslate"><span class="pre">D4</span></code>. Сам метод за сада можемо да напишемо овако:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">btn_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">Button</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sender</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Button</span><span class="p">;</span><span class="w"></span>
@@ -596,13 +596,13 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>а касније ћемо по потреби да га изменимо или допунимо.</p>
+<p>…а касније ћемо по потреби да га изменимо или допунимо.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p>На сличан начин треба да припремимо и текстуална поља за унос решења колона, као и поље за унос
 коначног решења. Додаћемо пет објекта типа <code class="docutils literal notranslate"><span class="pre">TextBox</span></code> на форму и даћемо им имена <code class="docutils literal notranslate"><span class="pre">tbA</span></code>, <code class="docutils literal notranslate"><span class="pre">tbB</span></code>,
-<code class="docutils literal notranslate"><span class="pre">tbC</span></code>, <code class="docutils literal notranslate"><span class="pre">tbD</span></code>, <code class="docutils literal notranslate"><span class="pre">tbKonacno</span></code>. Размислимо које би било жељено понашање ових текстуалних поља.</p>
+<code class="docutils literal notranslate"><span class="pre">tbC</span></code>, <code class="docutils literal notranslate"><span class="pre">tbD</span></code> и <code class="docutils literal notranslate"><span class="pre">tbKonacno</span></code>. Размислимо које би било жељено понашање ових текстуалних поља.</p>
 <ul class="simple">
 <li><p>Када корисник кликне на неко поље да би погађао решење, претходни текст (реч <code class="docutils literal notranslate"><span class="pre">Konacno</span></code> или
 назив колоне) треба да нестане. Ово можемо да постигнемо ако реагујемо на догађај <cite>Enter</cite>,
@@ -627,7 +627,7 @@
 <code class="docutils literal notranslate"><span class="pre">tbABCD_PreviewKeyDown</span></code>. Осим ових метода који реагују на одговарајуће догађаје, згодно је да
 имамо и два помоћна метода, јер се поступци садржани у њима користе на више места у коду.</p>
 <ul class="simple">
-<li><p>Метод <code class="docutils literal notranslate"><span class="pre">Osvezi()</span></code> ће после акције корисника да ажурира натписе на дугметима и текстуалним
+<li><p>Метод <code class="docutils literal notranslate"><span class="pre">Osvezi()</span></code> ће после акције корисника да ажурира натписе на дугмади и текстуалним
 пољима, тако што поставља појмове и решења уместо имена поља свуда где је то потребно.</p></li>
 <li><p>Метод <code class="docutils literal notranslate"><span class="pre">DozvoliUnos(bool</span> <span class="pre">dozvoli)</span></code> омогућава или онемогућава погађање, према томе да ли
 корисник има право да погађа или треба прво да отвори поље.</p></li>

@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -502,7 +502,7 @@
 више нити би отклонила овај проблем, али такво решење је непотребно сложено за оно што желимо да
 постигнемо у овом примеру. Једноставнија идеја је да на догађај тајмера извршимо по један корак
 сваког од изабраних алгоритама сортирања и освежимо приказ. Тиме апликација између узастопних
-догађаја тамера остаје спремна да по потреби реагује на остале догађаје.</p>
+догађаја тајмера остаје спремна да по потреби реагује на остале догађаје.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -559,7 +559,7 @@
 а да касније наставимо извршавање метода тачно тамо где је заустављен. Семантика наредбе <code class="docutils literal notranslate"><span class="pre">yield</span></code>
 нам омогућава управо такво извршавање метода <code class="docutils literal notranslate"><span class="pre">DoSortingStep()</span></code>. Како је сама колекција коју враћа
 метод небитна, можемо као елементе колекције да враћамо нпр. нуле, јер се сама колекција и не користи
-на страни која позива метод <code class="docutils literal notranslate"><span class="pre">DoSortingStep</span></code>. Ево како би метод могао да се напише по овој идеји.</p>
+на страни која позива метод <code class="docutils literal notranslate"><span class="pre">DoSortingStep</span></code>. Ево како би метод могао да се напише по овој идеји:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">DoSortingStep</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">iSortedFrom</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">iSortedFrom</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">iSortedFrom</span><span class="p">--)</span><span class="w"></span>
@@ -581,7 +581,7 @@
 уведемо заједничку базну апстрактну класу <code class="docutils literal notranslate"><span class="pre">Algorithm</span></code>, у којој ће овај метод да буде апстрактан.
 Програм би могао да се напише и тако да ово буде једини апстрактан метод, јер тренутно стање низа
 код сваког алгоритма може да се прикаже истим методом (различити су само подаци, попут вредности у
-низу, боје стубића, назива алгоритма и слично). Ми смо у приказ додали и исцравање хоризонталних
+низу, боје стубића, назива алгоритма и слично). Ми смо у приказ додали и исцртавање хоризонталних
 црних правоугаоника испод графикона који представља низ. Ови правоугаоници су различити за сваки
 алгоритам и помажу да се боље разуме и прати рад алгоритма.</p>
 <figure class="align-center" id="id5">
@@ -599,7 +599,7 @@
 <p>У нашем решењу, све наредбе за исцртавање су смештене у заштићени метод базне класе, али је остављен
 и апстрактан јавни метод <code class="docutils literal notranslate"><span class="pre">Display</span></code>. Тиме је омогућено да се из сваке од изведених класа које
 представљају конкретне алгоритме, позове заједнички метод за приказ са другачијом листом правоугаоника.</p>
-<p>Ево како изгеда базна класа <code class="docutils literal notranslate"><span class="pre">Algorithm</span></code>.</p>
+<p>Ево како изгледа базна класа <code class="docutils literal notranslate"><span class="pre">Algorithm</span></code>.</p>
 
 <div data-childcomponent="algorithm" class="course-box course-box-problem course-content">
 
@@ -699,7 +699,7 @@ namespace SortingAlgorithms
 </textarea>
 </div>
 <p>Класе изведене из класе <code class="docutils literal notranslate"><span class="pre">Algorithm</span></code> су све веома кратке и међусобно сличне. На пример, класа
-<code class="docutils literal notranslate"><span class="pre">BubbleSort</span></code> изгледа овако.</p>
+<code class="docutils literal notranslate"><span class="pre">BubbleSort</span></code> изгледа овако:</p>
 
 <div data-childcomponent="bubble_sort" class="course-box course-box-problem course-content">
 
@@ -1157,11 +1157,11 @@ namespace SortingAlgorithms
 </div>
 <p>Ако желите да испробате апликацију, потребно је да урадите следеће:</p>
 <ul class="simple">
-<li><p>Креирајте нови пројекат типа <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Forms</span> <span class="pre">App</span></code> и назовите га <code class="docutils literal notranslate"><span class="pre">SortingAlgorithms</span></code></p></li>
+<li><p>Креирајте нови пројекат типа <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Forms</span> <span class="pre">App</span></code> и назовите га <code class="docutils literal notranslate"><span class="pre">SortingAlgorithms</span></code>,</p></li>
 <li><p>Додајте у пројекат фајлове са класама које представљају алгоритме сортирања (базна и шест
-изведених класа) и копирајте у њих кôд који је дат горе.</p></li>
-<li><p>Прегазите кôд фајла <code class="docutils literal notranslate"><span class="pre">Form1.cs</span></code> кодом датим непосредно изнад</p></li>
-<li><p>Прегазите кôд фајла <code class="docutils literal notranslate"><span class="pre">Form1.Designer.cs</span></code> кодом датим у наставку</p></li>
+изведених класа) и копирајте у њих кôд који је дат горе,</p></li>
+<li><p>Прегазите кôд фајла <code class="docutils literal notranslate"><span class="pre">Form1.cs</span></code> кодом датим непосредно изнад,</p></li>
+<li><p>Прегазите кôд фајла <code class="docutils literal notranslate"><span class="pre">Form1.Designer.cs</span></code> кодом датим у наставку.</p></li>
 </ul>
 
     <div data-component="reveal" id="dugme_Form1_Designer"   data-showtitle="Фајл Form1.Designer.cs" data-hidetitle="Сакриј фајл Form1.Designer.cs">

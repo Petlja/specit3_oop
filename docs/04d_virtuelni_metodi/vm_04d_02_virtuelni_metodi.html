@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -483,7 +483,7 @@
   <section id="id1">
 <h1>Појам виртуелних метода<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>У примеру са правоугаоницима смо видели да без детаљног разумевања начина на који функционише
-модификација базне класе лако може да дође до погрешне употребе изведене класе и последично до
+модификација базне класе лако може да дође до погрешне употребе изведене класе и, последично, до
 погрешних резултата. Да би описани проблеми били превазиђени, потребан нам је нови механизам,
 који ће да узме у обзир динамичку природу објеката, односно њихов стварни тип у тренутку извршавања
 дате наредбе, у којој се позива спорни метод. Ту могућност нам доносе <strong>виртуелни методи</strong>.</p>
@@ -529,7 +529,7 @@
 <div class="line"><br /></div>
 </div>
 <p>Ево како можемо да преправимо пример са правоугаоницима, да би се при употреби објеката преко
-референци на базну класу добило понашање у складу са стварним типом објекта.</p>
+референци на базну класу добило понашање у складу са стварним типом објекта:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Pravougaonik</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">h</span><span class="p">;</span><span class="w"></span>
@@ -543,7 +543,7 @@
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
 <span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">Obim</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">h</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">Povrisna</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">h</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">Povrsina</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">h</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 
 <span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">W</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">w</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">h</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
@@ -584,7 +584,7 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Извршимо следећих неколико наредби са овако написаним класама.</p>
+<p>Извршимо следећих неколико наредби са овако написаним класама:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Pravougaonik</span><span class="w"> </span><span class="n">p2</span><span class="p">;</span><span class="w"></span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Da li da naprvim obican ili rotirani pravougaonik?&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="kt">string</span><span class="w"> </span><span class="n">odgovor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span><span class="w"></span>
@@ -610,8 +610,8 @@
     <div data-component="reveal" id="dugme_kako_rade_vm"   data-showtitle="Како се остварује механизам виртуелних метода" data-hidetitle="Сакриј објашњење остваривања механизма виртуелних метода">
     <p><strong>Како се остварује механизам виртуелних метода</strong></p>
 <p>Ако сте читали ранија детаљнија објашњења у вези са семантиком, можда сте се запитали
-како компајлер може да узме у обзир стваран тип објекта када у време комплајлирања тај
-тип није познат. Мада је одговор на ово питање ван оквира курса, дајемо поједнстављено
+како компајлер може да узме у обзир стваран тип објекта када у време компајлирања тај
+тип није познат. Мада је одговор на ово питање ван оквира курса, дајемо поједностављено
 објашњење за посебно заинтересоване.</p>
 <p>Компјалер за сваку класу може да одреди који њени методи су виртуелни. Такође, за сваки
 виртуелан метод дате класе компајлер може да одреди где је дефинисан метод који важи за

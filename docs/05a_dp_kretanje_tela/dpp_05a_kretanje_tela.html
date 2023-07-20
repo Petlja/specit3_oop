@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -482,13 +482,14 @@
     
   <section id="id1">
 <h1>Различита кретања различитих тела<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
-<p>У овом примеру приказаћемо анимацију, током које се различите врсте тела крећу свака на свој начин.
+<p>У овом примеру приказаћемо анимацију током које се различите врсте тела крећу свака на свој начин.
 У примеру постоје три врсте тела: точкови који се котрљају, лоптице које скакућу и авиончићи који
-лете. Свим телима се управља на исти начин, не обраћајући пажњу на то које тело је које врсте.</p>
+лете. Свим телима се управља на исти начин, при чему се не обраћа пажња на то које тело је које врсте.</p>
 <p>Да бисмо омогућили овакав сценарио, дефинисали смо апстрактну базну класу <code class="docutils literal notranslate"><span class="pre">Telo</span></code>, са апстрактним
 методима <code class="docutils literal notranslate"><span class="pre">PomeriSe</span></code>, <code class="docutils literal notranslate"><span class="pre">RestartujSe</span></code> и <code class="docutils literal notranslate"><span class="pre">NacrtajSe</span></code>. Након тога, анимација се једноставно
 остварује тако што се из метода форме <code class="docutils literal notranslate"><span class="pre">timer1_Tick</span></code> за свако тело позове метод <code class="docutils literal notranslate"><span class="pre">PomeriSe</span></code>,
-а из метода <code class="docutils literal notranslate"><span class="pre">Form1_Paint</span></code> се позове метод <code class="docutils literal notranslate"><span class="pre">NacrtajSe</span></code>. Тело које после неког времена заврши
+а из метода <code class="docutils literal notranslate"><span class="pre">Form1_Paint</span></code> позове се метод <code class="docutils literal notranslate"><span class="pre">NacrtajSe</span></code>. Тело које после неког времена заврши
+а из метода <code class="docutils literal notranslate"><span class="pre">Form1_Paint</span></code> позове се метод <code class="docutils literal notranslate"><span class="pre">NacrtajSe</span></code>. Тело које после неког времена заврши
 са својим кретањем, може да позове свој метод <code class="docutils literal notranslate"><span class="pre">RestartujSe</span></code> и на тај начин почне да се понаша
 као ново тело.</p>
 <div class="line-block">

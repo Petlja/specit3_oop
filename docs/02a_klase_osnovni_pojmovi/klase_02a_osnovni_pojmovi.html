@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -484,13 +484,13 @@
 <h1>Основни појмови о класама и објектима<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>У овој лекцији:</p>
 <ul class="simple">
-<li><p>Шта је објекат, а шта класа, који је њихов однос,</p></li>
-<li><p>Од чега се састоји класа, шта су поља, методи и својства,</p></li>
+<li><p>Шта је објекат, а шта класа; који је њихов однос;</p></li>
+<li><p>Од чега се састоји класа; шта су поља, методи и својства;</p></li>
 <li><p>Приватни и јавни чланови класе.</p></li>
 </ul>
 <p>Из самог назива <em>објектно оријентисано програмирање</em> је јасно да је централни појам ове парадигме
-објекат. Зато, пре него што почнемо да се бавимо концептима ООП, потребно је да се укратко упознамо
-са основним појмовима.</p>
+– објекат. Зато, пре него што почнемо да се бавимо концептима ООП, потребно је да се укратко упознамо
+са његовим основним појмовима.</p>
 <section id="id2">
 <h2>Објекти и класе<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>Однос између класа и објеката је исти као однос између типова и променљивих. Програмски језици
@@ -504,18 +504,18 @@
 <strong>објекти</strong>. За креирање објекта одређене класе често се користи израз <strong>инстанцирање</strong>, што значи
 стварање инстанце, односно примерка класе.</p>
 <p>На основу дефиниције класе компајлер израчунава колико меморије ће бити потребно за сваки
-појединачан објекат те класе, где ће шта од делова објекта у тој меморији да се налази, на који
-начин иницијално меморија треба да се попуни и како се касније користи. Посматрајући класе на тај
+појединачан објекат те класе, где ће који од делова објекта у тој меморији да се налази, на који
+начин меморија иницијално треба да се попуни и како се касније користи. Посматрајући класе на тај
 начин, можемо да кажемо да је класа прецизно упутство за касније креирање објеката те класе и
 извршавање поступака над њима.</p>
 <p>Класе су веома сличне структурама. Суштинска разлика између њих је то, што су структуре вредносни
 типови, а класе су референцирани типови. Подсетимо се шта то значи:</p>
 <ul class="simple">
-<li><p>када су параметри метода, структуре се (као и променљиве простог типа) преносе по вредности тј.
+<li><p>када су параметри метода, структуре се (као и променљиве простог типа) преносе по вредности, тј.
 копирају се, док се објекти класа (као и низови и матрице) преносе по референци, тј. методу се
 прослеђује информација о месту у меморији на коме се налази објекат;</p></li>
 <li><p>за структуре се простор алоцира у статичкој меморији (на стеку позива функција), осим ако су
-део неког низа или објекта. За објекте се простор увек алоцира у динамичкој меморији тј. на хипу.</p></li>
+део неког низа или објекта. За објекте се простор увек алоцира у динамичкој меморији, тј. на хипу.</p></li>
 </ul>
 <p>Из ове главне разлике између класа и структура проистичу још неке разлике, којима ћемо се бавити
 у делу посвећеном наслеђивању. До тада можемо да сматрамо да се класе у свему понашају исто као и
@@ -523,10 +523,10 @@
 </section>
 <section id="id3">
 <h2>Чланови класе<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
-<p>Дефиниција класе садржи прецизан опис свих њених делова. Делови од којих се класа састоји се називају
+<p>Дефиниција класе садржи прецизан опис свих њених делова. Делови од којих се класа састоји називају се
 <strong>чланови</strong> класе. Ти делови (као код структуре) могу да буду поља, својства, методи, операторски
 методи, индексери и догађаји. У курсу за први разред (у лекцији <a class="reference external" href="https://petlja.org/kurs/369/40/2419">о структурама</a>)
-је било речи о пољима и својствима структура. Све што је тамо речено, важи и за поља и својства класа.</p>
+било је речи о пољима и својствима структура. Све што је тамо речено, важи и за поља и својства класа.</p>
 <section id="id5">
 <h3>Поља<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
 <p>Поља су чланови класе у којима се налазе подаци неког једноставнијег типа (или референце на објекте
@@ -596,7 +596,7 @@
 приликом очитавања и додељивања вредности својству, извршавају се наредбе које напишемо у такозваним
 приступницима (енгл. <em>accessor</em>) датом својству. Свако својство може да има приступник за очитавање
 вредности који се зове <code class="docutils literal notranslate"><span class="pre">get</span></code>, и приступник за постављање вредности који се зове <code class="docutils literal notranslate"><span class="pre">set</span></code>.</p>
-<p>Један од ова два приступника може и да се изостави и тада се својство користи само за читање или само
+<p>Један од ова два приступника може и да се изостави, и тада се својство користи само за читање или само
 за упис вредности (у зависности од тога који приступник је изостављен). На пример, дефиницију класе
 <code class="docutils literal notranslate"><span class="pre">Prozor</span></code> можемо да допунимо на следећи начин:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Prozor</span><span class="w"></span>
@@ -623,15 +623,15 @@
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">poslednjiRed</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>али не и</p>
+<p>…али не и:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">.</span><span class="n">poslednjiRed</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">200</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
-<p>или</p>
+<p>…или:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">.</span><span class="n">poslednjiRed</span><span class="p">++;</span><span class="w"></span>
 </pre></div>
 </div>
-<p>јер својство <code class="docutils literal notranslate"><span class="pre">poslednjiRed</span></code> нема приступник <code class="docutils literal notranslate"><span class="pre">set</span></code>.</p>
+<p>…јер својство <code class="docutils literal notranslate"><span class="pre">poslednjiRed</span></code> нема приступник <code class="docutils literal notranslate"><span class="pre">set</span></code>.</p>
 <p>Када постоји веза између неких величина које описују објекте класе, као што је случај са класом
 <code class="docutils literal notranslate"><span class="pre">Prozor</span></code> и величинама <code class="docutils literal notranslate"><span class="pre">prviRed</span></code>, <code class="docutils literal notranslate"><span class="pre">visina</span></code> и <code class="docutils literal notranslate"><span class="pre">poslednjiRed</span></code>, није добро да за сваку од тих
 величина користимо поље. Да смо у претходном примеру уместо својства додали поље <code class="docutils literal notranslate"><span class="pre">poslednjiRed</span></code>,
@@ -669,11 +669,11 @@
 <span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Сада можемо да пишемо и</p>
+<p>Сада можемо да пишемо и:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">.</span><span class="n">poslednjiRed</span><span class="p">++;</span><span class="w"></span>
 </pre></div>
 </div>
-<p>што би са овако дефинисаним приступником <code class="docutils literal notranslate"><span class="pre">set</span></code> повећало висину прозора за један.</p>
+<p>…што би са овако дефинисаним приступником <code class="docutils literal notranslate"><span class="pre">set</span></code> повећало висину прозора за један.</p>
 </section>
 </section>
 <section id="id8">
@@ -737,7 +737,7 @@
 <code class="docutils literal notranslate"><span class="pre">Prozor</span></code>.</p>
 <p>У случају да програмерима који користе нашу класу желимо да омогућимо да читају вредност поља али
 не и да је мењају, једноставно и често примењивано решење је да поље оставимо као приватно и да му
-придружимо ствојство које има само приступник <code class="docutils literal notranslate"><span class="pre">get</span></code>. На пример:</p>
+придружимо својство које има само приступник <code class="docutils literal notranslate"><span class="pre">get</span></code>. На пример:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Prozor</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">prviRed</span><span class="p">;</span><span class="w"></span>

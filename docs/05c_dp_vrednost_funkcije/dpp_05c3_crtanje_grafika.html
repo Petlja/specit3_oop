@@ -198,7 +198,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -219,7 +219,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -451,7 +451,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -483,7 +483,7 @@
     
   <section id="id1">
 <h1>Апликација за цртање графика<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
-<p>У овој апликацији нема ничег новог, већ су само разни од раније познати делови склопљени у нову
+<p>У овој апликацији нема ничег новог, већ су само разни, од раније познати, делови склопљени у нову
 целину. Апликација за цртање графика користи библиотеку <code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code>, коју смо користили
 у програму за цртање многоуглова и програму за цртање графика одабраних функција. Оба ова програма
 представљена су заједно са библиотеком <code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code> када смо говорили о групама
@@ -497,16 +497,16 @@
 генеришемо објекат који израчунава вредности функције задате текстом.</p>
 <p>Тако ће форма поред објекта <code class="docutils literal notranslate"><span class="pre">cc</span></code> класе <code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code> да садржи и референцу <code class="docutils literal notranslate"><span class="pre">F</span></code> на
 апстрактну класу <code class="docutils literal notranslate"><span class="pre">Function</span></code> из библиотеке <code class="docutils literal notranslate"><span class="pre">Funkcije</span></code>. Сада разлику у методу <code class="docutils literal notranslate"><span class="pre">Form1_Paint</span></code>
-можемо да опишемо и конкретније: уместо линије</p>
+можемо да опишемо и конкретније – уместо линије:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="n">yw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="n">xw</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>користимо линију</p>
+<p>…користимо линију</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="n">yw</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">F</span><span class="p">.</span><span class="n">Value</span><span class="p">(</span><span class="n">xw</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>док је све остало могло да буде и потпуно исто. Мада је сличност две поменуте апликације врло велика,
-дајемо ради комплетности изворни кôд класе <code class="docutils literal notranslate"><span class="pre">Form1</span></code> апликације за цртање графика произвољне функције.</p>
+<p>…док је све остало могло да буде и потпуно исто. Мада је сличност две поменуте апликације врло велика,
+ради комплетности дајемо изворни кôд класе <code class="docutils literal notranslate"><span class="pre">Form1</span></code> апликације за цртање графика произвољне функције.</p>
 
     <div data-component="reveal" id="dugme_ParsiranjeFunkcija_Form1.cs"   data-showtitle="Садржај фајла Form1.cs" data-hidetitle="Сакриј садржај фајла Form1.cs">
     
@@ -720,10 +720,10 @@ namespace Grafik
 кôд и ове класе (фајл <code class="docutils literal notranslate"><span class="pre">Prompt.cs</span></code>).</p>
 <p>Ако желите да испробате апликацију, потребно је да урадите следеће:</p>
 <ul class="simple">
-<li><p>Креирајте нови пројекат типа <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Forms</span> <span class="pre">App</span></code> и назовите га <code class="docutils literal notranslate"><span class="pre">Grafik</span></code></p></li>
+<li><p>Креирајте нови пројекат типа <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Forms</span> <span class="pre">App</span></code> и назовите га <code class="docutils literal notranslate"><span class="pre">Grafik</span></code>,</p></li>
 <li><p>Подесите међузависност пројеката, тј. задајте да овај пројекат зависи од пројеката
-<code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code>  и <code class="docutils literal notranslate"><span class="pre">Funkcije</span></code></p></li>
-<li><p>Прегазите садржај фајлова <code class="docutils literal notranslate"><span class="pre">Form1.cs</span></code> и <code class="docutils literal notranslate"><span class="pre">Form1.Designer.cs</span></code> датим садржајем</p></li>
+<code class="docutils literal notranslate"><span class="pre">CoordinateConverter</span></code>  и <code class="docutils literal notranslate"><span class="pre">Funkcije</span></code>,</p></li>
+<li><p>Прегазите садржај фајлова <code class="docutils literal notranslate"><span class="pre">Form1.cs</span></code> и <code class="docutils literal notranslate"><span class="pre">Form1.Designer.cs</span></code> датим садржајем,</p></li>
 <li><p>Додајте у пројекат нови фајл (десни клик на пројекат у прозору <code class="docutils literal notranslate"><span class="pre">Solution</span> <span class="pre">Explorer</span></code>, ставка
 <code class="docutils literal notranslate"><span class="pre">Add</span></code>, а затим  <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Item</span></code> у искачућем менију), назовите га <code class="docutils literal notranslate"><span class="pre">Prompt.cs</span></code> и копирајте у њега
 кôд класе <code class="docutils literal notranslate"><span class="pre">Prompt</span></code>, који је дат у наставку.</p></li>

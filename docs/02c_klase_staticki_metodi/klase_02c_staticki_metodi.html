@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -572,7 +572,7 @@
 Мада смо ово сад разјаснили, сигурно ће се дешавати да реч <code class="docutils literal notranslate"><span class="pre">static</span></code> употребимо недоследно,
 тј. да урадимо једну од следеће две ствари:</p>
 <ul class="simple">
-<li><p>да у статичком методу покушамо да употребимо неког члана класе (поље, метод, својство)</p></li>
+<li><p>да у статичком методу покушамо да употребимо неког члана класе (поље, метод, својство), или</p></li>
 <li><p>да за објекат дате класе покушамо да позовемо неки нестатички метод те класе</p></li>
 </ul>
 <p>Испоставиће се да у оба случаја компајлер пријављује грешку и програм не може да се преведе
@@ -640,8 +640,8 @@
 <code class="docutils literal notranslate"><span class="pre">NZD</span></code> и <code class="docutils literal notranslate"><span class="pre">Skrati</span></code>, као ни метод <code class="docutils literal notranslate"><span class="pre">Parse</span></code>, не захтевају присуство неког објекта класе
 <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> из кога би се ти методи позивали. У ствари, у методима <code class="docutils literal notranslate"><span class="pre">NZD</span></code> и <code class="docutils literal notranslate"><span class="pre">Skrati</span></code> се чак
 ни не помињу објекти класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, па је сасвим природно да их означимо као статичке.</p>
-<p>Једна од разлика између ових статичких метода је у томе што је је метод <code class="docutils literal notranslate"><span class="pre">Parse</span></code> јаван и намењен
-позивању из кода ван класе, а методи <code class="docutils literal notranslate"><span class="pre">NZD</span></code> и <code class="docutils literal notranslate"><span class="pre">Skrati</span></code> приватни и намењени употреби само унутар
+<p>Једна од разлика између ових статичких метода је у томе што је метод <code class="docutils literal notranslate"><span class="pre">Parse</span></code> јаван и намењен
+позивању из кода ван класе, а методи <code class="docutils literal notranslate"><span class="pre">NZD</span></code> и <code class="docutils literal notranslate"><span class="pre">Skrati</span></code> су приватни и намењени употреби само унутар
 класе. О томе зашто су методи <code class="docutils literal notranslate"><span class="pre">NZD</span></code> и <code class="docutils literal notranslate"><span class="pre">Skrati</span></code> приватни ће бити још речи у делу о апстракцији.</p>
 <p>Након што смо додали метод <code class="docutils literal notranslate"><span class="pre">Parse</span></code>, програмеру који користи класу <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code> је сада лако да
 омогући својим корисницима да задају вредности разломака са тастатуре. Следи пример који можете
@@ -754,7 +754,7 @@ class Program
 <p>Кључну реч <code class="docutils literal notranslate"><span class="pre">static</span></code> можемо да пишемо и испред имена класе, чиме цела класа постаје статичка.
 Таква класа не може да се инстанцира, тј. не могу да се креирају објекти те класе. Самим тим,
 једини чланови који имају смисла за такву класу су статички чланови, најчешће само статички
-методи и константе (мада може да има и статичка поља и друге чланове).</p>
+методи и константе (мада она може да има и статичка поља и друге чланове).</p>
 <p>Пример статичке класе је добро позната класа <code class="docutils literal notranslate"><span class="pre">Math</span></code> из библиотеке. У досадашњем учењу
 програмирања навикли смо да математичке функције позивамо пишући <code class="docutils literal notranslate"><span class="pre">Math</span></code> са тачком испред
 имена функције, на пример <code class="docutils literal notranslate"><span class="pre">Math.Abs(x)</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.Min(x,</span> <span class="pre">y)</span></code>, <code class="docutils literal notranslate"><span class="pre">Math.Sqrt(x)</span></code> итд. Овај запис
@@ -765,9 +765,9 @@ class Program
 </div>
 <p>Пошто је реч о статичкој класи, објекте ове класе није могуће креирати, нити је то потребно.
 Класу <code class="docutils literal notranslate"><span class="pre">Math</span></code> користимо само као колекцију међусобно сродних функција (метода), а у принципу
-исто важи са сваку статичку класу, па и за оне које бисмо сами написали. Када би нам била
+исто важи за сваку статичку класу, па и за оне које бисмо сами написали. Када би нам била
 потребна једна таква колекција функција, могли бисмо да групишемо те функције у статичку класу,
-тј. да имплеметирамо потребне функције као методе статичке класе. Име статичке класе обично
+тј. да имплементирамо потребне функције као методе статичке класе. Име статичке класе обично
 бирамо тако да асоцира на оно што је заједничко свим њеним методима, као што је случај и са
 класом <code class="docutils literal notranslate"><span class="pre">Math</span></code>.</p>
 <p>Следећи једноставан пример илуструје како можемо да направимо статичку класу.</p>

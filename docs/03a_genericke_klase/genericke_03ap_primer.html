@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Генеричке класе - решен пример</title>
+    <title>Генеричке класе – решен пример</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -198,7 +198,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -219,7 +219,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -451,7 +451,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -482,7 +482,7 @@
     <div id="main-content">
     
   <section id="id1">
-<h1>Генеричке класе - решен пример<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>Генеричке класе – решен пример<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>Користећи генеричке класе из библиотеке, можемо једноставно да направимо своје апстрактне
 типове података, прилагођене потребама проблема који решавамо.</p>
 
@@ -490,20 +490,20 @@
         <div class="note-icon-holder"> </div>
         <img src="../_static/img/question-mark.png" class="note-image questionnote-image" /> 
         <div class="course-content">
-<p><strong>Пример</strong>: Написати генеричку класу <code class="docutils literal notranslate"><span class="pre">CollectionWihCursor&lt;T&gt;</span></code>, која симулира колекцију
+<p><strong>Пример</strong>: Написати генеричку класу <code class="docutils literal notranslate"><span class="pre">CollectionWithCursor&lt;T&gt;</span></code>, која симулира колекцију
 података одређеног типа. Класа функционише као да се унутар колекције користи курсор,
 који омогућава убацивање нових и избацивање постојећих елемената из колекције само на
 позицији курсора. Конкретније, класа треба да садржи следеће јавне методе:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Insert(T</span> <span class="pre">x)</span></code> за убацивање елемента на позицији курсора, који остаје иза елемента</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Backspace()</span></code> за брисање елемента пре курсора</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Delete()</span></code>    за брисање елемента после курсора</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">GoLeft()</span></code>    за померање курсора за једно место лево</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">GoRight()</span></code>   за померање курсора за једно место десно</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Insert(T</span> <span class="pre">x)</span></code> за убацивање елемента на позицији курсора, који остаје иза елемента,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Backspace()</span></code> за брисање елемента пре курсора,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">Delete()</span></code>    за брисање елемента после курсора,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">GoLeft()</span></code>    за померање курсора за једно место лево, и</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">GoRight()</span></code>   за померање курсора за једно место десно.</p></li>
 </ul>
 <p>Поред набројаног, треба омогућити кориснику да очита тренутни број елемената у колекцији
 (својство <code class="docutils literal notranslate"><span class="pre">Count</span></code>), позицију курсора (својство <code class="docutils literal notranslate"><span class="pre">CursorPosition</span></code>) и вредност сваког
-елемента (индексер). довољно је да својства и индексер имају само приступник <code class="docutils literal notranslate"><span class="pre">get</span></code>.
+елемента (индексер). Довољно је да својства и индексер имају само приступник <code class="docutils literal notranslate"><span class="pre">get</span></code>.
 Сложеност сваке операције треба да је у просеку <span class="math notranslate nohighlight">\(O(1)\)</span>.</p>
 <p>Написати и програм који демонстрира функционалност класе.</p>
 
@@ -524,17 +524,17 @@
 <p><strong>О редукцији интерфејса:</strong></p>
 <p>Када смо стек имплементирали помоћу листе, такође смо редуковали интерфејс употребљене
 класе. Наиме, листа омогућава многе операције које стек не подржава (очитавање и мењање
-било ког елемента, уметање или избацивање на било којој позицији, итд.). Неке од тих
+било ког елемента, уметање или избацивање на било којој позицији, итд). Неке од тих
 операција су ефикасне, а неке и нису.</p>
 <p>У општем случају, редукција интерфејса може да се врши из следећих разлога:</p>
 <ul class="simple">
 <li><p><strong>да поједностави употребу класе кориснику</strong>, остављајући му само ону функционалност
-која му је довољна, не замарајући га оним што му је сувишно (концепт апстракције),</p></li>
+која му је довољна, не замарајући га оним што му је сувишно (концепт апстракције);</p></li>
 <li><p><strong>да олакша читање кода</strong>, јер употреба класе – омотача са смањеном
-функционалношћу појашњава њену намену, односно начин употребе,</p></li>
+функционалношћу појашњава њену намену, односно начин употребе;</p></li>
 <li><p><strong>да олакша касније побољшавање имплементације</strong>, јер сакривањем кориснику непотребних
 делова класе употребљене у имплементацији остаје мање метода које треба подржати у новој
-имплементацији. Побољшање може да се односи на ефикасност, краткоћу и јасноћу, или
+имплементацији. Побољшање може да се односи на ефикасност, краткоћу и јасноћу, или на
 друге особине кода.</p></li>
 </ul>
 
@@ -624,7 +624,7 @@ class Program
 
 </textarea>
 </div>
-<p>Програм који демонстрира употребу класе <code class="docutils literal notranslate"><span class="pre">CollectionWihCursor</span></code>, исписује</p>
+<p>Програм који демонстрира употребу класе <code class="docutils literal notranslate"><span class="pre">CollectionWithCursor</span></code>, исписује</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">br</span><span class="o">.</span> <span class="n">elemenata</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="n">pozicija</span> <span class="n">kursora</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="n">elementi</span><span class="p">:</span> <span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="n">d</span> <span class="n">e</span> <span class="n">f</span><span class="o">.</span>
 <span class="n">br</span><span class="o">.</span> <span class="n">elemenata</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="n">pozicija</span> <span class="n">kursora</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="n">elementi</span><span class="p">:</span> <span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="n">i</span> <span class="n">f</span><span class="o">.</span>
 <span class="n">br</span><span class="o">.</span> <span class="n">elemenata</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="n">pozicija</span> <span class="n">kursora</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="n">elementi</span><span class="p">:</span> <span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="n">i</span> <span class="n">k</span> <span class="n">f</span><span class="o">.</span>

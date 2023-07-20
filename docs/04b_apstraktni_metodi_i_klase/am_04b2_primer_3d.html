@@ -198,7 +198,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -219,7 +219,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -451,7 +451,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -504,14 +504,14 @@
     </div></div>
 <p>Можемо да кажемо да су специјализација и генерализација два различита погледа на наслеђивање. У
 случају специјализације полазимо од општије класе и на основу ње креирамо једну или више
-специјализованих класа наследница. Код генерализације је смер размишљања и редослед креирања обрнут,
+специјализованих класа наследница. Код генерализације је смер размишљања и редослед креирања обрнут –
 полазимо од специјализованих класа и креирамо општији појам, који служи као базна класа за полазне
 класе.</p>
 <p>На примеру који следи проћи ћемо још једном кроз процес генерализације, односно препознавања
 заједничких карактеристика осмишљених класа, да бисмо заједничке делове издвојили у општију, базну
 класу.</p>
 <section id="id2">
-<h2>Пример - површине и запремине тела<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>Пример – површине и запремине тела<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 
     <div class="note-wrapper questionnote-type">
         <div class="note-icon-holder"> </div>
@@ -519,11 +519,11 @@
         <div class="course-content">
 <p>Проширити решење из примера са обимима и површинама фигура у равни и доћи до скупа класа помоћу
 којег могу да се рачунају површине и запремине ваљка, призме, купе и пирамиде (мисли се на прави
-ваљак, праву купу, праву правилну призму и праву правилну пирамиду). Ислустровати рад тих класа
+ваљак, праву купу, праву правилну призму и праву правилну пирамиду). Илустровати рад тих класа
 као у претходном примеру.</p>
 
     </div></div>
-<p>Подсетимо се познатих формула за површину и запремину ваљка и призме.</p>
+<p>Подсетимо се познатих формула за површину и запремину ваљка и призме:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align} \\
 &amp;V_{valjka} = BH,               &amp;   P_{valjka} = 2B + M\\
@@ -534,7 +534,7 @@
 површина омотача и код ваљка и код призме израчунава као производ висине и обима основе, долазимо
 до закључка да ваљак и призму за потребе овог примера можемо да представимо истом класом. Та класа
 треба да садржи само висину као реалан број, и основу којој ће да приступа преко референце на класу
-<code class="docutils literal notranslate"><span class="pre">Figura2D</span></code>, а могла би да изгледа овако за почетак.</p>
+<code class="docutils literal notranslate"><span class="pre">Figura2D</span></code>, а могла би да изгледа овако, за почетак:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">StubastaFigura</span><span class="w"> </span><span class="c1">// valjak, prizma</span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">Figura2D</span><span class="w"> </span><span class="n">osnova</span><span class="p">;</span><span class="w"></span>
@@ -569,13 +569,13 @@
 <span class="math notranslate nohighlight">\(M = \frac{1}{2} O \cdot h\)</span>, где је <span class="math notranslate nohighlight">\(O\)</span> поново обим (овај пут многоугаоне) основе, а
 <span class="math notranslate nohighlight">\(h\)</span> је висина бочне стране (апотема). Да ли ова разлика захтева посебне класе за купу и
 пирамиду? Одговор зависи од тога шта од података желимо да памтимо за ова тела. Ако, по угледу на
-ваљак и призму, памтимо само основу и висину, онда изводницу, односно висину бочне стране треба да
-израчунамо. Изводница купе се рачуна по формули <span class="math notranslate nohighlight">\(s = \sqrt{r^2 + H^2}\)</span>. Висина <span class="math notranslate nohighlight">\(h\)</span> бочне
+ваљак и призму, памтимо само основу и висину, онда треба да израчунамо изводницу, односно висину
+бочне стране. Изводница купе се рачуна по формули <span class="math notranslate nohighlight">\(s = \sqrt{r^2 + H^2}\)</span>. Висина <span class="math notranslate nohighlight">\(h\)</span> бочне
 стране пирамиде се рачуна по истој формули, <span class="math notranslate nohighlight">\(h = \sqrt{r^2 + H^2}\)</span>, с тим да <span class="math notranslate nohighlight">\(r\)</span> код
 пирамиде означава полупречник круга уписаног у многоугаону основу, а то је величина коју већ
 израчунавамо у класи <code class="docutils literal notranslate"><span class="pre">Ntougao</span></code> (погледајте претходни пример, метод <code class="docutils literal notranslate"><span class="pre">Povrsina</span></code>). Зато је довољно
-да у апстрактну класу <code class="docutils literal notranslate"><span class="pre">Figura2D</span></code>, додамо и апстрактан метод <code class="docutils literal notranslate"><span class="pre">RUpisanogKruga</span></code>. Формулу за
-полупречник уписаног круга многоугла већ имамо, а за круг је то сам полупречник круга. Према томе,
+да у апстрактну класу <code class="docutils literal notranslate"><span class="pre">Figura2D</span></code> додамо и апстрактан метод <code class="docutils literal notranslate"><span class="pre">RUpisanogKruga</span></code>. Формулу за
+полупречник уписаног круга многоугла већ имамо, а за круг је то сâм полупречник круга. Према томе,
 за рачунање површине и запремине купе и пирамиде можемо да планирамо класу попут ове:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SpicastaFigura</span><span class="w"> </span><span class="c1">// kupa, piramida</span>
 <span class="p">{</span><span class="w"></span>
@@ -591,8 +591,8 @@
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">osnova</span><span class="p">.</span><span class="n">Povrsina</span><span class="p">();</span><span class="w"></span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">osnova</span><span class="p">.</span><span class="n">RUpisanogKruga</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">visina</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">visina</span><span class="p">);</span><span class="w"> </span><span class="c1">// izvodnica, ili visina bocne strane</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0.5</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">osnova</span><span class="p">.</span><span class="n">Obim</span><span class="p">()</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="c1">// omotac</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Sqrt</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">visina</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">visina</span><span class="p">);</span><span class="w"> </span><span class="c1">// izvodnica, ili visina bočne strane</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0.5</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">osnova</span><span class="p">.</span><span class="n">Obim</span><span class="p">()</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="c1">// omotač</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
@@ -603,7 +603,7 @@
 <code class="docutils literal notranslate"><span class="pre">osnova</span></code> и <code class="docutils literal notranslate"><span class="pre">visina</span></code> могу да буду заштићена поља базне класе, пошто су потребна за рачунање
 површина и запремина сва четири поменута тела. Даље, методи <code class="docutils literal notranslate"><span class="pre">Zapremina</span></code> и <code class="docutils literal notranslate"><span class="pre">Povrsina</span></code> могу да
 буду апстрактни методи базне класе, због чега ће и цела класа да буде апстрактна. Ево како би она
-могла да изгледа.</p>
+могла да изгледа:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">abstract</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Figura3D</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="n">Figura2D</span><span class="w"> </span><span class="n">osnova</span><span class="p">;</span><span class="w"></span>
@@ -618,7 +618,7 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Закључујемо да су нам у програму довољне следеће две мале хијерархије класа.</p>
+<p>Закључујемо да су нам у програму довољне следеће две мале хијерархије класа:</p>
 <ul class="simple">
 <li><p>Базна класа прве хијерархије је апстрактна класа <code class="docutils literal notranslate"><span class="pre">Figura2D</span></code> (дводимензиона фигура), из које су изведене
 класе <code class="docutils literal notranslate"><span class="pre">Krug</span></code> и <code class="docutils literal notranslate"><span class="pre">Ntougao</span></code>. Ове класе су незнатно измењене у односу на претходни пример, јер им је додат
@@ -698,9 +698,9 @@ internal class Program
         public override double Povrsina()
         {
             double r = osnova.RUpisanogKruga();
-            double s = Math.Sqrt(r * r + visina * visina); // izvodnica, ili visina bocne strane
+            double s = Math.Sqrt(r * r + visina * visina); // izvodnica, ili visina bočne strane
             double b = osnova.Povrsina();
-            double m = 0.5 * osnova.Obim() * s; // omotac
+            double m = 0.5 * osnova.Obim() * s; // omotač
             return b + m;
         }
     }
@@ -721,13 +721,13 @@ internal class Program
         figure2D.Add(new Krug(Color.Red, 5));        // crveni krug poluprecnika 5
         figure2D.Add(new Krug(Color.Green, 7));      // zeleni krug poluprecnika 7
         figure2D.Add(new Ntougao(Color.Red, 6, 4));  // crveni kvadrat stranice 6
-        figure2D.Add(new Ntougao(Color.Blue, 2, 6)); // plavi sestougao stranice 2
+        figure2D.Add(new Ntougao(Color.Blue, 2, 6)); // plavi šestougao stranice 2
 
         List&lt;Figura3D&gt; figure3D = new List&lt;Figura3D&gt;();
         figure3D.Add(new SpicastaFigura(figure2D[0], 12)); // crvena kupa
         figure3D.Add(new StubastaFigura(figure2D[1], 12)); // zeleni valjak
-        figure3D.Add(new SpicastaFigura(figure2D[2], 10)); // crvena cetvorostrana piramida
-        figure3D.Add(new StubastaFigura(figure2D[3], 10)); // plava sestostrana prizma
+        figure3D.Add(new SpicastaFigura(figure2D[2], 10)); // crvena četvorostrana piramida
+        figure3D.Add(new StubastaFigura(figure2D[3], 10)); // plava šestostrana prizma
 
         var povZap = new Dictionary&lt;Color, Tuple&lt;double, double&gt;&gt;();
         foreach (Figura3D f in figure3D)

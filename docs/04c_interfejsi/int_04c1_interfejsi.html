@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Интерфејси</title>
+    <title>Вишеструко наслеђивање и појам интерфејса</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/activecode.css" />
@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -481,7 +481,7 @@
     <div id="main-content">
     
   <section id="id1">
-<h1>Интерфејси<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<h1>Вишеструко наслеђивање и појам интерфејса<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>У овој лекцији:</p>
 <ul class="simple">
 <li><p>Шта је вишеструко наслеђивање</p></li>
@@ -501,11 +501,11 @@
 могуће проблеме. Због тога данас неки језици подржавају вишеструко наслеђивање, а неки не. Типично,
 новији језици су ти који не подржавају в.н. а уместо њега уводе неке сличне концепте, који нуде
 приближно исте могућности уз мање ризика од погрешне употребе. Постојећи концепти који служе као
-замене за вишеструко наслеђивање и даље се развијају и мењају. Са друге стране, разни језици који
+замене за в.н. и даље се развијају и мењају. Са друге стране, разни језици који
 дозвољавају в.н. имају различите додатне захтеве за писање кода (у смислу синтаксе), како би се
 смањила могућност грешке.</p>
 <p>Темом вишеструког наслеђивања и могућим проблемима који са њим долазе нећемо се овде даље бавити,
-а заинтересовани читаоци могу да нађу више информација већ на страници Википедије <a class="reference external" href="https://en.wikipedia.org/wiki/Multiple_inheritance">о вишеструком
+а заинтересовани читаоци већ могу да нађу више информација на страници Википедије <a class="reference external" href="https://en.wikipedia.org/wiki/Multiple_inheritance">о вишеструком
 наслеђивању</a>.</p>
 <p>У језику <cite>C#</cite>, наслеђивање више класа није могуће. Сродан концепт који у великој мери надокнађује
 потребу за вишеструким наслеђивањем се у језику <cite>C#</cite> назива <strong>интерфејс</strong>. До сада смо реч интерфејс
@@ -521,7 +521,7 @@
 (потписе) једног или више метода. Поред метода, интерфејс може да садржи декларације својстава,
 индексера и догађаја. За класу која садржи дефиниције метода и других чланова декларисаних у
 интерфејсу, каже се да <strong>имплементира дати интерфејс</strong>.</p>
-<p>У неким програмским језицима уместо речи интерфејс користи се реч протокол, а уместо да се
+<p>У неким програмским језицима уместо речи „интерфејс” користи се реч „протокол”, а уместо да се
 каже да класа имплементира интерфејс, каже се да класа усваја (енгл. <cite>adopts</cite>) протокол.
 Реч је о суштински истом концепту.</p>
 
@@ -541,7 +541,7 @@
 </section>
 <section id="id4">
 <h2>Употреба интерфејса<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
-<p>Погледајмо следећи метод за исписивање свих елемената листе.</p>
+<p>Погледајмо следећи метод за исписивање свих елемената листе:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Ispis</span><span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;[&quot;</span><span class="p">);</span><span class="w"></span>
@@ -557,11 +557,11 @@
 </pre></div>
 </div>
 <p>Уколико нам је потребно да на исти начин исписујемо и елементе низова и других објеката који садрже
-колекције, могли бисмо да за сваки тип колекције напишемо по један такав метод. Међутим, испоствило
+колекције, могли бисмо да за сваки тип колекције напишемо по један такав метод. Међутим, испоставило
 би се да сви ти методи изгледају потпуно исто, осим што се разликују у декларацији параметра. Зато,
 уместо да пишемо посебан метод за сваки тип објекта, можемо да употребимо интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>
 као општи тип за све објекте који садрже колекције, а који би се прослеђивали методу као параметар.
-У том случају, метод би изгледао овако.</p>
+У том случају, метод би изгледао овако:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Ispis</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;[&quot;</span><span class="p">);</span><span class="w"></span>
@@ -592,7 +592,7 @@
 </div>
 <p>Оваква уштеда у писању метода је могућа јер наредба <code class="docutils literal notranslate"><span class="pre">foreach</span></code> прихвата било који објекат, чија
 класа имплементира интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>. Како и низ и свака од класа <code class="docutils literal notranslate"><span class="pre">List</span></code>, <code class="docutils literal notranslate"><span class="pre">SortedSet</span></code>,
-<code class="docutils literal notranslate"><span class="pre">Stack</span></code>, <code class="docutils literal notranslate"><span class="pre">Queue</span></code> имплементира овај интерфејс, сваки од ових објеката може да се проследи методу
+<code class="docutils literal notranslate"><span class="pre">Stack</span></code>, <code class="docutils literal notranslate"><span class="pre">Queue</span></code> имплементирају овај интерфејс, сваки од ових објеката може да се проследи методу
 као параметар. Више од тога, оваквим методом смо подржали исписивање и свих објеката који још не
 постоје, а који ће бити написани тако да имплементирају интерфејс <code class="docutils literal notranslate"><span class="pre">IEnumerable</span></code>. Такође, ако на
 неком месту у коду користимо листу, па се касније предомислимо и желимо да користимо низ или неку
@@ -620,7 +620,7 @@
 <p>Језик <cite>C#</cite> је веома богат већ дефинисаним интерфејсима у библиотеци <cite>.Net</cite>, као и наредбама и
 библиотечким методима који користе те интерфејсе. Да бисмо објекте наших класа могли да користимо
 у таквим наредбама и методима, довољно је да те наше класе имплементирају одговарајуће интерфејсе.
-Следећих пар примера илуструје неке од користи које можемо да имамо када класом коју ми пишемо
+Следећих пар примера илуструје неке од користи које можемо да имамо када класом коју пишемо
 имплементирамо интерфејс из библиотеке.</p>
 <section id="icomparable">
 <h3>Пример – сортирање низова и листи (интерфејс <code class="docutils literal notranslate"><span class="pre">IComparable</span></code>)<a class="headerlink" href="#icomparable" title="Permalink to this heading">¶</a></h3>
@@ -628,7 +628,7 @@
 класу, која омогућава читање, исписивање и рачунање са разломцима на исти начин као што се то
 ради са целим или реалним бројевима. Ипак, тиме нисмо достигли пуну функционалност, коју би
 неко могао да очекује од класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>. На пример, са постојећом имплементацијом класе
-није могуће сортирати низ разломака методом <code class="docutils literal notranslate"><span class="pre">Array.Sort</span></code>. Ако бисмо писали</p>
+није могуће сортирати низ разломака методом <code class="docutils literal notranslate"><span class="pre">Array.Sort</span></code>. Ако бисмо писали:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span><span class="w"></span>
 <span class="n">Razlomak</span><span class="p">[]</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">[</span><span class="n">n</span><span class="p">];</span><span class="w"></span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="p">++)</span><span class="w"></span>
@@ -637,8 +637,8 @@
 <span class="n">Array</span><span class="p">.</span><span class="n">Sort</span><span class="p">(</span><span class="n">r</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>програм би могао да се покрене, али би пукао током извршавања наредбе <code class="docutils literal notranslate"><span class="pre">Array.Sort(r);</span></code>. Тачније,
-програм би бацио изузетак и добили бисмо следећу поруку:</p>
+<p>…програм би могао да се покрене, али би пукао током извршавања наредбе <code class="docutils literal notranslate"><span class="pre">Array.Sort(r);</span></code>. Тачније,
+програм би „бацио” изузетак и добили бисмо следећу поруку:</p>
 <div class="line-block">
 <div class="line">System.InvalidOperationException: ’Failed to compare two elements in the array.’</div>
 <div class="line">Inner Exception</div>
@@ -660,7 +660,7 @@
 
     </div></div>
 <p>Према томе, да бисмо могли да сортирамо бројеве на наведени начин, потребно је да мало преправимо
-класу <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>. Конкретно, уместо</p>
+класу <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>. Конкретно, уместо:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Razlomak</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="c1">// ...</span>
@@ -674,7 +674,7 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>треба да пишемо</p>
+<p>…треба да пишемо</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Razlomak</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IComparable</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="c1">// ...</span>
@@ -692,7 +692,7 @@
 <p>Сада се претходне наредбе за сортирање низа разломака извршавају баш онако како смо и очекивали.</p>
 <p>Из овог примера видимо да се интерфејс који дата класа имплементира наводи после имена класе и
 двотачке, потпуно исто као и базна класа коју дата класа наслеђује. Друга измена је измена типа
-параметра метода <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code>. Она је потребна зато што је је таква декларација овог метода у
+параметра метода <code class="docutils literal notranslate"><span class="pre">CompareTo</span></code>. Она је потребна зато што је таква декларација овог метода у
 библиотечком интерфејсу.</p>
 </section>
 <section id="using-idisposable">
@@ -731,13 +731,13 @@
 <cite>garbage collector</cite>), али до тада може да прође извесно време, а да у међувремену систем буде
 успорен због недостатка оперативне меморије. Без обзира на врсту ресурса о коме је реч, било
 би добро да предности наредбе <code class="docutils literal notranslate"><span class="pre">using</span></code> можемо да користимо и за инстанце наше класе. Конкретно,
-било би корисно да уместо</p>
+било би корисно да уместо:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">MojaKlasa</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MojaKlasa</span><span class="p">();</span><span class="w"></span>
 <span class="c1">// koristi objekat a</span>
 <span class="c1">// ...</span>
 </pre></div>
 </div>
-<p>можемо да пишемо</p>
+<p>…можемо да пишемо:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">MojaKlasa</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MojaKlasa</span><span class="p">())</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="c1">// koristi objekat a</span>
@@ -777,7 +777,7 @@
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;kraj programa&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Извршавањем последња три реда исписује се</p>
+<p>Извршавањем последња три реда исписује се:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Upotreba</span> <span class="n">objekta</span> <span class="n">a</span>
 <span class="n">Pozvan</span> <span class="n">metod</span> <span class="n">A</span><span class="o">.</span><span class="n">Dispose</span>
 <span class="n">kraj</span> <span class="n">programa</span>

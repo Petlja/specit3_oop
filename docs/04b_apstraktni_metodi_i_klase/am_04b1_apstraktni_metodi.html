@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -505,7 +505,7 @@
 
     </div></div>
 <p>Задатак је довољно једноставан да би му решење без класа и објеката било сасвим примерено. Међутим,
-овде желимо да управо на малом примеру уведемо један нови концепт, који ће се показати као врло
+овде желимо управо да на малом примеру уведемо један нови концепт, који ће се показати као врло
 користан у већим задацима.</p>
 <section id="id3">
 <h3>Прво решење<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
@@ -557,7 +557,7 @@ internal class Program
         krugovi.Add(new Krug(Color.Green, 7));      // zeleni krug poluprecnika 7
         List&lt;Ntougao&gt; mnogouglovi = new List&lt;Ntougao&gt;();
         mnogouglovi.Add(new Ntougao(Color.Red, 6, 4));  // crveni kvadrat stranice 6
-        mnogouglovi.Add(new Ntougao(Color.Blue, 2, 6)); // plavi sestougao stranice 2
+        mnogouglovi.Add(new Ntougao(Color.Blue, 2, 6)); // plavi šestougao stranice 2
 
         Dictionary&lt;Color, double&gt; povBoje = new Dictionary&lt;Color, double&gt;();
         foreach (Krug k in krugovi)
@@ -613,7 +613,7 @@ internal class Program
 <p>Комплетности ради, напомињемо да језик <cite>C#</cite> (као и већина објектно оријентисаних програмских језика)
 нуди могућност да за дату референцу на базну класу проверимо да ли указује на објекат одређене
 изведене класе. Поред других начина, у језику <cite>C#</cite> у ту сврху могу да се употребе оператори <code class="docutils literal notranslate"><span class="pre">is</span></code> и
-<code class="docutils literal notranslate"><span class="pre">as</span></code>, као што показује следећи исечак кода.</p>
+<code class="docutils literal notranslate"><span class="pre">as</span></code>, као што показује следећи исечак кода:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Figura2D</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">figure</span><span class="p">)</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">obim</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">povrsina</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
@@ -699,7 +699,7 @@ internal class Program
         figure.Add(new Krug(Color.Red, 5));        // crveni krug poluprecnika 5
         figure.Add(new Krug(Color.Green, 7));      // zeleni krug poluprecnika 7
         figure.Add(new Ntougao(Color.Red, 6, 4));  // crveni kvadrat stranice 6
-        figure.Add(new Ntougao(Color.Blue, 2, 6)); // plavi sestougao stranice 2
+        figure.Add(new Ntougao(Color.Blue, 2, 6)); // plavi šestougao stranice 2
 
         Dictionary&lt;Color, double&gt; povBoje = new Dictionary&lt;Color, double&gt;();
         foreach (Figura2D f in figure)
@@ -793,7 +793,7 @@ internal class Program
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>У дефиницијама метода у изведеним класама треба да назначимо да се ради дефиницији управо апстрактног
+<p>У дефиницијама метода у изведеним класама треба да назначимо да се ради о дефиницији управо апстрактног
 метода декларисаног у базној класи. Обратите пажњу на реч <code class="docutils literal notranslate"><span class="pre">override</span></code> у изведеним класама.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Krug</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Figura2D</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
@@ -816,7 +816,7 @@ internal class Program
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Ево како изгледа цео програм, који користи апстрактну базну класу.</p>
+<p>Ево како изгледа цео програм, који користи апстрактну базну класу:</p>
 
 <div data-childcomponent="klase_obimi_povrsine3" class="course-box course-box-problem course-content">
 
@@ -864,7 +864,7 @@ internal class Program
         figure.Add(new Krug(Color.Red, 5));        // crveni krug poluprecnika 5
         figure.Add(new Krug(Color.Green, 7));      // zeleni krug poluprecnika 7
         figure.Add(new Ntougao(Color.Red, 6, 4));  // crveni kvadrat stranice 6
-        figure.Add(new Ntougao(Color.Blue, 2, 6)); // plavi sestougao stranice 2
+        figure.Add(new Ntougao(Color.Blue, 2, 6)); // plavi šestougao stranice 2
 
         Dictionary&lt;Color, double&gt; povBoje = new Dictionary&lt;Color, double&gt;();
         foreach (Figura2D f in figure)

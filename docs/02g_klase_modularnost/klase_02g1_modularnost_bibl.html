@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -484,7 +484,7 @@
 <h1>Модуларност, библиотеке<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>У овој лекцији:</p>
 <ul class="simple">
-<li><p>Шта значи да је кôд модуларан и зашто је то добро.</p></li>
+<li><p>Шта значи када кажемо да је кôд модуларан и зашто је то добро.</p></li>
 <li><p>Како се формира библиотека класа и како се она укључује у програм.</p></li>
 </ul>
 <div class="line-block">
@@ -544,11 +544,11 @@
 и из неког другог извора. На пример, може да се направи помоћни модул који шаље податке из унапред
 припремљеног фајла, са истог рачунара или из локалне мреже. Тај помоћни модул би слао податке на
 исти начин као и модул за рад са сервером, тако да је прелазак на један или други извор врло
-једноставан. Тиме би се у многоме олакшао развој поменутих модула који користе податке, јер на овај
-начин могу да се припреме разне специфичне секвенце податка, тј. да се модули тестирају на одабраним
-подацима, уместо да тестирање зависи од тога какви подаци ће да наиђу. Овакво тестирање би омогућило
+једноставан. Тиме би се умногоме олакшао развој поменутих модула који користе податке, јер на овај
+начин могу да се припреме разне специфичне секвенце података, тј. да се модули тестирају на одабраним
+подацима, уместо да тестирање зависи од тога какви ће подаци да наиђу. Овакво тестирање би омогућило
 да се неисправности (багови) или евентуалне регресије (назадовање у развоју, губитак функционалности
-услед накнадно унете грешке), брже и лакше открију.</p>
+услед накнадно унете грешке) брже и лакше открију.</p>
 </section>
 <section id="id5">
 <h3>Лакше разумевање затеченог кода<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
@@ -557,7 +557,7 @@
 модула, чему они служе и како се користе. Тиме ћемо стећи увид у глобалну организацију апликације
 и начин на који њене целине сарађују. Уколико је потребно да неки модул дорадимо, можемо и тек у
 другом пролазу да га детаљније упознамо, тј. да проучимо и његову унутрашњу организацију.</p>
-<p>Без организације по модулима, било би много теже да одлучимо одакле да почнемо упознавање кода,
+<p>Без организације по модулима, било би много теже да одлучимо одакле да почнемо да упознајемо код,
 односно да стекнемо општи увид у начин на који апликација функционише.</p>
 </section>
 <section id="id6">
@@ -565,7 +565,7 @@
 <p>Када кôд није организован по модулима, могуће је (бар у принципу) да измена на једном месту има
 утицаја на било који други део програма. То значи да би после сваке измене било потребно да се
 тестирају сви делови програма. Већ ово није баш практично, нарочито када је програм веома велики
-и тестирање свих делова траје дуго. Посебно је лоше ако се заиста измене на једном месту
+и тестирање свих делова траје дуго. Посебно је лоше ако се измене на једном месту заиста
 одражавају на разне, удаљене делове програма, јер је тада исправљање грешака веома тешко.</p>
 <p>Насупрот овоме, када је програм организован по модулима, после измене у једном модулу довољно је
 да се тестира само тај модул. Када се потврди да је начин употребе тог модула у складу са
@@ -596,7 +596,7 @@
 <h2>Појам, формирање и употреба библиотеке<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h2>
 <p>Идеју о издвајању неког модула у целину коју лако укључујемо у разне програме илустроваћемо на
 примеру раније написане класе за играње игре <em>Асоцијације</em>. Овај пример је довољно садржајан за
-илустрацију технике, али треба имати на уму да модули често садрже више класа, а сам концепт
+илустрацију технике, али треба имати на уму да модули често садрже више класа, а сâм концепт
 модуларности је утолико значајнији, што је цео пројекат већи и сложенији.</p>
 <section id="id9">
 <h3>Библиотека класа<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h3>
@@ -611,14 +611,14 @@
 библиотека са динамичким повезивањем.</p>
 <p>Смештање модула у библиотеку нам додатно омогућава да неком дамо нашу библиотеку на употребу, а
 да му при томе не дамо изворни кôд. Уместо изворног кода, довољно је да поделимо само извршиви
-<cite>dll</cite> фајл наше библиотеке. Исто тако, можемо да добијемо нечију библиотеку на употребу, а да
+<code class="docutils literal notranslate"><span class="pre">.dll</span></code> фајл наше библиотеке. Исто тако, можемо да добијемо нечију библиотеку на употребу, а да
 при томе не добијемо изворни кôд библиотеке.</p>
 <p>У овом курсу нам могућност дељења библиотеке без изворног кода није од значаја и нећемо је
 користити, али вреди знати да таква могућност постоји.</p>
 </section>
 <section id="id10">
 <h3>Формирање библиотеке класа<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h3>
-<p>Ево како може да се формира динамичка библиотека у окружењу <cite>Visual Studio</cite>.</p>
+<p>Ево како може да се формира динамичка библиотека у окружењу <cite>Visual Studio</cite>:</p>
 <ul class="simple">
 <li><p>Након покретања  окружења <cite>Visual Studio</cite> треба изабрати опцију <cite>Create a new project</cite>.</p></li>
 <li><p>За тип новог пројекта бирамо <cite>Class Library (.NET framework)</cite>.</p></li>
@@ -645,19 +645,19 @@
 <p>Сада треба да креирамо пројекте који ће да користе библиотеку са класом <code class="docutils literal notranslate"><span class="pre">Asocijacije</span></code>. То могу да
 буду друге библиотеке, конзолне апликације или графичке (<cite>Windows Forms</cite>) апликације. Мада сте на
 креирање новог пројекта који садржи конзолну апликацију вероватно већ увелико навикли, поновимо и
-овде кораке тог поступка.</p>
+овде кораке тог поступка:</p>
 <ul class="simple">
 <li><p>Из менија изаберемо опцију <cite>File / Add / New project</cite> (или после десног клика на решење у прозору
-<cite>Solution Explorer</cite> изаберемо опцију <cite>Add / New project</cite> у контекстном менију)</p></li>
-<li><p>За тип пројекта бирамо <cite>Console Application</cite></p></li>
-<li><p>У дијалогу који се отвара, можемо као име пројекта (<cite>Project name</cite>) да упишемо <code class="docutils literal notranslate"><span class="pre">AsocijacijeCon</span></code></p></li>
+<cite>Solution Explorer</cite> изаберемо опцију <cite>Add / New project</cite> у контекстном менију).</p></li>
+<li><p>За тип пројекта бирамо <cite>Console Application</cite>.</p></li>
+<li><p>У дијалогу који се отвара, можемо као име пројекта (<cite>Project name</cite>) да упишемо <code class="docutils literal notranslate"><span class="pre">AsocijacijeCon</span></code>.</p></li>
 </ul>
 <p>Након креирања конзолне апликације, потребно је да кажемо окружењу да та апликација користи библиотеку,
 односно да пројекат <cite>AsocijacijeCon</cite> зависи од пројекта <cite>AsocijacijeLib</cite>. Ево како то можемо да урадимо.</p>
 <ul class="simple">
 <li><p>У прозору <cite>Solution Explorer</cite> нађемо пројекат <code class="docutils literal notranslate"><span class="pre">AsocijacijeCon</span></code> и оквиру њега ставку <cite>Dependencies</cite>.
 После десног клика на ту ставку (1), изаберемо <cite>Add Project reference</cite> из контекстног менија (2).</p></li>
-<li><p>У дијалогу који се отвара, на страници <cite>Sloution</cite> (3) нађемо пројекат <code class="docutils literal notranslate"><span class="pre">AsocijacijeLib</span></code> укључимо га (4).</p></li>
+<li><p>У дијалогу који се отвара, на страници <cite>Solution</cite> (3) нађемо пројекат <code class="docutils literal notranslate"><span class="pre">AsocijacijeLib</span></code> укључимо га (4).</p></li>
 </ul>
 <p>Описани поступак се види и на следећој слици.</p>
 <figure class="align-center" id="id12">
@@ -682,7 +682,7 @@
 </pre></div>
 </div>
 <p>Остаје још да напишемо кôд који помоћу дате класе нуди играча да отвара поља и погађа решења колона,
-односно коначно решење. Искористићемо раније написани метод <code class="docutils literal notranslate"><span class="pre">Prikazi</span></code> а имплементација самог
+односно коначно решење. Искористићемо раније написани метод <code class="docutils literal notranslate"><span class="pre">Prikazi</span></code>, а имплементација самог
 играња би могла да буде остварена овако:</p>
 
 <div data-childcomponent="asocijacije_igra" class="course-box course-box-problem course-content">
@@ -772,7 +772,7 @@ namespace AsocijacijeCon
                         ulaz = Console.ReadLine().Split();
                         if (ulaz.Length == 1)
                         {
-                            // pokusaj konacnog resenja
+                            // pokušaj konacnog rešenja
                             int poeni = igra.Pokusaj(ulaz[0]);
                             if (poeni &gt; 0)
                             {
@@ -787,7 +787,7 @@ namespace AsocijacijeCon
                         }
                         else
                         {
-                            // pokusaj resenja kolone
+                            // pokušaj rešenja kolone
                             int kol = ulaz[0].ToUpper()[0] - &apos;A&apos;;
                             int poeni = igra.Pokusaj(kol, ulaz[1]);
                             if (poeni &gt; 0)

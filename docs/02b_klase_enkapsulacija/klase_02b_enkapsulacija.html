@@ -198,7 +198,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -219,7 +219,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -451,7 +451,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -497,7 +497,7 @@
 увођење енкапсулације, а касније ћемо да га искористимо за илустровање још неких концепата, као
 и за упознавање неких особина језика које нам омогућавају да те концепте спроведемо.</p>
 <section id="id2">
-<h2>Пример - разломци<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<h2>Пример – разломци<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>Нека је потребно обезбедити поређења и основне рачунске операције над рационалним бројевима, у
 којима се подаци и резултати задају у облику разломка. Логична идеја је да напишемо класу
 <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, чији објекти ће да представљају рационалне бројеве. Желимо да имамо на располагању
@@ -505,11 +505,11 @@
 Уобичајено понашање ових метода је следеће:</p>
 <ul class="simple">
 <li><p>метод <code class="docutils literal notranslate"><span class="pre">x.Equals(y)</span></code> враћа логичку вредност, и то <code class="docutils literal notranslate"><span class="pre">true</span></code> ако су <code class="docutils literal notranslate"><span class="pre">x</span></code> и <code class="docutils literal notranslate"><span class="pre">y</span></code> једнаки, а
-<code class="docutils literal notranslate"><span class="pre">false</span></code> у супротном</p></li>
+<code class="docutils literal notranslate"><span class="pre">false</span></code> у супротном;</p></li>
 <li><p>метод <code class="docutils literal notranslate"><span class="pre">x.CompareTo(y)</span></code> враћа целобројну вредност, и то негативну ако је <code class="docutils literal notranslate"><span class="pre">x</span></code> мањи од <code class="docutils literal notranslate"><span class="pre">y</span></code>,
-нула ако су једнаки, а позитивну ако је <code class="docutils literal notranslate"><span class="pre">x</span></code> већи од <code class="docutils literal notranslate"><span class="pre">y</span></code></p></li>
+нула ако су једнаки, а позитивну ако је <code class="docutils literal notranslate"><span class="pre">x</span></code> већи од <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
 </ul>
-<p>па овакво понашање очекујемо и када су <code class="docutils literal notranslate"><span class="pre">x</span></code> и <code class="docutils literal notranslate"><span class="pre">y</span></code> објекти класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>.</p>
+<p>Стога овакво понашање очекујемо и када су <code class="docutils literal notranslate"><span class="pre">x</span></code> и <code class="docutils literal notranslate"><span class="pre">y</span></code> објекти класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>.</p>
 <p>Знамо да су разломци <span class="math notranslate nohighlight">\(r_1 = {p_1 \over q_1}\)</span> и <span class="math notranslate nohighlight">\(r_2 = {p_2 \over q_2}\)</span> једнаки ако
 имају једнаке бројиоце (<span class="math notranslate nohighlight">\(p_1 = p_2\)</span>) и једнаке имениоце (<span class="math notranslate nohighlight">\(q_1 = q_2\)</span>). Међутим, ови
 разломци могу да буду једнаки и када <span class="math notranslate nohighlight">\(p_1 \neq q_1, p_2 \neq q_2\)</span>. На пример,
@@ -544,7 +544,7 @@
 <span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
-<p>добићемо већ поменуте синтаксне грешке које се односе на последњу линију кода</p>
+<p>…добићемо већ поменуте синтаксне грешке које се односе на последњу линију кôда</p>
 <aside class="topic">
 <p class="topic-title"></p>
 <div class="line-block">
@@ -572,23 +572,23 @@
 
     </div></div>
 <p>Захваљујући постојању подразумеваног конструктора, чак и пре него што научимо шта је конструктор
-(и пре него што напишемо неки), можемо да пишемо</p>
+(и пре него што напишемо неки), можемо да пишемо:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
-<p>што смо често радили за готове класе из библиотеке. Наведени запис је управо позив подразумеваног
+<p>…што смо често радили за готове класе из библиотеке. Наведени запис је управо позив подразумеваног
 конструктора класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, који је јаван ако постоји (а постоји ако нисмо написали свој
 конструктор). Подразумевани конструктор увек враћа објекат у коме су сва поља иницијализована на
 подразумеване вредности (0 за бројеве и карактере, <code class="docutils literal notranslate"><span class="pre">false</span></code> за логичке вредности, празан стринг
 са стрингове, <code class="docutils literal notranslate"><span class="pre">null</span></code> за референциране типове).</p>
 <p>У случају да су поља <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code> јавна (<code class="docutils literal notranslate"><span class="pre">public</span></code>), можемо да им доделимо вредности и након
-позивања подразумеваног конструктора</p>
+позивања подразумеваног конструктора:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">();</span><span class="w"></span>
 <span class="n">r</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"></span>
 <span class="n">r</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">3</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
-<p>што је функционално равноправно са раније коришћеним записом</p>
+<p>…што је функционално равноправно са раније коришћеним записом</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Razlomak</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Razlomak</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
@@ -703,7 +703,7 @@
 
     </div></div>
 <p>Следећи пример садржи све делове класе <code class="docutils literal notranslate"><span class="pre">Razlomak</span></code>, које смо до сада разматрали и написали.
-Програм можете да га копирате у своје радно окружење и испробате.</p>
+Програм можете да копирате у своје радно окружење и испробате.</p>
 
 <div data-childcomponent="poredjenje_razlomaka" class="course-box course-box-problem course-content">
 

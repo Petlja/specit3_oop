@@ -197,7 +197,7 @@
 </div>
 
 
-<div class="content-header-label" id = "content-header-label" href="../">Програмирање</div>
+<div class="content-header-label" id = "content-header-label" href="../">Објектно оријентисано програмирање</div>
 
 </div>
 
@@ -218,7 +218,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Зашто се мења начин програмирања</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../01_uvod/uvod_01a_promene.html><div class="studioLecture" id=activity-uvod_01a_promene><i class="fas fa-file-alt activity-icon"></i>Како и зашто се програмирање мења</div></a>
                 <a href=../01_uvod/uvod_01aq_paradigme_kviz.html><div class="studioLecture" id=activity-uvod_01aq_paradigme_kviz><i class="far fa-question-circle activity-icon"></i>Парадигме у програмирању - квиз</div></a>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                     <i class="fas fa-angle-down caret-position "> </i>
                     <i class="fas fa-angle-up caret-position d-none"></i>
                 </div>
-                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Функција и изведене класе</div></a>
+                <div class="courseContentsSubSection d-none"><a href=../05c_dp_vrednost_funkcije/dpp_05c1_funkcije.html><div class="studioLecture" id=activity-dpp_05c1_funkcije><i class="fas fa-file-alt activity-icon"></i>Класа Function и изведене класе</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c2_parser.html><div class="studioLecture" id=activity-dpp_05c2_parser><i class="fas fa-file-alt activity-icon"></i>Парсер - креатор функција</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c3_crtanje_grafika.html><div class="studioLecture" id=activity-dpp_05c3_crtanje_grafika><i class="fas fa-file-alt activity-icon"></i>Апликација за цртање графика</div></a>
                 <a href=../05c_dp_vrednost_funkcije/dpp_05c4_nule_funkcije.html><div class="studioLecture" id=activity-dpp_05c4_nule_funkcije><i class="fas fa-file-alt activity-icon"></i>Апликација за израчунавање нула функције</div></a>
@@ -492,9 +492,9 @@
 <h2>Зашто нам је наслеђивање потребно<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>Замислимо следећу ситуацију. У оквиру већег пројекта негде већ постоји класа која нам делимично
 одговара, тако да бисмо је радо допунили неким методима који су нама потребни. При томе је могуће
-да нисмо једини који желе да допуне постојећу класу, али да други програмери имају на уму другачије
-допуне те класе. Намеће се питање да ли те допуне могу да се ускладе, односно да ли уопште постоји
-облик класе који би могао да одговара свима. Са друге стране, програмеру који је ту класу написао
+да нисмо једини који желе да допуне постојећу класу, али други програмери имају на уму другачије
+допуне те класе. Намеће се питање – да ли те допуне могу да се ускладе, односно да ли уопште постоји
+облик класе који би могао да одговара свима? Са друге стране, програмеру који је ту класу написао
 она одговара таква каква је. Њему би било која нова функционалност само непотребно повећала и закомпликовала
 класу и донекле успорила даљи развој. Најгоре од свега, мењање кода те класе би донело ризик да се
 постојећа функционалност поремети, тј. да се унесу багови. Због свега овога, мењање постојеће класе
@@ -505,14 +505,14 @@
 рада цео програм расте веома брзо и тиме
 постаје све непрегледнији и тежи за сналажење. Као друго, ако се усвоји пракса копирања кода,
 пре или касније се дешава да исправка или раније планирана измена која је учињена на једном месту,
-не буде пренесена у све копије у које би требало. Због таквог стања кода, може да буде потрошено
+не буде пренета у све копије у које би требало. Због таквог стања кода, може да буде потрошено
 доста времена да се установи да ли неке разлике које су у међувремену настале треба да се
 елиминишу или не, односно која верзија треба да се прилагоди оној другој. Ситуација је још
 компликованија ако уместо две постоји више верзија сличног кода. Све у свему, дугорочно гледано,
 копирање је такође лоша идеја.</p>
 <p>На срећу, постоји и трећа могућност, а то је управо употреба наслеђивања. Наслеђивање нам омогућава
-да добијемо то што постоји већ урађено, а да при томе нити реметимо рад других програмера мењајући
-постојећу класу, нити умножавамо постојећи кôд, компликујући одржавање.</p>
+да искористимо и прилагодимо то што већ постоји, а да при томе нити реметимо рад других програмера
+мењајући постојећу класу, нити умножавамо постојећи кôд, компликујући одржавање.</p>
 </section>
 <section id="id3">
 <h2>Базна и изведена класа<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
@@ -609,8 +609,8 @@
 </pre></div>
 </div>
 <p>Ако базна класа има више конструктора, компајлер на основу броја и типа аргумената наведених иза
-речи <code class="docutils literal notranslate"><span class="pre">base</span></code> одређује који од њих треба да буде изрвршен. Уколико базна класа има и конструктор
-без параметара, део <code class="docutils literal notranslate"><span class="pre">:</span> <span class="pre">base(&lt;lista</span> <span class="pre">ragumenata&gt;)</span></code> можемо и да изоставимо, а у том случају ће да
+речи <code class="docutils literal notranslate"><span class="pre">base</span></code> одређује који од њих треба да буде извршен. Уколико базна класа има и конструктор
+без параметара, део <code class="docutils literal notranslate"><span class="pre">:</span> <span class="pre">base(&lt;lista</span> <span class="pre">argumenata&gt;)</span></code> можемо и да изоставимо, а у том случају ће да
 буде извршен конструктор базне класе без параметара. Уколико базна класа нема такав конструктор,
 реч <code class="docutils literal notranslate"><span class="pre">base</span></code> и листу аргумената морамо да наведемо.</p>
 </section>
@@ -622,7 +622,7 @@
 а то су назив и цена производа. У реалистичнијем примеру могло би се за сваки производ памтити
 више података, нпр. пореска стопа (ПДВ), количина (број комада у паковању), величина (маса или
 запремина) итд. Међутим, назив и цена су нам довољни да илуструју идеју. Са овако једноставно
-дефинисаном класом може, на пример, да се израчуна укупна цена групе неких приозвода.</p>
+дефинисаном класом може, на пример, да се израчуна укупна цена групе неких производа.</p>
 
 <div data-childcomponent="klasa_proizvod" class="course-box course-box-problem course-content">
 
@@ -672,12 +672,12 @@ namespace Program
 }
 </textarea>
 </div>
-<p>Програм исписује</p>
+<p>Програм исписује:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ukupna</span> <span class="n">cena</span> <span class="n">je</span> <span class="mi">1370</span> <span class="n">dinara</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>Млеко и сир се од осталих наведених производа разликују по томе што су кварљиви, односно имају рок
-трајања. Рецимо да нам је потребно да за оне приозводе који имају рок трајања, проверимо да ли је
+трајања. Рецимо да нам је потребно да, за оне производе који имају рок трајања, проверимо да ли је
 некима од њих истекао рок, колико их је, која им је вредност и слично. Као што смо објаснили на
 почетку лекције, није добро решење да само преправимо класу <code class="docutils literal notranslate"><span class="pre">Proizvod</span></code> тако што јој додамо поље
 <code class="docutils literal notranslate"><span class="pre">rokTrajanja</span></code>, а не желимо ни да умножавамо копије постојећег кода. Зато можемо да дефинишемо
@@ -754,7 +754,7 @@ namespace Program
                 }
             }
             Console.WriteLine("Broj namirnica kojima je istekao rok je {0}.", brIsteklo);
-            Console.WriteLine("Ukupna vrednost tih namirnica je {0}.", vrednostIsteklo);
+            Console.WriteLine("Ukupna vrednost tih namirnica je {0} dinara.", vrednostIsteklo);
         }
     }
 }
@@ -764,7 +764,7 @@ namespace Program
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ukupna</span> <span class="n">cena</span> <span class="n">je</span> <span class="mi">1370</span> <span class="n">dinara</span><span class="o">.</span>
 
 <span class="n">Broj</span> <span class="n">namirnica</span> <span class="n">kojima</span> <span class="n">je</span> <span class="n">istekao</span> <span class="n">rok</span> <span class="n">je</span> <span class="mf">1.</span>
-<span class="n">Ukupna</span> <span class="n">vrednost</span> <span class="n">tih</span> <span class="n">namirnica</span> <span class="n">je</span> <span class="mf">120.</span>
+<span class="n">Ukupna</span> <span class="n">vrednost</span> <span class="n">tih</span> <span class="n">namirnica</span> <span class="n">je</span> <span class="mi">120</span> <span class="n">dinara</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>Класа <code class="docutils literal notranslate"><span class="pre">Proizvod</span></code> у овом примеру се односи на било који производ, био он намирница или не. Управо
@@ -796,8 +796,8 @@ namespace primer
 {
     public class Vozilo
     {
-        protected float potrosnja;           // u litrima na 100 Km
-        protected float kilometraza;         // u Km
+        protected float potrosnja;           // u litrima na 100 km
+        protected float kilometraza;         // u km
         protected float uRezervoaru;         // u litrima
         protected float kapacitetRezervoara; // u litrima
         public Vozilo(float potr, float v)
@@ -927,7 +927,7 @@ namespace primer
 
     </div></div>
 <p>Приликом одлучивања да ли једна класа треба да буде изведена из друге, често је корисно да себи
-поставимо питање да ли однос између тих класа можемо да опишемо речима „је врста од”. Као што смо
+поставимо питање да ли однос између тих класа можемо да опишемо речима: „…је врста од…”. Као што смо
 већ видели, класе из наших примера пролазе овај тест: намирница јесте посебна врста производа, а
 аутобус јесте посебна врста возила.</p>
 </section>
