@@ -4,7 +4,7 @@ Ovaj repozitorijum posvećen je kursu za Objektno orijentisano programiranje za 
 
 Kurs je na Petljom portalu dotupan ovde: [https://petlja.org/kurs/11202/0](https://petlja.org/kurs/11202/0)
 
-Kurs možete itegrisati u svoj LMS koristeći SCORM pakete koji se mogu preuzeti sa: https://github.com/Petlja/os2_dig_svet/releases
+Kurs možete itegrisati u svoj LMS koristeći SCORM pakete koji se mogu preuzeti sa: https://github.com/Petlja/specit4_oop/releases
 
 ## Konverzija u *HTML*
 
