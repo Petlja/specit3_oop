@@ -2,9 +2,9 @@
 
 Ovaj repozitorijum posvećen je kursu za Objektno orijentisano programiranje za treći razred specijalizovanih IT odeljenja. 
 
-Kurs je na Petljom portalu dotupan ovde: [https://petlja.org/kurs/11202/0](https://petlja.org/kurs/11202/0)
+Kurs je na Petljinom portalu dotupan ovde: [https://petlja.org/kurs/11202/0](https://petlja.org/kurs/11202/0)
 
-Kurs možete itegrisati u svoj LMS koristeći SCORM pakete koji se mogu preuzeti sa: https://github.com/Petlja/specit4_oop/releases
+Kurs možete integrisati u svoj LMS koristeći SCORM pakete koji se mogu preuzeti sa: https://github.com/Petlja/specit4_oop/releases
 
 ## Konverzija u *HTML*
 
