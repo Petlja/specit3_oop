@@ -33,14 +33,10 @@ MultipleChoice.prototype.init = function (opts) {
     this.origElem = orig;
     this.useRunestoneServices = opts.useRunestoneServices;
     this.multipleanswers = false;
-    this.hidelabels = false;
     this.divid = orig.id;
 
     if ($(this.origElem).data("multipleanswers") === true) {
         this.multipleanswers = true;
-    }
-    if ($(this.origElem).data("hidelabels") === true) {
-        this.hidelabels = true;
     }
 
     this.children = this.origElem.childNodes;
@@ -198,8 +194,7 @@ MultipleChoice.prototype.renderMCFormOpts = function () {
         label.appendChild(input);
         label.appendChild(labelspan);
         //$(label).attr("for", optid);
-        var labelPrefix = this.hidelabels ? '' : String.fromCharCode(65 + j) + '. ';
-        $(labelspan).html(labelPrefix + this.answerList[k].content);
+        $(labelspan).html(String.fromCharCode(65 + j) + '. ' + this.answerList[k].content);
 
         // create the object to store in optionArray
         var optObj = {

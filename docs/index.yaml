@@ -6,7 +6,20 @@ description:
     <p>Овај курс је намењен ученицима специјализованих ИТ одељења 3. разреда за предмет
     објектно оријентисано програмирање.</p>
 
-    <p>Поред рада у школи, курс може да се пролази и самостално.</p>
+    <p>Поред рада у школи, курс може да се користи и самостално.</p>
+
+    <p>&lt;p&gt;
+
+    &lt;a rel=&quot;license&quot; href=&quot;<a class="reference external" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">https://creativecommons.org/licenses/by/4.0/deed.sr_LATN</a>&quot;&gt;
+
+    &lt;img alt=&quot;Creative Commons License&quot; style=&quot;border-width:0&quot;
+    src=&quot;https://i.creativecommons.org/l/by/4.0/88x31.png&quot; /&gt;&lt;/a&gt;
+
+    &lt;br /&gt;Овај курс Фондација Петља објавила je под лиценцом &lt;a rel=&quot;license&quot;
+    href=&quot;https://creativecommons.org/licenses/by/4.0/deed.sr_LATN&quot;&gt;Creative
+    Commons Autorstvo 4.0 Međunarodna Licenca (CC BY 4.0)&lt;/a&gt;.
+
+    &lt;/p&gt;</p>
 
     </div>
 
@@ -24,10 +37,10 @@ description:
   - Концепти ООП и наслеђивање (динамички полиморфизам, виртуелне функције, апстрактне
     класе, интерфејси)
   willLearn:
-  - шта је објектно оријентисано програмирање (ООП) и зашто је настало, тј. које проблеме
+  - Шта је објектно оријентисано програмирање (ООП) и зашто је настало, тј. које проблеме
     развоја софтвера је решило
-  - шта су основни концепти ООП и како се остварују
-  - који су основни принципи развоја софтвера, зашто их се придржавати и како ООП
+  - Шта су основни концепти ООП и како се остварују
+  - Који су основни принципи развоја софтвера, зашто их се придржавати и како ООП
     у томе помаже
 lang: sr-Cyrl
 lessons:
@@ -497,16 +510,16 @@ lessons:
   - description: ''
     file: 05_dp_primeri.html
     guid: 09c8c4d1-c56d-4254-9a82-d49582033867
-    normalized_title: Динамички полиморфизам - примери
+    normalized_title: Примери пројеката са решењима
     src: 05_dp_primeri.rst
-    title: Динамички полиморфизам - примери
+    title: Примери пројеката са решењима
     type: reading
   archived-activities: []
   description: ''
   folder: 05_dp_primeri
   guid: f0b23dae-4ab4-469c-a758-188a7e667b32
-  normalized_title: 5 Динамички полиморфизам - примери
-  title: 5 Динамички полиморфизам - примери
+  normalized_title: 5 Примери пројеката са решењима
+  title: 5 Примери пројеката са решењима
 - activities:
   - description: ''
     file: dpp_05a_kretanje_tela.html
