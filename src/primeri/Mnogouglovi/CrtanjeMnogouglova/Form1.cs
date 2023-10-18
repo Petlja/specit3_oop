@@ -27,15 +27,18 @@ namespace CrtanjeMnogouglova
             cc = new CoordinateConverter(ClientSize.Width, ClientSize.Height);
             poly = new Polygon();
         }
+
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
             {
-                IsDragging = true; // zapocni vucenje
+                // desni klik označava pocetak vučenja
+                IsDragging = true;
                 cc.SetPivot(e.X, e.Y);
             }
             else if (e.Button == MouseButtons.Left)
             {
+                // levi klik označava novo teme
                 poly.AddPoint(cc.XScreenToWorld(e.X), cc.YScreenToWorld(e.Y));
                 Invalidate();
             }
@@ -45,22 +48,27 @@ namespace CrtanjeMnogouglova
             if (IsDragging)
                 cc.Translate(e.X, e.Y);
 
-            if (e.Delta != 0) // ako je tocak misa okrenut, zumiraj (ka ili od)
+            if (e.Delta != 0) // ako je točak miša okrenut, zumiraj (ka ili od)
             {
                 float WheelDelta = SystemInformation.MouseWheelScrollDelta;
                 float f = MathF.Pow(1.1f, -e.Delta / WheelDelta);
                 cc.Zoom(f);
             }
-            cc.SetPivot(e.X, e.Y); // azurira koordinate misa za prikaz koordinata na ekranu
+
+            cc.SetPivot(e.X, e.Y); // ažurira koordinate miša za prikaz koordinata na ekranu
             Invalidate();
         }
+
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
+            // ako je pušten desni taster miša, prestani da vučeš
             if (e.Button == MouseButtons.Right)
                 IsDragging = false;
         }
+
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            // pritisak na Delete ili Backspace briše poslednju dodatu tačku
             if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
             {
                 poly.RemoveLastPoint();
@@ -73,7 +81,7 @@ namespace CrtanjeMnogouglova
             Graphics g = e.Graphics;
             cc.DrawGrid(g, ClientSize.Width, ClientSize.Height, Color.Black);
 
-            // Izracunaj temena mnogougla u koordinatama ekrana i nacrtaj ga
+            // Izračunaj temena mnogougla u koordinatama ekrana i nacrtaj ga
             int n = poly.PointCount;
             if (n > 0)
             {

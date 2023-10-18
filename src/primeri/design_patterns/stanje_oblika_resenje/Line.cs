@@ -18,10 +18,10 @@
         {
             float x1 = this.x, y1 = this.y, x2 = x1 + w, y2 = y1 + h;
 
-            // a je dvostruka povrsina trougla 
-            // b je kvadrat duzine osnovice
+            // a je dvostruka površina trougla 
+            // b je kvadrat dužine osnovice
             // rastojanje d = a/sqrt(b)
-            // uslov a * a < b * 9 vazi za d < 5
+            // uslov a * a < b * 9 važi za d < 5
 
             float a = MathF.Abs((x2 - x1) * (y1 - y) - (x1 - x) * (y2 - y1));
             float b = (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);

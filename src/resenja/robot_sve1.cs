@@ -2,14 +2,18 @@ using System;
 
 public class Robot
 {
-    private int x, y;
-    char smer;
+    private int x, y; // pozicija robota
+    char smer; // smer u kome je robot okrenut
+    
+    // konstruktor - robot je zadat pozicijom i smerom
     public Robot(int x0, int y0, char orijentacija)
     {
         x = x0;
         y = y0;
         smer = orijentacija;
     }
+    
+    // metod za kretanje napred
     public void Napred(int n = 1)
     {
         switch (smer)
@@ -20,6 +24,8 @@ public class Robot
             case 'W': x -= n; break;
         }
     }
+    
+    // metod za okretanje nalevo
     public void Nalevo()
     {
         switch (smer)
@@ -30,6 +36,8 @@ public class Robot
             case 'W': smer = 'S'; break;
         }
     }
+    
+    // metod za okretanje nadesno
     public void Nadesno()
     {
         switch (smer)
@@ -41,6 +49,7 @@ public class Robot
         }
     }
 
+    // prikaz podataka o robotu
     public override string ToString()
     {
         return string.Format("Robot({0}, {1}, {2})", x, y, smer);

@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace DekorisaniOblici
 {
+    // interfejs - svaki sprajt treba da ima svojstva X i Y
+    // i metode Draw i Update
     interface Sprite
     {
         void Draw(Graphics g);
@@ -15,10 +17,12 @@ namespace DekorisaniOblici
         float X { get; set;  }
         float Y { get; set;  }
     }
+
+    // sprajt u obliku kruga
     class Circle : Sprite
     {
-        private float x, y;
-        private float r;
+        private float x, y; // centar
+        private float r; // poluprečnik
         private Brush brush;
 
         public Circle(float x, float y, float r, Color color)
@@ -50,6 +54,7 @@ namespace DekorisaniOblici
         }
     }
 
+    // sprajt u obliku pravougaonika
     class Rectangle : Sprite
     {
         private float x, y;

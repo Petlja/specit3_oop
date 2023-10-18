@@ -1,12 +1,14 @@
 using System;
 public abstract class Robot
 {
-    protected int[,] tabla;
-    protected int nV, nK;
-    protected int x, y;
+    protected int[,] tabla; // tabla po kojoj se kreće robot
+    protected int nV, nK; // dimenzije table (broj vrsta, broj kolona)
+    protected int x, y;   // položaj robota
+
     public int X { get {return x;} }
     public int Y { get { return y; } }
 
+    // konstruktor - robot je zadat tablom i položajem
     protected Robot(int x0, int y0, int[,] a)
     {
         x = x0; 
@@ -15,6 +17,8 @@ public abstract class Robot
         nV = a.GetLength(0);
         nK = a.GetLength(1);
     }
+
+    // statički metod za kreiranje robota odgovarajućeg tipa
     public static Robot Napravi(int tip, int x0, int y0, int[,] a)
     {
         switch (tip)
@@ -26,6 +30,8 @@ public abstract class Robot
             default: return null;
         }
     }
+
+    // metodi koji će biti definisani u izvedenim klasama
     public abstract void Desno();
     public abstract void Levo();
     public abstract void Napred();
@@ -188,19 +194,26 @@ class Program
 {
     static void Main()
     {
+        // tabla po kojoj se kreću roboti
         int[,] tabla = new int[,] {
             { 0, 0, 0, 1, 0, 0, 0, 0, 1 },
             { 0, 0, 0, 1, 0, 0, 0, 0, 0 },
             { 0, 0, 0, 0, 0, 0, 0, 1, 0 },
             { 1, 0, 0, 1, 0, 0, 0, 0, 1 },
         };
+        
+        // prikazujemo meni korisniku
         Console.WriteLine("1: neusmeren spor robot");
         Console.WriteLine("2: neusmeren brz robot");
         Console.WriteLine("3: usmeren spor robot");
         Console.WriteLine("4: usmeren brz robot");
         Console.Write("Izaberi robota (1/2/3/4) ");
         int tipRobota = int.Parse(Console.ReadLine());
+        
+        // Kreiramo robota pomoću statičkog metoda
         Robot robot = Robot.Napravi(tipRobota, 0, 0, tabla);
+        
+        // niska komandi za upravljanje robotom (svako slovo je jedna komanda)
         string komande = "RRFLFRFLBF";
         foreach (char komanda in komande)
         {

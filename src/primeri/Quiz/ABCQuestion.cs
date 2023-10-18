@@ -6,12 +6,13 @@ using System.Text;
 
 namespace Quiz
 {
+    // pitanje sa ponuđenim odgovorima, gde je samo jedan tačan
     public class ABCQuestion : Question
     {
-        string[] answers;
-        int selectedAnswer;
-        int cursorPosition;
-        int correctAnswer;
+        string[] answers; // ponuđeni odgovori
+        int selectedAnswer; // indeks trenutno izabranog odgovora
+        int cursorPosition; // indeks odgovora na kome se nalazi kursor
+        int correctAnswer; // indeks tačnog odgovora
 
         private ABCQuestion()
         {
@@ -19,6 +20,8 @@ namespace Quiz
             cursorPosition = 0;
         }
 
+        // pomoćni metod za testiranje i kreiranje fajla sa pitanjima,
+        // tako da taj fajl kasnije služi kao uzor za formiranje drugih fajlova
         public static ABCQuestion Sample()
         {
             ABCQuestion q = new ABCQuestion()
@@ -32,6 +35,8 @@ namespace Quiz
             };
             return q;
         }
+
+        // učitavanje jednog pitanja iz tekstualnog ulaznog toka
         public static new Question FromStream(StreamReader sr)
         {
             ABCQuestion q = new ABCQuestion();
@@ -47,6 +52,7 @@ namespace Quiz
             return q;
         }
 
+        // ispisivanje pitanja u fajl
         override public string ToText()
         {
             StringBuilder sb = new StringBuilder();
@@ -61,6 +67,8 @@ namespace Quiz
             sb.Append(points); sb.Append("\n");
             return sb.ToString();
         }
+        
+        // prikazivanje pitanja na ekranu
         override public void Display()
         {
             Console.SetCursorPosition(0, 0);
@@ -78,6 +86,8 @@ namespace Quiz
                 option++;
             }
         }
+        
+        // reakcija na pritisnut taster
         public override void HandleInput(ConsoleKeyInfo ki)
         {
             int n = answers.Length;
@@ -95,12 +105,13 @@ namespace Quiz
                 case ConsoleKey.DownArrow:
                     cursorPosition = (cursorPosition + 1) % n;
                     break;
-                case ConsoleKey.Spacebar:
+                case ConsoleKey.Spacebar: // izbor odgovora
                     selectedAnswer = cursorPosition;
                     break;
             }
         }
 
+        // vraća vrednost izabranog odgovora u poenima
         public override int Evaluate()
         {
             return (selectedAnswer == correctAnswer) ? points : 0;

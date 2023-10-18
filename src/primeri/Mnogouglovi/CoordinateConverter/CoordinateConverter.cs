@@ -6,20 +6,26 @@ namespace coordinate_converter
     public class CoordinateConverter
     {
         private float FontSize = 16.0f;
-        private float ScalingX = 50.0f;
-        private float ScalingY = 50.0f;
+        private float ScalingX = 50.0f; // logička (svetska) jedinica X ose u pikselima
+        private float ScalingY = 50.0f; // logička (svetska) jedinica Y ose u pikselima
+        
+        // pomeraj logičkog koordinatnog početka u pikselima
         private float TranslationX;
         private float TranslationY;
+
+        // tačka koja je centar skaliranja
         private float xePivot;
         private float yePivot;
         private string PivotPos = "";
+
         public CoordinateConverter(float xeSize, float yeSize)
         {
-            // Biramo pocetni polozaj sistema sveta tako da je 
-            // tacka (-1, -1) u donjem levom uglu prozora
+            // Biramo početni položaj sistema sveta tako da je 
+            // tačka (-1, -1) u donjem levom uglu prozora
             TranslationX = ScalingX;
             TranslationY = yeSize - ScalingY;
         }
+
         public void SetPivot(float x, float y)
         {
             xePivot = x;
@@ -27,6 +33,8 @@ namespace coordinate_converter
             PivotPos = string.Format("({0:0.00}, {1:0.00})",
                 XScreenToWorld(xePivot), YScreenToWorld(yePivot));
         }
+
+        // premeštanje kooordinatnog početka
         public void Translate(float xeNewPivot, float yeNewPivot)
         {
             TranslationX += xeNewPivot - xePivot;
@@ -34,6 +42,8 @@ namespace coordinate_converter
             xePivot = xeNewPivot;
             yePivot = yeNewPivot;
         }
+        
+        // skaliranje (uvećanje ili umanjenje)
         public void Zoom(float zoomFactor)
         {
             TranslationX = xePivot + (TranslationX - xePivot) * zoomFactor;
@@ -42,6 +52,8 @@ namespace coordinate_converter
             ScalingX *= zoomFactor;
             ScalingY *= zoomFactor;
         }
+        
+        // crtanje rešetke
         public void DrawGrid(Graphics g, float xeSize, float yeSize, Color clr)
         {
             Font fnt = new Font("Arial", FontSize);
@@ -56,13 +68,13 @@ namespace coordinate_converter
             float xw1 = XScreenToWorld(xs1);
             float yw1 = YScreenToWorld(ys1);
 
-            // koordinate linija resetke u sistemu sveta
+            // koordinate linija rešetke u sistemu sveta
             float gxw0 = MathF.Ceiling(xw0);
             float gxw1 = MathF.Floor(xw1);
             float gyw0 = MathF.Floor(yw0);
             float gyw1 = MathF.Ceiling(yw1);
 
-            // koordinate linija resetke u sistemu ekrana
+            // koordinate linija rešetke u sistemu ekrana
             float gxs0 = XWorldToScreen(gxw0);
             float gys0 = YWorldToScreen(gyw0);
             float gxs1 = XWorldToScreen(gxw1);
@@ -73,7 +85,7 @@ namespace coordinate_converter
             Pen p1 = new Pen(clr, 1);
             Brush b = new SolidBrush(clr); // za crtanje teksta (koordinata)
 
-            // uspravne linije resetke, ispisivanje x koordinata
+            // uspravne linije rešetke, ispisivanje x koordinata
             float xw = gxw0;
             for (float xs = gxs0; xs <= gxs1; xs += ScalingX)
             {
@@ -84,7 +96,7 @@ namespace coordinate_converter
                 xw += 1;
             }
 
-            // vodoravne linije resetke, ispisivanje y koordinata
+            // vodoravne linije rešetke, ispisivanje y koordinata
             float yw = gyw0;
             for (float ys = gys0; ys <= gys1; ys += ScalingY)
             {
@@ -98,6 +110,8 @@ namespace coordinate_converter
             g.DrawLine(p3, xsYAxis, ys0, xsYAxis, ys1); // y-osa
             g.DrawString(PivotPos, new Font("Arial", 16), b, xePivot, yePivot); // pozicija pivota
         }
+
+        // preračunavanje koordinata iz jednog sistema u drugi i obrnuto
         public float XWorldToScreen(float xw) { return xw * ScalingX + TranslationX; }
         public float YWorldToScreen(float yw) { return -yw * ScalingY + TranslationY; }
         public float XScreenToWorld(float xs) { return (xs - TranslationX) / ScalingX; }

@@ -3,9 +3,9 @@
 
 У овој лекцији:
 
-- Који проблем решава наслеђивање 
-- Како се користи наслеђивање
-- Наслеђивање као нова врста односа између класа
+- који проблем решава наслеђивање, 
+- како се користи наслеђивање, 
+- наслеђивање као нова врста односа између класа. 
 
 Зашто нам је наслеђивање потребно
 ---------------------------------
@@ -222,25 +222,34 @@
 
     namespace Program
     {
+        // bazna klasa ima javna svojstva 'Naziv' i 'Cena'
         public class Proizvod
         {
             protected string naziv;
             protected decimal cena;
+            
+            // U ovom primeru, proizvod je potpuno opisan nazivom i cenom
             public Proizvod(string naziv, decimal cena)
             {
                 this.naziv = naziv;
                 this.cena = cena;
             }
+
             public string Naziv { get { return naziv; } }
+
             public decimal Cena { get { return cena; } }
         }
+
+        // izvedena klasa ima sve što i bazna, a ima još i rok trajanja
         public class Namirnica : Proizvod
         {
+            // Za opis namirnice, pored naziva i cene, potrebno je navesti i rok trajanja 
             public Namirnica(string naziv, decimal cena, DateTime rok) 
                 : base(naziv, cena)
             {
                 this.rokTrajanja = rok;
             }
+
             protected DateTime rokTrajanja;
             public DateTime RokTrajanja { get { return rokTrajanja; } }
         }
@@ -253,6 +262,7 @@
                     new Namirnica("Mleko", 120, new DateTime(2024, 6, 15)),
                     new Namirnica("Sir", 200, new DateTime(2024, 8, 15))
                 };
+
                 List<Proizvod> proizvodi = new List<Proizvod>(){
                     new Proizvod("Tecni deterdzent", 400),
                     new Proizvod("Stapici za usi", 70),
@@ -260,9 +270,12 @@
                     new Proizvod("Brijac", 50),
                     new Proizvod("Sijalica", 250)
                 };
+
+                // dodajemo namirnice u listu proizvoda
                 proizvodi.AddRange(namirnice);
 
                 decimal ukupnaCena = 0;
+                // sabiramo cene svih proizvoda
                 foreach (Proizvod p in proizvodi)
                     ukupnaCena += p.Cena;
                 Console.WriteLine("Ukupna cena je {0} dinara.", ukupnaCena);
@@ -271,6 +284,7 @@
                 DateTime danas = new DateTime(2024, 7, 15);
                 int brIsteklo = 0;
                 decimal vrednostIsteklo = 0;
+                // za svaku namirnicu proveravamo rok trajanja
                 foreach (Namirnica n in namirnice)
                 {
                     if (danas > n.RokTrajanja)

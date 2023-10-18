@@ -6,9 +6,9 @@ namespace Kretanje
     public class Loptica
     {
         private static Random rnd = new Random();
-        private float x, y, vx, vy;
+        private float x, y, vx, vy; // Trenutni položaj i brzina
         private Color boja;
-        private float r;
+        private float r; // poluprečnik
         public Loptica(int w, int h)
         {
             RestartujSe(w, h);
@@ -26,6 +26,9 @@ namespace Kretanje
             int bc = gc - rc;
             boja = Color.FromArgb(rc, gc, bc);
         }
+
+        // metod izračunava novi položaj loptice
+        // i vraća informaciju da li je bilo pomeranja
         public bool PomeriSe(int w, int h)
         {
             const float a = 10;
@@ -49,6 +52,7 @@ namespace Kretanje
             }
             return true;
         }
+
         public void NacrtajSe(Graphics g, int w, int h)
         {
             Brush cetka = new SolidBrush(boja);

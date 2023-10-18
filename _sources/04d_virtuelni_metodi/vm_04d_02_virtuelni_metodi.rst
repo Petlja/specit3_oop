@@ -50,10 +50,11 @@
 |
 
 Ево како можемо да преправимо пример са правоугаоницима, да би се при употреби објеката преко 
-референци на базну класу добило понашање у складу са стварним типом објекта:
+референци на базну класу добило понашање у складу са стварним типом објекта.
 
 .. code-block:: csharp
 
+    // popravljena klasa Pravougaonik
     public class Pravougaonik
     {
         protected double w, h;
@@ -88,6 +89,8 @@
             return string.Format(f, AX, AY, BX, BY, CX, CY, DX, DY);
         }
     }
+    
+    // popravljena klasa RotiraniPravougaonik
     public class RotiraniPravougaonik : Pravougaonik
     {
         private double sinUgla;
@@ -107,7 +110,7 @@
         override public double DY { get { return ay + h * cosUgla; } }
     }
 
-Извршимо следећих неколико наредби са овако написаним класама:
+Извршимо следећих неколико наредби са овако написаним класама.
 
 .. code-block:: csharp
 

@@ -3,10 +3,10 @@
 
 У овој лекцији:
 
-- Различити начини модификовања базне класе
-- Шта нам доносе (зашто су корисни) виртуелни методи
-- Шта је динамички полиморфизам
-- Како се пишу и употребљавају виртуелни методи
+- различити начини модификовања базне класе, 
+- шта нам доносе (зашто су корисни) виртуелни методи, 
+- шта је динамички полиморфизам, 
+- како се пишу и употребљавају виртуелни методи. 
 
 
 Модификација базне класе
@@ -79,9 +79,11 @@
         public double Obim() { return 2 * w + 2 * h; }
         public double Povrsina() { return w * h; }
 
+        // dimenzije pravougaonika
         public double W { get { return w; } }
         public double H { get { return h; } }
 
+        // koordinate temena pravougaonika
         public double AX { get { return ax; } }
         public double AY { get { return ay; } }
         public double BX { get { return ax + w; } }
@@ -114,20 +116,20 @@
 .. math::
 
     \begin{align} \\
-    B_x &= A_x + w \cdot \cos \varphi \\
-    B_y &= A_y + w \cdot \sin \varphi \\
+    B_x &= A_x + w \cdot \cos \varphi, \\
+    B_y &= A_y + w \cdot \sin \varphi, \\
     C_x &= B_x + h \cdot \cos \left( {\varphi + \frac{\pi}{2}} \right) 
          = B_x + h \cdot \left( \cos \varphi \cos \frac{\pi}{2} - \sin \varphi \sin \frac{\pi}{2} \right)
-         = B_x - h \cdot \sin \varphi \\
+         = B_x - h \cdot \sin \varphi, \\
     C_y &= B_y + h \cdot \sin \left( {\varphi + \frac{\pi}{2}} \right) 
          = B_x + h \cdot \left( \sin \varphi \cos \frac{\pi}{2} + \cos \varphi \sin \frac{\pi}{2} \right)
-         = B_x + h \cdot \cos \varphi \\
+         = B_x + h \cdot \cos \varphi, \\
     D_x &= AX + w \cdot \cos \left( {\varphi + \frac{\pi}{2}} \right)
          = A_x + h \cdot \left( \cos \varphi \cos \frac{\pi}{2} - \sin \varphi \sin \frac{\pi}{2} \right)
-         = A_x - h \cdot \sin \varphi \\
+         = A_x - h \cdot \sin \varphi, \\
     D_y &= A_y + w \cdot \sin \left( {\varphi + \frac{\pi}{2}} \right)
          = A_x + h \cdot \left( \sin \varphi \cos \frac{\pi}{2} + \cos \varphi \sin \frac{\pi}{2} \right)
-         = A_x + h \cdot \cos \varphi \\
+         = A_x + h \cdot \cos \varphi. \\
     \end{align}    
 
 Пошто координате темена могу да буду потребне више пута, боље је да уместо угла памтимо његов синус и 
@@ -207,6 +209,8 @@
 
     internal class Program
     {
+        // program za isprobavanje ispravnosti klasa 
+        // Pravougaonik i RotiraniPravougaonik
         static void Main(string[] args)
         {
             Pravougaonik p = new Pravougaonik(5, 3, 1, 1);

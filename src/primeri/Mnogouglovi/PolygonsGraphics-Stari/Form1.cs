@@ -36,8 +36,8 @@ namespace PolygonsGraphics
             XUnit = 50.0f;
             YUnit = 50.0f;
             ResizeRedraw = true;
-            // Biramo pocetni polozaj sistema sveta tako da je 
-            // tacka (-1, -1) tacno u donjem levom uglu prozora
+            // Biramo početni položaj sistema sveta tako da je 
+            // tačka (-1, -1) tačno u donjem levom uglu prozora
             X0 = XUnit;
             Y0 = ClientSize.Height - YUnit;
         }
@@ -49,14 +49,14 @@ namespace PolygonsGraphics
         {
             if (e.Button == MouseButtons.Right)
             {
-                // zapocni vucenje
+                // započni vučenje
                 IsDragging = true;
                 LastDraggingPosX = e.X;
                 LastDraggingPosY = e.Y;
             }
             else if (e.Button == MouseButtons.Left)
             {
-                // Dodaj novo teme, preracunato u koordinate sveta
+                // Dodaj novo teme, preračunato u koordinate sveta
                 float x = XScreenToWorld(e.X); 
                 float y = YScreenToWorld(e.Y); 
                 poly.AddPoint(x, y);
@@ -76,7 +76,7 @@ namespace PolygonsGraphics
             }
             if (e.Delta != 0)
             {
-                // tocak misa je okrenut, zumiraj (ka ili od)
+                // tocak miša je okrenut, zumiraj (ka ili od)
                 int WheelDelta = SystemInformation.MouseWheelScrollDelta;
                 float f = (float)Math.Pow(1.1, -e.Delta / WheelDelta);
                 XUnit *= f;
@@ -84,7 +84,7 @@ namespace PolygonsGraphics
                 FontSize *= f;
                 Invalidate();
             }
-            // azuriraj koordinate misa za prikaz na ekranu
+            // ažuriraj koordinate miša za prikaz na ekranu
             CurrentMousePosX = e.X;
             CurrentMousePosY = e.Y;
             CurrentMousePos = string.Format("({0:0.00}, {1:0.00})",
@@ -120,14 +120,14 @@ namespace PolygonsGraphics
             float xw1 = XScreenToWorld(xs1);
             float yw1 = YScreenToWorld(ys1);
 
-            // koordinate prve i poslednje linija resetke
+            // koordinate prve i poslednje linije rešetke
             // za svaku osu, u koordinatama sveta
             float gxw0 = (float)Math.Ceiling(xw0);
             float gxw1 = (float)Math.Floor(xw1);
             float gyw0 = (float)Math.Floor(yw0);
             float gyw1 = (float)Math.Ceiling(yw1);
 
-            // koordinate prve i poslednje linija resetke
+            // koordinate prve i poslednje linije rešetke
             // za svaku osu, u koordinatama ekrana
             float gxs0 = XWorldToScreen(gxw0);
             float gys0 = YWorldToScreen(gyw0);
@@ -167,7 +167,7 @@ namespace PolygonsGraphics
             g.DrawLine(p3, xs0, ysXAxis, xs1, ysXAxis); // x-osa
             g.DrawLine(p3, xsYAxis, ys0, xsYAxis, ys1); // y-osa
 
-            // prikazi koordinate kursora
+            // prikaži koordinate kursora
             if (CurrentMousePos != "")
             {
                 g.DrawString(CurrentMousePos, new Font("Arial", 16), b,
@@ -180,7 +180,7 @@ namespace PolygonsGraphics
             DrawGrid(g);
             Pen p = new Pen(Color.Blue, 3);
 
-            // Nacrtaj mnogougao, koristeci koordinate ekrana
+            // Nacrtaj mnogougao, koristeći koordinate ekrana
             int n = poly.NumPoints;
             if (n > 0)
             {

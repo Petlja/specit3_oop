@@ -12,12 +12,14 @@ public class Razlomak
             throw new Exception("Imenilac razlomka je 0");
         }
 
+        // obezbeđujemo uslov da je imenilac pozitivan
         if (q < 0)
         {
             p = -p;
             q = -q;
         }
 
+        // obezbeđujemo uslov da je razlomak neskrativ
         a = p;
         b = q;
         Skrati(ref a, ref b);
@@ -52,6 +54,9 @@ public class Razlomak
     {
         return a * r.b - r.a * b;
     }
+
+    // statički metod za kreiranje razlomka na osnovu njegovog
+    // tekstualnog zapisa
     public static Razlomak Parse(string s)
     {
         if (String.IsNullOrEmpty(s))
@@ -72,11 +77,13 @@ public class Razlomak
         return new Razlomak(r.a * (s.b / d) + s.a * (r.b / d), nzs);
     }
 
+    // unarni minus (operator vraća suprotan razlomak)
     public static Razlomak operator -(Razlomak r)
     {
         return new Razlomak(-r.a, r.b);
     }
-
+    
+    // binarni minus (operator vraća razliku razlomaka)
     public static Razlomak operator -(Razlomak r, Razlomak s)
     {
         int d = NZD(r.b, s.b);
@@ -100,10 +107,14 @@ public class Razlomak
         return new Razlomak(ra * sb, rb * sa);
     }
 
+    // ovaj operator omogućava implicitnu konverziju 
+    // celog broja u razlomak, pa zahvaljujući tome mogu 
+    // da se vrše operacije između celih brojeva i razlomaka
     public static implicit operator Razlomak(int n)
     {
         return new Razlomak(n);
     }
+    
     public override string ToString()
     {
         if (a == 0) { return "0"; }

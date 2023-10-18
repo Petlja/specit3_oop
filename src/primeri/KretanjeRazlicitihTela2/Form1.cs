@@ -6,6 +6,7 @@ namespace Kretanje
 {
     public partial class Form1 : Form
     {
+        // sva tela (raznih vrsta) u jednoj listi
         private List<Telo> tela = null;
         public Form1()
         {
@@ -24,6 +25,7 @@ namespace Kretanje
         {
             int w = ClientSize.Width;
             int h = ClientSize.Height;
+            // pomeri sva tela pomoću jedne petlje
             foreach (Telo t in tela)
                 t.PomeriSe(w, h);
 
@@ -33,6 +35,7 @@ namespace Kretanje
         {
             int w = ClientSize.Width;
             int h = ClientSize.Height;
+            // nacrtaj sva tela pomoću jedne petlje
             foreach (Telo t in tela)
                 t.NacrtajSe(e.Graphics, w, h);
         }

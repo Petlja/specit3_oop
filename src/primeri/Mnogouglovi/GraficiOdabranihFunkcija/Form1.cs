@@ -7,10 +7,11 @@ namespace GraficiOdabranihFunkcija
 {
     public partial class Form1 : Form
     {
+        // funkcije koje mogu da se odaberu za crtanje
         private enum Function { Sin, Cos, Tg, Ctg, Sqr, Sqrt, Exp, Log, None };
         private Function SelectedFunction = Function.None;
         private CoordinateConverter cc;
-        bool IsDragging;
+        bool IsDragging; // da li se mišem vuče koordinatni sistem
         public Form1()
         {
             InitializeComponent();
@@ -25,11 +26,13 @@ namespace GraficiOdabranihFunkcija
             Text = "Цртање графика";
             cc = new CoordinateConverter(ClientSize.Width, ClientSize.Height);
         }
+
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
             {
-                IsDragging = true; // zapocni vucenje
+                // desni klik označava pocetak vučenja
+                IsDragging = true;
                 cc.SetPivot(e.X, e.Y);
             }
         }
@@ -38,17 +41,20 @@ namespace GraficiOdabranihFunkcija
             if (IsDragging)
                 cc.Translate(e.X, e.Y);
 
-            if (e.Delta != 0) // ako je tocak misa okrenut, zumiraj (ka ili od)
+            if (e.Delta != 0) // ako je točak miša okrenut, zumiraj (ka ili od)
             {
                 float WheelDelta = SystemInformation.MouseWheelScrollDelta;
                 float f = MathF.Pow(1.1f, -e.Delta / WheelDelta);
                 cc.Zoom(f);
             }
-            cc.SetPivot(e.X, e.Y); // azurira koordinate misa za prikaz koordinata na ekranu
+            
+            cc.SetPivot(e.X, e.Y); // ažurira koordinate miša za prikaz koordinata na ekranu
             Invalidate();
         }
+        
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
+            // ako je pušten desni taster miša, prestani da vučeš
             if (e.Button == MouseButtons.Right)
                 IsDragging = false;
         }
@@ -135,9 +141,9 @@ namespace GraficiOdabranihFunkcija
                 float xw = cc.XScreenToWorld(xs);
                 float yw = F(xw);
                 float ys = cc.YWorldToScreen(yw);
-                // ako je F definisana u prethodnoj i tekucoj tacki
-                // i te tacke nisu u razlicitim granama grafika
-                // spoj te tacke linijom
+                // ako je F definisana u prethodnoj i tekućoj tački
+                // i te tačke nisu u različitim granama grafika
+                // spoj te tačke linijom
                 if (float.IsFinite(ys) && float.IsFinite(ysPrev) && 
                     MathF.Abs(ysPrev - ys) < ClientSize.Height / 2)
                     g.DrawLine(p3, xsPrev, ysPrev, xs, ys);

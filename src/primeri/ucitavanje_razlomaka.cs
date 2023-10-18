@@ -12,12 +12,14 @@ public class Razlomak
             throw new Exception("Imenilac razlomka je 0");
         }
 
+        // obezbeđujemo uslov da je imenilac pozitivan
         if (q < 0)
         {
             p = -p;
             q = -q;
         }
 
+        // obezbeđujemo uslov da je razlomak neskrativ
         a = p;
         b = q;
         Skrati(ref a, ref b);
@@ -52,6 +54,9 @@ public class Razlomak
     {
         return a * r.b - r.a * b;
     }
+    
+    // statički metod za kreiranje razlomka na osnovu njegovog
+    // tekstualnog zapisa
     public static Razlomak Parse(string s)
     {
         if (String.IsNullOrEmpty(s))
@@ -70,6 +75,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Isprobavanje metoda Equals i CompareTo
         Console.Write("Unesite prvi razlomak: ");
         Razlomak r1 = Razlomak.Parse(Console.ReadLine());
         Console.Write("Unesite drugi razlomak: ");

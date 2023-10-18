@@ -43,8 +43,8 @@
 .. math::
 
     \begin{align} \\
-    &V_{valjka} = BH,               &   P_{valjka} = 2B + M\\
-    &V_{prizme} = BH,               &   P_{prizme} = 2B + M\\
+    &V_{valjka} = BH,               &   P_{valjka} = 2B + M,\\
+    &V_{prizme} = BH,               &   P_{prizme} = 2B + M.\\
     \end{align}
 
 У овим формулама, :math:`B` је ознака за површину основе, а :math:`M` за површину омотача. Овако 
@@ -71,8 +71,8 @@
         }
         public double Povrsina()
         {
-            double b = osnova.Povrsina();       // povrsina osnove
-            double m = osnova.Obim() * visina;  // povrsina omotaca
+            double b = osnova.Povrsina();       // površina osnove
+            double m = osnova.Obim() * visina;  // površina omotaca
             return b + b + m;
         }
     }
@@ -82,8 +82,8 @@
 .. math::
 
     \begin{align} \\
-    &V_{kupe} = \frac{1}{3}BH,      &   P_{kupe} = B + M\\
-    &V_{piramide} = \frac{1}{3}BH,  &   P_{piramide} = B + M\\
+    &V_{kupe} = \frac{1}{3}BH,      &   P_{kupe} = B + M,\\
+    &V_{piramide} = \frac{1}{3}BH,  &   P_{piramide} = B + M.\\
     \end{align}
 
 Видимо да су и формуле за купу и пирамиду такође међусобно потпуно исте. 
@@ -118,7 +118,7 @@
             double b = osnova.Povrsina();
             double r = osnova.RUpisanogKruga();
             double s = Math.Sqrt(r * r + visina * visina); // izvodnica, ili visina bočne strane
-            double m = 0.5 * osnova.Obim() * s; // omotač
+            double m = 0.5 * osnova.Obim() * s; // površina omotača
             return b + m;
         }
     }
@@ -145,7 +145,7 @@
         public abstract double Povrsina();
     }
 
-Закључујемо да су нам у програму довољне следеће две мале хијерархије класа: 
+Закључујемо да су нам у програму довољне следеће две мале хијерархије класа. 
 
 - Базна класа прве хијерархије је апстрактна класа ``Figura2D`` (дводимензиона фигура), из које су изведене 
   класе ``Krug`` и ``Ntougao``. Ове класе су незнатно измењене у односу на претходни пример, јер им је додат 

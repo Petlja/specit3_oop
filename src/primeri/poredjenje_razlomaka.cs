@@ -12,12 +12,14 @@ public class Razlomak
             throw new Exception("Imenilac razlomka je 0");
         }
 
+        // obezbeđujemo uslov da je imenilac pozitivan
         if (q < 0)
         {
             p = -p;
             q = -q;
         }
 
+        // obezbeđujemo uslov da je razlomak neskrativ
         a = p;
         b = q;
         Skrati(ref a, ref b);
@@ -28,16 +30,19 @@ public class Razlomak
         a = n; b = 1;
     }
 
+    // Metod NZD izračunava najveći zajednički delilac dva neoznačena broja,
+    // koristeći Euklidov algoritam 
     private static int NZD(int a, int b)
     {
-        // nametnut preduslov: a >= 0 i b >= 0
+        // nametnut preduslov (pretpostavka): a >= 0 i b >= 0
         while (b > 0) { int r = a % b; a = b; b = r; }
         return a;
     }
 
+    // Metod Skrati deli oba svoja argumenta njihovim najvećim zajedničkim deliocem
     private static void Skrati(ref int x, ref int y)
     {
-        // preduslov: x i y nisu oba nule
+        // nametnut preduslov (pretpostavka): x i y nisu oba nule
         int d = NZD(Math.Abs(x), Math.Abs(y));
         x /= d;
         y /= d;
@@ -58,6 +63,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Isprobavanje metoda Equals i CompareTo
         Razlomak r1 = new Razlomak(2, 3);
         Razlomak r2 = new Razlomak(4, 6);
         Razlomak r3 = new Razlomak(4, 3);

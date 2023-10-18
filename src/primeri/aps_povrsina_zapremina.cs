@@ -6,13 +6,14 @@ internal class Program
 {
     public abstract class Figura2D
     {
-        protected Color boja;
+        protected Color boja; // boja figure
         public Figura2D(Color b) { boja = b; }
         public Color Boja { get { return boja; } }
         public abstract double Povrsina();
         public abstract double Obim();
-        public abstract double RUpisanogKruga();
+        public abstract double RUpisanogKruga(); // poluprečnik upisanog kruga
     }
+
     public class Krug : Figura2D
     {
         private double r;
@@ -21,6 +22,7 @@ internal class Program
         public override double Obim() { return 2 * r * Math.PI; }
         public override double RUpisanogKruga() { return r; }
     }
+
     public class Ntougao : Figura2D
     {
         private double a;
@@ -44,6 +46,7 @@ internal class Program
         public abstract double Zapremina();
         public abstract double Povrsina();
     }
+
     public class SpicastaFigura : Figura3D // kupa, piramida
     {
         public SpicastaFigura(Figura2D b, double h) : base(b, h) { }
@@ -51,12 +54,15 @@ internal class Program
         public override double Povrsina()
         {
             double r = osnova.RUpisanogKruga();
-            double s = Math.Sqrt(r * r + visina * visina); // izvodnica, ili visina bočne strane
+            
+            // s je izvodnica, ili visina bočne strane
+            double s = Math.Sqrt(r * r + visina * visina); 
             double b = osnova.Povrsina();
-            double m = 0.5 * osnova.Obim() * s; // omotač
+            double m = 0.5 * osnova.Obim() * s; // m je omotač
             return b + m;
         }
     }
+
     public class StubastaFigura : Figura3D // valjak, prizma
     {
         public StubastaFigura(Figura2D b, double h) : base(b, h) { }
@@ -64,15 +70,16 @@ internal class Program
         public override double Povrsina()
         {
             double b = osnova.Povrsina();
-            double m = osnova.Obim() * visina; // omotac
+            double m = osnova.Obim() * visina; // m je omotač
             return b + b + m;
         }
     }
+
     static void Main(string[] args)
     {
         List<Figura2D> figure2D = new List<Figura2D>();
-        figure2D.Add(new Krug(Color.Red, 5));        // crveni krug poluprecnika 5
-        figure2D.Add(new Krug(Color.Green, 7));      // zeleni krug poluprecnika 7
+        figure2D.Add(new Krug(Color.Red, 5));        // crveni krug poluprečnika 5
+        figure2D.Add(new Krug(Color.Green, 7));      // zeleni krug poluprečnika 7
         figure2D.Add(new Ntougao(Color.Red, 6, 4));  // crveni kvadrat stranice 6
         figure2D.Add(new Ntougao(Color.Blue, 2, 6)); // plavi šestougao stranice 2
 
@@ -82,7 +89,10 @@ internal class Program
         figure3D.Add(new SpicastaFigura(figure2D[2], 10)); // crvena četvorostrana piramida
         figure3D.Add(new StubastaFigura(figure2D[3], 10)); // plava šestostrana prizma
 
+        // ukupna površina i zapremina svake boje koja se pojavi
         var povZap = new Dictionary<Color, Tuple<double, double>>();
+
+        // za svaku trodimenzionu figuru
         foreach (Figura3D f in figure3D)
         {
             double p = f.Povrsina(), v = f.Zapremina();

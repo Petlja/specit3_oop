@@ -33,7 +33,7 @@ namespace grupisanje
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // u kompletnoj aplikaciji umesto ovoga iz menija bi se birao
+            // umesto ovoga, u kompletnoj aplikaciji bi se iz menija birao
             // oblik koji se dodaje misem, boja, alatka za selekciju, gumica i sl.
             allSprites.Add(new CircleShape(100, 100, 30, Color.Red));
             allSprites.Add(new CircleShape(250, 100, 35, Color.Blue));
@@ -53,7 +53,7 @@ namespace grupisanje
 
                 if (mouseIsOverSelectedSprite)
                 {
-                    // start dragging
+                    // početak vučenja
                     Cursor.Current = Cursors.SizeAll;
                     dragging = true;
                     mouseX = e.X;
@@ -61,7 +61,7 @@ namespace grupisanje
                 }
                 else
                 {
-                    // select clicked sprite
+                    // selektuj sprajt na koji je kliknuto
                     selectedSprites.Clear();
                     foreach (Sprite sprite in allSprites)
                     {
@@ -74,7 +74,7 @@ namespace grupisanje
                 }
                 if (selectedSprites.Count == 0)
                 {
-                    // start selecting
+                    // počni da selektuješ
                     selecting = true;
                     mouseX0 = e.X;
                     mouseY0 = e.Y;
@@ -87,7 +87,7 @@ namespace grupisanje
         {
             if (dragging)
             {
-                // update dragging
+                // ažuriraj vučenje
                 float dx = e.X - mouseX;
                 float dy = e.Y - mouseY;
                 foreach (Sprite s in selectedSprites)
@@ -97,13 +97,13 @@ namespace grupisanje
             }
             else if (selecting)
             {
-                // update selecting
+                // ažuriraj selektovanje
                 mouseX = e.X;
                 mouseY = e.Y;
             }
             else
             {
-                // set proper cursor shape
+                // podesi odgovarajući oblik kursora
                 bool mouseIsOverSprite = false;
                 foreach (Sprite s in allSprites)
                     if (s.Contains(e.X, e.Y))
@@ -122,7 +122,7 @@ namespace grupisanje
         {
             if (selecting)
             {
-                // finish selecting, put selected sprites into the list 'selectedSprites'
+                // završi selektovanje, stavi selektovane sprajtove u listu 'selectedSprites'
                 RectangleF selectedRect = new RectangleF(
                     Math.Min(mouseX, mouseX0),
                     Math.Min(mouseY, mouseY0),
@@ -137,7 +137,7 @@ namespace grupisanje
                 }
             }
 
-            //update context menu 
+            //ažuriraj kontekstni meni
             toFrontToolStripMenuItem.Enabled = (selectedSprites.Count > 0);
             toBackToolStripMenuItem.Enabled = (selectedSprites.Count > 0);
             groupToolStripMenuItem.Enabled = (selectedSprites.Count > 1);

@@ -1,5 +1,7 @@
 ﻿namespace DekorisaniOblici
 {
+    // klasa koja sadrži kolekciju (listu) sprajtova 
+    // i upravlja svim sprajtovima
     class SpriteManager
     {
         List<Sprite> sprites = new List<Sprite>();

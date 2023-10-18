@@ -6,11 +6,14 @@ namespace Kretanje
     public class Avioncic
     {
         private static Random rnd = new Random();
-        private float x, y, vx, vy; // Trenutni polozaj i brzina
+        private float x, y, vx, vy; // Trenutni položaj i brzina
         private Color boja;
-        private PointF[] temena = new PointF[3];
-        private float duzina, visina;
+        private float duzina, visina; // dimenzije aviona
+
+        // broj frejmova koje avion provede 
+        // zaboden u desni zid pre restartovanja
         private int pauza;
+
         public Avioncic(int w, int h)
         {
             RestartujSe(w, h);
@@ -32,17 +35,21 @@ namespace Kretanje
             int rc = bc * 9 / 10;
             boja = Color.FromArgb(rc, gc, bc);
 
-            pauza = 0;
+            pauza = 0; 
         }
+        
+        // metod izračunava novi položaj aviona
+        // i vraća informaciju da li je bilo pomeranja
         public bool PomeriSe(int w, int h)
         {
             if (pauza > 0)
             {
                 pauza--;
                 if (pauza > 0)
-                    return false;
+                    return false; // stoji zaboden
                 else
                 {
+                    // istekla pauza
                     RestartujSe(w, h);
                     return true;
                 }
@@ -51,6 +58,7 @@ namespace Kretanje
             {
                 if (x < w)
                 {
+                    // leti napred (nadesno)
                     pauza = 0;
                     x = x + vx;
                     vy += rnd.Next(-h, h) * 0.01f;
@@ -63,6 +71,7 @@ namespace Kretanje
                 }
                 else
                 {
+                    // stigao do desne ivice
                     pauza = 10;
                     return false;
                 }
@@ -70,6 +79,8 @@ namespace Kretanje
         }
         public void NacrtajSe(Graphics g, int w, int h)
         {
+            // aviončić je u obliku trougla, računamo temena
+            PointF[] temena = new PointF[3];
             temena[0].X = x; 
             temena[0].Y = y;
             

@@ -4,6 +4,7 @@ using System.Drawing;
 
 namespace SortingAlgorithms
 {
+    // klasa koja predstavlja algoritam Bubble Sort
     public class BubbleSort : Algorithm
     {
         private int iSortedFrom, iBubble;
@@ -12,15 +13,17 @@ namespace SortingAlgorithms
 
         override public void Display(Graphics g)
         {
+            // karakteristični opsezi koje treba prikazati ispod stubića
             Display(g, new List<Tuple<int, int>>
             {
-                new Tuple<int, int>(iBubble, iBubble + 1), // the bubble
-                new Tuple<int, int>(iSortedFrom, a.Length) // sorted part
+                new Tuple<int, int>(iBubble, iBubble + 1), // šetajući "balončić"
+                new Tuple<int, int>(iSortedFrom, a.Length) // sortirani deo niza
             });
         }
 
         public override IEnumerable<int> DoSortingStep()
         {
+            // razmene koje po ovom algoritmu treba izvršiti radi sortiranja
             for (iSortedFrom = a.Length - 1; iSortedFrom > 0; iSortedFrom--)
                 for (iBubble = 0; iBubble < iSortedFrom; iBubble++)
                     if (a[iBubble] > a[iBubble + 1])

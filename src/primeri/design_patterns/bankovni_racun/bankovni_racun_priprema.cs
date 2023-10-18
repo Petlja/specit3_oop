@@ -3,10 +3,10 @@ namespace Primer
 {
     public class Racun
     {
-        // Zaduzen status:    racun je u minusu, ne dobija kamatu, odrzavanje mu je najskuplje 
-        // Standardan status: racun je u malom plusu, ne dobija kamatu, odrzavanje mu je najjeftinije
-        // Povlascen status:  racun je u velikom plusu, dobija kamatu, srednji torskovi odrzavanja
-        // Svaki novi racun se otvara kao standardan
+        // Zadužen status:    račun je u minusu, ne dobija kamatu, održavanje mu je najskuplje 
+        // Standardan status: račun je u malom plusu, ne dobija kamatu, održavanje mu je najjeftinije
+        // Povlašćen status:  račun je u velikom plusu, dobija kamatu, srednji troškovi održavanja
+        // Svaki novi račun se otvara kao standardan
 
         #region PODACI
         private enum StatusRacuna { Zaduzen, Standardan, Povlascen };
@@ -63,27 +63,28 @@ namespace Primer
             switch (status)
             {
                 case StatusRacuna.Zaduzen:
-                    kamatnaStopa = 0.0;          // nebitna, ne dobija kametu
-                    donjaGranica = -1.0;         // nebitna, ne postoji nizi status
+                    kamatnaStopa = 0.0;          // nebitna, ne dobija kamatu
+                    donjaGranica = -1.0;         // nebitna, ne postoji niži status
                     gornjaGranica = 0.0;         // za prelazak u standardan
                     odrzavanjeRacuna = 500.0;
                     break;
                 case StatusRacuna.Standardan:
-                    kamatnaStopa = 0.0;          // nebitna, ne dobija kametu
-                    donjaGranica = 0.0;          // za prelazak u zaduzen
-                    gornjaGranica = 200000.0;    // za prelazak u povlascen
+                    kamatnaStopa = 0.0;          // nebitna, ne dobija kamatu
+                    donjaGranica = 0.0;          // za prelazak u zadužen
+                    gornjaGranica = 200000.0;    // za prelazak u povlašćen
                     odrzavanjeRacuna = 200.0;
                     break;
                 case StatusRacuna.Povlascen:
                     kamatnaStopa = 0.05;
-                    donjaGranica = 100000.0;     // za prelazak u standardan (za zaduzen je 0)
-                    gornjaGranica = 100000000.0; // nebitna, ne postoji visi status
+                    donjaGranica = 100000.0;     // za prelazak u standardan (za zadužen je 0)
+                    gornjaGranica = 100000000.0; // nebitna, ne postoji viši status
                     odrzavanjeRacuna = 250.0;
                     break;
             }
         }
         private void AzurirajStatus()
         {
+            // račun se različito ažurira u zavisnosti od statusa
             switch (status)
             {
                 case StatusRacuna.Zaduzen:
@@ -104,6 +105,7 @@ namespace Primer
                     break;
             }
         }
+        
         private void Izvestaj(string usluga, double iznos)
         {
             Console.WriteLine(

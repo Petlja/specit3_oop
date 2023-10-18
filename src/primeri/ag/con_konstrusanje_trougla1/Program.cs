@@ -14,9 +14,14 @@ namespace con_konstrusanje_trougla1
             double alfa = Math.PI / 6;
             double beta = Math.PI / 3;
 
+            // prava koja sadrži A i sa pravom AB zaklapa ugao alfa
             Prava ac = new Prava(A, new Vektor(A, B).Rotacija(alfa));
+            
+            // prava koja sadrži B i sa pravom BA zaklapa ugao -beta
             Prava bc = new Prava(B, new Vektor(B, A).Rotacija(-beta));
-            Tacka C = ac.Presek(bc);
+            
+            Tacka C = ac.Presek(bc); // presek pravih ac i bc
+            
             Console.WriteLine("Tacka C{0}", C);
             //Tacka C(7.500, 4.598)
         }

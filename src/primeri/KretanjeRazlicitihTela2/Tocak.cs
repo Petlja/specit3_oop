@@ -5,14 +5,16 @@ namespace Kretanje
 {
     public class Tocak : Telo
     {
-        private float r;
-        private float rMalo;
-        private float ugao;
-        private int brPrecnika;
+        private float r; // poluprečnik spoljašnjeg kruga
+        private float rMalo; // poluprečnik unutrašnjeg kruga
+        private float ugao; // ugao za koji se rotira točak u svakom frejmu
+        private int brPrecnika; // broj prečnika koje treba nacrtati
+
         public Tocak(int w, int h)
         {
             RestartujSe(w, h);
         }
+
         public override void RestartujSe(int w, int h)
         {
             x = rnd.Next(w);
@@ -32,22 +34,27 @@ namespace Kretanje
             boja = Color.FromArgb(rc, gc, bc);
         }
 
+        // metod izračunava novi položaj aviona
+        // i vraća informaciju da li je bilo pomeranja
         public override bool PomeriSe(int w, int h)
         {
             x = x + vx;
             if (x < r)
             {
+                // kad stigneš do leve ivice, kreni desno
                 x = r + (r - x);
                 vx = -vx;
             }
             else if (x > w - r)
             {
+                // kad stigneš do desne ivice, kreni levo
                 x = w - r - (x + r - w);
                 vx = -vx;
             }
             ugao = ugao + vx / r;
             return true;
         }
+
         public override void NacrtajSe(Graphics g, int w, int h)
         {
             Pen olovka = new Pen(boja, r / 8);

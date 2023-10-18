@@ -8,8 +8,11 @@ namespace Quiz
 {
     class Quiz
     {
+        // pitanja od kojih se kviz sastoji
         List<Question> questions;
 
+        // pomoćni metod za testiranje i kreiranje fajla sa pitanjima,
+        // tako da taj fajl kasnije služi kao uzor za formiranje drugih fajlova
         public static Quiz Sample()
         {
             Quiz q = new Quiz();
@@ -20,6 +23,8 @@ namespace Quiz
             q.questions.Add(Question.Sample("Parsons"));
             return q;
         }
+        
+        // učitavanje celog kviza iz tekstualnog ulaznog toka
         public static Quiz FromStream(StreamReader sr)
         {
             Quiz q = new Quiz();
@@ -30,6 +35,7 @@ namespace Quiz
 
             return q;
         }
+        
         public string ToText()
         {
             StringBuilder sb = new StringBuilder();
@@ -52,6 +58,7 @@ namespace Quiz
                 if (questionChanged)
                     Console.Clear();
                 
+                // prikaži tekuće pitanje i prihvati komandu
                 questionChanged = false;
                 questions[iQuestion].Display();
                 ConsoleKeyInfo ki = Console.ReadKey(true);

@@ -7,16 +7,21 @@ using System.Text.RegularExpressions;
 
 namespace Quiz
 {
+    // pitanje sa upisivanjem odgovora
     public class FillInTheBlanksQuestion : Question
     {
-        string userAnswer;
-        string correctAnswer;
-        int cursorPosition = 0;
+        string userAnswer; // odgovor korisnika
+        string correctAnswer; // tačan odgovor
+        int cursorPosition = 0; // pozicija kursora u otkucanom tekstu
+
         private FillInTheBlanksQuestion()
         {
             userAnswer = "";
             cursorPosition = 0;
         }
+
+        // pomoćni metod za testiranje i kreiranje fajla sa pitanjima,
+        // tako da taj fajl kasnije služi kao uzor za formiranje drugih fajlova
         public static FillInTheBlanksQuestion Sample()
         {
             FillInTheBlanksQuestion q = new FillInTheBlanksQuestion()
@@ -29,6 +34,8 @@ namespace Quiz
             };
             return q;
         }
+
+        // učitavanje jednog pitanja iz tekstualnog ulaznog toka
         public static new Question FromStream(StreamReader sr)
         {
             FillInTheBlanksQuestion q = new FillInTheBlanksQuestion();
@@ -37,6 +44,8 @@ namespace Quiz
             q.points = int.Parse(sr.ReadLine());
             return q;
         }
+
+        // ispisivanje pitanja u fajl
         override public string ToText()
         {
             StringBuilder sb = new StringBuilder();
@@ -46,6 +55,8 @@ namespace Quiz
             sb.Append(points); sb.Append("\n");
             return sb.ToString();
         }
+
+        // prikazivanje pitanja na ekranu
         override public void Display()
         {
             Console.SetCursorPosition(0, 0);
@@ -56,12 +67,15 @@ namespace Quiz
             (x, y) = Console.GetCursorPosition();
             Console.SetCursorPosition(x + cursorPosition - userAnswer.Length - 1, y);
         }
+
+        // reakcija na pritisnut taster
         public override void HandleInput(ConsoleKeyInfo ki)
         {
             int n = userAnswer.Length;
             switch (ki.Key)
             {
                 case ConsoleKey.Backspace:
+                    // brisanje karaktera levo od kursora
                     if (cursorPosition > 0)
                     {
                         userAnswer = userAnswer.Remove(cursorPosition - 1, 1);
@@ -69,18 +83,21 @@ namespace Quiz
                     }
                     break;
                 case ConsoleKey.Delete:
+                    // brisanje karaktera desno od kursora
                     if (cursorPosition < n)
                     {
                         userAnswer = userAnswer.Remove(cursorPosition, 1);
                     }
                     break;
                 case ConsoleKey.LeftArrow:
+                    // pomeranje kursora levo
                     if (cursorPosition > 0)
                     {
                         cursorPosition--;
                     }
                     break;
                 case ConsoleKey.RightArrow:
+                    // pomeranje kursora desno
                     if (cursorPosition < n)
                     {
                         cursorPosition++;
@@ -89,6 +106,7 @@ namespace Quiz
                 default:
                     if (char.IsLetterOrDigit(ki.KeyChar))
                     {
+                        // upisivanje otkucanog slova
                         userAnswer = userAnswer.Insert(cursorPosition, ki.KeyChar.ToString());
                         cursorPosition++;
                     }
@@ -96,10 +114,13 @@ namespace Quiz
             }
         }
 
+        // vraća vrednost izabranog odgovora u poenima
         public override int Evaluate()
         {
             Regex rCorrectAnswer = new Regex(correctAnswer);
             return (rCorrectAnswer.IsMatch(userAnswer)) ? points : 0;
+            
+            // alternativa bez upotrebe regularnih izraza
             //return (userAnswer == correctAnswer) ? points : 0;
         }
     }

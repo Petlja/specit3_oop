@@ -1,4 +1,6 @@
 using System;
+
+// bazna klasa
 class B
 {
     public void F1() { Console.Write("b.f1 "); }
@@ -7,17 +9,18 @@ class B
     virtual public void F4() { Console.Write("b.f4 "); }
 
 }
+
+// izvedena klasa
 class D : B
 {
-    // F1 je namenjena da se prosto nasledi
-    // F2 moze da bude redefinisana, ali u klasi D nije, pa se koristi iz klase B
+    // metod F1 je namenjen da se prosto nasledi
+    // metod F2 moze da bude redefinisan, ali u klasi D nije, pa se koristi iz klase B
 
-    // F3 je nova (new) funkcija sa istim imenom, ona sakriva F3 iz bazne klase
-    // Posto F3 nije virtuelna, razresava se staticki (po deklarisanom tipu)
+    // metod F3 je nov (new) metod sa istim imenom, on sakriva F3 iz bazne klase
+    // Pošto F3 nije virtuelan, razrešava se statički (po deklarisanom tipu)
     public new void F3() { Console.Write("d.f3 "); }
 
-
-    // F4 je redefinisana virtuelna funkcija, razresava se dinamicki (po aktuelnom tipu objekta)
+    // F4 je redefinisan virtuelan metod, razresava se dinamički (po aktuelnom tipu objekta)
     override public void F4() { Console.Write("d.f4 "); }
 }
 internal class Program

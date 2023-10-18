@@ -2,6 +2,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        // proba
         Glumac g1 = new Glumac("Pera", 4);
         Glumac g2 = new Glumac("Mika", 3);
         Glumac g3 = new Glumac("Zika", 2);
@@ -20,6 +21,7 @@ class Program
         p1.AngazujGlumca(g3);
         aktivirana = p1.Aktiviraj();
         Console.WriteLine("Predstava " + (aktivirana ? "je aktivirana" : "nije aktivirana"));
+
         p1.Zakazi(i1);
         bool izvedena = p1.Izvedi(i1);
         Console.WriteLine("Predstava " + (izvedena ? "je izvedena" : "nije izvedena"));

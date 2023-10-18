@@ -5,9 +5,15 @@ namespace Kretanje
 {
     public class Avioncic : Telo
     {
-        PointF[] temena = new PointF[3];
-        float duzina, visina;
-        int pauza;
+        // aviončić je u obliku trougla, za čija temena koristimo ovaj niz
+        private PointF[] temena = new PointF[3];
+
+        private float duzina, visina; // dimenzije aviona
+
+        // broj frejmova koje avion provede 
+        // zaboden u desni zid pre restartovanja
+        private int pauza;
+
         public Avioncic(int w, int h)
         {
             RestartujSe(w, h);
@@ -31,15 +37,19 @@ namespace Kretanje
 
             pauza = 0;
         }
+
+        // metod izračunava novi položaj aviona
+        // i vraća informaciju da li je bilo pomeranja
         public override bool PomeriSe(int w, int h)
         {
             if (pauza > 0)
             {
                 pauza--;
                 if (pauza > 0)
-                    return false;
+                    return false; // stoji zaboden
                 else
                 {
+                    // istekla pauza
                     RestartujSe(w, h);
                     return true;
                 }
@@ -48,6 +58,7 @@ namespace Kretanje
             {
                 if (x < w)
                 {
+                    // leti napred (nadesno)
                     pauza = 0;
                     x = x + vx;
                     vy += rnd.Next(-h, h) * 0.01f;
@@ -60,6 +71,7 @@ namespace Kretanje
                 }
                 else
                 {
+                    // stigao do desne ivice
                     pauza = 10;
                     return false;
                 }

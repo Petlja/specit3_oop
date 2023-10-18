@@ -301,7 +301,7 @@ Linq методи
 
 .. gallery:: primer_galerija
     :folder: ../../_images/yield
-    :images: yield_001.png, yield_002.png, yield_003.png, yield_004.png, yield_005.png, yield_006.png, yield_007.png, yield_008.png, yield_009.png, yield_010.png, yield_011.png, yield_012.png, yield_013.png, yield_014.png, yield_015.png, yield_016.png, yield_017.png, yield_018.png, yield_019.png, yield_020.png, yield_021.png, yield_022.png, yield_023.png, yield_024.png, yield_025.png, yield_026.png, yield_027.png, yield_028.png, yield_029.png, yield_030.png, yield_031.png, yield_032.png, yield_033.png, yield_034.png, yield_035.png, yield_036.png, yield_037.png, yield_038.png, yield_039.png, yield_040.png, yield_041.png, yield_042.png, yield_043.png, yield_044.png, yield_045.png, yield_046.png
+    :images: yield_001.png, yield_002.png, yield_003.png, yield_004.png, yield_005.png, yield_006.png, yield_007.png, yield_008.png, yield_009.png, yield_010.png, yield_011.png, yield_012.png, yield_013.png, yield_014.png, yield_015.png, yield_016.png, yield_017.png, yield_018.png, yield_019.png, yield_020.png, yield_021.png, yield_022.png, yield_023.png, yield_024.png, yield_025.png, yield_026.png, yield_027.png
     :width:
     :height:
 

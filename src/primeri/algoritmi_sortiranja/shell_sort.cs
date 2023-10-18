@@ -4,6 +4,7 @@ using System.Drawing;
 
 namespace SortingAlgorithms
 {
+    // klasa koja predstavlja algoritam Shell Sort
     public class ShellSort : Algorithm
     {
         public ShellSort(int[] _a, Color c, Color fc) : base(_a, c, fc, "Shell Sort") { }
@@ -11,15 +12,20 @@ namespace SortingAlgorithms
 
         override public void Display(Graphics g)
         {
+            // karakteristični opsezi koje treba prikazati ispod stubića
             Display(g, new List<Tuple<int, int>>
             {
-                new Tuple<int, int>(iBubble, iBubble + 1), // sorted part 
-                new Tuple<int, int>(iBubbleStart, iBubbleStart + 1) // current comparing value
+                // sortirani deo niza
+                new Tuple<int, int>(iBubble, iBubble + 1), 
+                
+                // vrednost koja se trenutno poredi
+                new Tuple<int, int>(iBubbleStart, iBubbleStart + 1) 
             });
         }
 
         public override IEnumerable<int> DoSortingStep()
         {
+            // razmene koje po ovom algoritmu treba izvršiti radi sortiranja
             int n = a.Length;
             for (int gap = n / 2; gap > 0; gap /= 2)
                 for (iBubbleStart = gap; iBubbleStart < n; iBubbleStart++)

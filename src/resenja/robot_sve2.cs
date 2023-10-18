@@ -2,10 +2,16 @@ using System;
 
 public class Robot
 {
-    private int x, y, smer;
-    private const string ImeSmera = "NESW";
-    private static int[] dx = { 0, 1, 0, -1 };
+    private int x, y; // pozicija robota
+    private int smer; // smer u kome je robot okrenut
+    
+    // pomaci duž x i y ose za svaki smer
+    private static int[] dx = { 0, 1, 0, -1 }; 
     private static int[] dy = { 1, 0, -1, 0 };
+    
+    private const string ImeSmera = "NESW"; // oznake smerova
+
+    // konstruktor - robot je zadat pozicijom i smerom
     public Robot(int x0, int y0, char orijentacija)
     {
         x = x0;
@@ -19,20 +25,27 @@ public class Robot
             default: throw new Exception("Nepostojeca orijentacija");
         }
     }
+    
+    // metod za kretanje napred
     public void Napred(int n = 1)
     {
         x += n * dx[smer];
         y += n * dy[smer];
     }
+    
+    // metod za okretanje nalevo
     public void Nalevo()
     {
         smer = (smer + 3) % 4;
     }
+    
+    // metod za okretanje nadesno
     public void Nadesno()
     {
         smer = (smer + 1) % 4;
     }
 
+    // prikaz podataka o robotu
     public override string ToString()
     {
         return string.Format("Robot({0}, {1}, {2})", x, y, ImeSmera[smer]);

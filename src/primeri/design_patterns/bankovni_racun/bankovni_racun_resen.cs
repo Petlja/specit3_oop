@@ -1,37 +1,56 @@
 using System;
 namespace Primer
 {
+    // apstraktna klasa RacunSaStatusom je bazna za klase 
+    // ZaduzenRacun, StandardanRacun, PovlascenRacun, koje 
+    // predstavljaju račun u određenom statusu
     public abstract class RacunSaStatusom
     {
+        // klasa Racun predstavlja celovit račun i 
+        // jedina treba da je vidljiva korisniku
         protected Racun racun;
-        protected double stanje, donjaGranica, gornjaGranica, kamatnaStopa, odrzavanjeRacuna;
+
+        protected double stanje; // stanje na računu
+        
+        // granice stanja za dati status
+        protected double donjaGranica, gornjaGranica; 
+        
+        // visina kamate i cena održavanja za dati status
+        protected double kamatnaStopa, odrzavanjeRacuna; 
+        
         public Racun Racun { get { return racun; } }
+        
         public double Stanje { get { return stanje; } }
+        
         public void Uplata(double iznos)
         {
             stanje += iznos;
             AzurirajStatus();
             racun.Izvestaj("uplata", iznos);
         }
+        
         public void PripisKamate()
         {
             double kamata = kamatnaStopa * stanje;
             stanje += kamata;
             racun.Izvestaj("pripis kamate", kamata);
         }
+        
         public void ObracunOdrzavanja()
         {
             stanje -= odrzavanjeRacuna;
             AzurirajStatus();
             racun.Izvestaj("odrzavanje", odrzavanjeRacuna);
         }
-
+        
+        // apstraktni metodi, specifični za svaki status
         public abstract void Isplata(double iznos);
         protected abstract void AzurirajStatus();
     }
 
 
-    // ZaduzenRacun je u minusu, ne dobija kamatu, odrzavanje mu je najskuplje 
+    // ZaduzenRacun je u minusu, ne dobija kamatu, 
+    // održavanje mu je najskuplje 
     public class ZaduzenRacun : RacunSaStatusom
     {
         public ZaduzenRacun(RacunSaStatusom racunSaStatuson)
@@ -39,8 +58,8 @@ namespace Primer
             stanje = racunSaStatuson.Stanje;
             racun = racunSaStatuson.Racun;
             kamatnaStopa = 0.0;
-            donjaGranica = -1.0;         // nebitna, ne postoji nizi status
-            gornjaGranica = 0.0;         // za prelazak u standardan
+            donjaGranica = -1.0;   // nebitna, ne postoji niži status
+            gornjaGranica = 0.0;   // za prelazak u standardan
             odrzavanjeRacuna = 500.0;
         }
         public override void Isplata(double iznos)
@@ -55,7 +74,8 @@ namespace Primer
         }
     }
 
-    // StandardanRacun je u malom plusu, ne dobija kamatu, odrzavanje mu je najjeftinije
+    // StandardanRacun je u malom plusu, ne dobija kamatu, 
+    // održavanje mu je najjeftinije
     public class StandardanRacun : RacunSaStatusom
     {
         public StandardanRacun(RacunSaStatusom racunSaStatuson)
@@ -63,8 +83,8 @@ namespace Primer
             stanje = racunSaStatuson.Stanje;
             racun = racunSaStatuson.Racun;
             kamatnaStopa = 0.0;
-            donjaGranica = 0.0;          // za prelazak u zaduzen
-            gornjaGranica = 200000.0;    // za prelazak u povlascen
+            donjaGranica = 0.0;          // za prelazak u zadužen
+            gornjaGranica = 200000.0;    // za prelazak u povlašćen
             odrzavanjeRacuna = 200.0;
         }
         public StandardanRacun(double stanje, Racun racun)
@@ -72,8 +92,8 @@ namespace Primer
             this.stanje = stanje;
             this.racun = racun;
             kamatnaStopa = 0.0;
-            donjaGranica = 0.0;          // za prelazak u zaduzen
-            gornjaGranica = 200000.0;    // za prelazak u povlascen
+            donjaGranica = 0.0;          // za prelazak u zadužen
+            gornjaGranica = 200000.0;    // za prelazak u povlašćen
             odrzavanjeRacuna = 200.0;
         }
         public override void Isplata(double iznos)
@@ -91,7 +111,8 @@ namespace Primer
         }
     }
 
-    // Povlascen status:  racun je u velikom plusu, dobija kamatu, srednji torskovi odrzavanja
+    // Povlašćen status:  račun je u velikom plusu, dobija kamatu, 
+    // srednji torškovi održavanja
     public class PovlascenRacun : RacunSaStatusom
     {
         public PovlascenRacun(RacunSaStatusom racunSaStatuson)
@@ -99,8 +120,8 @@ namespace Primer
             stanje = racunSaStatuson.Stanje;
             racun = racunSaStatuson.Racun;
             kamatnaStopa = 0.05;
-            donjaGranica = 100000.0;     // za prelazak u standardan (za zaduzen je 0)
-            gornjaGranica = 100000000.0; // nebitna, ne postoji visi status
+            donjaGranica = 100000.0;     // za prelazak u standardan (za zadužen je 0)
+            gornjaGranica = 100000000.0; // nebitna, ne postoji viši status
             odrzavanjeRacuna = 250.0;
         }
         public override void Isplata(double iznos)
@@ -118,6 +139,9 @@ namespace Primer
         }
     }
 
+    // klasa koja je izložena korisniku,
+    // ova klasa prethodnu hijerarhiju koristi kao pomoćne klase
+    // i predstavlja neku vrstu omotača oko njih
     public class Racun
     {
         private RacunSaStatusom racunStatus;

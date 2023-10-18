@@ -91,6 +91,7 @@ namespace Hanoj
                 int y0 = h - hDiska * stap[i].Count;
                 foreach (int d in stap[i]) // za svaki disk na štapu
                 {
+                    // nacrtaj disk
                     g.FillRectangle(b, x0 - r0 * d, y0, 2 * r0 * d, hDiska);
                     g.DrawRectangle(p, x0 - r0 * d, y0, 2 * r0 * d, hDiska);
                     y0 += hDiska;

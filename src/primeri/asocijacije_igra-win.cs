@@ -15,14 +15,15 @@ namespace AsocijacijeWin
 
         private void Form1_Load(object sender, System.EventArgs e)
         {
-            Osvezi();
+            Osvezi(); // ažuriraj tekstove na dugmadi i poljima za pogađanje
         }
         private void openToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                // ako je izabran fajl, kreiraj igru
                 igra = Asocijacije.Kreiraj(openFileDialog1.FileName);
-                Osvezi();
+                Osvezi(); // ažuriraj tekstove 
                 lblPoruka.Text = "Отворите поље";
             }
         }
@@ -34,12 +35,15 @@ namespace AsocijacijeWin
                 return;
             }
 
+            // nađi koordinate dugmeta na koje je kliknuto
             Button b = sender as Button;
             string tag = (string)b.Tag;
             int kol = tag[0] - 'A';
             int polje = tag[1] - '1';
+            
             if (igra.Otvori(kol, polje))
             {
+                // ako je polje otvoreno, ažuriraj tekst na dugmetu
                 b.Text = igra[kol, polje];
                 DozvoliUnos(true);
             }
@@ -52,15 +56,17 @@ namespace AsocijacijeWin
                 MessageBox.Show("Прво треба да учитате игру");
                 return;
             }
-
+            // polje za pogađanje je napušteno bez pritiska na Enter,
+            // pa treba da se vrati naziv polja
             TextBox tb = sender as TextBox;
             string tag = (string)tb.Tag;
             if (tag.Length == 1)
             {
+                // ako je tag samo jedno slovo, radi se o koloni
                 int kol = tag[0] - 'A';
                 tb.Text = igra[kol];
             }
-            else if (!igra.Reseno)
+            else if (!igra.Reseno) // u protivnom, to je polje za konačno rešenje
                 tb.Text = tag;
         }
 
@@ -72,6 +78,7 @@ namespace AsocijacijeWin
                 return;
             }
 
+            // pri ulasku u polje brišemo tekst, da bi korisnik mogao da pogađa
             TextBox tb = sender as TextBox;
             tb.Text = "";
         }
@@ -89,25 +96,30 @@ namespace AsocijacijeWin
             int kol = tag[0] - 'A';
             if (e.KeyCode == Keys.Enter)
             {
+                // pokušaj da pogodiš kolonu ili konačno rešenje
                 int poeni = (kol < igra.BrojKolona) ?
-                    igra.Pokusaj(kol, tb.Text) :
-                    igra.Pokusaj(tb.Text);
+                    igra.Pokusaj(kol, tb.Text) : // kolona
+                    igra.Pokusaj(tb.Text); // konačno rešenje
 
                 if (poeni > 0)
                 {
+                    // pogođena kolona ili konačno rešenje
                     ukupnoPoena += poeni;
                     lblPoeni.Text = string.Format("Поени: {0}", ukupnoPoena);
-                    Osvezi();
+                    Osvezi(); // ažuriraj tekstove 
                 }
                 else
                 {
-                    tb.Text = tag;
-                    DozvoliUnos(false); // posle promasaja mora da se otvori novo polje
+                    // neuspeo pokušaj, zabrajuje se pogađanje
+                    // (mora da se otvori novo polje)
+                    DozvoliUnos(false);
                 }
-
+                // posle pritiska na Enter polje prestaje da bude u fokusu
                 this.ActiveControl = null;
             }
         }
+
+        // omogućava ili onemogućava upis u polja za pogađanje
         private void DozvoliUnos(bool dozvoli)
         {
             TextBox[] tb = { tbA, tbB, tbC, tbD };
@@ -133,6 +145,8 @@ namespace AsocijacijeWin
             else
                 lblPoruka.Text = "Отворите поље";
         }
+
+        // ažurira tekstove na dugmadi i poljima za pogađanje
         private void Osvezi()
         {
             Button[,] b = {
@@ -159,7 +173,8 @@ namespace AsocijacijeWin
                 DozvoliUnos(false);
                 return;
             }
-
+            
+            // dugmad
             for (int kol = 0; kol < igra.BrojKolona; kol++)
                 for (int pojam = 0; pojam < igra.BrojPojmova; pojam++)
                 {
@@ -167,6 +182,7 @@ namespace AsocijacijeWin
                     b[kol, pojam].Text = igra[kol, pojam];
                 }
 
+            // polja za pogađanje
             for (int kol = 0; kol < igra.BrojKolona; kol++)
             {
                 tb[kol].Text = igra[kol];
@@ -174,6 +190,7 @@ namespace AsocijacijeWin
                     tb[kol].Enabled = false;
             }
 
+            // konačno rešenje
             if (igra.Reseno)
                 DozvoliUnos(false);
         }

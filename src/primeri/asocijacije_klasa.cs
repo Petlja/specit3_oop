@@ -1,14 +1,18 @@
 public class Asocijacije
 {
-    private int brKolona;
-    private int brPojmova;
-    private string[,] pojam;
+    private int brKolona;    // broj kolona u igri
+    private int brPojmova;   // broj pojmova u svakoj koloni
+    private string[,] pojam; // pojmovi koji asociraju na rešenja
     private string[] resenjeKolone;
     private string konacnoResenje;
     private bool[,] otvoreno;
-    private int[] brNeotvorenih;
+    private int[] brNeotvorenih; // broj neotvorenih polja po koloni
     private bool[] resenaKolona;
     private bool reseno;
+
+    // a je matrica pojmova
+    // b su rešenja kolona
+    // c je konačno rešenje
     public Asocijacije(string[,] a, string[] b, string c)
     {
         brKolona = a.GetLength(0);
@@ -35,6 +39,7 @@ public class Asocijacije
             return null;
 
         Asocijacije igra = new Asocijacije();
+        // pokušaj da učitaš pojmove i rešenja iz fajla
         try
         {
             using (StreamReader sr = new StreamReader(putanja))
@@ -65,9 +70,11 @@ public class Asocijacije
         {
             return null;
         }
-
+        // ako je sve uspešno pročitano, vrati inicijalizovan objekat
         return igra;
     }
+    
+    // svojstvo odgovara na pitanje da li su svi pojmovi odtvoreni
     public bool SveOtvoreno
     {
         get
@@ -78,8 +85,12 @@ public class Asocijacije
             return true;
         }
     }
+
     public int BrojKolona { get { return brKolona; } }
+
     public int BrojPojmova { get { return brPojmova; } }
+
+    // pokušava da otvori polje
     public bool Otvori(int kol, int p)
     {
         if (!otvoreno[kol, p])
@@ -90,6 +101,8 @@ public class Asocijacije
         }
         return false;
     }
+
+    // za otvoreno polje vraća pojam, a za zatvoreno naziv polja
     public string this[int kol, int p]
     {
         get
@@ -100,6 +113,8 @@ public class Asocijacije
                 return string.Format("{0}{1}", (char)('A' + kol), p + 1);
         }
     }
+    
+    // za rešenu kolonu vraća rešenje, a za zatvorenu naziv kolone
     public string this[int kol]
     {
         get
@@ -110,10 +125,16 @@ public class Asocijacije
                 return string.Format("Kolona {0}", (char)('A' + kol));
         }
     }
+
     public bool Otvoreno(int kol, int p) { return otvoreno[kol, p]; }
+
     public bool ResenaKol(int kol) { return resenaKolona[kol]; }
+
     public bool Reseno { get { return reseno; } }
+
     public string Konacno { get { return reseno ? konacnoResenje : "Konacno"; } }
+
+    // pokušaj pogađanja kolone
     public int Pokusaj(int kol, string odgovor)
     {
         if (resenaKolona[kol])
@@ -129,6 +150,8 @@ public class Asocijacije
         else
             return 0;
     }
+    
+    // pokušaj pogađanja konačnog rešenja
     public int Pokusaj(string odgovor)
     {
         if (reseno)

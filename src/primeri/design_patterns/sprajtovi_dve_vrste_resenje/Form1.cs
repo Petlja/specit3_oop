@@ -9,6 +9,7 @@ namespace SprajtoviDveVrste
 
         private List<Sprajt> sprajtovi = new List<Sprajt>();
         private Random rnd = new Random();
+
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

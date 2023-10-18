@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 class Program
 {
+    // rekurzivan metod koji nabraja korake rešenja za problem hanojskih kula
+    // metod zapravo generiše kolekciju koraka rešenja
     static IEnumerable<string> Hanoj(int n, string poc, string pom, string kraj)
     {
         if (n > 0)

@@ -6,13 +6,17 @@ using System.Text;
 
 namespace Quiz
 {
+    // pitanje u kome treba poređati ponuđene stavke po nekom redu
     public class ParsonsQuestion : Question
     {
-        string[] items;
-        bool[] selected;
-        string userAnswer = "";
-        string correctOrder;
-        int cursorPosition;
+        string[] items; // stavke
+        bool[] selected; // izabrane stavke
+        string userAnswer = ""; // odgovor korisnika
+        string correctOrder; // ispravan redosled stavki (tačan odgovor)
+        int cursorPosition; // indeks stavke na kojoj se nalazi kursor
+
+        // pomoćni metod za testiranje i kreiranje fajla sa pitanjima,
+        // tako da taj fajl kasnije služi kao uzor za formiranje drugih fajlova
         public static ParsonsQuestion Sample()
         {
             ParsonsQuestion q = new ParsonsQuestion()
@@ -27,6 +31,8 @@ namespace Quiz
             };
             return q;
         }
+
+        // učitavanje jednog pitanja iz tekstualnog ulaznog toka
         public static new Question FromStream(StreamReader sr)
         {
             ParsonsQuestion q = new ParsonsQuestion();
@@ -42,6 +48,8 @@ namespace Quiz
 
             return q;
         }
+
+        // ispisivanje pitanja u fajl
         override public string ToText()
         {
             StringBuilder sb = new StringBuilder();
@@ -56,6 +64,8 @@ namespace Quiz
             sb.Append(points); sb.Append("\n");
             return sb.ToString();
         }
+
+        // prikazivanje pitanja na ekranu
         override public void Display()
         {
             Console.SetCursorPosition(0, 0);
@@ -78,6 +88,8 @@ namespace Quiz
             (x, y) = Console.GetCursorPosition();
             Console.SetCursorPosition(x + cursorPosition - userAnswer.Length - 1, y);
         }
+
+        // reakcija na pritisnut taster
         public override void HandleInput(ConsoleKeyInfo ki)
         {
             int n = userAnswer.Length;
@@ -85,6 +97,7 @@ namespace Quiz
             switch (ki.Key)
             {
                 case ConsoleKey.Backspace:
+                // poništavanje stavke levo od kursora
                     if (cursorPosition > 0)
                     {
                         cursorPosition--;
@@ -94,6 +107,7 @@ namespace Quiz
                     }
                     break;
                 case ConsoleKey.Delete:
+                // poništavanje stavke desno od kursora
                     if (cursorPosition < n)
                     {
                         i = userAnswer[cursorPosition] - 'A';
@@ -102,18 +116,21 @@ namespace Quiz
                     }
                     break;
                 case ConsoleKey.LeftArrow:
+                // pomeranje kursora levo
                     if (cursorPosition > 0)
                     {
                         cursorPosition--;
                     }
                     break;
                 case ConsoleKey.RightArrow:
+                // pomeranje kursora desno
                     if (cursorPosition < n)
                     {
                         cursorPosition++;
                     }
                     break;
                 default:
+                    // ubacivanje stavke čije slovo je pritisnuto
                     if (char.IsLetter(ki.KeyChar))
                     {
                         char ch = char.ToUpper(ki.KeyChar);
@@ -129,6 +146,7 @@ namespace Quiz
             }
         }
 
+        // vraća vrednost izabranog odgovora u poenima
         public override int Evaluate()
         {
             return (userAnswer == correctOrder) ? points : 0;

@@ -3,19 +3,26 @@ class Program
 {
     static void Main()
     {
+        // tabla po kojoj se kreću roboti
         int[,] tabla = new int[,] {
             { 0, 0, 0, 1, 0, 0, 0, 0, 1 },
             { 0, 0, 0, 1, 0, 0, 0, 0, 0 },
             { 0, 0, 0, 0, 0, 0, 0, 1, 0 },
             { 1, 0, 0, 1, 0, 0, 0, 0, 1 },
         };
+
+        // prikazujemo meni korisniku
         Console.WriteLine("1: neusmeren spor robot");
         Console.WriteLine("2: neusmeren brz robot");
         Console.WriteLine("3: usmeren spor robot");
         Console.WriteLine("4: usmeren brz robot");
         Console.Write("Izaberi robota (1/2/3/4) ");
         int tipRobota = int.Parse(Console.ReadLine());
+
+        // Kreiramo robota pomoću statičkog metoda
         Robot robot = Robot.Napravi(tipRobota, 0, 0, tabla);
+
+        // niska komandi za upravljanje robotom (svako slovo je jedna komanda)
         string komande = "RRFLFRFLBF";
         foreach (char komanda in komande)
         {

@@ -18,11 +18,11 @@
 
 Дакле, у примеру се појављују следећи пројекти: 
 
-- Библиотека ``Funkcije``
-- Конзолна апликација за тестирање и табелирање вредности функције
-- Библиотека ``CoordinateConverter``, која је коришћена и раније
-- Графичка апликација за цртање графика произвољне функције
-- Конзолна апликација за налажење нула функције
+- библиотека ``Funkcije``,
+- конзолна апликација за тестирање и табелирање вредности функције,
+- библиотека ``CoordinateConverter``, која је коришћена и раније,
+- графичка апликација за цртање графика произвољне функције,
+- конзолна апликација за налажење нула функције.
 
 Класа Function и изведене класе
 -------------------------------
@@ -62,15 +62,17 @@
 
     namespace FunctionValue
     {
+        // bazna klasa za sve podržane funkcije
         public abstract class Function
         {
             abstract public double Value(double x);
         }
 
+        // funkcija oblika sin(f(x))
         internal class Sine : Function
         {
             private Function a;
-            public Sine(Function f) { a = f; }
+            public Sine(Function f) { a = f; } // argument funkcije sin
             override public string ToString() {
                 return string.Format("sin({0})", a);
             }
@@ -79,22 +81,27 @@
             }
         }
 
+        // funkcija oblika exp(f(x))
         internal class Exponential : Function
         {
             private Function a;
             public Exponential(Function f) { a = f; }
             override public string ToString() {
-                return string.Format("exp({0})", a);
+                return string.Format("exp({0})", a); 
             }
             override public double Value(double x) {
                 return Math.Exp(a.Value(x));
             }
         }
-
+        
+        // funkcija oblika f(x) * g(x)
         internal class Product : Function
         {
             private Function a, b;
-            public Product(Function f, Function g) { a = f; b = g; }
+            public Product(Function f, Function g) 
+            { 
+                a = f; b = g; // argumenti funkcije f(x) * g(x)
+            }
             override public string ToString() {
                 return string.Format("({0} * {1})", a, b);
             }
@@ -103,14 +110,16 @@
             }
         }
 
+        // funkcija oblika "x"
         internal class Variable : Function
         {
-            private string name;
+            private string name; // ime promenljive
             public Variable(string s="x") { name = s; }
             override public string ToString() { return name; }
             override public double Value(double x) { return x; }
         }
 
+        // funkcija koja ne zavisi od x (konstantna funkcija)
         internal class Constant : Function
         {
             private double a;

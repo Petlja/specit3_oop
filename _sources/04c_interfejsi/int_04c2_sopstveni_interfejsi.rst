@@ -13,8 +13,8 @@
 
 Погледајмо ово на следећем примеру.
 
-Пример -- "настави низ"
-^^^^^^^^^^^^^^^^^^^^^^^
+Пример -- игра *настави низ*
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. questionnote::
 
@@ -25,10 +25,10 @@
     
     Правилности по којима се ређају елементи могу, на пример, да буду:
     
-    - следећи број је за :math:`a` већи од претходног (аритметичка прогресија)
-    - следећи број је :math:`b` пута већи од претходног (геометријска прогресија)
-    - следећи број је збир претходна два (Фибоначијев низ)
-    - низ се састоји од две аритметичке прогресије, чији елементи се наизменично појављују
+    - следећи број је за :math:`a` већи од претходног (аритметичка прогресија),
+    - следећи број је :math:`b` пута већи од претходног (геометријска прогресија),
+    - следећи број је збир претходна два (Фибоначијев низ),
+    - низ се састоји од две аритметичке прогресије, чији елементи се наизменично појављују,
     - следећи број је наизменично за :math:`a` већи и :math:`b` пута већи од претходног
     
     и слично.
@@ -42,22 +42,30 @@
 .. activecode:: interfejs_nastavi_niz_klase
     :passivecode: true
 
+    // Primer ilustruje kreiranje i upotrebu sopstvenog jednostavnog 
+    // interfejsa nalik interfejsu IEnumerable
+
     using System;
 
+    // Zajednički interfejs za sve klase koje se pojavljuju u primeru
     interface INizClanPoClan
     {
         public long Sledeci();
     }
 
+    // klasa nabraja elemente arimetičke progresije
     class AritmetickiNiz : INizClanPoClan
     {
-        private long a0, d, sled;
+        private long a0, d; // početni član i razlika dva uzastopna člana
+        private long sled; // sledeći član progresije
+
         public AritmetickiNiz(long a0, long d)
         {
             this.a0 = a0;
             this.d = d;
             this.sled = a0;
         }
+
         public long Sledeci() 
         {
             long rez = sled;
@@ -65,15 +73,20 @@
             return rez;
         }
     }
+
+    // klasa nabraja elemente geometrijske progresije
     class GeometrijskiNiz : INizClanPoClan
     {
-        private long a0, q, sled;
+        private long a0, q; // početni član i količnik dva uzastopna člana
+        private long sled; // sledeći član progresije
+
         public GeometrijskiNiz(long a0, long q)
         {
             this.a0 = a0;
             this.q = q;
             this.sled = a0;
         }
+
         public long Sledeci()
         {
             long rez = sled;
@@ -81,16 +94,24 @@
             return rez;
         }
     }
+    
+    // klasa naizmenično nabraja elemente dve arimetičke progresije
     class DveAritmProgresije : INizClanPoClan
     {
+        // početni članovi i razlike za dve progresije
         private long sledA, sledB, da, db;
+        
+        // alternirajuća logička vrednost, koja govori 
+        // iz koje progreseije treba uzeti sledeći član    
         private bool naReduJeA;
+        
         public DveAritmProgresije(long a0, long da, long b0, long db)
         {
             this.sledA = a0; this.da = da;
             this.sledB = b0; this.db = db;
             naReduJeA = true;
         }
+        
         public long Sledeci()
         {
             long rez;
@@ -101,14 +122,19 @@
             return rez;
         }
     }
+    
+    // klasa nabraja elemente fibonačijevog niza
     class FibonacijevNiz : INizClanPoClan
     {
+        // sledeća dva člana niza
         private long sledeci1, sledeci2;
+        
         public FibonacijevNiz(long a0, long a1)
         {
             this.sledeci1 = a0;
             this.sledeci2 = a1;
         }
+        
         public long Sledeci()
         {
             long rez = sledeci1;
@@ -118,10 +144,13 @@
         }
     }
 
+    // klasa u kojoj je sledeći član naizmenično 
+    // za a veći i b puta veći od prethodnog
     class NaizmenicnoPlusPuta: INizClanPoClan
     {
         private long sled, d, q;
         private bool naReduJePlus;
+    
         public NaizmenicnoPlusPuta(long a0, long d, long q)
         {
             this.sled = a0; 
@@ -129,6 +158,7 @@
             this.q = q;
             naReduJePlus = true;
         }
+        
         public long Sledeci()
         {
             long rez = sled;
@@ -193,6 +223,7 @@
     {
         static void Main(string[] args)
         {
+            // prikaži korisniku uputstvo i komande kojima raspolaže
             Console.WriteLine("Dobijaces redom clanove nekog pravilnog niza");
             Console.WriteLine("Pokusaj da pogodis sledeci element");
             Console.WriteLine("\tPritisni 'Enter' za novi element istog niza");
@@ -208,8 +239,9 @@
 
                 Console.WriteLine("Pocinje novi niz");
                 bool pogodio = false;
+                // na slučajan način biramo jedan od 5 tipova niza
                 INizClanPoClan niz = null;
-                int vrstaNiza = rnd.Next(5); // biramo jedan od 5 tipova niza
+                int vrstaNiza = rnd.Next(5);
                 switch (vrstaNiza)
                 {
                     case 0:
@@ -234,6 +266,9 @@
                             rnd.Next(3, 7), rnd.Next(2, 5));
                         break;
                 }
+
+                // prikazuj po jedan element dok korisnik ne pogodi sledeći, 
+                // ne zatraži novi niz ili ne odustane od igre
                 long novi = niz.Sledeci();
                 while (!pogodio)
                 {
@@ -253,6 +288,8 @@
                     Console.WriteLine("Bravo!");
                 else if (unos == "-")
                 {
+                    // ako je igrač tražio novi niz, prikaži mu za kraj 
+                    // još nekoliko članova tekućeg niza
                     Console.Write("Steta, evo ti jos nekoliko elemenata: {0} ", novi);
                     for (int i = 0; i < 5; i++)
                         Console.Write("{0,7}", niz.Sledeci());

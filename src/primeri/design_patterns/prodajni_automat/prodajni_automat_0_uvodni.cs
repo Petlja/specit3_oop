@@ -9,9 +9,11 @@ namespace Primer
 
         public ProdajniAutomat()
         {
-            // pun stvari
+            // čeka kupca (napunjen)
             status = Status.Slobodan;
         }
+        
+        // automat različito reaguje na ubacivanje novca, zavisno od prethodnog statusa
         public void Ubacivanje(double iznos)
         {
             switch (status)
@@ -33,6 +35,8 @@ namespace Primer
                     break;
             }
         }
+        
+        // automat različito reaguje na izbor proizvoda, zavisno od prethodnog statusa
         public void IzborProizvoda(double iznos)
         {
             switch (status)
@@ -58,6 +62,8 @@ namespace Primer
                     break;
             }
         }
+        
+        // automat različito reaguje na odustajanje od kupovine, zavisno od prethodnog statusa
         public void Odustajanje()
         {
             switch (status)
@@ -78,6 +84,8 @@ namespace Primer
             }
 
         }
+        
+        // automat različito reaguje na čekanje, zavisno od prethodnog statusa
         public void Cekanje()
         {
             switch (status)
@@ -115,13 +123,18 @@ namespace Primer
         {
             ProdajniAutomat pa = new ProdajniAutomat();
             bool kraj = false;
+            
+            // prikaži korisniku raspoložive komande
             Console.WriteLine("'Ux' za ubacivanje novca (neki broj umesto x, npr. U200)");
             Console.WriteLine("'Ix' za izbor proizvoda koji kosta x (neki broj umesto x, npr. I200)");
             Console.WriteLine("'O' za odustajanje");
             Console.WriteLine("'C' za cekanje");
             Console.WriteLine("'K' za kraj");
-            while (!kraj)
+            
+            while (!kraj) // dok korisnik ne izabere kraj
             {
+                // ponudi korisnika da zada akciju 
+                // i pozovi odgovarajući metod za obradu akcije
                 Console.Write("Sta cemo: ");
                 try
                 {

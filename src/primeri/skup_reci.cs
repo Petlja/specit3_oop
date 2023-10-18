@@ -10,6 +10,9 @@ class Program
         foreach (string rec in sveReci)
             razliciteReci.Add(rec);
 
+        // ako je broj unetih reci jednak broju elemenata skupa,znači da 
+        // nije bilo ponavljanja elemenata (jer tada bi skup bio manji),
+        // pa su sve unete reči različite.
         if (sveReci.Length == razliciteReci.Count)
             Console.WriteLine("Sve reci su razlicite.");
         else

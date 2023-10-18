@@ -2,10 +2,14 @@
 
 namespace FunctionValue
 {
+    // svi metodi ove klase su statički, što znači da se ova klasa koristi bez instanciranja
     public class Parser
     {
         static string s;
         static int i;
+
+        // jedini javan metod ove klase, koji služi da na osnovu tekstualnog zapisa neke 
+        // funkcije kreira objkat f koji predstavlja tu funkciju
         public static bool Evaluate(string userInput, out Function f, out string errMessage)
         {
             s = userInput;
@@ -28,11 +32,15 @@ namespace FunctionValue
             errMessage = "ok";
             return true;
         }
+
+        // preskoči beline u zapisu
         private static void SkipWhitespace()
         {
             while (i < s.Length && (s[i] == ' ' || s[i] == '\t'))
                 i++;
         }
+
+        // vraća nisku slova koja počinje na poziciji i
         private static string Name()
         {
             int i0 = i;
@@ -41,6 +49,8 @@ namespace FunctionValue
 
             return s.Substring(i0, i - i0);
         }
+        
+        // vraća funkciju predstavljenu izrazom koji počinje na poziciji i
         private static Function Expression()
         {
             Function f = Term();
@@ -62,6 +72,8 @@ namespace FunctionValue
             }
             return f;
         }
+        
+        // vraća funkciju predstavljenu termom koji počinje na poziciji i
         private static Function Term()
         {
             Function f = Factor();
@@ -83,6 +95,8 @@ namespace FunctionValue
             }
             return f;
         }
+        
+        // vraća funkciju predstavljenu faktorom koji počinje na poziciji i
         private static Function Factor()
         {
             if (s[i] >= '0' && s[i] <= '9')
@@ -138,6 +152,8 @@ namespace FunctionValue
             }
             throw new Exception(string.Format("Neocekivan znak na poziciji {0}", i));
         }
+        
+        // vraća broj koji počinje na poziciji i
         private static double Number()
         {
             double x = 0;

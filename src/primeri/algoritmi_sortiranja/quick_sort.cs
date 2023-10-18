@@ -4,6 +4,7 @@ using System.Drawing;
 
 namespace SortingAlgorithms
 {
+    // klasa koja predstavlja algoritam Quick Sort
     public class QuickSort : Algorithm
     {
         public QuickSort(int[] _a, Color c, Color fc) : base(_a, c, fc, "Quick Sort")
@@ -16,14 +17,16 @@ namespace SortingAlgorithms
         private int i, j;
         override public void Display(Graphics g)
         {
+            // karakteristični opsezi koje treba prikazati ispod stubića
             Display(g, new List<Tuple<int, int>>
             {
-                currentRange.Peek() // sub-array currently being merged
+                currentRange.Peek() // podniz koji se trenutno sortira
             });
         }
 
         public override IEnumerable<int> DoSortingStep()
         {
+            // karakteristični opsezi koje treba prikazati ispod stubića
             foreach (var _ in Sort(0, a.Length))
                 yield return _;
 
@@ -32,6 +35,8 @@ namespace SortingAlgorithms
 
         public IEnumerable<int> Sort(int lo, int hi)
         {
+            // razmene koje po ovom algoritmu treba izvršiti radi sortiranja
+            // (zadate rekurzivno)
             if (lo + 1 >= hi)
                 yield break;
 

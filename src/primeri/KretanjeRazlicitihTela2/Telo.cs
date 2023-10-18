@@ -12,6 +12,8 @@ namespace Kretanje
         protected Color boja;
 
         private enum VrstaTela { Loptica, Tocak, Avioncic, BrojVrsta };
+        
+        // statički metod koji generiše tela
         static public Telo Kreiraj(int w, int h, int vrsta)
         {
         VrstaTela t = (VrstaTela)(vrsta % (int)VrstaTela.BrojVrsta);
@@ -28,6 +30,7 @@ namespace Kretanje
             }
         }
 
+        // apstraktni metodi, specifični za svako telo
         abstract public bool PomeriSe(int w, int h);
         abstract public void RestartujSe(int w, int h);
         abstract public void NacrtajSe(Graphics g, int w, int h);

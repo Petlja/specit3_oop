@@ -7,6 +7,8 @@ namespace DekorisaniOblici
         public Form1()
         {
             InitializeComponent();
+            
+            // ubacivanje nekoliko sprajtova za ilustraciju
             spriteManager.AddSprite(new Rectangle(200, 300, 20, 50, Color.Blue));
             spriteManager.AddSprite(new Circle(400, 100, 30, Color.Red));
             spriteManager.AddSprite(new Blinking(new Circle(300, 150, 20, Color.Green), 50));
@@ -18,7 +20,7 @@ namespace DekorisaniOblici
         private void timer1_Tick(object sender, EventArgs e)
         {
             spriteManager.Update();
-            Refresh();
+            Refresh(); // ponovno iscrtavanje
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)

@@ -1,3 +1,8 @@
+// primer ilustruje motod koji izvršava algoritam Merge nad dve date 
+// kolekcije, a da pri tome ne zna njihovu stvarnu prirodu i ne zauzima
+// prostor sa smeštanje svih elemenata (ako prostor nije već zauzet na 
+// mestu poziva)
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +13,12 @@ class Program
         IEnumerator<int> ea = a.GetEnumerator();
         IEnumerator<int> eb = b.GetEnumerator();
         bool imaA = ea.MoveNext(), imaB = eb.MoveNext();
+        
+        // dok u bar jednoj kolekcijji ima još elemenata
         while (imaA || imaB)
         {
+            // vrati manji od dva tekuća elementa, 
+            // odnosno element iz kolekcije u kojoj ih još ima
             if (!imaB || (imaA && ea.Current < eb.Current))
             {
                 yield return ea.Current;

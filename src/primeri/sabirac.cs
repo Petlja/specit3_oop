@@ -2,6 +2,8 @@ using System;
 
 class Sabirac
 {
+    // zbirPre[i] je zbir svih elemenata originalnoog niza, 
+    // koji prethode poziciji 'i'
     private int[] zbirPre;
 
     public Sabirac(int[] a)
@@ -36,6 +38,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        // isprobavanje svih istoimenih metoda Saberi
         int[] a = { 1, 3, -1, 4, 2 };
         Sabirac sa = new Sabirac(a);
         Console.WriteLine(sa.Saberi());

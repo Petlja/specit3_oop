@@ -4,6 +4,7 @@ using System.Drawing;
 
 namespace SortingAlgorithms
 {
+    // klasa koja predstavlja algoritam Merge Sort
     public class MergeSort : Algorithm
     {
         public MergeSort(int[] _a, Color c, Color fc) : base(_a, c, fc, "Merge Sort")
@@ -17,14 +18,17 @@ namespace SortingAlgorithms
 
         override public void Display(Graphics g)
         {
+            // karakteristični opsezi koje treba prikazati ispod stubića
             Display(g, new List<Tuple<int, int>>
             {
-                currentRange.Peek() // sub-array currently being merged
+                // podniz koji se trenutno spaja algoritmom Merge
+                currentRange.Peek() 
             });
         }
 
         public override IEnumerable<int> DoSortingStep()
         {
+            // razmene koje po ovom algoritmu treba izvršiti radi sortiranja
             foreach (var _ in Sort(0, a.Length))
                 yield return _;
 
@@ -33,6 +37,8 @@ namespace SortingAlgorithms
 
         public IEnumerable<int> Sort(int lo, int hi)
         {
+            // razmene koje po ovom algoritmu treba izvršiti radi sortiranja
+            // (zadate rekurzivno)
             if (lo + 1 >= hi)
                 yield break;
 

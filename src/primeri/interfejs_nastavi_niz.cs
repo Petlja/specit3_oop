@@ -1,13 +1,20 @@
 using System;
 
+// Primer ilustruje kreiranje i upotrebu sopstvenog jednostavnog 
+// interfejsa nalik interfejsu IEnumerable
+
+// Zajednički interfejs za sve klase koje se pojavljuju u primeru
 interface INizClanPoClan
 {
     public long Sledeci();
 }
 
+// klasa nabraja elemente aritmetičke progresije
 class AritmetickiNiz : INizClanPoClan
 {
-    private long a0, d, sled;
+    private long a0, d; // početni član i razlika dva uzastopna člana
+    private long sled; // sledeći član progresije
+
     public AritmetickiNiz(long a0, long d)
     {
         this.a0 = a0;
@@ -21,9 +28,12 @@ class AritmetickiNiz : INizClanPoClan
         return rez;
     }
 }
+
+// klasa nabraja elemente geometrijske progresije
 class GeometrijskiNiz : INizClanPoClan
 {
-    private long a0, q, sled;
+    private long a0, q; // početni član i količnik dva uzastopna člana
+    private long sled; // sledeći član progresije
     public GeometrijskiNiz(long a0, long q)
     {
         this.a0 = a0;
@@ -37,10 +47,17 @@ class GeometrijskiNiz : INizClanPoClan
         return rez;
     }
 }
+
+// klasa naizmenično nabraja elemente dve aritmetičke progresije
 class DveAritmProgresije : INizClanPoClan
 {
+    // početni članovi i razlike za dve progresije
     private long sledA, sledB, da, db;
-    private bool naReduJeA;
+    
+    // alternirajuća logička vrednost, koja govori 
+    // iz koje progreseije treba uzeti sledeći član
+    private bool naReduJeA; 
+    
     public DveAritmProgresije(long a0, long da, long b0, long db)
     {
         this.sledA = a0; this.da = da;
@@ -57,9 +74,13 @@ class DveAritmProgresije : INizClanPoClan
         return rez;
     }
 }
+
+// klasa nabraja elemente fibonačijevog niza
 class FibonacijevNiz : INizClanPoClan
 {
+    // sledeća dva člana niza
     private long sledeci1, sledeci2;
+
     public FibonacijevNiz(long a0, long a1)
     {
         this.sledeci1 = a0;
@@ -74,6 +95,8 @@ class FibonacijevNiz : INizClanPoClan
     }
 }
 
+// klasa u kojoj je sledeći član naizmenično 
+// za a veći i b puta veći od prethodnog
 class NaizmenicnoPlusPuta: INizClanPoClan
 {
     private long sled, d, q;
@@ -98,6 +121,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        // prikaži korisniku uputstvo i komande kojima raspolaže
         Console.WriteLine("Dobijaces redom clanove nekog pravilnog niza,");
         Console.WriteLine("pokusaj da pogodis sledeci element");
         Console.WriteLine("\tPritisni 'Enter' za novi element istog niza");
@@ -113,8 +137,10 @@ class Program
 
             Console.WriteLine("Pocinje novi niz");
             bool pogodio = false;
+            
+            // na slučajan način izaberi jedan od 5 tipova niza
+            int vrstaNiza = rnd.Next(5); 
             INizClanPoClan niz = null;
-            int vrstaNiza = rnd.Next(5); // biramo jedan od 5 tipova niza
             switch (vrstaNiza)
             {
                 case 0:
@@ -139,6 +165,9 @@ class Program
                         rnd.Next(3, 7), rnd.Next(2, 5));
                     break;
             }
+            
+            // prikazuj po jedan element dok korisnik ne pogodi sledeći, 
+            // ne zatraži novi niz ili ne odustane od igre
             long novi = niz.Sledeci();
             while (!pogodio)
             {
@@ -158,6 +187,8 @@ class Program
                 Console.WriteLine("Bravo!");
             else if (unos == "-")
             {
+                // ako je igrač tražio novi niz, prikaži mu za kraj 
+                // još nekoliko članova tekućeg niza
                 Console.Write("Steta, evo ti jos nekoliko elemenata: {0} ", novi);
                 for (int i = 0; i < 5; i++)
                     Console.Write("{0,7}", niz.Sledeci());

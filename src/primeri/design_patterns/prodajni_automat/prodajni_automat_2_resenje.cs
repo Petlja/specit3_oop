@@ -1,17 +1,28 @@
 using System;
 namespace Primer
 {
+    // klasa koja je izložena korisniku,
+    // ova klasa koristi ostale kao pomoćne klase
+    // i predstavlja neku vrstu omotača oko njih
     public class ProdajniAutomat
     {
+        // apstraktna klasa AutomatUNekomStanju je bazna za klase SlobodanAutomat,
+        // AutomatSaNovcem, AutomatKojiIsporucuje i AutomatKojiVracaNovac, koje 
+        // sve predstavljaju automat u određenom stanju
         abstract public class AutomatUNekomStanju
         {
+            // klasa ProdajniAutomat predstavlja celovit automat
             protected ProdajniAutomat glavni;
+
             protected double ubacenNovac;
+
             protected AutomatUNekomStanju(ProdajniAutomat pa, double novac)
             {
                 glavni = pa;
                 ubacenNovac = novac;
             }
+
+            // apstraktni metodi, specifični za svaki podautomat
             abstract public void Ubacivanje(double iznos);
             abstract public void IzborProizvoda(double cena);
             abstract public void Odustajanje();
@@ -121,8 +132,15 @@ namespace Primer
             }
         }
 
-        private AutomatUNekomStanju aktivni;
-        public ProdajniAutomat() { aktivni = new SlobodanAutomat(this, 0); }
+        private AutomatUNekomStanju aktivni; // aktivni podautomat
+
+        public ProdajniAutomat() 
+        { 
+            // automat počinje da radi kao slobodan
+            aktivni = new SlobodanAutomat(this, 0); 
+        }
+        
+        // metodi - omotači metoda iz podautomata
         public void Ubacivanje(double iznos) { aktivni.Ubacivanje(iznos); }
         public void IzborProizvoda(double cena) { aktivni.IzborProizvoda(cena); }
         public void Odustajanje() { aktivni.Odustajanje(); }
@@ -135,13 +153,17 @@ namespace Primer
         {
             ProdajniAutomat pa = new ProdajniAutomat();
             bool kraj = false;
+            
+            // prikaži korisniku raspoložive komande
             Console.WriteLine("'Ux' za ubacivanje novca (neki broj umesto x, npr. U200)");
             Console.WriteLine("'Ix' za izbor proizvoda koji kosta x (neki broj umesto x, npr. I200)");
             Console.WriteLine("'O' za odustajanje");
             Console.WriteLine("'C' za cekanje");
             Console.WriteLine("'K' za kraj");
-            while (!kraj)
+            while (!kraj) // dok korisnik ne izabere kraj
             {
+                // ponudi korisnika da zada akciju
+                // i pozovi odgovarajući metod za obradu akcije
                 Console.Write("Sta cemo: ");
                 try
                 {

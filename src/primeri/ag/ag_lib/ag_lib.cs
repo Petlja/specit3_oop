@@ -11,11 +11,13 @@ namespace AG
 
         public Tacka(double _x, double _y) { x = _x; y = _y; }
 
+        // Tačka dobijena translacijom date tačke za dati vektor
         public static Tacka operator +(Tacka A, Vektor V)
         {
             return new Tacka(A.X + V.X, A.Y + V.Y);
         }
-
+        
+        // Središte duži AB
         public static Tacka Srediste(Tacka A, Tacka B)
         {
             return new Tacka(0.5 * (A.x + B.x), 0.5 * (A.y + B.y));
@@ -34,21 +36,27 @@ namespace AG
         public double X { get { return x; } }
         public double Y { get { return y; } }
 
+        // kopija vektora v
         public Vektor(Vektor v) { x = v.x; y = v.y; }
+        
+        // vektor zadat koordinatama
         public Vektor(double _x, double _y) { x = _x; y = _y; }
 
+        // vektor zadat dvema tačkama
         public Vektor(Tacka P, Tacka Q)
         {
             x = Q.X - P.X;
             y = Q.Y - P.Y;
         }
 
+        // Dužina vektora
         public double Duzina()
         {
             return Math.Sqrt(X * X + Y * Y);
         }
-
-        public Vektor Ort() // Jedinicni vektor istog smera
+        
+        // Jedinični vektor istog smera
+        public Vektor Ort() 
         {
             double d = Duzina();
             if (d == 0)
@@ -62,11 +70,13 @@ namespace AG
             return new Vektor(a.X + b.X, a.Y + b.Y);
         }
 
+        // binarni minus (operator vraća razliku vektora)
         public static Vektor operator -(Vektor a, Vektor b)
         {
             return new Vektor(a.X - b.X, a.Y - b.Y);
         }
-
+        
+        // unarni minus (operator vraća suprotan vektor)
         public static Vektor operator -(Vektor a)
         {
             return new Vektor(-a.X, -a.Y);
@@ -96,28 +106,33 @@ namespace AG
         private Tacka tacka;
         private Vektor pravac;
 
+        // prava zadata dvema tačkama
         public Prava(Tacka P, Tacka Q)
         {
             tacka = new Tacka(P.X, P.Y);
             pravac = new Vektor(P, Q);
         }
 
+        // prava zadata tačkom i vektorom pravca
         public Prava(Tacka A, Vektor AB)
         {
             tacka = new Tacka(A.X, A.Y);
             pravac = new Vektor(AB);
         }
 
+        // vektor pravca date prave
         public Vektor Pravac()
         {
             return new Vektor(pravac);
         }
 
+        // vektor normalan na datoj pravoj
         public Vektor Normala()
         {
             return new Vektor(pravac.Y, -pravac.X);
         }
 
+        // statički metod - simetrala date duži
         public static Prava Simetrala(Tacka A, Tacka B)
         {
             Tacka S = Tacka.Srediste(A, B);
@@ -125,9 +140,10 @@ namespace AG
             return new Prava(S, n);
         }
 
+        // presek ove prave sa datom pravom
         public Tacka Presek(Prava p)
         {
-            // Za presecnu tacku vazi:
+            // Za presečnu tačku vazi:
             // A.x + k AB.x == C.x + m CD.x
             // A.y + k AB.y == C.y + m CD.y
 

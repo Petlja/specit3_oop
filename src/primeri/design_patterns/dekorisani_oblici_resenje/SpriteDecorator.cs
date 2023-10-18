@@ -1,5 +1,8 @@
 ﻿namespace DekorisaniOblici
 {
+    // klasa koja se prema svojim korisnicima i sama ponaša kao sprajt, i to 
+    // sprajt koji predstavlja malo izmenjenu verziju sprajta sadržanog u njoj 
+    // SpriteDecorator je bazna klasa za svaki stvaran dekorator internog sprajta
     abstract class SpriteDecorator : Sprite
     {
         protected Sprite sprite;
@@ -19,10 +22,13 @@
             sprite.Update();
         }
     }
+    
+    // jedna vrsta dekoracije sprajta je njegovo treptanje 
     class Blinking : SpriteDecorator
     {
-        int ticks;
-        int period;
+        int ticks; // broj tikova (frejmova) od početka rada
+        int period; // ukupan broj tikova koji čine jedan treptaj
+
         public Blinking(Sprite s, int period)
             : base(s)
         {
@@ -32,6 +38,7 @@
 
         public override void Draw(Graphics g)
         {
+            // ako smo u prvoj polovini perioda, sprajt se crta
             if ((ticks / period) % 2 == 0)
                 sprite.Draw(g);
         }
@@ -43,6 +50,7 @@
         }
     }
 
+    // jedna vrsta dekoracije sprajta je njegovo pomeranje
     class Moving : SpriteDecorator
     {
         private float dx, dy;

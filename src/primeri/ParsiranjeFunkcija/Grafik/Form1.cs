@@ -32,26 +32,31 @@ namespace Grafik
 
             cc = new CoordinateConverter(ClientSize.Width, ClientSize.Height);
         }
+        
         private void button1_Click(object sender, EventArgs e)
         {
+            // kliknuto dugme za unos funkcije
             expression = Prompt.ShowDialog("Унесите функцију од X:", "Задавање функције", expression);
             string errMessage = "";
             if (Parser.Evaluate(expression, out F, out errMessage))
             {
+                // ako je parsiranje uspelo, dobili smo objekat F
                 Text = string.Format("Функција {0}", F.ToString());
                 Invalidate();
             }
             else
             {
-                // ako ne uspe da parsira, F ostaje null 
+                // ako parsiranje nije uspelo, F ostaje null 
                 MessageBox.Show(errMessage);
             }
         }
+        
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
             {
-                IsDragging = true; // zapocni vucenje
+                // desni klik označava početak vučenja
+                IsDragging = true;
                 cc.SetPivot(e.X, e.Y);
             }
         }
@@ -60,20 +65,24 @@ namespace Grafik
             if (IsDragging)
                 cc.Translate(e.X, e.Y);
 
-            if (e.Delta != 0) // ako je tocak misa okrenut, zumiraj (ka ili od)
+            if (e.Delta != 0) // ako je točak miša okrenut, zumiraj (ka ili od)
             {
                 float WheelDelta = SystemInformation.MouseWheelScrollDelta;
                 float f = MathF.Pow(1.1f, -e.Delta / WheelDelta);
                 cc.Zoom(f);
             }
-            cc.SetPivot(e.X, e.Y); // azurira koordinate misa za prikaz koordinata na ekranu
+            
+            cc.SetPivot(e.X, e.Y); // ažurira koordinate miša za prikaz koordinata na ekranu
             Invalidate();
         }
+        
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
+            // ako je pušten desni taster miša, prestani da vučeš
             if (e.Button == MouseButtons.Right)
                 IsDragging = false;
         }
+
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)

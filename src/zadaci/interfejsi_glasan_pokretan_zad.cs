@@ -8,7 +8,10 @@ class Program
         MotornaTestera mt = new MotornaTestera();
         Bicikl b = new Bicikl();
 
+        // niz objekata čije klase implementiraju interfejs 'IGlasan'
         IGlasan[] glasni = { p, mt };
+        
+        // niz objekata čije klase implementiraju interfejs 'IPokretan'
         IPokretan[] pokretni = { p, b };
 
         Console.WriteLine("Glasovi glasnih:");

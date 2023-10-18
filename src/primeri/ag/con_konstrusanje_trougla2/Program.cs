@@ -14,11 +14,11 @@ namespace con_konstrusanje_trougla2
             double beta = Math.PI / 4;
             double bd = 24;
 
-            // D je tacka na pravoj AB, takva da |DB| = b+c
+            // D je tačka na pravoj AB, takva da |DB| = b+c
             Tacka D = B + bd * new Vektor(B, C).Rotacija(beta).Ort();
             Prava ab = new Prava(B, D);
-            Prava s = Prava.Simetrala(C, D);
-            Tacka A = ab.Presek(s);
+            Prava s = Prava.Simetrala(C, D); // simetrala duži CD
+            Tacka A = ab.Presek(s); // presek pravih ab i s
             Console.WriteLine("Tacka A{0}", A);
             //Tacka A(7.000, 9.000)
         }

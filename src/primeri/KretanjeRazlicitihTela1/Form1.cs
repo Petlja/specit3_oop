@@ -6,6 +6,7 @@ namespace Kretanje
 {
     public partial class Form1 : Form
     {
+        // razdvojene liste tela po vrstama
         private List<Avioncic> avioni = null;
         private List<Loptica> loptice = null;
         private List<Tocak> tockovi = null;
@@ -19,6 +20,7 @@ namespace Kretanje
             int w = ClientSize.Width;
             int h = ClientSize.Height;
 
+            // punjenje svake liste posebno
             avioni = new List<Avioncic>();
             for (int i = 0; i < 10; i++)
                 avioni.Add(new Avioncic(w, h));
@@ -36,6 +38,7 @@ namespace Kretanje
             int w = ClientSize.Width;
             int h = ClientSize.Height;
 
+            // pomeranje elemenata svake liste posebno
             foreach (Avioncic a in avioni)
                 a.PomeriSe(w, h);
 
@@ -51,7 +54,8 @@ namespace Kretanje
         {
             int w = ClientSize.Width;
             int h = ClientSize.Height;
-
+            
+            // crtanje elemenata svake liste posebno
             foreach (Avioncic a in avioni)
                 a.NacrtajSe(e.Graphics, w, h);
 

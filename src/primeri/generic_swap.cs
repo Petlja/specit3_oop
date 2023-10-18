@@ -8,12 +8,15 @@ internal class Program
         a = b; 
         b = t;
     }
+
     static void Main(string[] args)
     {
+        // isprobavanje metoda Swap za cele brojeve
         int n1 = 1, n2 = 2;
         Swap(ref n1, ref n2);
         Console.WriteLine("{0}, {1}", n1, n2);
 
+        // isprobavanje metoda Swap za stringove
         string s1 = "jedan", s2 = "dva";
         Swap(ref s1, ref s2);
         Console.WriteLine("{0}, {1}", s1, s2);

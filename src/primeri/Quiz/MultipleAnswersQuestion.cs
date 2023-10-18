@@ -6,16 +6,21 @@ using System.Text;
 
 namespace Quiz
 {
+    // pitanje sa ponuđenim odgovorima, gde može da bude više tačnih
     public class MultipleAnswersQuestion : Question
     {
-        string[] answers;
-        bool[] selectedAnswers;
-        bool[] correctAnswers;
-        int cursorPosition;
+        string[] answers; // ponuđeni odgovori
+        bool[] selectedAnswers; // indeksi trenutno izabranih odgovora
+        bool[] correctAnswers; // indeksi tačnih odgovora
+        int cursorPosition; // indeks odgovora na kome se nalazi kursor
+
         private MultipleAnswersQuestion ()
         {
             cursorPosition = 0;
         }
+
+        // pomoćni metod za testiranje i kreiranje fajla sa pitanjima,
+        // tako da taj fajl kasnije služi kao uzor za formiranje drugih fajlova
         public static MultipleAnswersQuestion Sample()
         {
             MultipleAnswersQuestion q = new MultipleAnswersQuestion();
@@ -27,6 +32,8 @@ namespace Quiz
             q.cursorPosition = 0;
             return q;
         }
+
+        // učitavanje jednog pitanja iz tekstualnog ulaznog toka
         public static new Question FromStream(StreamReader sr)
         {
             MultipleAnswersQuestion q = new MultipleAnswersQuestion();
@@ -46,6 +53,8 @@ namespace Quiz
             q.cursorPosition = 0;
             return q;
         }
+
+        // ispisivanje pitanja u fajl
         override public string ToText()
         {
             StringBuilder sb = new StringBuilder();
@@ -65,6 +74,7 @@ namespace Quiz
             return sb.ToString();
         }
 
+        // prikazivanje pitanja na ekranu
         override public void Display()
         {
             Console.SetCursorPosition(0, 0);
@@ -82,6 +92,8 @@ namespace Quiz
                 option++;
             }
         }
+
+        // reakcija na pritisnut taster
         public override void HandleInput(ConsoleKeyInfo ki)
         {
             int n = answers.Length;
@@ -105,6 +117,7 @@ namespace Quiz
             }
         }
 
+        // vraća vrednost izabranog odgovora u poenima
         public override int Evaluate()
         {
             bool allCorrect = true;
