@@ -60,7 +60,7 @@ lessons:
         title: Основни појмови о класама и објектима
         file: klase_02a_osnovni_pojmovi.rst
         guid: 6ad758ae-ee31-4766-915f-f874e9e81d27
-      - type: reading
+      - type: quiz
         title: Класе и објекти - квиз
         file: klase_02aq_osnovni_pojmovi_kviz.rst
         guid: 02fc359d-f9f5-45cb-938e-c66079b6b5ad
